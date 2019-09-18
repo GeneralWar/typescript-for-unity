@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "project": "./project/",
+        "target": "es6"
+    }
+}

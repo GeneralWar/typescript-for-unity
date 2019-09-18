@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "compiled",
+        "module": "commonjs",
+        "lib": ["dom", "es6", "es2016", "es2015.promise"],
+        "target": "es5",
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "removeComments": true
+    },
+    "exclude": ["node_modules", "local", "temp", "build", "settings"]
+}

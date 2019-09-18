@@ -1,0 +1,57 @@
+
+
+void InstantiateObject(Isolate* isolate, Local<Object>& origin, Local<Object>& target, Local<Object>& constructor)
+{
+	Local<Context> context = isolate->GetCurrentContext();
+	// instance fields
+	{
+		Local<Array> properties = target->GetOwnPropertyNames();
+		Local<String> name = String::NewFromUtf8(isolate, "name");
+		Local<String> apply = String::NewFromUtf8(isolate, "apply");
+		Local<String> fullname = String::NewFromUtf8(isolate, "fullname");
+		int length = (int)properties->Length();
+		for (int i = length - 1; i >= 0; --i)
+		{
+			Local<Value> key = properties->Get(i);
+			if (key->Equals(context, name).ToChecked() || key->Equals(context, apply).ToChecked() || key->Equals(context, fullname).ToChecked())
+			{
+				continue;
+			}
+			origin->Set(key, target->Get(key));
+		}
+	}
+	// prototype properties
+	{
+		Local<Object> prototype = constructor->Get(String::NewFromUtf8(isolate, "prototype")).As<Object>();
+
+		Local<Array> properties = prototype->GetOwnPropertyNames();
+		Local<String> constructor = String::NewFromUtf8(isolate, "constructor");
+		int length = (int)properties->Length();
+		for (int i = length - 1; i >= 0; --i)
+		{
+			Local<Name> key = properties->Get(i).As<Name>();
+			if (key->Equals(context, constructor).ToChecked())
+			{
+				continue;
+			}
+			Local<Object> descriptor = prototype->GetOwnPropertyDescriptor(context, key).ToLocalChecked().As<Object>();
+			PropertyAttribute attribute = prototype->GetPropertyAttributes(context, key).ToChecked();
+			Local<Value> value = descriptor->Get(String::NewFromUtf8(isolate, "value"));
+			if (value->IsFunction())
+			{
+				origin->Set(key, prototype->Get(key));
+				continue;
+			}
+			Local<String> getKey = String::NewFromUtf8(isolate, "get");
+			Local<String> setKey = String::NewFromUtf8(isolate, "set");
+			Local<Value> getter = descriptor->Get(getKey);
+			Local<Value> setter = descriptor->Get(setKey);
+			if (!setter->IsUndefined() || !getter->IsUndefined())
+			{
+				origin->SetAccessorProperty(key, getter.As<Function>(), setter.As<Function>());
+				continue;
+			}
+			assert(!"Unexpected condition!");
+		}
+	}
+}
