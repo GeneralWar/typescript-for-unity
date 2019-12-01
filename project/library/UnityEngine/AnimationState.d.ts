@@ -4,10 +4,10 @@
 	{
 		public constructor();
 		public AddMixingTransform(mix: UnityEngine.Transform): void;
-		public AddMixingTransform(mix: UnityEngine.Transform, recursive: number): void;
+		public AddMixingTransform(mix: UnityEngine.Transform, recursive: boolean): void;
 		public RemoveMixingTransform(mix: UnityEngine.Transform): void;
-		public get enabled(): number;
-		public set enabled(): number;
+		public get enabled(): boolean;
+		public set enabled(): boolean;
 		public get weight(): number;
 		public set weight(): number;
 		public get wrapMode(): UnityEngine.WrapMode;

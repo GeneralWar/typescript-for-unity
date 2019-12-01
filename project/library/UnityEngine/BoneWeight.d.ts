@@ -2,8 +2,8 @@
 {
 	export class BoneWeight extends System.ValueType
 	{
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.BoneWeight): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.BoneWeight): boolean;
 		public GetHashCode(): number;
 		public get weight0(): number;
 		public set weight0(): number;

@@ -8,7 +8,7 @@
 		export function GetMuscleDefaultMin(i: number): number;
 		export function GetParentBone(i: number): number;
 		export function MuscleFromBone(i: number, dofIndex: number): number;
-		export function RequiredBone(i: number): number;
+		export function RequiredBone(i: number): boolean;
 	}
 	export class HumanTrait
 	{

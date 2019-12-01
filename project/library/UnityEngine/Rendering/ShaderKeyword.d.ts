@@ -7,7 +7,7 @@
 			public constructor(keywordName: string);
 			public GetKeywordName(): string;
 			public GetKeywordType(): UnityEngine.Rendering.ShaderKeywordType;
-			public IsValid(): number;
+			public IsValid(): boolean;
 		}
 	}
 }

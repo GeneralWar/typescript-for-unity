@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ShadowSamplingMode
+	declare namespace Rendering
 	{
-		CompareDepths = 0,
-		RawDepth = 1,
-		None = 2,
+		export enum ShadowSamplingMode
+		{
+			CompareDepths = 0,
+			RawDepth = 1,
+			None = 2,
+		}
 	}
 }

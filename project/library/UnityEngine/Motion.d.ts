@@ -6,8 +6,8 @@
 		public get averageAngularSpeed(): number;
 		public get averageSpeed(): UnityEngine.Vector3;
 		public get apparentSpeed(): number;
-		public get isLooping(): number;
-		public get legacy(): number;
-		public get isHumanMotion(): number;
+		public get isLooping(): boolean;
+		public get legacy(): boolean;
+		public get isHumanMotion(): boolean;
 	}
 }

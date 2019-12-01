@@ -10,7 +10,7 @@
 			export function DeleteSecondary(tileId: string): void;
 			export function DeleteSecondary(tileId: string, pos: UnityEngine.Vector2): void;
 			export function DeleteSecondary(tileId: string, area: UnityEngine.Rect): void;
-			export function Exists(tileId: string): number;
+			export function Exists(tileId: string): boolean;
 			export function GetSecondaries(): UnityEngine.WSA.Tile[];
 			export function GetSecondary(tileId: string): UnityEngine.WSA.Tile;
 			export function GetTemplate(templ: UnityEngine.WSA.TileTemplate): string;
@@ -31,8 +31,8 @@
 			public UpdateBadgeImage(image: string): void;
 			public UpdateBadgeNumber(number: number): void;
 			public get id(): string;
-			public get hasUserConsent(): number;
-			public get exists(): number;
+			public get hasUserConsent(): boolean;
+			public get exists(): boolean;
 		}
 	}
 }

@@ -16,10 +16,10 @@
 			public set translationOffset(): UnityEngine.Vector3;
 			public get translationAxis(): UnityEngine.Animations.Axis;
 			public set translationAxis(): UnityEngine.Animations.Axis;
-			public get constraintActive(): number;
-			public set constraintActive(): number;
-			public get locked(): number;
-			public set locked(): number;
+			public get constraintActive(): boolean;
+			public set constraintActive(): boolean;
+			public get locked(): boolean;
+			public set locked(): boolean;
 			public get sourceCount(): number;
 		}
 	}

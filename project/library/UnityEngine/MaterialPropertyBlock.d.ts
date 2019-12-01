@@ -46,6 +46,6 @@
 		public SetVector(nameID: number, value: UnityEngine.Vector4): void;
 		public SetVectorArray(name: string, values: UnityEngine.Vector4[]): void;
 		public SetVectorArray(nameID: number, values: UnityEngine.Vector4[]): void;
-		public get isEmpty(): number;
+		public get isEmpty(): boolean;
 	}
 }

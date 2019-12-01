@@ -1,9 +1,15 @@
 ﻿declare namespace UnityEngine
 {
-	export enum SpeechSystemStatus
+	declare namespace Windows
 	{
-		Stopped = 0,
-		Running = 1,
-		Failed = 2,
+		declare namespace Speech
+		{
+			export enum SpeechSystemStatus
+			{
+				Stopped = 0,
+				Running = 1,
+				Failed = 2,
+			}
+		}
 	}
 }

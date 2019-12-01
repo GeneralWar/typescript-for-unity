@@ -12,8 +12,8 @@
 			public set repeatCalendar(): UnityEngine.iOS.CalendarIdentifier;
 			public get repeatInterval(): UnityEngine.iOS.CalendarUnit;
 			public set repeatInterval(): UnityEngine.iOS.CalendarUnit;
-			public get fireDate(): number;
-			public set fireDate(): number;
+			public get fireDate(): System.DateTime;
+			public set fireDate(): System.DateTime;
 			public get alertBody(): string;
 			public set alertBody(): string;
 			public get alertTitle(): string;
@@ -28,8 +28,8 @@
 			public set applicationIconBadgeNumber(): number;
 			public get userInfo(): any;
 			public set userInfo(): any;
-			public get hasAction(): number;
-			public set hasAction(): number;
+			public get hasAction(): boolean;
+			public set hasAction(): boolean;
 		}
 	}
 }

@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum CullMode
+	declare namespace Rendering
 	{
-		Off = 0,
-		Front = 1,
-		Back = 2,
+		export enum CullMode
+		{
+			Off = 0,
+			Front = 1,
+			Back = 2,
+		}
 	}
 }

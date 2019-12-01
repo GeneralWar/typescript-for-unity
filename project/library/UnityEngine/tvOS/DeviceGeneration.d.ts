@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum DeviceGeneration
+	declare namespace tvOS
 	{
-		Unknown = 0,
-		AppleTV1Gen = 1001,
-		AppleTV2Gen = 1002,
+		export enum DeviceGeneration
+		{
+			Unknown = 0,
+			AppleTV1Gen = 1001,
+			AppleTV2Gen = 1002,
+		}
 	}
 }

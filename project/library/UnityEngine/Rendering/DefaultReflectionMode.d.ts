@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum DefaultReflectionMode
+	declare namespace Rendering
 	{
-		Skybox = 0,
-		Custom = 1,
+		export enum DefaultReflectionMode
+		{
+			Skybox = 0,
+			Custom = 1,
+		}
 	}
 }

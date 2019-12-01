@@ -25,10 +25,13 @@
 			export function LoadSceneAsync(sceneName: string, parameters: UnityEngine.SceneManagement.LoadSceneParameters): UnityEngine.AsyncOperation;
 			export function MergeScenes(sourceScene: UnityEngine.SceneManagement.Scene, destinationScene: UnityEngine.SceneManagement.Scene): void;
 			export function MoveGameObjectToScene(go: UnityEngine.GameObject, scene: UnityEngine.SceneManagement.Scene): void;
-			export function SetActiveScene(scene: UnityEngine.SceneManagement.Scene): number;
+			export function SetActiveScene(scene: UnityEngine.SceneManagement.Scene): boolean;
 			export function UnloadSceneAsync(sceneBuildIndex: number): UnityEngine.AsyncOperation;
 			export function UnloadSceneAsync(sceneName: string): UnityEngine.AsyncOperation;
 			export function UnloadSceneAsync(scene: UnityEngine.SceneManagement.Scene): UnityEngine.AsyncOperation;
+			export function UnloadSceneAsync(sceneBuildIndex: number, options: UnityEngine.SceneManagement.UnloadSceneOptions): UnityEngine.AsyncOperation;
+			export function UnloadSceneAsync(sceneName: string, options: UnityEngine.SceneManagement.UnloadSceneOptions): UnityEngine.AsyncOperation;
+			export function UnloadSceneAsync(scene: UnityEngine.SceneManagement.Scene, options: UnityEngine.SceneManagement.UnloadSceneOptions): UnityEngine.AsyncOperation;
 		}
 		export class SceneManager
 		{

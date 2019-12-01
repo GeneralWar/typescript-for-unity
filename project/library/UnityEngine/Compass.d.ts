@@ -8,7 +8,7 @@
 		public get headingAccuracy(): number;
 		public get rawVector(): UnityEngine.Vector3;
 		public get timestamp(): number;
-		public get enabled(): number;
-		public set enabled(): number;
+		public get enabled(): boolean;
+		public set enabled(): boolean;
 	}
 }

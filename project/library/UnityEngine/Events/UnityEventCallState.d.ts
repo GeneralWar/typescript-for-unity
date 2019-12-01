@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum UnityEventCallState
+	declare namespace Events
 	{
-		Off = 0,
-		EditorAndRuntime = 1,
-		RuntimeOnly = 2,
+		export enum UnityEventCallState
+		{
+			Off = 0,
+			EditorAndRuntime = 1,
+			RuntimeOnly = 2,
+		}
 	}
 }

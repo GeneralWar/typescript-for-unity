@@ -1,12 +1,15 @@
 ﻿declare namespace UnityEngine
 {
-	export enum CopyTextureSupport
+	declare namespace Rendering
 	{
-		None = 0,
-		Basic = 1,
-		Copy3D = 2,
-		DifferentTypes = 4,
-		TextureToRT = 8,
-		RTToTexture = 16,
+		export enum CopyTextureSupport
+		{
+			None = 0,
+			Basic = 1,
+			Copy3D = 2,
+			DifferentTypes = 4,
+			TextureToRT = 8,
+			RTToTexture = 16,
+		}
 	}
 }

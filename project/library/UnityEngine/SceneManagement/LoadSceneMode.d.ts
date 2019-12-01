@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum LoadSceneMode
+	declare namespace SceneManagement
 	{
-		Single = 0,
-		Additive = 1,
+		export enum LoadSceneMode
+		{
+			Single = 0,
+			Additive = 1,
+		}
 	}
 }

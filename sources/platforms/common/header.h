@@ -7,7 +7,7 @@
 //#ifdef WIN32
 //#include <v8-debug.h>
 //#endif
-#include <v8-inspector-protocol.h>
+//#include <v8-inspector-protocol.h>
 #include <v8-inspector.h>
 #include <v8-platform.h>
 #include <v8-profiler.h>
@@ -23,6 +23,14 @@
 
 #ifndef SLOT_GLOBAL_TEMPLATE
 #define SLOT_GLOBAL_TEMPLATE 1
+#endif
+
+#if __ANDROID__
+#include <syslog.h>
+#endif
+#if _WIN32
+#include <windows.h>
+#include <debugapi.h>
 #endif
 
 using namespace v8;

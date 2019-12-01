@@ -4,7 +4,7 @@
 	{
 		public constructor(javaInterface: string);
 		public constructor(javaInterface: UnityEngine.AndroidJavaClass);
-		public equals(obj: UnityEngine.AndroidJavaObject): number;
+		public equals(obj: UnityEngine.AndroidJavaObject): boolean;
 		public hashCode(): number;
 		public Invoke(methodName: string, args: any[]): UnityEngine.AndroidJavaObject;
 		public Invoke(methodName: string, javaArgs: UnityEngine.AndroidJavaObject[]): UnityEngine.AndroidJavaObject;

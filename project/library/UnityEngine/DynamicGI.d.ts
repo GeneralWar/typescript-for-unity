@@ -15,8 +15,8 @@
 		static public set updateThreshold(): number;
 		static public get materialUpdateTimeSlice(): number;
 		static public set materialUpdateTimeSlice(): number;
-		static public get synchronousMode(): number;
-		static public set synchronousMode(): number;
-		static public get isConverged(): number;
+		static public get synchronousMode(): boolean;
+		static public set synchronousMode(): boolean;
+		static public get isConverged(): boolean;
 	}
 }

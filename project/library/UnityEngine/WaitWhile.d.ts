@@ -2,6 +2,6 @@
 {
 	export class WaitWhile extends UnityEngine.CustomYieldInstruction
 	{
-		public get keepWaiting(): number;
+		public get keepWaiting(): boolean;
 	}
 }

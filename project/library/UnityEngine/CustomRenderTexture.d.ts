@@ -31,9 +31,9 @@
 		public set shaderPass(): number;
 		public get cubemapFaceMask(): number;
 		public set cubemapFaceMask(): number;
-		public get doubleBuffered(): number;
-		public set doubleBuffered(): number;
-		public get wrapUpdateZones(): number;
-		public set wrapUpdateZones(): number;
+		public get doubleBuffered(): boolean;
+		public set doubleBuffered(): boolean;
+		public get wrapUpdateZones(): boolean;
+		public set wrapUpdateZones(): boolean;
 	}
 }

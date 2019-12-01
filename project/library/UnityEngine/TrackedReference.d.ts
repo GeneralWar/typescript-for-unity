@@ -2,7 +2,7 @@
 {
 	export class TrackedReference
 	{
-		public Equals(o: any): number;
+		public Equals(o: any): boolean;
 		public GetHashCode(): number;
 	}
 }

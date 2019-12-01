@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ReflectionProbeMode
+	declare namespace Rendering
 	{
-		Baked = 0,
-		Realtime = 1,
-		Custom = 2,
+		export enum ReflectionProbeMode
+		{
+			Baked = 0,
+			Realtime = 1,
+			Custom = 2,
+		}
 	}
 }

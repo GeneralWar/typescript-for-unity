@@ -1,10 +1,16 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ConfidenceLevel
+	declare namespace Windows
 	{
-		High = 0,
-		Medium = 1,
-		Low = 2,
-		Rejected = 3,
+		declare namespace Speech
+		{
+			export enum ConfidenceLevel
+			{
+				High = 0,
+				Medium = 1,
+				Low = 2,
+				Rejected = 3,
+			}
+		}
 	}
 }

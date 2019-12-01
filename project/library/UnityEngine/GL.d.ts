@@ -3,13 +3,13 @@
 	export namespace GL
 	{
 		export function Begin(mode: number): void;
-		export function Clear(clearDepth: number, clearColor: number, backgroundColor: UnityEngine.Color): void;
-		export function Clear(clearDepth: number, clearColor: number, backgroundColor: UnityEngine.Color, depth: number): void;
-		export function ClearWithSkybox(clearDepth: number, camera: UnityEngine.Camera): void;
+		export function Clear(clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color): void;
+		export function Clear(clearDepth: boolean, clearColor: boolean, backgroundColor: UnityEngine.Color, depth: number): void;
+		export function ClearWithSkybox(clearDepth: boolean, camera: UnityEngine.Camera): void;
 		export function Color(c: UnityEngine.Color): void;
 		export function End(): void;
 		export function Flush(): void;
-		export function GetGPUProjectionMatrix(proj: UnityEngine.Matrix4x4, renderIntoTexture: number): UnityEngine.Matrix4x4;
+		export function GetGPUProjectionMatrix(proj: UnityEngine.Matrix4x4, renderIntoTexture: boolean): UnityEngine.Matrix4x4;
 		export function InvalidateState(): void;
 		export function IssuePluginEvent(callback: number, eventID: number): void;
 		export function LoadIdentity(): void;
@@ -34,12 +34,12 @@
 	export class GL
 	{
 		public constructor();
-		static public get wireframe(): number;
-		static public set wireframe(): number;
-		static public get sRGBWrite(): number;
-		static public set sRGBWrite(): number;
-		static public get invertCulling(): number;
-		static public set invertCulling(): number;
+		static public get wireframe(): boolean;
+		static public set wireframe(): boolean;
+		static public get sRGBWrite(): boolean;
+		static public set sRGBWrite(): boolean;
+		static public get invertCulling(): boolean;
+		static public set invertCulling(): boolean;
 		static public get modelview(): UnityEngine.Matrix4x4;
 		static public set modelview(): UnityEngine.Matrix4x4;
 	}

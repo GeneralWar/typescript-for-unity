@@ -13,8 +13,8 @@
 			public constructor(renderTargetIdentifier: UnityEngine.Rendering.RenderTargetIdentifier, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number);
 			public constructor(tex: UnityEngine.Texture, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number);
 			public constructor(buf: UnityEngine.RenderBuffer, mipLevel: number, cubeFace: UnityEngine.CubemapFace, depthSlice: number);
-			public Equals(rhs: UnityEngine.Rendering.RenderTargetIdentifier): number;
-			public Equals(obj: any): number;
+			public Equals(rhs: UnityEngine.Rendering.RenderTargetIdentifier): boolean;
+			public Equals(obj: any): boolean;
 			public GetHashCode(): number;
 			public ToString(): string;
 		}

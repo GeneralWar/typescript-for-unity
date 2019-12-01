@@ -248,7 +248,7 @@ namespace General.Typescript
 					}
 
 					if (method.Name == "SetNoBackupFlag" || method.Name == "ResetNoBackupFlag" || method.Name == "StopRecordingUndo" || method.Name == "StartRecordingUndo"
-						|| method.Name == "IsJoystickPreconfigured" || method.Name == "IsJoystickPreconfigured" || method.Name == "GetEditorName")
+						|| method.Name == "IsJoystickPreconfigured" || method.Name == "IsJoystickPreconfigured" || method.Name == "GetEditorName" || method.Name == "OnRebuildRequested")
 					{
 						continue;
 					}

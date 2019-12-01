@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum RenderBufferLoadAction
+	declare namespace Rendering
 	{
-		Load = 0,
-		Clear = 1,
-		DontCare = 2,
+		export enum RenderBufferLoadAction
+		{
+			Load = 0,
+			Clear = 1,
+			DontCare = 2,
+		}
 	}
 }

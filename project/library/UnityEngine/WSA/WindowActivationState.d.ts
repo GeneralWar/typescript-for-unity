@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum WindowActivationState
+	declare namespace WSA
 	{
-		CodeActivated = 0,
-		Deactivated = 1,
-		PointerActivated = 2,
+		export enum WindowActivationState
+		{
+			CodeActivated = 0,
+			Deactivated = 1,
+			PointerActivated = 2,
+		}
 	}
 }

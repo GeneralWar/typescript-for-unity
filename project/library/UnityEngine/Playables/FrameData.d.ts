@@ -11,9 +11,9 @@
 			public get effectiveParentDelay(): number;
 			public get effectiveParentSpeed(): number;
 			public get effectiveSpeed(): number;
-			public get seekOccurred(): number;
-			public get timeLooped(): number;
-			public get timeHeld(): number;
+			public get seekOccurred(): boolean;
+			public get timeLooped(): boolean;
+			public get timeHeld(): boolean;
 			public get output(): UnityEngine.Playables.PlayableOutput;
 			public get effectivePlayState(): UnityEngine.Playables.PlayState;
 		}

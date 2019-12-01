@@ -101,7 +101,7 @@
 #endif
 
 #ifndef UNITY_INSTANCE_IS_TYPE
-#define UNITY_INSTANCE_IS_TYPE "unity_instance_is_type"
+#define UNITY_INSTANCE_BINDED_TYPE "unity_instance_binded_type"
 #endif
 
 #ifndef UNITY_INSTANCE_CUSTOM_TYPE
@@ -128,4 +128,27 @@
 
 #ifndef min
 #define  min(a, b) (a < b ? a : b)
+#endif
+
+///////////////////////////////////////////////////////////////////
+
+#if defined(DEBUG) || defined(_DEBUG)
+
+#ifndef DEBUG_LOG
+#if _WIN32
+#define DEBUG_LOG(message, ...) \
+	char DEBUG_LOG_BUFFER[1024]; \
+	sprintf(DEBUG_LOG_BUFFER, message, __VA_ARGS__); \
+	OutputDebugStringA(DEBUG_LOG_BUFFER);
+#elif __ANDROID__
+#define DEBUG_LOG(message, ...) syslog(7, message, __VA_ARGS__)
+#endif
+#endif
+
+#else 
+
+#ifndef DEBUG_LOG
+#define DEBUG_LOG // 
+#endif
+
 #endif

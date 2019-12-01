@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum CameraHDRMode
+	declare namespace Rendering
 	{
-		FP16 = 1,
-		R11G11B10 = 2,
+		export enum CameraHDRMode
+		{
+			FP16 = 1,
+			R11G11B10 = 2,
+		}
 	}
 }

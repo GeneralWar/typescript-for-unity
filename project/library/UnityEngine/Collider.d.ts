@@ -5,11 +5,11 @@
 		public constructor();
 		public ClosestPoint(position: UnityEngine.Vector3): UnityEngine.Vector3;
 		public ClosestPointOnBounds(position: UnityEngine.Vector3): UnityEngine.Vector3;
-		public get enabled(): number;
-		public set enabled(): number;
+		public get enabled(): boolean;
+		public set enabled(): boolean;
 		public get attachedRigidbody(): UnityEngine.Rigidbody;
-		public get isTrigger(): number;
-		public set isTrigger(): number;
+		public get isTrigger(): boolean;
+		public set isTrigger(): boolean;
 		public get contactOffset(): number;
 		public set contactOffset(): number;
 		public get bounds(): UnityEngine.Bounds;

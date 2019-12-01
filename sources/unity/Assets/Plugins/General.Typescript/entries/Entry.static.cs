@@ -45,6 +45,7 @@ namespace General.Typescript
 					method.Invoke(null, null);
 				}
 
+				SystemBinder.Initialize();
 				CoreBinder.Initialize();
 			};
 		}
@@ -59,6 +60,10 @@ namespace General.Typescript
 
 		static public bool Initialize(Action onBind = null)
 		{
+			//if (Entry.General_Typescript_Is_Initialized())
+			//{
+			//	return true;
+			//}
 			if (null != onBind)
 			{
 				Entry.onBind += onBind;

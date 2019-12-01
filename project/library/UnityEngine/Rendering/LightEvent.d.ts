@@ -1,12 +1,15 @@
 ﻿declare namespace UnityEngine
 {
-	export enum LightEvent
+	declare namespace Rendering
 	{
-		BeforeShadowMap = 0,
-		AfterShadowMap = 1,
-		BeforeScreenspaceMask = 2,
-		AfterScreenspaceMask = 3,
-		BeforeShadowMapPass = 4,
-		AfterShadowMapPass = 5,
+		export enum LightEvent
+		{
+			BeforeShadowMap = 0,
+			AfterShadowMap = 1,
+			BeforeScreenspaceMask = 2,
+			AfterScreenspaceMask = 3,
+			BeforeShadowMapPass = 4,
+			AfterShadowMapPass = 5,
+		}
 	}
 }

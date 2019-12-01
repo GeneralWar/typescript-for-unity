@@ -3,7 +3,7 @@
 	export namespace Color
 	{
 		export function HSVToRGB(H: number, S: number, V: number): UnityEngine.Color;
-		export function HSVToRGB(H: number, S: number, V: number, hdr: number): UnityEngine.Color;
+		export function HSVToRGB(H: number, S: number, V: number, hdr: boolean): UnityEngine.Color;
 		export function Lerp(a: UnityEngine.Color, b: UnityEngine.Color, t: number): UnityEngine.Color;
 		export function LerpUnclamped(a: UnityEngine.Color, b: UnityEngine.Color, t: number): UnityEngine.Color;
 	}
@@ -22,8 +22,8 @@
 		static public get gray(): UnityEngine.Color;
 		static public get grey(): UnityEngine.Color;
 		static public get clear(): UnityEngine.Color;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Color): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Color): boolean;
 		public GetHashCode(): number;
 		public ToString(): string;
 		public ToString(format: string): string;

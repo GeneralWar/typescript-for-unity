@@ -38,8 +38,8 @@
 		static public get right(): UnityEngine.Vector3;
 		static public get positiveInfinity(): UnityEngine.Vector3;
 		static public get negativeInfinity(): UnityEngine.Vector3;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Vector3): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Vector3): boolean;
 		public GetHashCode(): number;
 		public Normalize(): void;
 		public Scale(scale: UnityEngine.Vector3): void;

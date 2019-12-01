@@ -9,7 +9,7 @@
 		export class Sampler
 		{
 			public GetRecorder(): UnityEngine.Profiling.Recorder;
-			public get isValid(): number;
+			public get isValid(): boolean;
 			public get name(): string;
 		}
 	}

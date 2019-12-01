@@ -1,9 +1,15 @@
 ﻿declare namespace UnityEngine
 {
-	export enum DictationTopicConstraint
+	declare namespace Windows
 	{
-		WebSearch = 0,
-		Form = 1,
-		Dictation = 2,
+		declare namespace Speech
+		{
+			export enum DictationTopicConstraint
+			{
+				WebSearch = 0,
+				Form = 1,
+				Dictation = 2,
+			}
+		}
 	}
 }

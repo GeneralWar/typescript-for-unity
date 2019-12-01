@@ -1,0 +1,107 @@
+﻿declare namespace System
+{
+	declare namespace Net
+	{
+		export class HttpWebRequest extends System.Net.WebRequest
+		{
+			static public get DefaultCachePolicy(): System.Net.Cache.RequestCachePolicy;
+			static public set DefaultCachePolicy(): System.Net.Cache.RequestCachePolicy;
+			static public get DefaultMaximumErrorResponseLength(): number;
+			static public set DefaultMaximumErrorResponseLength(): number;
+			static public get DefaultMaximumResponseHeadersLength(): number;
+			static public set DefaultMaximumResponseHeadersLength(): number;
+			public Abort(): void;
+			public AddRange(range: number): void;
+			public AddRange(range: number): void;
+			public AddRange(from: number, to: number): void;
+			public AddRange(rangeSpecifier: string, range: number): void;
+			public AddRange(from: number, to: number): void;
+			public AddRange(rangeSpecifier: string, range: number): void;
+			public AddRange(rangeSpecifier: string, from: number, to: number): void;
+			public AddRange(rangeSpecifier: string, from: number, to: number): void;
+			public EndGetRequestStream(asyncResult: any): System.IO.Stream;
+			public EndGetResponse(asyncResult: any): System.Net.WebResponse;
+			public GetRequestStream(): System.IO.Stream;
+			public GetResponse(): System.Net.WebResponse;
+			public get Accept(): string;
+			public set Accept(): string;
+			public get ReadWriteTimeout(): number;
+			public set ReadWriteTimeout(): number;
+			public get ContinueTimeout(): number;
+			public set ContinueTimeout(): number;
+			public get MediaType(): string;
+			public set MediaType(): string;
+			public get Method(): string;
+			public set Method(): string;
+			public get Pipelined(): boolean;
+			public set Pipelined(): boolean;
+			public get PreAuthenticate(): boolean;
+			public set PreAuthenticate(): boolean;
+			public get ProtocolVersion(): System.Version;
+			public set ProtocolVersion(): System.Version;
+			public get Proxy(): any;
+			public set Proxy(): any;
+			public get Referer(): string;
+			public set Referer(): string;
+			public get RequestUri(): System.Uri;
+			public get SendChunked(): boolean;
+			public set SendChunked(): boolean;
+			public get ServicePoint(): System.Net.ServicePoint;
+			public get SupportsCookieContainer(): boolean;
+			public get Timeout(): number;
+			public set Timeout(): number;
+			public get TransferEncoding(): string;
+			public set TransferEncoding(): string;
+			public get UseDefaultCredentials(): boolean;
+			public set UseDefaultCredentials(): boolean;
+			public get UserAgent(): string;
+			public set UserAgent(): string;
+			public get MaximumResponseHeadersLength(): number;
+			public set MaximumResponseHeadersLength(): number;
+			public get MaximumAutomaticRedirections(): number;
+			public set MaximumAutomaticRedirections(): number;
+			public get KeepAlive(): boolean;
+			public set KeepAlive(): boolean;
+			public get IfModifiedSince(): System.DateTime;
+			public set IfModifiedSince(): System.DateTime;
+			public get Address(): System.Uri;
+			public get AllowAutoRedirect(): boolean;
+			public set AllowAutoRedirect(): boolean;
+			public get AllowWriteStreamBuffering(): boolean;
+			public set AllowWriteStreamBuffering(): boolean;
+			public get AllowReadStreamBuffering(): boolean;
+			public set AllowReadStreamBuffering(): boolean;
+			public get AutomaticDecompression(): System.Net.DecompressionMethods;
+			public set AutomaticDecompression(): System.Net.DecompressionMethods;
+			public get ClientCertificates(): System.Security.Cryptography.X509Certificates.X509CertificateCollection;
+			public set ClientCertificates(): System.Security.Cryptography.X509Certificates.X509CertificateCollection;
+			public get Connection(): string;
+			public set Connection(): string;
+			public get ConnectionGroupName(): string;
+			public set ConnectionGroupName(): string;
+			public get UnsafeAuthenticatedConnectionSharing(): boolean;
+			public set UnsafeAuthenticatedConnectionSharing(): boolean;
+			public get ContentLength(): number;
+			public set ContentLength(): number;
+			public get ContinueDelegate(): System.Net.HttpContinueDelegate;
+			public set ContinueDelegate(): System.Net.HttpContinueDelegate;
+			public get CookieContainer(): System.Net.CookieContainer;
+			public set CookieContainer(): System.Net.CookieContainer;
+			public get Credentials(): any;
+			public set Credentials(): any;
+			public get Date(): System.DateTime;
+			public set Date(): System.DateTime;
+			public get Expect(): string;
+			public set Expect(): string;
+			public get HaveResponse(): boolean;
+			public get Headers(): System.Net.WebHeaderCollection;
+			public set Headers(): System.Net.WebHeaderCollection;
+			public get Host(): string;
+			public set Host(): string;
+			public get ContentType(): string;
+			public set ContentType(): string;
+			public get ServerCertificateValidationCallback(): System.Net.Security.RemoteCertificateValidationCallback;
+			public set ServerCertificateValidationCallback(): System.Net.Security.RemoteCertificateValidationCallback;
+		}
+	}
+}

@@ -1,0 +1,6 @@
+MAC
+[JS] : prototype,function_call_object,fullname,apply,unity_instance_is_type,CreatePrimitive,Find,FindGameObjectWithTag,FindGameObjectsWithTag,FindWithTag,Destroy,DestroyImmediate,DontDestroyOnLoad,FindObjectOfType,FindObjectsOfType,Instantiate
+Android
+[JS] : name,fullname,apply,unity_instance_is_type,CreatePrimitive,Find,FindGameObjectWithTag,FindGameObjectsWithTag,FindWithTag,Destroy,DestroyImmediate,DontDestroyOnLoad,FindObjectOfType,FindObjectsOfType,Instantiate
+Windows
+[JS] : name,fullname,apply,unity_instance_is_type,CreatePrimitive,Find,FindGameObjectWithTag,FindGameObjectsWithTag,FindWithTag,Destroy,DestroyImmediate,DontDestroyOnLoad,FindObjectOfType,FindObjectsOfType,Instantiate

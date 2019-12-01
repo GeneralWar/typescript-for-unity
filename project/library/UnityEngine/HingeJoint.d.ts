@@ -9,12 +9,12 @@
 		public set limits(): UnityEngine.JointLimits;
 		public get spring(): UnityEngine.JointSpring;
 		public set spring(): UnityEngine.JointSpring;
-		public get useMotor(): number;
-		public set useMotor(): number;
-		public get useLimits(): number;
-		public set useLimits(): number;
-		public get useSpring(): number;
-		public set useSpring(): number;
+		public get useMotor(): boolean;
+		public set useMotor(): boolean;
+		public get useLimits(): boolean;
+		public set useLimits(): boolean;
+		public get useSpring(): boolean;
+		public set useSpring(): boolean;
 		public get velocity(): number;
 		public get angle(): number;
 	}

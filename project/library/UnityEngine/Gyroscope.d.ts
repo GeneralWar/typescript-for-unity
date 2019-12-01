@@ -7,8 +7,8 @@
 		public get gravity(): UnityEngine.Vector3;
 		public get userAcceleration(): UnityEngine.Vector3;
 		public get attitude(): UnityEngine.Quaternion;
-		public get enabled(): number;
-		public set enabled(): number;
+		public get enabled(): boolean;
+		public set enabled(): boolean;
 		public get updateInterval(): number;
 		public set updateInterval(): number;
 	}

@@ -23,7 +23,7 @@
 		export function GetGlobalVector(nameID: number): UnityEngine.Vector4;
 		export function GetGlobalVectorArray(name: string): UnityEngine.Vector4[];
 		export function GetGlobalVectorArray(nameID: number): UnityEngine.Vector4[];
-		export function IsKeywordEnabled(keyword: string): number;
+		export function IsKeywordEnabled(keyword: string): boolean;
 		export function PropertyToID(name: string): number;
 		export function SetGlobalBuffer(name: string, value: UnityEngine.ComputeBuffer): void;
 		export function SetGlobalBuffer(nameID: number, value: UnityEngine.ComputeBuffer): void;
@@ -55,7 +55,7 @@
 		static public set globalRenderPipeline(): string;
 		public get maximumLOD(): number;
 		public set maximumLOD(): number;
-		public get isSupported(): number;
+		public get isSupported(): boolean;
 		public get renderQueue(): number;
 	}
 }

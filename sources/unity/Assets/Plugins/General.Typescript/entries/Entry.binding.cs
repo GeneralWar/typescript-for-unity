@@ -21,6 +21,9 @@ namespace General.Typescript
         static internal extern IntPtr General_Typescript_Initialize();
 
         [DllImport(LIBRARY_NAME)]
+        static internal extern bool General_Typescript_Is_Initialized();
+
+        [DllImport(LIBRARY_NAME)]
         static internal extern IntPtr General_Typescript_Bind(IntPtr context);
 
         [DllImport(LIBRARY_NAME)]

@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum IndexFormat
+	declare namespace Rendering
 	{
-		UInt16 = 0,
-		UInt32 = 1,
+		export enum IndexFormat
+		{
+			UInt16 = 0,
+			UInt32 = 1,
+		}
 	}
 }

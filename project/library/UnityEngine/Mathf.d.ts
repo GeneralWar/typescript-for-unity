@@ -5,7 +5,7 @@
 		export function Abs(f: number): number;
 		export function Abs(value: number): number;
 		export function Acos(f: number): number;
-		export function Approximately(a: number, b: number): number;
+		export function Approximately(a: number, b: number): boolean;
 		export function Asin(f: number): number;
 		export function Atan(f: number): number;
 		export function Atan2(y: number, x: number): number;
@@ -26,7 +26,7 @@
 		export function GammaToLinearSpace(value: number): number;
 		export function HalfToFloat(val: number): number;
 		export function InverseLerp(a: number, b: number, value: number): number;
-		export function IsPowerOfTwo(value: number): number;
+		export function IsPowerOfTwo(value: number): boolean;
 		export function Lerp(a: number, b: number, t: number): number;
 		export function LerpAngle(a: number, b: number, t: number): number;
 		export function LerpUnclamped(a: number, b: number, t: number): number;

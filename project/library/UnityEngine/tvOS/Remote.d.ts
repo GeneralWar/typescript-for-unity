@@ -5,14 +5,14 @@
 		export class Remote
 		{
 			public constructor();
-			static public get allowExitToHome(): number;
-			static public set allowExitToHome(): number;
-			static public get allowRemoteRotation(): number;
-			static public set allowRemoteRotation(): number;
-			static public get reportAbsoluteDpadValues(): number;
-			static public set reportAbsoluteDpadValues(): number;
-			static public get touchesEnabled(): number;
-			static public set touchesEnabled(): number;
+			static public get allowExitToHome(): boolean;
+			static public set allowExitToHome(): boolean;
+			static public get allowRemoteRotation(): boolean;
+			static public set allowRemoteRotation(): boolean;
+			static public get reportAbsoluteDpadValues(): boolean;
+			static public set reportAbsoluteDpadValues(): boolean;
+			static public get touchesEnabled(): boolean;
+			static public set touchesEnabled(): boolean;
 		}
 	}
 }

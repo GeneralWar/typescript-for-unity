@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ReflectionProbeTimeSlicingMode
+	declare namespace Rendering
 	{
-		AllFacesAtOnce = 0,
-		IndividualFaces = 1,
-		NoTimeSlicing = 2,
+		export enum ReflectionProbeTimeSlicingMode
+		{
+			AllFacesAtOnce = 0,
+			IndividualFaces = 1,
+			NoTimeSlicing = 2,
+		}
 	}
 }

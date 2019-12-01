@@ -16,7 +16,7 @@
 		public set legStretch(): number;
 		public get feetSpacing(): number;
 		public set feetSpacing(): number;
-		public get hasTranslationDoF(): number;
-		public set hasTranslationDoF(): number;
+		public get hasTranslationDoF(): boolean;
+		public set hasTranslationDoF(): boolean;
 	}
 }

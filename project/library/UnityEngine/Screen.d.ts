@@ -3,9 +3,9 @@
 	export namespace Screen
 	{
 		export function SetResolution(width: number, height: number, fullscreenMode: UnityEngine.FullScreenMode): void;
-		export function SetResolution(width: number, height: number, fullscreen: number): void;
+		export function SetResolution(width: number, height: number, fullscreen: boolean): void;
 		export function SetResolution(width: number, height: number, fullscreenMode: UnityEngine.FullScreenMode, preferredRefreshRate: number): void;
-		export function SetResolution(width: number, height: number, fullscreen: number, preferredRefreshRate: number): void;
+		export function SetResolution(width: number, height: number, fullscreen: boolean, preferredRefreshRate: number): void;
 	}
 	export class Screen
 	{
@@ -17,17 +17,17 @@
 		static public set orientation(): UnityEngine.ScreenOrientation;
 		static public get sleepTimeout(): number;
 		static public set sleepTimeout(): number;
-		static public get autorotateToPortrait(): number;
-		static public set autorotateToPortrait(): number;
-		static public get autorotateToPortraitUpsideDown(): number;
-		static public set autorotateToPortraitUpsideDown(): number;
-		static public get autorotateToLandscapeLeft(): number;
-		static public set autorotateToLandscapeLeft(): number;
-		static public get autorotateToLandscapeRight(): number;
-		static public set autorotateToLandscapeRight(): number;
+		static public get autorotateToPortrait(): boolean;
+		static public set autorotateToPortrait(): boolean;
+		static public get autorotateToPortraitUpsideDown(): boolean;
+		static public set autorotateToPortraitUpsideDown(): boolean;
+		static public get autorotateToLandscapeLeft(): boolean;
+		static public set autorotateToLandscapeLeft(): boolean;
+		static public get autorotateToLandscapeRight(): boolean;
+		static public set autorotateToLandscapeRight(): boolean;
 		static public get currentResolution(): UnityEngine.Resolution;
-		static public get fullScreen(): number;
-		static public set fullScreen(): number;
+		static public get fullScreen(): boolean;
+		static public set fullScreen(): boolean;
 		static public get fullScreenMode(): UnityEngine.FullScreenMode;
 		static public set fullScreenMode(): UnityEngine.FullScreenMode;
 		static public get safeArea(): UnityEngine.Rect;

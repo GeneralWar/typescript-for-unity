@@ -5,9 +5,9 @@
 		public constructor(position: UnityEngine.Vector3Int, size: UnityEngine.Vector3Int);
 		public constructor(xMin: number, yMin: number, zMin: number, sizeX: number, sizeY: number, sizeZ: number);
 		public ClampToBounds(bounds: UnityEngine.BoundsInt): void;
-		public Contains(position: UnityEngine.Vector3Int): number;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.BoundsInt): number;
+		public Contains(position: UnityEngine.Vector3Int): boolean;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.BoundsInt): boolean;
 		public GetHashCode(): number;
 		public SetMinMax(minPosition: UnityEngine.Vector3Int, maxPosition: UnityEngine.Vector3Int): void;
 		public ToString(): string;

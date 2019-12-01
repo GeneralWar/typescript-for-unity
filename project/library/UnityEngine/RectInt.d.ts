@@ -5,8 +5,8 @@
 		public constructor(position: UnityEngine.Vector2Int, size: UnityEngine.Vector2Int);
 		public constructor(xMin: number, yMin: number, width: number, height: number);
 		public ClampToBounds(bounds: UnityEngine.RectInt): void;
-		public Contains(position: UnityEngine.Vector2Int): number;
-		public Equals(other: UnityEngine.RectInt): number;
+		public Contains(position: UnityEngine.Vector2Int): boolean;
+		public Equals(other: UnityEngine.RectInt): boolean;
 		public SetMinMax(minPosition: UnityEngine.Vector2Int, maxPosition: UnityEngine.Vector2Int): void;
 		public ToString(): string;
 		public get x(): number;

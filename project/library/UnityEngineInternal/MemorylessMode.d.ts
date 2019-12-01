@@ -1,4 +1,4 @@
-﻿declare namespace UnityEngine
+﻿declare namespace UnityEngineInternal
 {
 	export enum MemorylessMode
 	{

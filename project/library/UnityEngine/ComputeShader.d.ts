@@ -6,9 +6,9 @@
 		public DispatchIndirect(kernelIndex: number, argsBuffer: UnityEngine.ComputeBuffer): void;
 		public DispatchIndirect(kernelIndex: number, argsBuffer: UnityEngine.ComputeBuffer, argsOffset: number): void;
 		public FindKernel(name: string): number;
-		public HasKernel(name: string): number;
-		public SetBool(name: string, val: number): void;
-		public SetBool(nameID: number, val: number): void;
+		public HasKernel(name: string): boolean;
+		public SetBool(name: string, val: boolean): void;
+		public SetBool(nameID: number, val: boolean): void;
 		public SetBuffer(kernelIndex: number, nameID: number, buffer: UnityEngine.ComputeBuffer): void;
 		public SetBuffer(kernelIndex: number, name: string, buffer: UnityEngine.ComputeBuffer): void;
 		public SetFloat(nameID: number, val: number): void;

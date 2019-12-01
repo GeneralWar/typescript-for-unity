@@ -7,7 +7,7 @@
 		export function Create(texture: UnityEngine.Texture2D, rect: UnityEngine.Rect, pivot: UnityEngine.Vector2, pixelsPerUnit: number, extrude: number): UnityEngine.Sprite;
 		export function Create(texture: UnityEngine.Texture2D, rect: UnityEngine.Rect, pivot: UnityEngine.Vector2, pixelsPerUnit: number, extrude: number, meshType: UnityEngine.SpriteMeshType): UnityEngine.Sprite;
 		export function Create(texture: UnityEngine.Texture2D, rect: UnityEngine.Rect, pivot: UnityEngine.Vector2, pixelsPerUnit: number, extrude: number, meshType: UnityEngine.SpriteMeshType, border: UnityEngine.Vector4): UnityEngine.Sprite;
-		export function Create(texture: UnityEngine.Texture2D, rect: UnityEngine.Rect, pivot: UnityEngine.Vector2, pixelsPerUnit: number, extrude: number, meshType: UnityEngine.SpriteMeshType, border: UnityEngine.Vector4, generateFallbackPhysicsShape: number): UnityEngine.Sprite;
+		export function Create(texture: UnityEngine.Texture2D, rect: UnityEngine.Rect, pivot: UnityEngine.Vector2, pixelsPerUnit: number, extrude: number, meshType: UnityEngine.SpriteMeshType, border: UnityEngine.Vector4, generateFallbackPhysicsShape: boolean): UnityEngine.Sprite;
 	}
 	export class Sprite extends UnityEngine.Object
 	{
@@ -21,7 +21,7 @@
 		public get pixelsPerUnit(): number;
 		public get associatedAlphaSplitTexture(): UnityEngine.Texture2D;
 		public get pivot(): UnityEngine.Vector2;
-		public get packed(): number;
+		public get packed(): boolean;
 		public get packingMode(): UnityEngine.SpritePackingMode;
 		public get packingRotation(): UnityEngine.SpritePackingRotation;
 		public get textureRect(): UnityEngine.Rect;

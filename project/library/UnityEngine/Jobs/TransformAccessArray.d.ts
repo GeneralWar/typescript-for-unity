@@ -10,7 +10,7 @@
 			public Dispose(): void;
 			public RemoveAtSwapBack(index: number): void;
 			public SetTransforms(transforms: UnityEngine.Transform[]): void;
-			public get isCreated(): number;
+			public get isCreated(): boolean;
 			public get capacity(): number;
 			public set capacity(): number;
 			public get length(): number;

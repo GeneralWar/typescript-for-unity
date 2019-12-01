@@ -11,10 +11,10 @@
 		public constructor(u32_0: number, u32_1: number, u32_2: number, u32_3: number);
 		public CompareTo(rhs: UnityEngine.Hash128): number;
 		public CompareTo(obj: any): number;
-		public Equals(obj: any): number;
-		public Equals(obj: UnityEngine.Hash128): number;
+		public Equals(obj: any): boolean;
+		public Equals(obj: UnityEngine.Hash128): boolean;
 		public GetHashCode(): number;
 		public ToString(): string;
-		public get isValid(): number;
+		public get isValid(): boolean;
 	}
 }

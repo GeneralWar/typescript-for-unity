@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum PlayableTraversalMode
+	declare namespace Playables
 	{
-		Mix = 0,
-		Passthrough = 1,
+		export enum PlayableTraversalMode
+		{
+			Mix = 0,
+			Passthrough = 1,
+		}
 	}
 }

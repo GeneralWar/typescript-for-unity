@@ -7,7 +7,7 @@
 		export function CalculateFrustumPlanes(worldToProjectionMatrix: UnityEngine.Matrix4x4): UnityEngine.Plane[];
 		export function CalculateFrustumPlanes(camera: UnityEngine.Camera, planes: UnityEngine.Plane[]): void;
 		export function CalculateFrustumPlanes(worldToProjectionMatrix: UnityEngine.Matrix4x4, planes: UnityEngine.Plane[]): void;
-		export function TestPlanesAABB(planes: UnityEngine.Plane[], bounds: UnityEngine.Bounds): number;
+		export function TestPlanesAABB(planes: UnityEngine.Plane[], bounds: UnityEngine.Bounds): boolean;
 	}
 	export class GeometryUtility
 	{

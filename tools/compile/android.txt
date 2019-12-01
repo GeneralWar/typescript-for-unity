@@ -1,0 +1,61 @@
+android_unstripped_runtime_outputs = false
+is_component_build = true
+is_debug = false
+symbol_level = 1
+target_cpu = "arm"
+target_os = "android"
+use_goma = false
+v8_android_log_stdout = true
+v8_enable_i18n_support = false
+v8_static_library = true
+is_clang = false
+is_cfi = false
+v8_use_external_startup_data = false
+usg_gold = false
+use_sysroot = false
+use_custom_libcxx = false
+
+cd out.gn/android.arm.release/obj && mkdir libs && cd libs
+ar -rcsD libv8_base.a ../v8_base/*.o
+ar -rcsD libv8_init.a ../v8_init/*.o
+ar -rcsD libv8_initializers.a ../v8_initializers/*.o
+ar -rcsD libv8_libbase.a ../v8_libbase/*.o
+ar -rcsD libv8_libplatform.a ../v8_libplatform/*.o
+ar -rcsD libv8_libsampler.a ../v8_libsampler/*.o
+ar -rcsD libv8_nosnapshot.a ../v8_nosnapshot/*.o
+ar -rcsD libv8_snapshot.a ../v8_snapshot/*.o
+
+mkdir -p src/base/platform
+cp -R ../../../../src/*.h ./src
+cp -R ../../../../src/base/*.h ./src/base
+cp -R ../../../../src/base/platform/*.h ./src/base/platform
+cp -R ../../../../include ./
+
+is_component_build = false
+is_debug = false
+target_cpu = "arm"
+v8_target_cpu = "arm"
+target_os = "android"
+use_goma = false
+goma_dir = "None"
+v8_enable_backtrace = true
+v8_enable_disassembler = true
+v8_enable_object_print = true
+v8_enable_verify_heap = true
+
+# mkdir -p out/android_arm.release
+# echo > out/android_arm.release/args.gn << EOF
+is_component_build = false
+is_debug = false
+target_cpu = "arm"
+v8_target_cpu = "arm"
+target_os = "android"
+use_goma = false
+goma_dir = "None"
+v8_enable_backtrace = true
+v8_enable_disassembler = true
+v8_enable_object_print = true
+v8_enable_verify_heap = true
+v8_static_library = true
+EOF
+# gn gen out/android_arm.release

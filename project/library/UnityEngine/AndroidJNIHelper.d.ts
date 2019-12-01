@@ -11,17 +11,17 @@
 		export function GetConstructorID(jclass: number, args: any[]): number;
 		export function GetFieldID(javaClass: number, fieldName: string): number;
 		export function GetFieldID(javaClass: number, fieldName: string, signature: string): number;
-		export function GetFieldID(javaClass: number, fieldName: string, signature: string, isStatic: number): number;
+		export function GetFieldID(javaClass: number, fieldName: string, signature: string, isStatic: boolean): number;
 		export function GetMethodID(javaClass: number, methodName: string): number;
 		export function GetMethodID(javaClass: number, methodName: string, signature: string): number;
-		export function GetMethodID(javaClass: number, methodName: string, signature: string, isStatic: number): number;
-		export function GetMethodID(jclass: number, methodName: string, args: any[], isStatic: number): number;
+		export function GetMethodID(javaClass: number, methodName: string, signature: string, isStatic: boolean): number;
+		export function GetMethodID(jclass: number, methodName: string, args: any[], isStatic: boolean): number;
 		export function GetSignature(obj: any): string;
 		export function GetSignature(args: any[]): string;
 	}
 	export class AndroidJNIHelper
 	{
-		static public get debug(): number;
-		static public set debug(): number;
+		static public get debug(): boolean;
+		static public set debug(): boolean;
 	}
 }

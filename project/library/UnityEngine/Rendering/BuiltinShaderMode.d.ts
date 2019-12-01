@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum BuiltinShaderMode
+	declare namespace Rendering
 	{
-		Disabled = 0,
-		UseBuiltin = 1,
-		UseCustom = 2,
+		export enum BuiltinShaderMode
+		{
+			Disabled = 0,
+			UseBuiltin = 1,
+			UseCustom = 2,
+		}
 	}
 }

@@ -26,15 +26,15 @@
 		public get flags(): UnityEngine.RenderTextureCreationFlags;
 		public get memoryless(): UnityEngine.RenderTextureMemoryless;
 		public set memoryless(): UnityEngine.RenderTextureMemoryless;
-		public get sRGB(): number;
-		public set sRGB(): number;
-		public get useMipMap(): number;
-		public set useMipMap(): number;
-		public get autoGenerateMips(): number;
-		public set autoGenerateMips(): number;
-		public get enableRandomWrite(): number;
-		public set enableRandomWrite(): number;
-		public get bindMS(): number;
-		public set bindMS(): number;
+		public get sRGB(): boolean;
+		public set sRGB(): boolean;
+		public get useMipMap(): boolean;
+		public set useMipMap(): boolean;
+		public get autoGenerateMips(): boolean;
+		public set autoGenerateMips(): boolean;
+		public get enableRandomWrite(): boolean;
+		public set enableRandomWrite(): boolean;
+		public get bindMS(): boolean;
+		public set bindMS(): boolean;
 	}
 }

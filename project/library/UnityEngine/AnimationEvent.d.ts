@@ -17,8 +17,8 @@
 		public set time(): number;
 		public get messageOptions(): UnityEngine.SendMessageOptions;
 		public set messageOptions(): UnityEngine.SendMessageOptions;
-		public get isFiredByLegacy(): number;
-		public get isFiredByAnimator(): number;
+		public get isFiredByLegacy(): boolean;
+		public get isFiredByAnimator(): boolean;
 		public get animationState(): UnityEngine.AnimationState;
 		public get animatorStateInfo(): UnityEngine.AnimatorStateInfo;
 		public get animatorClipInfo(): UnityEngine.AnimatorClipInfo;

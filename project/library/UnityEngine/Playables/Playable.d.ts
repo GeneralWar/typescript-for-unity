@@ -9,7 +9,7 @@
 		export class Playable extends System.ValueType
 		{
 			static public get Null(): UnityEngine.Playables.Playable;
-			public Equals(other: UnityEngine.Playables.Playable): number;
+			public Equals(other: UnityEngine.Playables.Playable): boolean;
 			public GetHandle(): UnityEngine.Playables.PlayableHandle;
 			public GetPlayableType(): System.Type;
 		}

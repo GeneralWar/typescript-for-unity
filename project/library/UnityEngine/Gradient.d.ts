@@ -3,8 +3,8 @@
 	export class Gradient
 	{
 		public constructor();
-		public Equals(o: any): number;
-		public Equals(other: UnityEngine.Gradient): number;
+		public Equals(o: any): boolean;
+		public Equals(other: UnityEngine.Gradient): boolean;
 		public Evaluate(time: number): UnityEngine.Color;
 		public GetHashCode(): number;
 		public SetKeys(colorKeys: UnityEngine.GradientColorKey[], alphaKeys: UnityEngine.GradientAlphaKey[]): void;

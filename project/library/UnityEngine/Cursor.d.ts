@@ -7,8 +7,8 @@
 	export class Cursor
 	{
 		public constructor();
-		static public get visible(): number;
-		static public set visible(): number;
+		static public get visible(): boolean;
+		static public set visible(): boolean;
 		static public get lockState(): UnityEngine.CursorLockMode;
 		static public set lockState(): UnityEngine.CursorLockMode;
 	}

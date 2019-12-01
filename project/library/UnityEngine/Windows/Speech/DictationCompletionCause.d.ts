@@ -1,14 +1,20 @@
 ﻿declare namespace UnityEngine
 {
-	export enum DictationCompletionCause
+	declare namespace Windows
 	{
-		Complete = 0,
-		AudioQualityFailure = 1,
-		Canceled = 2,
-		TimeoutExceeded = 3,
-		PauseLimitExceeded = 4,
-		NetworkFailure = 5,
-		MicrophoneUnavailable = 6,
-		UnknownError = 7,
+		declare namespace Speech
+		{
+			export enum DictationCompletionCause
+			{
+				Complete = 0,
+				AudioQualityFailure = 1,
+				Canceled = 2,
+				TimeoutExceeded = 3,
+				PauseLimitExceeded = 4,
+				NetworkFailure = 5,
+				MicrophoneUnavailable = 6,
+				UnknownError = 7,
+			}
+		}
 	}
 }

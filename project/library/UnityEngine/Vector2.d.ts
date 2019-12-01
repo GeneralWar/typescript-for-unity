@@ -28,8 +28,8 @@
 		static public get right(): UnityEngine.Vector2;
 		static public get positiveInfinity(): UnityEngine.Vector2;
 		static public get negativeInfinity(): UnityEngine.Vector2;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Vector2): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Vector2): boolean;
 		public GetHashCode(): number;
 		public Normalize(): void;
 		public Scale(scale: UnityEngine.Vector2): void;

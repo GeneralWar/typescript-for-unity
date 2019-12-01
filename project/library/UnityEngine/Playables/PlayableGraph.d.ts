@@ -19,9 +19,9 @@
 			public GetRootPlayable(index: number): UnityEngine.Playables.Playable;
 			public GetRootPlayableCount(): number;
 			public GetTimeUpdateMode(): UnityEngine.Playables.DirectorUpdateMode;
-			public IsDone(): number;
-			public IsPlaying(): number;
-			public IsValid(): number;
+			public IsDone(): boolean;
+			public IsPlaying(): boolean;
+			public IsValid(): boolean;
 			public Play(): void;
 			public SetResolver(value: any): void;
 			public SetTimeUpdateMode(value: UnityEngine.Playables.DirectorUpdateMode): void;

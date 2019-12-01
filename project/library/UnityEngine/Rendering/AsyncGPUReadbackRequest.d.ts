@@ -6,8 +6,8 @@
 		{
 			public Update(): void;
 			public WaitForCompletion(): void;
-			public get done(): number;
-			public get hasError(): number;
+			public get done(): boolean;
+			public get hasError(): boolean;
 			public get layerCount(): number;
 			public get layerDataSize(): number;
 			public get width(): number;

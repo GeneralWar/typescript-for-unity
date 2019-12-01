@@ -4,7 +4,7 @@
 	{
 		export class GPUFence extends System.ValueType
 		{
-			public get passed(): number;
+			public get passed(): boolean;
 		}
 	}
 }

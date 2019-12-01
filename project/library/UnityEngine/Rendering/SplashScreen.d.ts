@@ -10,7 +10,7 @@
 		export class SplashScreen
 		{
 			public constructor();
-			static public get isFinished(): number;
+			static public get isFinished(): boolean;
 		}
 	}
 }

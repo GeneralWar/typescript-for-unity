@@ -31,8 +31,8 @@
 		public set xDrive(): UnityEngine.JointDrive;
 		public get targetVelocity(): UnityEngine.Vector3;
 		public set targetVelocity(): UnityEngine.Vector3;
-		public get configuredInWorldSpace(): number;
-		public set configuredInWorldSpace(): number;
+		public get configuredInWorldSpace(): boolean;
+		public set configuredInWorldSpace(): boolean;
 		public get targetPosition(): UnityEngine.Vector3;
 		public set targetPosition(): UnityEngine.Vector3;
 		public get angularYLimit(): UnityEngine.SoftJointLimit;
@@ -63,7 +63,7 @@
 		public set xMotion(): UnityEngine.ConfigurableJointMotion;
 		public get angularZLimit(): UnityEngine.SoftJointLimit;
 		public set angularZLimit(): UnityEngine.SoftJointLimit;
-		public get swapBodies(): number;
-		public set swapBodies(): number;
+		public get swapBodies(): boolean;
+		public set swapBodies(): boolean;
 	}
 }

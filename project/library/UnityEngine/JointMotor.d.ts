@@ -6,7 +6,7 @@
 		public set targetVelocity(): number;
 		public get force(): number;
 		public set force(): number;
-		public get freeSpin(): number;
-		public set freeSpin(): number;
+		public get freeSpin(): boolean;
+		public set freeSpin(): boolean;
 	}
 }

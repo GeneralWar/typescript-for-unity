@@ -13,6 +13,8 @@ DLL_EXPORT void General_Typescript_SetSnapshotDataBlob(const char* buffer, int s
 
 DLL_EXPORT void* General_Typescript_Initialize();
 
+DLL_EXPORT bool General_Typescript_Is_Initialized();
+
 DLL_EXPORT void General_Typescript_Bind(void* environment);
 
 DLL_EXPORT const char* General_Typescript_ExecuteString(void* environment, const char* sourceContent);

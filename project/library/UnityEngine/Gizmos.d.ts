@@ -9,7 +9,7 @@
 		export function DrawGUITexture(screenRect: UnityEngine.Rect, texture: UnityEngine.Texture, leftBorder: number, rightBorder: number, topBorder: number, bottomBorder: number): void;
 		export function DrawGUITexture(screenRect: UnityEngine.Rect, texture: UnityEngine.Texture, leftBorder: number, rightBorder: number, topBorder: number, bottomBorder: number, mat: UnityEngine.Material): void;
 		export function DrawIcon(center: UnityEngine.Vector3, name: string): void;
-		export function DrawIcon(center: UnityEngine.Vector3, name: string, allowScaling: number): void;
+		export function DrawIcon(center: UnityEngine.Vector3, name: string, allowScaling: boolean): void;
 		export function DrawLine(from: UnityEngine.Vector3, to: UnityEngine.Vector3): void;
 		export function DrawMesh(mesh: UnityEngine.Mesh): void;
 		export function DrawMesh(mesh: UnityEngine.Mesh, position: UnityEngine.Vector3): void;

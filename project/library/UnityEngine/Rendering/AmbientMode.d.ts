@@ -1,10 +1,13 @@
 ﻿declare namespace UnityEngine
 {
-	export enum AmbientMode
+	declare namespace Rendering
 	{
-		Skybox = 0,
-		Trilight = 1,
-		Flat = 3,
-		Custom = 4,
+		export enum AmbientMode
+		{
+			Skybox = 0,
+			Trilight = 1,
+			Flat = 3,
+			Custom = 4,
+		}
 	}
 }

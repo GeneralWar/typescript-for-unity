@@ -12,7 +12,7 @@ namespace General.Typescript
         override public bool initialize()
         {
             string directory = Path.Combine(Application.streamingAssetsPath, "typescript");
-#if !UNITY_ANDROID
+#if !UNITY_ANDROID || UNITY_EDITOR
             byte[] nativeData = File.ReadAllBytes(Path.Combine(directory, "natives_blob.bin"));
 			byte[] snapshotData = File.ReadAllBytes(Path.Combine(directory, "snapshot_blob.bin"));
 			General_Typescript_SetNativeDataBlob(GCHandle.Alloc(nativeData, GCHandleType.Pinned).AddrOfPinnedObject(), nativeData.Length);

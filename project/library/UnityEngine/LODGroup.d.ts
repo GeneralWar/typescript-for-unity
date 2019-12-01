@@ -16,9 +16,9 @@
 		public get lodCount(): number;
 		public get fadeMode(): UnityEngine.LODFadeMode;
 		public set fadeMode(): UnityEngine.LODFadeMode;
-		public get animateCrossFading(): number;
-		public set animateCrossFading(): number;
-		public get enabled(): number;
-		public set enabled(): number;
+		public get animateCrossFading(): boolean;
+		public set animateCrossFading(): boolean;
+		public get enabled(): boolean;
+		public set enabled(): boolean;
 	}
 }

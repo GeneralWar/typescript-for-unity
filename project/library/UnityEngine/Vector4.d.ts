@@ -24,8 +24,8 @@
 		static public get one(): UnityEngine.Vector4;
 		static public get positiveInfinity(): UnityEngine.Vector4;
 		static public get negativeInfinity(): UnityEngine.Vector4;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Vector4): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Vector4): boolean;
 		public GetHashCode(): number;
 		public Normalize(): void;
 		public Scale(scale: UnityEngine.Vector4): void;

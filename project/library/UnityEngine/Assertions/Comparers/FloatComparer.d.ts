@@ -6,16 +6,16 @@
 		{
 			export namespace FloatComparer
 			{
-				export function AreEqual(expected: number, actual: number, error: number): number;
-				export function AreEqualRelative(expected: number, actual: number, error: number): number;
+				export function AreEqual(expected: number, actual: number, error: number): boolean;
+				export function AreEqualRelative(expected: number, actual: number, error: number): boolean;
 			}
 			export class FloatComparer
 			{
 				public constructor();
-				public constructor(relative: number);
+				public constructor(relative: boolean);
 				public constructor(error: number);
-				public constructor(error: number, relative: number);
-				public Equals(a: number, b: number): number;
+				public constructor(error: number, relative: boolean);
+				public Equals(a: number, b: number): boolean;
 				public GetHashCode(obj: number): number;
 			}
 		}

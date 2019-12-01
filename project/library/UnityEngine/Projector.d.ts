@@ -11,8 +11,8 @@
 		public set fieldOfView(): number;
 		public get aspectRatio(): number;
 		public set aspectRatio(): number;
-		public get orthographic(): number;
-		public set orthographic(): number;
+		public get orthographic(): boolean;
+		public set orthographic(): boolean;
 		public get orthographicSize(): number;
 		public set orthographicSize(): number;
 		public get ignoreLayers(): number;

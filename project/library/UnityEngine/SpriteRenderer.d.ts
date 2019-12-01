@@ -17,10 +17,10 @@
 		public set color(): UnityEngine.Color;
 		public get maskInteraction(): UnityEngine.SpriteMaskInteraction;
 		public set maskInteraction(): UnityEngine.SpriteMaskInteraction;
-		public get flipX(): number;
-		public set flipX(): number;
-		public get flipY(): number;
-		public set flipY(): number;
+		public get flipX(): boolean;
+		public set flipX(): boolean;
+		public get flipY(): boolean;
+		public set flipY(): boolean;
 		public get spriteSortPoint(): UnityEngine.SpriteSortPoint;
 		public set spriteSortPoint(): UnityEngine.SpriteSortPoint;
 	}

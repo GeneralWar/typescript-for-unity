@@ -1,10 +1,13 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ForcedCrashCategory
+	declare namespace Diagnostics
 	{
-		AccessViolation = 0,
-		FatalError = 1,
-		Abort = 2,
-		PureVirtualFunction = 3,
+		export enum ForcedCrashCategory
+		{
+			AccessViolation = 0,
+			FatalError = 1,
+			Abort = 2,
+			PureVirtualFunction = 3,
+		}
 	}
 }

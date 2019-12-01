@@ -13,9 +13,9 @@ const execute = child_process.execSync;
 const streamingPath = (() => {
   switch (process.platform) {
     case "win32":
-      return "sources/unity/Output/Windows/TypescriptForUnity_Data/StreamingAssets/Scripts/";
+      return "sources/TypescriptForUnity/Output/Windows/TypescriptForUnity_Data/StreamingAssets/Scripts/";
     default:
-      return "sources/unity/Output/iOS/Data/Raw/Scripts/";
+      return "sources/TypescriptForUnity/Output/iOS/Data/Raw/Scripts/";
   }
 })();
 
@@ -48,7 +48,7 @@ EnumerateDirecotry(COMPILED_PATH, (filename: string) => {
   );
   copyFile(final,
     path.join(
-      "sources/unity/Assets/StreamingAssets/Scripts/",
+      "sources/TypescriptForUnity/Assets/StreamingAssets/Scripts/",
       `${path.basename(filename, ".js")}.gts`
     )
   );

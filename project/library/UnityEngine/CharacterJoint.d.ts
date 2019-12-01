@@ -17,8 +17,8 @@
 		public set swing1Limit(): UnityEngine.SoftJointLimit;
 		public get swing2Limit(): UnityEngine.SoftJointLimit;
 		public set swing2Limit(): UnityEngine.SoftJointLimit;
-		public get enableProjection(): number;
-		public set enableProjection(): number;
+		public get enableProjection(): boolean;
+		public set enableProjection(): boolean;
 		public get projectionDistance(): number;
 		public set projectionDistance(): number;
 		public get projectionAngle(): number;

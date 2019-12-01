@@ -5,6 +5,6 @@
 		public constructor(time: number);
 		public get waitTime(): number;
 		public set waitTime(): number;
-		public get keepWaiting(): number;
+		public get keepWaiting(): boolean;
 	}
 }

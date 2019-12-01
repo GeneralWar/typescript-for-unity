@@ -22,10 +22,10 @@
 		static public get nonStreamingTextureCount(): number;
 		static public get streamingTexturePendingLoadCount(): number;
 		static public get streamingTextureLoadingCount(): number;
-		static public get streamingTextureForceLoadAll(): number;
-		static public set streamingTextureForceLoadAll(): number;
-		static public get streamingTextureDiscardUnusedMips(): number;
-		static public set streamingTextureDiscardUnusedMips(): number;
+		static public get streamingTextureForceLoadAll(): boolean;
+		static public set streamingTextureForceLoadAll(): boolean;
+		static public get streamingTextureDiscardUnusedMips(): boolean;
+		static public set streamingTextureDiscardUnusedMips(): boolean;
 		public GetNativeTexturePtr(): number;
 		public IncrementUpdateCount(): void;
 		public get width(): number;
@@ -34,7 +34,7 @@
 		public set height(): number;
 		public get dimension(): UnityEngine.Rendering.TextureDimension;
 		public set dimension(): UnityEngine.Rendering.TextureDimension;
-		public get isReadable(): number;
+		public get isReadable(): boolean;
 		public get wrapMode(): UnityEngine.TextureWrapMode;
 		public set wrapMode(): UnityEngine.TextureWrapMode;
 		public get wrapModeU(): UnityEngine.TextureWrapMode;

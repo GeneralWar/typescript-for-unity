@@ -1,11 +1,14 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ShaderKeywordType
+	declare namespace Rendering
 	{
-		None = 0,
-		BuiltinDefault = 2,
-		BuiltinExtra = 6,
-		BuiltinAutoStripped = 10,
-		UserDefined = 16,
+		export enum ShaderKeywordType
+		{
+			None = 0,
+			BuiltinDefault = 2,
+			BuiltinExtra = 6,
+			BuiltinAutoStripped = 10,
+			UserDefined = 16,
+		}
 	}
 }

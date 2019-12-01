@@ -11,11 +11,13 @@ class TypescriptStaticFunction;
 class Environment
 {
 protected:
-    static std::vector<std::string> sSuperClassNames;
+	static Environment* sInstance;
+	static std::vector<std::string> sSuperClassNames;
 public:
-    static void AppendCustomSuperClassName(const char* fullname);
-    static bool IsCustomSuperClassName(const char* fullname);
-    static bool IsCustomSuperClassName(const std::string& fullname);
+	static Environment* GetInstance();
+	static void AppendCustomSuperClassName(const char* fullname);
+	static bool IsCustomSuperClassName(const char* fullname);
+	static bool IsCustomSuperClassName(const std::string& fullname);
 protected:
 	std::vector<std::shared_ptr<TypescriptClass>> mClasses;
 	std::vector<std::shared_ptr<TypescriptNamespace>> mNamespaces;
@@ -25,9 +27,9 @@ protected:
 
 	void bindExtra();
 public:
-    Environment() { }
+	Environment();
 	virtual bool Initialize() = 0;
-    virtual ~Environment() { }
+	virtual ~Environment() { }
 
 	virtual void Bind() = 0;
 

@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum PlayState
+	declare namespace Playables
 	{
-		Paused = 0,
-		Playing = 1,
-		Delayed = 2,
+		export enum PlayState
+		{
+			Paused = 0,
+			Playing = 1,
+			Delayed = 2,
+		}
 	}
 }

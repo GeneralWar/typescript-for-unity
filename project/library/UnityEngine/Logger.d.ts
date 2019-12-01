@@ -3,7 +3,7 @@
 	export class Logger
 	{
 		public constructor(logHandler: any);
-		public IsLogTypeAllowed(logType: UnityEngine.LogType): number;
+		public IsLogTypeAllowed(logType: UnityEngine.LogType): boolean;
 		public Log(message: any): void;
 		public Log(logType: UnityEngine.LogType, message: any): void;
 		public Log(tag: string, message: any): void;
@@ -21,8 +21,8 @@
 		public LogWarning(tag: string, message: any, context: UnityEngine.Object): void;
 		public get logHandler(): any;
 		public set logHandler(): any;
-		public get logEnabled(): number;
-		public set logEnabled(): number;
+		public get logEnabled(): boolean;
+		public set logEnabled(): boolean;
 		public get filterLogType(): UnityEngine.LogType;
 		public set filterLogType(): UnityEngine.LogType;
 	}

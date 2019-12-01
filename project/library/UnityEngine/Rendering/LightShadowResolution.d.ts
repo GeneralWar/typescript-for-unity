@@ -1,11 +1,14 @@
 ﻿declare namespace UnityEngine
 {
-	export enum LightShadowResolution
+	declare namespace Rendering
 	{
-		Low = 0,
-		Medium = 1,
-		High = 2,
-		VeryHigh = 3,
-		FromQualitySettings = -1,
+		export enum LightShadowResolution
+		{
+			Low = 0,
+			Medium = 1,
+			High = 2,
+			VeryHigh = 3,
+			FromQualitySettings = -1,
+		}
 	}
 }

@@ -12,8 +12,8 @@
 		public constructor(keys: UnityEngine.Keyframe[]);
 		public AddKey(key: UnityEngine.Keyframe): number;
 		public AddKey(time: number, value: number): number;
-		public Equals(o: any): number;
-		public Equals(other: UnityEngine.AnimationCurve): number;
+		public Equals(o: any): boolean;
+		public Equals(other: UnityEngine.AnimationCurve): boolean;
 		public Evaluate(time: number): number;
 		public GetHashCode(): number;
 		public MoveKey(index: number, key: UnityEngine.Keyframe): number;

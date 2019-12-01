@@ -4,7 +4,7 @@
 	{
 		public constructor(address: string);
 		public DestroyPing(): void;
-		public get isDone(): number;
+		public get isDone(): boolean;
 		public get time(): number;
 		public get ip(): string;
 	}

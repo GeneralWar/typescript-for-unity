@@ -17,13 +17,13 @@
 		public set wrapMode(): UnityEngine.WrapMode;
 		public get localBounds(): UnityEngine.Bounds;
 		public set localBounds(): UnityEngine.Bounds;
-		public get legacy(): number;
-		public set legacy(): number;
-		public get humanMotion(): number;
-		public get empty(): number;
-		public get hasGenericRootTransform(): number;
-		public get hasMotionFloatCurves(): number;
-		public get hasMotionCurves(): number;
-		public get hasRootCurves(): number;
+		public get legacy(): boolean;
+		public set legacy(): boolean;
+		public get humanMotion(): boolean;
+		public get empty(): boolean;
+		public get hasGenericRootTransform(): boolean;
+		public get hasMotionFloatCurves(): boolean;
+		public get hasMotionCurves(): boolean;
+		public get hasRootCurves(): boolean;
 	}
 }

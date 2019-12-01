@@ -8,13 +8,13 @@
 		}
 		export class AnimationClipPlayable extends System.ValueType
 		{
-			public Equals(other: UnityEngine.Animations.AnimationClipPlayable): number;
+			public Equals(other: UnityEngine.Animations.AnimationClipPlayable): boolean;
 			public GetAnimationClip(): UnityEngine.AnimationClip;
-			public GetApplyFootIK(): number;
-			public GetApplyPlayableIK(): number;
+			public GetApplyFootIK(): boolean;
+			public GetApplyPlayableIK(): boolean;
 			public GetHandle(): UnityEngine.Playables.PlayableHandle;
-			public SetApplyFootIK(value: number): void;
-			public SetApplyPlayableIK(value: number): void;
+			public SetApplyFootIK(value: boolean): void;
+			public SetApplyPlayableIK(value: boolean): void;
 		}
 	}
 }

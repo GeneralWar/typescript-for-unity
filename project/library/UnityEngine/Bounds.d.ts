@@ -4,16 +4,16 @@
 	{
 		public constructor(center: UnityEngine.Vector3, size: UnityEngine.Vector3);
 		public ClosestPoint(point: UnityEngine.Vector3): UnityEngine.Vector3;
-		public Contains(point: UnityEngine.Vector3): number;
+		public Contains(point: UnityEngine.Vector3): boolean;
 		public Encapsulate(point: UnityEngine.Vector3): void;
 		public Encapsulate(bounds: UnityEngine.Bounds): void;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Bounds): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Bounds): boolean;
 		public Expand(amount: number): void;
 		public Expand(amount: UnityEngine.Vector3): void;
 		public GetHashCode(): number;
-		public IntersectRay(ray: UnityEngine.Ray): number;
-		public Intersects(bounds: UnityEngine.Bounds): number;
+		public IntersectRay(ray: UnityEngine.Ray): boolean;
+		public Intersects(bounds: UnityEngine.Bounds): boolean;
 		public SetMinMax(min: UnityEngine.Vector3, max: UnityEngine.Vector3): void;
 		public SqrDistance(point: UnityEngine.Vector3): number;
 		public ToString(): string;

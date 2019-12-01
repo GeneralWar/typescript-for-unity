@@ -1,10 +1,13 @@
 ﻿declare namespace UnityEngine
 {
-	export enum RenderBufferStoreAction
+	declare namespace Rendering
 	{
-		Store = 0,
-		Resolve = 1,
-		StoreAndResolve = 2,
-		DontCare = 3,
+		export enum RenderBufferStoreAction
+		{
+			Store = 0,
+			Resolve = 1,
+			StoreAndResolve = 2,
+			DontCare = 3,
+		}
 	}
 }

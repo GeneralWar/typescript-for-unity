@@ -5,8 +5,8 @@
 		public constructor();
 		public AddPosition(position: UnityEngine.Vector3): void;
 		public AddPositions(positions: UnityEngine.Vector3[]): void;
-		public BakeMesh(mesh: UnityEngine.Mesh, useTransform: number): void;
-		public BakeMesh(mesh: UnityEngine.Mesh, camera: UnityEngine.Camera, useTransform: number): void;
+		public BakeMesh(mesh: UnityEngine.Mesh, useTransform: boolean): void;
+		public BakeMesh(mesh: UnityEngine.Mesh, camera: UnityEngine.Camera, useTransform: boolean): void;
 		public Clear(): void;
 		public GetPosition(index: number): UnityEngine.Vector3;
 		public GetPositions(positions: UnityEngine.Vector3[]): number;
@@ -18,8 +18,8 @@
 		public set alignment(): UnityEngine.LineAlignment;
 		public get textureMode(): UnityEngine.LineTextureMode;
 		public set textureMode(): UnityEngine.LineTextureMode;
-		public get generateLightingData(): number;
-		public set generateLightingData(): number;
+		public get generateLightingData(): boolean;
+		public set generateLightingData(): boolean;
 		public get shadowBias(): number;
 		public set shadowBias(): number;
 		public get positionCount(): number;
@@ -33,10 +33,10 @@
 		public set numCapVertices(): number;
 		public get numCornerVertices(): number;
 		public set numCornerVertices(): number;
-		public get emitting(): number;
-		public set emitting(): number;
-		public get autodestruct(): number;
-		public set autodestruct(): number;
+		public get emitting(): boolean;
+		public set emitting(): boolean;
+		public get autodestruct(): boolean;
+		public set autodestruct(): boolean;
 		public get widthMultiplier(): number;
 		public set widthMultiplier(): number;
 		public get endWidth(): number;

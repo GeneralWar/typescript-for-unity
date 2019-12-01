@@ -1,10 +1,13 @@
 ﻿declare namespace UnityEngine
 {
-	export enum LightProbeUsage
+	declare namespace Rendering
 	{
-		Off = 0,
-		BlendProbes = 1,
-		UseProxyVolume = 2,
-		CustomProvided = 4,
+		export enum LightProbeUsage
+		{
+			Off = 0,
+			BlendProbes = 1,
+			UseProxyVolume = 2,
+			CustomProvided = 4,
+		}
 	}
 }

@@ -1,10 +1,13 @@
 ﻿declare namespace UnityEngine
 {
-	export enum Axis
+	declare namespace Animations
 	{
-		None = 0,
-		X = 1,
-		Y = 2,
-		Z = 4,
+		export enum Axis
+		{
+			None = 0,
+			X = 1,
+			Y = 2,
+			Z = 4,
+		}
 	}
 }

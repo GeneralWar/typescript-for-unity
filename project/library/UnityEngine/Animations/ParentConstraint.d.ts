@@ -14,10 +14,10 @@
 			public SetTranslationOffset(index: number, value: UnityEngine.Vector3): void;
 			public get weight(): number;
 			public set weight(): number;
-			public get constraintActive(): number;
-			public set constraintActive(): number;
-			public get locked(): number;
-			public set locked(): number;
+			public get constraintActive(): boolean;
+			public set constraintActive(): boolean;
+			public get locked(): boolean;
+			public set locked(): boolean;
 			public get sourceCount(): number;
 			public get translationAtRest(): UnityEngine.Vector3;
 			public set translationAtRest(): UnityEngine.Vector3;

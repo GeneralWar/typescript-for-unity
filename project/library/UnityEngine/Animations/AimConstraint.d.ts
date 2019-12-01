@@ -10,10 +10,10 @@
 			public SetSource(index: number, source: UnityEngine.Animations.ConstraintSource): void;
 			public get weight(): number;
 			public set weight(): number;
-			public get constraintActive(): number;
-			public set constraintActive(): number;
-			public get locked(): number;
-			public set locked(): number;
+			public get constraintActive(): boolean;
+			public set constraintActive(): boolean;
+			public get locked(): boolean;
+			public set locked(): boolean;
 			public get rotationAtRest(): UnityEngine.Vector3;
 			public set rotationAtRest(): UnityEngine.Vector3;
 			public get rotationOffset(): UnityEngine.Vector3;

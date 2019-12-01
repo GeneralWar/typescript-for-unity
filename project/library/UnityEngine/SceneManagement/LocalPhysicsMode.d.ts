@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum LocalPhysicsMode
+	declare namespace SceneManagement
 	{
-		None = 0,
-		Physics2D = 1,
-		Physics3D = 2,
+		export enum LocalPhysicsMode
+		{
+			None = 0,
+			Physics2D = 1,
+			Physics3D = 2,
+		}
 	}
 }

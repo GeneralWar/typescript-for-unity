@@ -4,7 +4,7 @@
 	{
 		export namespace Device
 		{
-			export function RequestStoreReview(): number;
+			export function RequestStoreReview(): boolean;
 		}
 		export class Device
 		{
@@ -13,9 +13,9 @@
 			static public get generation(): UnityEngine.iOS.DeviceGeneration;
 			static public get vendorIdentifier(): string;
 			static public get advertisingIdentifier(): string;
-			static public get advertisingTrackingEnabled(): number;
-			static public get hideHomeButton(): number;
-			static public set hideHomeButton(): number;
+			static public get advertisingTrackingEnabled(): boolean;
+			static public get hideHomeButton(): boolean;
+			static public set hideHomeButton(): boolean;
 			static public get deferSystemGesturesMode(): UnityEngine.iOS.SystemGestureDeferMode;
 			static public set deferSystemGesturesMode(): UnityEngine.iOS.SystemGestureDeferMode;
 		}

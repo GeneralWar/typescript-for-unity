@@ -20,8 +20,8 @@
 		static public get left(): UnityEngine.Vector3Int;
 		static public get right(): UnityEngine.Vector3Int;
 		public Clamp(min: UnityEngine.Vector3Int, max: UnityEngine.Vector3Int): void;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Vector3Int): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Vector3Int): boolean;
 		public GetHashCode(): number;
 		public Scale(scale: UnityEngine.Vector3Int): void;
 		public Set(x: number, y: number, z: number): void;

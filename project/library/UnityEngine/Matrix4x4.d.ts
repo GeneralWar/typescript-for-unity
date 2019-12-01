@@ -20,8 +20,8 @@
 		public constructor(column0: UnityEngine.Vector4, column1: UnityEngine.Vector4, column2: UnityEngine.Vector4, column3: UnityEngine.Vector4);
 		static public get zero(): UnityEngine.Matrix4x4;
 		static public get identity(): UnityEngine.Matrix4x4;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Matrix4x4): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Matrix4x4): boolean;
 		public GetColumn(index: number): UnityEngine.Vector4;
 		public GetHashCode(): number;
 		public GetRow(index: number): UnityEngine.Vector4;
@@ -34,10 +34,10 @@
 		public ToString(): string;
 		public ToString(format: string): string;
 		public TransformPlane(plane: UnityEngine.Plane): UnityEngine.Plane;
-		public ValidTRS(): number;
+		public ValidTRS(): boolean;
 		public get rotation(): UnityEngine.Quaternion;
 		public get lossyScale(): UnityEngine.Vector3;
-		public get isIdentity(): number;
+		public get isIdentity(): boolean;
 		public get determinant(): number;
 		public get decomposeProjection(): UnityEngine.FrustumPlanes;
 		public get inverse(): UnityEngine.Matrix4x4;

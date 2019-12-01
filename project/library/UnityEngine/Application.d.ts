@@ -2,13 +2,13 @@
 {
 	export namespace Application
 	{
-		export function CanStreamedLevelBeLoaded(levelIndex: number): number;
-		export function CanStreamedLevelBeLoaded(levelName: string): number;
+		export function CanStreamedLevelBeLoaded(levelIndex: number): boolean;
+		export function CanStreamedLevelBeLoaded(levelName: string): boolean;
 		export function GetBuildTags(): string[];
 		export function GetStackTraceLogType(logType: UnityEngine.LogType): UnityEngine.StackTraceLogType;
-		export function HasProLicense(): number;
-		export function HasUserAuthorization(mode: UnityEngine.UserAuthorization): number;
-		export function IsPlaying(obj: UnityEngine.Object): number;
+		export function HasProLicense(): boolean;
+		export function HasUserAuthorization(mode: UnityEngine.UserAuthorization): boolean;
+		export function IsPlaying(obj: UnityEngine.Object): boolean;
 		export function OpenURL(url: string): void;
 		export function Quit(): void;
 		export function Quit(exitCode: number): void;
@@ -20,8 +20,8 @@
 	export class Application
 	{
 		public constructor();
-		static public get isPlaying(): number;
-		static public get genuine(): number;
+		static public get isPlaying(): boolean;
+		static public get genuine(): boolean;
 		static public get internetReachability(): UnityEngine.NetworkReachability;
 		static public get backgroundLoadingPriority(): UnityEngine.ThreadPriority;
 		static public set backgroundLoadingPriority(): UnityEngine.ThreadPriority;
@@ -43,15 +43,15 @@
 		static public get persistentDataPath(): string;
 		static public get streamingAssetsPath(): string;
 		static public get dataPath(): string;
-		static public get isBatchMode(): number;
-		static public get runInBackground(): number;
-		static public set runInBackground(): number;
-		static public get isConsolePlatform(): number;
-		static public get isMobilePlatform(): number;
+		static public get isBatchMode(): boolean;
+		static public get runInBackground(): boolean;
+		static public set runInBackground(): boolean;
+		static public get isConsolePlatform(): boolean;
+		static public get isMobilePlatform(): boolean;
 		static public get buildGUID(): string;
 		static public get platform(): UnityEngine.RuntimePlatform;
-		static public get isFocused(): number;
-		static public get genuineCheckAvailable(): number;
-		static public get isEditor(): number;
+		static public get isFocused(): boolean;
+		static public get genuineCheckAvailable(): boolean;
+		static public get isEditor(): boolean;
 	}
 }

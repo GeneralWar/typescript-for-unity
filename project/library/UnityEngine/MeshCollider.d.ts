@@ -5,8 +5,8 @@
 		public constructor();
 		public get sharedMesh(): UnityEngine.Mesh;
 		public set sharedMesh(): UnityEngine.Mesh;
-		public get convex(): number;
-		public set convex(): number;
+		public get convex(): boolean;
+		public set convex(): boolean;
 		public get cookingOptions(): UnityEngine.MeshColliderCookingOptions;
 		public set cookingOptions(): UnityEngine.MeshColliderCookingOptions;
 	}

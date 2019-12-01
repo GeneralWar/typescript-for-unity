@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ReflectionCubemapCompression
+	declare namespace Rendering
 	{
-		Uncompressed = 0,
-		Compressed = 1,
-		Auto = 2,
+		export enum ReflectionCubemapCompression
+		{
+			Uncompressed = 0,
+			Compressed = 1,
+			Auto = 2,
+		}
 	}
 }

@@ -10,7 +10,7 @@
 		export function GetInt(key: string, defaultValue: number): number;
 		export function GetString(key: string): string;
 		export function GetString(key: string, defaultValue: string): string;
-		export function HasKey(key: string): number;
+		export function HasKey(key: string): boolean;
 		export function Save(): void;
 		export function SetFloat(key: string, value: number): void;
 		export function SetInt(key: string, value: number): void;

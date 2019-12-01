@@ -12,7 +12,7 @@
 		public GetData(data: System.Array): void;
 		public GetData(data: System.Array, managedBufferStartIndex: number, computeBufferStartIndex: number, count: number): void;
 		public GetNativeBufferPtr(): number;
-		public IsValid(): number;
+		public IsValid(): boolean;
 		public Release(): void;
 		public SetCounterValue(counterValue: number): void;
 		public SetData(data: System.Array): void;

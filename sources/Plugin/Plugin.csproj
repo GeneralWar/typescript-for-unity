@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A401E034-DC0F-418F-8D56-19BE624F4652}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>General.Typescript</RootNamespace>
+    <AssemblyName>General.Typescript</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity2018\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity2018\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity2018\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity2018\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>..\..\..\..\..\..\Program Files\Unity2018\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\BinderGenerator.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\BinderBase.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\BinderBase.static.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Class\ClassBinder.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Class\EnumClassBinder.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Class\TypeClassBinder.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Class\TypeClassBinder.static.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Namespace\NamespaceBinder.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Binders\Namespace\NamespaceBinder.static.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Configuration.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\ConfigurationWindow.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Extensions\Extension.reflection.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Extensions\Extension.stream.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Extensions\Extension.type.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Listener.cs" />
+    <Compile Include="..\Assets\Plugins\General.Typescript\Editor\Utility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

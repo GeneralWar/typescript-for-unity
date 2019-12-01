@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ReflectionProbeClearFlags
+	declare namespace Rendering
 	{
-		Skybox = 1,
-		SolidColor = 2,
+		export enum ReflectionProbeClearFlags
+		{
+			Skybox = 1,
+			SolidColor = 2,
+		}
 	}
 }

@@ -2,8 +2,8 @@
 {
 	export class HumanLimit extends System.ValueType
 	{
-		public get useDefaultValues(): number;
-		public set useDefaultValues(): number;
+		public get useDefaultValues(): boolean;
+		public set useDefaultValues(): boolean;
 		public get min(): UnityEngine.Vector3;
 		public set min(): UnityEngine.Vector3;
 		public get max(): UnityEngine.Vector3;

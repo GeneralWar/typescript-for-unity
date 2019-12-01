@@ -7,7 +7,7 @@
 			public Disable(keyword: UnityEngine.Rendering.ShaderKeyword): void;
 			public Enable(keyword: UnityEngine.Rendering.ShaderKeyword): void;
 			public GetShaderKeywords(): UnityEngine.Rendering.ShaderKeyword[];
-			public IsEnabled(keyword: UnityEngine.Rendering.ShaderKeyword): number;
+			public IsEnabled(keyword: UnityEngine.Rendering.ShaderKeyword): boolean;
 		}
 	}
 }

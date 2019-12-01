@@ -5,8 +5,8 @@
 		export class PlayableHandle extends System.ValueType
 		{
 			static public get Null(): UnityEngine.Playables.PlayableHandle;
-			public Equals(p: any): number;
-			public Equals(other: UnityEngine.Playables.PlayableHandle): number;
+			public Equals(p: any): boolean;
+			public Equals(other: UnityEngine.Playables.PlayableHandle): boolean;
 			public GetHashCode(): number;
 		}
 	}

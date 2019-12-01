@@ -4,7 +4,7 @@
 	{
 		export function AllocObject(clazz: number): number;
 		export function AttachCurrentThread(): number;
-		export function CallBooleanMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
+		export function CallBooleanMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): boolean;
 		export function CallByteMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallCharMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallDoubleMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
@@ -13,7 +13,7 @@
 		export function CallLongMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallObjectMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallShortMethod(obj: number, methodID: number, args: UnityEngine.jvalue[]): number;
-		export function CallStaticBooleanMethod(clazz: number, methodID: number, args: UnityEngine.jvalue[]): number;
+		export function CallStaticBooleanMethod(clazz: number, methodID: number, args: UnityEngine.jvalue[]): boolean;
 		export function CallStaticByteMethod(clazz: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallStaticCharMethod(clazz: number, methodID: number, args: UnityEngine.jvalue[]): number;
 		export function CallStaticDoubleMethod(clazz: number, methodID: number, args: UnityEngine.jvalue[]): number;
@@ -35,7 +35,7 @@
 		export function ExceptionOccurred(): number;
 		export function FatalError(message: string): void;
 		export function FindClass(name: string): number;
-		export function FromBooleanArray(array: number): number[];
+		export function FromBooleanArray(array: number): boolean[];
 		export function FromByteArray(array: number): number[];
 		export function FromCharArray(array: number): number[];
 		export function FromDoubleArray(array: number): number[];
@@ -47,8 +47,8 @@
 		export function FromReflectedMethod(refMethod: number): number;
 		export function FromShortArray(array: number): number[];
 		export function GetArrayLength(array: number): number;
-		export function GetBooleanArrayElement(array: number, index: number): number;
-		export function GetBooleanField(obj: number, fieldID: number): number;
+		export function GetBooleanArrayElement(array: number, index: number): boolean;
+		export function GetBooleanField(obj: number, fieldID: number): boolean;
 		export function GetByteArrayElement(array: number, index: number): number;
 		export function GetByteField(obj: number, fieldID: number): number;
 		export function GetCharArrayElement(array: number, index: number): number;
@@ -68,7 +68,7 @@
 		export function GetObjectField(obj: number, fieldID: number): number;
 		export function GetShortArrayElement(array: number, index: number): number;
 		export function GetShortField(obj: number, fieldID: number): number;
-		export function GetStaticBooleanField(clazz: number, fieldID: number): number;
+		export function GetStaticBooleanField(clazz: number, fieldID: number): boolean;
 		export function GetStaticByteField(clazz: number, fieldID: number): number;
 		export function GetStaticCharField(clazz: number, fieldID: number): number;
 		export function GetStaticDoubleField(clazz: number, fieldID: number): number;
@@ -85,9 +85,9 @@
 		export function GetStringUTFLength(str: number): number;
 		export function GetSuperclass(clazz: number): number;
 		export function GetVersion(): number;
-		export function IsAssignableFrom(clazz1: number, clazz2: number): number;
-		export function IsInstanceOf(obj: number, clazz: number): number;
-		export function IsSameObject(obj1: number, obj2: number): number;
+		export function IsAssignableFrom(clazz1: number, clazz2: number): boolean;
+		export function IsInstanceOf(obj: number, clazz: number): boolean;
+		export function IsSameObject(obj1: number, obj2: number): boolean;
 		export function NewBooleanArray(size: number): number;
 		export function NewByteArray(size: number): number;
 		export function NewCharArray(size: number): number;
@@ -104,7 +104,7 @@
 		export function PopLocalFrame(ptr: number): number;
 		export function PushLocalFrame(capacity: number): number;
 		export function SetBooleanArrayElement(array: number, index: number, val: number): void;
-		export function SetBooleanField(obj: number, fieldID: number, val: number): void;
+		export function SetBooleanField(obj: number, fieldID: number, val: boolean): void;
 		export function SetByteArrayElement(array: number, index: number, val: number): void;
 		export function SetByteField(obj: number, fieldID: number, val: number): void;
 		export function SetCharArrayElement(array: number, index: number, val: number): void;
@@ -121,7 +121,7 @@
 		export function SetObjectField(obj: number, fieldID: number, val: number): void;
 		export function SetShortArrayElement(array: number, index: number, val: number): void;
 		export function SetShortField(obj: number, fieldID: number, val: number): void;
-		export function SetStaticBooleanField(clazz: number, fieldID: number, val: number): void;
+		export function SetStaticBooleanField(clazz: number, fieldID: number, val: boolean): void;
 		export function SetStaticByteField(clazz: number, fieldID: number, val: number): void;
 		export function SetStaticCharField(clazz: number, fieldID: number, val: number): void;
 		export function SetStaticDoubleField(clazz: number, fieldID: number, val: number): void;
@@ -134,7 +134,7 @@
 		export function SetStringField(obj: number, fieldID: number, val: string): void;
 		export function Throw(obj: number): number;
 		export function ThrowNew(clazz: number, message: string): number;
-		export function ToBooleanArray(array: number[]): number;
+		export function ToBooleanArray(array: boolean[]): number;
 		export function ToByteArray(array: number[]): number;
 		export function ToCharArray(array: number[]): number;
 		export function ToDoubleArray(array: number[]): number;
@@ -143,8 +143,8 @@
 		export function ToLongArray(array: number[]): number;
 		export function ToObjectArray(array: number[]): number;
 		export function ToObjectArray(array: number[], arrayClass: number): number;
-		export function ToReflectedField(clazz: number, fieldID: number, isStatic: number): number;
-		export function ToReflectedMethod(clazz: number, methodID: number, isStatic: number): number;
+		export function ToReflectedField(clazz: number, fieldID: number, isStatic: boolean): number;
+		export function ToReflectedMethod(clazz: number, methodID: number, isStatic: boolean): number;
 		export function ToShortArray(array: number[]): number;
 	}
 	export class AndroidJNI

@@ -2,7 +2,7 @@
 {
 	export namespace ReflectionProbe
 	{
-		export function BlendCubemap(src: UnityEngine.Texture, dst: UnityEngine.Texture, blend: number, target: UnityEngine.RenderTexture): number;
+		export function BlendCubemap(src: UnityEngine.Texture, dst: UnityEngine.Texture, blend: number, target: UnityEngine.RenderTexture): boolean;
 	}
 	export class ReflectionProbe extends UnityEngine.Behaviour
 	{
@@ -11,7 +11,7 @@
 		static public get maxBakedCubemapResolution(): number;
 		static public get defaultTextureHDRDecodeValues(): UnityEngine.Vector4;
 		static public get defaultTexture(): UnityEngine.Texture;
-		public IsFinishedRendering(renderId: number): number;
+		public IsFinishedRendering(renderId: number): boolean;
 		public RenderProbe(): number;
 		public RenderProbe(targetTexture: UnityEngine.RenderTexture): number;
 		public Reset(): void;
@@ -31,8 +31,8 @@
 		public set importance(): number;
 		public get mode(): UnityEngine.Rendering.ReflectionProbeMode;
 		public set mode(): UnityEngine.Rendering.ReflectionProbeMode;
-		public get boxProjection(): number;
-		public set boxProjection(): number;
+		public get boxProjection(): boolean;
+		public set boxProjection(): boolean;
 		public get blendDistance(): number;
 		public set blendDistance(): number;
 		public get texture(): UnityEngine.Texture;
@@ -44,8 +44,8 @@
 		public set resolution(): number;
 		public get shadowDistance(): number;
 		public set shadowDistance(): number;
-		public get hdr(): number;
-		public set hdr(): number;
+		public get hdr(): boolean;
+		public set hdr(): boolean;
 		public get bounds(): UnityEngine.Bounds;
 		public get intensity(): number;
 		public set intensity(): number;

@@ -13,7 +13,7 @@
 		public InverseTransformPoint(x: number, y: number, z: number): UnityEngine.Vector3;
 		public InverseTransformVector(vector: UnityEngine.Vector3): UnityEngine.Vector3;
 		public InverseTransformVector(x: number, y: number, z: number): UnityEngine.Vector3;
-		public IsChildOf(parent: UnityEngine.Transform): number;
+		public IsChildOf(parent: UnityEngine.Transform): boolean;
 		public LookAt(target: UnityEngine.Transform): void;
 		public LookAt(worldPosition: UnityEngine.Vector3): void;
 		public LookAt(target: UnityEngine.Transform, worldUp: UnityEngine.Vector3): void;
@@ -28,7 +28,7 @@
 		public SetAsFirstSibling(): void;
 		public SetAsLastSibling(): void;
 		public SetParent(p: UnityEngine.Transform): void;
-		public SetParent(parent: UnityEngine.Transform, worldPositionStays: number): void;
+		public SetParent(parent: UnityEngine.Transform, worldPositionStays: boolean): void;
 		public SetPositionAndRotation(position: UnityEngine.Vector3, rotation: UnityEngine.Quaternion): void;
 		public SetSiblingIndex(index: number): void;
 		public TransformDirection(direction: UnityEngine.Vector3): UnityEngine.Vector3;
@@ -45,8 +45,8 @@
 		public Translate(x: number, y: number, z: number, relativeTo: UnityEngine.Transform): void;
 		public get position(): UnityEngine.Vector3;
 		public set position(): UnityEngine.Vector3;
-		public get hasChanged(): number;
-		public set hasChanged(): number;
+		public get hasChanged(): boolean;
+		public set hasChanged(): boolean;
 		public get lossyScale(): UnityEngine.Vector3;
 		public get childCount(): number;
 		public get root(): UnityEngine.Transform;

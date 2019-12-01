@@ -13,7 +13,6 @@ namespace General.Typescript
 			self.BindInstanceFunction("CalculateLayoutInputVertical", CalculateLayoutInputVertical);
 			self.BindInstanceFunction("FontTextureChanged", FontTextureChanged);
 			self.BindInstanceFunction("GetGenerationSettings", GetGenerationSettings);
-			self.BindInstanceFunction("OnRebuildRequested", OnRebuildRequested);
 			self.BindInstanceProperty("cachedTextGenerator", get_cachedTextGenerator, null);
 			self.BindInstanceProperty("preferredHeight", get_preferredHeight, null);
 			self.BindInstanceProperty("minHeight", get_minHeight, null);
@@ -124,20 +123,6 @@ namespace General.Typescript
 				UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Text.GetGenerationSettings has no implemention with arguments ({0})!", string.Join(", ", types));
 			}
 			return default(UnityEngine.TextGenerationSettings);
-		}
-
-		static private void OnRebuildRequested(UnityEngine.UI.Text instance, Parameters parameters)
-		{
-			if (0 == parameters.Count)
-			{
-				instance.OnRebuildRequested();
-			}
-			string[] types = new string[parameters.Count];
-			for (int i = parameters.Count - 1; i >= 0; --i)
-			{
-				types[i] = parameters[i].GetParameterType();
-			}
-			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Text.OnRebuildRequested has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
 		static private UnityEngine.TextGenerator get_cachedTextGenerator(UnityEngine.UI.Text instance)

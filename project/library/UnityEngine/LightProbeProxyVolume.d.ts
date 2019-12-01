@@ -3,7 +3,7 @@
 	export class LightProbeProxyVolume extends UnityEngine.Behaviour
 	{
 		public constructor();
-		static public get isFeatureSupported(): number;
+		static public get isFeatureSupported(): boolean;
 		public Update(): void;
 		public get boundsGlobal(): UnityEngine.Bounds;
 		public get sizeCustom(): UnityEngine.Vector3;

@@ -5,7 +5,19 @@
 #include "extra/require/require.h"
 #include "extra/console/console.h"
 
+Environment* Environment::sInstance = nullptr;
+
 std::vector<std::string> Environment::sSuperClassNames;
+
+Environment::Environment()
+{
+	sInstance = this;
+}
+
+Environment* Environment::GetInstance()
+{
+	return sInstance;
+}
 
 void Environment::AppendCustomSuperClassName(const char* fullname)
 {

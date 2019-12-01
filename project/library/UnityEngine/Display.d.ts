@@ -17,6 +17,6 @@
 		public get systemHeight(): number;
 		public get colorBuffer(): UnityEngine.RenderBuffer;
 		public get depthBuffer(): UnityEngine.RenderBuffer;
-		public get active(): number;
+		public get active(): boolean;
 	}
 }

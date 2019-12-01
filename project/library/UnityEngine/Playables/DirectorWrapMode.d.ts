@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum DirectorWrapMode
+	declare namespace Playables
 	{
-		Hold = 0,
-		Loop = 1,
-		None = 2,
+		export enum DirectorWrapMode
+		{
+			Hold = 0,
+			Loop = 1,
+			None = 2,
+		}
 	}
 }

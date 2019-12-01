@@ -10,9 +10,9 @@
 		{
 			public CollectFromAllThreads(): void;
 			public FilterToCurrentThread(): void;
-			public get isValid(): number;
-			public get enabled(): number;
-			public set enabled(): number;
+			public get isValid(): boolean;
+			public get enabled(): boolean;
+			public set enabled(): boolean;
 			public get elapsedNanoseconds(): number;
 			public get sampleBlockCount(): number;
 		}

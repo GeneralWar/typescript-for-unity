@@ -1,0 +1,13 @@
+.svn
+.vscode
+node_modules
+Sample
+git
+remote-v8-config
+test
+
+!sources/*
+soruces/Plugin
+
+!project/*
+project/compiled

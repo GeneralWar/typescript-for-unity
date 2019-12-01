@@ -20,19 +20,19 @@
 		public SetMesh(mesh: UnityEngine.Mesh): void;
 		public SetPopMaterial(material: UnityEngine.Material, index: number): void;
 		public SetTexture(texture: UnityEngine.Texture): void;
-		public get hasPopInstruction(): number;
-		public set hasPopInstruction(): number;
+		public get hasPopInstruction(): boolean;
+		public set hasPopInstruction(): boolean;
 		public get materialCount(): number;
 		public set materialCount(): number;
 		public get popMaterialCount(): number;
 		public set popMaterialCount(): number;
 		public get absoluteDepth(): number;
-		public get hasMoved(): number;
-		public get cullTransparentMesh(): number;
-		public set cullTransparentMesh(): number;
-		public get hasRectClipping(): number;
+		public get hasMoved(): boolean;
+		public get cullTransparentMesh(): boolean;
+		public set cullTransparentMesh(): boolean;
+		public get hasRectClipping(): boolean;
 		public get relativeDepth(): number;
-		public get cull(): number;
-		public set cull(): number;
+		public get cull(): boolean;
+		public set cull(): boolean;
 	}
 }

@@ -7,7 +7,7 @@
 	export class AndroidInput
 	{
 		static public get touchCountSecondary(): number;
-		static public get secondaryTouchEnabled(): number;
+		static public get secondaryTouchEnabled(): boolean;
 		static public get secondaryTouchWidth(): number;
 		static public get secondaryTouchHeight(): number;
 	}

@@ -12,7 +12,7 @@
 			export function GetRemoteNotification(index: number): UnityEngine.iOS.RemoteNotification;
 			export function PresentLocalNotificationNow(notification: UnityEngine.iOS.LocalNotification): void;
 			export function RegisterForNotifications(notificationTypes: UnityEngine.iOS.NotificationType): void;
-			export function RegisterForNotifications(notificationTypes: UnityEngine.iOS.NotificationType, registerForRemote: number): void;
+			export function RegisterForNotifications(notificationTypes: UnityEngine.iOS.NotificationType, registerForRemote: boolean): void;
 			export function ScheduleLocalNotification(notification: UnityEngine.iOS.LocalNotification): void;
 			export function UnregisterForRemoteNotifications(): void;
 		}

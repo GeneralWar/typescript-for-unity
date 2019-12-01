@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ReflectionProbeType
+	declare namespace Rendering
 	{
-		Cube = 0,
-		Card = 1,
+		export enum ReflectionProbeType
+		{
+			Cube = 0,
+			Card = 1,
+		}
 	}
 }

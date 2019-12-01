@@ -1,9 +1,12 @@
 ﻿declare namespace UnityEngine
 {
-	export enum TileForegroundText
+	declare namespace WSA
 	{
-		Dark = 0,
-		Light = 1,
-		Default = -1,
+		export enum TileForegroundText
+		{
+			Dark = 0,
+			Light = 1,
+			Default = -1,
+		}
 	}
 }

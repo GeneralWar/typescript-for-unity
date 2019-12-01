@@ -25,6 +25,6 @@
 		static public get timeSinceLevelLoad(): number;
 		static public get captureFramerate(): number;
 		static public set captureFramerate(): number;
-		static public get inFixedTimeStep(): number;
+		static public get inFixedTimeStep(): boolean;
 	}
 }

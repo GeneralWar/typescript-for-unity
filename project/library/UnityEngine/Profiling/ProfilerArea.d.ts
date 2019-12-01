@@ -1,19 +1,22 @@
 ﻿declare namespace UnityEngine
 {
-	export enum ProfilerArea
+	declare namespace Profiling
 	{
-		CPU = 0,
-		GPU = 1,
-		Rendering = 2,
-		Memory = 3,
-		Audio = 4,
-		Video = 5,
-		Physics = 6,
-		Physics2D = 7,
-		NetworkMessages = 8,
-		NetworkOperations = 9,
-		UI = 10,
-		UIDetails = 11,
-		GlobalIllumination = 12,
+		export enum ProfilerArea
+		{
+			CPU = 0,
+			GPU = 1,
+			Rendering = 2,
+			Memory = 3,
+			Audio = 4,
+			Video = 5,
+			Physics = 6,
+			Physics2D = 7,
+			NetworkMessages = 8,
+			NetworkOperations = 9,
+			UI = 10,
+			UIDetails = 11,
+			GlobalIllumination = 12,
+		}
 	}
 }

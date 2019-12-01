@@ -1,8 +1,11 @@
 ﻿declare namespace UnityEngine
 {
-	export enum SynchronisationStage
+	declare namespace Rendering
 	{
-		VertexProcessing = 0,
-		PixelProcessing = 1,
+		export enum SynchronisationStage
+		{
+			VertexProcessing = 0,
+			PixelProcessing = 1,
+		}
 	}
 }

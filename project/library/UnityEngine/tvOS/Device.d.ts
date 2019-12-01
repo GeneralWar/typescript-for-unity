@@ -9,7 +9,7 @@
 			static public get generation(): UnityEngine.tvOS.DeviceGeneration;
 			static public get vendorIdentifier(): string;
 			static public get advertisingIdentifier(): string;
-			static public get advertisingTrackingEnabled(): number;
+			static public get advertisingTrackingEnabled(): boolean;
 		}
 	}
 }

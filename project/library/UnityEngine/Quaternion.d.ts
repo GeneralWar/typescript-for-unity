@@ -22,8 +22,8 @@
 	{
 		public constructor(x: number, y: number, z: number, w: number);
 		static public get identity(): UnityEngine.Quaternion;
-		public Equals(other: any): number;
-		public Equals(other: UnityEngine.Quaternion): number;
+		public Equals(other: any): boolean;
+		public Equals(other: UnityEngine.Quaternion): boolean;
 		public GetHashCode(): number;
 		public Normalize(): void;
 		public Set(newX: number, newY: number, newZ: number, newW: number): void;

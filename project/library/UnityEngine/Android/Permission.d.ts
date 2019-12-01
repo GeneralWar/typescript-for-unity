@@ -4,7 +4,7 @@
 	{
 		export namespace Permission
 		{
-			export function HasUserAuthorizedPermission(permission: string): number;
+			export function HasUserAuthorizedPermission(permission: string): boolean;
 			export function RequestUserPermission(permission: string): void;
 		}
 		export class Permission extends System.ValueType

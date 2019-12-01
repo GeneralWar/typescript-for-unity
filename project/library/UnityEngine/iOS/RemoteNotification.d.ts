@@ -9,7 +9,7 @@
 			public get soundName(): string;
 			public get applicationIconBadgeNumber(): number;
 			public get userInfo(): any;
-			public get hasAction(): number;
+			public get hasAction(): boolean;
 		}
 	}
 }
