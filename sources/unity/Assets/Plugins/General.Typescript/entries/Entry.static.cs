@@ -163,11 +163,11 @@ namespace General.Typescript
 #endif
 		}
 
-		static public IntPtr Require(string content, string filename)
-		{
-			checkInstance();
-			return General_Typescript_Require(sInstance.Context, content, filename);
-		}
+		//static public IntPtr Require(string content, string filename)
+		//{
+		//	checkInstance();
+		//	return General_Typescript_Require(sInstance.Context, content, filename);
+		//}
 
 		static public Namespace DeclareNamespace(string name)
 		{
