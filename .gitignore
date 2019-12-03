@@ -6,8 +6,5 @@ git
 remote-v8-config
 test
 
-!sources/*
-soruces/Plugin
-
-!project/*
-project/compiled
+!/project/*
+/project/compiled
