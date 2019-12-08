@@ -1,15 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System;
-using AOT;
-using System.Linq;
-using System.IO;
+﻿using System;
+using UnityEngine;
 
 namespace General.Typescript
 {
-    public class IOSEntry : Entry
+	public class IOSEntry : Entry
     {
         override public bool initialize()
         {

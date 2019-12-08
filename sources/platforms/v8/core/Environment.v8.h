@@ -2,7 +2,7 @@
 #include "header.h"
 #pragma once
 
-class EnvironmentWindows : public Environment
+class EnvironmentV8 : public Environment
 {
 private:
 	Isolate* mIsolate;
@@ -13,7 +13,7 @@ public:
 protected:
 	virtual void release() override;
 public:
-	~EnvironmentWindows();
+	~EnvironmentV8();
 
 	virtual bool Initialize() override;
 

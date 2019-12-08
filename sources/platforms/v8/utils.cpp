@@ -8,7 +8,7 @@ Isolate* GetIsolate(Base* base)
 {
 	if (base)
 	{
-		EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(base->GetEnvironment());
+		EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(base->GetEnvironment());
 		if (runtime)
 		{
 			return runtime->GetIsolate();
@@ -19,7 +19,7 @@ Isolate* GetIsolate(Base* base)
 
 Isolate* GetIsolate(void* environment)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	if (!runtime) return nullptr;
 	return runtime->GetIsolate();
 }
@@ -48,7 +48,7 @@ Local<Template> GetParentTemplate(Base* base)
 		}
 		else
 		{
-			EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(base->GetEnvironment());
+			EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(base->GetEnvironment());
 			return runtime->GetGloalTemplate();
 		}
 	}
