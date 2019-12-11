@@ -18,6 +18,7 @@ namespace General.Typescript
 			instance.SetValue("EmailAddress", (long)UnityEngine.TouchScreenKeyboardType.EmailAddress);
 			instance.SetValue("Social", (long)UnityEngine.TouchScreenKeyboardType.Social);
 			instance.SetValue("Search", (long)UnityEngine.TouchScreenKeyboardType.Search);
+			instance.SetValue("DecimalPad", (long)UnityEngine.TouchScreenKeyboardType.DecimalPad);
 		}
 	}
 }

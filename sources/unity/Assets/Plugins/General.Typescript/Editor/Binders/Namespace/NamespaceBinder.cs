@@ -12,7 +12,7 @@ namespace General.Typescript
 
 namespace General.Typescript
 {{
-    public class {0}Binder
+    public class {0}Binder : Binder
     {{
         static public void Initialize()
         {{

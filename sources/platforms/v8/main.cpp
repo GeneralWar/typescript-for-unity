@@ -49,7 +49,7 @@ void General_Typescript_SetSnapshotDataBlob(const char* buffer, int size)
 
 void* General_Typescript_Initialize()
 {
-	EnvironmentWindows* environment = new EnvironmentWindows();
+	EnvironmentV8* environment = new EnvironmentV8();
 	if (environment->Initialize())
 	{
 		return environment;
@@ -65,7 +65,7 @@ DLL_EXPORT bool General_Typescript_Is_Initialized()
 
 void General_Typescript_Bind(void* environment)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	if (runtime)
 	{
 		runtime->Bind();
@@ -74,37 +74,37 @@ void General_Typescript_Bind(void* environment)
 
 const char* General_Typescript_ExecuteString(void* environment, const char* sourceContent)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	return ReturnStringToCSharp(runtime ? runtime->ExecuteString(sourceContent).c_str() : "");
 }
 
 const char* General_Typescript_ExecuteScript(void* environment, const char* sourceContent, const char* filename)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	return ReturnStringToCSharp(runtime ? runtime->ExecuteScript(sourceContent, filename).c_str() : "");
 }
 
 void* General_Typescript_DeclareNamespace(void* environment, const char* name)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	return runtime ? runtime->DeclareNamespace(name) : nullptr;
 }
 
 void* General_Typescript_DeclareClass(void* environment, const char* name, const char* base)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	return runtime ? runtime->DeclareClass(name, base) : nullptr;
 }
 
 void* General_Typescript_BindStaticFunction(void* environment, const char* name)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	return runtime ? runtime->BindStaticFunction(name) : nullptr;
 }
 
 void General_Typescript_Finalize(void* environment)
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(environment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(environment);
 	if (runtime)
 	{
 		delete runtime;

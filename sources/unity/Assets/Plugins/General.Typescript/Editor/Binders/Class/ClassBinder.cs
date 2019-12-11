@@ -76,11 +76,16 @@ namespace General.Typescript
 
 		static internal ClassBinder Create(Type type, BinderBase parent)
 		{
-			if ((type.IsPublic || (type.IsNestedPublic && type.ReflectedType.IsPublic)) && type.IsStillInUse() && !type.IsGenericType && !type.IsObsolete() && (!type.IsNested || !type.ReflectedType.IsObsolete()) && !type.Name.Contains("PlayerConnection"))
+			if (IsSupportedType(type))
 			{
 				return type.IsEnum ? EnumClassBinder.Create(type, parent) as ClassBinder : TypeClassBinder.Create(type, parent) as ClassBinder;
 			}
 			return null;
+		}
+
+		static internal bool IsSupportedType(Type type)
+		{
+			return (type.IsPublic || (type.IsNestedPublic && type.ReflectedType.IsPublic)) && type.IsStillInUse() && !type.IsGenericType && !type.IsObsolete() && (!type.IsNested || !type.ReflectedType.IsObsolete()) && !type.Name.Contains("PlayerConnection");
 		}
 	}
 }

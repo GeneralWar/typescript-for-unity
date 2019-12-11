@@ -123,11 +123,6 @@ namespace General.Typescript
 			return null;
 		}
 
-		public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)
-		{
-			return null;
-		}
-
 		public override bool IsDefined(System.Type attributeType, bool inherit)
 		{
 			return false;
@@ -136,21 +131,6 @@ namespace General.Typescript
 		protected override TypeAttributes GetAttributeFlagsImpl()
 		{
 			return TypeAttributes.Class;
-		}
-
-		protected override ConstructorInfo GetConstructorImpl(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, System.Type[] types, ParameterModifier[] modifiers)
-		{
-			return null;
-		}
-
-		protected override MethodInfo GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, System.Type[] types, ParameterModifier[] modifiers)
-		{
-			return null;
-		}
-
-		protected override PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, System.Type returnType, System.Type[] types, ParameterModifier[] modifiers)
-		{
-			return null;
 		}
 
 		protected override bool HasElementTypeImpl()
@@ -181,6 +161,26 @@ namespace General.Typescript
 		protected override bool IsPrimitiveImpl()
 		{
 			return false;
+		}
+
+		protected override ConstructorInfo GetConstructorImpl(BindingFlags bindingAttr, System.Reflection.Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)
+		{
+			throw new NotImplementedException();
+		}
+
+		protected override MethodInfo GetMethodImpl(string name, BindingFlags bindingAttr, System.Reflection.Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)
+		{
+			throw new NotImplementedException();
+		}
+
+		protected override PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, System.Reflection.Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers)
+		{
+			throw new NotImplementedException();
+		}
+
+		public override object InvokeMember(string name, BindingFlags invokeAttr, System.Reflection.Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

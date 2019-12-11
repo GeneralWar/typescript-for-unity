@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace General.Typescript
 {
@@ -15,13 +14,8 @@ namespace General.Typescript
 		}
 
         static internal NamespaceBinder GetNamespace(string name)
-        {
-            if (name.Contains("Experimental") || (!name.Contains("UnityEngine") && !name.Contains("System")))
-            {
-                return null;
-            }
-
-            NamespaceBinder space = null;
+		{
+			NamespaceBinder space = null;
             if (!sSpaces.TryGetValue(name, out space))
             {
                 NamespaceBinder parent = null;

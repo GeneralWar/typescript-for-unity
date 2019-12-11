@@ -11,7 +11,7 @@
 extern StartupData *sSnapshotData;
 static std::unique_ptr<Platform> sPlatform = nullptr;
 
-void EnvironmentWindows::release()
+void EnvironmentV8::release()
 {
 	Environment::release();
 	if (mIsolate)
@@ -33,12 +33,12 @@ void EnvironmentWindows::release()
 	}
 }
 
-EnvironmentWindows::~EnvironmentWindows()
+EnvironmentV8::~EnvironmentV8()
 {
 	this->release();
 }
 
-bool EnvironmentWindows::Initialize()
+bool EnvironmentV8::Initialize()
 {
 	//this->release();
 
@@ -99,7 +99,7 @@ bool EnvironmentWindows::Initialize()
 	return false;
 }
 
-void EnvironmentWindows::Bind()
+void EnvironmentV8::Bind()
 {
 	HandleScope handleScope(mIsolate);
 	mGlobalTemplate = ObjectTemplate::New(mIsolate);
@@ -134,12 +134,12 @@ void EnvironmentWindows::Bind()
 	this->ExecuteString("console.error = General_Console.error;");
 }
 
-std::string EnvironmentWindows::ExecuteString(const char* sourceContent)
+std::string EnvironmentV8::ExecuteString(const char* sourceContent)
 {
 	return this->execute(sourceContent);
 }
 
-std::string EnvironmentWindows::ExecuteScript(const char* sourceContent, const char* filename)
+std::string EnvironmentV8::ExecuteScript(const char* sourceContent, const char* filename)
 {
 	//  Local<Value> resource_name,
 	//	Local<Integer> resource_line_offset = Local<Integer>(),
@@ -157,12 +157,12 @@ std::string EnvironmentWindows::ExecuteScript(const char* sourceContent, const c
 	return this->execute(sourceContent, &origin);
 }
 
-void* EnvironmentWindows::Require(const char* sourceContent, const char* filename)
+void* EnvironmentV8::Require(const char* sourceContent, const char* filename)
 {
 	throw std::logic_error("The method or operation is not implemented.");
 }
 
-std::string EnvironmentWindows::execute(const char* content, ScriptOrigin* origin /*= nullptr*/)
+std::string EnvironmentV8::execute(const char* content, ScriptOrigin* origin /*= nullptr*/)
 {
 	if (mIsolate)
 	{

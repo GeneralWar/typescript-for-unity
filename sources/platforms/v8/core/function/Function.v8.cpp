@@ -9,7 +9,7 @@ extern StaticFunctionCallback sStaticFunctionCallback;
 
 void TypescriptStaticFunction::Bind()
 {
-	EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(mEnvironment);
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(mEnvironment);
 	Isolate* isolate = runtime->GetIsolate();
 	Local<FunctionTemplate> functionTemplate = FunctionTemplate::New(isolate, mCallback, BigInt::NewFromUnsigned(isolate, (unsigned long long)this));
 	mReference = new ReferenceWindows(functionTemplate);
@@ -21,7 +21,7 @@ void TypescriptStaticFunction::Bind(Base* parent)
 	if (mReference)
 	{
 		delete mReference;
-		EnvironmentWindows* runtime = reinterpret_cast<EnvironmentWindows*>(mEnvironment);
+		EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(mEnvironment);
 		Isolate* isolate = runtime->GetIsolate();
 		Local<FunctionTemplate> functionTemplate = FunctionTemplate::New(isolate, mCallback, BigInt::NewFromUnsigned(isolate, (unsigned long long)this));
 		mReference = new ReferenceWindows(functionTemplate);
