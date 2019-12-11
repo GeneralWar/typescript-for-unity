@@ -18,6 +18,7 @@ namespace General.Typescript
 			self.BindStaticProperty("lightsUseLinearIntensity", get_lightsUseLinearIntensity, set_lightsUseLinearIntensity);
 			self.BindStaticProperty("lightsUseColorTemperature", get_lightsUseColorTemperature, set_lightsUseColorTemperature);
 			self.BindStaticProperty("useScriptableRenderPipelineBatching", get_useScriptableRenderPipelineBatching, set_useScriptableRenderPipelineBatching);
+			self.BindStaticProperty("logWhenShaderIsCompiled", get_logWhenShaderIsCompiled, set_logWhenShaderIsCompiled);
 			self.BindStaticProperty("renderPipelineAsset", get_renderPipelineAsset, set_renderPipelineAsset);
 		}
 
@@ -183,6 +184,16 @@ namespace General.Typescript
 		static private void set_useScriptableRenderPipelineBatching(System.Boolean value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.useScriptableRenderPipelineBatching = value;
+		}
+
+		static private System.Boolean get_logWhenShaderIsCompiled()
+		{
+			return UnityEngine.Rendering.GraphicsSettings.logWhenShaderIsCompiled;
+		}
+
+		static private void set_logWhenShaderIsCompiled(System.Boolean value)
+		{
+			UnityEngine.Rendering.GraphicsSettings.logWhenShaderIsCompiled = value;
 		}
 
 		static private UnityEngine.Experimental.Rendering.RenderPipelineAsset get_renderPipelineAsset()

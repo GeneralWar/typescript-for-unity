@@ -33,7 +33,6 @@ namespace General.Typescript
 			SystemNetSocketsSocketShutdown.Bind(self);
 			SystemNetSocketsSocketType.Bind(self);
 			SystemNetSocketsTcpClient.Bind(self);
-			SystemNetSocketsTcpListener.Bind(self);
 			SystemNetSocketsTransmitFileOptions.Bind(self);
 			SystemNetSocketsUdpClient.Bind(self);
 			SystemNetSocketsUdpReceiveResult.Bind(self);

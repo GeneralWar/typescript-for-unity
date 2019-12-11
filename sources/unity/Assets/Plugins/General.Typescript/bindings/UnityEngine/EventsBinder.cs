@@ -9,7 +9,6 @@ namespace General.Typescript
             Namespace self = parent.DeclareNamespace("Events");
 
 			UnityEngineEventsPersistentListenerMode.Bind(self);
-			UnityEngineEventsUnityEvent.Bind(self);
 			UnityEngineEventsUnityEventCallState.Bind(self);
         }
     }

@@ -187,10 +187,6 @@ namespace General.Typescript
 			{
 				return;
 			}
-			//if (typeof(UnityEngine.UI.Button) == type)
-			//{
-			//	int n = 0;
-			//}
 			try
 			{
 				NamespaceBinder space = NamespaceBinder.GetNamespace(type.FullName.Substring(0, type.FullName.LastIndexOf(".")));

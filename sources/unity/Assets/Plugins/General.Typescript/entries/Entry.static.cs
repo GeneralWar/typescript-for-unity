@@ -32,22 +32,18 @@ namespace General.Typescript
 
 		static Entry()
 		{
-			Entry.onBind += delegate ()
-			{
-				{
-					Type type = typeof(Entry).Assembly.GetType("General.Typescript.UnityEngineBinder");
-					if (null == type)
-					{
-						UnityEngine.Debug.LogError("Cannot find class [UnityEngineBinder], please generate binders first!\nMenu -> General -> Typescript -> Generate Binders");
-						return;
-					}
-					MethodInfo method = type.GetMethod("Initialize", BindingFlags.Static | BindingFlags.Public);
-					method.Invoke(null, null);
-				}
+			Entry.onBind += onBindNative;
+		}
 
-				SystemBinder.Initialize();
-				CoreBinder.Initialize();
-			};
+		static private void onBindNative()
+		{
+			Assembly assembly = typeof(Entry).Assembly;
+			IEnumerable<Type> types = assembly.GetTypes().Where(t => t.IsSubclassOf(typeof(Binder)));
+			foreach (Type type in types)
+			{
+				MethodInfo method = type.GetMethod("Initialize", BindingFlags.Static | BindingFlags.Public);
+				method.Invoke(null, null);
+			}
 		}
 
 		static private void checkInstance()
@@ -71,6 +67,7 @@ namespace General.Typescript
 
 			if (IntPtr.Zero == Entry.ContextHandle)
 			{
+				DateTime startTime = DateTime.Now;
 #if UNITY_IPHONE || UNITY_STANDALONE_OSX
                 sInstance = new IOSEntry();
 //#elif UNITY_ANDROID
@@ -114,6 +111,7 @@ namespace General.Typescript
 				{
 					General_Typescript_BindLogCallback(Log, LogWarning, LogError);
 					General_Typescript_Bind(sInstance.Context);
+					Debug.LogFormat("Initialize typescript takes {0}.", DateTime.Now - startTime);
 					return true;
 				}
 				return false;

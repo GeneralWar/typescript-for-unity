@@ -2,24 +2,17 @@ using System;
 
 namespace General.Typescript
 {
-    public class UnityEngineBinder
+    public class UnityEngineBinder : Binder
     {
         static public void Initialize()
         {
             Namespace self = Entry.DeclareNamespace("UnityEngine");
 
-			AndroidBinder.Bind(self);
 			AnimationsBinder.Bind(self);
-			AppleBinder.Bind(self);
 			AssertionsBinder.Bind(self);
 			DiagnosticsBinder.Bind(self);
 			EventsBinder.Bind(self);
 			EventSystemsBinder.Bind(self);
-			iOSBinder.Bind(self);
-			JobsBinder.Bind(self);
-			NetworkingBinder.Bind(self);
-			PlayablesBinder.Bind(self);
-			ProfilingBinder.Bind(self);
 			RenderingBinder.Bind(self);
 			SceneManagementBinder.Bind(self);
 			ScriptingBinder.Bind(self);
@@ -28,15 +21,11 @@ namespace General.Typescript
 			tvOSBinder.Bind(self);
 			U2DBinder.Bind(self);
 			UIBinder.Bind(self);
-			WindowsBinder.Bind(self);
-			WSABinder.Bind(self);
-			UnityEngineAccelerationEvent.Bind(self);
 			UnityEngineAdditionalCanvasShaderChannels.Bind(self);
 			UnityEngineAnimation.Bind(self);
 			UnityEngineAnimationBlendMode.Bind(self);
 			UnityEngineAnimationClip.Bind(self);
 			UnityEngineAnimationCullingType.Bind(self);
-			UnityEngineAnimationCurve.Bind(self);
 			UnityEngineAnimationEvent.Bind(self);
 			UnityEngineAnimationPlayMode.Bind(self);
 			UnityEngineAnimationState.Bind(self);
@@ -51,7 +40,6 @@ namespace General.Typescript
 			UnityEngineAnimatorTransitionInfo.Bind(self);
 			UnityEngineAnimatorUpdateMode.Bind(self);
 			UnityEngineAnimatorUtility.Bind(self);
-			UnityEngineAnisotropicFiltering.Bind(self);
 			UnityEngineApplication.Bind(self);
 			UnityEngineApplicationInstallMode.Bind(self);
 			UnityEngineApplicationSandboxType.Bind(self);
@@ -215,7 +203,6 @@ namespace General.Typescript
 			UnityEngineMonoBehaviour.Bind(self);
 			UnityEngineMotion.Bind(self);
 			UnityEngineMotionVectorGenerationMode.Bind(self);
-			UnityEngineNetworkReachability.Bind(self);
 			UnityEngineNPOTSupport.Bind(self);
 			UnityEngineObject.Bind(self);
 			UnityEngineOcclusionArea.Bind(self);
@@ -344,22 +331,9 @@ namespace General.Typescript
 			UnityEngineWheelFrictionCurve.Bind(self);
 			UnityEngineWrapMode.Bind(self);
 			UnityEngineYieldInstruction.Bind(self);
-#if UNITY_ANDROID
-			UnityEngineAndroidActivityIndicatorStyle.Bind(self);
-			UnityEngineAndroidInput.Bind(self);
-			UnityEngineAndroidJavaClass.Bind(self);
-			UnityEngineAndroidJavaException.Bind(self);
-			UnityEngineAndroidJavaObject.Bind(self);
-			UnityEngineAndroidJavaProxy.Bind(self);
-			UnityEngineAndroidJNI.Bind(self);
-			UnityEngineAndroidJNIHelper.Bind(self);
-#endif
 #if !UNITY_STANDALONE_WIN && !UNITY_IPHONE
 			UnityEngineFullScreenMovieControlMode.Bind(self);
 			UnityEngineFullScreenMovieScalingMode.Bind(self);
-#endif
-#if UNITY_IPHONE
-			UnityEngineiPhoneSettings.Bind(self);
 #endif
 #if !UNITY_STANDALONE_WIN && !UNITY_IPHONE && !UNITY_ANDROID
 			UnityEngineTextureCompressionQuality.Bind(self);

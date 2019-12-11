@@ -2,15 +2,15 @@ using System;
 
 namespace General.Typescript
 {
-    public class SystemBinder
+    public class SystemBinder : Binder
     {
         static public void Initialize()
         {
             Namespace self = Entry.DeclareNamespace("System");
 
+			IOBinder.Bind(self);
 			NetBinder.Bind(self);
-			WebBinder.Bind(self);
-			SystemHttpStyleUriParser.Bind(self);
+			SystemGuid.Bind(self);
         }
     }
 }
