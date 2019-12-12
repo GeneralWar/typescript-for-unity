@@ -196,12 +196,5 @@ namespace General.Typescript
 		{
 			return AssetDatabase.LoadAssetAtPath<Configuration>(Utility.CONFIGURATION_PATH);
 		}
-
-		static public string GetConfigurationSubTypes()
-		{
-			CreateConfigurationIfNotExists();
-			Configuration configuration = AssetDatabase.LoadAssetAtPath<Configuration>(Utility.CONFIGURATION_PATH);
-			return configuration?.bindersSubset ?? "";
-		}
 	}
 }

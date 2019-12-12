@@ -133,6 +133,7 @@ namespace General.Typescript
 				types.AddRange(assembly.bindedTypes.ConvertAll<Type>(n => assembly.Assembly.GetType(n)));
 			}
 			BinderGenerator.GenerateBinders(types);
+			BinderGenerator.GenerateSnippets(types);
 		}
 
 		private void OnFocus()
