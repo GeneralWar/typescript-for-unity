@@ -69,15 +69,15 @@ public class PackTool
 		}
 	}
 
-	[MenuItem("General/Typescript/Bind Custom Classes")]
-	static private void bindCustomClasses()
-	{
-		List<Type> types = BinderGenerator.GetBindedTypes(false);
-		types.AddRange(bindCustomClasses(typeof(Socket).Assembly, new string[] { "Socket", "IP" }));
-		types.AddRange(bindCustomClasses(typeof(WebRequest).Assembly, new string[] { "Http", "Web", "Request", "Response" }, new string[] { "WebRequestModuleElementCollection", "HttpListenerTimeoutManager", "WebProxy" }));
+	//[MenuItem("General/Typescript/Bind Custom Classes")]
+	//static private void bindCustomClasses()
+	//{
+	//	List<Type> types = BinderGenerator.GetBindedTypes(false);
+	//	types.AddRange(bindCustomClasses(typeof(Socket).Assembly, new string[] { "Socket", "IP" }));
+	//	types.AddRange(bindCustomClasses(typeof(WebRequest).Assembly, new string[] { "Http", "Web", "Request", "Response" }, new string[] { "WebRequestModuleElementCollection", "HttpListenerTimeoutManager", "WebProxy" }));
 
-		Debug.Log("Generate custom binders successfully!");
-	}
+	//	Debug.Log("Generate custom binders successfully!");
+	//}
 
 	static private IEnumerable<Type> bindCustomClasses(Assembly assembly, string key)
 	{

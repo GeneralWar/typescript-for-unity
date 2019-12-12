@@ -12,5 +12,6 @@
 		EmailAddress = 7,
 		Social = 9,
 		Search = 10,
+		DecimalPad = 11,
 	}
 }

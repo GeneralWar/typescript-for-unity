@@ -18,78 +18,68 @@ namespace General.Typescript
 		public const string LIBRARY_OUTPUT_PATH = "../project/library/";
 		public const string TABLE = "\t";
 
-		/// <summary>
-		/// 获取绑定的类型列表。
-		/// <para>
-		/// Get the list of types which binded to general.typescript.
-		/// </para>
-		/// </summary>
-		/// <param name="subset">
-		/// 是否为用户自定义的子集
-		/// <para>
-		/// Is the list a subset that user set in the config file?
-		/// </para>
-		/// </param>
-		/// <returns></returns>
-		static public List<Type> GetBindedTypes(bool subset)
-		{
-			List<Type> types = new List<Type>();
-			List<Type> full = pickTypes(subset);
+		///// <summary>
+		///// 获取绑定的类型列表。
+		///// <para>
+		///// Get the list of types which binded to general.typescript.
+		///// </para>
+		///// </summary>
+		///// <param name="subset">
+		///// 是否为用户自定义的子集
+		///// <para>
+		///// Is the list a subset that user set in the config file?
+		///// </para>
+		///// </param>
+		///// <returns></returns>
+		//static public List<Type> GetBindedTypes(bool subset)
+		//{
+		//	List<Type> types = new List<Type>();
+		//	List<Type> full = pickTypes(subset);
 
-			NamespaceBinder.Clear();
-			foreach (Type type in full)
-			{
-				if (!type.FullName.Contains("."))
-				{
-					continue;
-				}
-				try
-				{
-					NamespaceBinder space = NamespaceBinder.GetNamespace(type.FullName.Substring(0, type.FullName.LastIndexOf(".")));
-					if (null != space)
-					{
-						ClassBinder binder = space.DeclareClass(type);
-						if (null != binder)
-						{
-							types.Add(type);
-						}
-					}
-				}
-				catch (Exception e)
-				{
-					Debug.LogException(e);
-					Debug.LogError(type);
-				}
-			}
-			NamespaceBinder.Clear();
-			return types;
-		}
+		//	NamespaceBinder.Clear();
+		//	foreach (Type type in full)
+		//	{
+		//		if (!type.FullName.Contains("."))
+		//		{
+		//			continue;
+		//		}
+		//		try
+		//		{
+		//			NamespaceBinder space = NamespaceBinder.GetNamespace(type.FullName.Substring(0, type.FullName.LastIndexOf(".")));
+		//			if (null != space)
+		//			{
+		//				ClassBinder binder = space.DeclareClass(type);
+		//				if (null != binder)
+		//				{
+		//					types.Add(type);
+		//				}
+		//			}
+		//		}
+		//		catch (Exception e)
+		//		{
+		//			Debug.LogException(e);
+		//			Debug.LogError(type);
+		//		}
+		//	}
+		//	NamespaceBinder.Clear();
+		//	return types;
+		//}
 
-		static private List<Type> pickTypes(bool subset = false)
-		{
-			List<Type> types = new List<Type>();
-			Assembly coreAssembly = Assembly.Load("UnityEngine.CoreModule");
-			Assembly physicsAssembly = Assembly.Load("UnityEngine.PhysicsModule");
-			Assembly uiAssembly = Assembly.Load("UnityEngine.UI");
-			Assembly uiModuleAssembly = Assembly.Load("UnityEngine.UIModule");
-			Assembly animationAssembly = Assembly.Load("UnityEngine.AnimationModule");
-			types.AddRange(coreAssembly.GetTypes());
-			types.AddRange(physicsAssembly.GetTypes());
-			types.AddRange(uiAssembly.GetTypes());
-			types.AddRange(uiModuleAssembly.GetTypes());
-			types.AddRange(animationAssembly.GetTypes());
-			if (subset)
-			{
-				string subsetContent = Utility.GetConfigurationSubTypes();
-				if (string.IsNullOrWhiteSpace(subsetContent))
-				{
-					Debug.LogError("Try to generate binders' or snippets' subset but the subset content in configs.asset is empty!");
-				}
-				string[] subTypes = subsetContent.Split('|');
-				return types.FindAll(type => subTypes.Contains(type.FullName));
-			}
-			return types;
-		}
+		//static private List<Type> pickTypes()
+		//{
+		//	List<Type> types = new List<Type>();
+		//	Assembly coreAssembly = Assembly.Load("UnityEngine.CoreModule");
+		//	Assembly physicsAssembly = Assembly.Load("UnityEngine.PhysicsModule");
+		//	Assembly uiAssembly = Assembly.Load("UnityEngine.UI");
+		//	Assembly uiModuleAssembly = Assembly.Load("UnityEngine.UIModule");
+		//	Assembly animationAssembly = Assembly.Load("UnityEngine.AnimationModule");
+		//	types.AddRange(coreAssembly.GetTypes());
+		//	types.AddRange(physicsAssembly.GetTypes());
+		//	types.AddRange(uiAssembly.GetTypes());
+		//	types.AddRange(uiModuleAssembly.GetTypes());
+		//	types.AddRange(animationAssembly.GetTypes());
+		//	return types;
+		//}
 
 		[MenuItem("General/Typescript/Initialize")]
 		static private void Initialize()
@@ -236,17 +226,17 @@ namespace General.Typescript
 			generateBinders(types);
 		}
 
-		[MenuItem("General/Typescript/Generate Binders")]
-		static private void GenerateBinders()
-		{
-			generateBinders(pickTypes());
-		}
+		//[MenuItem("General/Typescript/Generate Binders")]
+		//static private void GenerateBinders()
+		//{
+		//	generateBinders(pickTypes());
+		//}
 
-		[MenuItem("General/Typescript/Generate Binders Subset")]
-		static private void GenerateBindersSubset()
-		{
-			generateBinders(pickTypes(true));
-		}
+		//[MenuItem("General/Typescript/Generate Binders Subset")]
+		//static private void GenerateBindersSubset()
+		//{
+		//	generateBinders(pickTypes(true));
+		//}
 
 		static private void generateSnippet(Type type)
 		{
@@ -298,16 +288,16 @@ namespace General.Typescript
 			generateSnippets(types);
 		}
 
-		[MenuItem("General/Typescript/Generate Snippets")]
-		static private void GenerateSnippets()
-		{
-			generateSnippets(pickTypes());
-		}
+		//[MenuItem("General/Typescript/Generate Snippets")]
+		//static private void GenerateSnippets()
+		//{
+		//	generateSnippets(pickTypes());
+		//}
 
-		[MenuItem("General/Typescript/Generate Snippets Subset")]
-		static private void GenerateSnippetsSubset()
-		{
-			generateSnippets(pickTypes(true));
-		}
+		//[MenuItem("General/Typescript/Generate Snippets Subset")]
+		//static private void GenerateSnippetsSubset()
+		//{
+		//	generateSnippets(pickTypes(true));
+		//}
 	}
 }

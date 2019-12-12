@@ -23,6 +23,8 @@
 			static public set lightsUseColorTemperature(): boolean;
 			static public get useScriptableRenderPipelineBatching(): boolean;
 			static public set useScriptableRenderPipelineBatching(): boolean;
+			static public get logWhenShaderIsCompiled(): boolean;
+			static public set logWhenShaderIsCompiled(): boolean;
 			static public get renderPipelineAsset(): UnityEngine.Experimental.Rendering.RenderPipelineAsset;
 			static public set renderPipelineAsset(): UnityEngine.Experimental.Rendering.RenderPipelineAsset;
 		}

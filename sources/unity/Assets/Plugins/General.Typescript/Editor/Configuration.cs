@@ -10,8 +10,5 @@ namespace General.Typescript
 
 		[Tooltip("Where the compiled scripts store.")]
 		public string compiledPath = "../project/build";
-
-		[Tooltip("Please enter full class name, seperated by '|' if there are more than one class.")]
-		public string bindersSubset = string.Empty;
     }
 }

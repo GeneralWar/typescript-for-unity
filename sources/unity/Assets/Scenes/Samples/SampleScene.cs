@@ -9,6 +9,8 @@ using UnityEngine.UI;
 public class SampleScene : MonoBehaviour
 {
 	[SerializeField]
+	private string mScriptName = string.Empty;
+	[SerializeField]
 	private Button mStartButton = null;
 
 	void Start()
@@ -27,7 +29,7 @@ public class SampleScene : MonoBehaviour
 		{
             General.Typescript.Entry.AppendCustomSuperClass(typeof(General.Behaviour));
 			General.Typescript.Files.AddSearchPath(Path.Combine(Application.streamingAssetsPath, "Scripts"));
-			this.StartCoroutine(this.loadScript("sample-scene"));
+			this.StartCoroutine(this.loadScript(mScriptName));
 		}
 	}
 
