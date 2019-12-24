@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,7 +30,7 @@ namespace General.Typescript
 			return default(UnityEngine.Sprites.DataUtility);
 		}
 
-		static private UnityEngine.Vector4 GetInnerUV(Parameters parameters)
+		static private UnityEngine.Vector4 GetInnerUV(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite>())
 			{
@@ -51,7 +52,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector2 GetMinSize(Parameters parameters)
+		static private UnityEngine.Vector2 GetMinSize(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite>())
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private UnityEngine.Vector4 GetOuterUV(Parameters parameters)
+		static private UnityEngine.Vector4 GetOuterUV(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite>())
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 GetPadding(Parameters parameters)
+		static private UnityEngine.Vector4 GetPadding(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite>())
 			{

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -40,7 +41,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("renderQueue", get_renderQueue, null);
 		}
 
-		static private void DisableKeyword(Parameters parameters)
+		static private void DisableKeyword(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EnableKeyword(Parameters parameters)
+		static private void EnableKeyword(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -84,7 +85,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Shader Find(Parameters parameters)
+		static private UnityEngine.Shader Find(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -106,7 +107,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Color GetGlobalColor(Parameters parameters)
+		static private UnityEngine.Color GetGlobalColor(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Single GetGlobalFloat(Parameters parameters)
+		static private System.Single GetGlobalFloat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -158,7 +159,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single[] GetGlobalFloatArray(Parameters parameters)
+		static private System.Single[] GetGlobalFloatArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -184,7 +185,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetGlobalInt(Parameters parameters)
+		static private System.Int32 GetGlobalInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -210,7 +211,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Matrix4x4 GetGlobalMatrix(Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetGlobalMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -236,7 +237,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4[] GetGlobalMatrixArray(Parameters parameters)
+		static private UnityEngine.Matrix4x4[] GetGlobalMatrixArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -262,7 +263,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Texture GetGlobalTexture(Parameters parameters)
+		static private UnityEngine.Texture GetGlobalTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -288,7 +289,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector4 GetGlobalVector(Parameters parameters)
+		static private UnityEngine.Vector4 GetGlobalVector(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -314,7 +315,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4[] GetGlobalVectorArray(Parameters parameters)
+		static private UnityEngine.Vector4[] GetGlobalVectorArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -340,7 +341,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsKeywordEnabled(Parameters parameters)
+		static private System.Boolean IsKeywordEnabled(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -362,7 +363,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 PropertyToID(Parameters parameters)
+		static private System.Int32 PropertyToID(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -384,7 +385,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetGlobalBuffer(Parameters parameters)
+		static private void SetGlobalBuffer(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.ComputeBuffer>())
 			{
@@ -411,7 +412,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalColor(Parameters parameters)
+		static private void SetGlobalColor(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Color>())
 			{
@@ -438,7 +439,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalFloat(Parameters parameters)
+		static private void SetGlobalFloat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -465,7 +466,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalFloatArray(Parameters parameters)
+		static private void SetGlobalFloatArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single[]>())
 			{
@@ -492,7 +493,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalInt(Parameters parameters)
+		static private void SetGlobalInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -519,7 +520,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalMatrix(Parameters parameters)
+		static private void SetGlobalMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4>())
 			{
@@ -546,7 +547,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalMatrixArray(Parameters parameters)
+		static private void SetGlobalMatrixArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4[]>())
 			{
@@ -573,7 +574,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalTexture(Parameters parameters)
+		static private void SetGlobalTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Texture>())
 			{
@@ -600,7 +601,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalVector(Parameters parameters)
+		static private void SetGlobalVector(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4>())
 			{
@@ -627,7 +628,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalVectorArray(Parameters parameters)
+		static private void SetGlobalVectorArray(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4[]>())
 			{
@@ -654,7 +655,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void WarmupAllShaders(Parameters parameters)
+		static private void WarmupAllShaders(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -668,42 +669,42 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Shader.WarmupAllShaders has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 get_globalMaximumLOD()
+		static private System.Int32 get_globalMaximumLOD(Type type, string name)
 		{
 			return UnityEngine.Shader.globalMaximumLOD;
 		}
 
-		static private void set_globalMaximumLOD(System.Int32 value)
+		static private void set_globalMaximumLOD(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Shader.globalMaximumLOD = value;
 		}
 
-		static private System.String get_globalRenderPipeline()
+		static private System.String get_globalRenderPipeline(Type type, string name)
 		{
 			return UnityEngine.Shader.globalRenderPipeline;
 		}
 
-		static private void set_globalRenderPipeline(System.String value)
+		static private void set_globalRenderPipeline(Type type, string name, System.String value)
 		{
 			UnityEngine.Shader.globalRenderPipeline = value;
 		}
 
-		static private System.Int32 get_maximumLOD(UnityEngine.Shader instance)
+		static private System.Int32 get_maximumLOD(UnityEngine.Shader instance, string name)
 		{
 			return instance.maximumLOD;
 		}
 
-		static private void set_maximumLOD(UnityEngine.Shader instance, System.Int32 value)
+		static private void set_maximumLOD(UnityEngine.Shader instance, string name, System.Int32 value)
 		{
 			instance.maximumLOD = value;
 		}
 
-		static private System.Boolean get_isSupported(UnityEngine.Shader instance)
+		static private System.Boolean get_isSupported(UnityEngine.Shader instance, string name)
 		{
 			return instance.isSupported;
 		}
 
-		static private System.Int32 get_renderQueue(UnityEngine.Shader instance)
+		static private System.Int32 get_renderQueue(UnityEngine.Shader instance, string name)
 		{
 			return instance.renderQueue;
 		}

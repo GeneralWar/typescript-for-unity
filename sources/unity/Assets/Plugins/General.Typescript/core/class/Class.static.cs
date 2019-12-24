@@ -29,6 +29,18 @@ namespace General.Typescript
 			return sClasses.TryGetValue(name, out result) ? result : null;
 		}
 
+		static internal Class<T> Create<T>(IntPtr context, IntPtr handle, Base parent)
+		{
+			Type type = typeof(T);
+			Class instance = null;
+			if (sClasses.TryGetValue(type.FullName, out instance))
+			{
+				UnityEngine.Debug.LogWarningFormat("There is already a class called {0}, now return this instance!", type.FullName);
+				return instance as Class<T>;
+			}
+			return new Class<T>(context, handle, parent);
+		}
+
 		static new internal void Release()
 		{
 			sClasses = new Dictionary<string, Class>();
@@ -41,25 +53,50 @@ namespace General.Typescript
         {
             Type result = null;
             return sRegisteredTypes.TryGetValue(name, out result) ? result : null;
-        }
+		}
 
-        [MonoPInvokeCallback(typeof(ConstructorCallback))]
-        static protected int CallConstructor(IntPtr constructor, IntPtr parameters, int count)
+		static public void BindConstructor(IntPtr handle, Delegate callback)
+		{
+			Entry.General_Typescript_Class_BindConstructor(handle, true);
+			if (sConstructors.ContainsKey(handle))
+			{
+				Debug.LogWarningFormat("There is already a handle {0} binded into constructor, this operation will replace the previous binding.", handle.ToString());
+				sConstructors[handle] = callback;
+			}
+			else
+			{
+				sConstructors.Add(handle, callback);
+			}
+		}
+
+		[MonoPInvokeCallback(typeof(ConstructorCallback))]
+        static protected int CallConstructor(IntPtr handle, IntPtr parameters, int count)
         {
+			object instance = null;
 			Delegate callback = null;
-            if (!sConstructors.TryGetValue(constructor, out callback))
-            {
-                UnityEngine.Debug.LogWarningFormat("Try to call consctructor of handle {0} but there is no binding!", constructor);
-				return -1;
+			if (sConstructors.TryGetValue(handle, out callback))
+			{
+				instance = callback.DynamicInvoke(new Parameters(parameters, count));
+			}
+			else
+			{
+				Class classInstance = Class.FindInstance<Class>(handle);
+				if (null != classInstance)
+				{
+					instance = classInstance.CreateInstance(new Parameters(parameters, count));
+				}
+				else
+				{
+					UnityEngine.Debug.LogWarningFormat("Try to call consctructor of handle {0} but there is no binding!", handle);
+				}
             }
-			object instance = callback.DynamicInvoke(new Parameters(parameters, count));
 			return Entry.ReturnResultToJavascript(instance);
         }
 
         [MonoPInvokeCallback(typeof(StaticFunctionCallback))]
         static protected int CallStaticFunction(IntPtr handle, IntPtr parameters, int count)
         {
-            StaticFunctionBase instance = Function.GetStaticFunction(handle);
+            StaticFunctionBase instance = Function.FindInstance<StaticFunctionBase>(handle);
             if (null == instance)
             {
                 Debug.LogError("Try to call static function but instance is null!");
@@ -125,7 +162,7 @@ namespace General.Typescript
             property.SetValue(value);
         }
 
-		static private InstanceProperty getInstanceProperty(object target, string name)
+		static private InstanceProperty GetInstanceProperty(object target, string name)
 		{
 			Type type = target.GetType();
 			Class c = Class.FindClass(type.FullName);
@@ -149,7 +186,7 @@ namespace General.Typescript
 			object target = Entry.Caller.GetInstance(index);
 			if (null == target) return -1;
 
-			InstanceProperty property = Class.getInstanceProperty(target, name);
+			InstanceProperty property = Class.GetInstanceProperty(target, name);
             return property?.GetValue(target) ?? -1;
         }
 
@@ -159,7 +196,7 @@ namespace General.Typescript
 			object target = Entry.Caller.GetInstance(index);
 			if (null == target) return;
 
-			InstanceProperty property = Class.getInstanceProperty(target, name);
+			InstanceProperty property = Class.GetInstanceProperty(target, name);
 			property?.SetValue(target, value);
         }
     }

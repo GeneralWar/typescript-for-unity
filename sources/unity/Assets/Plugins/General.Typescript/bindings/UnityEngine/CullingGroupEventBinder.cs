@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,37 +18,37 @@ namespace General.Typescript
 			self.BindInstanceProperty("previousDistance", get_previousDistance, null);
 		}
 
-		static private System.Int32 get_index(UnityEngine.CullingGroupEvent instance)
+		static private System.Int32 get_index(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.index;
 		}
 
-		static private System.Boolean get_isVisible(UnityEngine.CullingGroupEvent instance)
+		static private System.Boolean get_isVisible(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.isVisible;
 		}
 
-		static private System.Boolean get_wasVisible(UnityEngine.CullingGroupEvent instance)
+		static private System.Boolean get_wasVisible(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.wasVisible;
 		}
 
-		static private System.Boolean get_hasBecomeVisible(UnityEngine.CullingGroupEvent instance)
+		static private System.Boolean get_hasBecomeVisible(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.hasBecomeVisible;
 		}
 
-		static private System.Boolean get_hasBecomeInvisible(UnityEngine.CullingGroupEvent instance)
+		static private System.Boolean get_hasBecomeInvisible(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.hasBecomeInvisible;
 		}
 
-		static private System.Int32 get_currentDistance(UnityEngine.CullingGroupEvent instance)
+		static private System.Int32 get_currentDistance(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.currentDistance;
 		}
 
-		static private System.Int32 get_previousDistance(UnityEngine.CullingGroupEvent instance)
+		static private System.Int32 get_previousDistance(UnityEngine.CullingGroupEvent instance, string name)
 		{
 			return instance.previousDistance;
 		}

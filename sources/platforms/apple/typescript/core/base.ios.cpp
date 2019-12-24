@@ -11,6 +11,11 @@
 #include "extra/log/Log.h"
 #include "object/object.ios.h"
 
+Base::~Base()
+{
+    
+}
+
 void Base::BindToParent(Base* parent)
 {
     JSValueRef parentValue = parent ? GetValue(parent) : GetParentValue(this);
@@ -45,6 +50,15 @@ void Base::Bind()
     
     JSValueRef self = CreateValue(context);
     SetValuePropertyWithString(context, self, "name", mName.c_str());
-    mReference = self;
+    mReference = ValueToObject(context, self);
     this->BindToParent(mParent);
+}
+
+JSObjectRef Base::GetJsObject()
+{
+    if (nullptr == mJsObject)
+    {
+        mJsObject = mReference;
+    }
+    return mJsObject;
 }

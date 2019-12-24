@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,7 +36,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color32);
 		}
 
-		static private UnityEngine.Color32 Lerp(Parameters parameters)
+		static private UnityEngine.Color32 Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color32, UnityEngine.Color32, System.Single>())
 			{
@@ -57,7 +58,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color32);
 		}
 
-		static private UnityEngine.Color32 LerpUnclamped(Parameters parameters)
+		static private UnityEngine.Color32 LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color32, UnityEngine.Color32, System.Single>())
 			{
@@ -79,7 +80,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color32);
 		}
 
-		static private System.String ToString(UnityEngine.Color32 instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Color32 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

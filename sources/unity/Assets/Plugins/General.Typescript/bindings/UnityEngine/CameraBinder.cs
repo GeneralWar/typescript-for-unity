@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -128,7 +129,7 @@ namespace General.Typescript
 			return default(UnityEngine.Camera);
 		}
 
-		static private System.Single FocalLengthToFOV(Parameters parameters)
+		static private System.Single FocalLengthToFOV(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -150,7 +151,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single FOVToFocalLength(Parameters parameters)
+		static private System.Single FOVToFocalLength(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -172,7 +173,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 GetAllCameras(Parameters parameters)
+		static private System.Int32 GetAllCameras(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera[]>())
 			{
@@ -194,7 +195,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetupCurrent(Parameters parameters)
+		static private void SetupCurrent(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera>())
 			{
@@ -216,7 +217,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddCommandBuffer(UnityEngine.Camera instance, Parameters parameters)
+		static private void AddCommandBuffer(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CameraEvent, UnityEngine.Rendering.CommandBuffer>())
 			{
@@ -238,7 +239,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddCommandBufferAsync(UnityEngine.Camera instance, Parameters parameters)
+		static private void AddCommandBufferAsync(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CameraEvent, UnityEngine.Rendering.CommandBuffer, UnityEngine.Rendering.ComputeQueueType>())
 			{
@@ -260,7 +261,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CalculateFrustumCorners(UnityEngine.Camera instance, Parameters parameters)
+		static private void CalculateFrustumCorners(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, System.Single, UnityEngine.Camera.MonoOrStereoscopicEye, UnityEngine.Vector3[]>())
 			{
@@ -282,7 +283,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Matrix4x4 CalculateObliqueMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 CalculateObliqueMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4>())
 			{
@@ -304,7 +305,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private void CopyFrom(UnityEngine.Camera instance, Parameters parameters)
+		static private void CopyFrom(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera>())
 			{
@@ -326,7 +327,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CopyStereoDeviceProjectionMatrixToNonJittered(UnityEngine.Camera instance, Parameters parameters)
+		static private void CopyStereoDeviceProjectionMatrixToNonJittered(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye>())
 			{
@@ -348,7 +349,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.CommandBuffer[] GetCommandBuffers(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Rendering.CommandBuffer[] GetCommandBuffers(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CameraEvent>())
 			{
@@ -370,7 +371,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Matrix4x4 GetStereoNonJitteredProjectionMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetStereoNonJitteredProjectionMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye>())
 			{
@@ -392,7 +393,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 GetStereoProjectionMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetStereoProjectionMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye>())
 			{
@@ -414,7 +415,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 GetStereoViewMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetStereoViewMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye>())
 			{
@@ -436,7 +437,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private void RemoveAllCommandBuffers(UnityEngine.Camera instance, Parameters parameters)
+		static private void RemoveAllCommandBuffers(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -450,7 +451,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.RemoveAllCommandBuffers has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RemoveCommandBuffer(UnityEngine.Camera instance, Parameters parameters)
+		static private void RemoveCommandBuffer(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CameraEvent, UnityEngine.Rendering.CommandBuffer>())
 			{
@@ -472,7 +473,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RemoveCommandBuffers(UnityEngine.Camera instance, Parameters parameters)
+		static private void RemoveCommandBuffers(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CameraEvent>())
 			{
@@ -494,7 +495,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Render(UnityEngine.Camera instance, Parameters parameters)
+		static private void Render(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -508,7 +509,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.Render has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RenderDontRestore(UnityEngine.Camera instance, Parameters parameters)
+		static private void RenderDontRestore(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -522,7 +523,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.RenderDontRestore has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean RenderToCubemap(UnityEngine.Camera instance, Parameters parameters)
+		static private System.Boolean RenderToCubemap(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Cubemap>())
 			{
@@ -560,7 +561,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void RenderWithShader(UnityEngine.Camera instance, Parameters parameters)
+		static private void RenderWithShader(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Shader, System.String>())
 			{
@@ -582,7 +583,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Reset(UnityEngine.Camera instance, Parameters parameters)
+		static private void Reset(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -596,7 +597,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.Reset has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetAspect(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetAspect(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -610,7 +611,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetAspect has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetCullingMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetCullingMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -624,7 +625,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetCullingMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetProjectionMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetProjectionMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -638,7 +639,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetProjectionMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetReplacementShader(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetReplacementShader(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -652,7 +653,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetReplacementShader has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetStereoProjectionMatrices(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetStereoProjectionMatrices(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -666,7 +667,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetStereoProjectionMatrices has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetStereoViewMatrices(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetStereoViewMatrices(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -680,7 +681,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetStereoViewMatrices has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetTransparencySortSettings(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetTransparencySortSettings(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -694,7 +695,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetTransparencySortSettings has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetWorldToCameraMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private void ResetWorldToCameraMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -708,7 +709,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Camera.ResetWorldToCameraMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Ray ScreenPointToRay(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Ray ScreenPointToRay(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -734,7 +735,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ray);
 		}
 
-		static private UnityEngine.Vector3 ScreenToViewportPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 ScreenToViewportPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -756,7 +757,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 ScreenToWorldPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 ScreenToWorldPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -782,7 +783,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void SetReplacementShader(UnityEngine.Camera instance, Parameters parameters)
+		static private void SetReplacementShader(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Shader, System.String>())
 			{
@@ -804,7 +805,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetStereoProjectionMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private void SetStereoProjectionMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye, UnityEngine.Matrix4x4>())
 			{
@@ -826,7 +827,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetStereoViewMatrix(UnityEngine.Camera instance, Parameters parameters)
+		static private void SetStereoViewMatrix(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera.StereoscopicEye, UnityEngine.Matrix4x4>())
 			{
@@ -848,7 +849,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTargetBuffers(UnityEngine.Camera instance, Parameters parameters)
+		static private void SetTargetBuffers(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderBuffer, UnityEngine.RenderBuffer>())
 			{
@@ -875,7 +876,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Ray ViewportPointToRay(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Ray ViewportPointToRay(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -901,7 +902,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ray);
 		}
 
-		static private UnityEngine.Vector3 ViewportToScreenPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 ViewportToScreenPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -923,7 +924,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 ViewportToWorldPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 ViewportToWorldPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -949,7 +950,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 WorldToScreenPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 WorldToScreenPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -975,7 +976,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 WorldToViewportPoint(UnityEngine.Camera instance, Parameters parameters)
+		static private UnityEngine.Vector3 WorldToViewportPoint(UnityEngine.Camera instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -1001,502 +1002,502 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Camera get_main()
+		static private UnityEngine.Camera get_main(Type type, string name)
 		{
 			return UnityEngine.Camera.main;
 		}
 
-		static private UnityEngine.Camera get_current()
+		static private UnityEngine.Camera get_current(Type type, string name)
 		{
 			return UnityEngine.Camera.current;
 		}
 
-		static private System.Int32 get_allCamerasCount()
+		static private System.Int32 get_allCamerasCount(Type type, string name)
 		{
 			return UnityEngine.Camera.allCamerasCount;
 		}
 
-		static private UnityEngine.Camera[] get_allCameras()
+		static private UnityEngine.Camera[] get_allCameras(Type type, string name)
 		{
 			return UnityEngine.Camera.allCameras;
 		}
 
-		static private System.Single get_nearClipPlane(UnityEngine.Camera instance)
+		static private System.Single get_nearClipPlane(UnityEngine.Camera instance, string name)
 		{
 			return instance.nearClipPlane;
 		}
 
-		static private void set_nearClipPlane(UnityEngine.Camera instance, System.Single value)
+		static private void set_nearClipPlane(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.nearClipPlane = value;
 		}
 
-		static private UnityEngine.Vector2 get_sensorSize(UnityEngine.Camera instance)
+		static private UnityEngine.Vector2 get_sensorSize(UnityEngine.Camera instance, string name)
 		{
 			return instance.sensorSize;
 		}
 
-		static private void set_sensorSize(UnityEngine.Camera instance, UnityEngine.Vector2 value)
+		static private void set_sensorSize(UnityEngine.Camera instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.sensorSize = value;
 		}
 
-		static private UnityEngine.Vector2 get_lensShift(UnityEngine.Camera instance)
+		static private UnityEngine.Vector2 get_lensShift(UnityEngine.Camera instance, string name)
 		{
 			return instance.lensShift;
 		}
 
-		static private void set_lensShift(UnityEngine.Camera instance, UnityEngine.Vector2 value)
+		static private void set_lensShift(UnityEngine.Camera instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.lensShift = value;
 		}
 
-		static private System.Single get_focalLength(UnityEngine.Camera instance)
+		static private System.Single get_focalLength(UnityEngine.Camera instance, string name)
 		{
 			return instance.focalLength;
 		}
 
-		static private void set_focalLength(UnityEngine.Camera instance, System.Single value)
+		static private void set_focalLength(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.focalLength = value;
 		}
 
-		static private UnityEngine.Rect get_rect(UnityEngine.Camera instance)
+		static private UnityEngine.Rect get_rect(UnityEngine.Camera instance, string name)
 		{
 			return instance.rect;
 		}
 
-		static private void set_rect(UnityEngine.Camera instance, UnityEngine.Rect value)
+		static private void set_rect(UnityEngine.Camera instance, string name, UnityEngine.Rect value)
 		{
 			instance.rect = value;
 		}
 
-		static private UnityEngine.Rect get_pixelRect(UnityEngine.Camera instance)
+		static private UnityEngine.Rect get_pixelRect(UnityEngine.Camera instance, string name)
 		{
 			return instance.pixelRect;
 		}
 
-		static private void set_pixelRect(UnityEngine.Camera instance, UnityEngine.Rect value)
+		static private void set_pixelRect(UnityEngine.Camera instance, string name, UnityEngine.Rect value)
 		{
 			instance.pixelRect = value;
 		}
 
-		static private System.Int32 get_pixelWidth(UnityEngine.Camera instance)
+		static private System.Int32 get_pixelWidth(UnityEngine.Camera instance, string name)
 		{
 			return instance.pixelWidth;
 		}
 
-		static private System.Int32 get_pixelHeight(UnityEngine.Camera instance)
+		static private System.Int32 get_pixelHeight(UnityEngine.Camera instance, string name)
 		{
 			return instance.pixelHeight;
 		}
 
-		static private System.Int32 get_scaledPixelWidth(UnityEngine.Camera instance)
+		static private System.Int32 get_scaledPixelWidth(UnityEngine.Camera instance, string name)
 		{
 			return instance.scaledPixelWidth;
 		}
 
-		static private System.Int32 get_scaledPixelHeight(UnityEngine.Camera instance)
+		static private System.Int32 get_scaledPixelHeight(UnityEngine.Camera instance, string name)
 		{
 			return instance.scaledPixelHeight;
 		}
 
-		static private UnityEngine.RenderTexture get_targetTexture(UnityEngine.Camera instance)
+		static private UnityEngine.RenderTexture get_targetTexture(UnityEngine.Camera instance, string name)
 		{
 			return instance.targetTexture;
 		}
 
-		static private void set_targetTexture(UnityEngine.Camera instance, UnityEngine.RenderTexture value)
+		static private void set_targetTexture(UnityEngine.Camera instance, string name, UnityEngine.RenderTexture value)
 		{
 			instance.targetTexture = value;
 		}
 
-		static private UnityEngine.RenderTexture get_activeTexture(UnityEngine.Camera instance)
+		static private UnityEngine.RenderTexture get_activeTexture(UnityEngine.Camera instance, string name)
 		{
 			return instance.activeTexture;
 		}
 
-		static private System.Int32 get_targetDisplay(UnityEngine.Camera instance)
+		static private System.Int32 get_targetDisplay(UnityEngine.Camera instance, string name)
 		{
 			return instance.targetDisplay;
 		}
 
-		static private void set_targetDisplay(UnityEngine.Camera instance, System.Int32 value)
+		static private void set_targetDisplay(UnityEngine.Camera instance, string name, System.Int32 value)
 		{
 			instance.targetDisplay = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_cameraToWorldMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_cameraToWorldMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.cameraToWorldMatrix;
 		}
 
-		static private UnityEngine.Matrix4x4 get_worldToCameraMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_worldToCameraMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.worldToCameraMatrix;
 		}
 
-		static private void set_worldToCameraMatrix(UnityEngine.Camera instance, UnityEngine.Matrix4x4 value)
+		static private void set_worldToCameraMatrix(UnityEngine.Camera instance, string name, UnityEngine.Matrix4x4 value)
 		{
 			instance.worldToCameraMatrix = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_projectionMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_projectionMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.projectionMatrix;
 		}
 
-		static private void set_projectionMatrix(UnityEngine.Camera instance, UnityEngine.Matrix4x4 value)
+		static private void set_projectionMatrix(UnityEngine.Camera instance, string name, UnityEngine.Matrix4x4 value)
 		{
 			instance.projectionMatrix = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_nonJitteredProjectionMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_nonJitteredProjectionMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.nonJitteredProjectionMatrix;
 		}
 
-		static private void set_nonJitteredProjectionMatrix(UnityEngine.Camera instance, UnityEngine.Matrix4x4 value)
+		static private void set_nonJitteredProjectionMatrix(UnityEngine.Camera instance, string name, UnityEngine.Matrix4x4 value)
 		{
 			instance.nonJitteredProjectionMatrix = value;
 		}
 
-		static private System.Boolean get_useJitteredProjectionMatrixForTransparentRendering(UnityEngine.Camera instance)
+		static private System.Boolean get_useJitteredProjectionMatrixForTransparentRendering(UnityEngine.Camera instance, string name)
 		{
 			return instance.useJitteredProjectionMatrixForTransparentRendering;
 		}
 
-		static private void set_useJitteredProjectionMatrixForTransparentRendering(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_useJitteredProjectionMatrixForTransparentRendering(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.useJitteredProjectionMatrixForTransparentRendering = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_previousViewProjectionMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_previousViewProjectionMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.previousViewProjectionMatrix;
 		}
 
-		static private UnityEngine.SceneManagement.Scene get_scene(UnityEngine.Camera instance)
+		static private UnityEngine.SceneManagement.Scene get_scene(UnityEngine.Camera instance, string name)
 		{
 			return instance.scene;
 		}
 
-		static private void set_scene(UnityEngine.Camera instance, UnityEngine.SceneManagement.Scene value)
+		static private void set_scene(UnityEngine.Camera instance, string name, UnityEngine.SceneManagement.Scene value)
 		{
 			instance.scene = value;
 		}
 
-		static private System.Boolean get_stereoEnabled(UnityEngine.Camera instance)
+		static private System.Boolean get_stereoEnabled(UnityEngine.Camera instance, string name)
 		{
 			return instance.stereoEnabled;
 		}
 
-		static private System.Single get_stereoSeparation(UnityEngine.Camera instance)
+		static private System.Single get_stereoSeparation(UnityEngine.Camera instance, string name)
 		{
 			return instance.stereoSeparation;
 		}
 
-		static private void set_stereoSeparation(UnityEngine.Camera instance, System.Single value)
+		static private void set_stereoSeparation(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.stereoSeparation = value;
 		}
 
-		static private System.Single get_stereoConvergence(UnityEngine.Camera instance)
+		static private System.Single get_stereoConvergence(UnityEngine.Camera instance, string name)
 		{
 			return instance.stereoConvergence;
 		}
 
-		static private void set_stereoConvergence(UnityEngine.Camera instance, System.Single value)
+		static private void set_stereoConvergence(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.stereoConvergence = value;
 		}
 
-		static private System.Boolean get_areVRStereoViewMatricesWithinSingleCullTolerance(UnityEngine.Camera instance)
+		static private System.Boolean get_areVRStereoViewMatricesWithinSingleCullTolerance(UnityEngine.Camera instance, string name)
 		{
 			return instance.areVRStereoViewMatricesWithinSingleCullTolerance;
 		}
 
-		static private System.Boolean get_usePhysicalProperties(UnityEngine.Camera instance)
+		static private System.Boolean get_usePhysicalProperties(UnityEngine.Camera instance, string name)
 		{
 			return instance.usePhysicalProperties;
 		}
 
-		static private void set_usePhysicalProperties(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_usePhysicalProperties(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.usePhysicalProperties = value;
 		}
 
-		static private System.Boolean get_clearStencilAfterLightingPass(UnityEngine.Camera instance)
+		static private System.Boolean get_clearStencilAfterLightingPass(UnityEngine.Camera instance, string name)
 		{
 			return instance.clearStencilAfterLightingPass;
 		}
 
-		static private void set_clearStencilAfterLightingPass(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_clearStencilAfterLightingPass(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.clearStencilAfterLightingPass = value;
 		}
 
-		static private UnityEngine.DepthTextureMode get_depthTextureMode(UnityEngine.Camera instance)
+		static private UnityEngine.DepthTextureMode get_depthTextureMode(UnityEngine.Camera instance, string name)
 		{
 			return instance.depthTextureMode;
 		}
 
-		static private void set_depthTextureMode(UnityEngine.Camera instance, UnityEngine.DepthTextureMode value)
+		static private void set_depthTextureMode(UnityEngine.Camera instance, string name, UnityEngine.DepthTextureMode value)
 		{
 			instance.depthTextureMode = value;
 		}
 
-		static private UnityEngine.CameraClearFlags get_clearFlags(UnityEngine.Camera instance)
+		static private UnityEngine.CameraClearFlags get_clearFlags(UnityEngine.Camera instance, string name)
 		{
 			return instance.clearFlags;
 		}
 
-		static private void set_clearFlags(UnityEngine.Camera instance, UnityEngine.CameraClearFlags value)
+		static private void set_clearFlags(UnityEngine.Camera instance, string name, UnityEngine.CameraClearFlags value)
 		{
 			instance.clearFlags = value;
 		}
 
-		static private System.Single get_farClipPlane(UnityEngine.Camera instance)
+		static private System.Single get_farClipPlane(UnityEngine.Camera instance, string name)
 		{
 			return instance.farClipPlane;
 		}
 
-		static private void set_farClipPlane(UnityEngine.Camera instance, System.Single value)
+		static private void set_farClipPlane(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.farClipPlane = value;
 		}
 
-		static private System.Single get_fieldOfView(UnityEngine.Camera instance)
+		static private System.Single get_fieldOfView(UnityEngine.Camera instance, string name)
 		{
 			return instance.fieldOfView;
 		}
 
-		static private void set_fieldOfView(UnityEngine.Camera instance, System.Single value)
+		static private void set_fieldOfView(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.fieldOfView = value;
 		}
 
-		static private UnityEngine.RenderingPath get_renderingPath(UnityEngine.Camera instance)
+		static private UnityEngine.RenderingPath get_renderingPath(UnityEngine.Camera instance, string name)
 		{
 			return instance.renderingPath;
 		}
 
-		static private void set_renderingPath(UnityEngine.Camera instance, UnityEngine.RenderingPath value)
+		static private void set_renderingPath(UnityEngine.Camera instance, string name, UnityEngine.RenderingPath value)
 		{
 			instance.renderingPath = value;
 		}
 
-		static private UnityEngine.RenderingPath get_actualRenderingPath(UnityEngine.Camera instance)
+		static private UnityEngine.RenderingPath get_actualRenderingPath(UnityEngine.Camera instance, string name)
 		{
 			return instance.actualRenderingPath;
 		}
 
-		static private System.Boolean get_allowHDR(UnityEngine.Camera instance)
+		static private System.Boolean get_allowHDR(UnityEngine.Camera instance, string name)
 		{
 			return instance.allowHDR;
 		}
 
-		static private void set_allowHDR(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_allowHDR(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.allowHDR = value;
 		}
 
-		static private System.Boolean get_allowMSAA(UnityEngine.Camera instance)
+		static private System.Boolean get_allowMSAA(UnityEngine.Camera instance, string name)
 		{
 			return instance.allowMSAA;
 		}
 
-		static private void set_allowMSAA(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_allowMSAA(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.allowMSAA = value;
 		}
 
-		static private System.Boolean get_allowDynamicResolution(UnityEngine.Camera instance)
+		static private System.Boolean get_allowDynamicResolution(UnityEngine.Camera instance, string name)
 		{
 			return instance.allowDynamicResolution;
 		}
 
-		static private void set_allowDynamicResolution(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_allowDynamicResolution(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.allowDynamicResolution = value;
 		}
 
-		static private System.Boolean get_forceIntoRenderTexture(UnityEngine.Camera instance)
+		static private System.Boolean get_forceIntoRenderTexture(UnityEngine.Camera instance, string name)
 		{
 			return instance.forceIntoRenderTexture;
 		}
 
-		static private void set_forceIntoRenderTexture(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_forceIntoRenderTexture(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.forceIntoRenderTexture = value;
 		}
 
-		static private System.Single get_orthographicSize(UnityEngine.Camera instance)
+		static private System.Single get_orthographicSize(UnityEngine.Camera instance, string name)
 		{
 			return instance.orthographicSize;
 		}
 
-		static private void set_orthographicSize(UnityEngine.Camera instance, System.Single value)
+		static private void set_orthographicSize(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.orthographicSize = value;
 		}
 
-		static private System.Boolean get_orthographic(UnityEngine.Camera instance)
+		static private System.Boolean get_orthographic(UnityEngine.Camera instance, string name)
 		{
 			return instance.orthographic;
 		}
 
-		static private void set_orthographic(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_orthographic(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.orthographic = value;
 		}
 
-		static private UnityEngine.Rendering.OpaqueSortMode get_opaqueSortMode(UnityEngine.Camera instance)
+		static private UnityEngine.Rendering.OpaqueSortMode get_opaqueSortMode(UnityEngine.Camera instance, string name)
 		{
 			return instance.opaqueSortMode;
 		}
 
-		static private void set_opaqueSortMode(UnityEngine.Camera instance, UnityEngine.Rendering.OpaqueSortMode value)
+		static private void set_opaqueSortMode(UnityEngine.Camera instance, string name, UnityEngine.Rendering.OpaqueSortMode value)
 		{
 			instance.opaqueSortMode = value;
 		}
 
-		static private UnityEngine.StereoTargetEyeMask get_stereoTargetEye(UnityEngine.Camera instance)
+		static private UnityEngine.StereoTargetEyeMask get_stereoTargetEye(UnityEngine.Camera instance, string name)
 		{
 			return instance.stereoTargetEye;
 		}
 
-		static private void set_stereoTargetEye(UnityEngine.Camera instance, UnityEngine.StereoTargetEyeMask value)
+		static private void set_stereoTargetEye(UnityEngine.Camera instance, string name, UnityEngine.StereoTargetEyeMask value)
 		{
 			instance.stereoTargetEye = value;
 		}
 
-		static private UnityEngine.TransparencySortMode get_transparencySortMode(UnityEngine.Camera instance)
+		static private UnityEngine.TransparencySortMode get_transparencySortMode(UnityEngine.Camera instance, string name)
 		{
 			return instance.transparencySortMode;
 		}
 
-		static private void set_transparencySortMode(UnityEngine.Camera instance, UnityEngine.TransparencySortMode value)
+		static private void set_transparencySortMode(UnityEngine.Camera instance, string name, UnityEngine.TransparencySortMode value)
 		{
 			instance.transparencySortMode = value;
 		}
 
-		static private System.Single get_depth(UnityEngine.Camera instance)
+		static private System.Single get_depth(UnityEngine.Camera instance, string name)
 		{
 			return instance.depth;
 		}
 
-		static private void set_depth(UnityEngine.Camera instance, System.Single value)
+		static private void set_depth(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.depth = value;
 		}
 
-		static private System.Single get_aspect(UnityEngine.Camera instance)
+		static private System.Single get_aspect(UnityEngine.Camera instance, string name)
 		{
 			return instance.aspect;
 		}
 
-		static private void set_aspect(UnityEngine.Camera instance, System.Single value)
+		static private void set_aspect(UnityEngine.Camera instance, string name, System.Single value)
 		{
 			instance.aspect = value;
 		}
 
-		static private UnityEngine.Vector3 get_velocity(UnityEngine.Camera instance)
+		static private UnityEngine.Vector3 get_velocity(UnityEngine.Camera instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private System.Int32 get_cullingMask(UnityEngine.Camera instance)
+		static private System.Int32 get_cullingMask(UnityEngine.Camera instance, string name)
 		{
 			return instance.cullingMask;
 		}
 
-		static private void set_cullingMask(UnityEngine.Camera instance, System.Int32 value)
+		static private void set_cullingMask(UnityEngine.Camera instance, string name, System.Int32 value)
 		{
 			instance.cullingMask = value;
 		}
 
-		static private System.Int32 get_eventMask(UnityEngine.Camera instance)
+		static private System.Int32 get_eventMask(UnityEngine.Camera instance, string name)
 		{
 			return instance.eventMask;
 		}
 
-		static private void set_eventMask(UnityEngine.Camera instance, System.Int32 value)
+		static private void set_eventMask(UnityEngine.Camera instance, string name, System.Int32 value)
 		{
 			instance.eventMask = value;
 		}
 
-		static private System.Boolean get_layerCullSpherical(UnityEngine.Camera instance)
+		static private System.Boolean get_layerCullSpherical(UnityEngine.Camera instance, string name)
 		{
 			return instance.layerCullSpherical;
 		}
 
-		static private void set_layerCullSpherical(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_layerCullSpherical(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.layerCullSpherical = value;
 		}
 
-		static private UnityEngine.CameraType get_cameraType(UnityEngine.Camera instance)
+		static private UnityEngine.CameraType get_cameraType(UnityEngine.Camera instance, string name)
 		{
 			return instance.cameraType;
 		}
 
-		static private void set_cameraType(UnityEngine.Camera instance, UnityEngine.CameraType value)
+		static private void set_cameraType(UnityEngine.Camera instance, string name, UnityEngine.CameraType value)
 		{
 			instance.cameraType = value;
 		}
 
-		static private System.Single[] get_layerCullDistances(UnityEngine.Camera instance)
+		static private System.Single[] get_layerCullDistances(UnityEngine.Camera instance, string name)
 		{
 			return instance.layerCullDistances;
 		}
 
-		static private void set_layerCullDistances(UnityEngine.Camera instance, System.Single[] value)
+		static private void set_layerCullDistances(UnityEngine.Camera instance, string name, System.Single[] value)
 		{
 			instance.layerCullDistances = value;
 		}
 
-		static private System.Boolean get_useOcclusionCulling(UnityEngine.Camera instance)
+		static private System.Boolean get_useOcclusionCulling(UnityEngine.Camera instance, string name)
 		{
 			return instance.useOcclusionCulling;
 		}
 
-		static private void set_useOcclusionCulling(UnityEngine.Camera instance, System.Boolean value)
+		static private void set_useOcclusionCulling(UnityEngine.Camera instance, string name, System.Boolean value)
 		{
 			instance.useOcclusionCulling = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_cullingMatrix(UnityEngine.Camera instance)
+		static private UnityEngine.Matrix4x4 get_cullingMatrix(UnityEngine.Camera instance, string name)
 		{
 			return instance.cullingMatrix;
 		}
 
-		static private void set_cullingMatrix(UnityEngine.Camera instance, UnityEngine.Matrix4x4 value)
+		static private void set_cullingMatrix(UnityEngine.Camera instance, string name, UnityEngine.Matrix4x4 value)
 		{
 			instance.cullingMatrix = value;
 		}
 
-		static private UnityEngine.Color get_backgroundColor(UnityEngine.Camera instance)
+		static private UnityEngine.Color get_backgroundColor(UnityEngine.Camera instance, string name)
 		{
 			return instance.backgroundColor;
 		}
 
-		static private void set_backgroundColor(UnityEngine.Camera instance, UnityEngine.Color value)
+		static private void set_backgroundColor(UnityEngine.Camera instance, string name, UnityEngine.Color value)
 		{
 			instance.backgroundColor = value;
 		}
 
-		static private UnityEngine.Vector3 get_transparencySortAxis(UnityEngine.Camera instance)
+		static private UnityEngine.Vector3 get_transparencySortAxis(UnityEngine.Camera instance, string name)
 		{
 			return instance.transparencySortAxis;
 		}
 
-		static private void set_transparencySortAxis(UnityEngine.Camera instance, UnityEngine.Vector3 value)
+		static private void set_transparencySortAxis(UnityEngine.Camera instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.transparencySortAxis = value;
 		}
 
-		static private System.Int32 get_commandBufferCount(UnityEngine.Camera instance)
+		static private System.Int32 get_commandBufferCount(UnityEngine.Camera instance, string name)
 		{
 			return instance.commandBufferCount;
 		}

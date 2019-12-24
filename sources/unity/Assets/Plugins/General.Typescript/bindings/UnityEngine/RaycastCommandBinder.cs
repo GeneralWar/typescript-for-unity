@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,52 +38,52 @@ namespace General.Typescript
 			return default(UnityEngine.RaycastCommand);
 		}
 
-		static private UnityEngine.Vector3 get_from(UnityEngine.RaycastCommand instance)
+		static private UnityEngine.Vector3 get_from(UnityEngine.RaycastCommand instance, string name)
 		{
 			return instance.from;
 		}
 
-		static private void set_from(UnityEngine.RaycastCommand instance, UnityEngine.Vector3 value)
+		static private void set_from(UnityEngine.RaycastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.from = value;
 		}
 
-		static private UnityEngine.Vector3 get_direction(UnityEngine.RaycastCommand instance)
+		static private UnityEngine.Vector3 get_direction(UnityEngine.RaycastCommand instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.RaycastCommand instance, UnityEngine.Vector3 value)
+		static private void set_direction(UnityEngine.RaycastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.direction = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.RaycastCommand instance)
+		static private System.Single get_distance(UnityEngine.RaycastCommand instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.RaycastCommand instance, System.Single value)
+		static private void set_distance(UnityEngine.RaycastCommand instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private System.Int32 get_layerMask(UnityEngine.RaycastCommand instance)
+		static private System.Int32 get_layerMask(UnityEngine.RaycastCommand instance, string name)
 		{
 			return instance.layerMask;
 		}
 
-		static private void set_layerMask(UnityEngine.RaycastCommand instance, System.Int32 value)
+		static private void set_layerMask(UnityEngine.RaycastCommand instance, string name, System.Int32 value)
 		{
 			instance.layerMask = value;
 		}
 
-		static private System.Int32 get_maxHits(UnityEngine.RaycastCommand instance)
+		static private System.Int32 get_maxHits(UnityEngine.RaycastCommand instance, string name)
 		{
 			return instance.maxHits;
 		}
 
-		static private void set_maxHits(UnityEngine.RaycastCommand instance, System.Int32 value)
+		static private void set_maxHits(UnityEngine.RaycastCommand instance, string name, System.Int32 value)
 		{
 			instance.maxHits = value;
 		}

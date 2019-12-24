@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(UnityEngine.Logger);
 		}
 
-		static private System.Boolean IsLogTypeAllowed(UnityEngine.Logger instance, Parameters parameters)
+		static private System.Boolean IsLogTypeAllowed(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.LogType>())
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Log(UnityEngine.Logger instance, Parameters parameters)
+		static private void Log(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -115,7 +116,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogError(UnityEngine.Logger instance, Parameters parameters)
+		static private void LogError(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogException(UnityEngine.Logger instance, Parameters parameters)
+		static private void LogException(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Exception>())
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogFormat(UnityEngine.Logger instance, Parameters parameters)
+		static private void LogFormat(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.LogType, System.String, System.Object[]>())
 			{
@@ -196,7 +197,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogWarning(UnityEngine.Logger instance, Parameters parameters)
+		static private void LogWarning(UnityEngine.Logger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object>())
 			{
@@ -223,32 +224,32 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.ILogHandler get_logHandler(UnityEngine.Logger instance)
+		static private UnityEngine.ILogHandler get_logHandler(UnityEngine.Logger instance, string name)
 		{
 			return instance.logHandler;
 		}
 
-		static private void set_logHandler(UnityEngine.Logger instance, UnityEngine.ILogHandler value)
+		static private void set_logHandler(UnityEngine.Logger instance, string name, UnityEngine.ILogHandler value)
 		{
 			instance.logHandler = value;
 		}
 
-		static private System.Boolean get_logEnabled(UnityEngine.Logger instance)
+		static private System.Boolean get_logEnabled(UnityEngine.Logger instance, string name)
 		{
 			return instance.logEnabled;
 		}
 
-		static private void set_logEnabled(UnityEngine.Logger instance, System.Boolean value)
+		static private void set_logEnabled(UnityEngine.Logger instance, string name, System.Boolean value)
 		{
 			instance.logEnabled = value;
 		}
 
-		static private UnityEngine.LogType get_filterLogType(UnityEngine.Logger instance)
+		static private UnityEngine.LogType get_filterLogType(UnityEngine.Logger instance, string name)
 		{
 			return instance.filterLogType;
 		}
 
-		static private void set_filterLogType(UnityEngine.Logger instance, UnityEngine.LogType value)
+		static private void set_filterLogType(UnityEngine.Logger instance, string name, UnityEngine.LogType value)
 		{
 			instance.filterLogType = value;
 		}

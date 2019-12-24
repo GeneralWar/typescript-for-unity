@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,7 +30,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("numberOfSteps", get_numberOfSteps, set_numberOfSteps);
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -59,7 +60,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void GraphicUpdateComplete(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void GraphicUpdateComplete(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -103,7 +104,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Scrollbar.GraphicUpdateComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LayoutComplete(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void LayoutComplete(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -117,7 +118,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Scrollbar.LayoutComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void OnBeginDrag(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnBeginDrag(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnDrag(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnDrag(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -161,7 +162,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnInitializePotentialDrag(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnInitializePotentialDrag(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -183,7 +184,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnMove(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnMove(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.AxisEventData>())
 			{
@@ -205,7 +206,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerDown(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnPointerDown(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -227,7 +228,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerUp(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void OnPointerUp(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -249,7 +250,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rebuild(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void Rebuild(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.CanvasUpdate>())
 			{
@@ -271,7 +272,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetDirection(UnityEngine.UI.Scrollbar instance, Parameters parameters)
+		static private void SetDirection(UnityEngine.UI.Scrollbar instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Scrollbar.Direction, System.Boolean>())
 			{
@@ -293,42 +294,42 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.RectTransform get_handleRect(UnityEngine.UI.Scrollbar instance)
+		static private UnityEngine.RectTransform get_handleRect(UnityEngine.UI.Scrollbar instance, string name)
 		{
 			return instance.handleRect;
 		}
 
-		static private void set_handleRect(UnityEngine.UI.Scrollbar instance, UnityEngine.RectTransform value)
+		static private void set_handleRect(UnityEngine.UI.Scrollbar instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.handleRect = value;
 		}
 
-		static private System.Single get_value(UnityEngine.UI.Scrollbar instance)
+		static private System.Single get_value(UnityEngine.UI.Scrollbar instance, string name)
 		{
 			return instance.value;
 		}
 
-		static private void set_value(UnityEngine.UI.Scrollbar instance, System.Single value)
+		static private void set_value(UnityEngine.UI.Scrollbar instance, string name, System.Single value)
 		{
 			instance.value = value;
 		}
 
-		static private System.Single get_size(UnityEngine.UI.Scrollbar instance)
+		static private System.Single get_size(UnityEngine.UI.Scrollbar instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.UI.Scrollbar instance, System.Single value)
+		static private void set_size(UnityEngine.UI.Scrollbar instance, string name, System.Single value)
 		{
 			instance.size = value;
 		}
 
-		static private System.Int32 get_numberOfSteps(UnityEngine.UI.Scrollbar instance)
+		static private System.Int32 get_numberOfSteps(UnityEngine.UI.Scrollbar instance, string name)
 		{
 			return instance.numberOfSteps;
 		}
 
-		static private void set_numberOfSteps(UnityEngine.UI.Scrollbar instance, System.Int32 value)
+		static private void set_numberOfSteps(UnityEngine.UI.Scrollbar instance, string name, System.Int32 value)
 		{
 			instance.numberOfSteps = value;
 		}

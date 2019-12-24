@@ -73,7 +73,7 @@ char* General_Typescript_Parameter_GetTypeName(void* environment, void* pointer,
 	if (value.IsEmpty()) return ReturnStringToCSharp("");
 
 	const std::string type = GetObjectType(value.As<Object>());
-	DEBUG_LOG("Get parameter type for %d : %s", index, type.c_str());
+	DEBUG_LOG("Get parameter type for %d : %s\n", index, type.c_str());
 	return ReturnStringToCSharp(type);
 }
 

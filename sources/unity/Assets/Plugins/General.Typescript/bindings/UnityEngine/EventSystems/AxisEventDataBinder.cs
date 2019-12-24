@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,22 +35,22 @@ namespace General.Typescript
 			return default(UnityEngine.EventSystems.AxisEventData);
 		}
 
-		static private UnityEngine.Vector2 get_moveVector(UnityEngine.EventSystems.AxisEventData instance)
+		static private UnityEngine.Vector2 get_moveVector(UnityEngine.EventSystems.AxisEventData instance, string name)
 		{
 			return instance.moveVector;
 		}
 
-		static private void set_moveVector(UnityEngine.EventSystems.AxisEventData instance, UnityEngine.Vector2 value)
+		static private void set_moveVector(UnityEngine.EventSystems.AxisEventData instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.moveVector = value;
 		}
 
-		static private UnityEngine.EventSystems.MoveDirection get_moveDir(UnityEngine.EventSystems.AxisEventData instance)
+		static private UnityEngine.EventSystems.MoveDirection get_moveDir(UnityEngine.EventSystems.AxisEventData instance, string name)
 		{
 			return instance.moveDir;
 		}
 
-		static private void set_moveDir(UnityEngine.EventSystems.AxisEventData instance, UnityEngine.EventSystems.MoveDirection value)
+		static private void set_moveDir(UnityEngine.EventSystems.AxisEventData instance, string name, UnityEngine.EventSystems.MoveDirection value)
 		{
 			instance.moveDir = value;
 		}

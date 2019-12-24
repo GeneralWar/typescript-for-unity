@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -57,7 +58,7 @@ namespace General.Typescript
 			return default(System.Net.IPAddress);
 		}
 
-		static private System.Object HostToNetworkOrder(Parameters parameters)
+		static private System.Object HostToNetworkOrder(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsLoopback(Parameters parameters)
+		static private System.Boolean IsLoopback(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.IPAddress>())
 			{
@@ -109,7 +110,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Object NetworkToHostOrder(Parameters parameters)
+		static private System.Object NetworkToHostOrder(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.IPAddress Parse(Parameters parameters)
+		static private System.Net.IPAddress Parse(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -161,7 +162,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean Equals(System.Net.IPAddress instance, Parameters parameters)
+		static private System.Boolean Equals(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -183,7 +184,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Byte[] GetAddressBytes(System.Net.IPAddress instance, Parameters parameters)
+		static private System.Byte[] GetAddressBytes(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetHashCode(System.Net.IPAddress instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -213,7 +214,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Net.IPAddress MapToIPv4(System.Net.IPAddress instance, Parameters parameters)
+		static private System.Net.IPAddress MapToIPv4(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -228,7 +229,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.IPAddress MapToIPv6(System.Net.IPAddress instance, Parameters parameters)
+		static private System.Net.IPAddress MapToIPv6(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -243,7 +244,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToString(System.Net.IPAddress instance, Parameters parameters)
+		static private System.String ToString(System.Net.IPAddress instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -258,42 +259,42 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.IPAddress instance)
+		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.IPAddress instance, string name)
 		{
 			return instance.AddressFamily;
 		}
 
-		static private System.Int64 get_ScopeId(System.Net.IPAddress instance)
+		static private System.Int64 get_ScopeId(System.Net.IPAddress instance, string name)
 		{
 			return instance.ScopeId;
 		}
 
-		static private void set_ScopeId(System.Net.IPAddress instance, System.Int64 value)
+		static private void set_ScopeId(System.Net.IPAddress instance, string name, System.Int64 value)
 		{
 			instance.ScopeId = value;
 		}
 
-		static private System.Boolean get_IsIPv6Multicast(System.Net.IPAddress instance)
+		static private System.Boolean get_IsIPv6Multicast(System.Net.IPAddress instance, string name)
 		{
 			return instance.IsIPv6Multicast;
 		}
 
-		static private System.Boolean get_IsIPv6LinkLocal(System.Net.IPAddress instance)
+		static private System.Boolean get_IsIPv6LinkLocal(System.Net.IPAddress instance, string name)
 		{
 			return instance.IsIPv6LinkLocal;
 		}
 
-		static private System.Boolean get_IsIPv6SiteLocal(System.Net.IPAddress instance)
+		static private System.Boolean get_IsIPv6SiteLocal(System.Net.IPAddress instance, string name)
 		{
 			return instance.IsIPv6SiteLocal;
 		}
 
-		static private System.Boolean get_IsIPv6Teredo(System.Net.IPAddress instance)
+		static private System.Boolean get_IsIPv6Teredo(System.Net.IPAddress instance, string name)
 		{
 			return instance.IsIPv6Teredo;
 		}
 
-		static private System.Boolean get_IsIPv4MappedToIPv6(System.Net.IPAddress instance)
+		static private System.Boolean get_IsIPv4MappedToIPv6(System.Net.IPAddress instance, string name)
 		{
 			return instance.IsIPv4MappedToIPv6;
 		}

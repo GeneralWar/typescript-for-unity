@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -22,7 +23,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("StatusDescription", get_StatusDescription, null);
 		}
 
-		static private void Close(System.Net.FtpWebResponse instance, Parameters parameters)
+		static private void Close(System.Net.FtpWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.FtpWebResponse.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IO.Stream GetResponseStream(System.Net.FtpWebResponse instance, Parameters parameters)
+		static private System.IO.Stream GetResponseStream(System.Net.FtpWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -51,52 +52,52 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.FtpWebResponse instance)
+		static private System.Int64 get_ContentLength(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.FtpWebResponse instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private System.Uri get_ResponseUri(System.Net.FtpWebResponse instance)
+		static private System.Uri get_ResponseUri(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.ResponseUri;
 		}
 
-		static private System.DateTime get_LastModified(System.Net.FtpWebResponse instance)
+		static private System.DateTime get_LastModified(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.LastModified;
 		}
 
-		static private System.String get_BannerMessage(System.Net.FtpWebResponse instance)
+		static private System.String get_BannerMessage(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.BannerMessage;
 		}
 
-		static private System.String get_WelcomeMessage(System.Net.FtpWebResponse instance)
+		static private System.String get_WelcomeMessage(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.WelcomeMessage;
 		}
 
-		static private System.String get_ExitMessage(System.Net.FtpWebResponse instance)
+		static private System.String get_ExitMessage(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.ExitMessage;
 		}
 
-		static private System.Net.FtpStatusCode get_StatusCode(System.Net.FtpWebResponse instance)
+		static private System.Net.FtpStatusCode get_StatusCode(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.StatusCode;
 		}
 
-		static private System.Boolean get_SupportsHeaders(System.Net.FtpWebResponse instance)
+		static private System.Boolean get_SupportsHeaders(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.SupportsHeaders;
 		}
 
-		static private System.String get_StatusDescription(System.Net.FtpWebResponse instance)
+		static private System.String get_StatusDescription(System.Net.FtpWebResponse instance, string name)
 		{
 			return instance.StatusDescription;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.LightProbeProxyVolume);
 		}
 
-		static private void Update(UnityEngine.LightProbeProxyVolume instance, Parameters parameters)
+		static private void Update(UnityEngine.LightProbeProxyVolume instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -53,72 +54,72 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.LightProbeProxyVolume.Update has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_isFeatureSupported()
+		static private System.Boolean get_isFeatureSupported(Type type, string name)
 		{
 			return UnityEngine.LightProbeProxyVolume.isFeatureSupported;
 		}
 
-		static private UnityEngine.Bounds get_boundsGlobal(UnityEngine.LightProbeProxyVolume instance)
+		static private UnityEngine.Bounds get_boundsGlobal(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.boundsGlobal;
 		}
 
-		static private UnityEngine.Vector3 get_sizeCustom(UnityEngine.LightProbeProxyVolume instance)
+		static private UnityEngine.Vector3 get_sizeCustom(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.sizeCustom;
 		}
 
-		static private void set_sizeCustom(UnityEngine.LightProbeProxyVolume instance, UnityEngine.Vector3 value)
+		static private void set_sizeCustom(UnityEngine.LightProbeProxyVolume instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.sizeCustom = value;
 		}
 
-		static private UnityEngine.Vector3 get_originCustom(UnityEngine.LightProbeProxyVolume instance)
+		static private UnityEngine.Vector3 get_originCustom(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.originCustom;
 		}
 
-		static private void set_originCustom(UnityEngine.LightProbeProxyVolume instance, UnityEngine.Vector3 value)
+		static private void set_originCustom(UnityEngine.LightProbeProxyVolume instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.originCustom = value;
 		}
 
-		static private System.Single get_probeDensity(UnityEngine.LightProbeProxyVolume instance)
+		static private System.Single get_probeDensity(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.probeDensity;
 		}
 
-		static private void set_probeDensity(UnityEngine.LightProbeProxyVolume instance, System.Single value)
+		static private void set_probeDensity(UnityEngine.LightProbeProxyVolume instance, string name, System.Single value)
 		{
 			instance.probeDensity = value;
 		}
 
-		static private System.Int32 get_gridResolutionX(UnityEngine.LightProbeProxyVolume instance)
+		static private System.Int32 get_gridResolutionX(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.gridResolutionX;
 		}
 
-		static private void set_gridResolutionX(UnityEngine.LightProbeProxyVolume instance, System.Int32 value)
+		static private void set_gridResolutionX(UnityEngine.LightProbeProxyVolume instance, string name, System.Int32 value)
 		{
 			instance.gridResolutionX = value;
 		}
 
-		static private System.Int32 get_gridResolutionY(UnityEngine.LightProbeProxyVolume instance)
+		static private System.Int32 get_gridResolutionY(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.gridResolutionY;
 		}
 
-		static private void set_gridResolutionY(UnityEngine.LightProbeProxyVolume instance, System.Int32 value)
+		static private void set_gridResolutionY(UnityEngine.LightProbeProxyVolume instance, string name, System.Int32 value)
 		{
 			instance.gridResolutionY = value;
 		}
 
-		static private System.Int32 get_gridResolutionZ(UnityEngine.LightProbeProxyVolume instance)
+		static private System.Int32 get_gridResolutionZ(UnityEngine.LightProbeProxyVolume instance, string name)
 		{
 			return instance.gridResolutionZ;
 		}
 
-		static private void set_gridResolutionZ(UnityEngine.LightProbeProxyVolume instance, System.Int32 value)
+		static private void set_gridResolutionZ(UnityEngine.LightProbeProxyVolume instance, string name, System.Int32 value)
 		{
 			instance.gridResolutionZ = value;
 		}

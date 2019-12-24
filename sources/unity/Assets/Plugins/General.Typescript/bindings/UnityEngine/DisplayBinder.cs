@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -22,7 +23,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("active", get_active, null);
 		}
 
-		static private UnityEngine.Vector3 RelativeMouseAt(Parameters parameters)
+		static private UnityEngine.Vector3 RelativeMouseAt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void Activate(UnityEngine.Display instance, Parameters parameters)
+		static private void Activate(UnityEngine.Display instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Display.Activate has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetParams(UnityEngine.Display instance, Parameters parameters)
+		static private void SetParams(UnityEngine.Display instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32, System.Int32>())
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRenderingResolution(UnityEngine.Display instance, Parameters parameters)
+		static private void SetRenderingResolution(UnityEngine.Display instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -107,42 +108,42 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Display get_main()
+		static private UnityEngine.Display get_main(Type type, string name)
 		{
 			return UnityEngine.Display.main;
 		}
 
-		static private System.Int32 get_renderingWidth(UnityEngine.Display instance)
+		static private System.Int32 get_renderingWidth(UnityEngine.Display instance, string name)
 		{
 			return instance.renderingWidth;
 		}
 
-		static private System.Int32 get_renderingHeight(UnityEngine.Display instance)
+		static private System.Int32 get_renderingHeight(UnityEngine.Display instance, string name)
 		{
 			return instance.renderingHeight;
 		}
 
-		static private System.Int32 get_systemWidth(UnityEngine.Display instance)
+		static private System.Int32 get_systemWidth(UnityEngine.Display instance, string name)
 		{
 			return instance.systemWidth;
 		}
 
-		static private System.Int32 get_systemHeight(UnityEngine.Display instance)
+		static private System.Int32 get_systemHeight(UnityEngine.Display instance, string name)
 		{
 			return instance.systemHeight;
 		}
 
-		static private UnityEngine.RenderBuffer get_colorBuffer(UnityEngine.Display instance)
+		static private UnityEngine.RenderBuffer get_colorBuffer(UnityEngine.Display instance, string name)
 		{
 			return instance.colorBuffer;
 		}
 
-		static private UnityEngine.RenderBuffer get_depthBuffer(UnityEngine.Display instance)
+		static private UnityEngine.RenderBuffer get_depthBuffer(UnityEngine.Display instance, string name)
 		{
 			return instance.depthBuffer;
 		}
 
-		static private System.Boolean get_active(UnityEngine.Display instance)
+		static private System.Boolean get_active(UnityEngine.Display instance, string name)
 		{
 			return instance.active;
 		}

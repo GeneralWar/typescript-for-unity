@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -32,7 +33,7 @@ namespace General.Typescript
 			return default(UnityEngine.Gradient);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Gradient instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Gradient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Color Evaluate(UnityEngine.Gradient instance, Parameters parameters)
+		static private UnityEngine.Color Evaluate(UnityEngine.Gradient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -80,7 +81,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Gradient instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Gradient instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetKeys(UnityEngine.Gradient instance, Parameters parameters)
+		static private void SetKeys(UnityEngine.Gradient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GradientColorKey[], UnityEngine.GradientAlphaKey[]>())
 			{
@@ -117,32 +118,32 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.GradientColorKey[] get_colorKeys(UnityEngine.Gradient instance)
+		static private UnityEngine.GradientColorKey[] get_colorKeys(UnityEngine.Gradient instance, string name)
 		{
 			return instance.colorKeys;
 		}
 
-		static private void set_colorKeys(UnityEngine.Gradient instance, UnityEngine.GradientColorKey[] value)
+		static private void set_colorKeys(UnityEngine.Gradient instance, string name, UnityEngine.GradientColorKey[] value)
 		{
 			instance.colorKeys = value;
 		}
 
-		static private UnityEngine.GradientAlphaKey[] get_alphaKeys(UnityEngine.Gradient instance)
+		static private UnityEngine.GradientAlphaKey[] get_alphaKeys(UnityEngine.Gradient instance, string name)
 		{
 			return instance.alphaKeys;
 		}
 
-		static private void set_alphaKeys(UnityEngine.Gradient instance, UnityEngine.GradientAlphaKey[] value)
+		static private void set_alphaKeys(UnityEngine.Gradient instance, string name, UnityEngine.GradientAlphaKey[] value)
 		{
 			instance.alphaKeys = value;
 		}
 
-		static private UnityEngine.GradientMode get_mode(UnityEngine.Gradient instance)
+		static private UnityEngine.GradientMode get_mode(UnityEngine.Gradient instance, string name)
 		{
 			return instance.mode;
 		}
 
-		static private void set_mode(UnityEngine.Gradient instance, UnityEngine.GradientMode value)
+		static private void set_mode(UnityEngine.Gradient instance, string name, UnityEngine.GradientMode value)
 		{
 			instance.mode = value;
 		}

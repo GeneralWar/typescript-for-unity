@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private System.Single Angle(Parameters parameters)
+		static private System.Single Angle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion>())
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Quaternion AngleAxis(Parameters parameters)
+		static private UnityEngine.Quaternion AngleAxis(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, UnityEngine.Vector3>())
 			{
@@ -99,7 +100,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private System.Single Dot(Parameters parameters)
+		static private System.Single Dot(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion>())
 			{
@@ -121,7 +122,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Quaternion Euler(Parameters parameters)
+		static private UnityEngine.Quaternion Euler(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -147,7 +148,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion FromToRotation(Parameters parameters)
+		static private UnityEngine.Quaternion FromToRotation(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion Inverse(Parameters parameters)
+		static private UnityEngine.Quaternion Inverse(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion>())
 			{
@@ -191,7 +192,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion Lerp(Parameters parameters)
+		static private UnityEngine.Quaternion Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion, System.Single>())
 			{
@@ -213,7 +214,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion LerpUnclamped(Parameters parameters)
+		static private UnityEngine.Quaternion LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion, System.Single>())
 			{
@@ -235,7 +236,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion LookRotation(Parameters parameters)
+		static private UnityEngine.Quaternion LookRotation(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -261,7 +262,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion Normalize(Parameters parameters)
+		static private UnityEngine.Quaternion Normalize(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion>())
 			{
@@ -283,7 +284,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion RotateTowards(Parameters parameters)
+		static private UnityEngine.Quaternion RotateTowards(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion, System.Single>())
 			{
@@ -305,7 +306,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion Slerp(Parameters parameters)
+		static private UnityEngine.Quaternion Slerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion, System.Single>())
 			{
@@ -327,7 +328,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private UnityEngine.Quaternion SlerpUnclamped(Parameters parameters)
+		static private UnityEngine.Quaternion SlerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion, UnityEngine.Quaternion, System.Single>())
 			{
@@ -349,7 +350,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Quaternion instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -375,7 +376,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Quaternion instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -390,7 +391,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Normalize(UnityEngine.Quaternion instance, Parameters parameters)
+		static private void Normalize(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -404,7 +405,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Quaternion.Normalize has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Set(UnityEngine.Quaternion instance, Parameters parameters)
+		static private void Set(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -426,7 +427,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFromToRotation(UnityEngine.Quaternion instance, Parameters parameters)
+		static private void SetFromToRotation(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -448,7 +449,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLookRotation(UnityEngine.Quaternion instance, Parameters parameters)
+		static private void SetLookRotation(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -475,7 +476,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Quaternion instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Quaternion instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -494,22 +495,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Quaternion get_identity()
+		static private UnityEngine.Quaternion get_identity(Type type, string name)
 		{
 			return UnityEngine.Quaternion.identity;
 		}
 
-		static private UnityEngine.Vector3 get_eulerAngles(UnityEngine.Quaternion instance)
+		static private UnityEngine.Vector3 get_eulerAngles(UnityEngine.Quaternion instance, string name)
 		{
 			return instance.eulerAngles;
 		}
 
-		static private void set_eulerAngles(UnityEngine.Quaternion instance, UnityEngine.Vector3 value)
+		static private void set_eulerAngles(UnityEngine.Quaternion instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.eulerAngles = value;
 		}
 
-		static private UnityEngine.Quaternion get_normalized(UnityEngine.Quaternion instance)
+		static private UnityEngine.Quaternion get_normalized(UnityEngine.Quaternion instance, string name)
 		{
 			return instance.normalized;
 		}

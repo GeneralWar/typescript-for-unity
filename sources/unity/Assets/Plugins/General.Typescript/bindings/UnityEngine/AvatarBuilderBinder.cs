@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.AvatarBuilder);
 		}
 
-		static private UnityEngine.Avatar BuildGenericAvatar(Parameters parameters)
+		static private UnityEngine.Avatar BuildGenericAvatar(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject, System.String>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Avatar BuildHumanAvatar(Parameters parameters)
+		static private UnityEngine.Avatar BuildHumanAvatar(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject, UnityEngine.HumanDescription>())
 			{

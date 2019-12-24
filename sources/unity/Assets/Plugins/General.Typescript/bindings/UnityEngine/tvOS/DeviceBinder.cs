@@ -1,4 +1,5 @@
 #if UNITY_TVOS
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -31,27 +32,27 @@ namespace General.Typescript
 			return default(UnityEngine.tvOS.Device);
 		}
 
-		static private System.String get_systemVersion()
+		static private System.String get_systemVersion(Type type, string name)
 		{
 			return UnityEngine.tvOS.Device.systemVersion;
 		}
 
-		static private UnityEngine.tvOS.DeviceGeneration get_generation()
+		static private UnityEngine.tvOS.DeviceGeneration get_generation(Type type, string name)
 		{
 			return UnityEngine.tvOS.Device.generation;
 		}
 
-		static private System.String get_vendorIdentifier()
+		static private System.String get_vendorIdentifier(Type type, string name)
 		{
 			return UnityEngine.tvOS.Device.vendorIdentifier;
 		}
 
-		static private System.String get_advertisingIdentifier()
+		static private System.String get_advertisingIdentifier(Type type, string name)
 		{
 			return UnityEngine.tvOS.Device.advertisingIdentifier;
 		}
 
-		static private System.Boolean get_advertisingTrackingEnabled()
+		static private System.Boolean get_advertisingTrackingEnabled(Type type, string name)
 		{
 			return UnityEngine.tvOS.Device.advertisingTrackingEnabled;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,32 +30,32 @@ namespace General.Typescript
 			return default(UnityEngine.AsyncOperation);
 		}
 
-		static private System.Boolean get_isDone(UnityEngine.AsyncOperation instance)
+		static private System.Boolean get_isDone(UnityEngine.AsyncOperation instance, string name)
 		{
 			return instance.isDone;
 		}
 
-		static private System.Single get_progress(UnityEngine.AsyncOperation instance)
+		static private System.Single get_progress(UnityEngine.AsyncOperation instance, string name)
 		{
 			return instance.progress;
 		}
 
-		static private System.Int32 get_priority(UnityEngine.AsyncOperation instance)
+		static private System.Int32 get_priority(UnityEngine.AsyncOperation instance, string name)
 		{
 			return instance.priority;
 		}
 
-		static private void set_priority(UnityEngine.AsyncOperation instance, System.Int32 value)
+		static private void set_priority(UnityEngine.AsyncOperation instance, string name, System.Int32 value)
 		{
 			instance.priority = value;
 		}
 
-		static private System.Boolean get_allowSceneActivation(UnityEngine.AsyncOperation instance)
+		static private System.Boolean get_allowSceneActivation(UnityEngine.AsyncOperation instance, string name)
 		{
 			return instance.allowSceneActivation;
 		}
 
-		static private void set_allowSceneActivation(UnityEngine.AsyncOperation instance, System.Boolean value)
+		static private void set_allowSceneActivation(UnityEngine.AsyncOperation instance, string name, System.Boolean value)
 		{
 			instance.allowSceneActivation = value;
 		}

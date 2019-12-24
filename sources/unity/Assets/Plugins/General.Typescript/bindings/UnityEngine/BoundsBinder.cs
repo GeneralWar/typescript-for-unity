@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -48,7 +49,7 @@ namespace General.Typescript
 			return default(UnityEngine.Bounds);
 		}
 
-		static private UnityEngine.Vector3 ClosestPoint(UnityEngine.Bounds instance, Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPoint(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -70,7 +71,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Boolean Contains(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Boolean Contains(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Encapsulate(UnityEngine.Bounds instance, Parameters parameters)
+		static private void Encapsulate(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -119,7 +120,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Equals(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -145,7 +146,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Expand(UnityEngine.Bounds instance, Parameters parameters)
+		static private void Expand(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -172,7 +173,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -187,7 +188,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean IntersectRay(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Boolean IntersectRay(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray>())
 			{
@@ -209,7 +210,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Intersects(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Boolean Intersects(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Bounds>())
 			{
@@ -231,7 +232,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetMinMax(UnityEngine.Bounds instance, Parameters parameters)
+		static private void SetMinMax(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -253,7 +254,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single SqrDistance(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.Single SqrDistance(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -275,7 +276,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.String ToString(UnityEngine.Bounds instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Bounds instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -294,52 +295,52 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.Bounds instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.Bounds instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.Bounds instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.Bounds instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private UnityEngine.Vector3 get_size(UnityEngine.Bounds instance)
+		static private UnityEngine.Vector3 get_size(UnityEngine.Bounds instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.Bounds instance, UnityEngine.Vector3 value)
+		static private void set_size(UnityEngine.Bounds instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.size = value;
 		}
 
-		static private UnityEngine.Vector3 get_extents(UnityEngine.Bounds instance)
+		static private UnityEngine.Vector3 get_extents(UnityEngine.Bounds instance, string name)
 		{
 			return instance.extents;
 		}
 
-		static private void set_extents(UnityEngine.Bounds instance, UnityEngine.Vector3 value)
+		static private void set_extents(UnityEngine.Bounds instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.extents = value;
 		}
 
-		static private UnityEngine.Vector3 get_min(UnityEngine.Bounds instance)
+		static private UnityEngine.Vector3 get_min(UnityEngine.Bounds instance, string name)
 		{
 			return instance.min;
 		}
 
-		static private void set_min(UnityEngine.Bounds instance, UnityEngine.Vector3 value)
+		static private void set_min(UnityEngine.Bounds instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.min = value;
 		}
 
-		static private UnityEngine.Vector3 get_max(UnityEngine.Bounds instance)
+		static private UnityEngine.Vector3 get_max(UnityEngine.Bounds instance, string name)
 		{
 			return instance.max;
 		}
 
-		static private void set_max(UnityEngine.Bounds instance, UnityEngine.Vector3 value)
+		static private void set_max(UnityEngine.Bounds instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.max = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -19,7 +20,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("value", get_value, null);
 		}
 
-		static private System.Int32 GetLayerValueFromID(Parameters parameters)
+		static private System.Int32 GetLayerValueFromID(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetLayerValueFromName(Parameters parameters)
+		static private System.Int32 GetLayerValueFromName(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String IDToName(Parameters parameters)
+		static private System.String IDToName(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsValid(Parameters parameters)
+		static private System.Boolean IsValid(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 NameToID(Parameters parameters)
+		static private System.Int32 NameToID(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -129,22 +130,22 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.SortingLayer[] get_layers()
+		static private UnityEngine.SortingLayer[] get_layers(Type type, string name)
 		{
 			return UnityEngine.SortingLayer.layers;
 		}
 
-		static private System.Int32 get_id(UnityEngine.SortingLayer instance)
+		static private System.Int32 get_id(UnityEngine.SortingLayer instance, string name)
 		{
 			return instance.id;
 		}
 
-		static private System.String get_name(UnityEngine.SortingLayer instance)
+		static private System.String get_name(UnityEngine.SortingLayer instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private System.Int32 get_value(UnityEngine.SortingLayer instance)
+		static private System.Int32 get_value(UnityEngine.SortingLayer instance, string name)
 		{
 			return instance.value;
 		}

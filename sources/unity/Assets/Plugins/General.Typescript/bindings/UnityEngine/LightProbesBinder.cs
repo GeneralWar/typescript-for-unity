@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,7 +16,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("cellCount", get_cellCount, null);
 		}
 
-		static private void CalculateInterpolatedLightAndOcclusionProbes(Parameters parameters)
+		static private void CalculateInterpolatedLightAndOcclusionProbes(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[], UnityEngine.Rendering.SphericalHarmonicsL2[], UnityEngine.Vector4[]>())
 			{
@@ -37,27 +38,27 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3[] get_positions(UnityEngine.LightProbes instance)
+		static private UnityEngine.Vector3[] get_positions(UnityEngine.LightProbes instance, string name)
 		{
 			return instance.positions;
 		}
 
-		static private UnityEngine.Rendering.SphericalHarmonicsL2[] get_bakedProbes(UnityEngine.LightProbes instance)
+		static private UnityEngine.Rendering.SphericalHarmonicsL2[] get_bakedProbes(UnityEngine.LightProbes instance, string name)
 		{
 			return instance.bakedProbes;
 		}
 
-		static private void set_bakedProbes(UnityEngine.LightProbes instance, UnityEngine.Rendering.SphericalHarmonicsL2[] value)
+		static private void set_bakedProbes(UnityEngine.LightProbes instance, string name, UnityEngine.Rendering.SphericalHarmonicsL2[] value)
 		{
 			instance.bakedProbes = value;
 		}
 
-		static private System.Int32 get_count(UnityEngine.LightProbes instance)
+		static private System.Int32 get_count(UnityEngine.LightProbes instance, string name)
 		{
 			return instance.count;
 		}
 
-		static private System.Int32 get_cellCount(UnityEngine.LightProbes instance)
+		static private System.Int32 get_cellCount(UnityEngine.LightProbes instance, string name)
 		{
 			return instance.cellCount;
 		}

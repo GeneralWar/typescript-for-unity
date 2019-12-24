@@ -1,23 +1,17 @@
 import * as child_process from "child_process";
 import * as fs from "fs";
 import * as path from "path";
+import { IPackage } from "../common/package"
 import { EnumerateDirecotry, RemoveDirecotry, CreateDirecotry } from "../utils/utils";
+import { ITsConfig } from "../common/tsconfig";
 
 const PROJECT_PATH = "./project";
-const COMPILED_PATH = "./project/compiled/scripts/";
+const tsConfig: ITsConfig = JSON.parse(fs.readFileSync(path.join(PROJECT_PATH, "tsconfig.json")).toString())
+const COMPILED_PATH = path.join(PROJECT_PATH, tsConfig.compilerOptions.outDir)
 
 RemoveDirecotry(COMPILED_PATH);
 
 const execute = child_process.execSync;
-
-const streamingPath = (() => {
-  switch (process.platform) {
-    case "win32":
-      return "sources/TypescriptForUnity/Output/Windows/TypescriptForUnity_Data/StreamingAssets/Scripts/";
-    default:
-      return "sources/TypescriptForUnity/Output/iOS/Data/Raw/Scripts/";
-  }
-})();
 
 execute(`tsc -p ${PROJECT_PATH}`, { stdio: "inherit" });
 
@@ -40,18 +34,17 @@ function checkContent(content: string) {
   return lines.join("\n");
 }
 
+const config: IPackage = JSON.parse(fs.readFileSync("./package.json").toString());
+const targetPaths = config.project.compiledPaths;
+
 EnumerateDirecotry(COMPILED_PATH, (filename: string) => {
   const content = fs.readFileSync(filename).toString();
   const final = checkContent(content);
-  copyFile(final,
-    path.join(streamingPath, `${path.basename(filename, ".js")}.gts`)
-  );
-  copyFile(final,
-    path.join(
-      "sources/TypescriptForUnity/Assets/StreamingAssets/Scripts/",
-      `${path.basename(filename, ".js")}.gts`
-    )
-  );
+  for (const folder of targetPaths) {
+    copyFile(final,
+      path.join(folder, `${path.basename(filename, ".js")}.gts`)
+    );
+  }
 });
 
 console.log("Compile Done!");

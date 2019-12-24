@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.SocketAsyncEventArgs);
 		}
 
-		static private void Dispose(System.Net.Sockets.SocketAsyncEventArgs instance, Parameters parameters)
+		static private void Dispose(System.Net.Sockets.SocketAsyncEventArgs instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.SocketAsyncEventArgs.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetBuffer(System.Net.Sockets.SocketAsyncEventArgs instance, Parameters parameters)
+		static private void SetBuffer(System.Net.Sockets.SocketAsyncEventArgs instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -85,132 +86,132 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Exception get_ConnectByNameError(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Exception get_ConnectByNameError(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.ConnectByNameError;
 		}
 
-		static private System.Net.Sockets.SocketFlags get_SocketFlags(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.SocketFlags get_SocketFlags(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.SocketFlags;
 		}
 
-		static private void set_SocketFlags(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.Sockets.SocketFlags value)
+		static private void set_SocketFlags(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.Sockets.SocketFlags value)
 		{
 			instance.SocketFlags = value;
 		}
 
-		static private System.Net.Sockets.SocketError get_SocketError(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.SocketError get_SocketError(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.SocketError;
 		}
 
-		static private void set_SocketError(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.Sockets.SocketError value)
+		static private void set_SocketError(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.Sockets.SocketError value)
 		{
 			instance.SocketError = value;
 		}
 
-		static private System.Int32 get_SendPacketsSendSize(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Int32 get_SendPacketsSendSize(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.SendPacketsSendSize;
 		}
 
-		static private void set_SendPacketsSendSize(System.Net.Sockets.SocketAsyncEventArgs instance, System.Int32 value)
+		static private void set_SendPacketsSendSize(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Int32 value)
 		{
 			instance.SendPacketsSendSize = value;
 		}
 
-		static private System.Net.Sockets.TransmitFileOptions get_SendPacketsFlags(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.TransmitFileOptions get_SendPacketsFlags(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.SendPacketsFlags;
 		}
 
-		static private void set_SendPacketsFlags(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.Sockets.TransmitFileOptions value)
+		static private void set_SendPacketsFlags(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.Sockets.TransmitFileOptions value)
 		{
 			instance.SendPacketsFlags = value;
 		}
 
-		static private System.Net.Sockets.SendPacketsElement[] get_SendPacketsElements(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.SendPacketsElement[] get_SendPacketsElements(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.SendPacketsElements;
 		}
 
-		static private void set_SendPacketsElements(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.Sockets.SendPacketsElement[] value)
+		static private void set_SendPacketsElements(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.Sockets.SendPacketsElement[] value)
 		{
 			instance.SendPacketsElements = value;
 		}
 
-		static private System.Net.Sockets.IPPacketInformation get_ReceiveMessageFromPacketInfo(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.IPPacketInformation get_ReceiveMessageFromPacketInfo(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.ReceiveMessageFromPacketInfo;
 		}
 
-		static private System.Object get_UserToken(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Object get_UserToken(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.UserToken;
 		}
 
-		static private void set_UserToken(System.Net.Sockets.SocketAsyncEventArgs instance, System.Object value)
+		static private void set_UserToken(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Object value)
 		{
 			instance.UserToken = value;
 		}
 
-		static private System.Net.EndPoint get_RemoteEndPoint(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.EndPoint get_RemoteEndPoint(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.RemoteEndPoint;
 		}
 
-		static private void set_RemoteEndPoint(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.EndPoint value)
+		static private void set_RemoteEndPoint(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.EndPoint value)
 		{
 			instance.RemoteEndPoint = value;
 		}
 
-		static private System.Net.Sockets.SocketAsyncOperation get_LastOperation(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.SocketAsyncOperation get_LastOperation(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.LastOperation;
 		}
 
-		static private System.Boolean get_DisconnectReuseSocket(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Boolean get_DisconnectReuseSocket(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.DisconnectReuseSocket;
 		}
 
-		static private void set_DisconnectReuseSocket(System.Net.Sockets.SocketAsyncEventArgs instance, System.Boolean value)
+		static private void set_DisconnectReuseSocket(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Boolean value)
 		{
 			instance.DisconnectReuseSocket = value;
 		}
 
-		static private System.Int32 get_Count(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Int32 get_Count(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.Count;
 		}
 
-		static private System.Int32 get_BytesTransferred(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Int32 get_BytesTransferred(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.BytesTransferred;
 		}
 
-		static private System.Byte[] get_Buffer(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Byte[] get_Buffer(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.Buffer;
 		}
 
-		static private System.Net.Sockets.Socket get_AcceptSocket(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.Socket get_AcceptSocket(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.AcceptSocket;
 		}
 
-		static private void set_AcceptSocket(System.Net.Sockets.SocketAsyncEventArgs instance, System.Net.Sockets.Socket value)
+		static private void set_AcceptSocket(System.Net.Sockets.SocketAsyncEventArgs instance, string name, System.Net.Sockets.Socket value)
 		{
 			instance.AcceptSocket = value;
 		}
 
-		static private System.Int32 get_Offset(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Int32 get_Offset(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.Offset;
 		}
 
-		static private System.Net.Sockets.Socket get_ConnectSocket(System.Net.Sockets.SocketAsyncEventArgs instance)
+		static private System.Net.Sockets.Socket get_ConnectSocket(System.Net.Sockets.SocketAsyncEventArgs instance, string name)
 		{
 			return instance.ConnectSocket;
 		}

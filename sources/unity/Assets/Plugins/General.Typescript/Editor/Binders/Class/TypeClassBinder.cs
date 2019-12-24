@@ -84,6 +84,7 @@ namespace General.Typescript
 						writer.WriteLine(condition);
 					}
 
+					writer.WriteLine("using System;");
 					writer.WriteLine("using UnityEngine;");
 					writer.WriteLine();
 					writer.WriteLine("namespace General.Typescript");
@@ -137,14 +138,14 @@ namespace General.Typescript
 					{
 						if (!IsGetterIgnored(property))
 						{
-							writer.WriteRegionBegin(2, "static private {0} get_{1}()", property.PropertyType.FullName, property.Name);
+							writer.WriteRegionBegin(2, "static private {0} get_{1}(Type type, string name)", property.PropertyType.FullName, property.Name);
 							writer.WriteLine(3, "return {0}.{1};", mFullname, property.Name);
 							writer.WriteRegionEnd(2);
 							writer.WriteLine();
 						}
 						if (!IsSetterIgnored(property))
 						{
-							writer.WriteRegionBegin(2, "static private void set_{0}({1} value)", property.Name, property.PropertyType.FullName);
+							writer.WriteRegionBegin(2, "static private void set_{0}(Type type, string name, {1} value)", property.Name, property.PropertyType.FullName);
 							writer.WriteLine(3, "{0}.{1} = value;", mFullname, property.Name);
 							writer.WriteRegionEnd(2);
 							writer.WriteLine();
@@ -155,14 +156,14 @@ namespace General.Typescript
 					{
 						if (!IsGetterIgnored(property))
 						{
-							writer.WriteRegionBegin(2, "static private {0} get_{1}({2} instance)", property.PropertyType.FullName, property.Name, mFullname);
+							writer.WriteRegionBegin(2, "static private {0} get_{1}({2} instance, string name)", property.PropertyType.FullName, property.Name, mFullname);
 							writer.WriteLine(3, "return instance.{0};", property.Name);
 							writer.WriteRegionEnd(2);
 							writer.WriteLine();
 						}
 						if (!IsSetterIgnored(property))
 						{
-							writer.WriteRegionBegin(2, "static private void set_{0}({1} instance, {2} value)", property.Name, mFullname, property.PropertyType.FullName);
+							writer.WriteRegionBegin(2, "static private void set_{0}({1} instance, string name, {2} value)", property.Name, mFullname, property.PropertyType.FullName);
 							writer.WriteLine(3, "instance.{0} = value;", property.Name);
 							writer.WriteRegionEnd(2);
 							writer.WriteLine();
@@ -400,13 +401,13 @@ namespace General.Typescript
 				bool returnVoid = returnType == typeof(void);
 				if (isStatic)
 				{
-					writer.WriteRegionBegin(tableCount, returnVoid ? string.Format("static private void {0}(Parameters parameters)", name)
-						: string.Format("static private {0} {1}(Parameters parameters)", returnType.FullName, name));
+					writer.WriteRegionBegin(tableCount, returnVoid ? string.Format("static private void {0}(Type type, string methodName, Parameters parameters)", name)
+						: string.Format("static private {0} {1}(Type type, string methodName, Parameters parameters)", returnType.FullName, name));
 				}
 				else
 				{
-					writer.WriteRegionBegin(tableCount, returnVoid ? string.Format("static private void {0}({1} instance, Parameters parameters)", name, list[0].DeclaringType.FullName)
-						: string.Format("static private {0} {1}({2} instance, Parameters parameters)", returnType.FullName, name, list[0].DeclaringType.FullName));
+					writer.WriteRegionBegin(tableCount, returnVoid ? string.Format("static private void {0}({1} instance, string methodName, Parameters parameters)", name, list[0].DeclaringType.FullName)
+						: string.Format("static private {0} {1}({2} instance, string methodName, Parameters parameters)", returnType.FullName, name, list[0].DeclaringType.FullName));
 
 				}
 				bool hasZeroArguments = false;

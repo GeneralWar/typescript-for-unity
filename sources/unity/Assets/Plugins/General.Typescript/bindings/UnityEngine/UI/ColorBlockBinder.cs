@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -19,7 +20,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("fadeDuration", get_fadeDuration, set_fadeDuration);
 		}
 
-		static private System.Boolean Equals(UnityEngine.UI.ColorBlock instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.UI.ColorBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -45,7 +46,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.UI.ColorBlock instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.UI.ColorBlock instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -60,67 +61,67 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.UI.ColorBlock get_defaultColorBlock()
+		static private UnityEngine.UI.ColorBlock get_defaultColorBlock(Type type, string name)
 		{
 			return UnityEngine.UI.ColorBlock.defaultColorBlock;
 		}
 
-		static private UnityEngine.Color get_normalColor(UnityEngine.UI.ColorBlock instance)
+		static private UnityEngine.Color get_normalColor(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.normalColor;
 		}
 
-		static private void set_normalColor(UnityEngine.UI.ColorBlock instance, UnityEngine.Color value)
+		static private void set_normalColor(UnityEngine.UI.ColorBlock instance, string name, UnityEngine.Color value)
 		{
 			instance.normalColor = value;
 		}
 
-		static private UnityEngine.Color get_highlightedColor(UnityEngine.UI.ColorBlock instance)
+		static private UnityEngine.Color get_highlightedColor(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.highlightedColor;
 		}
 
-		static private void set_highlightedColor(UnityEngine.UI.ColorBlock instance, UnityEngine.Color value)
+		static private void set_highlightedColor(UnityEngine.UI.ColorBlock instance, string name, UnityEngine.Color value)
 		{
 			instance.highlightedColor = value;
 		}
 
-		static private UnityEngine.Color get_pressedColor(UnityEngine.UI.ColorBlock instance)
+		static private UnityEngine.Color get_pressedColor(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.pressedColor;
 		}
 
-		static private void set_pressedColor(UnityEngine.UI.ColorBlock instance, UnityEngine.Color value)
+		static private void set_pressedColor(UnityEngine.UI.ColorBlock instance, string name, UnityEngine.Color value)
 		{
 			instance.pressedColor = value;
 		}
 
-		static private UnityEngine.Color get_disabledColor(UnityEngine.UI.ColorBlock instance)
+		static private UnityEngine.Color get_disabledColor(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.disabledColor;
 		}
 
-		static private void set_disabledColor(UnityEngine.UI.ColorBlock instance, UnityEngine.Color value)
+		static private void set_disabledColor(UnityEngine.UI.ColorBlock instance, string name, UnityEngine.Color value)
 		{
 			instance.disabledColor = value;
 		}
 
-		static private System.Single get_colorMultiplier(UnityEngine.UI.ColorBlock instance)
+		static private System.Single get_colorMultiplier(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.colorMultiplier;
 		}
 
-		static private void set_colorMultiplier(UnityEngine.UI.ColorBlock instance, System.Single value)
+		static private void set_colorMultiplier(UnityEngine.UI.ColorBlock instance, string name, System.Single value)
 		{
 			instance.colorMultiplier = value;
 		}
 
-		static private System.Single get_fadeDuration(UnityEngine.UI.ColorBlock instance)
+		static private System.Single get_fadeDuration(UnityEngine.UI.ColorBlock instance, string name)
 		{
 			return instance.fadeDuration;
 		}
 
-		static private void set_fadeDuration(UnityEngine.UI.ColorBlock instance, System.Single value)
+		static private void set_fadeDuration(UnityEngine.UI.ColorBlock instance, string name, System.Single value)
 		{
 			instance.fadeDuration = value;
 		}

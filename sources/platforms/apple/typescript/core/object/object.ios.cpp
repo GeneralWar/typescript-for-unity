@@ -130,7 +130,7 @@ JSObjectRef CreateGlobalObject(JSContextRef context, const char* name)
 ////    }
 ////
 ////    {
-////        JSObjectRef prototype = JSValueToObject(context, GetObjectProperty(context, constructor, "prototype"), 0);
+////        JSObjectRef prototype = ValueToObject(context, GetObjectProperty(context, constructor, "prototype"));
 ////        JSObjectSetPrototype(context, target, prototype);
 ////    }
 //}

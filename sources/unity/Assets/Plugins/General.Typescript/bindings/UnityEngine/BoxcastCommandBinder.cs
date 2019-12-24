@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,62 +39,62 @@ namespace General.Typescript
 			return default(UnityEngine.BoxcastCommand);
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.BoxcastCommand instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.BoxcastCommand instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.BoxcastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private UnityEngine.Vector3 get_halfExtents(UnityEngine.BoxcastCommand instance)
+		static private UnityEngine.Vector3 get_halfExtents(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.halfExtents;
 		}
 
-		static private void set_halfExtents(UnityEngine.BoxcastCommand instance, UnityEngine.Vector3 value)
+		static private void set_halfExtents(UnityEngine.BoxcastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.halfExtents = value;
 		}
 
-		static private UnityEngine.Quaternion get_orientation(UnityEngine.BoxcastCommand instance)
+		static private UnityEngine.Quaternion get_orientation(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.orientation;
 		}
 
-		static private void set_orientation(UnityEngine.BoxcastCommand instance, UnityEngine.Quaternion value)
+		static private void set_orientation(UnityEngine.BoxcastCommand instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.orientation = value;
 		}
 
-		static private UnityEngine.Vector3 get_direction(UnityEngine.BoxcastCommand instance)
+		static private UnityEngine.Vector3 get_direction(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.BoxcastCommand instance, UnityEngine.Vector3 value)
+		static private void set_direction(UnityEngine.BoxcastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.direction = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.BoxcastCommand instance)
+		static private System.Single get_distance(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.BoxcastCommand instance, System.Single value)
+		static private void set_distance(UnityEngine.BoxcastCommand instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private System.Int32 get_layerMask(UnityEngine.BoxcastCommand instance)
+		static private System.Int32 get_layerMask(UnityEngine.BoxcastCommand instance, string name)
 		{
 			return instance.layerMask;
 		}
 
-		static private void set_layerMask(UnityEngine.BoxcastCommand instance, System.Int32 value)
+		static private void set_layerMask(UnityEngine.BoxcastCommand instance, string name, System.Int32 value)
 		{
 			instance.layerMask = value;
 		}

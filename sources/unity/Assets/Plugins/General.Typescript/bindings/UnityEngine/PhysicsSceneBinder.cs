@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,7 +18,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("ToString", ToString);
 		}
 
-		static private System.Boolean Equals(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -43,7 +44,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean IsEmpty(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.Boolean IsEmpty(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsValid(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.Boolean IsValid(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Object Raycast(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.Object Raycast(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, System.Int32, UnityEngine.QueryTriggerInteraction>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Simulate(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private void Simulate(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -136,7 +137,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.PhysicsScene instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.PhysicsScene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

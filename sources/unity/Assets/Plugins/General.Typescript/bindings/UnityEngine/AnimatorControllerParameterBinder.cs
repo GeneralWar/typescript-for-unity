@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorControllerParameter);
 		}
 
-		static private System.Boolean Equals(UnityEngine.AnimatorControllerParameter instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.AnimatorControllerParameter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.AnimatorControllerParameter instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.AnimatorControllerParameter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -70,52 +71,52 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String get_name(UnityEngine.AnimatorControllerParameter instance)
+		static private System.String get_name(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private System.Int32 get_nameHash(UnityEngine.AnimatorControllerParameter instance)
+		static private System.Int32 get_nameHash(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.nameHash;
 		}
 
-		static private UnityEngine.AnimatorControllerParameterType get_type(UnityEngine.AnimatorControllerParameter instance)
+		static private UnityEngine.AnimatorControllerParameterType get_type(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.type;
 		}
 
-		static private void set_type(UnityEngine.AnimatorControllerParameter instance, UnityEngine.AnimatorControllerParameterType value)
+		static private void set_type(UnityEngine.AnimatorControllerParameter instance, string name, UnityEngine.AnimatorControllerParameterType value)
 		{
 			instance.type = value;
 		}
 
-		static private System.Single get_defaultFloat(UnityEngine.AnimatorControllerParameter instance)
+		static private System.Single get_defaultFloat(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.defaultFloat;
 		}
 
-		static private void set_defaultFloat(UnityEngine.AnimatorControllerParameter instance, System.Single value)
+		static private void set_defaultFloat(UnityEngine.AnimatorControllerParameter instance, string name, System.Single value)
 		{
 			instance.defaultFloat = value;
 		}
 
-		static private System.Int32 get_defaultInt(UnityEngine.AnimatorControllerParameter instance)
+		static private System.Int32 get_defaultInt(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.defaultInt;
 		}
 
-		static private void set_defaultInt(UnityEngine.AnimatorControllerParameter instance, System.Int32 value)
+		static private void set_defaultInt(UnityEngine.AnimatorControllerParameter instance, string name, System.Int32 value)
 		{
 			instance.defaultInt = value;
 		}
 
-		static private System.Boolean get_defaultBool(UnityEngine.AnimatorControllerParameter instance)
+		static private System.Boolean get_defaultBool(UnityEngine.AnimatorControllerParameter instance, string name)
 		{
 			return instance.defaultBool;
 		}
 
-		static private void set_defaultBool(UnityEngine.AnimatorControllerParameter instance, System.Boolean value)
+		static private void set_defaultBool(UnityEngine.AnimatorControllerParameter instance, string name, System.Boolean value)
 		{
 			instance.defaultBool = value;
 		}

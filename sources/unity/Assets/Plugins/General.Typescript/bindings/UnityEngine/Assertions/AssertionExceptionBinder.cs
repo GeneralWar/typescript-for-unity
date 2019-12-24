@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.Assertions.AssertionException);
 		}
 
-		static private System.String get_Message(UnityEngine.Assertions.AssertionException instance)
+		static private System.String get_Message(UnityEngine.Assertions.AssertionException instance, string name)
 		{
 			return instance.Message;
 		}

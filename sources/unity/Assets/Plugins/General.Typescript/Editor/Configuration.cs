@@ -10,5 +10,8 @@ namespace General.Typescript
 
 		[Tooltip("Where the compiled scripts store.")]
 		public string compiledPath = "../project/build";
+
+		[Tooltip("Extra binding configs for binding danymically.")]
+		public string[] extraBindingConfigs = null;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.CharacterController);
 		}
 
-		static private UnityEngine.CollisionFlags Move(UnityEngine.CharacterController instance, Parameters parameters)
+		static private UnityEngine.CollisionFlags Move(UnityEngine.CharacterController instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -61,7 +62,7 @@ namespace General.Typescript
 			return default(UnityEngine.CollisionFlags);
 		}
 
-		static private System.Boolean SimpleMove(UnityEngine.CharacterController instance, Parameters parameters)
+		static private System.Boolean SimpleMove(UnityEngine.CharacterController instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -83,107 +84,107 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Vector3 get_velocity(UnityEngine.CharacterController instance)
+		static private UnityEngine.Vector3 get_velocity(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private System.Boolean get_isGrounded(UnityEngine.CharacterController instance)
+		static private System.Boolean get_isGrounded(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.isGrounded;
 		}
 
-		static private UnityEngine.CollisionFlags get_collisionFlags(UnityEngine.CharacterController instance)
+		static private UnityEngine.CollisionFlags get_collisionFlags(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.collisionFlags;
 		}
 
-		static private System.Single get_radius(UnityEngine.CharacterController instance)
+		static private System.Single get_radius(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.radius;
 		}
 
-		static private void set_radius(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_radius(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.radius = value;
 		}
 
-		static private System.Single get_height(UnityEngine.CharacterController instance)
+		static private System.Single get_height(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_height(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.height = value;
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.CharacterController instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.CharacterController instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.CharacterController instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private System.Single get_slopeLimit(UnityEngine.CharacterController instance)
+		static private System.Single get_slopeLimit(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.slopeLimit;
 		}
 
-		static private void set_slopeLimit(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_slopeLimit(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.slopeLimit = value;
 		}
 
-		static private System.Single get_stepOffset(UnityEngine.CharacterController instance)
+		static private System.Single get_stepOffset(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.stepOffset;
 		}
 
-		static private void set_stepOffset(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_stepOffset(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.stepOffset = value;
 		}
 
-		static private System.Single get_skinWidth(UnityEngine.CharacterController instance)
+		static private System.Single get_skinWidth(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.skinWidth;
 		}
 
-		static private void set_skinWidth(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_skinWidth(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.skinWidth = value;
 		}
 
-		static private System.Single get_minMoveDistance(UnityEngine.CharacterController instance)
+		static private System.Single get_minMoveDistance(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.minMoveDistance;
 		}
 
-		static private void set_minMoveDistance(UnityEngine.CharacterController instance, System.Single value)
+		static private void set_minMoveDistance(UnityEngine.CharacterController instance, string name, System.Single value)
 		{
 			instance.minMoveDistance = value;
 		}
 
-		static private System.Boolean get_detectCollisions(UnityEngine.CharacterController instance)
+		static private System.Boolean get_detectCollisions(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.detectCollisions;
 		}
 
-		static private void set_detectCollisions(UnityEngine.CharacterController instance, System.Boolean value)
+		static private void set_detectCollisions(UnityEngine.CharacterController instance, string name, System.Boolean value)
 		{
 			instance.detectCollisions = value;
 		}
 
-		static private System.Boolean get_enableOverlapRecovery(UnityEngine.CharacterController instance)
+		static private System.Boolean get_enableOverlapRecovery(UnityEngine.CharacterController instance, string name)
 		{
 			return instance.enableOverlapRecovery;
 		}
 
-		static private void set_enableOverlapRecovery(UnityEngine.CharacterController instance, System.Boolean value)
+		static private void set_enableOverlapRecovery(UnityEngine.CharacterController instance, string name, System.Boolean value)
 		{
 			instance.enableOverlapRecovery = value;
 		}

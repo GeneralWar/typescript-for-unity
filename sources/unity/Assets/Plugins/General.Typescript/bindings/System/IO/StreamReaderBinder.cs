@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -82,7 +83,7 @@ namespace General.Typescript
 			return default(System.IO.StreamReader);
 		}
 
-		static private void Close(System.IO.StreamReader instance, Parameters parameters)
+		static private void Close(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -96,7 +97,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StreamReader.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DiscardBufferedData(System.IO.StreamReader instance, Parameters parameters)
+		static private void DiscardBufferedData(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StreamReader.DiscardBufferedData has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 Peek(System.IO.StreamReader instance, Parameters parameters)
+		static private System.Int32 Peek(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -125,7 +126,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 Read(System.IO.StreamReader instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -144,7 +145,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 ReadBlock(System.IO.StreamReader instance, Parameters parameters)
+		static private System.Int32 ReadBlock(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char[], System.Int32, System.Int32>())
 			{
@@ -166,7 +167,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ReadLine(System.IO.StreamReader instance, Parameters parameters)
+		static private System.String ReadLine(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -181,7 +182,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ReadToEnd(System.IO.StreamReader instance, Parameters parameters)
+		static private System.String ReadToEnd(System.IO.StreamReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -196,17 +197,17 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Text.Encoding get_CurrentEncoding(System.IO.StreamReader instance)
+		static private System.Text.Encoding get_CurrentEncoding(System.IO.StreamReader instance, string name)
 		{
 			return instance.CurrentEncoding;
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.StreamReader instance)
+		static private System.IO.Stream get_BaseStream(System.IO.StreamReader instance, string name)
 		{
 			return instance.BaseStream;
 		}
 
-		static private System.Boolean get_EndOfStream(System.IO.StreamReader instance)
+		static private System.Boolean get_EndOfStream(System.IO.StreamReader instance, string name)
 		{
 			return instance.EndOfStream;
 		}

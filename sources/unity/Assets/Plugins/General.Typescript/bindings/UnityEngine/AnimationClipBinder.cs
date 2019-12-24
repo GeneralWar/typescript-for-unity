@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -42,7 +43,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimationClip);
 		}
 
-		static private void AddEvent(UnityEngine.AnimationClip instance, Parameters parameters)
+		static private void AddEvent(UnityEngine.AnimationClip instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AnimationEvent>())
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ClearCurves(UnityEngine.AnimationClip instance, Parameters parameters)
+		static private void ClearCurves(UnityEngine.AnimationClip instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -78,7 +79,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.AnimationClip.ClearCurves has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void EnsureQuaternionContinuity(UnityEngine.AnimationClip instance, Parameters parameters)
+		static private void EnsureQuaternionContinuity(UnityEngine.AnimationClip instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.AnimationClip.EnsureQuaternionContinuity has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SampleAnimation(UnityEngine.AnimationClip instance, Parameters parameters)
+		static private void SampleAnimation(UnityEngine.AnimationClip instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject, System.Single>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetCurve(UnityEngine.AnimationClip instance, Parameters parameters)
+		static private void SetCurve(UnityEngine.AnimationClip instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Type, System.String, UnityEngine.AnimationCurve>())
 			{
@@ -136,87 +137,87 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.AnimationEvent[] get_events(UnityEngine.AnimationClip instance)
+		static private UnityEngine.AnimationEvent[] get_events(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.events;
 		}
 
-		static private void set_events(UnityEngine.AnimationClip instance, UnityEngine.AnimationEvent[] value)
+		static private void set_events(UnityEngine.AnimationClip instance, string name, UnityEngine.AnimationEvent[] value)
 		{
 			instance.events = value;
 		}
 
-		static private System.Single get_length(UnityEngine.AnimationClip instance)
+		static private System.Single get_length(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.length;
 		}
 
-		static private System.Single get_frameRate(UnityEngine.AnimationClip instance)
+		static private System.Single get_frameRate(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.frameRate;
 		}
 
-		static private void set_frameRate(UnityEngine.AnimationClip instance, System.Single value)
+		static private void set_frameRate(UnityEngine.AnimationClip instance, string name, System.Single value)
 		{
 			instance.frameRate = value;
 		}
 
-		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.AnimationClip instance)
+		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.wrapMode;
 		}
 
-		static private void set_wrapMode(UnityEngine.AnimationClip instance, UnityEngine.WrapMode value)
+		static private void set_wrapMode(UnityEngine.AnimationClip instance, string name, UnityEngine.WrapMode value)
 		{
 			instance.wrapMode = value;
 		}
 
-		static private UnityEngine.Bounds get_localBounds(UnityEngine.AnimationClip instance)
+		static private UnityEngine.Bounds get_localBounds(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.localBounds;
 		}
 
-		static private void set_localBounds(UnityEngine.AnimationClip instance, UnityEngine.Bounds value)
+		static private void set_localBounds(UnityEngine.AnimationClip instance, string name, UnityEngine.Bounds value)
 		{
 			instance.localBounds = value;
 		}
 
-		static private System.Boolean get_legacy(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_legacy(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.legacy;
 		}
 
-		static private void set_legacy(UnityEngine.AnimationClip instance, System.Boolean value)
+		static private void set_legacy(UnityEngine.AnimationClip instance, string name, System.Boolean value)
 		{
 			instance.legacy = value;
 		}
 
-		static private System.Boolean get_humanMotion(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_humanMotion(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.humanMotion;
 		}
 
-		static private System.Boolean get_empty(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_empty(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.empty;
 		}
 
-		static private System.Boolean get_hasGenericRootTransform(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_hasGenericRootTransform(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.hasGenericRootTransform;
 		}
 
-		static private System.Boolean get_hasMotionFloatCurves(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_hasMotionFloatCurves(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.hasMotionFloatCurves;
 		}
 
-		static private System.Boolean get_hasMotionCurves(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_hasMotionCurves(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.hasMotionCurves;
 		}
 
-		static private System.Boolean get_hasRootCurves(UnityEngine.AnimationClip instance)
+		static private System.Boolean get_hasRootCurves(UnityEngine.AnimationClip instance, string name)
 		{
 			return instance.hasRootCurves;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,7 +38,7 @@ namespace General.Typescript
 			return default(UnityEngine.Object);
 		}
 
-		static private void Destroy(Parameters parameters)
+		static private void Destroy(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object>())
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DestroyImmediate(Parameters parameters)
+		static private void DestroyImmediate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object>())
 			{
@@ -91,7 +92,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DontDestroyOnLoad(Parameters parameters)
+		static private void DontDestroyOnLoad(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object>())
 			{
@@ -113,7 +114,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Object FindObjectOfType(Parameters parameters)
+		static private System.Object FindObjectOfType(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -135,7 +136,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object FindObjectsOfType(Parameters parameters)
+		static private System.Object FindObjectsOfType(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -157,7 +158,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Object Instantiate(Parameters parameters)
+		static private UnityEngine.Object Instantiate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object>())
 			{
@@ -195,7 +196,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean Equals(UnityEngine.Object instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Object instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -217,7 +218,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Object instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Object instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -232,7 +233,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetInstanceID(UnityEngine.Object instance, Parameters parameters)
+		static private System.Int32 GetInstanceID(UnityEngine.Object instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -247,7 +248,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ToString(UnityEngine.Object instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Object instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -262,22 +263,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_name(UnityEngine.Object instance)
+		static private System.String get_name(UnityEngine.Object instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private void set_name(UnityEngine.Object instance, System.String value)
+		static private void set_name(UnityEngine.Object instance, string name, System.String value)
 		{
 			instance.name = value;
 		}
 
-		static private UnityEngine.HideFlags get_hideFlags(UnityEngine.Object instance)
+		static private UnityEngine.HideFlags get_hideFlags(UnityEngine.Object instance, string name)
 		{
 			return instance.hideFlags;
 		}
 
-		static private void set_hideFlags(UnityEngine.Object instance, UnityEngine.HideFlags value)
+		static private void set_hideFlags(UnityEngine.Object instance, string name, UnityEngine.HideFlags value)
 		{
 			instance.hideFlags = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -18,7 +19,7 @@ namespace General.Typescript
 			self.BindStaticProperty("instance", get_instance, null);
 		}
 
-		static private System.Boolean IsRebuildingGraphics(Parameters parameters)
+		static private System.Boolean IsRebuildingGraphics(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsRebuildingLayout(Parameters parameters)
+		static private System.Boolean IsRebuildingLayout(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -48,7 +49,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void RegisterCanvasElementForGraphicRebuild(Parameters parameters)
+		static private void RegisterCanvasElementForGraphicRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.ICanvasElement>())
 			{
@@ -70,7 +71,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RegisterCanvasElementForLayoutRebuild(Parameters parameters)
+		static private void RegisterCanvasElementForLayoutRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.ICanvasElement>())
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean TryRegisterCanvasElementForGraphicRebuild(Parameters parameters)
+		static private System.Boolean TryRegisterCanvasElementForGraphicRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.ICanvasElement>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean TryRegisterCanvasElementForLayoutRebuild(Parameters parameters)
+		static private System.Boolean TryRegisterCanvasElementForLayoutRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.ICanvasElement>())
 			{
@@ -136,7 +137,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void UnRegisterCanvasElementForRebuild(Parameters parameters)
+		static private void UnRegisterCanvasElementForRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.ICanvasElement>())
 			{
@@ -158,7 +159,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.UI.CanvasUpdateRegistry get_instance()
+		static private UnityEngine.UI.CanvasUpdateRegistry get_instance(Type type, string name)
 		{
 			return UnityEngine.UI.CanvasUpdateRegistry.instance;
 		}

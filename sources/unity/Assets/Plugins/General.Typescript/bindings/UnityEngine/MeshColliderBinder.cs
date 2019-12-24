@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,32 +29,32 @@ namespace General.Typescript
 			return default(UnityEngine.MeshCollider);
 		}
 
-		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.MeshCollider instance)
+		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.MeshCollider instance, string name)
 		{
 			return instance.sharedMesh;
 		}
 
-		static private void set_sharedMesh(UnityEngine.MeshCollider instance, UnityEngine.Mesh value)
+		static private void set_sharedMesh(UnityEngine.MeshCollider instance, string name, UnityEngine.Mesh value)
 		{
 			instance.sharedMesh = value;
 		}
 
-		static private System.Boolean get_convex(UnityEngine.MeshCollider instance)
+		static private System.Boolean get_convex(UnityEngine.MeshCollider instance, string name)
 		{
 			return instance.convex;
 		}
 
-		static private void set_convex(UnityEngine.MeshCollider instance, System.Boolean value)
+		static private void set_convex(UnityEngine.MeshCollider instance, string name, System.Boolean value)
 		{
 			instance.convex = value;
 		}
 
-		static private UnityEngine.MeshColliderCookingOptions get_cookingOptions(UnityEngine.MeshCollider instance)
+		static private UnityEngine.MeshColliderCookingOptions get_cookingOptions(UnityEngine.MeshCollider instance, string name)
 		{
 			return instance.cookingOptions;
 		}
 
-		static private void set_cookingOptions(UnityEngine.MeshCollider instance, UnityEngine.MeshColliderCookingOptions value)
+		static private void set_cookingOptions(UnityEngine.MeshCollider instance, string name, UnityEngine.MeshColliderCookingOptions value)
 		{
 			instance.cookingOptions = value;
 		}

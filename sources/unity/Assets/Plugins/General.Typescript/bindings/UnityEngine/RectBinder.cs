@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -63,7 +64,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private UnityEngine.Rect MinMaxRect(Parameters parameters)
+		static private UnityEngine.Rect MinMaxRect(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private UnityEngine.Vector2 NormalizedToPoint(Parameters parameters)
+		static private UnityEngine.Vector2 NormalizedToPoint(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, UnityEngine.Vector2>())
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private UnityEngine.Vector2 PointToNormalized(Parameters parameters)
+		static private UnityEngine.Vector2 PointToNormalized(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, UnityEngine.Vector2>())
 			{
@@ -129,7 +130,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private System.Boolean Contains(UnityEngine.Rect instance, Parameters parameters)
+		static private System.Boolean Contains(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2>())
 			{
@@ -159,7 +160,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Rect instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -185,7 +186,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Rect instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -200,7 +201,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean Overlaps(UnityEngine.Rect instance, Parameters parameters)
+		static private System.Boolean Overlaps(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -226,7 +227,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Set(UnityEngine.Rect instance, Parameters parameters)
+		static private void Set(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -248,7 +249,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Rect instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Rect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -267,137 +268,137 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Rect get_zero()
+		static private UnityEngine.Rect get_zero(Type type, string name)
 		{
 			return UnityEngine.Rect.zero;
 		}
 
-		static private System.Single get_x(UnityEngine.Rect instance)
+		static private System.Single get_x(UnityEngine.Rect instance, string name)
 		{
 			return instance.x;
 		}
 
-		static private void set_x(UnityEngine.Rect instance, System.Single value)
+		static private void set_x(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.x = value;
 		}
 
-		static private System.Single get_y(UnityEngine.Rect instance)
+		static private System.Single get_y(UnityEngine.Rect instance, string name)
 		{
 			return instance.y;
 		}
 
-		static private void set_y(UnityEngine.Rect instance, System.Single value)
+		static private void set_y(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.y = value;
 		}
 
-		static private UnityEngine.Vector2 get_position(UnityEngine.Rect instance)
+		static private UnityEngine.Vector2 get_position(UnityEngine.Rect instance, string name)
 		{
 			return instance.position;
 		}
 
-		static private void set_position(UnityEngine.Rect instance, UnityEngine.Vector2 value)
+		static private void set_position(UnityEngine.Rect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.position = value;
 		}
 
-		static private UnityEngine.Vector2 get_center(UnityEngine.Rect instance)
+		static private UnityEngine.Vector2 get_center(UnityEngine.Rect instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.Rect instance, UnityEngine.Vector2 value)
+		static private void set_center(UnityEngine.Rect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.center = value;
 		}
 
-		static private UnityEngine.Vector2 get_min(UnityEngine.Rect instance)
+		static private UnityEngine.Vector2 get_min(UnityEngine.Rect instance, string name)
 		{
 			return instance.min;
 		}
 
-		static private void set_min(UnityEngine.Rect instance, UnityEngine.Vector2 value)
+		static private void set_min(UnityEngine.Rect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.min = value;
 		}
 
-		static private UnityEngine.Vector2 get_max(UnityEngine.Rect instance)
+		static private UnityEngine.Vector2 get_max(UnityEngine.Rect instance, string name)
 		{
 			return instance.max;
 		}
 
-		static private void set_max(UnityEngine.Rect instance, UnityEngine.Vector2 value)
+		static private void set_max(UnityEngine.Rect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.max = value;
 		}
 
-		static private System.Single get_width(UnityEngine.Rect instance)
+		static private System.Single get_width(UnityEngine.Rect instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.Rect instance, System.Single value)
+		static private void set_width(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Single get_height(UnityEngine.Rect instance)
+		static private System.Single get_height(UnityEngine.Rect instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.Rect instance, System.Single value)
+		static private void set_height(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.height = value;
 		}
 
-		static private UnityEngine.Vector2 get_size(UnityEngine.Rect instance)
+		static private UnityEngine.Vector2 get_size(UnityEngine.Rect instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.Rect instance, UnityEngine.Vector2 value)
+		static private void set_size(UnityEngine.Rect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.size = value;
 		}
 
-		static private System.Single get_xMin(UnityEngine.Rect instance)
+		static private System.Single get_xMin(UnityEngine.Rect instance, string name)
 		{
 			return instance.xMin;
 		}
 
-		static private void set_xMin(UnityEngine.Rect instance, System.Single value)
+		static private void set_xMin(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.xMin = value;
 		}
 
-		static private System.Single get_yMin(UnityEngine.Rect instance)
+		static private System.Single get_yMin(UnityEngine.Rect instance, string name)
 		{
 			return instance.yMin;
 		}
 
-		static private void set_yMin(UnityEngine.Rect instance, System.Single value)
+		static private void set_yMin(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.yMin = value;
 		}
 
-		static private System.Single get_xMax(UnityEngine.Rect instance)
+		static private System.Single get_xMax(UnityEngine.Rect instance, string name)
 		{
 			return instance.xMax;
 		}
 
-		static private void set_xMax(UnityEngine.Rect instance, System.Single value)
+		static private void set_xMax(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.xMax = value;
 		}
 
-		static private System.Single get_yMax(UnityEngine.Rect instance)
+		static private System.Single get_yMax(UnityEngine.Rect instance, string name)
 		{
 			return instance.yMax;
 		}
 
-		static private void set_yMax(UnityEngine.Rect instance, System.Single value)
+		static private void set_yMax(UnityEngine.Rect instance, string name, System.Single value)
 		{
 			instance.yMax = value;
 		}

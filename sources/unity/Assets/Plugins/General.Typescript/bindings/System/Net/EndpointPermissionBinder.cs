@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,7 +17,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("Transport", get_Transport, null);
 		}
 
-		static private System.Boolean Equals(System.Net.EndpointPermission instance, Parameters parameters)
+		static private System.Boolean Equals(System.Net.EndpointPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(System.Net.EndpointPermission instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Net.EndpointPermission instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -53,7 +54,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ToString(System.Net.EndpointPermission instance, Parameters parameters)
+		static private System.String ToString(System.Net.EndpointPermission instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -68,17 +69,17 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_Hostname(System.Net.EndpointPermission instance)
+		static private System.String get_Hostname(System.Net.EndpointPermission instance, string name)
 		{
 			return instance.Hostname;
 		}
 
-		static private System.Int32 get_Port(System.Net.EndpointPermission instance)
+		static private System.Int32 get_Port(System.Net.EndpointPermission instance, string name)
 		{
 			return instance.Port;
 		}
 
-		static private System.Net.TransportType get_Transport(System.Net.EndpointPermission instance)
+		static private System.Net.TransportType get_Transport(System.Net.EndpointPermission instance, string name)
 		{
 			return instance.Transport;
 		}

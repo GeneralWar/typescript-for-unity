@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,22 +28,22 @@ namespace General.Typescript
 			return default(UnityEngine.MeshFilter);
 		}
 
-		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.MeshFilter instance)
+		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.MeshFilter instance, string name)
 		{
 			return instance.sharedMesh;
 		}
 
-		static private void set_sharedMesh(UnityEngine.MeshFilter instance, UnityEngine.Mesh value)
+		static private void set_sharedMesh(UnityEngine.MeshFilter instance, string name, UnityEngine.Mesh value)
 		{
 			instance.sharedMesh = value;
 		}
 
-		static private UnityEngine.Mesh get_mesh(UnityEngine.MeshFilter instance)
+		static private UnityEngine.Mesh get_mesh(UnityEngine.MeshFilter instance, string name)
 		{
 			return instance.mesh;
 		}
 
-		static private void set_mesh(UnityEngine.MeshFilter instance, UnityEngine.Mesh value)
+		static private void set_mesh(UnityEngine.MeshFilter instance, string name, UnityEngine.Mesh value)
 		{
 			instance.mesh = value;
 		}

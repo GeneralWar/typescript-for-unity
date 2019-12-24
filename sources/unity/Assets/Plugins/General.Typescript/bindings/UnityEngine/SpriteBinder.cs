@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,7 +30,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("uv", get_uv, null);
 		}
 
-		static private UnityEngine.Sprite Create(Parameters parameters)
+		static private UnityEngine.Sprite Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture2D, UnityEngine.Rect, UnityEngine.Vector2>())
 			{
@@ -71,7 +72,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetPhysicsShapeCount(UnityEngine.Sprite instance, Parameters parameters)
+		static private System.Int32 GetPhysicsShapeCount(UnityEngine.Sprite instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -86,7 +87,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetPhysicsShapePointCount(UnityEngine.Sprite instance, Parameters parameters)
+		static private System.Int32 GetPhysicsShapePointCount(UnityEngine.Sprite instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -108,7 +109,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void OverrideGeometry(UnityEngine.Sprite instance, Parameters parameters)
+		static private void OverrideGeometry(UnityEngine.Sprite instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2[], System.UInt16[]>())
 			{
@@ -130,77 +131,77 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Bounds get_bounds(UnityEngine.Sprite instance)
+		static private UnityEngine.Bounds get_bounds(UnityEngine.Sprite instance, string name)
 		{
 			return instance.bounds;
 		}
 
-		static private UnityEngine.Rect get_rect(UnityEngine.Sprite instance)
+		static private UnityEngine.Rect get_rect(UnityEngine.Sprite instance, string name)
 		{
 			return instance.rect;
 		}
 
-		static private UnityEngine.Vector4 get_border(UnityEngine.Sprite instance)
+		static private UnityEngine.Vector4 get_border(UnityEngine.Sprite instance, string name)
 		{
 			return instance.border;
 		}
 
-		static private UnityEngine.Texture2D get_texture(UnityEngine.Sprite instance)
+		static private UnityEngine.Texture2D get_texture(UnityEngine.Sprite instance, string name)
 		{
 			return instance.texture;
 		}
 
-		static private System.Single get_pixelsPerUnit(UnityEngine.Sprite instance)
+		static private System.Single get_pixelsPerUnit(UnityEngine.Sprite instance, string name)
 		{
 			return instance.pixelsPerUnit;
 		}
 
-		static private UnityEngine.Texture2D get_associatedAlphaSplitTexture(UnityEngine.Sprite instance)
+		static private UnityEngine.Texture2D get_associatedAlphaSplitTexture(UnityEngine.Sprite instance, string name)
 		{
 			return instance.associatedAlphaSplitTexture;
 		}
 
-		static private UnityEngine.Vector2 get_pivot(UnityEngine.Sprite instance)
+		static private UnityEngine.Vector2 get_pivot(UnityEngine.Sprite instance, string name)
 		{
 			return instance.pivot;
 		}
 
-		static private System.Boolean get_packed(UnityEngine.Sprite instance)
+		static private System.Boolean get_packed(UnityEngine.Sprite instance, string name)
 		{
 			return instance.packed;
 		}
 
-		static private UnityEngine.SpritePackingMode get_packingMode(UnityEngine.Sprite instance)
+		static private UnityEngine.SpritePackingMode get_packingMode(UnityEngine.Sprite instance, string name)
 		{
 			return instance.packingMode;
 		}
 
-		static private UnityEngine.SpritePackingRotation get_packingRotation(UnityEngine.Sprite instance)
+		static private UnityEngine.SpritePackingRotation get_packingRotation(UnityEngine.Sprite instance, string name)
 		{
 			return instance.packingRotation;
 		}
 
-		static private UnityEngine.Rect get_textureRect(UnityEngine.Sprite instance)
+		static private UnityEngine.Rect get_textureRect(UnityEngine.Sprite instance, string name)
 		{
 			return instance.textureRect;
 		}
 
-		static private UnityEngine.Vector2 get_textureRectOffset(UnityEngine.Sprite instance)
+		static private UnityEngine.Vector2 get_textureRectOffset(UnityEngine.Sprite instance, string name)
 		{
 			return instance.textureRectOffset;
 		}
 
-		static private UnityEngine.Vector2[] get_vertices(UnityEngine.Sprite instance)
+		static private UnityEngine.Vector2[] get_vertices(UnityEngine.Sprite instance, string name)
 		{
 			return instance.vertices;
 		}
 
-		static private System.UInt16[] get_triangles(UnityEngine.Sprite instance)
+		static private System.UInt16[] get_triangles(UnityEngine.Sprite instance, string name)
 		{
 			return instance.triangles;
 		}
 
-		static private UnityEngine.Vector2[] get_uv(UnityEngine.Sprite instance)
+		static private UnityEngine.Vector2[] get_uv(UnityEngine.Sprite instance, string name)
 		{
 			return instance.uv;
 		}

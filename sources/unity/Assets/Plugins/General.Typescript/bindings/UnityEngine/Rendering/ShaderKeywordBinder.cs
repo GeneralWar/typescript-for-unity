@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,7 +36,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.ShaderKeyword);
 		}
 
-		static private System.String GetKeywordName(UnityEngine.Rendering.ShaderKeyword instance, Parameters parameters)
+		static private System.String GetKeywordName(UnityEngine.Rendering.ShaderKeyword instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -50,7 +51,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Rendering.ShaderKeywordType GetKeywordType(UnityEngine.Rendering.ShaderKeyword instance, Parameters parameters)
+		static private UnityEngine.Rendering.ShaderKeywordType GetKeywordType(UnityEngine.Rendering.ShaderKeyword instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.ShaderKeywordType);
 		}
 
-		static private System.Boolean IsValid(UnityEngine.Rendering.ShaderKeyword instance, Parameters parameters)
+		static private System.Boolean IsValid(UnityEngine.Rendering.ShaderKeyword instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

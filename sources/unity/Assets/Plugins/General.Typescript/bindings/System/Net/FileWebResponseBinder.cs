@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,7 +18,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("ResponseUri", get_ResponseUri, null);
 		}
 
-		static private void Close(System.Net.FileWebResponse instance, Parameters parameters)
+		static private void Close(System.Net.FileWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -31,7 +32,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.FileWebResponse.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IO.Stream GetResponseStream(System.Net.FileWebResponse instance, Parameters parameters)
+		static private System.IO.Stream GetResponseStream(System.Net.FileWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -46,27 +47,27 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.FileWebResponse instance)
+		static private System.Int64 get_ContentLength(System.Net.FileWebResponse instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private System.String get_ContentType(System.Net.FileWebResponse instance)
+		static private System.String get_ContentType(System.Net.FileWebResponse instance, string name)
 		{
 			return instance.ContentType;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.FileWebResponse instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.FileWebResponse instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private System.Boolean get_SupportsHeaders(System.Net.FileWebResponse instance)
+		static private System.Boolean get_SupportsHeaders(System.Net.FileWebResponse instance, string name)
 		{
 			return instance.SupportsHeaders;
 		}
 
-		static private System.Uri get_ResponseUri(System.Net.FileWebResponse instance)
+		static private System.Uri get_ResponseUri(System.Net.FileWebResponse instance, string name)
 		{
 			return instance.ResponseUri;
 		}

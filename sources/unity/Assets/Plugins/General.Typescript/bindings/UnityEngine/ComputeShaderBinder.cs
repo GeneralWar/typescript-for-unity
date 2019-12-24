@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,7 +27,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("SetVectorArray", SetVectorArray);
 		}
 
-		static private void Dispatch(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void Dispatch(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32, System.Int32>())
 			{
@@ -48,7 +49,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DispatchIndirect(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void DispatchIndirect(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.ComputeBuffer>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 FindKernel(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private System.Int32 FindKernel(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean HasKernel(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private System.Boolean HasKernel(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -119,7 +120,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetBool(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetBool(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Boolean>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBuffer(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetBuffer(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.ComputeBuffer>())
 			{
@@ -173,7 +174,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloat(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetFloat(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single>())
 			{
@@ -200,7 +201,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloats(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetFloats(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single[]>())
 			{
@@ -227,7 +228,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInt(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetInt(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -254,7 +255,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInts(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetInts(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32[]>())
 			{
@@ -281,7 +282,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrix(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetMatrix(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Matrix4x4>())
 			{
@@ -308,7 +309,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrixArray(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetMatrixArray(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Matrix4x4[]>())
 			{
@@ -335,7 +336,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTexture(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetTexture(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.Texture>())
 			{
@@ -372,7 +373,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTextureFromGlobal(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetTextureFromGlobal(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32>())
 			{
@@ -399,7 +400,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVector(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetVector(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4>())
 			{
@@ -426,7 +427,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVectorArray(UnityEngine.ComputeShader instance, Parameters parameters)
+		static private void SetVectorArray(UnityEngine.ComputeShader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4[]>())
 			{

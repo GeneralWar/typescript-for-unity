@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(UnityEngine.BillboardAsset);
 		}
 
-		static private UnityEngine.Vector4[] GetImageTexCoords(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private UnityEngine.Vector4[] GetImageTexCoords(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -53,7 +54,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.UInt16[] GetIndices(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private System.UInt16[] GetIndices(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector2[] GetVertices(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private UnityEngine.Vector2[] GetVertices(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetImageTexCoords(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private void SetImageTexCoords(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4[]>())
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIndices(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private void SetIndices(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt16[]>())
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVertices(UnityEngine.BillboardAsset instance, Parameters parameters)
+		static private void SetVertices(UnityEngine.BillboardAsset instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2[]>())
 			{
@@ -149,57 +150,57 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_width(UnityEngine.BillboardAsset instance)
+		static private System.Single get_width(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.BillboardAsset instance, System.Single value)
+		static private void set_width(UnityEngine.BillboardAsset instance, string name, System.Single value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Single get_height(UnityEngine.BillboardAsset instance)
+		static private System.Single get_height(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.BillboardAsset instance, System.Single value)
+		static private void set_height(UnityEngine.BillboardAsset instance, string name, System.Single value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Single get_bottom(UnityEngine.BillboardAsset instance)
+		static private System.Single get_bottom(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.bottom;
 		}
 
-		static private void set_bottom(UnityEngine.BillboardAsset instance, System.Single value)
+		static private void set_bottom(UnityEngine.BillboardAsset instance, string name, System.Single value)
 		{
 			instance.bottom = value;
 		}
 
-		static private System.Int32 get_imageCount(UnityEngine.BillboardAsset instance)
+		static private System.Int32 get_imageCount(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.imageCount;
 		}
 
-		static private System.Int32 get_vertexCount(UnityEngine.BillboardAsset instance)
+		static private System.Int32 get_vertexCount(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.vertexCount;
 		}
 
-		static private System.Int32 get_indexCount(UnityEngine.BillboardAsset instance)
+		static private System.Int32 get_indexCount(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.indexCount;
 		}
 
-		static private UnityEngine.Material get_material(UnityEngine.BillboardAsset instance)
+		static private UnityEngine.Material get_material(UnityEngine.BillboardAsset instance, string name)
 		{
 			return instance.material;
 		}
 
-		static private void set_material(UnityEngine.BillboardAsset instance, UnityEngine.Material value)
+		static private void set_material(UnityEngine.BillboardAsset instance, string name, UnityEngine.Material value)
 		{
 			instance.material = value;
 		}

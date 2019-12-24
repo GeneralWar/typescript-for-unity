@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,7 +17,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("GetHashCode", GetHashCode);
 		}
 
-		static private void AddAmbientLight(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private void AddAmbientLight(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color>())
 			{
@@ -38,7 +39,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddDirectionalLight(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private void AddDirectionalLight(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Color, System.Single>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private void Clear(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.SphericalHarmonicsL2.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean Equals(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -100,7 +101,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Evaluate(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private void Evaluate(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[], UnityEngine.Color[]>())
 			{
@@ -122,7 +123,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Rendering.SphericalHarmonicsL2 instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Rendering.SphericalHarmonicsL2 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

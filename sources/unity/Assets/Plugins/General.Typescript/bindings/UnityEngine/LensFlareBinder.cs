@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,42 +30,42 @@ namespace General.Typescript
 			return default(UnityEngine.LensFlare);
 		}
 
-		static private System.Single get_brightness(UnityEngine.LensFlare instance)
+		static private System.Single get_brightness(UnityEngine.LensFlare instance, string name)
 		{
 			return instance.brightness;
 		}
 
-		static private void set_brightness(UnityEngine.LensFlare instance, System.Single value)
+		static private void set_brightness(UnityEngine.LensFlare instance, string name, System.Single value)
 		{
 			instance.brightness = value;
 		}
 
-		static private System.Single get_fadeSpeed(UnityEngine.LensFlare instance)
+		static private System.Single get_fadeSpeed(UnityEngine.LensFlare instance, string name)
 		{
 			return instance.fadeSpeed;
 		}
 
-		static private void set_fadeSpeed(UnityEngine.LensFlare instance, System.Single value)
+		static private void set_fadeSpeed(UnityEngine.LensFlare instance, string name, System.Single value)
 		{
 			instance.fadeSpeed = value;
 		}
 
-		static private UnityEngine.Color get_color(UnityEngine.LensFlare instance)
+		static private UnityEngine.Color get_color(UnityEngine.LensFlare instance, string name)
 		{
 			return instance.color;
 		}
 
-		static private void set_color(UnityEngine.LensFlare instance, UnityEngine.Color value)
+		static private void set_color(UnityEngine.LensFlare instance, string name, UnityEngine.Color value)
 		{
 			instance.color = value;
 		}
 
-		static private UnityEngine.Flare get_flare(UnityEngine.LensFlare instance)
+		static private UnityEngine.Flare get_flare(UnityEngine.LensFlare instance, string name)
 		{
 			return instance.flare;
 		}
 
-		static private void set_flare(UnityEngine.LensFlare instance, UnityEngine.Flare value)
+		static private void set_flare(UnityEngine.LensFlare instance, string name, UnityEngine.Flare value)
 		{
 			instance.flare = value;
 		}

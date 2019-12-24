@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace General.Typescript
 {
-	static public partial class Files
+	static public partial class FileUtility
 	{
 		delegate string OnReadStringFromFile(string filename);
 
 		static private List<string> sSearchPaths = new List<string>();
 
-		static Files()
+		static FileUtility()
 		{
 
 		}
 
 		static internal void Initialize()
 		{
-			Files.General_Typescript_Extension_BindReadStringFromFileCallback(Files.ReadStringFromFile);
+			FileUtility.General_Typescript_Extension_BindReadStringFromFileCallback(FileUtility.ReadStringFromFile);
 		}
 
 		static public void AddSearchPath(string path, bool front = false)

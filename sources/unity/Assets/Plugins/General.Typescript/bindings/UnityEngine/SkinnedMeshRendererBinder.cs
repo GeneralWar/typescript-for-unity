@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.SkinnedMeshRenderer);
 		}
 
-		static private void BakeMesh(UnityEngine.SkinnedMeshRenderer instance, Parameters parameters)
+		static private void BakeMesh(UnityEngine.SkinnedMeshRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single GetBlendShapeWeight(UnityEngine.SkinnedMeshRenderer instance, Parameters parameters)
+		static private System.Single GetBlendShapeWeight(UnityEngine.SkinnedMeshRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -80,7 +81,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private void SetBlendShapeWeight(UnityEngine.SkinnedMeshRenderer instance, Parameters parameters)
+		static private void SetBlendShapeWeight(UnityEngine.SkinnedMeshRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single>())
 			{
@@ -102,82 +103,82 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.SkinQuality get_quality(UnityEngine.SkinnedMeshRenderer instance)
+		static private UnityEngine.SkinQuality get_quality(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.quality;
 		}
 
-		static private void set_quality(UnityEngine.SkinnedMeshRenderer instance, UnityEngine.SkinQuality value)
+		static private void set_quality(UnityEngine.SkinnedMeshRenderer instance, string name, UnityEngine.SkinQuality value)
 		{
 			instance.quality = value;
 		}
 
-		static private System.Boolean get_updateWhenOffscreen(UnityEngine.SkinnedMeshRenderer instance)
+		static private System.Boolean get_updateWhenOffscreen(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.updateWhenOffscreen;
 		}
 
-		static private void set_updateWhenOffscreen(UnityEngine.SkinnedMeshRenderer instance, System.Boolean value)
+		static private void set_updateWhenOffscreen(UnityEngine.SkinnedMeshRenderer instance, string name, System.Boolean value)
 		{
 			instance.updateWhenOffscreen = value;
 		}
 
-		static private System.Boolean get_forceMatrixRecalculationPerRender(UnityEngine.SkinnedMeshRenderer instance)
+		static private System.Boolean get_forceMatrixRecalculationPerRender(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.forceMatrixRecalculationPerRender;
 		}
 
-		static private void set_forceMatrixRecalculationPerRender(UnityEngine.SkinnedMeshRenderer instance, System.Boolean value)
+		static private void set_forceMatrixRecalculationPerRender(UnityEngine.SkinnedMeshRenderer instance, string name, System.Boolean value)
 		{
 			instance.forceMatrixRecalculationPerRender = value;
 		}
 
-		static private UnityEngine.Transform get_rootBone(UnityEngine.SkinnedMeshRenderer instance)
+		static private UnityEngine.Transform get_rootBone(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.rootBone;
 		}
 
-		static private void set_rootBone(UnityEngine.SkinnedMeshRenderer instance, UnityEngine.Transform value)
+		static private void set_rootBone(UnityEngine.SkinnedMeshRenderer instance, string name, UnityEngine.Transform value)
 		{
 			instance.rootBone = value;
 		}
 
-		static private UnityEngine.Transform[] get_bones(UnityEngine.SkinnedMeshRenderer instance)
+		static private UnityEngine.Transform[] get_bones(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.bones;
 		}
 
-		static private void set_bones(UnityEngine.SkinnedMeshRenderer instance, UnityEngine.Transform[] value)
+		static private void set_bones(UnityEngine.SkinnedMeshRenderer instance, string name, UnityEngine.Transform[] value)
 		{
 			instance.bones = value;
 		}
 
-		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.SkinnedMeshRenderer instance)
+		static private UnityEngine.Mesh get_sharedMesh(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.sharedMesh;
 		}
 
-		static private void set_sharedMesh(UnityEngine.SkinnedMeshRenderer instance, UnityEngine.Mesh value)
+		static private void set_sharedMesh(UnityEngine.SkinnedMeshRenderer instance, string name, UnityEngine.Mesh value)
 		{
 			instance.sharedMesh = value;
 		}
 
-		static private System.Boolean get_skinnedMotionVectors(UnityEngine.SkinnedMeshRenderer instance)
+		static private System.Boolean get_skinnedMotionVectors(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.skinnedMotionVectors;
 		}
 
-		static private void set_skinnedMotionVectors(UnityEngine.SkinnedMeshRenderer instance, System.Boolean value)
+		static private void set_skinnedMotionVectors(UnityEngine.SkinnedMeshRenderer instance, string name, System.Boolean value)
 		{
 			instance.skinnedMotionVectors = value;
 		}
 
-		static private UnityEngine.Bounds get_localBounds(UnityEngine.SkinnedMeshRenderer instance)
+		static private UnityEngine.Bounds get_localBounds(UnityEngine.SkinnedMeshRenderer instance, string name)
 		{
 			return instance.localBounds;
 		}
 
-		static private void set_localBounds(UnityEngine.SkinnedMeshRenderer instance, UnityEngine.Bounds value)
+		static private void set_localBounds(UnityEngine.SkinnedMeshRenderer instance, string name, UnityEngine.Bounds value)
 		{
 			instance.localBounds = value;
 		}

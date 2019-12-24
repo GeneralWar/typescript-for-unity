@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,22 +39,22 @@ namespace General.Typescript
 			return default(System.Net.Sockets.IPv6MulticastOption);
 		}
 
-		static private System.Net.IPAddress get_Group(System.Net.Sockets.IPv6MulticastOption instance)
+		static private System.Net.IPAddress get_Group(System.Net.Sockets.IPv6MulticastOption instance, string name)
 		{
 			return instance.Group;
 		}
 
-		static private void set_Group(System.Net.Sockets.IPv6MulticastOption instance, System.Net.IPAddress value)
+		static private void set_Group(System.Net.Sockets.IPv6MulticastOption instance, string name, System.Net.IPAddress value)
 		{
 			instance.Group = value;
 		}
 
-		static private System.Int64 get_InterfaceIndex(System.Net.Sockets.IPv6MulticastOption instance)
+		static private System.Int64 get_InterfaceIndex(System.Net.Sockets.IPv6MulticastOption instance, string name)
 		{
 			return instance.InterfaceIndex;
 		}
 
-		static private void set_InterfaceIndex(System.Net.Sockets.IPv6MulticastOption instance, System.Int64 value)
+		static private void set_InterfaceIndex(System.Net.Sockets.IPv6MulticastOption instance, string name, System.Int64 value)
 		{
 			instance.InterfaceIndex = value;
 		}

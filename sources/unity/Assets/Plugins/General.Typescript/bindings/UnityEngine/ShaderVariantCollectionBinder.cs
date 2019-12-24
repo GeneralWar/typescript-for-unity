@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.ShaderVariantCollection);
 		}
 
-		static private System.Boolean Add(UnityEngine.ShaderVariantCollection instance, Parameters parameters)
+		static private System.Boolean Add(UnityEngine.ShaderVariantCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ShaderVariantCollection.ShaderVariant>())
 			{
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Clear(UnityEngine.ShaderVariantCollection instance, Parameters parameters)
+		static private void Clear(UnityEngine.ShaderVariantCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -69,7 +70,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.ShaderVariantCollection.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean Contains(UnityEngine.ShaderVariantCollection instance, Parameters parameters)
+		static private System.Boolean Contains(UnityEngine.ShaderVariantCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ShaderVariantCollection.ShaderVariant>())
 			{
@@ -91,7 +92,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Remove(UnityEngine.ShaderVariantCollection instance, Parameters parameters)
+		static private System.Boolean Remove(UnityEngine.ShaderVariantCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ShaderVariantCollection.ShaderVariant>())
 			{
@@ -113,7 +114,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void WarmUp(UnityEngine.ShaderVariantCollection instance, Parameters parameters)
+		static private void WarmUp(UnityEngine.ShaderVariantCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -127,17 +128,17 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.ShaderVariantCollection.WarmUp has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 get_shaderCount(UnityEngine.ShaderVariantCollection instance)
+		static private System.Int32 get_shaderCount(UnityEngine.ShaderVariantCollection instance, string name)
 		{
 			return instance.shaderCount;
 		}
 
-		static private System.Int32 get_variantCount(UnityEngine.ShaderVariantCollection instance)
+		static private System.Int32 get_variantCount(UnityEngine.ShaderVariantCollection instance, string name)
 		{
 			return instance.variantCount;
 		}
 
-		static private System.Boolean get_isWarmedUp(UnityEngine.ShaderVariantCollection instance)
+		static private System.Boolean get_isWarmedUp(UnityEngine.ShaderVariantCollection instance, string name)
 		{
 			return instance.isWarmedUp;
 		}

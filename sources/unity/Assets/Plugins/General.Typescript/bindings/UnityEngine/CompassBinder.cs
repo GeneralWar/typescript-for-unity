@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -31,37 +32,37 @@ namespace General.Typescript
 			return default(UnityEngine.Compass);
 		}
 
-		static private System.Single get_magneticHeading(UnityEngine.Compass instance)
+		static private System.Single get_magneticHeading(UnityEngine.Compass instance, string name)
 		{
 			return instance.magneticHeading;
 		}
 
-		static private System.Single get_trueHeading(UnityEngine.Compass instance)
+		static private System.Single get_trueHeading(UnityEngine.Compass instance, string name)
 		{
 			return instance.trueHeading;
 		}
 
-		static private System.Single get_headingAccuracy(UnityEngine.Compass instance)
+		static private System.Single get_headingAccuracy(UnityEngine.Compass instance, string name)
 		{
 			return instance.headingAccuracy;
 		}
 
-		static private UnityEngine.Vector3 get_rawVector(UnityEngine.Compass instance)
+		static private UnityEngine.Vector3 get_rawVector(UnityEngine.Compass instance, string name)
 		{
 			return instance.rawVector;
 		}
 
-		static private System.Double get_timestamp(UnityEngine.Compass instance)
+		static private System.Double get_timestamp(UnityEngine.Compass instance, string name)
 		{
 			return instance.timestamp;
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.Compass instance)
+		static private System.Boolean get_enabled(UnityEngine.Compass instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.Compass instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.Compass instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}

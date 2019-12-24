@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(UnityEngine.Gizmos);
 		}
 
-		static private void DrawCube(Parameters parameters)
+		static private void DrawCube(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawFrustum(Parameters parameters)
+		static private void DrawFrustum(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -82,7 +83,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawGUITexture(Parameters parameters)
+		static private void DrawGUITexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, UnityEngine.Texture>())
 			{
@@ -119,7 +120,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawIcon(Parameters parameters)
+		static private void DrawIcon(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.String>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawLine(Parameters parameters)
+		static private void DrawLine(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMesh(Parameters parameters)
+		static private void DrawMesh(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh>())
 			{
@@ -225,7 +226,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawRay(Parameters parameters)
+		static private void DrawRay(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray>())
 			{
@@ -252,7 +253,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawSphere(Parameters parameters)
+		static private void DrawSphere(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single>())
 			{
@@ -274,7 +275,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawWireCube(Parameters parameters)
+		static private void DrawWireCube(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -296,7 +297,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawWireMesh(Parameters parameters)
+		static private void DrawWireMesh(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh>())
 			{
@@ -353,7 +354,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawWireSphere(Parameters parameters)
+		static private void DrawWireSphere(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single>())
 			{
@@ -375,22 +376,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Color get_color()
+		static private UnityEngine.Color get_color(Type type, string name)
 		{
 			return UnityEngine.Gizmos.color;
 		}
 
-		static private void set_color(UnityEngine.Color value)
+		static private void set_color(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.Gizmos.color = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_matrix()
+		static private UnityEngine.Matrix4x4 get_matrix(Type type, string name)
 		{
 			return UnityEngine.Gizmos.matrix;
 		}
 
-		static private void set_matrix(UnityEngine.Matrix4x4 value)
+		static private void set_matrix(Type type, string name, UnityEngine.Matrix4x4 value)
 		{
 			UnityEngine.Gizmos.matrix = value;
 		}

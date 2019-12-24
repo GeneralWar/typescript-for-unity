@@ -1,4 +1,5 @@
 #if UNITY_TVOS
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -30,42 +31,42 @@ namespace General.Typescript
 			return default(UnityEngine.tvOS.Remote);
 		}
 
-		static private System.Boolean get_allowExitToHome()
+		static private System.Boolean get_allowExitToHome(Type type, string name)
 		{
 			return UnityEngine.tvOS.Remote.allowExitToHome;
 		}
 
-		static private void set_allowExitToHome(System.Boolean value)
+		static private void set_allowExitToHome(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.tvOS.Remote.allowExitToHome = value;
 		}
 
-		static private System.Boolean get_allowRemoteRotation()
+		static private System.Boolean get_allowRemoteRotation(Type type, string name)
 		{
 			return UnityEngine.tvOS.Remote.allowRemoteRotation;
 		}
 
-		static private void set_allowRemoteRotation(System.Boolean value)
+		static private void set_allowRemoteRotation(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.tvOS.Remote.allowRemoteRotation = value;
 		}
 
-		static private System.Boolean get_reportAbsoluteDpadValues()
+		static private System.Boolean get_reportAbsoluteDpadValues(Type type, string name)
 		{
 			return UnityEngine.tvOS.Remote.reportAbsoluteDpadValues;
 		}
 
-		static private void set_reportAbsoluteDpadValues(System.Boolean value)
+		static private void set_reportAbsoluteDpadValues(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.tvOS.Remote.reportAbsoluteDpadValues = value;
 		}
 
-		static private System.Boolean get_touchesEnabled()
+		static private System.Boolean get_touchesEnabled(Type type, string name)
 		{
 			return UnityEngine.tvOS.Remote.touchesEnabled;
 		}
 
-		static private void set_touchesEnabled(System.Boolean value)
+		static private void set_touchesEnabled(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.tvOS.Remote.touchesEnabled = value;
 		}

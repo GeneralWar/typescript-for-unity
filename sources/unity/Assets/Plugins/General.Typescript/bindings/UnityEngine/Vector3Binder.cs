@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -76,7 +77,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single Angle(Parameters parameters)
+		static private System.Single Angle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -98,7 +99,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 ClampMagnitude(Parameters parameters)
+		static private UnityEngine.Vector3 ClampMagnitude(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single>())
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Cross(Parameters parameters)
+		static private UnityEngine.Vector3 Cross(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single Distance(Parameters parameters)
+		static private System.Single Distance(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Dot(Parameters parameters)
+		static private System.Single Dot(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -186,7 +187,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 Lerp(Parameters parameters)
+		static private UnityEngine.Vector3 Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -208,7 +209,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 LerpUnclamped(Parameters parameters)
+		static private UnityEngine.Vector3 LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -230,7 +231,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single Magnitude(Parameters parameters)
+		static private System.Single Magnitude(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -252,7 +253,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 Max(Parameters parameters)
+		static private UnityEngine.Vector3 Max(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -274,7 +275,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Min(Parameters parameters)
+		static private UnityEngine.Vector3 Min(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -296,7 +297,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 MoveTowards(Parameters parameters)
+		static private UnityEngine.Vector3 MoveTowards(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -318,7 +319,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Normalize(Parameters parameters)
+		static private UnityEngine.Vector3 Normalize(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -340,7 +341,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Project(Parameters parameters)
+		static private UnityEngine.Vector3 Project(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -362,7 +363,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 ProjectOnPlane(Parameters parameters)
+		static private UnityEngine.Vector3 ProjectOnPlane(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -384,7 +385,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Reflect(Parameters parameters)
+		static private UnityEngine.Vector3 Reflect(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -406,7 +407,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 RotateTowards(Parameters parameters)
+		static private UnityEngine.Vector3 RotateTowards(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, System.Single>())
 			{
@@ -428,7 +429,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 Scale(Parameters parameters)
+		static private UnityEngine.Vector3 Scale(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -450,7 +451,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single SignedAngle(Parameters parameters)
+		static private System.Single SignedAngle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -472,7 +473,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 Slerp(Parameters parameters)
+		static private UnityEngine.Vector3 Slerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -494,7 +495,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 SlerpUnclamped(Parameters parameters)
+		static private UnityEngine.Vector3 SlerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -516,7 +517,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single SqrMagnitude(Parameters parameters)
+		static private System.Single SqrMagnitude(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -538,7 +539,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Vector3 instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -564,7 +565,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Vector3 instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -579,7 +580,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Normalize(UnityEngine.Vector3 instance, Parameters parameters)
+		static private void Normalize(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -593,7 +594,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Vector3.Normalize has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Scale(UnityEngine.Vector3 instance, Parameters parameters)
+		static private void Scale(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -615,7 +616,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Set(UnityEngine.Vector3 instance, Parameters parameters)
+		static private void Set(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -637,7 +638,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Vector3 instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Vector3 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -656,67 +657,67 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector3 get_zero()
+		static private UnityEngine.Vector3 get_zero(Type type, string name)
 		{
 			return UnityEngine.Vector3.zero;
 		}
 
-		static private UnityEngine.Vector3 get_one()
+		static private UnityEngine.Vector3 get_one(Type type, string name)
 		{
 			return UnityEngine.Vector3.one;
 		}
 
-		static private UnityEngine.Vector3 get_forward()
+		static private UnityEngine.Vector3 get_forward(Type type, string name)
 		{
 			return UnityEngine.Vector3.forward;
 		}
 
-		static private UnityEngine.Vector3 get_back()
+		static private UnityEngine.Vector3 get_back(Type type, string name)
 		{
 			return UnityEngine.Vector3.back;
 		}
 
-		static private UnityEngine.Vector3 get_up()
+		static private UnityEngine.Vector3 get_up(Type type, string name)
 		{
 			return UnityEngine.Vector3.up;
 		}
 
-		static private UnityEngine.Vector3 get_down()
+		static private UnityEngine.Vector3 get_down(Type type, string name)
 		{
 			return UnityEngine.Vector3.down;
 		}
 
-		static private UnityEngine.Vector3 get_left()
+		static private UnityEngine.Vector3 get_left(Type type, string name)
 		{
 			return UnityEngine.Vector3.left;
 		}
 
-		static private UnityEngine.Vector3 get_right()
+		static private UnityEngine.Vector3 get_right(Type type, string name)
 		{
 			return UnityEngine.Vector3.right;
 		}
 
-		static private UnityEngine.Vector3 get_positiveInfinity()
+		static private UnityEngine.Vector3 get_positiveInfinity(Type type, string name)
 		{
 			return UnityEngine.Vector3.positiveInfinity;
 		}
 
-		static private UnityEngine.Vector3 get_negativeInfinity()
+		static private UnityEngine.Vector3 get_negativeInfinity(Type type, string name)
 		{
 			return UnityEngine.Vector3.negativeInfinity;
 		}
 
-		static private UnityEngine.Vector3 get_normalized(UnityEngine.Vector3 instance)
+		static private UnityEngine.Vector3 get_normalized(UnityEngine.Vector3 instance, string name)
 		{
 			return instance.normalized;
 		}
 
-		static private System.Single get_magnitude(UnityEngine.Vector3 instance)
+		static private System.Single get_magnitude(UnityEngine.Vector3 instance, string name)
 		{
 			return instance.magnitude;
 		}
 
-		static private System.Single get_sqrMagnitude(UnityEngine.Vector3 instance)
+		static private System.Single get_sqrMagnitude(UnityEngine.Vector3 instance, string name)
 		{
 			return instance.sqrMagnitude;
 		}

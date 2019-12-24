@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -19,7 +20,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("KeepAliveInterval", get_KeepAliveInterval, set_KeepAliveInterval);
 		}
 
-		static private void AddSubProtocol(System.Net.WebSockets.ClientWebSocketOptions instance, Parameters parameters)
+		static private void AddSubProtocol(System.Net.WebSockets.ClientWebSocketOptions instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -41,7 +42,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBuffer(System.Net.WebSockets.ClientWebSocketOptions instance, Parameters parameters)
+		static private void SetBuffer(System.Net.WebSockets.ClientWebSocketOptions instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRequestHeader(System.Net.WebSockets.ClientWebSocketOptions instance, Parameters parameters)
+		static private void SetRequestHeader(System.Net.WebSockets.ClientWebSocketOptions instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.String>())
 			{
@@ -85,62 +86,62 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_UseDefaultCredentials(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.Boolean get_UseDefaultCredentials(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.UseDefaultCredentials;
 		}
 
-		static private void set_UseDefaultCredentials(System.Net.WebSockets.ClientWebSocketOptions instance, System.Boolean value)
+		static private void set_UseDefaultCredentials(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.Boolean value)
 		{
 			instance.UseDefaultCredentials = value;
 		}
 
-		static private System.Net.ICredentials get_Credentials(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.Net.ICredentials get_Credentials(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.Credentials;
 		}
 
-		static private void set_Credentials(System.Net.WebSockets.ClientWebSocketOptions instance, System.Net.ICredentials value)
+		static private void set_Credentials(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.Net.ICredentials value)
 		{
 			instance.Credentials = value;
 		}
 
-		static private System.Net.IWebProxy get_Proxy(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.Net.IWebProxy get_Proxy(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.Proxy;
 		}
 
-		static private void set_Proxy(System.Net.WebSockets.ClientWebSocketOptions instance, System.Net.IWebProxy value)
+		static private void set_Proxy(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.Net.IWebProxy value)
 		{
 			instance.Proxy = value;
 		}
 
-		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.ClientCertificates;
 		}
 
-		static private void set_ClientCertificates(System.Net.WebSockets.ClientWebSocketOptions instance, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
+		static private void set_ClientCertificates(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
 		{
 			instance.ClientCertificates = value;
 		}
 
-		static private System.Net.CookieContainer get_Cookies(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.Net.CookieContainer get_Cookies(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.Cookies;
 		}
 
-		static private void set_Cookies(System.Net.WebSockets.ClientWebSocketOptions instance, System.Net.CookieContainer value)
+		static private void set_Cookies(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.Net.CookieContainer value)
 		{
 			instance.Cookies = value;
 		}
 
-		static private System.TimeSpan get_KeepAliveInterval(System.Net.WebSockets.ClientWebSocketOptions instance)
+		static private System.TimeSpan get_KeepAliveInterval(System.Net.WebSockets.ClientWebSocketOptions instance, string name)
 		{
 			return instance.KeepAliveInterval;
 		}
 
-		static private void set_KeepAliveInterval(System.Net.WebSockets.ClientWebSocketOptions instance, System.TimeSpan value)
+		static private void set_KeepAliveInterval(System.Net.WebSockets.ClientWebSocketOptions instance, string name, System.TimeSpan value)
 		{
 			instance.KeepAliveInterval = value;
 		}

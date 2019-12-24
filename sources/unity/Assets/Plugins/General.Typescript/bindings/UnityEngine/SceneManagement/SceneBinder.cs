@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -21,7 +22,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("rootCount", get_rootCount, null);
 		}
 
-		static private System.Boolean Equals(UnityEngine.SceneManagement.Scene instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.SceneManagement.Scene instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -43,7 +44,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.SceneManagement.Scene instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.SceneManagement.Scene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.GameObject[] GetRootGameObjects(UnityEngine.SceneManagement.Scene instance, Parameters parameters)
+		static private UnityEngine.GameObject[] GetRootGameObjects(UnityEngine.SceneManagement.Scene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsValid(UnityEngine.SceneManagement.Scene instance, Parameters parameters)
+		static private System.Boolean IsValid(UnityEngine.SceneManagement.Scene instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -88,42 +89,42 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 get_handle(UnityEngine.SceneManagement.Scene instance)
+		static private System.Int32 get_handle(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.handle;
 		}
 
-		static private System.String get_path(UnityEngine.SceneManagement.Scene instance)
+		static private System.String get_path(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.path;
 		}
 
-		static private System.String get_name(UnityEngine.SceneManagement.Scene instance)
+		static private System.String get_name(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private void set_name(UnityEngine.SceneManagement.Scene instance, System.String value)
+		static private void set_name(UnityEngine.SceneManagement.Scene instance, string name, System.String value)
 		{
 			instance.name = value;
 		}
 
-		static private System.Boolean get_isLoaded(UnityEngine.SceneManagement.Scene instance)
+		static private System.Boolean get_isLoaded(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.isLoaded;
 		}
 
-		static private System.Int32 get_buildIndex(UnityEngine.SceneManagement.Scene instance)
+		static private System.Int32 get_buildIndex(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.buildIndex;
 		}
 
-		static private System.Boolean get_isDirty(UnityEngine.SceneManagement.Scene instance)
+		static private System.Boolean get_isDirty(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.isDirty;
 		}
 
-		static private System.Int32 get_rootCount(UnityEngine.SceneManagement.Scene instance)
+		static private System.Int32 get_rootCount(UnityEngine.SceneManagement.Scene instance, string name)
 		{
 			return instance.rootCount;
 		}

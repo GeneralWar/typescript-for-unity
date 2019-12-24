@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -87,7 +88,7 @@ namespace General.Typescript
 			return default(UnityEngine.Material);
 		}
 
-		static private void CopyPropertiesFromMaterial(UnityEngine.Material instance, Parameters parameters)
+		static private void CopyPropertiesFromMaterial(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Material>())
 			{
@@ -109,7 +110,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DisableKeyword(UnityEngine.Material instance, Parameters parameters)
+		static private void DisableKeyword(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -131,7 +132,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EnableKeyword(UnityEngine.Material instance, Parameters parameters)
+		static private void EnableKeyword(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -153,7 +154,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 FindPass(UnityEngine.Material instance, Parameters parameters)
+		static private System.Int32 FindPass(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -175,7 +176,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Color GetColor(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Color GetColor(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -201,7 +202,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color[] GetColorArray(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Color[] GetColorArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -227,7 +228,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single GetFloat(UnityEngine.Material instance, Parameters parameters)
+		static private System.Single GetFloat(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -253,7 +254,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single[] GetFloatArray(UnityEngine.Material instance, Parameters parameters)
+		static private System.Single[] GetFloatArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -279,7 +280,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetInt(UnityEngine.Material instance, Parameters parameters)
+		static private System.Int32 GetInt(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -305,7 +306,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Matrix4x4 GetMatrix(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetMatrix(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -331,7 +332,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4[] GetMatrixArray(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4[] GetMatrixArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -357,7 +358,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String GetPassName(UnityEngine.Material instance, Parameters parameters)
+		static private System.String GetPassName(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -379,7 +380,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean GetShaderPassEnabled(UnityEngine.Material instance, Parameters parameters)
+		static private System.Boolean GetShaderPassEnabled(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -401,7 +402,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.String GetTag(UnityEngine.Material instance, Parameters parameters)
+		static private System.String GetTag(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Boolean>())
 			{
@@ -427,7 +428,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Texture GetTexture(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Texture GetTexture(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -453,7 +454,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector2 GetTextureOffset(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Vector2 GetTextureOffset(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -479,7 +480,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private System.Int32[] GetTexturePropertyNameIDs(UnityEngine.Material instance, Parameters parameters)
+		static private System.Int32[] GetTexturePropertyNameIDs(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -494,7 +495,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String[] GetTexturePropertyNames(UnityEngine.Material instance, Parameters parameters)
+		static private System.String[] GetTexturePropertyNames(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -509,7 +510,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector2 GetTextureScale(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Vector2 GetTextureScale(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -535,7 +536,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private UnityEngine.Vector4 GetVector(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Vector4 GetVector(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -561,7 +562,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4[] GetVectorArray(UnityEngine.Material instance, Parameters parameters)
+		static private UnityEngine.Vector4[] GetVectorArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -587,7 +588,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean HasProperty(UnityEngine.Material instance, Parameters parameters)
+		static private System.Boolean HasProperty(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -613,7 +614,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsKeywordEnabled(UnityEngine.Material instance, Parameters parameters)
+		static private System.Boolean IsKeywordEnabled(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -635,7 +636,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Lerp(UnityEngine.Material instance, Parameters parameters)
+		static private void Lerp(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Material, UnityEngine.Material, System.Single>())
 			{
@@ -657,7 +658,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBuffer(UnityEngine.Material instance, Parameters parameters)
+		static private void SetBuffer(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.ComputeBuffer>())
 			{
@@ -684,7 +685,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetColor(UnityEngine.Material instance, Parameters parameters)
+		static private void SetColor(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Color>())
 			{
@@ -711,7 +712,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetColorArray(UnityEngine.Material instance, Parameters parameters)
+		static private void SetColorArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Color[]>())
 			{
@@ -738,7 +739,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloat(UnityEngine.Material instance, Parameters parameters)
+		static private void SetFloat(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -765,7 +766,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloatArray(UnityEngine.Material instance, Parameters parameters)
+		static private void SetFloatArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single[]>())
 			{
@@ -792,7 +793,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInt(UnityEngine.Material instance, Parameters parameters)
+		static private void SetInt(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -819,7 +820,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrix(UnityEngine.Material instance, Parameters parameters)
+		static private void SetMatrix(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4>())
 			{
@@ -846,7 +847,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrixArray(UnityEngine.Material instance, Parameters parameters)
+		static private void SetMatrixArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4[]>())
 			{
@@ -873,7 +874,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetOverrideTag(UnityEngine.Material instance, Parameters parameters)
+		static private void SetOverrideTag(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.String>())
 			{
@@ -895,7 +896,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean SetPass(UnityEngine.Material instance, Parameters parameters)
+		static private System.Boolean SetPass(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -917,7 +918,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetShaderPassEnabled(UnityEngine.Material instance, Parameters parameters)
+		static private void SetShaderPassEnabled(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Boolean>())
 			{
@@ -939,7 +940,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTexture(UnityEngine.Material instance, Parameters parameters)
+		static private void SetTexture(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Texture>())
 			{
@@ -966,7 +967,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTextureOffset(UnityEngine.Material instance, Parameters parameters)
+		static private void SetTextureOffset(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector2>())
 			{
@@ -993,7 +994,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTextureScale(UnityEngine.Material instance, Parameters parameters)
+		static private void SetTextureScale(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector2>())
 			{
@@ -1020,7 +1021,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVector(UnityEngine.Material instance, Parameters parameters)
+		static private void SetVector(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4>())
 			{
@@ -1047,7 +1048,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVectorArray(UnityEngine.Material instance, Parameters parameters)
+		static private void SetVectorArray(UnityEngine.Material instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4[]>())
 			{
@@ -1074,107 +1075,107 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Shader get_shader(UnityEngine.Material instance)
+		static private UnityEngine.Shader get_shader(UnityEngine.Material instance, string name)
 		{
 			return instance.shader;
 		}
 
-		static private void set_shader(UnityEngine.Material instance, UnityEngine.Shader value)
+		static private void set_shader(UnityEngine.Material instance, string name, UnityEngine.Shader value)
 		{
 			instance.shader = value;
 		}
 
-		static private UnityEngine.Color get_color(UnityEngine.Material instance)
+		static private UnityEngine.Color get_color(UnityEngine.Material instance, string name)
 		{
 			return instance.color;
 		}
 
-		static private void set_color(UnityEngine.Material instance, UnityEngine.Color value)
+		static private void set_color(UnityEngine.Material instance, string name, UnityEngine.Color value)
 		{
 			instance.color = value;
 		}
 
-		static private UnityEngine.Texture get_mainTexture(UnityEngine.Material instance)
+		static private UnityEngine.Texture get_mainTexture(UnityEngine.Material instance, string name)
 		{
 			return instance.mainTexture;
 		}
 
-		static private void set_mainTexture(UnityEngine.Material instance, UnityEngine.Texture value)
+		static private void set_mainTexture(UnityEngine.Material instance, string name, UnityEngine.Texture value)
 		{
 			instance.mainTexture = value;
 		}
 
-		static private UnityEngine.Vector2 get_mainTextureOffset(UnityEngine.Material instance)
+		static private UnityEngine.Vector2 get_mainTextureOffset(UnityEngine.Material instance, string name)
 		{
 			return instance.mainTextureOffset;
 		}
 
-		static private void set_mainTextureOffset(UnityEngine.Material instance, UnityEngine.Vector2 value)
+		static private void set_mainTextureOffset(UnityEngine.Material instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.mainTextureOffset = value;
 		}
 
-		static private UnityEngine.Vector2 get_mainTextureScale(UnityEngine.Material instance)
+		static private UnityEngine.Vector2 get_mainTextureScale(UnityEngine.Material instance, string name)
 		{
 			return instance.mainTextureScale;
 		}
 
-		static private void set_mainTextureScale(UnityEngine.Material instance, UnityEngine.Vector2 value)
+		static private void set_mainTextureScale(UnityEngine.Material instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.mainTextureScale = value;
 		}
 
-		static private System.Int32 get_renderQueue(UnityEngine.Material instance)
+		static private System.Int32 get_renderQueue(UnityEngine.Material instance, string name)
 		{
 			return instance.renderQueue;
 		}
 
-		static private void set_renderQueue(UnityEngine.Material instance, System.Int32 value)
+		static private void set_renderQueue(UnityEngine.Material instance, string name, System.Int32 value)
 		{
 			instance.renderQueue = value;
 		}
 
-		static private UnityEngine.MaterialGlobalIlluminationFlags get_globalIlluminationFlags(UnityEngine.Material instance)
+		static private UnityEngine.MaterialGlobalIlluminationFlags get_globalIlluminationFlags(UnityEngine.Material instance, string name)
 		{
 			return instance.globalIlluminationFlags;
 		}
 
-		static private void set_globalIlluminationFlags(UnityEngine.Material instance, UnityEngine.MaterialGlobalIlluminationFlags value)
+		static private void set_globalIlluminationFlags(UnityEngine.Material instance, string name, UnityEngine.MaterialGlobalIlluminationFlags value)
 		{
 			instance.globalIlluminationFlags = value;
 		}
 
-		static private System.Boolean get_doubleSidedGI(UnityEngine.Material instance)
+		static private System.Boolean get_doubleSidedGI(UnityEngine.Material instance, string name)
 		{
 			return instance.doubleSidedGI;
 		}
 
-		static private void set_doubleSidedGI(UnityEngine.Material instance, System.Boolean value)
+		static private void set_doubleSidedGI(UnityEngine.Material instance, string name, System.Boolean value)
 		{
 			instance.doubleSidedGI = value;
 		}
 
-		static private System.Boolean get_enableInstancing(UnityEngine.Material instance)
+		static private System.Boolean get_enableInstancing(UnityEngine.Material instance, string name)
 		{
 			return instance.enableInstancing;
 		}
 
-		static private void set_enableInstancing(UnityEngine.Material instance, System.Boolean value)
+		static private void set_enableInstancing(UnityEngine.Material instance, string name, System.Boolean value)
 		{
 			instance.enableInstancing = value;
 		}
 
-		static private System.Int32 get_passCount(UnityEngine.Material instance)
+		static private System.Int32 get_passCount(UnityEngine.Material instance, string name)
 		{
 			return instance.passCount;
 		}
 
-		static private System.String[] get_shaderKeywords(UnityEngine.Material instance)
+		static private System.String[] get_shaderKeywords(UnityEngine.Material instance, string name)
 		{
 			return instance.shaderKeywords;
 		}
 
-		static private void set_shaderKeywords(UnityEngine.Material instance, System.String[] value)
+		static private void set_shaderKeywords(UnityEngine.Material instance, string name, System.String[] value)
 		{
 			instance.shaderKeywords = value;
 		}

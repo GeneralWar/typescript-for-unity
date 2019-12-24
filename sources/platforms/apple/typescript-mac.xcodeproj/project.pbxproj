@@ -9,26 +9,6 @@
 /* Begin PBXBuildFile section */
 		E240ED7422CF0ECF00DFF34F /* FileUtility.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E240ED7022CF0ECF00DFF34F /* FileUtility.exp.cpp */; };
 		E240ED7522CF0ECF00DFF34F /* FileUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E240ED7322CF0ECF00DFF34F /* FileUtility.cpp */; };
-		E26A86CE21F1B92800523CCE /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86AD21F1B92800523CCE /* utils.cpp */; };
-		E26A86CF21F1B92800523CCE /* property.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B021F1B92800523CCE /* property.ios.cpp */; };
-		E26A86D021F1B92800523CCE /* enum.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B221F1B92800523CCE /* enum.ios.cpp */; };
-		E26A86D121F1B92800523CCE /* environment.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B321F1B92800523CCE /* environment.ios.cpp */; };
-		E26A86D221F1B92800523CCE /* constructor.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B621F1B92800523CCE /* constructor.ios.cpp */; };
-		E26A86D321F1B92800523CCE /* return.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B721F1B92800523CCE /* return.ios.exp.cpp */; };
-		E26A86D421F1B92800523CCE /* result.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B821F1B92800523CCE /* result.ios.exp.cpp */; };
-		E26A86D521F1B92800523CCE /* caller.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86B921F1B92800523CCE /* caller.ios.cpp */; };
-		E26A86D621F1B92800523CCE /* parameter.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86BA21F1B92800523CCE /* parameter.ios.cpp */; };
-		E26A86D721F1B92800523CCE /* parameters.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86BB21F1B92800523CCE /* parameters.ios.exp.cpp */; };
-		E26A86D821F1B92800523CCE /* argument.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86BC21F1B92800523CCE /* argument.ios.cpp */; };
-		E26A86D921F1B92800523CCE /* function.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86BD21F1B92800523CCE /* function.ios.cpp */; };
-		E26A86DA21F1B92800523CCE /* object.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86C021F1B92800523CCE /* object.ios.cpp */; };
-		E26A86DB21F1B92800523CCE /* object.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86C221F1B92800523CCE /* object.ios.exp.cpp */; };
-		E26A86DC21F1B92800523CCE /* class.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86C421F1B92800523CCE /* class.ios.cpp */; };
-		E26A86DD21F1B92800523CCE /* base.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86C521F1B92800523CCE /* base.ios.cpp */; };
-		E26A86DE21F1B92800523CCE /* typescript.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86C621F1B92800523CCE /* typescript.exp.cpp */; };
-		E26A86DF21F1B92800523CCE /* require.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86CA21F1B92800523CCE /* require.ios.cpp */; };
-		E26A86E021F1B92800523CCE /* console.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86CC21F1B92800523CCE /* console.ios.cpp */; };
-		E26A86E121F1B92800523CCE /* ocUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = E26A86CD21F1B92800523CCE /* ocUtils.mm */; };
 		E26A872121F1B92D00523CCE /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86E421F1B92D00523CCE /* Environment.cpp */; };
 		E26A872221F1B92D00523CCE /* Object.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86E521F1B92D00523CCE /* Object.exp.cpp */; };
 		E26A872321F1B92D00523CCE /* Typescript.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A86E621F1B92D00523CCE /* Typescript.exp.cpp */; };
@@ -47,6 +27,26 @@
 		E26A873221F1B92D00523CCE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A871B21F1B92D00523CCE /* Log.cpp */; };
 		E26A873321F1B92D00523CCE /* console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E26A872021F1B92D00523CCE /* console.cpp */; };
 		E26A873721F1B99E00523CCE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A873521F1B96600523CCE /* JavaScriptCore.framework */; };
+		E2E2069923B1C509001AE0BD /* ocUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2E2069523B1C509001AE0BD /* ocUtils.mm */; };
+		E2E2069A23B1C509001AE0BD /* utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E2069723B1C509001AE0BD /* utils.cpp */; };
+		E2E2069B23B1C509001AE0BD /* typescript.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E2069823B1C509001AE0BD /* typescript.exp.cpp */; };
+		E2E206BC23B1C533001AE0BD /* property.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A223B1C533001AE0BD /* property.ios.cpp */; };
+		E2E206BD23B1C533001AE0BD /* enum.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A423B1C533001AE0BD /* enum.ios.cpp */; };
+		E2E206BE23B1C533001AE0BD /* environment.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A523B1C533001AE0BD /* environment.ios.cpp */; };
+		E2E206BF23B1C533001AE0BD /* constructor.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A723B1C533001AE0BD /* constructor.ios.cpp */; };
+		E2E206C023B1C533001AE0BD /* return.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A823B1C533001AE0BD /* return.ios.exp.cpp */; };
+		E2E206C123B1C533001AE0BD /* result.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206A923B1C533001AE0BD /* result.ios.exp.cpp */; };
+		E2E206C223B1C533001AE0BD /* caller.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206AA23B1C533001AE0BD /* caller.ios.cpp */; };
+		E2E206C323B1C533001AE0BD /* parameter.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206AB23B1C533001AE0BD /* parameter.ios.cpp */; };
+		E2E206C423B1C533001AE0BD /* parameters.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206AC23B1C533001AE0BD /* parameters.ios.exp.cpp */; };
+		E2E206C523B1C533001AE0BD /* argument.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206AD23B1C533001AE0BD /* argument.ios.cpp */; };
+		E2E206C623B1C533001AE0BD /* function.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206AE23B1C533001AE0BD /* function.ios.cpp */; };
+		E2E206C723B1C533001AE0BD /* object.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206B123B1C533001AE0BD /* object.ios.cpp */; };
+		E2E206C823B1C533001AE0BD /* object.ios.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206B323B1C533001AE0BD /* object.ios.exp.cpp */; };
+		E2E206C923B1C533001AE0BD /* class.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206B523B1C533001AE0BD /* class.ios.cpp */; };
+		E2E206CA23B1C533001AE0BD /* base.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206B623B1C533001AE0BD /* base.ios.cpp */; };
+		E2E206CB23B1C533001AE0BD /* require.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206B923B1C533001AE0BD /* require.ios.cpp */; };
+		E2E206CC23B1C533001AE0BD /* console.ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E206BB23B1C533001AE0BD /* console.ios.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,31 +56,6 @@
 		E240ED7322CF0ECF00DFF34F /* FileUtility.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = FileUtility.cpp; sourceTree = "<group>"; };
 		E26A861521F1B7BF00523CCE /* typescript.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = typescript.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26A86A821F1B92300523CCE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E26A86AB21F1B92800523CCE /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
-		E26A86AC21F1B92800523CCE /* typescript.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typescript.ios.h; sourceTree = "<group>"; };
-		E26A86AD21F1B92800523CCE /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utils.cpp; sourceTree = "<group>"; };
-		E26A86B021F1B92800523CCE /* property.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = property.ios.cpp; sourceTree = "<group>"; };
-		E26A86B221F1B92800523CCE /* enum.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enum.ios.cpp; sourceTree = "<group>"; };
-		E26A86B321F1B92800523CCE /* environment.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = environment.ios.cpp; sourceTree = "<group>"; };
-		E26A86B621F1B92800523CCE /* constructor.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = constructor.ios.cpp; sourceTree = "<group>"; };
-		E26A86B721F1B92800523CCE /* return.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = return.ios.exp.cpp; sourceTree = "<group>"; };
-		E26A86B821F1B92800523CCE /* result.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = result.ios.exp.cpp; sourceTree = "<group>"; };
-		E26A86B921F1B92800523CCE /* caller.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = caller.ios.cpp; sourceTree = "<group>"; };
-		E26A86BA21F1B92800523CCE /* parameter.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parameter.ios.cpp; sourceTree = "<group>"; };
-		E26A86BB21F1B92800523CCE /* parameters.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parameters.ios.exp.cpp; sourceTree = "<group>"; };
-		E26A86BC21F1B92800523CCE /* argument.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = argument.ios.cpp; sourceTree = "<group>"; };
-		E26A86BD21F1B92800523CCE /* function.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = function.ios.cpp; sourceTree = "<group>"; };
-		E26A86BE21F1B92800523CCE /* environment.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environment.ios.h; sourceTree = "<group>"; };
-		E26A86C021F1B92800523CCE /* object.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.ios.cpp; sourceTree = "<group>"; };
-		E26A86C121F1B92800523CCE /* object.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.ios.h; sourceTree = "<group>"; };
-		E26A86C221F1B92800523CCE /* object.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.ios.exp.cpp; sourceTree = "<group>"; };
-		E26A86C421F1B92800523CCE /* class.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = class.ios.cpp; sourceTree = "<group>"; };
-		E26A86C521F1B92800523CCE /* base.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base.ios.cpp; sourceTree = "<group>"; };
-		E26A86C621F1B92800523CCE /* typescript.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = typescript.exp.cpp; sourceTree = "<group>"; };
-		E26A86C721F1B92800523CCE /* ocUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocUtils.h; sourceTree = "<group>"; };
-		E26A86CA21F1B92800523CCE /* require.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = require.ios.cpp; sourceTree = "<group>"; };
-		E26A86CC21F1B92800523CCE /* console.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = console.ios.cpp; sourceTree = "<group>"; };
-		E26A86CD21F1B92800523CCE /* ocUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ocUtils.mm; sourceTree = "<group>"; };
 		E26A86E421F1B92D00523CCE /* Environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.cpp; sourceTree = "<group>"; };
 		E26A86E521F1B92D00523CCE /* Object.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.exp.cpp; sourceTree = "<group>"; };
 		E26A86E621F1B92D00523CCE /* Typescript.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Typescript.exp.cpp; sourceTree = "<group>"; };
@@ -128,6 +103,31 @@
 		E26A871F21F1B92D00523CCE /* console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = console.h; sourceTree = "<group>"; };
 		E26A872021F1B92D00523CCE /* console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = console.cpp; sourceTree = "<group>"; };
 		E26A873521F1B96600523CCE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E2E2069323B1C509001AE0BD /* typescript.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = typescript.ios.h; path = typescript/typescript.ios.h; sourceTree = SOURCE_ROOT; };
+		E2E2069423B1C509001AE0BD /* ocUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ocUtils.h; path = typescript/ocUtils.h; sourceTree = SOURCE_ROOT; };
+		E2E2069523B1C509001AE0BD /* ocUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ocUtils.mm; path = typescript/ocUtils.mm; sourceTree = SOURCE_ROOT; };
+		E2E2069623B1C509001AE0BD /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = utils.h; path = typescript/utils.h; sourceTree = SOURCE_ROOT; };
+		E2E2069723B1C509001AE0BD /* utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = utils.cpp; path = typescript/utils.cpp; sourceTree = SOURCE_ROOT; };
+		E2E2069823B1C509001AE0BD /* typescript.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = typescript.exp.cpp; path = typescript/typescript.exp.cpp; sourceTree = SOURCE_ROOT; };
+		E2E206A223B1C533001AE0BD /* property.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = property.ios.cpp; sourceTree = "<group>"; };
+		E2E206A423B1C533001AE0BD /* enum.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = enum.ios.cpp; sourceTree = "<group>"; };
+		E2E206A523B1C533001AE0BD /* environment.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = environment.ios.cpp; sourceTree = "<group>"; };
+		E2E206A723B1C533001AE0BD /* constructor.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = constructor.ios.cpp; sourceTree = "<group>"; };
+		E2E206A823B1C533001AE0BD /* return.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = return.ios.exp.cpp; sourceTree = "<group>"; };
+		E2E206A923B1C533001AE0BD /* result.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = result.ios.exp.cpp; sourceTree = "<group>"; };
+		E2E206AA23B1C533001AE0BD /* caller.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = caller.ios.cpp; sourceTree = "<group>"; };
+		E2E206AB23B1C533001AE0BD /* parameter.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parameter.ios.cpp; sourceTree = "<group>"; };
+		E2E206AC23B1C533001AE0BD /* parameters.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parameters.ios.exp.cpp; sourceTree = "<group>"; };
+		E2E206AD23B1C533001AE0BD /* argument.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = argument.ios.cpp; sourceTree = "<group>"; };
+		E2E206AE23B1C533001AE0BD /* function.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = function.ios.cpp; sourceTree = "<group>"; };
+		E2E206AF23B1C533001AE0BD /* environment.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environment.ios.h; sourceTree = "<group>"; };
+		E2E206B123B1C533001AE0BD /* object.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.ios.cpp; sourceTree = "<group>"; };
+		E2E206B223B1C533001AE0BD /* object.ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.ios.h; sourceTree = "<group>"; };
+		E2E206B323B1C533001AE0BD /* object.ios.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = object.ios.exp.cpp; sourceTree = "<group>"; };
+		E2E206B523B1C533001AE0BD /* class.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = class.ios.cpp; sourceTree = "<group>"; };
+		E2E206B623B1C533001AE0BD /* base.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base.ios.cpp; sourceTree = "<group>"; };
+		E2E206B923B1C533001AE0BD /* require.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = require.ios.cpp; sourceTree = "<group>"; };
+		E2E206BB23B1C533001AE0BD /* console.ios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = console.ios.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,114 +164,17 @@
 		E26A86AA21F1B92800523CCE /* typescript */ = {
 			isa = PBXGroup;
 			children = (
-				E26A86AB21F1B92800523CCE /* utils.h */,
-				E26A86AD21F1B92800523CCE /* utils.cpp */,
-				E26A86AC21F1B92800523CCE /* typescript.ios.h */,
-				E26A86C621F1B92800523CCE /* typescript.exp.cpp */,
-				E26A86C721F1B92800523CCE /* ocUtils.h */,
-				E26A86CD21F1B92800523CCE /* ocUtils.mm */,
-				E26A86AE21F1B92800523CCE /* core */,
-				E26A86C821F1B92800523CCE /* extra */,
+				E2E206A023B1C533001AE0BD /* core */,
+				E2E206B723B1C533001AE0BD /* extra */,
+				E2E2069423B1C509001AE0BD /* ocUtils.h */,
+				E2E2069523B1C509001AE0BD /* ocUtils.mm */,
+				E2E2069823B1C509001AE0BD /* typescript.exp.cpp */,
+				E2E2069323B1C509001AE0BD /* typescript.ios.h */,
+				E2E2069723B1C509001AE0BD /* utils.cpp */,
+				E2E2069623B1C509001AE0BD /* utils.h */,
 			);
 			name = typescript;
 			path = ../ios/typescript;
-			sourceTree = "<group>";
-		};
-		E26A86AE21F1B92800523CCE /* core */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86AF21F1B92800523CCE /* property */,
-				E26A86B121F1B92800523CCE /* enum */,
-				E26A86B321F1B92800523CCE /* environment.ios.cpp */,
-				E26A86B421F1B92800523CCE /* namespace */,
-				E26A86B521F1B92800523CCE /* function */,
-				E26A86BE21F1B92800523CCE /* environment.ios.h */,
-				E26A86BF21F1B92800523CCE /* object */,
-				E26A86C321F1B92800523CCE /* class */,
-				E26A86C521F1B92800523CCE /* base.ios.cpp */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		E26A86AF21F1B92800523CCE /* property */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86B021F1B92800523CCE /* property.ios.cpp */,
-			);
-			path = property;
-			sourceTree = "<group>";
-		};
-		E26A86B121F1B92800523CCE /* enum */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86B221F1B92800523CCE /* enum.ios.cpp */,
-			);
-			path = enum;
-			sourceTree = "<group>";
-		};
-		E26A86B421F1B92800523CCE /* namespace */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = namespace;
-			sourceTree = "<group>";
-		};
-		E26A86B521F1B92800523CCE /* function */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86B621F1B92800523CCE /* constructor.ios.cpp */,
-				E26A86B721F1B92800523CCE /* return.ios.exp.cpp */,
-				E26A86B821F1B92800523CCE /* result.ios.exp.cpp */,
-				E26A86B921F1B92800523CCE /* caller.ios.cpp */,
-				E26A86BA21F1B92800523CCE /* parameter.ios.cpp */,
-				E26A86BB21F1B92800523CCE /* parameters.ios.exp.cpp */,
-				E26A86BC21F1B92800523CCE /* argument.ios.cpp */,
-				E26A86BD21F1B92800523CCE /* function.ios.cpp */,
-			);
-			path = function;
-			sourceTree = "<group>";
-		};
-		E26A86BF21F1B92800523CCE /* object */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86C021F1B92800523CCE /* object.ios.cpp */,
-				E26A86C121F1B92800523CCE /* object.ios.h */,
-				E26A86C221F1B92800523CCE /* object.ios.exp.cpp */,
-			);
-			path = object;
-			sourceTree = "<group>";
-		};
-		E26A86C321F1B92800523CCE /* class */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86C421F1B92800523CCE /* class.ios.cpp */,
-			);
-			path = class;
-			sourceTree = "<group>";
-		};
-		E26A86C821F1B92800523CCE /* extra */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86C921F1B92800523CCE /* require */,
-				E26A86CB21F1B92800523CCE /* console */,
-			);
-			path = extra;
-			sourceTree = "<group>";
-		};
-		E26A86C921F1B92800523CCE /* require */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86CA21F1B92800523CCE /* require.ios.cpp */,
-			);
-			path = require;
-			sourceTree = "<group>";
-		};
-		E26A86CB21F1B92800523CCE /* console */ = {
-			isa = PBXGroup;
-			children = (
-				E26A86CC21F1B92800523CCE /* console.ios.cpp */,
-			);
-			path = console;
 			sourceTree = "<group>";
 		};
 		E26A86E221F1B92D00523CCE /* common */ = {
@@ -436,6 +339,97 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E2E206A023B1C533001AE0BD /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206AF23B1C533001AE0BD /* environment.ios.h */,
+				E2E206A123B1C533001AE0BD /* property */,
+				E2E206A323B1C533001AE0BD /* enum */,
+				E2E206A523B1C533001AE0BD /* environment.ios.cpp */,
+				E2E206A623B1C533001AE0BD /* function */,
+				E2E206B023B1C533001AE0BD /* object */,
+				E2E206B423B1C533001AE0BD /* class */,
+				E2E206B623B1C533001AE0BD /* base.ios.cpp */,
+			);
+			name = core;
+			path = typescript/core;
+			sourceTree = SOURCE_ROOT;
+		};
+		E2E206A123B1C533001AE0BD /* property */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206A223B1C533001AE0BD /* property.ios.cpp */,
+			);
+			path = property;
+			sourceTree = "<group>";
+		};
+		E2E206A323B1C533001AE0BD /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206A423B1C533001AE0BD /* enum.ios.cpp */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		E2E206A623B1C533001AE0BD /* function */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206A723B1C533001AE0BD /* constructor.ios.cpp */,
+				E2E206A823B1C533001AE0BD /* return.ios.exp.cpp */,
+				E2E206A923B1C533001AE0BD /* result.ios.exp.cpp */,
+				E2E206AA23B1C533001AE0BD /* caller.ios.cpp */,
+				E2E206AB23B1C533001AE0BD /* parameter.ios.cpp */,
+				E2E206AC23B1C533001AE0BD /* parameters.ios.exp.cpp */,
+				E2E206AD23B1C533001AE0BD /* argument.ios.cpp */,
+				E2E206AE23B1C533001AE0BD /* function.ios.cpp */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
+		E2E206B023B1C533001AE0BD /* object */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206B123B1C533001AE0BD /* object.ios.cpp */,
+				E2E206B223B1C533001AE0BD /* object.ios.h */,
+				E2E206B323B1C533001AE0BD /* object.ios.exp.cpp */,
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		E2E206B423B1C533001AE0BD /* class */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206B523B1C533001AE0BD /* class.ios.cpp */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		E2E206B723B1C533001AE0BD /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206B823B1C533001AE0BD /* require */,
+				E2E206BA23B1C533001AE0BD /* console */,
+			);
+			name = extra;
+			path = typescript/extra;
+			sourceTree = SOURCE_ROOT;
+		};
+		E2E206B823B1C533001AE0BD /* require */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206B923B1C533001AE0BD /* require.ios.cpp */,
+			);
+			path = require;
+			sourceTree = "<group>";
+		};
+		E2E206BA23B1C533001AE0BD /* console */ = {
+			isa = PBXGroup;
+			children = (
+				E2E206BB23B1C533001AE0BD /* console.ios.cpp */,
+			);
+			path = console;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,45 +496,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E2069923B1C509001AE0BD /* ocUtils.mm in Sources */,
 				E26A873221F1B92D00523CCE /* Log.cpp in Sources */,
-				E26A86D921F1B92800523CCE /* function.ios.cpp in Sources */,
 				E26A872921F1B92D00523CCE /* Base.cpp in Sources */,
 				E240ED7522CF0ECF00DFF34F /* FileUtility.cpp in Sources */,
-				E26A86DD21F1B92800523CCE /* base.ios.cpp in Sources */,
 				E26A872621F1B92D00523CCE /* Enum.cpp in Sources */,
 				E26A872421F1B92D00523CCE /* Property.cpp in Sources */,
 				E26A873321F1B92D00523CCE /* console.cpp in Sources */,
-				E26A86DC21F1B92800523CCE /* class.ios.cpp in Sources */,
+				E2E206BF23B1C533001AE0BD /* constructor.ios.cpp in Sources */,
+				E2E2069B23B1C509001AE0BD /* typescript.exp.cpp in Sources */,
 				E26A872B21F1B92D00523CCE /* Class.cpp in Sources */,
-				E26A86D421F1B92800523CCE /* result.ios.exp.cpp in Sources */,
+				E2E206BE23B1C533001AE0BD /* environment.ios.cpp in Sources */,
+				E2E206C723B1C533001AE0BD /* object.ios.cpp in Sources */,
 				E26A872A21F1B92D00523CCE /* Function.cpp in Sources */,
-				E26A86CE21F1B92800523CCE /* utils.cpp in Sources */,
-				E26A86D221F1B92800523CCE /* constructor.ios.cpp in Sources */,
 				E26A872D21F1B92D00523CCE /* Reference.cpp in Sources */,
 				E26A872321F1B92D00523CCE /* Typescript.exp.cpp in Sources */,
+				E2E206C423B1C533001AE0BD /* parameters.ios.exp.cpp in Sources */,
+				E2E206C123B1C533001AE0BD /* result.ios.exp.cpp in Sources */,
 				E26A872121F1B92D00523CCE /* Environment.cpp in Sources */,
-				E26A86DA21F1B92800523CCE /* object.ios.cpp in Sources */,
-				E26A86D721F1B92800523CCE /* parameters.ios.exp.cpp in Sources */,
+				E2E206BC23B1C533001AE0BD /* property.ios.cpp in Sources */,
+				E2E2069A23B1C509001AE0BD /* utils.cpp in Sources */,
 				E26A873021F1B92D00523CCE /* export.cpp in Sources */,
 				E26A872C21F1B92D00523CCE /* Class.exp.cpp in Sources */,
-				E26A86D521F1B92800523CCE /* caller.ios.cpp in Sources */,
+				E2E206CB23B1C533001AE0BD /* require.ios.cpp in Sources */,
+				E2E206C323B1C533001AE0BD /* parameter.ios.cpp in Sources */,
 				E26A872721F1B92D00523CCE /* Namespace.cpp in Sources */,
-				E26A86E121F1B92800523CCE /* ocUtils.mm in Sources */,
-				E26A86E021F1B92800523CCE /* console.ios.cpp in Sources */,
-				E26A86D021F1B92800523CCE /* enum.ios.cpp in Sources */,
-				E26A86D121F1B92800523CCE /* environment.ios.cpp in Sources */,
+				E2E206C823B1C533001AE0BD /* object.ios.exp.cpp in Sources */,
+				E2E206C923B1C533001AE0BD /* class.ios.cpp in Sources */,
+				E2E206CC23B1C533001AE0BD /* console.ios.cpp in Sources */,
+				E2E206C223B1C533001AE0BD /* caller.ios.cpp in Sources */,
+				E2E206C023B1C533001AE0BD /* return.ios.exp.cpp in Sources */,
 				E26A872821F1B92D00523CCE /* Namespace.exp.cpp in Sources */,
+				E2E206BD23B1C533001AE0BD /* enum.ios.cpp in Sources */,
+				E2E206C623B1C533001AE0BD /* function.ios.cpp in Sources */,
+				E2E206CA23B1C533001AE0BD /* base.ios.cpp in Sources */,
 				E26A872521F1B92D00523CCE /* Enum.exp.cpp in Sources */,
-				E26A86D821F1B92800523CCE /* argument.ios.cpp in Sources */,
-				E26A86DF21F1B92800523CCE /* require.ios.cpp in Sources */,
-				E26A86DB21F1B92800523CCE /* object.ios.exp.cpp in Sources */,
 				E26A872221F1B92D00523CCE /* Object.exp.cpp in Sources */,
-				E26A86CF21F1B92800523CCE /* property.ios.cpp in Sources */,
+				E2E206C523B1C533001AE0BD /* argument.ios.cpp in Sources */,
 				E26A873121F1B92D00523CCE /* require.cpp in Sources */,
 				E240ED7422CF0ECF00DFF34F /* FileUtility.exp.cpp in Sources */,
-				E26A86D321F1B92800523CCE /* return.ios.exp.cpp in Sources */,
-				E26A86DE21F1B92800523CCE /* typescript.exp.cpp in Sources */,
-				E26A86D621F1B92800523CCE /* parameter.ios.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

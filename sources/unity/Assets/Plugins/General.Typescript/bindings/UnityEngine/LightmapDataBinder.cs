@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,32 +29,32 @@ namespace General.Typescript
 			return default(UnityEngine.LightmapData);
 		}
 
-		static private UnityEngine.Texture2D get_lightmapColor(UnityEngine.LightmapData instance)
+		static private UnityEngine.Texture2D get_lightmapColor(UnityEngine.LightmapData instance, string name)
 		{
 			return instance.lightmapColor;
 		}
 
-		static private void set_lightmapColor(UnityEngine.LightmapData instance, UnityEngine.Texture2D value)
+		static private void set_lightmapColor(UnityEngine.LightmapData instance, string name, UnityEngine.Texture2D value)
 		{
 			instance.lightmapColor = value;
 		}
 
-		static private UnityEngine.Texture2D get_lightmapDir(UnityEngine.LightmapData instance)
+		static private UnityEngine.Texture2D get_lightmapDir(UnityEngine.LightmapData instance, string name)
 		{
 			return instance.lightmapDir;
 		}
 
-		static private void set_lightmapDir(UnityEngine.LightmapData instance, UnityEngine.Texture2D value)
+		static private void set_lightmapDir(UnityEngine.LightmapData instance, string name, UnityEngine.Texture2D value)
 		{
 			instance.lightmapDir = value;
 		}
 
-		static private UnityEngine.Texture2D get_shadowMask(UnityEngine.LightmapData instance)
+		static private UnityEngine.Texture2D get_shadowMask(UnityEngine.LightmapData instance, string name)
 		{
 			return instance.shadowMask;
 		}
 
-		static private void set_shadowMask(UnityEngine.LightmapData instance, UnityEngine.Texture2D value)
+		static private void set_shadowMask(UnityEngine.LightmapData instance, string name, UnityEngine.Texture2D value)
 		{
 			instance.shadowMask = value;
 		}

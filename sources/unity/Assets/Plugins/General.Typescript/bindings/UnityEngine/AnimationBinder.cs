@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,7 +48,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animation);
 		}
 
-		static private void AddClip(UnityEngine.Animation instance, Parameters parameters)
+		static private void AddClip(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AnimationClip, System.String>())
 			{
@@ -79,7 +80,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Blend(UnityEngine.Animation instance, Parameters parameters)
+		static private void Blend(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -111,7 +112,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CrossFade(UnityEngine.Animation instance, Parameters parameters)
+		static private void CrossFade(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -143,7 +144,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.AnimationState CrossFadeQueued(UnityEngine.Animation instance, Parameters parameters)
+		static private UnityEngine.AnimationState CrossFadeQueued(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -177,7 +178,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.AnimationClip GetClip(UnityEngine.Animation instance, Parameters parameters)
+		static private UnityEngine.AnimationClip GetClip(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -199,7 +200,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetClipCount(UnityEngine.Animation instance, Parameters parameters)
+		static private System.Int32 GetClipCount(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -214,7 +215,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Animation instance, Parameters parameters)
+		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -229,7 +230,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsPlaying(UnityEngine.Animation instance, Parameters parameters)
+		static private System.Boolean IsPlaying(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -251,7 +252,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Play(UnityEngine.Animation instance, Parameters parameters)
+		static private System.Boolean Play(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -278,7 +279,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AnimationState PlayQueued(UnityEngine.Animation instance, Parameters parameters)
+		static private UnityEngine.AnimationState PlayQueued(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -308,7 +309,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void RemoveClip(UnityEngine.Animation instance, Parameters parameters)
+		static private void RemoveClip(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AnimationClip>())
 			{
@@ -335,7 +336,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rewind(UnityEngine.Animation instance, Parameters parameters)
+		static private void Rewind(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -354,7 +355,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animation.Rewind has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Sample(UnityEngine.Animation instance, Parameters parameters)
+		static private void Sample(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -368,7 +369,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animation.Sample has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Stop(UnityEngine.Animation instance, Parameters parameters)
+		static private void Stop(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -387,7 +388,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animation.Stop has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SyncLayer(UnityEngine.Animation instance, Parameters parameters)
+		static private void SyncLayer(UnityEngine.Animation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -409,67 +410,67 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.AnimationClip get_clip(UnityEngine.Animation instance)
+		static private UnityEngine.AnimationClip get_clip(UnityEngine.Animation instance, string name)
 		{
 			return instance.clip;
 		}
 
-		static private void set_clip(UnityEngine.Animation instance, UnityEngine.AnimationClip value)
+		static private void set_clip(UnityEngine.Animation instance, string name, UnityEngine.AnimationClip value)
 		{
 			instance.clip = value;
 		}
 
-		static private System.Boolean get_playAutomatically(UnityEngine.Animation instance)
+		static private System.Boolean get_playAutomatically(UnityEngine.Animation instance, string name)
 		{
 			return instance.playAutomatically;
 		}
 
-		static private void set_playAutomatically(UnityEngine.Animation instance, System.Boolean value)
+		static private void set_playAutomatically(UnityEngine.Animation instance, string name, System.Boolean value)
 		{
 			instance.playAutomatically = value;
 		}
 
-		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.Animation instance)
+		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.Animation instance, string name)
 		{
 			return instance.wrapMode;
 		}
 
-		static private void set_wrapMode(UnityEngine.Animation instance, UnityEngine.WrapMode value)
+		static private void set_wrapMode(UnityEngine.Animation instance, string name, UnityEngine.WrapMode value)
 		{
 			instance.wrapMode = value;
 		}
 
-		static private System.Boolean get_isPlaying(UnityEngine.Animation instance)
+		static private System.Boolean get_isPlaying(UnityEngine.Animation instance, string name)
 		{
 			return instance.isPlaying;
 		}
 
-		static private System.Boolean get_animatePhysics(UnityEngine.Animation instance)
+		static private System.Boolean get_animatePhysics(UnityEngine.Animation instance, string name)
 		{
 			return instance.animatePhysics;
 		}
 
-		static private void set_animatePhysics(UnityEngine.Animation instance, System.Boolean value)
+		static private void set_animatePhysics(UnityEngine.Animation instance, string name, System.Boolean value)
 		{
 			instance.animatePhysics = value;
 		}
 
-		static private UnityEngine.AnimationCullingType get_cullingType(UnityEngine.Animation instance)
+		static private UnityEngine.AnimationCullingType get_cullingType(UnityEngine.Animation instance, string name)
 		{
 			return instance.cullingType;
 		}
 
-		static private void set_cullingType(UnityEngine.Animation instance, UnityEngine.AnimationCullingType value)
+		static private void set_cullingType(UnityEngine.Animation instance, string name, UnityEngine.AnimationCullingType value)
 		{
 			instance.cullingType = value;
 		}
 
-		static private UnityEngine.Bounds get_localBounds(UnityEngine.Animation instance)
+		static private UnityEngine.Bounds get_localBounds(UnityEngine.Animation instance, string name)
 		{
 			return instance.localBounds;
 		}
 
-		static private void set_localBounds(UnityEngine.Animation instance, UnityEngine.Bounds value)
+		static private void set_localBounds(UnityEngine.Animation instance, string name, UnityEngine.Bounds value)
 		{
 			instance.localBounds = value;
 		}

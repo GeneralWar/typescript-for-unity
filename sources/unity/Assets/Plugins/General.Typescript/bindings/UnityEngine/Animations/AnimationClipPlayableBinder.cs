@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -18,7 +19,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("SetApplyPlayableIK", SetApplyPlayableIK);
 		}
 
-		static private UnityEngine.Animations.AnimationClipPlayable Create(Parameters parameters)
+		static private UnityEngine.Animations.AnimationClipPlayable Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableGraph, UnityEngine.AnimationClip>())
 			{
@@ -40,7 +41,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.AnimationClipPlayable);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.AnimationClipPlayable>())
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AnimationClip GetAnimationClip(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimationClip GetAnimationClip(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean GetApplyFootIK(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private System.Boolean GetApplyFootIK(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetApplyPlayableIK(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private System.Boolean GetApplyPlayableIK(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -122,7 +123,7 @@ namespace General.Typescript
 			return default(UnityEngine.Playables.PlayableHandle);
 		}
 
-		static private void SetApplyFootIK(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private void SetApplyFootIK(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -144,7 +145,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetApplyPlayableIK(UnityEngine.Animations.AnimationClipPlayable instance, Parameters parameters)
+		static private void SetApplyPlayableIK(UnityEngine.Animations.AnimationClipPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{

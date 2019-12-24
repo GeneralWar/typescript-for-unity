@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(UnityEngine.SparseTexture);
 		}
 
-		static private void UnloadTile(UnityEngine.SparseTexture instance, Parameters parameters)
+		static private void UnloadTile(UnityEngine.SparseTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32>())
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UpdateTile(UnityEngine.SparseTexture instance, Parameters parameters)
+		static private void UpdateTile(UnityEngine.SparseTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32, UnityEngine.Color32[]>())
 			{
@@ -90,7 +91,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UpdateTileRaw(UnityEngine.SparseTexture instance, Parameters parameters)
+		static private void UpdateTileRaw(UnityEngine.SparseTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32, System.Byte[]>())
 			{
@@ -112,17 +113,17 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_tileWidth(UnityEngine.SparseTexture instance)
+		static private System.Int32 get_tileWidth(UnityEngine.SparseTexture instance, string name)
 		{
 			return instance.tileWidth;
 		}
 
-		static private System.Int32 get_tileHeight(UnityEngine.SparseTexture instance)
+		static private System.Int32 get_tileHeight(UnityEngine.SparseTexture instance, string name)
 		{
 			return instance.tileHeight;
 		}
 
-		static private System.Boolean get_isCreated(UnityEngine.SparseTexture instance)
+		static private System.Boolean get_isCreated(UnityEngine.SparseTexture instance, string name)
 		{
 			return instance.isCreated;
 		}

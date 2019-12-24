@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -62,7 +63,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.NetworkStream);
 		}
 
-		static private void Close(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private void Close(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -84,7 +85,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 EndRead(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private System.Int32 EndRead(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -106,7 +107,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void EndWrite(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private void EndWrite(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Flush(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private void Flush(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.NetworkStream.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task FlushAsync(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task FlushAsync(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Threading.CancellationToken>())
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 Read(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private System.Int32 Read(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -186,7 +187,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int64 Seek(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private System.Int64 Seek(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64, System.IO.SeekOrigin>())
 			{
@@ -208,7 +209,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private void SetLength(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private void SetLength(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -230,7 +231,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Write(System.Net.Sockets.NetworkStream instance, Parameters parameters)
+		static private void Write(System.Net.Sockets.NetworkStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -252,62 +253,62 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_CanRead(System.Net.Sockets.NetworkStream instance)
+		static private System.Boolean get_CanRead(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.CanRead;
 		}
 
-		static private System.Boolean get_CanSeek(System.Net.Sockets.NetworkStream instance)
+		static private System.Boolean get_CanSeek(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.CanSeek;
 		}
 
-		static private System.Boolean get_CanWrite(System.Net.Sockets.NetworkStream instance)
+		static private System.Boolean get_CanWrite(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.CanWrite;
 		}
 
-		static private System.Boolean get_CanTimeout(System.Net.Sockets.NetworkStream instance)
+		static private System.Boolean get_CanTimeout(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.CanTimeout;
 		}
 
-		static private System.Int32 get_ReadTimeout(System.Net.Sockets.NetworkStream instance)
+		static private System.Int32 get_ReadTimeout(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.ReadTimeout;
 		}
 
-		static private void set_ReadTimeout(System.Net.Sockets.NetworkStream instance, System.Int32 value)
+		static private void set_ReadTimeout(System.Net.Sockets.NetworkStream instance, string name, System.Int32 value)
 		{
 			instance.ReadTimeout = value;
 		}
 
-		static private System.Int32 get_WriteTimeout(System.Net.Sockets.NetworkStream instance)
+		static private System.Int32 get_WriteTimeout(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.WriteTimeout;
 		}
 
-		static private void set_WriteTimeout(System.Net.Sockets.NetworkStream instance, System.Int32 value)
+		static private void set_WriteTimeout(System.Net.Sockets.NetworkStream instance, string name, System.Int32 value)
 		{
 			instance.WriteTimeout = value;
 		}
 
-		static private System.Boolean get_DataAvailable(System.Net.Sockets.NetworkStream instance)
+		static private System.Boolean get_DataAvailable(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.DataAvailable;
 		}
 
-		static private System.Int64 get_Length(System.Net.Sockets.NetworkStream instance)
+		static private System.Int64 get_Length(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.Length;
 		}
 
-		static private System.Int64 get_Position(System.Net.Sockets.NetworkStream instance)
+		static private System.Int64 get_Position(System.Net.Sockets.NetworkStream instance, string name)
 		{
 			return instance.Position;
 		}
 
-		static private void set_Position(System.Net.Sockets.NetworkStream instance, System.Int64 value)
+		static private void set_Position(System.Net.Sockets.NetworkStream instance, string name, System.Int64 value)
 		{
 			instance.Position = value;
 		}

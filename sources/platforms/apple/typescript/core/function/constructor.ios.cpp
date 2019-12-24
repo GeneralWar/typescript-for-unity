@@ -17,7 +17,7 @@ std::map<std::string, JSObjectRef> sConstructors;
 void CheckConstructors(JSContextRef context, const JSValueRef& handle)
 {
     JSValueRef exception = 0;
-    JSObjectRef target = JSValueToObject(context, handle, &exception);
+    JSObjectRef target = ValueToObject(context, handle);
     JSPropertyNameArrayRef propertyNames = JSObjectCopyPropertyNames(context, target);
     size_t count = JSPropertyNameArrayGetCount(propertyNames);
     for (size_t i = 0; i < count; ++i)
@@ -32,7 +32,7 @@ void CheckConstructors(JSContextRef context, const JSValueRef& handle)
         }
         if (!property) continue;
         
-        JSObjectRef propertyObject = JSValueToObject(context, property, &exception);
+        JSObjectRef propertyObject = ValueToObject(context, property);
         if (JSObjectIsConstructor(context, propertyObject))
         {
             std::string name = GetObjectPropertyWithString(context, propertyObject, "name");
@@ -63,12 +63,12 @@ JSObjectRef InstantiateObject(JSContextRef context, const std::string& name)
             LogError(JSValue_To_String(context, exception));
         }
 
-        JSObjectRef prototype = JSValueToObject(context, GetObjectProperty(context, constructor, "prototype"), &exception);
+        JSObjectRef prototype = ValueToObject(context, GetObjectProperty(context, constructor, "prototype"));
         if (exception)
         {
             LogError(JSValue_To_String(context, exception));
         }
-        JSObjectSetPrototype(context, JSValueToObject(context, instance, 0), prototype);
+        JSObjectSetPrototype(context, ValueToObject(context, instance), prototype);
     }
     return instance;
 }

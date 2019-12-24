@@ -54,7 +54,7 @@ char* General_Typescript_Caller_GetTypeName(void* environment, int index)
 	if (value.IsEmpty() || !value->IsObject()) return ReturnStringToCSharp("");
 
 	const std::string type = GetObjectType(value.As<Object>());
-	DEBUG_LOG("Get caller type for %d : %s", index, type.c_str());
+	DEBUG_LOG("Get caller type for %d : %s\n", index, type.c_str());
 	return ReturnStringToCSharp(type);
 }
 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -13,32 +14,32 @@ namespace General.Typescript
 			self.BindInstanceProperty("contactDistance", get_contactDistance, set_contactDistance);
 		}
 
-		static private System.Single get_limit(UnityEngine.SoftJointLimit instance)
+		static private System.Single get_limit(UnityEngine.SoftJointLimit instance, string name)
 		{
 			return instance.limit;
 		}
 
-		static private void set_limit(UnityEngine.SoftJointLimit instance, System.Single value)
+		static private void set_limit(UnityEngine.SoftJointLimit instance, string name, System.Single value)
 		{
 			instance.limit = value;
 		}
 
-		static private System.Single get_bounciness(UnityEngine.SoftJointLimit instance)
+		static private System.Single get_bounciness(UnityEngine.SoftJointLimit instance, string name)
 		{
 			return instance.bounciness;
 		}
 
-		static private void set_bounciness(UnityEngine.SoftJointLimit instance, System.Single value)
+		static private void set_bounciness(UnityEngine.SoftJointLimit instance, string name, System.Single value)
 		{
 			instance.bounciness = value;
 		}
 
-		static private System.Single get_contactDistance(UnityEngine.SoftJointLimit instance)
+		static private System.Single get_contactDistance(UnityEngine.SoftJointLimit instance, string name)
 		{
 			return instance.contactDistance;
 		}
 
-		static private void set_contactDistance(UnityEngine.SoftJointLimit instance, System.Single value)
+		static private void set_contactDistance(UnityEngine.SoftJointLimit instance, string name, System.Single value)
 		{
 			instance.contactDistance = value;
 		}

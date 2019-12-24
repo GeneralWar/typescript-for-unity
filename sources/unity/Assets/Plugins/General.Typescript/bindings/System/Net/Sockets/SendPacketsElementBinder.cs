@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -57,27 +58,27 @@ namespace General.Typescript
 			return default(System.Net.Sockets.SendPacketsElement);
 		}
 
-		static private System.String get_FilePath(System.Net.Sockets.SendPacketsElement instance)
+		static private System.String get_FilePath(System.Net.Sockets.SendPacketsElement instance, string name)
 		{
 			return instance.FilePath;
 		}
 
-		static private System.Byte[] get_Buffer(System.Net.Sockets.SendPacketsElement instance)
+		static private System.Byte[] get_Buffer(System.Net.Sockets.SendPacketsElement instance, string name)
 		{
 			return instance.Buffer;
 		}
 
-		static private System.Int32 get_Count(System.Net.Sockets.SendPacketsElement instance)
+		static private System.Int32 get_Count(System.Net.Sockets.SendPacketsElement instance, string name)
 		{
 			return instance.Count;
 		}
 
-		static private System.Int32 get_Offset(System.Net.Sockets.SendPacketsElement instance)
+		static private System.Int32 get_Offset(System.Net.Sockets.SendPacketsElement instance, string name)
 		{
 			return instance.Offset;
 		}
 
-		static private System.Boolean get_EndOfPacket(System.Net.Sockets.SendPacketsElement instance)
+		static private System.Boolean get_EndOfPacket(System.Net.Sockets.SendPacketsElement instance, string name)
 		{
 			return instance.EndOfPacket;
 		}

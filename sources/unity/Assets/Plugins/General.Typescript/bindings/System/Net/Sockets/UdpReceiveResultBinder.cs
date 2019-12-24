@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.UdpReceiveResult);
 		}
 
-		static private System.Boolean Equals(System.Net.Sockets.UdpReceiveResult instance, Parameters parameters)
+		static private System.Boolean Equals(System.Net.Sockets.UdpReceiveResult instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(System.Net.Sockets.UdpReceiveResult instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Net.Sockets.UdpReceiveResult instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,12 +78,12 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Byte[] get_Buffer(System.Net.Sockets.UdpReceiveResult instance)
+		static private System.Byte[] get_Buffer(System.Net.Sockets.UdpReceiveResult instance, string name)
 		{
 			return instance.Buffer;
 		}
 
-		static private System.Net.IPEndPoint get_RemoteEndPoint(System.Net.Sockets.UdpReceiveResult instance)
+		static private System.Net.IPEndPoint get_RemoteEndPoint(System.Net.Sockets.UdpReceiveResult instance, string name)
 		{
 			return instance.RemoteEndPoint;
 		}

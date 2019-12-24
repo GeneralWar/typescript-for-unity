@@ -31,7 +31,7 @@ Local<Template> GetTemplate(Base* base)
 		ReferenceWindows* reference = reinterpret_cast<ReferenceWindows*>(base->GetReference());
 		if (reference)
 		{
-			return reference->GetReference();
+			return reference->GetTemplate();
 		}
 	}
 	return Local<Template>();
@@ -88,7 +88,7 @@ double ValueToDouble(Local<Value>& value)
 
 char* ReturnStringToCSharp(const char* value)
 {
-	DEBUG_LOG("Return string to csharp : %s", value);
+	DEBUG_LOG("Return string to csharp : %s\n", value);
 	const char* origin = value ? value : "";
 	size_t length = strlen(origin) + 1;
 	char* buffer = new char[length];

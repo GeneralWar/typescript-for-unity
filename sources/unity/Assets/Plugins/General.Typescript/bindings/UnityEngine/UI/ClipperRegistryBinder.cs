@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindStaticProperty("instance", get_instance, null);
 		}
 
-		static private void Register(Parameters parameters)
+		static private void Register(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.IClipper>())
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Unregister(Parameters parameters)
+		static private void Unregister(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.IClipper>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Cull(UnityEngine.UI.ClipperRegistry instance, Parameters parameters)
+		static private void Cull(UnityEngine.UI.ClipperRegistry instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -72,7 +73,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ClipperRegistry.Cull has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.UI.ClipperRegistry get_instance()
+		static private UnityEngine.UI.ClipperRegistry get_instance(Type type, string name)
 		{
 			return UnityEngine.UI.ClipperRegistry.instance;
 		}

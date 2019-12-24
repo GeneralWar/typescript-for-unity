@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,47 +35,47 @@ namespace General.Typescript
 			return default(UnityEngine.ControllerColliderHit);
 		}
 
-		static private UnityEngine.CharacterController get_controller(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.CharacterController get_controller(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.controller;
 		}
 
-		static private UnityEngine.Collider get_collider(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Collider get_collider(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.collider;
 		}
 
-		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.rigidbody;
 		}
 
-		static private UnityEngine.GameObject get_gameObject(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.GameObject get_gameObject(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.gameObject;
 		}
 
-		static private UnityEngine.Transform get_transform(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Transform get_transform(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.transform;
 		}
 
-		static private UnityEngine.Vector3 get_point(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Vector3 get_point(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.point;
 		}
 
-		static private UnityEngine.Vector3 get_normal(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Vector3 get_normal(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.normal;
 		}
 
-		static private UnityEngine.Vector3 get_moveDirection(UnityEngine.ControllerColliderHit instance)
+		static private UnityEngine.Vector3 get_moveDirection(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.moveDirection;
 		}
 
-		static private System.Single get_moveLength(UnityEngine.ControllerColliderHit instance)
+		static private System.Single get_moveLength(UnityEngine.ControllerColliderHit instance, string name)
 		{
 			return instance.moveLength;
 		}

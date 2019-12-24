@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,62 +39,62 @@ namespace General.Typescript
 			return default(UnityEngine.CapsulecastCommand);
 		}
 
-		static private UnityEngine.Vector3 get_point1(UnityEngine.CapsulecastCommand instance)
+		static private UnityEngine.Vector3 get_point1(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.point1;
 		}
 
-		static private void set_point1(UnityEngine.CapsulecastCommand instance, UnityEngine.Vector3 value)
+		static private void set_point1(UnityEngine.CapsulecastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.point1 = value;
 		}
 
-		static private UnityEngine.Vector3 get_point2(UnityEngine.CapsulecastCommand instance)
+		static private UnityEngine.Vector3 get_point2(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.point2;
 		}
 
-		static private void set_point2(UnityEngine.CapsulecastCommand instance, UnityEngine.Vector3 value)
+		static private void set_point2(UnityEngine.CapsulecastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.point2 = value;
 		}
 
-		static private System.Single get_radius(UnityEngine.CapsulecastCommand instance)
+		static private System.Single get_radius(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.radius;
 		}
 
-		static private void set_radius(UnityEngine.CapsulecastCommand instance, System.Single value)
+		static private void set_radius(UnityEngine.CapsulecastCommand instance, string name, System.Single value)
 		{
 			instance.radius = value;
 		}
 
-		static private UnityEngine.Vector3 get_direction(UnityEngine.CapsulecastCommand instance)
+		static private UnityEngine.Vector3 get_direction(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.CapsulecastCommand instance, UnityEngine.Vector3 value)
+		static private void set_direction(UnityEngine.CapsulecastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.direction = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.CapsulecastCommand instance)
+		static private System.Single get_distance(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.CapsulecastCommand instance, System.Single value)
+		static private void set_distance(UnityEngine.CapsulecastCommand instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private System.Int32 get_layerMask(UnityEngine.CapsulecastCommand instance)
+		static private System.Int32 get_layerMask(UnityEngine.CapsulecastCommand instance, string name)
 		{
 			return instance.layerMask;
 		}
 
-		static private void set_layerMask(UnityEngine.CapsulecastCommand instance, System.Int32 value)
+		static private void set_layerMask(UnityEngine.CapsulecastCommand instance, string name, System.Int32 value)
 		{
 			instance.layerMask = value;
 		}

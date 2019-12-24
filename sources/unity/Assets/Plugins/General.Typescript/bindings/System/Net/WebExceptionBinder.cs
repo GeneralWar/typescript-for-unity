@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(System.Net.WebException);
 		}
 
-		static private void GetObjectData(System.Net.WebException instance, Parameters parameters)
+		static private void GetObjectData(System.Net.WebException instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext>())
 			{
@@ -66,12 +67,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Net.WebExceptionStatus get_Status(System.Net.WebException instance)
+		static private System.Net.WebExceptionStatus get_Status(System.Net.WebException instance, string name)
 		{
 			return instance.Status;
 		}
 
-		static private System.Net.WebResponse get_Response(System.Net.WebException instance)
+		static private System.Net.WebResponse get_Response(System.Net.WebException instance, string name)
 		{
 			return instance.Response;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,22 +39,22 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.LoadSceneParameters);
 		}
 
-		static private UnityEngine.SceneManagement.LoadSceneMode get_loadSceneMode(UnityEngine.SceneManagement.LoadSceneParameters instance)
+		static private UnityEngine.SceneManagement.LoadSceneMode get_loadSceneMode(UnityEngine.SceneManagement.LoadSceneParameters instance, string name)
 		{
 			return instance.loadSceneMode;
 		}
 
-		static private void set_loadSceneMode(UnityEngine.SceneManagement.LoadSceneParameters instance, UnityEngine.SceneManagement.LoadSceneMode value)
+		static private void set_loadSceneMode(UnityEngine.SceneManagement.LoadSceneParameters instance, string name, UnityEngine.SceneManagement.LoadSceneMode value)
 		{
 			instance.loadSceneMode = value;
 		}
 
-		static private UnityEngine.SceneManagement.LocalPhysicsMode get_localPhysicsMode(UnityEngine.SceneManagement.LoadSceneParameters instance)
+		static private UnityEngine.SceneManagement.LocalPhysicsMode get_localPhysicsMode(UnityEngine.SceneManagement.LoadSceneParameters instance, string name)
 		{
 			return instance.localPhysicsMode;
 		}
 
-		static private void set_localPhysicsMode(UnityEngine.SceneManagement.LoadSceneParameters instance, UnityEngine.SceneManagement.LocalPhysicsMode value)
+		static private void set_localPhysicsMode(UnityEngine.SceneManagement.LoadSceneParameters instance, string name, UnityEngine.SceneManagement.LocalPhysicsMode value)
 		{
 			instance.localPhysicsMode = value;
 		}

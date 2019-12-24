@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.CullingGroup);
 		}
 
-		static private void Dispose(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void Dispose(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -50,7 +51,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CullingGroup.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void EraseSwapBack(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void EraseSwapBack(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -72,7 +73,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 GetDistance(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private System.Int32 GetDistance(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -94,7 +95,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean IsVisible(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private System.Boolean IsVisible(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -116,7 +117,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 QueryIndices(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private System.Int32 QueryIndices(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean, System.Int32[], System.Int32>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetBoundingDistances(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void SetBoundingDistances(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single[]>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBoundingSphereCount(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void SetBoundingSphereCount(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -190,7 +191,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBoundingSpheres(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void SetBoundingSpheres(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.BoundingSphere[]>())
 			{
@@ -212,7 +213,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetDistanceReferencePoint(UnityEngine.CullingGroup instance, Parameters parameters)
+		static private void SetDistanceReferencePoint(UnityEngine.CullingGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -239,22 +240,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.CullingGroup instance)
+		static private System.Boolean get_enabled(UnityEngine.CullingGroup instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.CullingGroup instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.CullingGroup instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}
 
-		static private UnityEngine.Camera get_targetCamera(UnityEngine.CullingGroup instance)
+		static private UnityEngine.Camera get_targetCamera(UnityEngine.CullingGroup instance, string name)
 		{
 			return instance.targetCamera;
 		}
 
-		static private void set_targetCamera(UnityEngine.CullingGroup instance, UnityEngine.Camera value)
+		static private void set_targetCamera(UnityEngine.CullingGroup instance, string name, UnityEngine.Camera value)
 		{
 			instance.targetCamera = value;
 		}

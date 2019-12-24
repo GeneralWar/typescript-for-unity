@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(UnityEngine.Random);
 		}
 
-		static private UnityEngine.Color ColorHSV(Parameters parameters)
+		static private UnityEngine.Color ColorHSV(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private void InitState(Parameters parameters)
+		static private void InitState(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Object Range(Parameters parameters)
+		static private System.Object Range(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -113,32 +114,32 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single get_value()
+		static private System.Single get_value(Type type, string name)
 		{
 			return UnityEngine.Random.value;
 		}
 
-		static private UnityEngine.Vector3 get_insideUnitSphere()
+		static private UnityEngine.Vector3 get_insideUnitSphere(Type type, string name)
 		{
 			return UnityEngine.Random.insideUnitSphere;
 		}
 
-		static private UnityEngine.Vector2 get_insideUnitCircle()
+		static private UnityEngine.Vector2 get_insideUnitCircle(Type type, string name)
 		{
 			return UnityEngine.Random.insideUnitCircle;
 		}
 
-		static private UnityEngine.Vector3 get_onUnitSphere()
+		static private UnityEngine.Vector3 get_onUnitSphere(Type type, string name)
 		{
 			return UnityEngine.Random.onUnitSphere;
 		}
 
-		static private UnityEngine.Quaternion get_rotation()
+		static private UnityEngine.Quaternion get_rotation(Type type, string name)
 		{
 			return UnityEngine.Random.rotation;
 		}
 
-		static private UnityEngine.Quaternion get_rotationUniform()
+		static private UnityEngine.Quaternion get_rotationUniform(Type type, string name)
 		{
 			return UnityEngine.Random.rotationUniform;
 		}

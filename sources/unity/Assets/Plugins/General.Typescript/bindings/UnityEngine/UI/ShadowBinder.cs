@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("useGraphicAlpha", get_useGraphicAlpha, set_useGraphicAlpha);
 		}
 
-		static private void ModifyMesh(UnityEngine.UI.Shadow instance, Parameters parameters)
+		static private void ModifyMesh(UnityEngine.UI.Shadow instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.VertexHelper>())
 			{
@@ -36,32 +37,32 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Color get_effectColor(UnityEngine.UI.Shadow instance)
+		static private UnityEngine.Color get_effectColor(UnityEngine.UI.Shadow instance, string name)
 		{
 			return instance.effectColor;
 		}
 
-		static private void set_effectColor(UnityEngine.UI.Shadow instance, UnityEngine.Color value)
+		static private void set_effectColor(UnityEngine.UI.Shadow instance, string name, UnityEngine.Color value)
 		{
 			instance.effectColor = value;
 		}
 
-		static private UnityEngine.Vector2 get_effectDistance(UnityEngine.UI.Shadow instance)
+		static private UnityEngine.Vector2 get_effectDistance(UnityEngine.UI.Shadow instance, string name)
 		{
 			return instance.effectDistance;
 		}
 
-		static private void set_effectDistance(UnityEngine.UI.Shadow instance, UnityEngine.Vector2 value)
+		static private void set_effectDistance(UnityEngine.UI.Shadow instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.effectDistance = value;
 		}
 
-		static private System.Boolean get_useGraphicAlpha(UnityEngine.UI.Shadow instance)
+		static private System.Boolean get_useGraphicAlpha(UnityEngine.UI.Shadow instance, string name)
 		{
 			return instance.useGraphicAlpha;
 		}
 
-		static private void set_useGraphicAlpha(UnityEngine.UI.Shadow instance, System.Boolean value)
+		static private void set_useGraphicAlpha(UnityEngine.UI.Shadow instance, string name, System.Boolean value)
 		{
 			instance.useGraphicAlpha = value;
 		}

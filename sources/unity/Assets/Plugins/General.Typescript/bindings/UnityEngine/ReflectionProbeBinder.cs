@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -57,7 +58,7 @@ namespace General.Typescript
 			return default(UnityEngine.ReflectionProbe);
 		}
 
-		static private System.Boolean BlendCubemap(Parameters parameters)
+		static private System.Boolean BlendCubemap(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.Texture, System.Single, UnityEngine.RenderTexture>())
 			{
@@ -79,7 +80,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsFinishedRendering(UnityEngine.ReflectionProbe instance, Parameters parameters)
+		static private System.Boolean IsFinishedRendering(UnityEngine.ReflectionProbe instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -101,7 +102,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 RenderProbe(UnityEngine.ReflectionProbe instance, Parameters parameters)
+		static private System.Int32 RenderProbe(UnityEngine.ReflectionProbe instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Reset(UnityEngine.ReflectionProbe instance, Parameters parameters)
+		static private void Reset(UnityEngine.ReflectionProbe instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -134,237 +135,237 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.ReflectionProbe.Reset has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 get_minBakedCubemapResolution()
+		static private System.Int32 get_minBakedCubemapResolution(Type type, string name)
 		{
 			return UnityEngine.ReflectionProbe.minBakedCubemapResolution;
 		}
 
-		static private System.Int32 get_maxBakedCubemapResolution()
+		static private System.Int32 get_maxBakedCubemapResolution(Type type, string name)
 		{
 			return UnityEngine.ReflectionProbe.maxBakedCubemapResolution;
 		}
 
-		static private UnityEngine.Vector4 get_defaultTextureHDRDecodeValues()
+		static private UnityEngine.Vector4 get_defaultTextureHDRDecodeValues(Type type, string name)
 		{
 			return UnityEngine.ReflectionProbe.defaultTextureHDRDecodeValues;
 		}
 
-		static private UnityEngine.Texture get_defaultTexture()
+		static private UnityEngine.Texture get_defaultTexture(Type type, string name)
 		{
 			return UnityEngine.ReflectionProbe.defaultTexture;
 		}
 
-		static private UnityEngine.Vector3 get_size(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Vector3 get_size(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.ReflectionProbe instance, UnityEngine.Vector3 value)
+		static private void set_size(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.size = value;
 		}
 
-		static private UnityEngine.RenderTexture get_realtimeTexture(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.RenderTexture get_realtimeTexture(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.realtimeTexture;
 		}
 
-		static private void set_realtimeTexture(UnityEngine.ReflectionProbe instance, UnityEngine.RenderTexture value)
+		static private void set_realtimeTexture(UnityEngine.ReflectionProbe instance, string name, UnityEngine.RenderTexture value)
 		{
 			instance.realtimeTexture = value;
 		}
 
-		static private UnityEngine.Texture get_customBakedTexture(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Texture get_customBakedTexture(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.customBakedTexture;
 		}
 
-		static private void set_customBakedTexture(UnityEngine.ReflectionProbe instance, UnityEngine.Texture value)
+		static private void set_customBakedTexture(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Texture value)
 		{
 			instance.customBakedTexture = value;
 		}
 
-		static private UnityEngine.Texture get_bakedTexture(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Texture get_bakedTexture(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.bakedTexture;
 		}
 
-		static private void set_bakedTexture(UnityEngine.ReflectionProbe instance, UnityEngine.Texture value)
+		static private void set_bakedTexture(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Texture value)
 		{
 			instance.bakedTexture = value;
 		}
 
-		static private UnityEngine.Rendering.ReflectionProbeTimeSlicingMode get_timeSlicingMode(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Rendering.ReflectionProbeTimeSlicingMode get_timeSlicingMode(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.timeSlicingMode;
 		}
 
-		static private void set_timeSlicingMode(UnityEngine.ReflectionProbe instance, UnityEngine.Rendering.ReflectionProbeTimeSlicingMode value)
+		static private void set_timeSlicingMode(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Rendering.ReflectionProbeTimeSlicingMode value)
 		{
 			instance.timeSlicingMode = value;
 		}
 
-		static private UnityEngine.Rendering.ReflectionProbeRefreshMode get_refreshMode(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Rendering.ReflectionProbeRefreshMode get_refreshMode(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.refreshMode;
 		}
 
-		static private void set_refreshMode(UnityEngine.ReflectionProbe instance, UnityEngine.Rendering.ReflectionProbeRefreshMode value)
+		static private void set_refreshMode(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Rendering.ReflectionProbeRefreshMode value)
 		{
 			instance.refreshMode = value;
 		}
 
-		static private System.Int32 get_importance(UnityEngine.ReflectionProbe instance)
+		static private System.Int32 get_importance(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.importance;
 		}
 
-		static private void set_importance(UnityEngine.ReflectionProbe instance, System.Int32 value)
+		static private void set_importance(UnityEngine.ReflectionProbe instance, string name, System.Int32 value)
 		{
 			instance.importance = value;
 		}
 
-		static private UnityEngine.Rendering.ReflectionProbeMode get_mode(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Rendering.ReflectionProbeMode get_mode(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.mode;
 		}
 
-		static private void set_mode(UnityEngine.ReflectionProbe instance, UnityEngine.Rendering.ReflectionProbeMode value)
+		static private void set_mode(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Rendering.ReflectionProbeMode value)
 		{
 			instance.mode = value;
 		}
 
-		static private System.Boolean get_boxProjection(UnityEngine.ReflectionProbe instance)
+		static private System.Boolean get_boxProjection(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.boxProjection;
 		}
 
-		static private void set_boxProjection(UnityEngine.ReflectionProbe instance, System.Boolean value)
+		static private void set_boxProjection(UnityEngine.ReflectionProbe instance, string name, System.Boolean value)
 		{
 			instance.boxProjection = value;
 		}
 
-		static private System.Single get_blendDistance(UnityEngine.ReflectionProbe instance)
+		static private System.Single get_blendDistance(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.blendDistance;
 		}
 
-		static private void set_blendDistance(UnityEngine.ReflectionProbe instance, System.Single value)
+		static private void set_blendDistance(UnityEngine.ReflectionProbe instance, string name, System.Single value)
 		{
 			instance.blendDistance = value;
 		}
 
-		static private UnityEngine.Texture get_texture(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Texture get_texture(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.texture;
 		}
 
-		static private UnityEngine.Color get_backgroundColor(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Color get_backgroundColor(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.backgroundColor;
 		}
 
-		static private void set_backgroundColor(UnityEngine.ReflectionProbe instance, UnityEngine.Color value)
+		static private void set_backgroundColor(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Color value)
 		{
 			instance.backgroundColor = value;
 		}
 
-		static private System.Int32 get_cullingMask(UnityEngine.ReflectionProbe instance)
+		static private System.Int32 get_cullingMask(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.cullingMask;
 		}
 
-		static private void set_cullingMask(UnityEngine.ReflectionProbe instance, System.Int32 value)
+		static private void set_cullingMask(UnityEngine.ReflectionProbe instance, string name, System.Int32 value)
 		{
 			instance.cullingMask = value;
 		}
 
-		static private System.Int32 get_resolution(UnityEngine.ReflectionProbe instance)
+		static private System.Int32 get_resolution(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.resolution;
 		}
 
-		static private void set_resolution(UnityEngine.ReflectionProbe instance, System.Int32 value)
+		static private void set_resolution(UnityEngine.ReflectionProbe instance, string name, System.Int32 value)
 		{
 			instance.resolution = value;
 		}
 
-		static private System.Single get_shadowDistance(UnityEngine.ReflectionProbe instance)
+		static private System.Single get_shadowDistance(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.shadowDistance;
 		}
 
-		static private void set_shadowDistance(UnityEngine.ReflectionProbe instance, System.Single value)
+		static private void set_shadowDistance(UnityEngine.ReflectionProbe instance, string name, System.Single value)
 		{
 			instance.shadowDistance = value;
 		}
 
-		static private System.Boolean get_hdr(UnityEngine.ReflectionProbe instance)
+		static private System.Boolean get_hdr(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.hdr;
 		}
 
-		static private void set_hdr(UnityEngine.ReflectionProbe instance, System.Boolean value)
+		static private void set_hdr(UnityEngine.ReflectionProbe instance, string name, System.Boolean value)
 		{
 			instance.hdr = value;
 		}
 
-		static private UnityEngine.Bounds get_bounds(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Bounds get_bounds(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.bounds;
 		}
 
-		static private System.Single get_intensity(UnityEngine.ReflectionProbe instance)
+		static private System.Single get_intensity(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.intensity;
 		}
 
-		static private void set_intensity(UnityEngine.ReflectionProbe instance, System.Single value)
+		static private void set_intensity(UnityEngine.ReflectionProbe instance, string name, System.Single value)
 		{
 			instance.intensity = value;
 		}
 
-		static private System.Single get_farClipPlane(UnityEngine.ReflectionProbe instance)
+		static private System.Single get_farClipPlane(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.farClipPlane;
 		}
 
-		static private void set_farClipPlane(UnityEngine.ReflectionProbe instance, System.Single value)
+		static private void set_farClipPlane(UnityEngine.ReflectionProbe instance, string name, System.Single value)
 		{
 			instance.farClipPlane = value;
 		}
 
-		static private System.Single get_nearClipPlane(UnityEngine.ReflectionProbe instance)
+		static private System.Single get_nearClipPlane(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.nearClipPlane;
 		}
 
-		static private void set_nearClipPlane(UnityEngine.ReflectionProbe instance, System.Single value)
+		static private void set_nearClipPlane(UnityEngine.ReflectionProbe instance, string name, System.Single value)
 		{
 			instance.nearClipPlane = value;
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.ReflectionProbe instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private UnityEngine.Rendering.ReflectionProbeClearFlags get_clearFlags(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Rendering.ReflectionProbeClearFlags get_clearFlags(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.clearFlags;
 		}
 
-		static private void set_clearFlags(UnityEngine.ReflectionProbe instance, UnityEngine.Rendering.ReflectionProbeClearFlags value)
+		static private void set_clearFlags(UnityEngine.ReflectionProbe instance, string name, UnityEngine.Rendering.ReflectionProbeClearFlags value)
 		{
 			instance.clearFlags = value;
 		}
 
-		static private UnityEngine.Vector4 get_textureHDRDecodeValues(UnityEngine.ReflectionProbe instance)
+		static private UnityEngine.Vector4 get_textureHDRDecodeValues(UnityEngine.ReflectionProbe instance, string name)
 		{
 			return instance.textureHDRDecodeValues;
 		}

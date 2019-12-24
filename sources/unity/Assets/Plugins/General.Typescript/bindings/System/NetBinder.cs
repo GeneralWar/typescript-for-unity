@@ -29,7 +29,6 @@ namespace General.Typescript
 			SystemNetUploadProgressChangedEventArgs.Bind(self);
 			SystemNetUploadStringCompletedEventArgs.Bind(self);
 			SystemNetUploadValuesCompletedEventArgs.Bind(self);
-			SystemNetWebClient.Bind(self);
 			SystemNetWebException.Bind(self);
 			SystemNetWebExceptionStatus.Bind(self);
 			SystemNetWebHeaderCollection.Bind(self);

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,7 +18,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("selectOnRight", get_selectOnRight, set_selectOnRight);
 		}
 
-		static private System.Boolean Equals(UnityEngine.UI.Navigation instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.UI.Navigation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Navigation>())
 			{
@@ -39,47 +40,47 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.UI.Navigation get_defaultNavigation()
+		static private UnityEngine.UI.Navigation get_defaultNavigation(Type type, string name)
 		{
 			return UnityEngine.UI.Navigation.defaultNavigation;
 		}
 
-		static private UnityEngine.UI.Selectable get_selectOnUp(UnityEngine.UI.Navigation instance)
+		static private UnityEngine.UI.Selectable get_selectOnUp(UnityEngine.UI.Navigation instance, string name)
 		{
 			return instance.selectOnUp;
 		}
 
-		static private void set_selectOnUp(UnityEngine.UI.Navigation instance, UnityEngine.UI.Selectable value)
+		static private void set_selectOnUp(UnityEngine.UI.Navigation instance, string name, UnityEngine.UI.Selectable value)
 		{
 			instance.selectOnUp = value;
 		}
 
-		static private UnityEngine.UI.Selectable get_selectOnDown(UnityEngine.UI.Navigation instance)
+		static private UnityEngine.UI.Selectable get_selectOnDown(UnityEngine.UI.Navigation instance, string name)
 		{
 			return instance.selectOnDown;
 		}
 
-		static private void set_selectOnDown(UnityEngine.UI.Navigation instance, UnityEngine.UI.Selectable value)
+		static private void set_selectOnDown(UnityEngine.UI.Navigation instance, string name, UnityEngine.UI.Selectable value)
 		{
 			instance.selectOnDown = value;
 		}
 
-		static private UnityEngine.UI.Selectable get_selectOnLeft(UnityEngine.UI.Navigation instance)
+		static private UnityEngine.UI.Selectable get_selectOnLeft(UnityEngine.UI.Navigation instance, string name)
 		{
 			return instance.selectOnLeft;
 		}
 
-		static private void set_selectOnLeft(UnityEngine.UI.Navigation instance, UnityEngine.UI.Selectable value)
+		static private void set_selectOnLeft(UnityEngine.UI.Navigation instance, string name, UnityEngine.UI.Selectable value)
 		{
 			instance.selectOnLeft = value;
 		}
 
-		static private UnityEngine.UI.Selectable get_selectOnRight(UnityEngine.UI.Navigation instance)
+		static private UnityEngine.UI.Selectable get_selectOnRight(UnityEngine.UI.Navigation instance, string name)
 		{
 			return instance.selectOnRight;
 		}
 
-		static private void set_selectOnRight(UnityEngine.UI.Navigation instance, UnityEngine.UI.Selectable value)
+		static private void set_selectOnRight(UnityEngine.UI.Navigation instance, string name, UnityEngine.UI.Selectable value)
 		{
 			instance.selectOnRight = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,127 +39,127 @@ namespace General.Typescript
 			return default(UnityEngine.UI.FontData);
 		}
 
-		static private UnityEngine.UI.FontData get_defaultFontData()
+		static private UnityEngine.UI.FontData get_defaultFontData(Type type, string name)
 		{
 			return UnityEngine.UI.FontData.defaultFontData;
 		}
 
-		static private UnityEngine.Font get_font(UnityEngine.UI.FontData instance)
+		static private UnityEngine.Font get_font(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.font;
 		}
 
-		static private void set_font(UnityEngine.UI.FontData instance, UnityEngine.Font value)
+		static private void set_font(UnityEngine.UI.FontData instance, string name, UnityEngine.Font value)
 		{
 			instance.font = value;
 		}
 
-		static private System.Int32 get_fontSize(UnityEngine.UI.FontData instance)
+		static private System.Int32 get_fontSize(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.fontSize;
 		}
 
-		static private void set_fontSize(UnityEngine.UI.FontData instance, System.Int32 value)
+		static private void set_fontSize(UnityEngine.UI.FontData instance, string name, System.Int32 value)
 		{
 			instance.fontSize = value;
 		}
 
-		static private UnityEngine.FontStyle get_fontStyle(UnityEngine.UI.FontData instance)
+		static private UnityEngine.FontStyle get_fontStyle(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.fontStyle;
 		}
 
-		static private void set_fontStyle(UnityEngine.UI.FontData instance, UnityEngine.FontStyle value)
+		static private void set_fontStyle(UnityEngine.UI.FontData instance, string name, UnityEngine.FontStyle value)
 		{
 			instance.fontStyle = value;
 		}
 
-		static private System.Boolean get_bestFit(UnityEngine.UI.FontData instance)
+		static private System.Boolean get_bestFit(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.bestFit;
 		}
 
-		static private void set_bestFit(UnityEngine.UI.FontData instance, System.Boolean value)
+		static private void set_bestFit(UnityEngine.UI.FontData instance, string name, System.Boolean value)
 		{
 			instance.bestFit = value;
 		}
 
-		static private System.Int32 get_minSize(UnityEngine.UI.FontData instance)
+		static private System.Int32 get_minSize(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.minSize;
 		}
 
-		static private void set_minSize(UnityEngine.UI.FontData instance, System.Int32 value)
+		static private void set_minSize(UnityEngine.UI.FontData instance, string name, System.Int32 value)
 		{
 			instance.minSize = value;
 		}
 
-		static private System.Int32 get_maxSize(UnityEngine.UI.FontData instance)
+		static private System.Int32 get_maxSize(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.maxSize;
 		}
 
-		static private void set_maxSize(UnityEngine.UI.FontData instance, System.Int32 value)
+		static private void set_maxSize(UnityEngine.UI.FontData instance, string name, System.Int32 value)
 		{
 			instance.maxSize = value;
 		}
 
-		static private UnityEngine.TextAnchor get_alignment(UnityEngine.UI.FontData instance)
+		static private UnityEngine.TextAnchor get_alignment(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.alignment;
 		}
 
-		static private void set_alignment(UnityEngine.UI.FontData instance, UnityEngine.TextAnchor value)
+		static private void set_alignment(UnityEngine.UI.FontData instance, string name, UnityEngine.TextAnchor value)
 		{
 			instance.alignment = value;
 		}
 
-		static private System.Boolean get_alignByGeometry(UnityEngine.UI.FontData instance)
+		static private System.Boolean get_alignByGeometry(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.alignByGeometry;
 		}
 
-		static private void set_alignByGeometry(UnityEngine.UI.FontData instance, System.Boolean value)
+		static private void set_alignByGeometry(UnityEngine.UI.FontData instance, string name, System.Boolean value)
 		{
 			instance.alignByGeometry = value;
 		}
 
-		static private System.Boolean get_richText(UnityEngine.UI.FontData instance)
+		static private System.Boolean get_richText(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.richText;
 		}
 
-		static private void set_richText(UnityEngine.UI.FontData instance, System.Boolean value)
+		static private void set_richText(UnityEngine.UI.FontData instance, string name, System.Boolean value)
 		{
 			instance.richText = value;
 		}
 
-		static private UnityEngine.HorizontalWrapMode get_horizontalOverflow(UnityEngine.UI.FontData instance)
+		static private UnityEngine.HorizontalWrapMode get_horizontalOverflow(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.horizontalOverflow;
 		}
 
-		static private void set_horizontalOverflow(UnityEngine.UI.FontData instance, UnityEngine.HorizontalWrapMode value)
+		static private void set_horizontalOverflow(UnityEngine.UI.FontData instance, string name, UnityEngine.HorizontalWrapMode value)
 		{
 			instance.horizontalOverflow = value;
 		}
 
-		static private UnityEngine.VerticalWrapMode get_verticalOverflow(UnityEngine.UI.FontData instance)
+		static private UnityEngine.VerticalWrapMode get_verticalOverflow(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.verticalOverflow;
 		}
 
-		static private void set_verticalOverflow(UnityEngine.UI.FontData instance, UnityEngine.VerticalWrapMode value)
+		static private void set_verticalOverflow(UnityEngine.UI.FontData instance, string name, UnityEngine.VerticalWrapMode value)
 		{
 			instance.verticalOverflow = value;
 		}
 
-		static private System.Single get_lineSpacing(UnityEngine.UI.FontData instance)
+		static private System.Single get_lineSpacing(UnityEngine.UI.FontData instance, string name)
 		{
 			return instance.lineSpacing;
 		}
 
-		static private void set_lineSpacing(UnityEngine.UI.FontData instance, System.Single value)
+		static private void set_lineSpacing(UnityEngine.UI.FontData instance, string name, System.Single value)
 		{
 			instance.lineSpacing = value;
 		}

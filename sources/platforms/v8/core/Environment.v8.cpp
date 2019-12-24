@@ -127,6 +127,8 @@ void EnvironmentV8::Bind()
 	context->Enter();
 	mContext.Reset(mIsolate, context);
 
+	mIsRunning = true;
+
 	CreateGlobalObject(mIsolate, "exports");
 
 	this->ExecuteString("console.log = General_Console.log;");

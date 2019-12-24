@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -20,7 +21,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("constraintCount", get_constraintCount, set_constraintCount);
 		}
 
-		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.GridLayoutGroup instance, Parameters parameters)
+		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.GridLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -34,7 +35,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.GridLayoutGroup.CalculateLayoutInputHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CalculateLayoutInputVertical(UnityEngine.UI.GridLayoutGroup instance, Parameters parameters)
+		static private void CalculateLayoutInputVertical(UnityEngine.UI.GridLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -48,7 +49,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.GridLayoutGroup.CalculateLayoutInputVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutHorizontal(UnityEngine.UI.GridLayoutGroup instance, Parameters parameters)
+		static private void SetLayoutHorizontal(UnityEngine.UI.GridLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.GridLayoutGroup.SetLayoutHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutVertical(UnityEngine.UI.GridLayoutGroup instance, Parameters parameters)
+		static private void SetLayoutVertical(UnityEngine.UI.GridLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -76,32 +77,32 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.GridLayoutGroup.SetLayoutVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Vector2 get_cellSize(UnityEngine.UI.GridLayoutGroup instance)
+		static private UnityEngine.Vector2 get_cellSize(UnityEngine.UI.GridLayoutGroup instance, string name)
 		{
 			return instance.cellSize;
 		}
 
-		static private void set_cellSize(UnityEngine.UI.GridLayoutGroup instance, UnityEngine.Vector2 value)
+		static private void set_cellSize(UnityEngine.UI.GridLayoutGroup instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.cellSize = value;
 		}
 
-		static private UnityEngine.Vector2 get_spacing(UnityEngine.UI.GridLayoutGroup instance)
+		static private UnityEngine.Vector2 get_spacing(UnityEngine.UI.GridLayoutGroup instance, string name)
 		{
 			return instance.spacing;
 		}
 
-		static private void set_spacing(UnityEngine.UI.GridLayoutGroup instance, UnityEngine.Vector2 value)
+		static private void set_spacing(UnityEngine.UI.GridLayoutGroup instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.spacing = value;
 		}
 
-		static private System.Int32 get_constraintCount(UnityEngine.UI.GridLayoutGroup instance)
+		static private System.Int32 get_constraintCount(UnityEngine.UI.GridLayoutGroup instance, string name)
 		{
 			return instance.constraintCount;
 		}
 
-		static private void set_constraintCount(UnityEngine.UI.GridLayoutGroup instance, System.Int32 value)
+		static private void set_constraintCount(UnityEngine.UI.GridLayoutGroup instance, string name, System.Int32 value)
 		{
 			instance.constraintCount = value;
 		}

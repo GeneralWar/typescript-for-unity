@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("aspectRatio", get_aspectRatio, set_aspectRatio);
 		}
 
-		static private void SetLayoutHorizontal(UnityEngine.UI.AspectRatioFitter instance, Parameters parameters)
+		static private void SetLayoutHorizontal(UnityEngine.UI.AspectRatioFitter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -28,7 +29,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.AspectRatioFitter.SetLayoutHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutVertical(UnityEngine.UI.AspectRatioFitter instance, Parameters parameters)
+		static private void SetLayoutVertical(UnityEngine.UI.AspectRatioFitter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -42,12 +43,12 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.AspectRatioFitter.SetLayoutVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Single get_aspectRatio(UnityEngine.UI.AspectRatioFitter instance)
+		static private System.Single get_aspectRatio(UnityEngine.UI.AspectRatioFitter instance, string name)
 		{
 			return instance.aspectRatio;
 		}
 
-		static private void set_aspectRatio(UnityEngine.UI.AspectRatioFitter instance, System.Single value)
+		static private void set_aspectRatio(UnityEngine.UI.AspectRatioFitter instance, string name, System.Single value)
 		{
 			instance.aspectRatio = value;
 		}

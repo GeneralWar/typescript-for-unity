@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.UdpClient);
 		}
 
-		static private void AllowNatTraversal(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void AllowNatTraversal(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -82,7 +83,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Close(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void Close(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -96,7 +97,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.UdpClient.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Connect(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void Connect(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.IPEndPoint>())
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Dispose(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void Dispose(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.UdpClient.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DropMulticastGroup(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void DropMulticastGroup(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.IPAddress>())
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 EndSend(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private System.Int32 EndSend(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -191,7 +192,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void JoinMulticastGroup(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private void JoinMulticastGroup(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.IPAddress>())
 			{
@@ -228,7 +229,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 Send(System.Net.Sockets.UdpClient instance, Parameters parameters)
+		static private System.Int32 Send(System.Net.Sockets.UdpClient instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32>())
 			{
@@ -258,67 +259,67 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Net.Sockets.Socket get_Client(System.Net.Sockets.UdpClient instance)
+		static private System.Net.Sockets.Socket get_Client(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.Client;
 		}
 
-		static private void set_Client(System.Net.Sockets.UdpClient instance, System.Net.Sockets.Socket value)
+		static private void set_Client(System.Net.Sockets.UdpClient instance, string name, System.Net.Sockets.Socket value)
 		{
 			instance.Client = value;
 		}
 
-		static private System.Int32 get_Available(System.Net.Sockets.UdpClient instance)
+		static private System.Int32 get_Available(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.Available;
 		}
 
-		static private System.Int16 get_Ttl(System.Net.Sockets.UdpClient instance)
+		static private System.Int16 get_Ttl(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.Ttl;
 		}
 
-		static private void set_Ttl(System.Net.Sockets.UdpClient instance, System.Int16 value)
+		static private void set_Ttl(System.Net.Sockets.UdpClient instance, string name, System.Int16 value)
 		{
 			instance.Ttl = value;
 		}
 
-		static private System.Boolean get_DontFragment(System.Net.Sockets.UdpClient instance)
+		static private System.Boolean get_DontFragment(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.DontFragment;
 		}
 
-		static private void set_DontFragment(System.Net.Sockets.UdpClient instance, System.Boolean value)
+		static private void set_DontFragment(System.Net.Sockets.UdpClient instance, string name, System.Boolean value)
 		{
 			instance.DontFragment = value;
 		}
 
-		static private System.Boolean get_MulticastLoopback(System.Net.Sockets.UdpClient instance)
+		static private System.Boolean get_MulticastLoopback(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.MulticastLoopback;
 		}
 
-		static private void set_MulticastLoopback(System.Net.Sockets.UdpClient instance, System.Boolean value)
+		static private void set_MulticastLoopback(System.Net.Sockets.UdpClient instance, string name, System.Boolean value)
 		{
 			instance.MulticastLoopback = value;
 		}
 
-		static private System.Boolean get_EnableBroadcast(System.Net.Sockets.UdpClient instance)
+		static private System.Boolean get_EnableBroadcast(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.EnableBroadcast;
 		}
 
-		static private void set_EnableBroadcast(System.Net.Sockets.UdpClient instance, System.Boolean value)
+		static private void set_EnableBroadcast(System.Net.Sockets.UdpClient instance, string name, System.Boolean value)
 		{
 			instance.EnableBroadcast = value;
 		}
 
-		static private System.Boolean get_ExclusiveAddressUse(System.Net.Sockets.UdpClient instance)
+		static private System.Boolean get_ExclusiveAddressUse(System.Net.Sockets.UdpClient instance, string name)
 		{
 			return instance.ExclusiveAddressUse;
 		}
 
-		static private void set_ExclusiveAddressUse(System.Net.Sockets.UdpClient instance, System.Boolean value)
+		static private void set_ExclusiveAddressUse(System.Net.Sockets.UdpClient instance, string name, System.Boolean value)
 		{
 			instance.ExclusiveAddressUse = value;
 		}

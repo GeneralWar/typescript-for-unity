@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("isValid", get_isValid, null);
 		}
 
-		static private void Clear(UnityEngine.EventSystems.RaycastResult instance, Parameters parameters)
+		static private void Clear(UnityEngine.EventSystems.RaycastResult instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -28,7 +29,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.RaycastResult.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.String ToString(UnityEngine.EventSystems.RaycastResult instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.EventSystems.RaycastResult instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -43,17 +44,17 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.GameObject get_gameObject(UnityEngine.EventSystems.RaycastResult instance)
+		static private UnityEngine.GameObject get_gameObject(UnityEngine.EventSystems.RaycastResult instance, string name)
 		{
 			return instance.gameObject;
 		}
 
-		static private void set_gameObject(UnityEngine.EventSystems.RaycastResult instance, UnityEngine.GameObject value)
+		static private void set_gameObject(UnityEngine.EventSystems.RaycastResult instance, string name, UnityEngine.GameObject value)
 		{
 			instance.gameObject = value;
 		}
 
-		static private System.Boolean get_isValid(UnityEngine.EventSystems.RaycastResult instance)
+		static private System.Boolean get_isValid(UnityEngine.EventSystems.RaycastResult instance, string name)
 		{
 			return instance.isValid;
 		}

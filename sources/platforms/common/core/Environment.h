@@ -19,6 +19,8 @@ public:
 	static bool IsCustomSuperClassName(const char* fullname);
 	static bool IsCustomSuperClassName(const std::string& fullname);
 protected:
+	bool mIsRunning;
+
 	std::vector<std::shared_ptr<TypescriptClass>> mClasses;
 	std::vector<std::shared_ptr<TypescriptNamespace>> mNamespaces;
 	std::vector<std::shared_ptr<TypescriptStaticFunction>> mFunctions;
@@ -30,6 +32,8 @@ public:
 	Environment();
 	virtual bool Initialize() = 0;
 	virtual ~Environment() { }
+
+	bool IsRunning() const { return mIsRunning; }
 
 	virtual void Bind() = 0;
 

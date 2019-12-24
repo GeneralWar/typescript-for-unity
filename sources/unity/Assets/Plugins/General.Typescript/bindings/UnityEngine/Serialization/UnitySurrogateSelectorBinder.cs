@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.Serialization.UnitySurrogateSelector);
 		}
 
-		static private void ChainSelector(UnityEngine.Serialization.UnitySurrogateSelector instance, Parameters parameters)
+		static private void ChainSelector(UnityEngine.Serialization.UnitySurrogateSelector instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Runtime.Serialization.ISurrogateSelector>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Runtime.Serialization.ISurrogateSelector GetNextSelector(UnityEngine.Serialization.UnitySurrogateSelector instance, Parameters parameters)
+		static private System.Runtime.Serialization.ISurrogateSelector GetNextSelector(UnityEngine.Serialization.UnitySurrogateSelector instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

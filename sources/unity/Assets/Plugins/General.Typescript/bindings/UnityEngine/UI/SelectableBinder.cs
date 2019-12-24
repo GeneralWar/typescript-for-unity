@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("animator", get_animator, null);
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectable(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectable(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -70,7 +71,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -100,7 +101,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -115,7 +116,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsInteractable(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private System.Boolean IsInteractable(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -130,7 +131,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void OnDeselect(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnDeselect(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -152,7 +153,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnMove(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnMove(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.AxisEventData>())
 			{
@@ -174,7 +175,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerDown(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnPointerDown(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -196,7 +197,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerEnter(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnPointerEnter(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -218,7 +219,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerExit(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnPointerExit(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -240,7 +241,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerUp(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnPointerUp(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -262,7 +263,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSelect(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void OnSelect(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -284,7 +285,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Select(UnityEngine.UI.Selectable instance, Parameters parameters)
+		static private void Select(UnityEngine.UI.Selectable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -298,77 +299,77 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Selectable.Select has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.UI.Navigation get_navigation(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.Navigation get_navigation(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.navigation;
 		}
 
-		static private void set_navigation(UnityEngine.UI.Selectable instance, UnityEngine.UI.Navigation value)
+		static private void set_navigation(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.Navigation value)
 		{
 			instance.navigation = value;
 		}
 
-		static private UnityEngine.UI.ColorBlock get_colors(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.ColorBlock get_colors(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.colors;
 		}
 
-		static private void set_colors(UnityEngine.UI.Selectable instance, UnityEngine.UI.ColorBlock value)
+		static private void set_colors(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.ColorBlock value)
 		{
 			instance.colors = value;
 		}
 
-		static private UnityEngine.UI.SpriteState get_spriteState(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.SpriteState get_spriteState(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.spriteState;
 		}
 
-		static private void set_spriteState(UnityEngine.UI.Selectable instance, UnityEngine.UI.SpriteState value)
+		static private void set_spriteState(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.SpriteState value)
 		{
 			instance.spriteState = value;
 		}
 
-		static private UnityEngine.UI.AnimationTriggers get_animationTriggers(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.AnimationTriggers get_animationTriggers(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.animationTriggers;
 		}
 
-		static private void set_animationTriggers(UnityEngine.UI.Selectable instance, UnityEngine.UI.AnimationTriggers value)
+		static private void set_animationTriggers(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.AnimationTriggers value)
 		{
 			instance.animationTriggers = value;
 		}
 
-		static private UnityEngine.UI.Graphic get_targetGraphic(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.Graphic get_targetGraphic(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.targetGraphic;
 		}
 
-		static private void set_targetGraphic(UnityEngine.UI.Selectable instance, UnityEngine.UI.Graphic value)
+		static private void set_targetGraphic(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.Graphic value)
 		{
 			instance.targetGraphic = value;
 		}
 
-		static private System.Boolean get_interactable(UnityEngine.UI.Selectable instance)
+		static private System.Boolean get_interactable(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.interactable;
 		}
 
-		static private void set_interactable(UnityEngine.UI.Selectable instance, System.Boolean value)
+		static private void set_interactable(UnityEngine.UI.Selectable instance, string name, System.Boolean value)
 		{
 			instance.interactable = value;
 		}
 
-		static private UnityEngine.UI.Image get_image(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.UI.Image get_image(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.image;
 		}
 
-		static private void set_image(UnityEngine.UI.Selectable instance, UnityEngine.UI.Image value)
+		static private void set_image(UnityEngine.UI.Selectable instance, string name, UnityEngine.UI.Image value)
 		{
 			instance.image = value;
 		}
 
-		static private UnityEngine.Animator get_animator(UnityEngine.UI.Selectable instance)
+		static private UnityEngine.Animator get_animator(UnityEngine.UI.Selectable instance, string name)
 		{
 			return instance.animator;
 		}

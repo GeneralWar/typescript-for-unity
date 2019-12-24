@@ -7,6 +7,7 @@
 #include "core/property/Property.h"
 #include "../../extra/log/Log.h"
 #include "../enum/Enum.h"
+#include "../Environment.h"
 
 std::map<std::string, TypescriptClass*> TypescriptClass::sClasses;
 
@@ -59,22 +60,45 @@ TypescriptClass::~TypescriptClass()
 
 std::shared_ptr<TypescriptStaticFunction> TypescriptClass::BindStaticFunction(const std::string& name)
 {
-    return mStaticFunctions[name] = std::shared_ptr<TypescriptStaticFunction>(new TypescriptStaticFunction(name, this));
+	std::shared_ptr<TypescriptStaticFunction> instance(new TypescriptStaticFunction(name, this));
+	mStaticFunctions[name] = instance;
+	if (mEnvironment->IsRunning())
+	{
+		instance->Bind(this);
+	}
+	return instance;
 }
 
 void TypescriptClass::BindStaticFunction(const std::string& name, JS_FUNCTION_CALLBACK_TYPE callback)
 {
-    mStaticFunctions[name] = std::shared_ptr<TypescriptStaticFunction>(new TypescriptStaticFunction(name, this, (JS_FUNCTION_CALLBACK_TYPE)callback));
+	std::shared_ptr<TypescriptStaticFunction> instance(new TypescriptStaticFunction(name, this, (JS_FUNCTION_CALLBACK_TYPE)callback));
+	mStaticFunctions[name] = instance;
+	if (mEnvironment->IsRunning())
+	{
+		instance->Bind(this);
+	}
 }
 
 std::shared_ptr<TypescriptStaticProperty> TypescriptClass::BindStaticProperty(const std::string& name, const bool& hasGetter, const bool& hasSetter)
 {
-	return mStaticProperties[name] = std::shared_ptr<TypescriptStaticProperty>(new TypescriptStaticProperty(name, this, hasGetter, hasSetter));
+	std::shared_ptr<TypescriptStaticProperty> instance = std::shared_ptr<TypescriptStaticProperty>(new TypescriptStaticProperty(name, this, hasGetter, hasSetter));
+	mStaticProperties[name] = instance;
+	if (mEnvironment->IsRunning())
+	{
+		instance->Bind(this);
+	}
+	return instance;
 }
 
 void TypescriptClass::BindConstructor(const bool& real)
 {
 	mHasConstructor = real;
+	Environment* runtime = this->GetEnvironment();
+	if (runtime->IsRunning())
+	{
+		this->bindConstructor();
+		this->inherit();
+	}
 }
 
 void TypescriptClass::Bind()

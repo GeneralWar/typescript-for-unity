@@ -40,7 +40,6 @@ namespace General.Typescript
 			UnityEngineUIShadow.Bind(self);
 			UnityEngineUISlider.Bind(self);
 			UnityEngineUISpriteState.Bind(self);
-			UnityEngineUIText.Bind(self);
 			UnityEngineUIToggle.Bind(self);
 			UnityEngineUIToggleGroup.Bind(self);
 			UnityEngineUIVertexHelper.Bind(self);

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -102,7 +103,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.Socket);
 		}
 
-		static private void CancelConnectAsync(Parameters parameters)
+		static private void CancelConnectAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -124,7 +125,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean ConnectAsync(Parameters parameters)
+		static private System.Boolean ConnectAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketType, System.Net.Sockets.ProtocolType, System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Select(Parameters parameters)
+		static private void Select(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Collections.IList, System.Collections.IList, System.Collections.IList, System.Int32>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Net.Sockets.Socket Accept(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Net.Sockets.Socket Accept(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -183,7 +184,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean AcceptAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean AcceptAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -205,7 +206,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Bind(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Bind(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.EndPoint>())
 			{
@@ -227,7 +228,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Close(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Close(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -246,7 +247,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.Socket.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Connect(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Connect(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.EndPoint>())
 			{
@@ -283,7 +284,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean ConnectAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean ConnectAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -305,7 +306,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Disconnect(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Disconnect(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -327,7 +328,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean DisconnectAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean DisconnectAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -349,7 +350,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Dispose(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Dispose(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -363,7 +364,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.Sockets.Socket.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Net.Sockets.SocketInformation DuplicateAndClose(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Net.Sockets.SocketInformation DuplicateAndClose(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -385,7 +386,7 @@ namespace General.Typescript
 			return default(System.Net.Sockets.SocketInformation);
 		}
 
-		static private System.Net.Sockets.Socket EndAccept(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Net.Sockets.Socket EndAccept(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -407,7 +408,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void EndConnect(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void EndConnect(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -429,7 +430,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EndDisconnect(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void EndDisconnect(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -451,7 +452,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 EndReceive(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 EndReceive(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -473,7 +474,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 EndSend(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 EndSend(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -495,7 +496,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void EndSendFile(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void EndSendFile(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -517,7 +518,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 EndSendTo(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 EndSendTo(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -539,7 +540,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Object GetSocketOption(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Object GetSocketOption(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketOptionLevel, System.Net.Sockets.SocketOptionName>())
 			{
@@ -570,7 +571,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 IOControl(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 IOControl(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.IOControlCode, System.Byte[], System.Byte[]>())
 			{
@@ -596,7 +597,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Listen(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Listen(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -618,7 +619,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Poll(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean Poll(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Net.Sockets.SelectMode>())
 			{
@@ -640,7 +641,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 Receive(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 Receive(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[]>())
 			{
@@ -674,7 +675,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean ReceiveAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean ReceiveAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -696,7 +697,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean ReceiveFromAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean ReceiveFromAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -718,7 +719,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean ReceiveMessageFromAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean ReceiveMessageFromAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -740,7 +741,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 Send(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 Send(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[]>())
 			{
@@ -774,7 +775,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean SendAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean SendAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -796,7 +797,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SendFile(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void SendFile(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -823,7 +824,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean SendPacketsAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean SendPacketsAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -845,7 +846,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 SendTo(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Int32 SendTo(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Net.EndPoint>())
 			{
@@ -879,7 +880,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean SendToAsync(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private System.Boolean SendToAsync(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketAsyncEventArgs>())
 			{
@@ -901,7 +902,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetIPProtectionLevel(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void SetIPProtectionLevel(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.IPProtectionLevel>())
 			{
@@ -923,7 +924,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSocketOption(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void SetSocketOption(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketOptionLevel, System.Net.Sockets.SocketOptionName, System.Byte[]>())
 			{
@@ -960,7 +961,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Shutdown(System.Net.Sockets.Socket instance, Parameters parameters)
+		static private void Shutdown(System.Net.Sockets.Socket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.Sockets.SocketShutdown>())
 			{
@@ -982,197 +983,197 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_OSSupportsIPv4()
+		static private System.Boolean get_OSSupportsIPv4(Type type, string name)
 		{
 			return System.Net.Sockets.Socket.OSSupportsIPv4;
 		}
 
-		static private System.Boolean get_OSSupportsIPv6()
+		static private System.Boolean get_OSSupportsIPv6(Type type, string name)
 		{
 			return System.Net.Sockets.Socket.OSSupportsIPv6;
 		}
 
-		static private System.IntPtr get_Handle(System.Net.Sockets.Socket instance)
+		static private System.IntPtr get_Handle(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.Handle;
 		}
 
-		static private System.Boolean get_Connected(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_Connected(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.Connected;
 		}
 
-		static private System.Boolean get_Blocking(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_Blocking(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.Blocking;
 		}
 
-		static private void set_Blocking(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_Blocking(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.Blocking = value;
 		}
 
-		static private System.Net.EndPoint get_LocalEndPoint(System.Net.Sockets.Socket instance)
+		static private System.Net.EndPoint get_LocalEndPoint(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.LocalEndPoint;
 		}
 
-		static private System.Boolean get_MulticastLoopback(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_MulticastLoopback(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.MulticastLoopback;
 		}
 
-		static private void set_MulticastLoopback(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_MulticastLoopback(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.MulticastLoopback = value;
 		}
 
-		static private System.Boolean get_IsBound(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_IsBound(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.IsBound;
 		}
 
-		static private System.Boolean get_EnableBroadcast(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_EnableBroadcast(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.EnableBroadcast;
 		}
 
-		static private void set_EnableBroadcast(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_EnableBroadcast(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.EnableBroadcast = value;
 		}
 
-		static private System.Int32 get_Available(System.Net.Sockets.Socket instance)
+		static private System.Int32 get_Available(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.Available;
 		}
 
-		static private System.Boolean get_DualMode(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_DualMode(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.DualMode;
 		}
 
-		static private void set_DualMode(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_DualMode(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.DualMode = value;
 		}
 
-		static private System.Boolean get_DontFragment(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_DontFragment(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.DontFragment;
 		}
 
-		static private void set_DontFragment(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_DontFragment(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.DontFragment = value;
 		}
 
-		static private System.Boolean get_NoDelay(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_NoDelay(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.NoDelay;
 		}
 
-		static private void set_NoDelay(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_NoDelay(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.NoDelay = value;
 		}
 
-		static private System.Int16 get_Ttl(System.Net.Sockets.Socket instance)
+		static private System.Int16 get_Ttl(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.Ttl;
 		}
 
-		static private void set_Ttl(System.Net.Sockets.Socket instance, System.Int16 value)
+		static private void set_Ttl(System.Net.Sockets.Socket instance, string name, System.Int16 value)
 		{
 			instance.Ttl = value;
 		}
 
-		static private System.Int32 get_SendTimeout(System.Net.Sockets.Socket instance)
+		static private System.Int32 get_SendTimeout(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.SendTimeout;
 		}
 
-		static private void set_SendTimeout(System.Net.Sockets.Socket instance, System.Int32 value)
+		static private void set_SendTimeout(System.Net.Sockets.Socket instance, string name, System.Int32 value)
 		{
 			instance.SendTimeout = value;
 		}
 
-		static private System.Int32 get_ReceiveTimeout(System.Net.Sockets.Socket instance)
+		static private System.Int32 get_ReceiveTimeout(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.ReceiveTimeout;
 		}
 
-		static private void set_ReceiveTimeout(System.Net.Sockets.Socket instance, System.Int32 value)
+		static private void set_ReceiveTimeout(System.Net.Sockets.Socket instance, string name, System.Int32 value)
 		{
 			instance.ReceiveTimeout = value;
 		}
 
-		static private System.Int32 get_SendBufferSize(System.Net.Sockets.Socket instance)
+		static private System.Int32 get_SendBufferSize(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.SendBufferSize;
 		}
 
-		static private void set_SendBufferSize(System.Net.Sockets.Socket instance, System.Int32 value)
+		static private void set_SendBufferSize(System.Net.Sockets.Socket instance, string name, System.Int32 value)
 		{
 			instance.SendBufferSize = value;
 		}
 
-		static private System.Int32 get_ReceiveBufferSize(System.Net.Sockets.Socket instance)
+		static private System.Int32 get_ReceiveBufferSize(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.ReceiveBufferSize;
 		}
 
-		static private void set_ReceiveBufferSize(System.Net.Sockets.Socket instance, System.Int32 value)
+		static private void set_ReceiveBufferSize(System.Net.Sockets.Socket instance, string name, System.Int32 value)
 		{
 			instance.ReceiveBufferSize = value;
 		}
 
-		static private System.Boolean get_ExclusiveAddressUse(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_ExclusiveAddressUse(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.ExclusiveAddressUse;
 		}
 
-		static private void set_ExclusiveAddressUse(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_ExclusiveAddressUse(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.ExclusiveAddressUse = value;
 		}
 
-		static private System.Net.Sockets.ProtocolType get_ProtocolType(System.Net.Sockets.Socket instance)
+		static private System.Net.Sockets.ProtocolType get_ProtocolType(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.ProtocolType;
 		}
 
-		static private System.Net.Sockets.SocketType get_SocketType(System.Net.Sockets.Socket instance)
+		static private System.Net.Sockets.SocketType get_SocketType(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.SocketType;
 		}
 
-		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.Sockets.Socket instance)
+		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.AddressFamily;
 		}
 
-		static private System.Boolean get_UseOnlyOverlappedIO(System.Net.Sockets.Socket instance)
+		static private System.Boolean get_UseOnlyOverlappedIO(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.UseOnlyOverlappedIO;
 		}
 
-		static private void set_UseOnlyOverlappedIO(System.Net.Sockets.Socket instance, System.Boolean value)
+		static private void set_UseOnlyOverlappedIO(System.Net.Sockets.Socket instance, string name, System.Boolean value)
 		{
 			instance.UseOnlyOverlappedIO = value;
 		}
 
-		static private System.Net.Sockets.LingerOption get_LingerState(System.Net.Sockets.Socket instance)
+		static private System.Net.Sockets.LingerOption get_LingerState(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.LingerState;
 		}
 
-		static private void set_LingerState(System.Net.Sockets.Socket instance, System.Net.Sockets.LingerOption value)
+		static private void set_LingerState(System.Net.Sockets.Socket instance, string name, System.Net.Sockets.LingerOption value)
 		{
 			instance.LingerState = value;
 		}
 
-		static private System.Net.EndPoint get_RemoteEndPoint(System.Net.Sockets.Socket instance)
+		static private System.Net.EndPoint get_RemoteEndPoint(System.Net.Sockets.Socket instance, string name)
 		{
 			return instance.RemoteEndPoint;
 		}

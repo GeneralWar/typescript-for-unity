@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -54,7 +55,7 @@ namespace General.Typescript
 			return default(UnityEngine.RectInt);
 		}
 
-		static private void ClampToBounds(UnityEngine.RectInt instance, Parameters parameters)
+		static private void ClampToBounds(UnityEngine.RectInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectInt>())
 			{
@@ -76,7 +77,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Contains(UnityEngine.RectInt instance, Parameters parameters)
+		static private System.Boolean Contains(UnityEngine.RectInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int>())
 			{
@@ -98,7 +99,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Equals(UnityEngine.RectInt instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.RectInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectInt>())
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetMinMax(UnityEngine.RectInt instance, Parameters parameters)
+		static private void SetMinMax(UnityEngine.RectInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.RectInt instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.RectInt instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -157,127 +158,127 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_x(UnityEngine.RectInt instance)
+		static private System.Int32 get_x(UnityEngine.RectInt instance, string name)
 		{
 			return instance.x;
 		}
 
-		static private void set_x(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_x(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.x = value;
 		}
 
-		static private System.Int32 get_y(UnityEngine.RectInt instance)
+		static private System.Int32 get_y(UnityEngine.RectInt instance, string name)
 		{
 			return instance.y;
 		}
 
-		static private void set_y(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_y(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.y = value;
 		}
 
-		static private UnityEngine.Vector2 get_center(UnityEngine.RectInt instance)
+		static private UnityEngine.Vector2 get_center(UnityEngine.RectInt instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private UnityEngine.Vector2Int get_min(UnityEngine.RectInt instance)
+		static private UnityEngine.Vector2Int get_min(UnityEngine.RectInt instance, string name)
 		{
 			return instance.min;
 		}
 
-		static private void set_min(UnityEngine.RectInt instance, UnityEngine.Vector2Int value)
+		static private void set_min(UnityEngine.RectInt instance, string name, UnityEngine.Vector2Int value)
 		{
 			instance.min = value;
 		}
 
-		static private UnityEngine.Vector2Int get_max(UnityEngine.RectInt instance)
+		static private UnityEngine.Vector2Int get_max(UnityEngine.RectInt instance, string name)
 		{
 			return instance.max;
 		}
 
-		static private void set_max(UnityEngine.RectInt instance, UnityEngine.Vector2Int value)
+		static private void set_max(UnityEngine.RectInt instance, string name, UnityEngine.Vector2Int value)
 		{
 			instance.max = value;
 		}
 
-		static private System.Int32 get_width(UnityEngine.RectInt instance)
+		static private System.Int32 get_width(UnityEngine.RectInt instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_width(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Int32 get_height(UnityEngine.RectInt instance)
+		static private System.Int32 get_height(UnityEngine.RectInt instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_height(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Int32 get_xMin(UnityEngine.RectInt instance)
+		static private System.Int32 get_xMin(UnityEngine.RectInt instance, string name)
 		{
 			return instance.xMin;
 		}
 
-		static private void set_xMin(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_xMin(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.xMin = value;
 		}
 
-		static private System.Int32 get_yMin(UnityEngine.RectInt instance)
+		static private System.Int32 get_yMin(UnityEngine.RectInt instance, string name)
 		{
 			return instance.yMin;
 		}
 
-		static private void set_yMin(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_yMin(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.yMin = value;
 		}
 
-		static private System.Int32 get_xMax(UnityEngine.RectInt instance)
+		static private System.Int32 get_xMax(UnityEngine.RectInt instance, string name)
 		{
 			return instance.xMax;
 		}
 
-		static private void set_xMax(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_xMax(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.xMax = value;
 		}
 
-		static private System.Int32 get_yMax(UnityEngine.RectInt instance)
+		static private System.Int32 get_yMax(UnityEngine.RectInt instance, string name)
 		{
 			return instance.yMax;
 		}
 
-		static private void set_yMax(UnityEngine.RectInt instance, System.Int32 value)
+		static private void set_yMax(UnityEngine.RectInt instance, string name, System.Int32 value)
 		{
 			instance.yMax = value;
 		}
 
-		static private UnityEngine.Vector2Int get_position(UnityEngine.RectInt instance)
+		static private UnityEngine.Vector2Int get_position(UnityEngine.RectInt instance, string name)
 		{
 			return instance.position;
 		}
 
-		static private void set_position(UnityEngine.RectInt instance, UnityEngine.Vector2Int value)
+		static private void set_position(UnityEngine.RectInt instance, string name, UnityEngine.Vector2Int value)
 		{
 			instance.position = value;
 		}
 
-		static private UnityEngine.Vector2Int get_size(UnityEngine.RectInt instance)
+		static private UnityEngine.Vector2Int get_size(UnityEngine.RectInt instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.RectInt instance, UnityEngine.Vector2Int value)
+		static private void set_size(UnityEngine.RectInt instance, string name, UnityEngine.Vector2Int value)
 		{
 			instance.size = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -32,17 +33,17 @@ namespace General.Typescript
 			return default(System.Net.Sockets.SocketException);
 		}
 
-		static private System.Int32 get_ErrorCode(System.Net.Sockets.SocketException instance)
+		static private System.Int32 get_ErrorCode(System.Net.Sockets.SocketException instance, string name)
 		{
 			return instance.ErrorCode;
 		}
 
-		static private System.String get_Message(System.Net.Sockets.SocketException instance)
+		static private System.String get_Message(System.Net.Sockets.SocketException instance, string name)
 		{
 			return instance.Message;
 		}
 
-		static private System.Net.Sockets.SocketError get_SocketErrorCode(System.Net.Sockets.SocketException instance)
+		static private System.Net.Sockets.SocketError get_SocketErrorCode(System.Net.Sockets.SocketException instance, string name)
 		{
 			return instance.SocketErrorCode;
 		}

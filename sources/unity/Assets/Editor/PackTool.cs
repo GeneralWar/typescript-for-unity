@@ -69,32 +69,6 @@ public class PackTool
 		}
 	}
 
-	//[MenuItem("General/Typescript/Bind Custom Classes")]
-	//static private void bindCustomClasses()
-	//{
-	//	List<Type> types = BinderGenerator.GetBindedTypes(false);
-	//	types.AddRange(bindCustomClasses(typeof(Socket).Assembly, new string[] { "Socket", "IP" }));
-	//	types.AddRange(bindCustomClasses(typeof(WebRequest).Assembly, new string[] { "Http", "Web", "Request", "Response" }, new string[] { "WebRequestModuleElementCollection", "HttpListenerTimeoutManager", "WebProxy" }));
-
-	//	Debug.Log("Generate custom binders successfully!");
-	//}
-
-	static private IEnumerable<Type> bindCustomClasses(Assembly assembly, string key)
-	{
-		Type[] types = Array.FindAll(assembly.GetTypes(), t => t.FullName.Contains(key));
-		BinderGenerator.GenerateBinders(types);
-		BinderGenerator.GenerateSnippets(types);
-		return types;
-	}
-
-	static private IEnumerable<Type> bindCustomClasses(Assembly assembly, string[] keys, string[] excludes = null)
-	{
-		Type[] types = Array.FindAll(assembly.GetTypes(), t => (null == excludes ? true : !excludes.Any(e => t.FullName.Contains(e))) && keys.Any(key => t.FullName.Contains(key)));
-		BinderGenerator.GenerateBinders(types);
-		BinderGenerator.GenerateSnippets(types);
-		return types;
-	}
-
 	[MenuItem("General/Typescript/Check Marshal")]
 	static private void checkMarshal()
 	{

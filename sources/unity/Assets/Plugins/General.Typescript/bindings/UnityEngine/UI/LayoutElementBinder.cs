@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -20,7 +21,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("layoutPriority", get_layoutPriority, set_layoutPriority);
 		}
 
-		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.LayoutElement instance, Parameters parameters)
+		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.LayoutElement instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -34,7 +35,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.LayoutElement.CalculateLayoutInputHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CalculateLayoutInputVertical(UnityEngine.UI.LayoutElement instance, Parameters parameters)
+		static private void CalculateLayoutInputVertical(UnityEngine.UI.LayoutElement instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -48,82 +49,82 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.LayoutElement.CalculateLayoutInputVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_ignoreLayout(UnityEngine.UI.LayoutElement instance)
+		static private System.Boolean get_ignoreLayout(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.ignoreLayout;
 		}
 
-		static private void set_ignoreLayout(UnityEngine.UI.LayoutElement instance, System.Boolean value)
+		static private void set_ignoreLayout(UnityEngine.UI.LayoutElement instance, string name, System.Boolean value)
 		{
 			instance.ignoreLayout = value;
 		}
 
-		static private System.Single get_minWidth(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_minWidth(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.minWidth;
 		}
 
-		static private void set_minWidth(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_minWidth(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.minWidth = value;
 		}
 
-		static private System.Single get_minHeight(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_minHeight(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.minHeight;
 		}
 
-		static private void set_minHeight(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_minHeight(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.minHeight = value;
 		}
 
-		static private System.Single get_preferredWidth(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_preferredWidth(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.preferredWidth;
 		}
 
-		static private void set_preferredWidth(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_preferredWidth(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.preferredWidth = value;
 		}
 
-		static private System.Single get_preferredHeight(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_preferredHeight(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.preferredHeight;
 		}
 
-		static private void set_preferredHeight(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_preferredHeight(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.preferredHeight = value;
 		}
 
-		static private System.Single get_flexibleWidth(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_flexibleWidth(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.flexibleWidth;
 		}
 
-		static private void set_flexibleWidth(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_flexibleWidth(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.flexibleWidth = value;
 		}
 
-		static private System.Single get_flexibleHeight(UnityEngine.UI.LayoutElement instance)
+		static private System.Single get_flexibleHeight(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.flexibleHeight;
 		}
 
-		static private void set_flexibleHeight(UnityEngine.UI.LayoutElement instance, System.Single value)
+		static private void set_flexibleHeight(UnityEngine.UI.LayoutElement instance, string name, System.Single value)
 		{
 			instance.flexibleHeight = value;
 		}
 
-		static private System.Int32 get_layoutPriority(UnityEngine.UI.LayoutElement instance)
+		static private System.Int32 get_layoutPriority(UnityEngine.UI.LayoutElement instance, string name)
 		{
 			return instance.layoutPriority;
 		}
 
-		static private void set_layoutPriority(UnityEngine.UI.LayoutElement instance, System.Int32 value)
+		static private void set_layoutPriority(UnityEngine.UI.LayoutElement instance, string name, System.Int32 value)
 		{
 			instance.layoutPriority = value;
 		}

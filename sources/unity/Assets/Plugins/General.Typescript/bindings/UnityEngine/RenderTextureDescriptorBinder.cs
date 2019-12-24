@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,157 +57,157 @@ namespace General.Typescript
 			return default(UnityEngine.RenderTextureDescriptor);
 		}
 
-		static private System.Int32 get_width(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Int32 get_width(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.RenderTextureDescriptor instance, System.Int32 value)
+		static private void set_width(UnityEngine.RenderTextureDescriptor instance, string name, System.Int32 value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Int32 get_height(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Int32 get_height(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.RenderTextureDescriptor instance, System.Int32 value)
+		static private void set_height(UnityEngine.RenderTextureDescriptor instance, string name, System.Int32 value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Int32 get_msaaSamples(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Int32 get_msaaSamples(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.msaaSamples;
 		}
 
-		static private void set_msaaSamples(UnityEngine.RenderTextureDescriptor instance, System.Int32 value)
+		static private void set_msaaSamples(UnityEngine.RenderTextureDescriptor instance, string name, System.Int32 value)
 		{
 			instance.msaaSamples = value;
 		}
 
-		static private System.Int32 get_volumeDepth(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Int32 get_volumeDepth(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.volumeDepth;
 		}
 
-		static private void set_volumeDepth(UnityEngine.RenderTextureDescriptor instance, System.Int32 value)
+		static private void set_volumeDepth(UnityEngine.RenderTextureDescriptor instance, string name, System.Int32 value)
 		{
 			instance.volumeDepth = value;
 		}
 
-		static private UnityEngine.RenderTextureFormat get_colorFormat(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.RenderTextureFormat get_colorFormat(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.colorFormat;
 		}
 
-		static private void set_colorFormat(UnityEngine.RenderTextureDescriptor instance, UnityEngine.RenderTextureFormat value)
+		static private void set_colorFormat(UnityEngine.RenderTextureDescriptor instance, string name, UnityEngine.RenderTextureFormat value)
 		{
 			instance.colorFormat = value;
 		}
 
-		static private System.Int32 get_depthBufferBits(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Int32 get_depthBufferBits(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.depthBufferBits;
 		}
 
-		static private void set_depthBufferBits(UnityEngine.RenderTextureDescriptor instance, System.Int32 value)
+		static private void set_depthBufferBits(UnityEngine.RenderTextureDescriptor instance, string name, System.Int32 value)
 		{
 			instance.depthBufferBits = value;
 		}
 
-		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.dimension;
 		}
 
-		static private void set_dimension(UnityEngine.RenderTextureDescriptor instance, UnityEngine.Rendering.TextureDimension value)
+		static private void set_dimension(UnityEngine.RenderTextureDescriptor instance, string name, UnityEngine.Rendering.TextureDimension value)
 		{
 			instance.dimension = value;
 		}
 
-		static private UnityEngine.Rendering.ShadowSamplingMode get_shadowSamplingMode(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.Rendering.ShadowSamplingMode get_shadowSamplingMode(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.shadowSamplingMode;
 		}
 
-		static private void set_shadowSamplingMode(UnityEngine.RenderTextureDescriptor instance, UnityEngine.Rendering.ShadowSamplingMode value)
+		static private void set_shadowSamplingMode(UnityEngine.RenderTextureDescriptor instance, string name, UnityEngine.Rendering.ShadowSamplingMode value)
 		{
 			instance.shadowSamplingMode = value;
 		}
 
-		static private UnityEngine.VRTextureUsage get_vrUsage(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.VRTextureUsage get_vrUsage(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.vrUsage;
 		}
 
-		static private void set_vrUsage(UnityEngine.RenderTextureDescriptor instance, UnityEngine.VRTextureUsage value)
+		static private void set_vrUsage(UnityEngine.RenderTextureDescriptor instance, string name, UnityEngine.VRTextureUsage value)
 		{
 			instance.vrUsage = value;
 		}
 
-		static private UnityEngine.RenderTextureCreationFlags get_flags(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.RenderTextureCreationFlags get_flags(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.flags;
 		}
 
-		static private UnityEngine.RenderTextureMemoryless get_memoryless(UnityEngine.RenderTextureDescriptor instance)
+		static private UnityEngine.RenderTextureMemoryless get_memoryless(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.memoryless;
 		}
 
-		static private void set_memoryless(UnityEngine.RenderTextureDescriptor instance, UnityEngine.RenderTextureMemoryless value)
+		static private void set_memoryless(UnityEngine.RenderTextureDescriptor instance, string name, UnityEngine.RenderTextureMemoryless value)
 		{
 			instance.memoryless = value;
 		}
 
-		static private System.Boolean get_sRGB(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Boolean get_sRGB(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.sRGB;
 		}
 
-		static private void set_sRGB(UnityEngine.RenderTextureDescriptor instance, System.Boolean value)
+		static private void set_sRGB(UnityEngine.RenderTextureDescriptor instance, string name, System.Boolean value)
 		{
 			instance.sRGB = value;
 		}
 
-		static private System.Boolean get_useMipMap(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Boolean get_useMipMap(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.useMipMap;
 		}
 
-		static private void set_useMipMap(UnityEngine.RenderTextureDescriptor instance, System.Boolean value)
+		static private void set_useMipMap(UnityEngine.RenderTextureDescriptor instance, string name, System.Boolean value)
 		{
 			instance.useMipMap = value;
 		}
 
-		static private System.Boolean get_autoGenerateMips(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Boolean get_autoGenerateMips(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.autoGenerateMips;
 		}
 
-		static private void set_autoGenerateMips(UnityEngine.RenderTextureDescriptor instance, System.Boolean value)
+		static private void set_autoGenerateMips(UnityEngine.RenderTextureDescriptor instance, string name, System.Boolean value)
 		{
 			instance.autoGenerateMips = value;
 		}
 
-		static private System.Boolean get_enableRandomWrite(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Boolean get_enableRandomWrite(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.enableRandomWrite;
 		}
 
-		static private void set_enableRandomWrite(UnityEngine.RenderTextureDescriptor instance, System.Boolean value)
+		static private void set_enableRandomWrite(UnityEngine.RenderTextureDescriptor instance, string name, System.Boolean value)
 		{
 			instance.enableRandomWrite = value;
 		}
 
-		static private System.Boolean get_bindMS(UnityEngine.RenderTextureDescriptor instance)
+		static private System.Boolean get_bindMS(UnityEngine.RenderTextureDescriptor instance, string name)
 		{
 			return instance.bindMS;
 		}
 
-		static private void set_bindMS(UnityEngine.RenderTextureDescriptor instance, System.Boolean value)
+		static private void set_bindMS(UnityEngine.RenderTextureDescriptor instance, string name, System.Boolean value)
 		{
 			instance.bindMS = value;
 		}

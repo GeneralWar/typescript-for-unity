@@ -52,7 +52,7 @@ JSValueRef DefineProperty(JSContextRef contextRef, JSValueRef target, void* hand
     }
     [value defineProperty:[NSString stringWithUTF8String:name] descriptor:descriptor];
     return descriptor.JSValueRef;
-//    JSObjectRef object = JSValueToObject(contextRef, target, nullptr);
+//    JSObjectRef object = ValueToObject(contextRef, target);
 //    JSStringRef jsName = JSStringCreateWithUTF8CString(name);
 //    JSValueRef result = JSObjectGetProperty(contextRef, object, jsName, nullptr);
 //    JSStringRelease(jsName);

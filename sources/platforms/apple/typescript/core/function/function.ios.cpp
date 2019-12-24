@@ -23,7 +23,7 @@ void TypescriptStaticFunction::Bind(Base* parent)
 {
     JSContextRef context = GetContext(this);
     
-    JSValueRef self = JSObjectMakeFunctionWithCallback(context, 0, mCallback);
+    JSObjectRef self = JSObjectMakeFunctionWithCallback(context, 0, mCallback);
     if (self)
     {
         mReference = self;

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(UnityEngine.ComputeBuffer);
 		}
 
-		static private void CopyCount(Parameters parameters)
+		static private void CopyCount(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeBuffer, UnityEngine.ComputeBuffer, System.Int32>())
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Dispose(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private void Dispose(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -82,7 +83,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.ComputeBuffer.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void GetData(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private void GetData(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Array>())
 			{
@@ -109,7 +110,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.IntPtr GetNativeBufferPtr(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private System.IntPtr GetNativeBufferPtr(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -124,7 +125,7 @@ namespace General.Typescript
 			return default(System.IntPtr);
 		}
 
-		static private System.Boolean IsValid(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private System.Boolean IsValid(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Release(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private void Release(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -153,7 +154,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.ComputeBuffer.Release has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetCounterValue(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private void SetCounterValue(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt32>())
 			{
@@ -175,7 +176,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetData(UnityEngine.ComputeBuffer instance, Parameters parameters)
+		static private void SetData(UnityEngine.ComputeBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Array>())
 			{
@@ -202,12 +203,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_count(UnityEngine.ComputeBuffer instance)
+		static private System.Int32 get_count(UnityEngine.ComputeBuffer instance, string name)
 		{
 			return instance.count;
 		}
 
-		static private System.Int32 get_stride(UnityEngine.ComputeBuffer instance)
+		static private System.Int32 get_stride(UnityEngine.ComputeBuffer instance, string name)
 		{
 			return instance.stride;
 		}

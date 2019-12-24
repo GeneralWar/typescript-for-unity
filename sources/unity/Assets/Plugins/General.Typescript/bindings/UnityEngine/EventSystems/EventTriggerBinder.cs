@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("OnUpdateSelected", OnUpdateSelected);
 		}
 
-		static private void OnBeginDrag(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnBeginDrag(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnCancel(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnCancel(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -71,7 +72,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnDeselect(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnDeselect(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -93,7 +94,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnDrag(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnDrag(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -115,7 +116,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnDrop(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnDrop(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -137,7 +138,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnEndDrag(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnEndDrag(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -159,7 +160,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnInitializePotentialDrag(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnInitializePotentialDrag(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -181,7 +182,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnMove(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnMove(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.AxisEventData>())
 			{
@@ -203,7 +204,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerClick(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnPointerClick(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -225,7 +226,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerDown(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnPointerDown(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -247,7 +248,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerEnter(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnPointerEnter(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -269,7 +270,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerExit(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnPointerExit(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -291,7 +292,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerUp(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnPointerUp(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -313,7 +314,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnScroll(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnScroll(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -335,7 +336,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSelect(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnSelect(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -357,7 +358,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSubmit(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnSubmit(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -379,7 +380,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnUpdateSelected(UnityEngine.EventSystems.EventTrigger instance, Parameters parameters)
+		static private void OnUpdateSelected(UnityEngine.EventSystems.EventTrigger instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{

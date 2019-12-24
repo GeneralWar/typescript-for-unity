@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(System.IO.DirectoryInfo);
 		}
 
-		static private void Create(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private void Create(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.DirectoryInfo.Create has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IO.DirectoryInfo CreateSubdirectory(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.IO.DirectoryInfo CreateSubdirectory(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -91,7 +92,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Delete(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private void Delete(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.DirectoryInfo.Delete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Security.AccessControl.DirectorySecurity GetAccessControl(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.Security.AccessControl.DirectorySecurity GetAccessControl(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -129,7 +130,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.DirectoryInfo[] GetDirectories(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.IO.DirectoryInfo[] GetDirectories(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -152,7 +153,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileInfo[] GetFiles(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.IO.FileInfo[] GetFiles(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -175,7 +176,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileSystemInfo[] GetFileSystemInfos(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.IO.FileSystemInfo[] GetFileSystemInfos(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void MoveTo(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private void MoveTo(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -220,7 +221,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetAccessControl(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private void SetAccessControl(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.AccessControl.DirectorySecurity>())
 			{
@@ -242,7 +243,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(System.IO.DirectoryInfo instance, Parameters parameters)
+		static private System.String ToString(System.IO.DirectoryInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -257,22 +258,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean get_Exists(System.IO.DirectoryInfo instance)
+		static private System.Boolean get_Exists(System.IO.DirectoryInfo instance, string name)
 		{
 			return instance.Exists;
 		}
 
-		static private System.String get_Name(System.IO.DirectoryInfo instance)
+		static private System.String get_Name(System.IO.DirectoryInfo instance, string name)
 		{
 			return instance.Name;
 		}
 
-		static private System.IO.DirectoryInfo get_Parent(System.IO.DirectoryInfo instance)
+		static private System.IO.DirectoryInfo get_Parent(System.IO.DirectoryInfo instance, string name)
 		{
 			return instance.Parent;
 		}
 
-		static private System.IO.DirectoryInfo get_Root(System.IO.DirectoryInfo instance)
+		static private System.IO.DirectoryInfo get_Root(System.IO.DirectoryInfo instance, string name)
 		{
 			return instance.Root;
 		}

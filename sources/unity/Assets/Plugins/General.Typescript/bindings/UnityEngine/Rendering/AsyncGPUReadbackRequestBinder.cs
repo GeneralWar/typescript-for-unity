@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -19,7 +20,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("depth", get_depth, null);
 		}
 
-		static private void Update(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, Parameters parameters)
+		static private void Update(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -33,7 +34,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.AsyncGPUReadbackRequest.Update has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void WaitForCompletion(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, Parameters parameters)
+		static private void WaitForCompletion(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -47,37 +48,37 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.AsyncGPUReadbackRequest.WaitForCompletion has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_done(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Boolean get_done(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.done;
 		}
 
-		static private System.Boolean get_hasError(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Boolean get_hasError(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.hasError;
 		}
 
-		static private System.Int32 get_layerCount(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Int32 get_layerCount(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.layerCount;
 		}
 
-		static private System.Int32 get_layerDataSize(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Int32 get_layerDataSize(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.layerDataSize;
 		}
 
-		static private System.Int32 get_width(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Int32 get_width(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private System.Int32 get_height(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Int32 get_height(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private System.Int32 get_depth(UnityEngine.Rendering.AsyncGPUReadbackRequest instance)
+		static private System.Int32 get_depth(UnityEngine.Rendering.AsyncGPUReadbackRequest instance, string name)
 		{
 			return instance.depth;
 		}

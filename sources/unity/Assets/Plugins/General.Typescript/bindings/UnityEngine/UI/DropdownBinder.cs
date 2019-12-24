@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -23,7 +24,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("value", get_value, set_value);
 		}
 
-		static private void ClearOptions(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void ClearOptions(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -37,7 +38,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Dropdown.ClearOptions has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Hide(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void Hide(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -51,7 +52,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Dropdown.Hide has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void OnCancel(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void OnCancel(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerClick(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void OnPointerClick(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSubmit(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void OnSubmit(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -117,7 +118,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RefreshShownValue(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void RefreshShownValue(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -131,7 +132,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Dropdown.RefreshShownValue has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Show(UnityEngine.UI.Dropdown instance, Parameters parameters)
+		static private void Show(UnityEngine.UI.Dropdown instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -145,62 +146,62 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Dropdown.Show has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.RectTransform get_template(UnityEngine.UI.Dropdown instance)
+		static private UnityEngine.RectTransform get_template(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.template;
 		}
 
-		static private void set_template(UnityEngine.UI.Dropdown instance, UnityEngine.RectTransform value)
+		static private void set_template(UnityEngine.UI.Dropdown instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.template = value;
 		}
 
-		static private UnityEngine.UI.Text get_captionText(UnityEngine.UI.Dropdown instance)
+		static private UnityEngine.UI.Text get_captionText(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.captionText;
 		}
 
-		static private void set_captionText(UnityEngine.UI.Dropdown instance, UnityEngine.UI.Text value)
+		static private void set_captionText(UnityEngine.UI.Dropdown instance, string name, UnityEngine.UI.Text value)
 		{
 			instance.captionText = value;
 		}
 
-		static private UnityEngine.UI.Image get_captionImage(UnityEngine.UI.Dropdown instance)
+		static private UnityEngine.UI.Image get_captionImage(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.captionImage;
 		}
 
-		static private void set_captionImage(UnityEngine.UI.Dropdown instance, UnityEngine.UI.Image value)
+		static private void set_captionImage(UnityEngine.UI.Dropdown instance, string name, UnityEngine.UI.Image value)
 		{
 			instance.captionImage = value;
 		}
 
-		static private UnityEngine.UI.Text get_itemText(UnityEngine.UI.Dropdown instance)
+		static private UnityEngine.UI.Text get_itemText(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.itemText;
 		}
 
-		static private void set_itemText(UnityEngine.UI.Dropdown instance, UnityEngine.UI.Text value)
+		static private void set_itemText(UnityEngine.UI.Dropdown instance, string name, UnityEngine.UI.Text value)
 		{
 			instance.itemText = value;
 		}
 
-		static private UnityEngine.UI.Image get_itemImage(UnityEngine.UI.Dropdown instance)
+		static private UnityEngine.UI.Image get_itemImage(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.itemImage;
 		}
 
-		static private void set_itemImage(UnityEngine.UI.Dropdown instance, UnityEngine.UI.Image value)
+		static private void set_itemImage(UnityEngine.UI.Dropdown instance, string name, UnityEngine.UI.Image value)
 		{
 			instance.itemImage = value;
 		}
 
-		static private System.Int32 get_value(UnityEngine.UI.Dropdown instance)
+		static private System.Int32 get_value(UnityEngine.UI.Dropdown instance, string name)
 		{
 			return instance.value;
 		}
 
-		static private void set_value(UnityEngine.UI.Dropdown instance, System.Int32 value)
+		static private void set_value(UnityEngine.UI.Dropdown instance, string name, System.Int32 value)
 		{
 			instance.value = value;
 		}

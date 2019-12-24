@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,22 +28,22 @@ namespace General.Typescript
 			return default(UnityEngine.OcclusionArea);
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.OcclusionArea instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.OcclusionArea instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.OcclusionArea instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.OcclusionArea instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private UnityEngine.Vector3 get_size(UnityEngine.OcclusionArea instance)
+		static private UnityEngine.Vector3 get_size(UnityEngine.OcclusionArea instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.OcclusionArea instance, UnityEngine.Vector3 value)
+		static private void set_size(UnityEngine.OcclusionArea instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.size = value;
 		}

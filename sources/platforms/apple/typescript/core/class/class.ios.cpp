@@ -69,7 +69,7 @@ JSObjectRef onConstructorCall(JSContextRef context, JSObjectRef constructor, siz
         {
             int result = instance->CreateInstance(arguments, (int)argumentCount);
             JSValueRef value = check_function_result(context, result);
-            return value ? JSValueToObject(context, value, nullptr) : nullptr;
+            return value ? ValueToObject(context, value) : nullptr;
         }
     }
     return nullptr;
@@ -194,9 +194,9 @@ void TypescriptClass::bind()
             return;
         }
         
-        self = mReference = constructor;
+        self = mReference = mJsObject = constructor;
         SetValueProperty(context, self, OBJECT_KEY, JSValueMakeNumber(context, (double)(unsigned long long)this));
-        SetValuePropertyWithString(context, self, "fullname", mFullname.c_str());
+        SetValuePropertyWithString(context, self, FULLNAME, mFullname.c_str());
         if (exception)
         {
             LogError(JSValue_To_String(context, exception));
@@ -207,13 +207,43 @@ void TypescriptClass::bind()
         Base::Bind();
         self = mReference;
     }
-    JSStringRef applyName = JSStringCreateWithUTF8CString("apply");
+    JSStringRef applyName = JSStringCreateWithUTF8CString(APPLY);
     JSObjectRef apply = JSObjectMakeFunctionWithCallback(context, applyName, onApplyCall);
-    JSObjectSetProperty(context, JSValueToObject(context, self, nullptr), applyName, apply, 0, nullptr);
+    JSObjectSetProperty(context, ValueToObject(context, self), applyName, apply, 0, nullptr);
     JSStringRelease(applyName);
     
     SetValuePropertyWithString(context, self, UNITY_INSTANCE_IS_TYPE, mFullname.c_str());
     SetValueProperty(context, GetParentValue(this), mName.c_str(), self);
+}
+
+void TypescriptClass::bindConstructor()
+{
+    this->bind();
+}
+
+void TypescriptClass::inherit()
+{
+    if (nullptr == mParent) return;
+    
+    JSObjectRef self = this->GetJsObject();
+    assert(self);
+    
+    JSContextRef context = GetContext(this);
+    if (!context) return;
+    
+    JSObjectRef parent = mParent->GetJsObject();
+    JSPropertyNameArrayRef names = JSObjectCopyPropertyNames(context, parent);
+    size_t length = JSPropertyNameArrayGetCount(names);
+    for (size_t i = 0; i < length; ++i)
+    {
+        JSStringRef name = JSPropertyNameArrayGetNameAtIndex(names, i);
+        if (JSObjectHasProperty(context, self, name))
+        {
+            continue;
+        }
+        JSObjectSetProperty(context, self, name, JSObjectGetProperty(context, parent, name, nullptr), kJSPropertyAttributeNone, nullptr);
+    }
+    JSPropertyNameArrayRelease(names);
 }
 
 int TypescriptClass::CreateInstance(const JSValueRef *arguments, const int &argumentCount)

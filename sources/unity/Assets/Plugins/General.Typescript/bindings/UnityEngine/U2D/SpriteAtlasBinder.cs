@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -31,7 +32,7 @@ namespace General.Typescript
 			return default(UnityEngine.U2D.SpriteAtlas);
 		}
 
-		static private System.Boolean CanBindTo(UnityEngine.U2D.SpriteAtlas instance, Parameters parameters)
+		static private System.Boolean CanBindTo(UnityEngine.U2D.SpriteAtlas instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite>())
 			{
@@ -53,7 +54,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Sprite GetSprite(UnityEngine.U2D.SpriteAtlas instance, Parameters parameters)
+		static private UnityEngine.Sprite GetSprite(UnityEngine.U2D.SpriteAtlas instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetSprites(UnityEngine.U2D.SpriteAtlas instance, Parameters parameters)
+		static private System.Int32 GetSprites(UnityEngine.U2D.SpriteAtlas instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Sprite[]>())
 			{
@@ -101,17 +102,17 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean get_isVariant(UnityEngine.U2D.SpriteAtlas instance)
+		static private System.Boolean get_isVariant(UnityEngine.U2D.SpriteAtlas instance, string name)
 		{
 			return instance.isVariant;
 		}
 
-		static private System.String get_tag(UnityEngine.U2D.SpriteAtlas instance)
+		static private System.String get_tag(UnityEngine.U2D.SpriteAtlas instance, string name)
 		{
 			return instance.tag;
 		}
 
-		static private System.Int32 get_spriteCount(UnityEngine.U2D.SpriteAtlas instance)
+		static private System.Int32 get_spriteCount(UnityEngine.U2D.SpriteAtlas instance, string name)
 		{
 			return instance.spriteCount;
 		}

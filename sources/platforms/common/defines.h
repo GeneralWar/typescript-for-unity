@@ -50,6 +50,30 @@
 #endif
 #endif
 
+#ifndef JS_DEFAULT_VALUE
+#if defined(_WIN32) || defined(__ANDROID__)
+#define  JS_DEFAULT_VALUE Local<Value>()
+#elif __APPLE__
+#define  JS_DEFAULT_VALUE nullptr
+#endif
+#endif
+
+#ifndef JS_DEFAULT_OBJECT
+#if defined(_WIN32) || defined(__ANDROID__)
+#define  JS_DEFAULT_OBJECT Local<Object>()
+#elif __APPLE__
+#define  JS_DEFAULT_OBJECT nullptr
+#endif
+#endif
+
+#ifndef JS_PERSISTENT_OBJECT_TYPE
+#if defined(_WIN32) || defined(__ANDROID__)
+#define  JS_PERSISTENT_OBJECT_TYPE Persistent<Object>
+#elif __APPLE__
+#define  JS_PERSISTENT_OBJECT_TYPE JSObjectRef
+#endif
+#endif
+
 #ifndef JS_PARAMETERS
 #if defined(_WIN32) || defined(__ANDROID__)
 #define  JS_PARAMETERS const FunctionCallbackInfo<Value>& info
@@ -78,7 +102,7 @@
 #if defined(_WIN32) || defined(__ANDROID__)
 #define REFERENCE Reference*
 #elif __APPLE__
-#define REFERENCE JSValueRef
+#define REFERENCE JSObjectRef
 #endif
 #endif
 
@@ -118,6 +142,18 @@
 
 #ifndef OBJECT_KEY
 #define OBJECT_KEY "function_call_object"
+#endif
+
+#ifndef APPLY
+#define APPLY "apply"
+#endif
+
+#ifndef NAME
+#define NAME "name"
+#endif
+
+#ifndef FULLNAME
+#define FULLNAME "fullname"
 #endif
 
 ///////////////////////////////////////////////////////////////////

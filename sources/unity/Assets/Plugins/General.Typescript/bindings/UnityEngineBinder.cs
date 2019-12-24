@@ -40,7 +40,6 @@ namespace General.Typescript
 			UnityEngineAnimatorTransitionInfo.Bind(self);
 			UnityEngineAnimatorUpdateMode.Bind(self);
 			UnityEngineAnimatorUtility.Bind(self);
-			UnityEngineApplication.Bind(self);
 			UnityEngineApplicationInstallMode.Bind(self);
 			UnityEngineApplicationSandboxType.Bind(self);
 			UnityEngineArmDof.Bind(self);
@@ -127,7 +126,6 @@ namespace General.Typescript
 			UnityEngineFogMode.Bind(self);
 			UnityEngineForceMode.Bind(self);
 			UnityEngineFullScreenMode.Bind(self);
-			UnityEngineGameObject.Bind(self);
 			UnityEngineGeometryUtility.Bind(self);
 			UnityEngineGizmos.Bind(self);
 			UnityEngineGL.Bind(self);
@@ -331,13 +329,6 @@ namespace General.Typescript
 			UnityEngineWheelFrictionCurve.Bind(self);
 			UnityEngineWrapMode.Bind(self);
 			UnityEngineYieldInstruction.Bind(self);
-#if !UNITY_STANDALONE_WIN && !UNITY_IPHONE
-			UnityEngineFullScreenMovieControlMode.Bind(self);
-			UnityEngineFullScreenMovieScalingMode.Bind(self);
-#endif
-#if !UNITY_STANDALONE_WIN && !UNITY_IPHONE && !UNITY_ANDROID
-			UnityEngineTextureCompressionQuality.Bind(self);
-#endif
 #if !UNITY_STANDALONE
 			UnityEngineTouch.Bind(self);
 			UnityEngineTouchPhase.Bind(self);

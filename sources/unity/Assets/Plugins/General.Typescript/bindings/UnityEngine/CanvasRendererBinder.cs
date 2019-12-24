@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -49,7 +50,7 @@ namespace General.Typescript
 			return default(UnityEngine.CanvasRenderer);
 		}
 
-		static private void Clear(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void Clear(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CanvasRenderer.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DisableRectClipping(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void DisableRectClipping(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CanvasRenderer.DisableRectClipping has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void EnableRectClipping(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void EnableRectClipping(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -99,7 +100,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single GetAlpha(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private System.Single GetAlpha(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Color GetColor(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private UnityEngine.Color GetColor(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -129,7 +130,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Single GetInheritedAlpha(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private System.Single GetInheritedAlpha(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -144,7 +145,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Material GetMaterial(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private UnityEngine.Material GetMaterial(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -163,7 +164,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Material GetPopMaterial(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private UnityEngine.Material GetPopMaterial(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -185,7 +186,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetAlpha(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetAlpha(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -207,7 +208,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetAlphaTexture(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetAlphaTexture(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture>())
 			{
@@ -229,7 +230,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetColor(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetColor(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color>())
 			{
@@ -251,7 +252,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMaterial(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetMaterial(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Material, System.Int32>())
 			{
@@ -278,7 +279,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMesh(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetMesh(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh>())
 			{
@@ -300,7 +301,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPopMaterial(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetPopMaterial(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Material, System.Int32>())
 			{
@@ -322,7 +323,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTexture(UnityEngine.CanvasRenderer instance, Parameters parameters)
+		static private void SetTexture(UnityEngine.CanvasRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture>())
 			{
@@ -344,72 +345,72 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_hasPopInstruction(UnityEngine.CanvasRenderer instance)
+		static private System.Boolean get_hasPopInstruction(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.hasPopInstruction;
 		}
 
-		static private void set_hasPopInstruction(UnityEngine.CanvasRenderer instance, System.Boolean value)
+		static private void set_hasPopInstruction(UnityEngine.CanvasRenderer instance, string name, System.Boolean value)
 		{
 			instance.hasPopInstruction = value;
 		}
 
-		static private System.Int32 get_materialCount(UnityEngine.CanvasRenderer instance)
+		static private System.Int32 get_materialCount(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.materialCount;
 		}
 
-		static private void set_materialCount(UnityEngine.CanvasRenderer instance, System.Int32 value)
+		static private void set_materialCount(UnityEngine.CanvasRenderer instance, string name, System.Int32 value)
 		{
 			instance.materialCount = value;
 		}
 
-		static private System.Int32 get_popMaterialCount(UnityEngine.CanvasRenderer instance)
+		static private System.Int32 get_popMaterialCount(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.popMaterialCount;
 		}
 
-		static private void set_popMaterialCount(UnityEngine.CanvasRenderer instance, System.Int32 value)
+		static private void set_popMaterialCount(UnityEngine.CanvasRenderer instance, string name, System.Int32 value)
 		{
 			instance.popMaterialCount = value;
 		}
 
-		static private System.Int32 get_absoluteDepth(UnityEngine.CanvasRenderer instance)
+		static private System.Int32 get_absoluteDepth(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.absoluteDepth;
 		}
 
-		static private System.Boolean get_hasMoved(UnityEngine.CanvasRenderer instance)
+		static private System.Boolean get_hasMoved(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.hasMoved;
 		}
 
-		static private System.Boolean get_cullTransparentMesh(UnityEngine.CanvasRenderer instance)
+		static private System.Boolean get_cullTransparentMesh(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.cullTransparentMesh;
 		}
 
-		static private void set_cullTransparentMesh(UnityEngine.CanvasRenderer instance, System.Boolean value)
+		static private void set_cullTransparentMesh(UnityEngine.CanvasRenderer instance, string name, System.Boolean value)
 		{
 			instance.cullTransparentMesh = value;
 		}
 
-		static private System.Boolean get_hasRectClipping(UnityEngine.CanvasRenderer instance)
+		static private System.Boolean get_hasRectClipping(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.hasRectClipping;
 		}
 
-		static private System.Int32 get_relativeDepth(UnityEngine.CanvasRenderer instance)
+		static private System.Int32 get_relativeDepth(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.relativeDepth;
 		}
 
-		static private System.Boolean get_cull(UnityEngine.CanvasRenderer instance)
+		static private System.Boolean get_cull(UnityEngine.CanvasRenderer instance, string name)
 		{
 			return instance.cull;
 		}
 
-		static private void set_cull(UnityEngine.CanvasRenderer instance, System.Boolean value)
+		static private void set_cull(UnityEngine.CanvasRenderer instance, string name, System.Boolean value)
 		{
 			instance.cull = value;
 		}

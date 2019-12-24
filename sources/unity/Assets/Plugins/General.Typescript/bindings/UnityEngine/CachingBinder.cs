@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -42,7 +43,7 @@ namespace General.Typescript
 			return default(UnityEngine.Caching);
 		}
 
-		static private UnityEngine.Cache AddCache(Parameters parameters)
+		static private UnityEngine.Cache AddCache(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			return default(UnityEngine.Cache);
 		}
 
-		static private System.Boolean ClearAllCachedVersions(Parameters parameters)
+		static private System.Boolean ClearAllCachedVersions(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -86,7 +87,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean ClearCache(Parameters parameters)
+		static private System.Boolean ClearCache(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean ClearCachedVersion(Parameters parameters)
+		static private System.Boolean ClearCachedVersion(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Hash128>())
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean ClearOtherCachedVersions(Parameters parameters)
+		static private System.Boolean ClearOtherCachedVersions(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Hash128>())
 			{
@@ -149,7 +150,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Cache GetCacheAt(Parameters parameters)
+		static private UnityEngine.Cache GetCacheAt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -171,7 +172,7 @@ namespace General.Typescript
 			return default(UnityEngine.Cache);
 		}
 
-		static private UnityEngine.Cache GetCacheByPath(Parameters parameters)
+		static private UnityEngine.Cache GetCacheByPath(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -193,7 +194,7 @@ namespace General.Typescript
 			return default(UnityEngine.Cache);
 		}
 
-		static private System.Boolean IsVersionCached(Parameters parameters)
+		static private System.Boolean IsVersionCached(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CachedAssetBundle>())
 			{
@@ -219,7 +220,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean MarkAsUsed(Parameters parameters)
+		static private System.Boolean MarkAsUsed(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CachedAssetBundle>())
 			{
@@ -245,7 +246,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void MoveCacheAfter(Parameters parameters)
+		static private void MoveCacheAfter(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Cache, UnityEngine.Cache>())
 			{
@@ -267,7 +268,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MoveCacheBefore(Parameters parameters)
+		static private void MoveCacheBefore(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Cache, UnityEngine.Cache>())
 			{
@@ -289,7 +290,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean RemoveCache(Parameters parameters)
+		static private System.Boolean RemoveCache(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Cache>())
 			{
@@ -311,37 +312,37 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean get_compressionEnabled()
+		static private System.Boolean get_compressionEnabled(Type type, string name)
 		{
 			return UnityEngine.Caching.compressionEnabled;
 		}
 
-		static private void set_compressionEnabled(System.Boolean value)
+		static private void set_compressionEnabled(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Caching.compressionEnabled = value;
 		}
 
-		static private System.Boolean get_ready()
+		static private System.Boolean get_ready(Type type, string name)
 		{
 			return UnityEngine.Caching.ready;
 		}
 
-		static private System.Int32 get_cacheCount()
+		static private System.Int32 get_cacheCount(Type type, string name)
 		{
 			return UnityEngine.Caching.cacheCount;
 		}
 
-		static private UnityEngine.Cache get_defaultCache()
+		static private UnityEngine.Cache get_defaultCache(Type type, string name)
 		{
 			return UnityEngine.Caching.defaultCache;
 		}
 
-		static private UnityEngine.Cache get_currentCacheForWriting()
+		static private UnityEngine.Cache get_currentCacheForWriting(Type type, string name)
 		{
 			return UnityEngine.Caching.currentCacheForWriting;
 		}
 
-		static private void set_currentCacheForWriting(UnityEngine.Cache value)
+		static private void set_currentCacheForWriting(Type type, string name, UnityEngine.Cache value)
 		{
 			UnityEngine.Caching.currentCacheForWriting = value;
 		}

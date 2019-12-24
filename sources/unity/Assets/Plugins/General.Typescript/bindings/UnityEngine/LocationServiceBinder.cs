@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -30,7 +31,7 @@ namespace General.Typescript
 			return default(UnityEngine.LocationService);
 		}
 
-		static private void Start(UnityEngine.LocationService instance, Parameters parameters)
+		static private void Start(UnityEngine.LocationService instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -54,7 +55,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.LocationService.Start has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Stop(UnityEngine.LocationService instance, Parameters parameters)
+		static private void Stop(UnityEngine.LocationService instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -68,17 +69,17 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.LocationService.Stop has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_isEnabledByUser(UnityEngine.LocationService instance)
+		static private System.Boolean get_isEnabledByUser(UnityEngine.LocationService instance, string name)
 		{
 			return instance.isEnabledByUser;
 		}
 
-		static private UnityEngine.LocationServiceStatus get_status(UnityEngine.LocationService instance)
+		static private UnityEngine.LocationServiceStatus get_status(UnityEngine.LocationService instance, string name)
 		{
 			return instance.status;
 		}
 
-		static private UnityEngine.LocationInfo get_lastData(UnityEngine.LocationService instance)
+		static private UnityEngine.LocationInfo get_lastData(UnityEngine.LocationService instance, string name)
 		{
 			return instance.lastData;
 		}

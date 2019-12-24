@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(System.IO.BinaryWriter);
 		}
 
-		static private void Close(System.IO.BinaryWriter instance, Parameters parameters)
+		static private void Close(System.IO.BinaryWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.BinaryWriter.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Dispose(System.IO.BinaryWriter instance, Parameters parameters)
+		static private void Dispose(System.IO.BinaryWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.BinaryWriter.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Flush(System.IO.BinaryWriter instance, Parameters parameters)
+		static private void Flush(System.IO.BinaryWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.BinaryWriter.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int64 Seek(System.IO.BinaryWriter instance, Parameters parameters)
+		static private System.Int64 Seek(System.IO.BinaryWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.IO.SeekOrigin>())
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private void Write(System.IO.BinaryWriter instance, Parameters parameters)
+		static private void Write(System.IO.BinaryWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -217,7 +218,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.BinaryWriter instance)
+		static private System.IO.Stream get_BaseStream(System.IO.BinaryWriter instance, string name)
 		{
 			return instance.BaseStream;
 		}

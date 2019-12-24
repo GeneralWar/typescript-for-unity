@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -68,7 +69,7 @@ namespace General.Typescript
 			return default(System.IO.MemoryStream);
 		}
 
-		static private System.Threading.Tasks.Task CopyToAsync(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task CopyToAsync(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IO.Stream, System.Int32, System.Threading.CancellationToken>())
 			{
@@ -90,7 +91,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Flush(System.IO.MemoryStream instance, Parameters parameters)
+		static private void Flush(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -104,7 +105,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.MemoryStream.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task FlushAsync(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task FlushAsync(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Threading.CancellationToken>())
 			{
@@ -126,7 +127,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Byte[] GetBuffer(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Byte[] GetBuffer(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -141,7 +142,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 Read(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -163,7 +164,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 ReadByte(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Int32 ReadByte(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -178,7 +179,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int64 Seek(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Int64 Seek(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64, System.IO.SeekOrigin>())
 			{
@@ -200,7 +201,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private void SetLength(System.IO.MemoryStream instance, Parameters parameters)
+		static private void SetLength(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -222,7 +223,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Byte[] ToArray(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Byte[] ToArray(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -237,7 +238,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Write(System.IO.MemoryStream instance, Parameters parameters)
+		static private void Write(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -259,7 +260,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Threading.Tasks.Task WriteAsync(System.IO.MemoryStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteAsync(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken>())
 			{
@@ -281,7 +282,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void WriteByte(System.IO.MemoryStream instance, Parameters parameters)
+		static private void WriteByte(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte>())
 			{
@@ -303,7 +304,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void WriteTo(System.IO.MemoryStream instance, Parameters parameters)
+		static private void WriteTo(System.IO.MemoryStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IO.Stream>())
 			{
@@ -325,42 +326,42 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_CanRead(System.IO.MemoryStream instance)
+		static private System.Boolean get_CanRead(System.IO.MemoryStream instance, string name)
 		{
 			return instance.CanRead;
 		}
 
-		static private System.Boolean get_CanSeek(System.IO.MemoryStream instance)
+		static private System.Boolean get_CanSeek(System.IO.MemoryStream instance, string name)
 		{
 			return instance.CanSeek;
 		}
 
-		static private System.Boolean get_CanWrite(System.IO.MemoryStream instance)
+		static private System.Boolean get_CanWrite(System.IO.MemoryStream instance, string name)
 		{
 			return instance.CanWrite;
 		}
 
-		static private System.Int32 get_Capacity(System.IO.MemoryStream instance)
+		static private System.Int32 get_Capacity(System.IO.MemoryStream instance, string name)
 		{
 			return instance.Capacity;
 		}
 
-		static private void set_Capacity(System.IO.MemoryStream instance, System.Int32 value)
+		static private void set_Capacity(System.IO.MemoryStream instance, string name, System.Int32 value)
 		{
 			instance.Capacity = value;
 		}
 
-		static private System.Int64 get_Length(System.IO.MemoryStream instance)
+		static private System.Int64 get_Length(System.IO.MemoryStream instance, string name)
 		{
 			return instance.Length;
 		}
 
-		static private System.Int64 get_Position(System.IO.MemoryStream instance)
+		static private System.Int64 get_Position(System.IO.MemoryStream instance, string name)
 		{
 			return instance.Position;
 		}
 
-		static private void set_Position(System.IO.MemoryStream instance, System.Int64 value)
+		static private void set_Position(System.IO.MemoryStream instance, string name, System.Int64 value)
 		{
 			instance.Position = value;
 		}

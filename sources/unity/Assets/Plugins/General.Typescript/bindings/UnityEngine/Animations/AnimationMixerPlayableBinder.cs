@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindStaticProperty("Null", get_Null, null);
 		}
 
-		static private UnityEngine.Animations.AnimationMixerPlayable Create(Parameters parameters)
+		static private UnityEngine.Animations.AnimationMixerPlayable Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableGraph, System.Int32, System.Boolean>())
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.AnimationMixerPlayable);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Animations.AnimationMixerPlayable instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Animations.AnimationMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.AnimationMixerPlayable>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationMixerPlayable instance, Parameters parameters)
+		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return default(UnityEngine.Playables.PlayableHandle);
 		}
 
-		static private UnityEngine.Animations.AnimationMixerPlayable get_Null()
+		static private UnityEngine.Animations.AnimationMixerPlayable get_Null(Type type, string name)
 		{
 			return UnityEngine.Animations.AnimationMixerPlayable.Null;
 		}

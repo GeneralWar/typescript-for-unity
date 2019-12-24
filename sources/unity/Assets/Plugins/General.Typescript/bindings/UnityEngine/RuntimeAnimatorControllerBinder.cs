@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("animationClips", get_animationClips, null);
 		}
 
-		static private UnityEngine.AnimationClip[] get_animationClips(UnityEngine.RuntimeAnimatorController instance)
+		static private UnityEngine.AnimationClip[] get_animationClips(UnityEngine.RuntimeAnimatorController instance, string name)
 		{
 			return instance.animationClips;
 		}

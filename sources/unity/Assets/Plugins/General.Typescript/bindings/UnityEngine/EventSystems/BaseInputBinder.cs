@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.EventSystems.BaseInput);
 		}
 
-		static private System.Single GetAxisRaw(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private System.Single GetAxisRaw(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -61,7 +62,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean GetButtonDown(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private System.Boolean GetButtonDown(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButton(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private System.Boolean GetMouseButton(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButtonDown(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private System.Boolean GetMouseButtonDown(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButtonUp(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private System.Boolean GetMouseButtonUp(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -149,7 +150,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Touch GetTouch(UnityEngine.EventSystems.BaseInput instance, Parameters parameters)
+		static private UnityEngine.Touch GetTouch(UnityEngine.EventSystems.BaseInput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -171,52 +172,52 @@ namespace General.Typescript
 			return default(UnityEngine.Touch);
 		}
 
-		static private System.String get_compositionString(UnityEngine.EventSystems.BaseInput instance)
+		static private System.String get_compositionString(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.compositionString;
 		}
 
-		static private UnityEngine.IMECompositionMode get_imeCompositionMode(UnityEngine.EventSystems.BaseInput instance)
+		static private UnityEngine.IMECompositionMode get_imeCompositionMode(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.imeCompositionMode;
 		}
 
-		static private void set_imeCompositionMode(UnityEngine.EventSystems.BaseInput instance, UnityEngine.IMECompositionMode value)
+		static private void set_imeCompositionMode(UnityEngine.EventSystems.BaseInput instance, string name, UnityEngine.IMECompositionMode value)
 		{
 			instance.imeCompositionMode = value;
 		}
 
-		static private UnityEngine.Vector2 get_compositionCursorPos(UnityEngine.EventSystems.BaseInput instance)
+		static private UnityEngine.Vector2 get_compositionCursorPos(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.compositionCursorPos;
 		}
 
-		static private void set_compositionCursorPos(UnityEngine.EventSystems.BaseInput instance, UnityEngine.Vector2 value)
+		static private void set_compositionCursorPos(UnityEngine.EventSystems.BaseInput instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.compositionCursorPos = value;
 		}
 
-		static private System.Boolean get_mousePresent(UnityEngine.EventSystems.BaseInput instance)
+		static private System.Boolean get_mousePresent(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.mousePresent;
 		}
 
-		static private UnityEngine.Vector2 get_mousePosition(UnityEngine.EventSystems.BaseInput instance)
+		static private UnityEngine.Vector2 get_mousePosition(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.mousePosition;
 		}
 
-		static private UnityEngine.Vector2 get_mouseScrollDelta(UnityEngine.EventSystems.BaseInput instance)
+		static private UnityEngine.Vector2 get_mouseScrollDelta(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.mouseScrollDelta;
 		}
 
-		static private System.Boolean get_touchSupported(UnityEngine.EventSystems.BaseInput instance)
+		static private System.Boolean get_touchSupported(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.touchSupported;
 		}
 
-		static private System.Int32 get_touchCount(UnityEngine.EventSystems.BaseInput instance)
+		static private System.Int32 get_touchCount(UnityEngine.EventSystems.BaseInput instance, string name)
 		{
 			return instance.touchCount;
 		}

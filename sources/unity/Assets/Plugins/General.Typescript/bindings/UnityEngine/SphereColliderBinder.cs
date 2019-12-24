@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,22 +28,22 @@ namespace General.Typescript
 			return default(UnityEngine.SphereCollider);
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.SphereCollider instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.SphereCollider instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.SphereCollider instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.SphereCollider instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private System.Single get_radius(UnityEngine.SphereCollider instance)
+		static private System.Single get_radius(UnityEngine.SphereCollider instance, string name)
 		{
 			return instance.radius;
 		}
 
-		static private void set_radius(UnityEngine.SphereCollider instance, System.Single value)
+		static private void set_radius(UnityEngine.SphereCollider instance, string name, System.Single value)
 		{
 			instance.radius = value;
 		}

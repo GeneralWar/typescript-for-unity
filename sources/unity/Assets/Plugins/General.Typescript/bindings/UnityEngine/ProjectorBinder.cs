@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,82 +34,82 @@ namespace General.Typescript
 			return default(UnityEngine.Projector);
 		}
 
-		static private System.Single get_nearClipPlane(UnityEngine.Projector instance)
+		static private System.Single get_nearClipPlane(UnityEngine.Projector instance, string name)
 		{
 			return instance.nearClipPlane;
 		}
 
-		static private void set_nearClipPlane(UnityEngine.Projector instance, System.Single value)
+		static private void set_nearClipPlane(UnityEngine.Projector instance, string name, System.Single value)
 		{
 			instance.nearClipPlane = value;
 		}
 
-		static private System.Single get_farClipPlane(UnityEngine.Projector instance)
+		static private System.Single get_farClipPlane(UnityEngine.Projector instance, string name)
 		{
 			return instance.farClipPlane;
 		}
 
-		static private void set_farClipPlane(UnityEngine.Projector instance, System.Single value)
+		static private void set_farClipPlane(UnityEngine.Projector instance, string name, System.Single value)
 		{
 			instance.farClipPlane = value;
 		}
 
-		static private System.Single get_fieldOfView(UnityEngine.Projector instance)
+		static private System.Single get_fieldOfView(UnityEngine.Projector instance, string name)
 		{
 			return instance.fieldOfView;
 		}
 
-		static private void set_fieldOfView(UnityEngine.Projector instance, System.Single value)
+		static private void set_fieldOfView(UnityEngine.Projector instance, string name, System.Single value)
 		{
 			instance.fieldOfView = value;
 		}
 
-		static private System.Single get_aspectRatio(UnityEngine.Projector instance)
+		static private System.Single get_aspectRatio(UnityEngine.Projector instance, string name)
 		{
 			return instance.aspectRatio;
 		}
 
-		static private void set_aspectRatio(UnityEngine.Projector instance, System.Single value)
+		static private void set_aspectRatio(UnityEngine.Projector instance, string name, System.Single value)
 		{
 			instance.aspectRatio = value;
 		}
 
-		static private System.Boolean get_orthographic(UnityEngine.Projector instance)
+		static private System.Boolean get_orthographic(UnityEngine.Projector instance, string name)
 		{
 			return instance.orthographic;
 		}
 
-		static private void set_orthographic(UnityEngine.Projector instance, System.Boolean value)
+		static private void set_orthographic(UnityEngine.Projector instance, string name, System.Boolean value)
 		{
 			instance.orthographic = value;
 		}
 
-		static private System.Single get_orthographicSize(UnityEngine.Projector instance)
+		static private System.Single get_orthographicSize(UnityEngine.Projector instance, string name)
 		{
 			return instance.orthographicSize;
 		}
 
-		static private void set_orthographicSize(UnityEngine.Projector instance, System.Single value)
+		static private void set_orthographicSize(UnityEngine.Projector instance, string name, System.Single value)
 		{
 			instance.orthographicSize = value;
 		}
 
-		static private System.Int32 get_ignoreLayers(UnityEngine.Projector instance)
+		static private System.Int32 get_ignoreLayers(UnityEngine.Projector instance, string name)
 		{
 			return instance.ignoreLayers;
 		}
 
-		static private void set_ignoreLayers(UnityEngine.Projector instance, System.Int32 value)
+		static private void set_ignoreLayers(UnityEngine.Projector instance, string name, System.Int32 value)
 		{
 			instance.ignoreLayers = value;
 		}
 
-		static private UnityEngine.Material get_material(UnityEngine.Projector instance)
+		static private UnityEngine.Material get_material(UnityEngine.Projector instance, string name)
 		{
 			return instance.material;
 		}
 
-		static private void set_material(UnityEngine.Projector instance, UnityEngine.Material value)
+		static private void set_material(UnityEngine.Projector instance, string name, UnityEngine.Material value)
 		{
 			instance.material = value;
 		}

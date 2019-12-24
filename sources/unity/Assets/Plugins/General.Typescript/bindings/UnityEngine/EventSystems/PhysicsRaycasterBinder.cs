@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,37 +16,37 @@ namespace General.Typescript
 			self.BindInstanceProperty("maxRayIntersections", get_maxRayIntersections, set_maxRayIntersections);
 		}
 
-		static private UnityEngine.Camera get_eventCamera(UnityEngine.EventSystems.PhysicsRaycaster instance)
+		static private UnityEngine.Camera get_eventCamera(UnityEngine.EventSystems.PhysicsRaycaster instance, string name)
 		{
 			return instance.eventCamera;
 		}
 
-		static private System.Int32 get_depth(UnityEngine.EventSystems.PhysicsRaycaster instance)
+		static private System.Int32 get_depth(UnityEngine.EventSystems.PhysicsRaycaster instance, string name)
 		{
 			return instance.depth;
 		}
 
-		static private System.Int32 get_finalEventMask(UnityEngine.EventSystems.PhysicsRaycaster instance)
+		static private System.Int32 get_finalEventMask(UnityEngine.EventSystems.PhysicsRaycaster instance, string name)
 		{
 			return instance.finalEventMask;
 		}
 
-		static private UnityEngine.LayerMask get_eventMask(UnityEngine.EventSystems.PhysicsRaycaster instance)
+		static private UnityEngine.LayerMask get_eventMask(UnityEngine.EventSystems.PhysicsRaycaster instance, string name)
 		{
 			return instance.eventMask;
 		}
 
-		static private void set_eventMask(UnityEngine.EventSystems.PhysicsRaycaster instance, UnityEngine.LayerMask value)
+		static private void set_eventMask(UnityEngine.EventSystems.PhysicsRaycaster instance, string name, UnityEngine.LayerMask value)
 		{
 			instance.eventMask = value;
 		}
 
-		static private System.Int32 get_maxRayIntersections(UnityEngine.EventSystems.PhysicsRaycaster instance)
+		static private System.Int32 get_maxRayIntersections(UnityEngine.EventSystems.PhysicsRaycaster instance, string name)
 		{
 			return instance.maxRayIntersections;
 		}
 
-		static private void set_maxRayIntersections(UnityEngine.EventSystems.PhysicsRaycaster instance, System.Int32 value)
+		static private void set_maxRayIntersections(UnityEngine.EventSystems.PhysicsRaycaster instance, string name, System.Int32 value)
 		{
 			instance.maxRayIntersections = value;
 		}

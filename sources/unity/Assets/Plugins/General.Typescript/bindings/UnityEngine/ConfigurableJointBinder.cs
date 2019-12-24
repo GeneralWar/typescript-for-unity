@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,312 +57,312 @@ namespace General.Typescript
 			return default(UnityEngine.ConfigurableJoint);
 		}
 
-		static private UnityEngine.Vector3 get_secondaryAxis(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.Vector3 get_secondaryAxis(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.secondaryAxis;
 		}
 
-		static private void set_secondaryAxis(UnityEngine.ConfigurableJoint instance, UnityEngine.Vector3 value)
+		static private void set_secondaryAxis(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.secondaryAxis = value;
 		}
 
-		static private System.Single get_projectionAngle(UnityEngine.ConfigurableJoint instance)
+		static private System.Single get_projectionAngle(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.projectionAngle;
 		}
 
-		static private void set_projectionAngle(UnityEngine.ConfigurableJoint instance, System.Single value)
+		static private void set_projectionAngle(UnityEngine.ConfigurableJoint instance, string name, System.Single value)
 		{
 			instance.projectionAngle = value;
 		}
 
-		static private System.Single get_projectionDistance(UnityEngine.ConfigurableJoint instance)
+		static private System.Single get_projectionDistance(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.projectionDistance;
 		}
 
-		static private void set_projectionDistance(UnityEngine.ConfigurableJoint instance, System.Single value)
+		static private void set_projectionDistance(UnityEngine.ConfigurableJoint instance, string name, System.Single value)
 		{
 			instance.projectionDistance = value;
 		}
 
-		static private UnityEngine.JointProjectionMode get_projectionMode(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointProjectionMode get_projectionMode(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.projectionMode;
 		}
 
-		static private void set_projectionMode(UnityEngine.ConfigurableJoint instance, UnityEngine.JointProjectionMode value)
+		static private void set_projectionMode(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointProjectionMode value)
 		{
 			instance.projectionMode = value;
 		}
 
-		static private UnityEngine.JointDrive get_slerpDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_slerpDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.slerpDrive;
 		}
 
-		static private void set_slerpDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_slerpDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.slerpDrive = value;
 		}
 
-		static private UnityEngine.JointDrive get_angularYZDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_angularYZDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularYZDrive;
 		}
 
-		static private void set_angularYZDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_angularYZDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.angularYZDrive = value;
 		}
 
-		static private UnityEngine.JointDrive get_angularXDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_angularXDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularXDrive;
 		}
 
-		static private void set_angularXDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_angularXDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.angularXDrive = value;
 		}
 
-		static private UnityEngine.RotationDriveMode get_rotationDriveMode(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.RotationDriveMode get_rotationDriveMode(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.rotationDriveMode;
 		}
 
-		static private void set_rotationDriveMode(UnityEngine.ConfigurableJoint instance, UnityEngine.RotationDriveMode value)
+		static private void set_rotationDriveMode(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.RotationDriveMode value)
 		{
 			instance.rotationDriveMode = value;
 		}
 
-		static private UnityEngine.Vector3 get_targetAngularVelocity(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.Vector3 get_targetAngularVelocity(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.targetAngularVelocity;
 		}
 
-		static private void set_targetAngularVelocity(UnityEngine.ConfigurableJoint instance, UnityEngine.Vector3 value)
+		static private void set_targetAngularVelocity(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.targetAngularVelocity = value;
 		}
 
-		static private UnityEngine.Quaternion get_targetRotation(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.Quaternion get_targetRotation(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.targetRotation;
 		}
 
-		static private void set_targetRotation(UnityEngine.ConfigurableJoint instance, UnityEngine.Quaternion value)
+		static private void set_targetRotation(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.targetRotation = value;
 		}
 
-		static private UnityEngine.JointDrive get_zDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_zDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.zDrive;
 		}
 
-		static private void set_zDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_zDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.zDrive = value;
 		}
 
-		static private UnityEngine.JointDrive get_yDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_yDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.yDrive;
 		}
 
-		static private void set_yDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_yDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.yDrive = value;
 		}
 
-		static private UnityEngine.JointDrive get_xDrive(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.JointDrive get_xDrive(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.xDrive;
 		}
 
-		static private void set_xDrive(UnityEngine.ConfigurableJoint instance, UnityEngine.JointDrive value)
+		static private void set_xDrive(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.JointDrive value)
 		{
 			instance.xDrive = value;
 		}
 
-		static private UnityEngine.Vector3 get_targetVelocity(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.Vector3 get_targetVelocity(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.targetVelocity;
 		}
 
-		static private void set_targetVelocity(UnityEngine.ConfigurableJoint instance, UnityEngine.Vector3 value)
+		static private void set_targetVelocity(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.targetVelocity = value;
 		}
 
-		static private System.Boolean get_configuredInWorldSpace(UnityEngine.ConfigurableJoint instance)
+		static private System.Boolean get_configuredInWorldSpace(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.configuredInWorldSpace;
 		}
 
-		static private void set_configuredInWorldSpace(UnityEngine.ConfigurableJoint instance, System.Boolean value)
+		static private void set_configuredInWorldSpace(UnityEngine.ConfigurableJoint instance, string name, System.Boolean value)
 		{
 			instance.configuredInWorldSpace = value;
 		}
 
-		static private UnityEngine.Vector3 get_targetPosition(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.Vector3 get_targetPosition(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.targetPosition;
 		}
 
-		static private void set_targetPosition(UnityEngine.ConfigurableJoint instance, UnityEngine.Vector3 value)
+		static private void set_targetPosition(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.targetPosition = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_angularYLimit(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimit get_angularYLimit(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularYLimit;
 		}
 
-		static private void set_angularYLimit(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_angularYLimit(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.angularYLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_highAngularXLimit(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimit get_highAngularXLimit(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.highAngularXLimit;
 		}
 
-		static private void set_highAngularXLimit(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_highAngularXLimit(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.highAngularXLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_lowAngularXLimit(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimit get_lowAngularXLimit(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.lowAngularXLimit;
 		}
 
-		static private void set_lowAngularXLimit(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_lowAngularXLimit(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.lowAngularXLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_linearLimit(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimit get_linearLimit(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.linearLimit;
 		}
 
-		static private void set_linearLimit(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_linearLimit(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.linearLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimitSpring get_angularYZLimitSpring(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimitSpring get_angularYZLimitSpring(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularYZLimitSpring;
 		}
 
-		static private void set_angularYZLimitSpring(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimitSpring value)
+		static private void set_angularYZLimitSpring(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimitSpring value)
 		{
 			instance.angularYZLimitSpring = value;
 		}
 
-		static private UnityEngine.SoftJointLimitSpring get_angularXLimitSpring(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimitSpring get_angularXLimitSpring(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularXLimitSpring;
 		}
 
-		static private void set_angularXLimitSpring(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimitSpring value)
+		static private void set_angularXLimitSpring(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimitSpring value)
 		{
 			instance.angularXLimitSpring = value;
 		}
 
-		static private UnityEngine.SoftJointLimitSpring get_linearLimitSpring(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimitSpring get_linearLimitSpring(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.linearLimitSpring;
 		}
 
-		static private void set_linearLimitSpring(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimitSpring value)
+		static private void set_linearLimitSpring(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimitSpring value)
 		{
 			instance.linearLimitSpring = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_angularZMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_angularZMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularZMotion;
 		}
 
-		static private void set_angularZMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_angularZMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.angularZMotion = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_angularYMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_angularYMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularYMotion;
 		}
 
-		static private void set_angularYMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_angularYMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.angularYMotion = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_angularXMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_angularXMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularXMotion;
 		}
 
-		static private void set_angularXMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_angularXMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.angularXMotion = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_zMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_zMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.zMotion;
 		}
 
-		static private void set_zMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_zMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.zMotion = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_yMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_yMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.yMotion;
 		}
 
-		static private void set_yMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_yMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.yMotion = value;
 		}
 
-		static private UnityEngine.ConfigurableJointMotion get_xMotion(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.ConfigurableJointMotion get_xMotion(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.xMotion;
 		}
 
-		static private void set_xMotion(UnityEngine.ConfigurableJoint instance, UnityEngine.ConfigurableJointMotion value)
+		static private void set_xMotion(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.ConfigurableJointMotion value)
 		{
 			instance.xMotion = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_angularZLimit(UnityEngine.ConfigurableJoint instance)
+		static private UnityEngine.SoftJointLimit get_angularZLimit(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.angularZLimit;
 		}
 
-		static private void set_angularZLimit(UnityEngine.ConfigurableJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_angularZLimit(UnityEngine.ConfigurableJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.angularZLimit = value;
 		}
 
-		static private System.Boolean get_swapBodies(UnityEngine.ConfigurableJoint instance)
+		static private System.Boolean get_swapBodies(UnityEngine.ConfigurableJoint instance, string name)
 		{
 			return instance.swapBodies;
 		}
 
-		static private void set_swapBodies(UnityEngine.ConfigurableJoint instance, System.Boolean value)
+		static private void set_swapBodies(UnityEngine.ConfigurableJoint instance, string name, System.Boolean value)
 		{
 			instance.swapBodies = value;
 		}

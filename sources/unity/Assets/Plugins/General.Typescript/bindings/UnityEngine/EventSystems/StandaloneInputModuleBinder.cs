@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -23,7 +24,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("cancelButton", get_cancelButton, set_cancelButton);
 		}
 
-		static private void ActivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private void ActivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -37,7 +38,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.StandaloneInputModule.ActivateModule has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DeactivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private void DeactivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -51,7 +52,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.StandaloneInputModule.DeactivateModule has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean IsModuleSupported(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private System.Boolean IsModuleSupported(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Process(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private void Process(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -80,7 +81,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.StandaloneInputModule.Process has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean ShouldActivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private System.Boolean ShouldActivateModule(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void UpdateModule(UnityEngine.EventSystems.StandaloneInputModule instance, Parameters parameters)
+		static private void UpdateModule(UnityEngine.EventSystems.StandaloneInputModule instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -109,72 +110,72 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.StandaloneInputModule.UpdateModule has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_forceModuleActive(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.Boolean get_forceModuleActive(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.forceModuleActive;
 		}
 
-		static private void set_forceModuleActive(UnityEngine.EventSystems.StandaloneInputModule instance, System.Boolean value)
+		static private void set_forceModuleActive(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.Boolean value)
 		{
 			instance.forceModuleActive = value;
 		}
 
-		static private System.Single get_inputActionsPerSecond(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.Single get_inputActionsPerSecond(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.inputActionsPerSecond;
 		}
 
-		static private void set_inputActionsPerSecond(UnityEngine.EventSystems.StandaloneInputModule instance, System.Single value)
+		static private void set_inputActionsPerSecond(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.Single value)
 		{
 			instance.inputActionsPerSecond = value;
 		}
 
-		static private System.Single get_repeatDelay(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.Single get_repeatDelay(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.repeatDelay;
 		}
 
-		static private void set_repeatDelay(UnityEngine.EventSystems.StandaloneInputModule instance, System.Single value)
+		static private void set_repeatDelay(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.Single value)
 		{
 			instance.repeatDelay = value;
 		}
 
-		static private System.String get_horizontalAxis(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.String get_horizontalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.horizontalAxis;
 		}
 
-		static private void set_horizontalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, System.String value)
+		static private void set_horizontalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.String value)
 		{
 			instance.horizontalAxis = value;
 		}
 
-		static private System.String get_verticalAxis(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.String get_verticalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.verticalAxis;
 		}
 
-		static private void set_verticalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, System.String value)
+		static private void set_verticalAxis(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.String value)
 		{
 			instance.verticalAxis = value;
 		}
 
-		static private System.String get_submitButton(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.String get_submitButton(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.submitButton;
 		}
 
-		static private void set_submitButton(UnityEngine.EventSystems.StandaloneInputModule instance, System.String value)
+		static private void set_submitButton(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.String value)
 		{
 			instance.submitButton = value;
 		}
 
-		static private System.String get_cancelButton(UnityEngine.EventSystems.StandaloneInputModule instance)
+		static private System.String get_cancelButton(UnityEngine.EventSystems.StandaloneInputModule instance, string name)
 		{
 			return instance.cancelButton;
 		}
 
-		static private void set_cancelButton(UnityEngine.EventSystems.StandaloneInputModule instance, System.String value)
+		static private void set_cancelButton(UnityEngine.EventSystems.StandaloneInputModule instance, string name, System.String value)
 		{
 			instance.cancelButton = value;
 		}

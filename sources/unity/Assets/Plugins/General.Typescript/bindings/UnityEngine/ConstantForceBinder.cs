@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,42 +30,42 @@ namespace General.Typescript
 			return default(UnityEngine.ConstantForce);
 		}
 
-		static private UnityEngine.Vector3 get_force(UnityEngine.ConstantForce instance)
+		static private UnityEngine.Vector3 get_force(UnityEngine.ConstantForce instance, string name)
 		{
 			return instance.force;
 		}
 
-		static private void set_force(UnityEngine.ConstantForce instance, UnityEngine.Vector3 value)
+		static private void set_force(UnityEngine.ConstantForce instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.force = value;
 		}
 
-		static private UnityEngine.Vector3 get_relativeForce(UnityEngine.ConstantForce instance)
+		static private UnityEngine.Vector3 get_relativeForce(UnityEngine.ConstantForce instance, string name)
 		{
 			return instance.relativeForce;
 		}
 
-		static private void set_relativeForce(UnityEngine.ConstantForce instance, UnityEngine.Vector3 value)
+		static private void set_relativeForce(UnityEngine.ConstantForce instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.relativeForce = value;
 		}
 
-		static private UnityEngine.Vector3 get_torque(UnityEngine.ConstantForce instance)
+		static private UnityEngine.Vector3 get_torque(UnityEngine.ConstantForce instance, string name)
 		{
 			return instance.torque;
 		}
 
-		static private void set_torque(UnityEngine.ConstantForce instance, UnityEngine.Vector3 value)
+		static private void set_torque(UnityEngine.ConstantForce instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.torque = value;
 		}
 
-		static private UnityEngine.Vector3 get_relativeTorque(UnityEngine.ConstantForce instance)
+		static private UnityEngine.Vector3 get_relativeTorque(UnityEngine.ConstantForce instance, string name)
 		{
 			return instance.relativeTorque;
 		}
 
-		static private void set_relativeTorque(UnityEngine.ConstantForce instance, UnityEngine.Vector3 value)
+		static private void set_relativeTorque(UnityEngine.ConstantForce instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.relativeTorque = value;
 		}

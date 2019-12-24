@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,47 +18,47 @@ namespace General.Typescript
 			self.BindInstanceProperty("updateInterval", get_updateInterval, set_updateInterval);
 		}
 
-		static private UnityEngine.Vector3 get_rotationRate(UnityEngine.Gyroscope instance)
+		static private UnityEngine.Vector3 get_rotationRate(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.rotationRate;
 		}
 
-		static private UnityEngine.Vector3 get_rotationRateUnbiased(UnityEngine.Gyroscope instance)
+		static private UnityEngine.Vector3 get_rotationRateUnbiased(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.rotationRateUnbiased;
 		}
 
-		static private UnityEngine.Vector3 get_gravity(UnityEngine.Gyroscope instance)
+		static private UnityEngine.Vector3 get_gravity(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.gravity;
 		}
 
-		static private UnityEngine.Vector3 get_userAcceleration(UnityEngine.Gyroscope instance)
+		static private UnityEngine.Vector3 get_userAcceleration(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.userAcceleration;
 		}
 
-		static private UnityEngine.Quaternion get_attitude(UnityEngine.Gyroscope instance)
+		static private UnityEngine.Quaternion get_attitude(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.attitude;
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.Gyroscope instance)
+		static private System.Boolean get_enabled(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.Gyroscope instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.Gyroscope instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}
 
-		static private System.Single get_updateInterval(UnityEngine.Gyroscope instance)
+		static private System.Single get_updateInterval(UnityEngine.Gyroscope instance, string name)
 		{
 			return instance.updateInterval;
 		}
 
-		static private void set_updateInterval(UnityEngine.Gyroscope instance, System.Single value)
+		static private void set_updateInterval(UnityEngine.Gyroscope instance, string name, System.Single value)
 		{
 			instance.updateInterval = value;
 		}

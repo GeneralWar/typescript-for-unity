@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -43,117 +44,117 @@ namespace General.Typescript
 			return default(UnityEngine.Time);
 		}
 
-		static private System.Single get_time()
+		static private System.Single get_time(Type type, string name)
 		{
 			return UnityEngine.Time.time;
 		}
 
-		static private System.Single get_realtimeSinceStartup()
+		static private System.Single get_realtimeSinceStartup(Type type, string name)
 		{
 			return UnityEngine.Time.realtimeSinceStartup;
 		}
 
-		static private System.Int32 get_renderedFrameCount()
+		static private System.Int32 get_renderedFrameCount(Type type, string name)
 		{
 			return UnityEngine.Time.renderedFrameCount;
 		}
 
-		static private System.Int32 get_frameCount()
+		static private System.Int32 get_frameCount(Type type, string name)
 		{
 			return UnityEngine.Time.frameCount;
 		}
 
-		static private System.Single get_timeScale()
+		static private System.Single get_timeScale(Type type, string name)
 		{
 			return UnityEngine.Time.timeScale;
 		}
 
-		static private void set_timeScale(System.Single value)
+		static private void set_timeScale(Type type, string name, System.Single value)
 		{
 			UnityEngine.Time.timeScale = value;
 		}
 
-		static private System.Single get_maximumParticleDeltaTime()
+		static private System.Single get_maximumParticleDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.maximumParticleDeltaTime;
 		}
 
-		static private void set_maximumParticleDeltaTime(System.Single value)
+		static private void set_maximumParticleDeltaTime(Type type, string name, System.Single value)
 		{
 			UnityEngine.Time.maximumParticleDeltaTime = value;
 		}
 
-		static private System.Single get_smoothDeltaTime()
+		static private System.Single get_smoothDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.smoothDeltaTime;
 		}
 
-		static private System.Single get_maximumDeltaTime()
+		static private System.Single get_maximumDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.maximumDeltaTime;
 		}
 
-		static private void set_maximumDeltaTime(System.Single value)
+		static private void set_maximumDeltaTime(Type type, string name, System.Single value)
 		{
 			UnityEngine.Time.maximumDeltaTime = value;
 		}
 
-		static private System.Single get_fixedDeltaTime()
+		static private System.Single get_fixedDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.fixedDeltaTime;
 		}
 
-		static private void set_fixedDeltaTime(System.Single value)
+		static private void set_fixedDeltaTime(Type type, string name, System.Single value)
 		{
 			UnityEngine.Time.fixedDeltaTime = value;
 		}
 
-		static private System.Single get_fixedUnscaledDeltaTime()
+		static private System.Single get_fixedUnscaledDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.fixedUnscaledDeltaTime;
 		}
 
-		static private System.Single get_unscaledDeltaTime()
+		static private System.Single get_unscaledDeltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.unscaledDeltaTime;
 		}
 
-		static private System.Single get_fixedUnscaledTime()
+		static private System.Single get_fixedUnscaledTime(Type type, string name)
 		{
 			return UnityEngine.Time.fixedUnscaledTime;
 		}
 
-		static private System.Single get_unscaledTime()
+		static private System.Single get_unscaledTime(Type type, string name)
 		{
 			return UnityEngine.Time.unscaledTime;
 		}
 
-		static private System.Single get_fixedTime()
+		static private System.Single get_fixedTime(Type type, string name)
 		{
 			return UnityEngine.Time.fixedTime;
 		}
 
-		static private System.Single get_deltaTime()
+		static private System.Single get_deltaTime(Type type, string name)
 		{
 			return UnityEngine.Time.deltaTime;
 		}
 
-		static private System.Single get_timeSinceLevelLoad()
+		static private System.Single get_timeSinceLevelLoad(Type type, string name)
 		{
 			return UnityEngine.Time.timeSinceLevelLoad;
 		}
 
-		static private System.Int32 get_captureFramerate()
+		static private System.Int32 get_captureFramerate(Type type, string name)
 		{
 			return UnityEngine.Time.captureFramerate;
 		}
 
-		static private void set_captureFramerate(System.Int32 value)
+		static private void set_captureFramerate(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Time.captureFramerate = value;
 		}
 
-		static private System.Boolean get_inFixedTimeStep()
+		static private System.Boolean get_inFixedTimeStep(Type type, string name)
 		{
 			return UnityEngine.Time.inFixedTimeStep;
 		}

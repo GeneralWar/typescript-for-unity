@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,22 +13,22 @@ namespace General.Typescript
 			self.BindInstanceProperty("Options", get_Options, set_Options);
 		}
 
-		static private System.Byte[] get_ProtocolInformation(System.Net.Sockets.SocketInformation instance)
+		static private System.Byte[] get_ProtocolInformation(System.Net.Sockets.SocketInformation instance, string name)
 		{
 			return instance.ProtocolInformation;
 		}
 
-		static private void set_ProtocolInformation(System.Net.Sockets.SocketInformation instance, System.Byte[] value)
+		static private void set_ProtocolInformation(System.Net.Sockets.SocketInformation instance, string name, System.Byte[] value)
 		{
 			instance.ProtocolInformation = value;
 		}
 
-		static private System.Net.Sockets.SocketInformationOptions get_Options(System.Net.Sockets.SocketInformation instance)
+		static private System.Net.Sockets.SocketInformationOptions get_Options(System.Net.Sockets.SocketInformation instance, string name)
 		{
 			return instance.Options;
 		}
 
-		static private void set_Options(System.Net.Sockets.SocketInformation instance, System.Net.Sockets.SocketInformationOptions value)
+		static private void set_Options(System.Net.Sockets.SocketInformation instance, string name, System.Net.Sockets.SocketInformationOptions value)
 		{
 			instance.Options = value;
 		}

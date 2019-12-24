@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("SetLayoutVertical", SetLayoutVertical);
 		}
 
-		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.VerticalLayoutGroup instance, Parameters parameters)
+		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.VerticalLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -28,7 +29,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.VerticalLayoutGroup.CalculateLayoutInputHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CalculateLayoutInputVertical(UnityEngine.UI.VerticalLayoutGroup instance, Parameters parameters)
+		static private void CalculateLayoutInputVertical(UnityEngine.UI.VerticalLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -42,7 +43,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.VerticalLayoutGroup.CalculateLayoutInputVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutHorizontal(UnityEngine.UI.VerticalLayoutGroup instance, Parameters parameters)
+		static private void SetLayoutHorizontal(UnityEngine.UI.VerticalLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -56,7 +57,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.VerticalLayoutGroup.SetLayoutHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutVertical(UnityEngine.UI.VerticalLayoutGroup instance, Parameters parameters)
+		static private void SetLayoutVertical(UnityEngine.UI.VerticalLayoutGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

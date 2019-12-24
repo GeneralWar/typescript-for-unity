@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,7 +27,7 @@ namespace General.Typescript
 			return default(UnityEngine.ScriptableObject);
 		}
 
-		static private System.Object CreateInstance(Parameters parameters)
+		static private System.Object CreateInstance(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{

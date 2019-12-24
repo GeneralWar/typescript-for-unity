@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,12 +27,12 @@ namespace General.Typescript
 			return default(UnityEngine.OcclusionPortal);
 		}
 
-		static private System.Boolean get_open(UnityEngine.OcclusionPortal instance)
+		static private System.Boolean get_open(UnityEngine.OcclusionPortal instance, string name)
 		{
 			return instance.open;
 		}
 
-		static private void set_open(UnityEngine.OcclusionPortal instance, System.Boolean value)
+		static private void set_open(UnityEngine.OcclusionPortal instance, string name, System.Boolean value)
 		{
 			instance.open = value;
 		}

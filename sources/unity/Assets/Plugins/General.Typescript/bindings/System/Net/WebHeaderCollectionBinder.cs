@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -40,7 +41,7 @@ namespace General.Typescript
 			return default(System.Net.WebHeaderCollection);
 		}
 
-		static private System.Boolean IsRestricted(Parameters parameters)
+		static private System.Boolean IsRestricted(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Add(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void Add(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -103,7 +104,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void Clear(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -117,7 +118,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.WebHeaderCollection.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.String Get(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.String Get(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -143,7 +144,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Collections.IEnumerator GetEnumerator(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.Collections.IEnumerator GetEnumerator(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -158,7 +159,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String GetKey(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.String GetKey(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -180,7 +181,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void GetObjectData(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void GetObjectData(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext>())
 			{
@@ -202,7 +203,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String[] GetValues(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.String[] GetValues(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -228,7 +229,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void OnDeserialization(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void OnDeserialization(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -250,7 +251,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Remove(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void Remove(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.HttpRequestHeader>())
 			{
@@ -282,7 +283,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Set(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private void Set(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.HttpRequestHeader, System.String>())
 			{
@@ -314,7 +315,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Byte[] ToByteArray(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.Byte[] ToByteArray(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -329,7 +330,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToString(System.Net.WebHeaderCollection instance, Parameters parameters)
+		static private System.String ToString(System.Net.WebHeaderCollection instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -344,12 +345,12 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_Count(System.Net.WebHeaderCollection instance)
+		static private System.Int32 get_Count(System.Net.WebHeaderCollection instance, string name)
 		{
 			return instance.Count;
 		}
 
-		static private System.String[] get_AllKeys(System.Net.WebHeaderCollection instance)
+		static private System.String[] get_AllKeys(System.Net.WebHeaderCollection instance, string name)
 		{
 			return instance.AllKeys;
 		}

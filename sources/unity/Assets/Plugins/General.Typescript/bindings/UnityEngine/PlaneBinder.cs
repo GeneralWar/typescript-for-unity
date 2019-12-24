@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -53,7 +54,7 @@ namespace General.Typescript
 			return default(UnityEngine.Plane);
 		}
 
-		static private UnityEngine.Plane Translate(Parameters parameters)
+		static private UnityEngine.Plane Translate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Plane, UnityEngine.Vector3>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			return default(UnityEngine.Plane);
 		}
 
-		static private UnityEngine.Vector3 ClosestPointOnPlane(UnityEngine.Plane instance, Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPointOnPlane(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void Flip(UnityEngine.Plane instance, Parameters parameters)
+		static private void Flip(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -111,7 +112,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Plane.Flip has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Single GetDistanceToPoint(UnityEngine.Plane instance, Parameters parameters)
+		static private System.Single GetDistanceToPoint(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -133,7 +134,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean GetSide(UnityEngine.Plane instance, Parameters parameters)
+		static private System.Boolean GetSide(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -155,7 +156,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean SameSide(UnityEngine.Plane instance, Parameters parameters)
+		static private System.Boolean SameSide(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -177,7 +178,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Set3Points(UnityEngine.Plane instance, Parameters parameters)
+		static private void Set3Points(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -199,7 +200,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetNormalAndPosition(UnityEngine.Plane instance, Parameters parameters)
+		static private void SetNormalAndPosition(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -221,7 +222,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Plane instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -240,7 +241,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Translate(UnityEngine.Plane instance, Parameters parameters)
+		static private void Translate(UnityEngine.Plane instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -262,27 +263,27 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3 get_normal(UnityEngine.Plane instance)
+		static private UnityEngine.Vector3 get_normal(UnityEngine.Plane instance, string name)
 		{
 			return instance.normal;
 		}
 
-		static private void set_normal(UnityEngine.Plane instance, UnityEngine.Vector3 value)
+		static private void set_normal(UnityEngine.Plane instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.normal = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.Plane instance)
+		static private System.Single get_distance(UnityEngine.Plane instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.Plane instance, System.Single value)
+		static private void set_distance(UnityEngine.Plane instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private UnityEngine.Plane get_flipped(UnityEngine.Plane instance)
+		static private UnityEngine.Plane get_flipped(UnityEngine.Plane instance, string name)
 		{
 			return instance.flipped;
 		}

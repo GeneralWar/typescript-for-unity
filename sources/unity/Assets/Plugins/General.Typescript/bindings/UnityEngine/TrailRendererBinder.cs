@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -51,7 +52,7 @@ namespace General.Typescript
 			return default(UnityEngine.TrailRenderer);
 		}
 
-		static private void AddPosition(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void AddPosition(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddPositions(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void AddPositions(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void BakeMesh(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void BakeMesh(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Boolean>())
 			{
@@ -122,7 +123,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void Clear(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -136,7 +137,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.TrailRenderer.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Vector3 GetPosition(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetPosition(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -158,7 +159,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Int32 GetPositions(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private System.Int32 GetPositions(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -180,7 +181,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetPosition(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void SetPosition(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector3>())
 			{
@@ -202,7 +203,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPositions(UnityEngine.TrailRenderer instance, Parameters parameters)
+		static private void SetPositions(UnityEngine.TrailRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -224,177 +225,177 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_time(UnityEngine.TrailRenderer instance)
+		static private System.Single get_time(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.time;
 		}
 
-		static private void set_time(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_time(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.time = value;
 		}
 
-		static private UnityEngine.LineAlignment get_alignment(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.LineAlignment get_alignment(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.alignment;
 		}
 
-		static private void set_alignment(UnityEngine.TrailRenderer instance, UnityEngine.LineAlignment value)
+		static private void set_alignment(UnityEngine.TrailRenderer instance, string name, UnityEngine.LineAlignment value)
 		{
 			instance.alignment = value;
 		}
 
-		static private UnityEngine.LineTextureMode get_textureMode(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.LineTextureMode get_textureMode(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.textureMode;
 		}
 
-		static private void set_textureMode(UnityEngine.TrailRenderer instance, UnityEngine.LineTextureMode value)
+		static private void set_textureMode(UnityEngine.TrailRenderer instance, string name, UnityEngine.LineTextureMode value)
 		{
 			instance.textureMode = value;
 		}
 
-		static private System.Boolean get_generateLightingData(UnityEngine.TrailRenderer instance)
+		static private System.Boolean get_generateLightingData(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.generateLightingData;
 		}
 
-		static private void set_generateLightingData(UnityEngine.TrailRenderer instance, System.Boolean value)
+		static private void set_generateLightingData(UnityEngine.TrailRenderer instance, string name, System.Boolean value)
 		{
 			instance.generateLightingData = value;
 		}
 
-		static private System.Single get_shadowBias(UnityEngine.TrailRenderer instance)
+		static private System.Single get_shadowBias(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.shadowBias;
 		}
 
-		static private void set_shadowBias(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_shadowBias(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.shadowBias = value;
 		}
 
-		static private System.Int32 get_positionCount(UnityEngine.TrailRenderer instance)
+		static private System.Int32 get_positionCount(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.positionCount;
 		}
 
-		static private UnityEngine.Color get_endColor(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.Color get_endColor(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.endColor;
 		}
 
-		static private void set_endColor(UnityEngine.TrailRenderer instance, UnityEngine.Color value)
+		static private void set_endColor(UnityEngine.TrailRenderer instance, string name, UnityEngine.Color value)
 		{
 			instance.endColor = value;
 		}
 
-		static private UnityEngine.Color get_startColor(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.Color get_startColor(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.startColor;
 		}
 
-		static private void set_startColor(UnityEngine.TrailRenderer instance, UnityEngine.Color value)
+		static private void set_startColor(UnityEngine.TrailRenderer instance, string name, UnityEngine.Color value)
 		{
 			instance.startColor = value;
 		}
 
-		static private System.Single get_minVertexDistance(UnityEngine.TrailRenderer instance)
+		static private System.Single get_minVertexDistance(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.minVertexDistance;
 		}
 
-		static private void set_minVertexDistance(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_minVertexDistance(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.minVertexDistance = value;
 		}
 
-		static private System.Int32 get_numCapVertices(UnityEngine.TrailRenderer instance)
+		static private System.Int32 get_numCapVertices(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.numCapVertices;
 		}
 
-		static private void set_numCapVertices(UnityEngine.TrailRenderer instance, System.Int32 value)
+		static private void set_numCapVertices(UnityEngine.TrailRenderer instance, string name, System.Int32 value)
 		{
 			instance.numCapVertices = value;
 		}
 
-		static private System.Int32 get_numCornerVertices(UnityEngine.TrailRenderer instance)
+		static private System.Int32 get_numCornerVertices(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.numCornerVertices;
 		}
 
-		static private void set_numCornerVertices(UnityEngine.TrailRenderer instance, System.Int32 value)
+		static private void set_numCornerVertices(UnityEngine.TrailRenderer instance, string name, System.Int32 value)
 		{
 			instance.numCornerVertices = value;
 		}
 
-		static private System.Boolean get_emitting(UnityEngine.TrailRenderer instance)
+		static private System.Boolean get_emitting(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.emitting;
 		}
 
-		static private void set_emitting(UnityEngine.TrailRenderer instance, System.Boolean value)
+		static private void set_emitting(UnityEngine.TrailRenderer instance, string name, System.Boolean value)
 		{
 			instance.emitting = value;
 		}
 
-		static private System.Boolean get_autodestruct(UnityEngine.TrailRenderer instance)
+		static private System.Boolean get_autodestruct(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.autodestruct;
 		}
 
-		static private void set_autodestruct(UnityEngine.TrailRenderer instance, System.Boolean value)
+		static private void set_autodestruct(UnityEngine.TrailRenderer instance, string name, System.Boolean value)
 		{
 			instance.autodestruct = value;
 		}
 
-		static private System.Single get_widthMultiplier(UnityEngine.TrailRenderer instance)
+		static private System.Single get_widthMultiplier(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.widthMultiplier;
 		}
 
-		static private void set_widthMultiplier(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_widthMultiplier(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.widthMultiplier = value;
 		}
 
-		static private System.Single get_endWidth(UnityEngine.TrailRenderer instance)
+		static private System.Single get_endWidth(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.endWidth;
 		}
 
-		static private void set_endWidth(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_endWidth(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.endWidth = value;
 		}
 
-		static private System.Single get_startWidth(UnityEngine.TrailRenderer instance)
+		static private System.Single get_startWidth(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.startWidth;
 		}
 
-		static private void set_startWidth(UnityEngine.TrailRenderer instance, System.Single value)
+		static private void set_startWidth(UnityEngine.TrailRenderer instance, string name, System.Single value)
 		{
 			instance.startWidth = value;
 		}
 
-		static private UnityEngine.AnimationCurve get_widthCurve(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.AnimationCurve get_widthCurve(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.widthCurve;
 		}
 
-		static private void set_widthCurve(UnityEngine.TrailRenderer instance, UnityEngine.AnimationCurve value)
+		static private void set_widthCurve(UnityEngine.TrailRenderer instance, string name, UnityEngine.AnimationCurve value)
 		{
 			instance.widthCurve = value;
 		}
 
-		static private UnityEngine.Gradient get_colorGradient(UnityEngine.TrailRenderer instance)
+		static private UnityEngine.Gradient get_colorGradient(UnityEngine.TrailRenderer instance, string name)
 		{
 			return instance.colorGradient;
 		}
 
-		static private void set_colorGradient(UnityEngine.TrailRenderer instance, UnityEngine.Gradient value)
+		static private void set_colorGradient(UnityEngine.TrailRenderer instance, string name, UnityEngine.Gradient value)
 		{
 			instance.colorGradient = value;
 		}

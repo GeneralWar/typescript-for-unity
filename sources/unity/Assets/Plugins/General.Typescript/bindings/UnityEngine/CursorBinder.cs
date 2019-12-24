@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,7 +29,7 @@ namespace General.Typescript
 			return default(UnityEngine.Cursor);
 		}
 
-		static private void SetCursor(Parameters parameters)
+		static private void SetCursor(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture2D, UnityEngine.Vector2, UnityEngine.CursorMode>())
 			{
@@ -50,22 +51,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_visible()
+		static private System.Boolean get_visible(Type type, string name)
 		{
 			return UnityEngine.Cursor.visible;
 		}
 
-		static private void set_visible(System.Boolean value)
+		static private void set_visible(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Cursor.visible = value;
 		}
 
-		static private UnityEngine.CursorLockMode get_lockState()
+		static private UnityEngine.CursorLockMode get_lockState(Type type, string name)
 		{
 			return UnityEngine.Cursor.lockState;
 		}
 
-		static private void set_lockState(UnityEngine.CursorLockMode value)
+		static private void set_lockState(Type type, string name, UnityEngine.CursorLockMode value)
 		{
 			UnityEngine.Cursor.lockState = value;
 		}

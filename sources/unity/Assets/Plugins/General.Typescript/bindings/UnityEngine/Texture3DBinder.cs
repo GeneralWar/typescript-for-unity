@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(UnityEngine.Texture3D);
 		}
 
-		static private void Apply(UnityEngine.Texture3D instance, Parameters parameters)
+		static private void Apply(UnityEngine.Texture3D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Texture3D.Apply has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Color[] GetPixels(UnityEngine.Texture3D instance, Parameters parameters)
+		static private UnityEngine.Color[] GetPixels(UnityEngine.Texture3D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Color32[] GetPixels32(UnityEngine.Texture3D instance, Parameters parameters)
+		static private UnityEngine.Color32[] GetPixels32(UnityEngine.Texture3D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -106,7 +107,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetPixels(UnityEngine.Texture3D instance, Parameters parameters)
+		static private void SetPixels(UnityEngine.Texture3D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color[]>())
 			{
@@ -133,7 +134,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPixels32(UnityEngine.Texture3D instance, Parameters parameters)
+		static private void SetPixels32(UnityEngine.Texture3D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color32[]>())
 			{
@@ -160,17 +161,17 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_depth(UnityEngine.Texture3D instance)
+		static private System.Int32 get_depth(UnityEngine.Texture3D instance, string name)
 		{
 			return instance.depth;
 		}
 
-		static private UnityEngine.TextureFormat get_format(UnityEngine.Texture3D instance)
+		static private UnityEngine.TextureFormat get_format(UnityEngine.Texture3D instance, string name)
 		{
 			return instance.format;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.Texture3D instance)
+		static private System.Boolean get_isReadable(UnityEngine.Texture3D instance, string name)
 		{
 			return instance.isReadable;
 		}

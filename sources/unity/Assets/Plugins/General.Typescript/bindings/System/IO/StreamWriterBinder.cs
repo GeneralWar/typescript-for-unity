@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -69,7 +70,7 @@ namespace General.Typescript
 			return default(System.IO.StreamWriter);
 		}
 
-		static private void Close(System.IO.StreamWriter instance, Parameters parameters)
+		static private void Close(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StreamWriter.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Flush(System.IO.StreamWriter instance, Parameters parameters)
+		static private void Flush(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StreamWriter.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task FlushAsync(System.IO.StreamWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task FlushAsync(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -112,7 +113,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Write(System.IO.StreamWriter instance, Parameters parameters)
+		static private void Write(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char>())
 			{
@@ -149,7 +150,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Threading.Tasks.Task WriteAsync(System.IO.StreamWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteAsync(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char>())
 			{
@@ -179,7 +180,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Threading.Tasks.Task WriteLineAsync(System.IO.StreamWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteLineAsync(System.IO.StreamWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -206,22 +207,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean get_AutoFlush(System.IO.StreamWriter instance)
+		static private System.Boolean get_AutoFlush(System.IO.StreamWriter instance, string name)
 		{
 			return instance.AutoFlush;
 		}
 
-		static private void set_AutoFlush(System.IO.StreamWriter instance, System.Boolean value)
+		static private void set_AutoFlush(System.IO.StreamWriter instance, string name, System.Boolean value)
 		{
 			instance.AutoFlush = value;
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.StreamWriter instance)
+		static private System.IO.Stream get_BaseStream(System.IO.StreamWriter instance, string name)
 		{
 			return instance.BaseStream;
 		}
 
-		static private System.Text.Encoding get_Encoding(System.IO.StreamWriter instance)
+		static private System.Text.Encoding get_Encoding(System.IO.StreamWriter instance, string name)
 		{
 			return instance.Encoding;
 		}

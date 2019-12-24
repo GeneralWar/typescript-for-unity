@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,52 +16,52 @@ namespace General.Typescript
 			self.BindInstanceProperty("contactDistance", get_contactDistance, set_contactDistance);
 		}
 
-		static private System.Single get_min(UnityEngine.JointLimits instance)
+		static private System.Single get_min(UnityEngine.JointLimits instance, string name)
 		{
 			return instance.min;
 		}
 
-		static private void set_min(UnityEngine.JointLimits instance, System.Single value)
+		static private void set_min(UnityEngine.JointLimits instance, string name, System.Single value)
 		{
 			instance.min = value;
 		}
 
-		static private System.Single get_max(UnityEngine.JointLimits instance)
+		static private System.Single get_max(UnityEngine.JointLimits instance, string name)
 		{
 			return instance.max;
 		}
 
-		static private void set_max(UnityEngine.JointLimits instance, System.Single value)
+		static private void set_max(UnityEngine.JointLimits instance, string name, System.Single value)
 		{
 			instance.max = value;
 		}
 
-		static private System.Single get_bounciness(UnityEngine.JointLimits instance)
+		static private System.Single get_bounciness(UnityEngine.JointLimits instance, string name)
 		{
 			return instance.bounciness;
 		}
 
-		static private void set_bounciness(UnityEngine.JointLimits instance, System.Single value)
+		static private void set_bounciness(UnityEngine.JointLimits instance, string name, System.Single value)
 		{
 			instance.bounciness = value;
 		}
 
-		static private System.Single get_bounceMinVelocity(UnityEngine.JointLimits instance)
+		static private System.Single get_bounceMinVelocity(UnityEngine.JointLimits instance, string name)
 		{
 			return instance.bounceMinVelocity;
 		}
 
-		static private void set_bounceMinVelocity(UnityEngine.JointLimits instance, System.Single value)
+		static private void set_bounceMinVelocity(UnityEngine.JointLimits instance, string name, System.Single value)
 		{
 			instance.bounceMinVelocity = value;
 		}
 
-		static private System.Single get_contactDistance(UnityEngine.JointLimits instance)
+		static private System.Single get_contactDistance(UnityEngine.JointLimits instance, string name)
 		{
 			return instance.contactDistance;
 		}
 
-		static private void set_contactDistance(UnityEngine.JointLimits instance, System.Single value)
+		static private void set_contactDistance(UnityEngine.JointLimits instance, string name, System.Single value)
 		{
 			instance.contactDistance = value;
 		}

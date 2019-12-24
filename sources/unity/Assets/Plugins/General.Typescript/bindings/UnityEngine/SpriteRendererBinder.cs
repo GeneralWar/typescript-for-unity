@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,102 +36,102 @@ namespace General.Typescript
 			return default(UnityEngine.SpriteRenderer);
 		}
 
-		static private UnityEngine.Sprite get_sprite(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.Sprite get_sprite(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.sprite;
 		}
 
-		static private void set_sprite(UnityEngine.SpriteRenderer instance, UnityEngine.Sprite value)
+		static private void set_sprite(UnityEngine.SpriteRenderer instance, string name, UnityEngine.Sprite value)
 		{
 			instance.sprite = value;
 		}
 
-		static private UnityEngine.SpriteDrawMode get_drawMode(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.SpriteDrawMode get_drawMode(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.drawMode;
 		}
 
-		static private void set_drawMode(UnityEngine.SpriteRenderer instance, UnityEngine.SpriteDrawMode value)
+		static private void set_drawMode(UnityEngine.SpriteRenderer instance, string name, UnityEngine.SpriteDrawMode value)
 		{
 			instance.drawMode = value;
 		}
 
-		static private UnityEngine.Vector2 get_size(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.Vector2 get_size(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.SpriteRenderer instance, UnityEngine.Vector2 value)
+		static private void set_size(UnityEngine.SpriteRenderer instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.size = value;
 		}
 
-		static private System.Single get_adaptiveModeThreshold(UnityEngine.SpriteRenderer instance)
+		static private System.Single get_adaptiveModeThreshold(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.adaptiveModeThreshold;
 		}
 
-		static private void set_adaptiveModeThreshold(UnityEngine.SpriteRenderer instance, System.Single value)
+		static private void set_adaptiveModeThreshold(UnityEngine.SpriteRenderer instance, string name, System.Single value)
 		{
 			instance.adaptiveModeThreshold = value;
 		}
 
-		static private UnityEngine.SpriteTileMode get_tileMode(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.SpriteTileMode get_tileMode(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.tileMode;
 		}
 
-		static private void set_tileMode(UnityEngine.SpriteRenderer instance, UnityEngine.SpriteTileMode value)
+		static private void set_tileMode(UnityEngine.SpriteRenderer instance, string name, UnityEngine.SpriteTileMode value)
 		{
 			instance.tileMode = value;
 		}
 
-		static private UnityEngine.Color get_color(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.Color get_color(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.color;
 		}
 
-		static private void set_color(UnityEngine.SpriteRenderer instance, UnityEngine.Color value)
+		static private void set_color(UnityEngine.SpriteRenderer instance, string name, UnityEngine.Color value)
 		{
 			instance.color = value;
 		}
 
-		static private UnityEngine.SpriteMaskInteraction get_maskInteraction(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.SpriteMaskInteraction get_maskInteraction(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.maskInteraction;
 		}
 
-		static private void set_maskInteraction(UnityEngine.SpriteRenderer instance, UnityEngine.SpriteMaskInteraction value)
+		static private void set_maskInteraction(UnityEngine.SpriteRenderer instance, string name, UnityEngine.SpriteMaskInteraction value)
 		{
 			instance.maskInteraction = value;
 		}
 
-		static private System.Boolean get_flipX(UnityEngine.SpriteRenderer instance)
+		static private System.Boolean get_flipX(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.flipX;
 		}
 
-		static private void set_flipX(UnityEngine.SpriteRenderer instance, System.Boolean value)
+		static private void set_flipX(UnityEngine.SpriteRenderer instance, string name, System.Boolean value)
 		{
 			instance.flipX = value;
 		}
 
-		static private System.Boolean get_flipY(UnityEngine.SpriteRenderer instance)
+		static private System.Boolean get_flipY(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.flipY;
 		}
 
-		static private void set_flipY(UnityEngine.SpriteRenderer instance, System.Boolean value)
+		static private void set_flipY(UnityEngine.SpriteRenderer instance, string name, System.Boolean value)
 		{
 			instance.flipY = value;
 		}
 
-		static private UnityEngine.SpriteSortPoint get_spriteSortPoint(UnityEngine.SpriteRenderer instance)
+		static private UnityEngine.SpriteSortPoint get_spriteSortPoint(UnityEngine.SpriteRenderer instance, string name)
 		{
 			return instance.spriteSortPoint;
 		}
 
-		static private void set_spriteSortPoint(UnityEngine.SpriteRenderer instance, UnityEngine.SpriteSortPoint value)
+		static private void set_spriteSortPoint(UnityEngine.SpriteRenderer instance, string name, UnityEngine.SpriteSortPoint value)
 		{
 			instance.spriteSortPoint = value;
 		}

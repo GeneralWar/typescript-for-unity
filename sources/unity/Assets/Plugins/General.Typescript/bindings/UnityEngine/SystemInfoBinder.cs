@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -86,7 +87,7 @@ namespace General.Typescript
 			return default(UnityEngine.SystemInfo);
 		}
 
-		static private System.Boolean IsFormatSupported(Parameters parameters)
+		static private System.Boolean IsFormatSupported(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Experimental.Rendering.GraphicsFormat, UnityEngine.Experimental.Rendering.FormatUsage>())
 			{
@@ -108,7 +109,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean SupportsBlendingOnRenderTextureFormat(Parameters parameters)
+		static private System.Boolean SupportsBlendingOnRenderTextureFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTextureFormat>())
 			{
@@ -130,7 +131,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean SupportsRenderTextureFormat(Parameters parameters)
+		static private System.Boolean SupportsRenderTextureFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTextureFormat>())
 			{
@@ -152,7 +153,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean SupportsTextureFormat(Parameters parameters)
+		static private System.Boolean SupportsTextureFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.TextureFormat>())
 			{
@@ -174,287 +175,287 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Single get_batteryLevel()
+		static private System.Single get_batteryLevel(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.batteryLevel;
 		}
 
-		static private System.Boolean get_supportsRawShadowDepthSampling()
+		static private System.Boolean get_supportsRawShadowDepthSampling(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsRawShadowDepthSampling;
 		}
 
-		static private System.Boolean get_supportsMotionVectors()
+		static private System.Boolean get_supportsMotionVectors(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsMotionVectors;
 		}
 
-		static private System.Boolean get_supportsRenderToCubemap()
+		static private System.Boolean get_supportsRenderToCubemap(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsRenderToCubemap;
 		}
 
-		static private System.Boolean get_supportsImageEffects()
+		static private System.Boolean get_supportsImageEffects(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsImageEffects;
 		}
 
-		static private System.Boolean get_supports3DTextures()
+		static private System.Boolean get_supports3DTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supports3DTextures;
 		}
 
-		static private System.Boolean get_supports2DArrayTextures()
+		static private System.Boolean get_supports2DArrayTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supports2DArrayTextures;
 		}
 
-		static private System.Boolean get_supports3DRenderTextures()
+		static private System.Boolean get_supports3DRenderTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supports3DRenderTextures;
 		}
 
-		static private System.Boolean get_supportsCubemapArrayTextures()
+		static private System.Boolean get_supportsCubemapArrayTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsCubemapArrayTextures;
 		}
 
-		static private UnityEngine.Rendering.CopyTextureSupport get_copyTextureSupport()
+		static private UnityEngine.Rendering.CopyTextureSupport get_copyTextureSupport(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.copyTextureSupport;
 		}
 
-		static private System.Boolean get_supportsComputeShaders()
+		static private System.Boolean get_supportsComputeShaders(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsComputeShaders;
 		}
 
-		static private System.Boolean get_supportsInstancing()
+		static private System.Boolean get_supportsInstancing(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsInstancing;
 		}
 
-		static private System.Boolean get_supportsHardwareQuadTopology()
+		static private System.Boolean get_supportsHardwareQuadTopology(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsHardwareQuadTopology;
 		}
 
-		static private System.Boolean get_supports32bitsIndexBuffer()
+		static private System.Boolean get_supports32bitsIndexBuffer(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supports32bitsIndexBuffer;
 		}
 
-		static private System.Boolean get_supportsSparseTextures()
+		static private System.Boolean get_supportsSparseTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsSparseTextures;
 		}
 
-		static private System.Int32 get_supportedRenderTargetCount()
+		static private System.Int32 get_supportedRenderTargetCount(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportedRenderTargetCount;
 		}
 
-		static private System.Boolean get_supportsSeparatedRenderTargetsBlend()
+		static private System.Boolean get_supportsSeparatedRenderTargetsBlend(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsSeparatedRenderTargetsBlend;
 		}
 
-		static private System.Int32 get_supportsMultisampledTextures()
+		static private System.Int32 get_supportsMultisampledTextures(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsMultisampledTextures;
 		}
 
-		static private System.Boolean get_supportsMultisampleAutoResolve()
+		static private System.Boolean get_supportsMultisampleAutoResolve(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsMultisampleAutoResolve;
 		}
 
-		static private System.Int32 get_supportsTextureWrapMirrorOnce()
+		static private System.Int32 get_supportsTextureWrapMirrorOnce(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsTextureWrapMirrorOnce;
 		}
 
-		static private System.Boolean get_usesReversedZBuffer()
+		static private System.Boolean get_usesReversedZBuffer(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.usesReversedZBuffer;
 		}
 
-		static private UnityEngine.NPOTSupport get_npotSupport()
+		static private UnityEngine.NPOTSupport get_npotSupport(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.npotSupport;
 		}
 
-		static private System.Int32 get_maxTextureSize()
+		static private System.Int32 get_maxTextureSize(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.maxTextureSize;
 		}
 
-		static private System.Int32 get_maxCubemapSize()
+		static private System.Int32 get_maxCubemapSize(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.maxCubemapSize;
 		}
 
-		static private System.Boolean get_supportsAsyncCompute()
+		static private System.Boolean get_supportsAsyncCompute(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsAsyncCompute;
 		}
 
-		static private System.Boolean get_supportsGPUFence()
+		static private System.Boolean get_supportsGPUFence(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsGPUFence;
 		}
 
-		static private System.Boolean get_supportsShadows()
+		static private System.Boolean get_supportsShadows(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsShadows;
 		}
 
-		static private System.Boolean get_supportsAsyncGPUReadback()
+		static private System.Boolean get_supportsAsyncGPUReadback(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsAsyncGPUReadback;
 		}
 
-		static private System.Boolean get_hasDynamicUniformArrayIndexingInFragmentShaders()
+		static private System.Boolean get_hasDynamicUniformArrayIndexingInFragmentShaders(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.hasDynamicUniformArrayIndexingInFragmentShaders;
 		}
 
-		static private System.Boolean get_graphicsMultiThreaded()
+		static private System.Boolean get_graphicsMultiThreaded(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsMultiThreaded;
 		}
 
-		static private UnityEngine.BatteryStatus get_batteryStatus()
+		static private UnityEngine.BatteryStatus get_batteryStatus(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.batteryStatus;
 		}
 
-		static private System.String get_operatingSystem()
+		static private System.String get_operatingSystem(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.operatingSystem;
 		}
 
-		static private UnityEngine.OperatingSystemFamily get_operatingSystemFamily()
+		static private UnityEngine.OperatingSystemFamily get_operatingSystemFamily(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.operatingSystemFamily;
 		}
 
-		static private System.String get_processorType()
+		static private System.String get_processorType(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.processorType;
 		}
 
-		static private System.Int32 get_processorFrequency()
+		static private System.Int32 get_processorFrequency(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.processorFrequency;
 		}
 
-		static private System.Int32 get_processorCount()
+		static private System.Int32 get_processorCount(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.processorCount;
 		}
 
-		static private System.Int32 get_systemMemorySize()
+		static private System.Int32 get_systemMemorySize(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.systemMemorySize;
 		}
 
-		static private System.String get_deviceUniqueIdentifier()
+		static private System.String get_deviceUniqueIdentifier(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.deviceUniqueIdentifier;
 		}
 
-		static private System.String get_deviceName()
+		static private System.String get_deviceName(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.deviceName;
 		}
 
-		static private System.String get_deviceModel()
+		static private System.String get_deviceModel(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.deviceModel;
 		}
 
-		static private System.Boolean get_supportsAccelerometer()
+		static private System.Boolean get_supportsAccelerometer(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsAccelerometer;
 		}
 
-		static private System.Boolean get_supportsGyroscope()
+		static private System.Boolean get_supportsGyroscope(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsGyroscope;
 		}
 
-		static private System.Boolean get_supportsLocationService()
+		static private System.Boolean get_supportsLocationService(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsLocationService;
 		}
 
-		static private System.Boolean get_supportsVibration()
+		static private System.Boolean get_supportsVibration(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsVibration;
 		}
 
-		static private System.Boolean get_supportsAudio()
+		static private System.Boolean get_supportsAudio(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsAudio;
 		}
 
-		static private UnityEngine.DeviceType get_deviceType()
+		static private UnityEngine.DeviceType get_deviceType(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.deviceType;
 		}
 
-		static private System.Int32 get_graphicsMemorySize()
+		static private System.Int32 get_graphicsMemorySize(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsMemorySize;
 		}
 
-		static private System.String get_graphicsDeviceName()
+		static private System.String get_graphicsDeviceName(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceName;
 		}
 
-		static private System.String get_graphicsDeviceVendor()
+		static private System.String get_graphicsDeviceVendor(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceVendor;
 		}
 
-		static private System.Int32 get_graphicsDeviceID()
+		static private System.Int32 get_graphicsDeviceID(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceID;
 		}
 
-		static private System.Int32 get_graphicsDeviceVendorID()
+		static private System.Int32 get_graphicsDeviceVendorID(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceVendorID;
 		}
 
-		static private UnityEngine.Rendering.GraphicsDeviceType get_graphicsDeviceType()
+		static private UnityEngine.Rendering.GraphicsDeviceType get_graphicsDeviceType(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceType;
 		}
 
-		static private System.Boolean get_graphicsUVStartsAtTop()
+		static private System.Boolean get_graphicsUVStartsAtTop(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsUVStartsAtTop;
 		}
 
-		static private System.String get_graphicsDeviceVersion()
+		static private System.String get_graphicsDeviceVersion(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsDeviceVersion;
 		}
 
-		static private System.Int32 get_graphicsShaderLevel()
+		static private System.Int32 get_graphicsShaderLevel(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.graphicsShaderLevel;
 		}
 
-		static private System.Boolean get_hasHiddenSurfaceRemovalOnGPU()
+		static private System.Boolean get_hasHiddenSurfaceRemovalOnGPU(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.hasHiddenSurfaceRemovalOnGPU;
 		}
 
-		static private System.Boolean get_supportsMipStreaming()
+		static private System.Boolean get_supportsMipStreaming(Type type, string name)
 		{
 			return UnityEngine.SystemInfo.supportsMipStreaming;
 		}

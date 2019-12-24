@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -55,7 +56,7 @@ namespace General.Typescript
 			self.BindStaticFunction("Tan", Tan);
 		}
 
-		static private System.Object Abs(Parameters parameters)
+		static private System.Object Abs(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -81,7 +82,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single Acos(Parameters parameters)
+		static private System.Single Acos(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -103,7 +104,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean Approximately(Parameters parameters)
+		static private System.Boolean Approximately(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -125,7 +126,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Single Asin(Parameters parameters)
+		static private System.Single Asin(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -147,7 +148,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Atan(Parameters parameters)
+		static private System.Single Atan(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Atan2(Parameters parameters)
+		static private System.Single Atan2(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -191,7 +192,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Ceil(Parameters parameters)
+		static private System.Single Ceil(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -213,7 +214,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 CeilToInt(Parameters parameters)
+		static private System.Int32 CeilToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -235,7 +236,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Object Clamp(Parameters parameters)
+		static private System.Object Clamp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -261,7 +262,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single Clamp01(Parameters parameters)
+		static private System.Single Clamp01(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -283,7 +284,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 ClosestPowerOfTwo(Parameters parameters)
+		static private System.Int32 ClosestPowerOfTwo(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -305,7 +306,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Color CorrelatedColorTemperatureToRGB(Parameters parameters)
+		static private UnityEngine.Color CorrelatedColorTemperatureToRGB(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -327,7 +328,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Single Cos(Parameters parameters)
+		static private System.Single Cos(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -349,7 +350,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single DeltaAngle(Parameters parameters)
+		static private System.Single DeltaAngle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -371,7 +372,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Exp(Parameters parameters)
+		static private System.Single Exp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -393,7 +394,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.UInt16 FloatToHalf(Parameters parameters)
+		static private System.UInt16 FloatToHalf(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -415,7 +416,7 @@ namespace General.Typescript
 			return default(System.UInt16);
 		}
 
-		static private System.Single Floor(Parameters parameters)
+		static private System.Single Floor(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -437,7 +438,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 FloorToInt(Parameters parameters)
+		static private System.Int32 FloorToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -459,7 +460,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Single Gamma(Parameters parameters)
+		static private System.Single Gamma(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -481,7 +482,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single GammaToLinearSpace(Parameters parameters)
+		static private System.Single GammaToLinearSpace(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -503,7 +504,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single HalfToFloat(Parameters parameters)
+		static private System.Single HalfToFloat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt16>())
 			{
@@ -525,7 +526,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single InverseLerp(Parameters parameters)
+		static private System.Single InverseLerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -547,7 +548,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean IsPowerOfTwo(Parameters parameters)
+		static private System.Boolean IsPowerOfTwo(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -569,7 +570,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Single Lerp(Parameters parameters)
+		static private System.Single Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -591,7 +592,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single LerpAngle(Parameters parameters)
+		static private System.Single LerpAngle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -613,7 +614,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single LerpUnclamped(Parameters parameters)
+		static private System.Single LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -635,7 +636,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single LinearToGammaSpace(Parameters parameters)
+		static private System.Single LinearToGammaSpace(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -657,7 +658,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Log(Parameters parameters)
+		static private System.Single Log(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -683,7 +684,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Log10(Parameters parameters)
+		static private System.Single Log10(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -705,7 +706,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Object Max(Parameters parameters)
+		static private System.Object Max(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single[]>())
 			{
@@ -739,7 +740,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object Min(Parameters parameters)
+		static private System.Object Min(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single[]>())
 			{
@@ -773,7 +774,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single MoveTowards(Parameters parameters)
+		static private System.Single MoveTowards(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -795,7 +796,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single MoveTowardsAngle(Parameters parameters)
+		static private System.Single MoveTowardsAngle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -817,7 +818,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 NextPowerOfTwo(Parameters parameters)
+		static private System.Int32 NextPowerOfTwo(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -839,7 +840,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Single PerlinNoise(Parameters parameters)
+		static private System.Single PerlinNoise(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -861,7 +862,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single PingPong(Parameters parameters)
+		static private System.Single PingPong(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -883,7 +884,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Pow(Parameters parameters)
+		static private System.Single Pow(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -905,7 +906,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Repeat(Parameters parameters)
+		static private System.Single Repeat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -927,7 +928,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Round(Parameters parameters)
+		static private System.Single Round(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -949,7 +950,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 RoundToInt(Parameters parameters)
+		static private System.Int32 RoundToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -971,7 +972,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Single Sign(Parameters parameters)
+		static private System.Single Sign(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -993,7 +994,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Sin(Parameters parameters)
+		static private System.Single Sin(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -1015,7 +1016,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single SmoothStep(Parameters parameters)
+		static private System.Single SmoothStep(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -1037,7 +1038,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Sqrt(Parameters parameters)
+		static private System.Single Sqrt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -1059,7 +1060,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Tan(Parameters parameters)
+		static private System.Single Tan(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{

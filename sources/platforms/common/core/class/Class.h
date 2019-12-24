@@ -48,6 +48,11 @@ public:
 protected:
 	void bind(); // depends platform
 
+	// Bind constructor dynamically, after binding.
+	void bindConstructor(); // depends platform
+	// Inherit static functions and properties from parent class dynamically.
+	void inherit(); // depends platform
+
 	// Set instance as derived class of this class.
 	void derive(TypescriptClass* instance);
 	bool isDerived() const { return !mBaseClassName.empty(); }

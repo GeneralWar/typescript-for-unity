@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.Collision);
 		}
 
-		static private UnityEngine.ContactPoint GetContact(UnityEngine.Collision instance, Parameters parameters)
+		static private UnityEngine.ContactPoint GetContact(UnityEngine.Collision instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(UnityEngine.ContactPoint);
 		}
 
-		static private System.Int32 GetContacts(UnityEngine.Collision instance, Parameters parameters)
+		static private System.Int32 GetContacts(UnityEngine.Collision instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ContactPoint[]>())
 			{
@@ -80,7 +81,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Collision instance, Parameters parameters)
+		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Collision instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -95,42 +96,42 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector3 get_relativeVelocity(UnityEngine.Collision instance)
+		static private UnityEngine.Vector3 get_relativeVelocity(UnityEngine.Collision instance, string name)
 		{
 			return instance.relativeVelocity;
 		}
 
-		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.Collision instance)
+		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.Collision instance, string name)
 		{
 			return instance.rigidbody;
 		}
 
-		static private UnityEngine.Collider get_collider(UnityEngine.Collision instance)
+		static private UnityEngine.Collider get_collider(UnityEngine.Collision instance, string name)
 		{
 			return instance.collider;
 		}
 
-		static private UnityEngine.Transform get_transform(UnityEngine.Collision instance)
+		static private UnityEngine.Transform get_transform(UnityEngine.Collision instance, string name)
 		{
 			return instance.transform;
 		}
 
-		static private UnityEngine.GameObject get_gameObject(UnityEngine.Collision instance)
+		static private UnityEngine.GameObject get_gameObject(UnityEngine.Collision instance, string name)
 		{
 			return instance.gameObject;
 		}
 
-		static private System.Int32 get_contactCount(UnityEngine.Collision instance)
+		static private System.Int32 get_contactCount(UnityEngine.Collision instance, string name)
 		{
 			return instance.contactCount;
 		}
 
-		static private UnityEngine.ContactPoint[] get_contacts(UnityEngine.Collision instance)
+		static private UnityEngine.ContactPoint[] get_contacts(UnityEngine.Collision instance, string name)
 		{
 			return instance.contacts;
 		}
 
-		static private UnityEngine.Vector3 get_impulse(UnityEngine.Collision instance)
+		static private UnityEngine.Vector3 get_impulse(UnityEngine.Collision instance, string name)
 		{
 			return instance.impulse;
 		}

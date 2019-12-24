@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -80,7 +81,7 @@ namespace General.Typescript
 			return default(System.Net.WebSockets.WebSocketException);
 		}
 
-		static private void GetObjectData(System.Net.WebSockets.WebSocketException instance, Parameters parameters)
+		static private void GetObjectData(System.Net.WebSockets.WebSocketException instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext>())
 			{
@@ -102,12 +103,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_ErrorCode(System.Net.WebSockets.WebSocketException instance)
+		static private System.Int32 get_ErrorCode(System.Net.WebSockets.WebSocketException instance, string name)
 		{
 			return instance.ErrorCode;
 		}
 
-		static private System.Net.WebSockets.WebSocketError get_WebSocketErrorCode(System.Net.WebSockets.WebSocketException instance)
+		static private System.Net.WebSockets.WebSocketError get_WebSocketErrorCode(System.Net.WebSockets.WebSocketException instance, string name)
 		{
 			return instance.WebSocketErrorCode;
 		}

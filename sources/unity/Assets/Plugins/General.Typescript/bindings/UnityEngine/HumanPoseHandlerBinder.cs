@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.HumanPoseHandler);
 		}
 
-		static private void Dispose(UnityEngine.HumanPoseHandler instance, Parameters parameters)
+		static private void Dispose(UnityEngine.HumanPoseHandler instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,52 +38,52 @@ namespace General.Typescript
 			return default(UnityEngine.SpherecastCommand);
 		}
 
-		static private UnityEngine.Vector3 get_origin(UnityEngine.SpherecastCommand instance)
+		static private UnityEngine.Vector3 get_origin(UnityEngine.SpherecastCommand instance, string name)
 		{
 			return instance.origin;
 		}
 
-		static private void set_origin(UnityEngine.SpherecastCommand instance, UnityEngine.Vector3 value)
+		static private void set_origin(UnityEngine.SpherecastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.origin = value;
 		}
 
-		static private System.Single get_radius(UnityEngine.SpherecastCommand instance)
+		static private System.Single get_radius(UnityEngine.SpherecastCommand instance, string name)
 		{
 			return instance.radius;
 		}
 
-		static private void set_radius(UnityEngine.SpherecastCommand instance, System.Single value)
+		static private void set_radius(UnityEngine.SpherecastCommand instance, string name, System.Single value)
 		{
 			instance.radius = value;
 		}
 
-		static private UnityEngine.Vector3 get_direction(UnityEngine.SpherecastCommand instance)
+		static private UnityEngine.Vector3 get_direction(UnityEngine.SpherecastCommand instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.SpherecastCommand instance, UnityEngine.Vector3 value)
+		static private void set_direction(UnityEngine.SpherecastCommand instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.direction = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.SpherecastCommand instance)
+		static private System.Single get_distance(UnityEngine.SpherecastCommand instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.SpherecastCommand instance, System.Single value)
+		static private void set_distance(UnityEngine.SpherecastCommand instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private System.Int32 get_layerMask(UnityEngine.SpherecastCommand instance)
+		static private System.Int32 get_layerMask(UnityEngine.SpherecastCommand instance, string name)
 		{
 			return instance.layerMask;
 		}
 
-		static private void set_layerMask(UnityEngine.SpherecastCommand instance, System.Int32 value)
+		static private void set_layerMask(UnityEngine.SpherecastCommand instance, string name, System.Int32 value)
 		{
 			instance.layerMask = value;
 		}

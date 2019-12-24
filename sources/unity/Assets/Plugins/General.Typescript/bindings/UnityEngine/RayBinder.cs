@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ray);
 		}
 
-		static private UnityEngine.Vector3 GetPoint(UnityEngine.Ray instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetPoint(UnityEngine.Ray instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.String ToString(UnityEngine.Ray instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Ray instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,22 +78,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector3 get_origin(UnityEngine.Ray instance)
+		static private UnityEngine.Vector3 get_origin(UnityEngine.Ray instance, string name)
 		{
 			return instance.origin;
 		}
 
-		static private void set_origin(UnityEngine.Ray instance, UnityEngine.Vector3 value)
+		static private void set_origin(UnityEngine.Ray instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.origin = value;
 		}
 
-		static private UnityEngine.Vector3 get_direction(UnityEngine.Ray instance)
+		static private UnityEngine.Vector3 get_direction(UnityEngine.Ray instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.Ray instance, UnityEngine.Vector3 value)
+		static private void set_direction(UnityEngine.Ray instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.direction = value;
 		}

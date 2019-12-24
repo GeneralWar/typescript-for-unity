@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("passed", get_passed, null);
 		}
 
-		static private System.Boolean get_passed(UnityEngine.Rendering.GPUFence instance)
+		static private System.Boolean get_passed(UnityEngine.Rendering.GPUFence instance, string name)
 		{
 			return instance.passed;
 		}

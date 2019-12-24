@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,7 +17,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("graphic", get_graphic, null);
 		}
 
-		static private UnityEngine.Material GetModifiedMaterial(UnityEngine.UI.Mask instance, Parameters parameters)
+		static private UnityEngine.Material GetModifiedMaterial(UnityEngine.UI.Mask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Material>())
 			{
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsRaycastLocationValid(UnityEngine.UI.Mask instance, Parameters parameters)
+		static private System.Boolean IsRaycastLocationValid(UnityEngine.UI.Mask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2, UnityEngine.Camera>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean MaskEnabled(UnityEngine.UI.Mask instance, Parameters parameters)
+		static private System.Boolean MaskEnabled(UnityEngine.UI.Mask instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -75,22 +76,22 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.RectTransform get_rectTransform(UnityEngine.UI.Mask instance)
+		static private UnityEngine.RectTransform get_rectTransform(UnityEngine.UI.Mask instance, string name)
 		{
 			return instance.rectTransform;
 		}
 
-		static private System.Boolean get_showMaskGraphic(UnityEngine.UI.Mask instance)
+		static private System.Boolean get_showMaskGraphic(UnityEngine.UI.Mask instance, string name)
 		{
 			return instance.showMaskGraphic;
 		}
 
-		static private void set_showMaskGraphic(UnityEngine.UI.Mask instance, System.Boolean value)
+		static private void set_showMaskGraphic(UnityEngine.UI.Mask instance, string name, System.Boolean value)
 		{
 			instance.showMaskGraphic = value;
 		}
 
-		static private UnityEngine.UI.Graphic get_graphic(UnityEngine.UI.Mask instance)
+		static private UnityEngine.UI.Graphic get_graphic(UnityEngine.UI.Mask instance, string name)
 		{
 			return instance.graphic;
 		}

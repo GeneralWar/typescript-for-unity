@@ -9,7 +9,7 @@ Environment* Environment::sInstance = nullptr;
 
 std::vector<std::string> Environment::sSuperClassNames;
 
-Environment::Environment()
+Environment::Environment() : mIsRunning(false)
 {
 	sInstance = this;
 }

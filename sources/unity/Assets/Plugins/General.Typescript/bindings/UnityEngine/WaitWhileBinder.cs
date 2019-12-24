@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("keepWaiting", get_keepWaiting, null);
 		}
 
-		static private System.Boolean get_keepWaiting(UnityEngine.WaitWhile instance)
+		static private System.Boolean get_keepWaiting(UnityEngine.WaitWhile instance, string name)
 		{
 			return instance.keepWaiting;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("refreshRate", get_refreshRate, set_refreshRate);
 		}
 
-		static private System.String ToString(UnityEngine.Resolution instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Resolution instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -29,32 +30,32 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_width(UnityEngine.Resolution instance)
+		static private System.Int32 get_width(UnityEngine.Resolution instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.Resolution instance, System.Int32 value)
+		static private void set_width(UnityEngine.Resolution instance, string name, System.Int32 value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Int32 get_height(UnityEngine.Resolution instance)
+		static private System.Int32 get_height(UnityEngine.Resolution instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.Resolution instance, System.Int32 value)
+		static private void set_height(UnityEngine.Resolution instance, string name, System.Int32 value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Int32 get_refreshRate(UnityEngine.Resolution instance)
+		static private System.Int32 get_refreshRate(UnityEngine.Resolution instance, string name)
 		{
 			return instance.refreshRate;
 		}
 
-		static private void set_refreshRate(UnityEngine.Resolution instance, System.Int32 value)
+		static private void set_refreshRate(UnityEngine.Resolution instance, string name, System.Int32 value)
 		{
 			instance.refreshRate = value;
 		}

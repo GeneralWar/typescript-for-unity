@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(UnityEngine.MonoBehaviour);
 		}
 
-		static private void print(Parameters parameters)
+		static private void print(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -56,7 +57,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CancelInvoke(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private void CancelInvoke(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.MonoBehaviour.CancelInvoke has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Invoke(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private void Invoke(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void InvokeRepeating(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private void InvokeRepeating(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single, System.Single>())
 			{
@@ -119,7 +120,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean IsInvoking(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private System.Boolean IsInvoking(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -138,7 +139,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Coroutine StartCoroutine(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private UnityEngine.Coroutine StartCoroutine(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void StopAllCoroutines(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private void StopAllCoroutines(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -182,7 +183,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.MonoBehaviour.StopAllCoroutines has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void StopCoroutine(UnityEngine.MonoBehaviour instance, Parameters parameters)
+		static private void StopCoroutine(UnityEngine.MonoBehaviour instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Collections.IEnumerator>())
 			{
@@ -214,12 +215,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_useGUILayout(UnityEngine.MonoBehaviour instance)
+		static private System.Boolean get_useGUILayout(UnityEngine.MonoBehaviour instance, string name)
 		{
 			return instance.useGUILayout;
 		}
 
-		static private void set_useGUILayout(UnityEngine.MonoBehaviour instance, System.Boolean value)
+		static private void set_useGUILayout(UnityEngine.MonoBehaviour instance, string name, System.Boolean value)
 		{
 			instance.useGUILayout = value;
 		}
