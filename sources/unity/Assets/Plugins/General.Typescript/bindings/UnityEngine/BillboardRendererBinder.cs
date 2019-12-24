@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,12 +27,12 @@ namespace General.Typescript
 			return default(UnityEngine.BillboardRenderer);
 		}
 
-		static private UnityEngine.BillboardAsset get_billboard(UnityEngine.BillboardRenderer instance)
+		static private UnityEngine.BillboardAsset get_billboard(UnityEngine.BillboardRenderer instance, string name)
 		{
 			return instance.billboard;
 		}
 
-		static private void set_billboard(UnityEngine.BillboardRenderer instance, UnityEngine.BillboardAsset value)
+		static private void set_billboard(UnityEngine.BillboardRenderer instance, string name, UnityEngine.BillboardAsset value)
 		{
 			instance.billboard = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -57,7 +58,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color HSVToRGB(Parameters parameters)
+		static private UnityEngine.Color HSVToRGB(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color Lerp(Parameters parameters)
+		static private UnityEngine.Color Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color, UnityEngine.Color, System.Single>())
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color LerpUnclamped(Parameters parameters)
+		static private UnityEngine.Color LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color, UnityEngine.Color, System.Single>())
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Color instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Color instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -153,7 +154,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Color instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Color instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ToString(UnityEngine.Color instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Color instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -187,77 +188,77 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Color get_red()
+		static private UnityEngine.Color get_red(Type type, string name)
 		{
 			return UnityEngine.Color.red;
 		}
 
-		static private UnityEngine.Color get_green()
+		static private UnityEngine.Color get_green(Type type, string name)
 		{
 			return UnityEngine.Color.green;
 		}
 
-		static private UnityEngine.Color get_blue()
+		static private UnityEngine.Color get_blue(Type type, string name)
 		{
 			return UnityEngine.Color.blue;
 		}
 
-		static private UnityEngine.Color get_white()
+		static private UnityEngine.Color get_white(Type type, string name)
 		{
 			return UnityEngine.Color.white;
 		}
 
-		static private UnityEngine.Color get_black()
+		static private UnityEngine.Color get_black(Type type, string name)
 		{
 			return UnityEngine.Color.black;
 		}
 
-		static private UnityEngine.Color get_yellow()
+		static private UnityEngine.Color get_yellow(Type type, string name)
 		{
 			return UnityEngine.Color.yellow;
 		}
 
-		static private UnityEngine.Color get_cyan()
+		static private UnityEngine.Color get_cyan(Type type, string name)
 		{
 			return UnityEngine.Color.cyan;
 		}
 
-		static private UnityEngine.Color get_magenta()
+		static private UnityEngine.Color get_magenta(Type type, string name)
 		{
 			return UnityEngine.Color.magenta;
 		}
 
-		static private UnityEngine.Color get_gray()
+		static private UnityEngine.Color get_gray(Type type, string name)
 		{
 			return UnityEngine.Color.gray;
 		}
 
-		static private UnityEngine.Color get_grey()
+		static private UnityEngine.Color get_grey(Type type, string name)
 		{
 			return UnityEngine.Color.grey;
 		}
 
-		static private UnityEngine.Color get_clear()
+		static private UnityEngine.Color get_clear(Type type, string name)
 		{
 			return UnityEngine.Color.clear;
 		}
 
-		static private System.Single get_grayscale(UnityEngine.Color instance)
+		static private System.Single get_grayscale(UnityEngine.Color instance, string name)
 		{
 			return instance.grayscale;
 		}
 
-		static private UnityEngine.Color get_linear(UnityEngine.Color instance)
+		static private UnityEngine.Color get_linear(UnityEngine.Color instance, string name)
 		{
 			return instance.linear;
 		}
 
-		static private UnityEngine.Color get_gamma(UnityEngine.Color instance)
+		static private UnityEngine.Color get_gamma(UnityEngine.Color instance, string name)
 		{
 			return instance.gamma;
 		}
 
-		static private System.Single get_maxColorComponent(UnityEngine.Color instance)
+		static private System.Single get_maxColorComponent(UnityEngine.Color instance, string name)
 		{
 			return instance.maxColorComponent;
 		}

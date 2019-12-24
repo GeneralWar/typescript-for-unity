@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(UnityEngine.Assertions.Comparers.FloatComparer);
 		}
 
-		static private System.Boolean AreEqual(Parameters parameters)
+		static private System.Boolean AreEqual(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean AreEqualRelative(Parameters parameters)
+		static private System.Boolean AreEqualRelative(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Assertions.Comparers.FloatComparer instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Assertions.Comparers.FloatComparer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Assertions.Comparers.FloatComparer instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Assertions.Comparers.FloatComparer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{

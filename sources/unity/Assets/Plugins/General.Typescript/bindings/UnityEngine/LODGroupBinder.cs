@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.LODGroup);
 		}
 
-		static private void ForceLOD(UnityEngine.LODGroup instance, Parameters parameters)
+		static private void ForceLOD(UnityEngine.LODGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.LOD[] GetLODs(UnityEngine.LODGroup instance, Parameters parameters)
+		static private UnityEngine.LOD[] GetLODs(UnityEngine.LODGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void RecalculateBounds(UnityEngine.LODGroup instance, Parameters parameters)
+		static private void RecalculateBounds(UnityEngine.LODGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.LODGroup.RecalculateBounds has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLODs(UnityEngine.LODGroup instance, Parameters parameters)
+		static private void SetLODs(UnityEngine.LODGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.LOD[]>())
 			{
@@ -109,67 +110,67 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_crossFadeAnimationDuration()
+		static private System.Single get_crossFadeAnimationDuration(Type type, string name)
 		{
 			return UnityEngine.LODGroup.crossFadeAnimationDuration;
 		}
 
-		static private void set_crossFadeAnimationDuration(System.Single value)
+		static private void set_crossFadeAnimationDuration(Type type, string name, System.Single value)
 		{
 			UnityEngine.LODGroup.crossFadeAnimationDuration = value;
 		}
 
-		static private UnityEngine.Vector3 get_localReferencePoint(UnityEngine.LODGroup instance)
+		static private UnityEngine.Vector3 get_localReferencePoint(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.localReferencePoint;
 		}
 
-		static private void set_localReferencePoint(UnityEngine.LODGroup instance, UnityEngine.Vector3 value)
+		static private void set_localReferencePoint(UnityEngine.LODGroup instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.localReferencePoint = value;
 		}
 
-		static private System.Single get_size(UnityEngine.LODGroup instance)
+		static private System.Single get_size(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.LODGroup instance, System.Single value)
+		static private void set_size(UnityEngine.LODGroup instance, string name, System.Single value)
 		{
 			instance.size = value;
 		}
 
-		static private System.Int32 get_lodCount(UnityEngine.LODGroup instance)
+		static private System.Int32 get_lodCount(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.lodCount;
 		}
 
-		static private UnityEngine.LODFadeMode get_fadeMode(UnityEngine.LODGroup instance)
+		static private UnityEngine.LODFadeMode get_fadeMode(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.fadeMode;
 		}
 
-		static private void set_fadeMode(UnityEngine.LODGroup instance, UnityEngine.LODFadeMode value)
+		static private void set_fadeMode(UnityEngine.LODGroup instance, string name, UnityEngine.LODFadeMode value)
 		{
 			instance.fadeMode = value;
 		}
 
-		static private System.Boolean get_animateCrossFading(UnityEngine.LODGroup instance)
+		static private System.Boolean get_animateCrossFading(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.animateCrossFading;
 		}
 
-		static private void set_animateCrossFading(UnityEngine.LODGroup instance, System.Boolean value)
+		static private void set_animateCrossFading(UnityEngine.LODGroup instance, string name, System.Boolean value)
 		{
 			instance.animateCrossFading = value;
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.LODGroup instance)
+		static private System.Boolean get_enabled(UnityEngine.LODGroup instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.LODGroup instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.LODGroup instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}

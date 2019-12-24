@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -13,32 +14,32 @@ namespace General.Typescript
 			self.BindStaticProperty("lightProbes", get_lightProbes, set_lightProbes);
 		}
 
-		static private UnityEngine.LightmapData[] get_lightmaps()
+		static private UnityEngine.LightmapData[] get_lightmaps(Type type, string name)
 		{
 			return UnityEngine.LightmapSettings.lightmaps;
 		}
 
-		static private void set_lightmaps(UnityEngine.LightmapData[] value)
+		static private void set_lightmaps(Type type, string name, UnityEngine.LightmapData[] value)
 		{
 			UnityEngine.LightmapSettings.lightmaps = value;
 		}
 
-		static private UnityEngine.LightmapsMode get_lightmapsMode()
+		static private UnityEngine.LightmapsMode get_lightmapsMode(Type type, string name)
 		{
 			return UnityEngine.LightmapSettings.lightmapsMode;
 		}
 
-		static private void set_lightmapsMode(UnityEngine.LightmapsMode value)
+		static private void set_lightmapsMode(Type type, string name, UnityEngine.LightmapsMode value)
 		{
 			UnityEngine.LightmapSettings.lightmapsMode = value;
 		}
 
-		static private UnityEngine.LightProbes get_lightProbes()
+		static private UnityEngine.LightProbes get_lightProbes(Type type, string name)
 		{
 			return UnityEngine.LightmapSettings.lightProbes;
 		}
 
-		static private void set_lightProbes(UnityEngine.LightProbes value)
+		static private void set_lightProbes(Type type, string name, UnityEngine.LightProbes value)
 		{
 			UnityEngine.LightmapSettings.lightProbes = value;
 		}

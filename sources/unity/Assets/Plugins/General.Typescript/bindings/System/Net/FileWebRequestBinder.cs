@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,7 +27,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("UseDefaultCredentials", get_UseDefaultCredentials, set_UseDefaultCredentials);
 		}
 
-		static private void Abort(System.Net.FileWebRequest instance, Parameters parameters)
+		static private void Abort(System.Net.FileWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -40,7 +41,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.FileWebRequest.Abort has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IO.Stream EndGetRequestStream(System.Net.FileWebRequest instance, Parameters parameters)
+		static private System.IO.Stream EndGetRequestStream(System.Net.FileWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse EndGetResponse(System.Net.FileWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse EndGetResponse(System.Net.FileWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -84,7 +85,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.Stream GetRequestStream(System.Net.FileWebRequest instance, Parameters parameters)
+		static private System.IO.Stream GetRequestStream(System.Net.FileWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -99,7 +100,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse GetResponse(System.Net.FileWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse GetResponse(System.Net.FileWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -114,102 +115,102 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_ConnectionGroupName(System.Net.FileWebRequest instance)
+		static private System.String get_ConnectionGroupName(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.ConnectionGroupName;
 		}
 
-		static private void set_ConnectionGroupName(System.Net.FileWebRequest instance, System.String value)
+		static private void set_ConnectionGroupName(System.Net.FileWebRequest instance, string name, System.String value)
 		{
 			instance.ConnectionGroupName = value;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.FileWebRequest instance)
+		static private System.Int64 get_ContentLength(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private void set_ContentLength(System.Net.FileWebRequest instance, System.Int64 value)
+		static private void set_ContentLength(System.Net.FileWebRequest instance, string name, System.Int64 value)
 		{
 			instance.ContentLength = value;
 		}
 
-		static private System.String get_ContentType(System.Net.FileWebRequest instance)
+		static private System.String get_ContentType(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.ContentType;
 		}
 
-		static private void set_ContentType(System.Net.FileWebRequest instance, System.String value)
+		static private void set_ContentType(System.Net.FileWebRequest instance, string name, System.String value)
 		{
 			instance.ContentType = value;
 		}
 
-		static private System.Net.ICredentials get_Credentials(System.Net.FileWebRequest instance)
+		static private System.Net.ICredentials get_Credentials(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.Credentials;
 		}
 
-		static private void set_Credentials(System.Net.FileWebRequest instance, System.Net.ICredentials value)
+		static private void set_Credentials(System.Net.FileWebRequest instance, string name, System.Net.ICredentials value)
 		{
 			instance.Credentials = value;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.FileWebRequest instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private System.String get_Method(System.Net.FileWebRequest instance)
+		static private System.String get_Method(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.Method;
 		}
 
-		static private void set_Method(System.Net.FileWebRequest instance, System.String value)
+		static private void set_Method(System.Net.FileWebRequest instance, string name, System.String value)
 		{
 			instance.Method = value;
 		}
 
-		static private System.Boolean get_PreAuthenticate(System.Net.FileWebRequest instance)
+		static private System.Boolean get_PreAuthenticate(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.PreAuthenticate;
 		}
 
-		static private void set_PreAuthenticate(System.Net.FileWebRequest instance, System.Boolean value)
+		static private void set_PreAuthenticate(System.Net.FileWebRequest instance, string name, System.Boolean value)
 		{
 			instance.PreAuthenticate = value;
 		}
 
-		static private System.Net.IWebProxy get_Proxy(System.Net.FileWebRequest instance)
+		static private System.Net.IWebProxy get_Proxy(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.Proxy;
 		}
 
-		static private void set_Proxy(System.Net.FileWebRequest instance, System.Net.IWebProxy value)
+		static private void set_Proxy(System.Net.FileWebRequest instance, string name, System.Net.IWebProxy value)
 		{
 			instance.Proxy = value;
 		}
 
-		static private System.Int32 get_Timeout(System.Net.FileWebRequest instance)
+		static private System.Int32 get_Timeout(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.Timeout;
 		}
 
-		static private void set_Timeout(System.Net.FileWebRequest instance, System.Int32 value)
+		static private void set_Timeout(System.Net.FileWebRequest instance, string name, System.Int32 value)
 		{
 			instance.Timeout = value;
 		}
 
-		static private System.Uri get_RequestUri(System.Net.FileWebRequest instance)
+		static private System.Uri get_RequestUri(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.RequestUri;
 		}
 
-		static private System.Boolean get_UseDefaultCredentials(System.Net.FileWebRequest instance)
+		static private System.Boolean get_UseDefaultCredentials(System.Net.FileWebRequest instance, string name)
 		{
 			return instance.UseDefaultCredentials;
 		}
 
-		static private void set_UseDefaultCredentials(System.Net.FileWebRequest instance, System.Boolean value)
+		static private void set_UseDefaultCredentials(System.Net.FileWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UseDefaultCredentials = value;
 		}

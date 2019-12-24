@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -89,7 +90,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.CommandBuffer);
 		}
 
-		static private void BeginSample(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void BeginSample(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -111,7 +112,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Blit(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void Blit(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void Clear(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -182,7 +183,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.CommandBuffer.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ClearRandomWriteTargets(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void ClearRandomWriteTargets(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -196,7 +197,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.CommandBuffer.ClearRandomWriteTargets has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ClearRenderTarget(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void ClearRenderTarget(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean, System.Boolean, UnityEngine.Color>())
 			{
@@ -223,7 +224,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ConvertTexture(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void ConvertTexture(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.RenderTargetIdentifier, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -250,7 +251,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CopyCounterValue(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void CopyCounterValue(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeBuffer, UnityEngine.ComputeBuffer, System.UInt32>())
 			{
@@ -272,7 +273,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CopyTexture(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void CopyTexture(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.RenderTargetIdentifier, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -309,7 +310,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.GPUFence CreateGPUFence(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private UnityEngine.Rendering.GPUFence CreateGPUFence(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -328,7 +329,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.GPUFence);
 		}
 
-		static private void DisableScissorRect(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DisableScissorRect(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -342,7 +343,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.CommandBuffer.DisableScissorRect has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DisableShaderKeyword(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DisableShaderKeyword(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -364,7 +365,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DispatchCompute(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DispatchCompute(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, UnityEngine.ComputeBuffer, System.UInt32>())
 			{
@@ -391,7 +392,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Dispose(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void Dispose(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -405,7 +406,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.CommandBuffer.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DrawMesh(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawMesh(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, UnityEngine.Matrix4x4, UnityEngine.Material>())
 			{
@@ -442,7 +443,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMeshInstanced(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawMeshInstanced(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Int32, UnityEngine.Material, System.Int32, UnityEngine.Matrix4x4[]>())
 			{
@@ -474,7 +475,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMeshInstancedIndirect(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawMeshInstancedIndirect(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Int32, UnityEngine.Material, System.Int32, UnityEngine.ComputeBuffer>())
 			{
@@ -506,7 +507,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawProcedural(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawProcedural(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4, UnityEngine.Material, System.Int32, UnityEngine.MeshTopology, System.Int32>())
 			{
@@ -538,7 +539,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawProceduralIndirect(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawProceduralIndirect(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4, UnityEngine.Material, System.Int32, UnityEngine.MeshTopology, UnityEngine.ComputeBuffer>())
 			{
@@ -570,7 +571,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawRenderer(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void DrawRenderer(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Renderer, UnityEngine.Material>())
 			{
@@ -602,7 +603,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EnableScissorRect(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void EnableScissorRect(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -624,7 +625,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EnableShaderKeyword(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void EnableShaderKeyword(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -646,7 +647,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void EndSample(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void EndSample(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -668,7 +669,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void GenerateMips(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void GenerateMips(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTexture>())
 			{
@@ -690,7 +691,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void GetTemporaryRT(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void GetTemporaryRT(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.RenderTextureDescriptor>())
 			{
@@ -762,7 +763,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void GetTemporaryRTArray(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void GetTemporaryRTArray(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32, System.Int32>())
 			{
@@ -819,7 +820,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void IssuePluginCustomBlit(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void IssuePluginCustomBlit(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr, System.UInt32, UnityEngine.Rendering.RenderTargetIdentifier, UnityEngine.Rendering.RenderTargetIdentifier, System.UInt32, System.UInt32>())
 			{
@@ -841,7 +842,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void IssuePluginCustomTextureUpdateV2(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void IssuePluginCustomTextureUpdateV2(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr, UnityEngine.Texture, System.UInt32>())
 			{
@@ -863,7 +864,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void IssuePluginEvent(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void IssuePluginEvent(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr, System.Int32>())
 			{
@@ -885,7 +886,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void IssuePluginEventAndData(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void IssuePluginEventAndData(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr, System.Int32, System.IntPtr>())
 			{
@@ -907,7 +908,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Release(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void Release(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -921,7 +922,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.CommandBuffer.Release has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ReleaseTemporaryRT(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void ReleaseTemporaryRT(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -943,7 +944,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ResolveAntiAliasedSurface(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void ResolveAntiAliasedSurface(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTexture, UnityEngine.RenderTexture>())
 			{
@@ -965,7 +966,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeBufferParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeBufferParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, System.Int32, UnityEngine.ComputeBuffer>())
 			{
@@ -992,7 +993,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeFloatParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeFloatParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, System.Single>())
 			{
@@ -1019,7 +1020,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeFloatParams(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeFloatParams(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.String, System.Single[]>())
 			{
@@ -1046,7 +1047,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeIntParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeIntParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, System.Int32>())
 			{
@@ -1073,7 +1074,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeIntParams(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeIntParams(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.String, System.Int32[]>())
 			{
@@ -1100,7 +1101,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeMatrixArrayParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeMatrixArrayParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, UnityEngine.Matrix4x4[]>())
 			{
@@ -1127,7 +1128,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeMatrixParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeMatrixParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, UnityEngine.Matrix4x4>())
 			{
@@ -1154,7 +1155,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeTextureParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeTextureParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, System.String, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -1191,7 +1192,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeVectorArrayParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeVectorArrayParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, UnityEngine.Vector4[]>())
 			{
@@ -1218,7 +1219,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetComputeVectorParam(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetComputeVectorParam(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.ComputeShader, System.Int32, UnityEngine.Vector4>())
 			{
@@ -1245,7 +1246,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalBuffer(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalBuffer(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.ComputeBuffer>())
 			{
@@ -1272,7 +1273,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalColor(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalColor(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Color>())
 			{
@@ -1299,7 +1300,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalDepthBias(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalDepthBias(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -1321,7 +1322,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalFloat(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalFloat(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single>())
 			{
@@ -1348,7 +1349,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalFloatArray(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalFloatArray(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single[]>())
 			{
@@ -1375,7 +1376,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalInt(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalInt(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -1402,7 +1403,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalMatrix(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalMatrix(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Matrix4x4>())
 			{
@@ -1429,7 +1430,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalMatrixArray(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalMatrixArray(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Matrix4x4[]>())
 			{
@@ -1456,7 +1457,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalTexture(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalTexture(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -1483,7 +1484,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalVector(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalVector(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4>())
 			{
@@ -1510,7 +1511,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetGlobalVectorArray(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetGlobalVectorArray(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4[]>())
 			{
@@ -1537,7 +1538,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInvertCulling(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetInvertCulling(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -1559,7 +1560,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetProjectionMatrix(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetProjectionMatrix(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -1581,7 +1582,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRandomWriteTarget(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetRandomWriteTarget(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -1613,7 +1614,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRenderTarget(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetRenderTarget(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -1695,7 +1696,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetShadowSamplingMode(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetShadowSamplingMode(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.RenderTargetIdentifier, UnityEngine.Rendering.ShadowSamplingMode>())
 			{
@@ -1717,7 +1718,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetViewMatrix(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetViewMatrix(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -1739,7 +1740,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetViewport(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetViewport(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -1761,7 +1762,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetViewProjectionMatrices(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void SetViewProjectionMatrices(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4, UnityEngine.Matrix4x4>())
 			{
@@ -1783,7 +1784,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void WaitOnGPUFence(UnityEngine.Rendering.CommandBuffer instance, Parameters parameters)
+		static private void WaitOnGPUFence(UnityEngine.Rendering.CommandBuffer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.GPUFence>())
 			{
@@ -1810,17 +1811,17 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String get_name(UnityEngine.Rendering.CommandBuffer instance)
+		static private System.String get_name(UnityEngine.Rendering.CommandBuffer instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private void set_name(UnityEngine.Rendering.CommandBuffer instance, System.String value)
+		static private void set_name(UnityEngine.Rendering.CommandBuffer instance, string name, System.String value)
 		{
 			instance.name = value;
 		}
 
-		static private System.Int32 get_sizeInBytes(UnityEngine.Rendering.CommandBuffer instance)
+		static private System.Int32 get_sizeInBytes(UnityEngine.Rendering.CommandBuffer instance, string name)
 		{
 			return instance.sizeInBytes;
 		}

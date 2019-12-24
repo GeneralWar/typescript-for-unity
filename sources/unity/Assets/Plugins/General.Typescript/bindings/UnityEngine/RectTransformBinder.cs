@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(UnityEngine.RectTransform);
 		}
 
-		static private void ForceUpdateRectTransforms(UnityEngine.RectTransform instance, Parameters parameters)
+		static private void ForceUpdateRectTransforms(UnityEngine.RectTransform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -55,7 +56,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RectTransform.ForceUpdateRectTransforms has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void GetLocalCorners(UnityEngine.RectTransform instance, Parameters parameters)
+		static private void GetLocalCorners(UnityEngine.RectTransform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void GetWorldCorners(UnityEngine.RectTransform instance, Parameters parameters)
+		static private void GetWorldCorners(UnityEngine.RectTransform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -99,7 +100,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInsetAndSizeFromParentEdge(UnityEngine.RectTransform instance, Parameters parameters)
+		static private void SetInsetAndSizeFromParentEdge(UnityEngine.RectTransform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform.Edge, System.Single, System.Single>())
 			{
@@ -121,7 +122,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSizeWithCurrentAnchors(UnityEngine.RectTransform instance, Parameters parameters)
+		static private void SetSizeWithCurrentAnchors(UnityEngine.RectTransform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform.Axis, System.Single>())
 			{
@@ -143,87 +144,87 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rect get_rect(UnityEngine.RectTransform instance)
+		static private UnityEngine.Rect get_rect(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.rect;
 		}
 
-		static private UnityEngine.Vector2 get_anchorMin(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_anchorMin(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.anchorMin;
 		}
 
-		static private void set_anchorMin(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_anchorMin(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.anchorMin = value;
 		}
 
-		static private UnityEngine.Vector2 get_anchorMax(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_anchorMax(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.anchorMax;
 		}
 
-		static private void set_anchorMax(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_anchorMax(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.anchorMax = value;
 		}
 
-		static private UnityEngine.Vector2 get_anchoredPosition(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_anchoredPosition(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.anchoredPosition;
 		}
 
-		static private void set_anchoredPosition(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_anchoredPosition(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.anchoredPosition = value;
 		}
 
-		static private UnityEngine.Vector2 get_sizeDelta(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_sizeDelta(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.sizeDelta;
 		}
 
-		static private void set_sizeDelta(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_sizeDelta(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.sizeDelta = value;
 		}
 
-		static private UnityEngine.Vector2 get_pivot(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_pivot(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.pivot;
 		}
 
-		static private void set_pivot(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_pivot(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.pivot = value;
 		}
 
-		static private UnityEngine.Vector3 get_anchoredPosition3D(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector3 get_anchoredPosition3D(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.anchoredPosition3D;
 		}
 
-		static private void set_anchoredPosition3D(UnityEngine.RectTransform instance, UnityEngine.Vector3 value)
+		static private void set_anchoredPosition3D(UnityEngine.RectTransform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.anchoredPosition3D = value;
 		}
 
-		static private UnityEngine.Vector2 get_offsetMin(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_offsetMin(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.offsetMin;
 		}
 
-		static private void set_offsetMin(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_offsetMin(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.offsetMin = value;
 		}
 
-		static private UnityEngine.Vector2 get_offsetMax(UnityEngine.RectTransform instance)
+		static private UnityEngine.Vector2 get_offsetMax(UnityEngine.RectTransform instance, string name)
 		{
 			return instance.offsetMax;
 		}
 
-		static private void set_offsetMax(UnityEngine.RectTransform instance, UnityEngine.Vector2 value)
+		static private void set_offsetMax(UnityEngine.RectTransform instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.offsetMax = value;
 		}

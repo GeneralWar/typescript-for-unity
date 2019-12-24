@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -42,7 +43,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("updateCount", get_updateCount, null);
 		}
 
-		static private void SetGlobalAnisotropicFilteringLimits(Parameters parameters)
+		static private void SetGlobalAnisotropicFilteringLimits(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetStreamingTextureMaterialDebugProperties(Parameters parameters)
+		static private void SetStreamingTextureMaterialDebugProperties(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -78,7 +79,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Texture.SetStreamingTextureMaterialDebugProperties has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IntPtr GetNativeTexturePtr(UnityEngine.Texture instance, Parameters parameters)
+		static private System.IntPtr GetNativeTexturePtr(UnityEngine.Texture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -93,7 +94,7 @@ namespace General.Typescript
 			return default(System.IntPtr);
 		}
 
-		static private void IncrementUpdateCount(UnityEngine.Texture instance, Parameters parameters)
+		static private void IncrementUpdateCount(UnityEngine.Texture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -107,212 +108,212 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Texture.IncrementUpdateCount has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 get_masterTextureLimit()
+		static private System.Int32 get_masterTextureLimit(Type type, string name)
 		{
 			return UnityEngine.Texture.masterTextureLimit;
 		}
 
-		static private void set_masterTextureLimit(System.Int32 value)
+		static private void set_masterTextureLimit(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Texture.masterTextureLimit = value;
 		}
 
-		static private UnityEngine.AnisotropicFiltering get_anisotropicFiltering()
+		static private UnityEngine.AnisotropicFiltering get_anisotropicFiltering(Type type, string name)
 		{
 			return UnityEngine.Texture.anisotropicFiltering;
 		}
 
-		static private void set_anisotropicFiltering(UnityEngine.AnisotropicFiltering value)
+		static private void set_anisotropicFiltering(Type type, string name, UnityEngine.AnisotropicFiltering value)
 		{
 			UnityEngine.Texture.anisotropicFiltering = value;
 		}
 
-		static private System.UInt64 get_totalTextureMemory()
+		static private System.UInt64 get_totalTextureMemory(Type type, string name)
 		{
 			return UnityEngine.Texture.totalTextureMemory;
 		}
 
-		static private System.UInt64 get_desiredTextureMemory()
+		static private System.UInt64 get_desiredTextureMemory(Type type, string name)
 		{
 			return UnityEngine.Texture.desiredTextureMemory;
 		}
 
-		static private System.UInt64 get_targetTextureMemory()
+		static private System.UInt64 get_targetTextureMemory(Type type, string name)
 		{
 			return UnityEngine.Texture.targetTextureMemory;
 		}
 
-		static private System.UInt64 get_currentTextureMemory()
+		static private System.UInt64 get_currentTextureMemory(Type type, string name)
 		{
 			return UnityEngine.Texture.currentTextureMemory;
 		}
 
-		static private System.UInt64 get_nonStreamingTextureMemory()
+		static private System.UInt64 get_nonStreamingTextureMemory(Type type, string name)
 		{
 			return UnityEngine.Texture.nonStreamingTextureMemory;
 		}
 
-		static private System.UInt64 get_streamingMipmapUploadCount()
+		static private System.UInt64 get_streamingMipmapUploadCount(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingMipmapUploadCount;
 		}
 
-		static private System.UInt64 get_streamingRendererCount()
+		static private System.UInt64 get_streamingRendererCount(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingRendererCount;
 		}
 
-		static private System.UInt64 get_streamingTextureCount()
+		static private System.UInt64 get_streamingTextureCount(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingTextureCount;
 		}
 
-		static private System.UInt64 get_nonStreamingTextureCount()
+		static private System.UInt64 get_nonStreamingTextureCount(Type type, string name)
 		{
 			return UnityEngine.Texture.nonStreamingTextureCount;
 		}
 
-		static private System.UInt64 get_streamingTexturePendingLoadCount()
+		static private System.UInt64 get_streamingTexturePendingLoadCount(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingTexturePendingLoadCount;
 		}
 
-		static private System.UInt64 get_streamingTextureLoadingCount()
+		static private System.UInt64 get_streamingTextureLoadingCount(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingTextureLoadingCount;
 		}
 
-		static private System.Boolean get_streamingTextureForceLoadAll()
+		static private System.Boolean get_streamingTextureForceLoadAll(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingTextureForceLoadAll;
 		}
 
-		static private void set_streamingTextureForceLoadAll(System.Boolean value)
+		static private void set_streamingTextureForceLoadAll(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Texture.streamingTextureForceLoadAll = value;
 		}
 
-		static private System.Boolean get_streamingTextureDiscardUnusedMips()
+		static private System.Boolean get_streamingTextureDiscardUnusedMips(Type type, string name)
 		{
 			return UnityEngine.Texture.streamingTextureDiscardUnusedMips;
 		}
 
-		static private void set_streamingTextureDiscardUnusedMips(System.Boolean value)
+		static private void set_streamingTextureDiscardUnusedMips(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Texture.streamingTextureDiscardUnusedMips = value;
 		}
 
-		static private System.Int32 get_width(UnityEngine.Texture instance)
+		static private System.Int32 get_width(UnityEngine.Texture instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.Texture instance, System.Int32 value)
+		static private void set_width(UnityEngine.Texture instance, string name, System.Int32 value)
 		{
 			instance.width = value;
 		}
 
-		static private System.Int32 get_height(UnityEngine.Texture instance)
+		static private System.Int32 get_height(UnityEngine.Texture instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.Texture instance, System.Int32 value)
+		static private void set_height(UnityEngine.Texture instance, string name, System.Int32 value)
 		{
 			instance.height = value;
 		}
 
-		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.Texture instance)
+		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.Texture instance, string name)
 		{
 			return instance.dimension;
 		}
 
-		static private void set_dimension(UnityEngine.Texture instance, UnityEngine.Rendering.TextureDimension value)
+		static private void set_dimension(UnityEngine.Texture instance, string name, UnityEngine.Rendering.TextureDimension value)
 		{
 			instance.dimension = value;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.Texture instance)
+		static private System.Boolean get_isReadable(UnityEngine.Texture instance, string name)
 		{
 			return instance.isReadable;
 		}
 
-		static private UnityEngine.TextureWrapMode get_wrapMode(UnityEngine.Texture instance)
+		static private UnityEngine.TextureWrapMode get_wrapMode(UnityEngine.Texture instance, string name)
 		{
 			return instance.wrapMode;
 		}
 
-		static private void set_wrapMode(UnityEngine.Texture instance, UnityEngine.TextureWrapMode value)
+		static private void set_wrapMode(UnityEngine.Texture instance, string name, UnityEngine.TextureWrapMode value)
 		{
 			instance.wrapMode = value;
 		}
 
-		static private UnityEngine.TextureWrapMode get_wrapModeU(UnityEngine.Texture instance)
+		static private UnityEngine.TextureWrapMode get_wrapModeU(UnityEngine.Texture instance, string name)
 		{
 			return instance.wrapModeU;
 		}
 
-		static private void set_wrapModeU(UnityEngine.Texture instance, UnityEngine.TextureWrapMode value)
+		static private void set_wrapModeU(UnityEngine.Texture instance, string name, UnityEngine.TextureWrapMode value)
 		{
 			instance.wrapModeU = value;
 		}
 
-		static private UnityEngine.TextureWrapMode get_wrapModeV(UnityEngine.Texture instance)
+		static private UnityEngine.TextureWrapMode get_wrapModeV(UnityEngine.Texture instance, string name)
 		{
 			return instance.wrapModeV;
 		}
 
-		static private void set_wrapModeV(UnityEngine.Texture instance, UnityEngine.TextureWrapMode value)
+		static private void set_wrapModeV(UnityEngine.Texture instance, string name, UnityEngine.TextureWrapMode value)
 		{
 			instance.wrapModeV = value;
 		}
 
-		static private UnityEngine.TextureWrapMode get_wrapModeW(UnityEngine.Texture instance)
+		static private UnityEngine.TextureWrapMode get_wrapModeW(UnityEngine.Texture instance, string name)
 		{
 			return instance.wrapModeW;
 		}
 
-		static private void set_wrapModeW(UnityEngine.Texture instance, UnityEngine.TextureWrapMode value)
+		static private void set_wrapModeW(UnityEngine.Texture instance, string name, UnityEngine.TextureWrapMode value)
 		{
 			instance.wrapModeW = value;
 		}
 
-		static private UnityEngine.FilterMode get_filterMode(UnityEngine.Texture instance)
+		static private UnityEngine.FilterMode get_filterMode(UnityEngine.Texture instance, string name)
 		{
 			return instance.filterMode;
 		}
 
-		static private void set_filterMode(UnityEngine.Texture instance, UnityEngine.FilterMode value)
+		static private void set_filterMode(UnityEngine.Texture instance, string name, UnityEngine.FilterMode value)
 		{
 			instance.filterMode = value;
 		}
 
-		static private System.Int32 get_anisoLevel(UnityEngine.Texture instance)
+		static private System.Int32 get_anisoLevel(UnityEngine.Texture instance, string name)
 		{
 			return instance.anisoLevel;
 		}
 
-		static private void set_anisoLevel(UnityEngine.Texture instance, System.Int32 value)
+		static private void set_anisoLevel(UnityEngine.Texture instance, string name, System.Int32 value)
 		{
 			instance.anisoLevel = value;
 		}
 
-		static private System.Single get_mipMapBias(UnityEngine.Texture instance)
+		static private System.Single get_mipMapBias(UnityEngine.Texture instance, string name)
 		{
 			return instance.mipMapBias;
 		}
 
-		static private void set_mipMapBias(UnityEngine.Texture instance, System.Single value)
+		static private void set_mipMapBias(UnityEngine.Texture instance, string name, System.Single value)
 		{
 			instance.mipMapBias = value;
 		}
 
-		static private UnityEngine.Vector2 get_texelSize(UnityEngine.Texture instance)
+		static private UnityEngine.Vector2 get_texelSize(UnityEngine.Texture instance, string name)
 		{
 			return instance.texelSize;
 		}
 
-		static private System.UInt32 get_updateCount(UnityEngine.Texture instance)
+		static private System.UInt32 get_updateCount(UnityEngine.Texture instance, string name)
 		{
 			return instance.updateCount;
 		}

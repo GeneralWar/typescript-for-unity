@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -45,7 +46,7 @@ namespace General.Typescript
 			return default(System.IO.StringWriter);
 		}
 
-		static private void Close(System.IO.StringWriter instance, Parameters parameters)
+		static private void Close(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -59,7 +60,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StringWriter.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task FlushAsync(System.IO.StringWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task FlushAsync(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Text.StringBuilder GetStringBuilder(System.IO.StringWriter instance, Parameters parameters)
+		static private System.Text.StringBuilder GetStringBuilder(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToString(System.IO.StringWriter instance, Parameters parameters)
+		static private System.String ToString(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -104,7 +105,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Write(System.IO.StringWriter instance, Parameters parameters)
+		static private void Write(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char>())
 			{
@@ -136,7 +137,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Threading.Tasks.Task WriteAsync(System.IO.StringWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteAsync(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char>())
 			{
@@ -166,7 +167,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Threading.Tasks.Task WriteLineAsync(System.IO.StringWriter instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteLineAsync(System.IO.StringWriter instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Char>())
 			{
@@ -196,7 +197,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Text.Encoding get_Encoding(System.IO.StringWriter instance)
+		static private System.Text.Encoding get_Encoding(System.IO.StringWriter instance, string name)
 		{
 			return instance.Encoding;
 		}

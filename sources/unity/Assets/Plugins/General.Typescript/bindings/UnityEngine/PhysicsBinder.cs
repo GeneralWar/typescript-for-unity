@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -69,7 +70,7 @@ namespace General.Typescript
 			return default(UnityEngine.Physics);
 		}
 
-		static private System.Boolean BoxCast(Parameters parameters)
+		static private System.Boolean BoxCast(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.RaycastHit[] BoxCastAll(Parameters parameters)
+		static private UnityEngine.RaycastHit[] BoxCastAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -145,7 +146,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 BoxCastNonAlloc(Parameters parameters)
+		static private System.Int32 BoxCastNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.RaycastHit[]>())
 			{
@@ -183,7 +184,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean CapsuleCast(Parameters parameters)
+		static private System.Boolean CapsuleCast(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, UnityEngine.Vector3>())
 			{
@@ -217,7 +218,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.RaycastHit[] CapsuleCastAll(Parameters parameters)
+		static private UnityEngine.RaycastHit[] CapsuleCastAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, UnityEngine.Vector3>())
 			{
@@ -251,7 +252,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 CapsuleCastNonAlloc(Parameters parameters)
+		static private System.Int32 CapsuleCastNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, UnityEngine.Vector3, UnityEngine.RaycastHit[]>())
 			{
@@ -285,7 +286,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean CheckBox(Parameters parameters)
+		static private System.Boolean CheckBox(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -319,7 +320,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean CheckCapsule(Parameters parameters)
+		static private System.Boolean CheckCapsule(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -349,7 +350,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean CheckSphere(Parameters parameters)
+		static private System.Boolean CheckSphere(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single>())
 			{
@@ -379,7 +380,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Vector3 ClosestPoint(Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPoint(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Collider, UnityEngine.Vector3, UnityEngine.Quaternion>())
 			{
@@ -401,7 +402,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Boolean GetIgnoreLayerCollision(Parameters parameters)
+		static private System.Boolean GetIgnoreLayerCollision(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -423,7 +424,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void IgnoreCollision(Parameters parameters)
+		static private void IgnoreCollision(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Collider, UnityEngine.Collider>())
 			{
@@ -450,7 +451,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void IgnoreLayerCollision(Parameters parameters)
+		static private void IgnoreLayerCollision(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -477,7 +478,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Linecast(Parameters parameters)
+		static private System.Boolean Linecast(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -507,7 +508,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Collider[] OverlapBox(Parameters parameters)
+		static private UnityEngine.Collider[] OverlapBox(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -541,7 +542,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 OverlapBoxNonAlloc(Parameters parameters)
+		static private System.Int32 OverlapBoxNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Collider[]>())
 			{
@@ -575,7 +576,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Collider[] OverlapCapsule(Parameters parameters)
+		static private UnityEngine.Collider[] OverlapCapsule(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -605,7 +606,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 OverlapCapsuleNonAlloc(Parameters parameters)
+		static private System.Int32 OverlapCapsuleNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single, UnityEngine.Collider[]>())
 			{
@@ -635,7 +636,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Collider[] OverlapSphere(Parameters parameters)
+		static private UnityEngine.Collider[] OverlapSphere(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single>())
 			{
@@ -665,7 +666,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 OverlapSphereNonAlloc(Parameters parameters)
+		static private System.Int32 OverlapSphereNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, System.Single, UnityEngine.Collider[]>())
 			{
@@ -695,7 +696,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean Raycast(Parameters parameters)
+		static private System.Boolean Raycast(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray>())
 			{
@@ -745,7 +746,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.RaycastHit[] RaycastAll(Parameters parameters)
+		static private UnityEngine.RaycastHit[] RaycastAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray>())
 			{
@@ -795,7 +796,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 RaycastNonAlloc(Parameters parameters)
+		static private System.Int32 RaycastNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray, UnityEngine.RaycastHit[]>())
 			{
@@ -845,7 +846,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void RebuildBroadphaseRegions(Parameters parameters)
+		static private void RebuildBroadphaseRegions(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Bounds, System.Int32>())
 			{
@@ -867,7 +868,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Simulate(Parameters parameters)
+		static private void Simulate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -889,7 +890,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean SphereCast(Parameters parameters)
+		static private System.Boolean SphereCast(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray, System.Single>())
 			{
@@ -923,7 +924,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.RaycastHit[] SphereCastAll(Parameters parameters)
+		static private UnityEngine.RaycastHit[] SphereCastAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray, System.Single>())
 			{
@@ -973,7 +974,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 SphereCastNonAlloc(Parameters parameters)
+		static private System.Int32 SphereCastNonAlloc(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Ray, System.Single, UnityEngine.RaycastHit[]>())
 			{
@@ -1023,7 +1024,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SyncTransforms(Parameters parameters)
+		static private void SyncTransforms(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -1037,147 +1038,147 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Physics.SyncTransforms has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Vector3 get_gravity()
+		static private UnityEngine.Vector3 get_gravity(Type type, string name)
 		{
 			return UnityEngine.Physics.gravity;
 		}
 
-		static private void set_gravity(UnityEngine.Vector3 value)
+		static private void set_gravity(Type type, string name, UnityEngine.Vector3 value)
 		{
 			UnityEngine.Physics.gravity = value;
 		}
 
-		static private System.Single get_defaultContactOffset()
+		static private System.Single get_defaultContactOffset(Type type, string name)
 		{
 			return UnityEngine.Physics.defaultContactOffset;
 		}
 
-		static private void set_defaultContactOffset(System.Single value)
+		static private void set_defaultContactOffset(Type type, string name, System.Single value)
 		{
 			UnityEngine.Physics.defaultContactOffset = value;
 		}
 
-		static private System.Single get_sleepThreshold()
+		static private System.Single get_sleepThreshold(Type type, string name)
 		{
 			return UnityEngine.Physics.sleepThreshold;
 		}
 
-		static private void set_sleepThreshold(System.Single value)
+		static private void set_sleepThreshold(Type type, string name, System.Single value)
 		{
 			UnityEngine.Physics.sleepThreshold = value;
 		}
 
-		static private System.Boolean get_queriesHitTriggers()
+		static private System.Boolean get_queriesHitTriggers(Type type, string name)
 		{
 			return UnityEngine.Physics.queriesHitTriggers;
 		}
 
-		static private void set_queriesHitTriggers(System.Boolean value)
+		static private void set_queriesHitTriggers(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.queriesHitTriggers = value;
 		}
 
-		static private System.Boolean get_queriesHitBackfaces()
+		static private System.Boolean get_queriesHitBackfaces(Type type, string name)
 		{
 			return UnityEngine.Physics.queriesHitBackfaces;
 		}
 
-		static private void set_queriesHitBackfaces(System.Boolean value)
+		static private void set_queriesHitBackfaces(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.queriesHitBackfaces = value;
 		}
 
-		static private System.Single get_bounceThreshold()
+		static private System.Single get_bounceThreshold(Type type, string name)
 		{
 			return UnityEngine.Physics.bounceThreshold;
 		}
 
-		static private void set_bounceThreshold(System.Single value)
+		static private void set_bounceThreshold(Type type, string name, System.Single value)
 		{
 			UnityEngine.Physics.bounceThreshold = value;
 		}
 
-		static private System.Int32 get_defaultSolverIterations()
+		static private System.Int32 get_defaultSolverIterations(Type type, string name)
 		{
 			return UnityEngine.Physics.defaultSolverIterations;
 		}
 
-		static private void set_defaultSolverIterations(System.Int32 value)
+		static private void set_defaultSolverIterations(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Physics.defaultSolverIterations = value;
 		}
 
-		static private System.Int32 get_defaultSolverVelocityIterations()
+		static private System.Int32 get_defaultSolverVelocityIterations(Type type, string name)
 		{
 			return UnityEngine.Physics.defaultSolverVelocityIterations;
 		}
 
-		static private void set_defaultSolverVelocityIterations(System.Int32 value)
+		static private void set_defaultSolverVelocityIterations(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Physics.defaultSolverVelocityIterations = value;
 		}
 
-		static private UnityEngine.PhysicsScene get_defaultPhysicsScene()
+		static private UnityEngine.PhysicsScene get_defaultPhysicsScene(Type type, string name)
 		{
 			return UnityEngine.Physics.defaultPhysicsScene;
 		}
 
-		static private System.Boolean get_autoSimulation()
+		static private System.Boolean get_autoSimulation(Type type, string name)
 		{
 			return UnityEngine.Physics.autoSimulation;
 		}
 
-		static private void set_autoSimulation(System.Boolean value)
+		static private void set_autoSimulation(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.autoSimulation = value;
 		}
 
-		static private System.Boolean get_autoSyncTransforms()
+		static private System.Boolean get_autoSyncTransforms(Type type, string name)
 		{
 			return UnityEngine.Physics.autoSyncTransforms;
 		}
 
-		static private void set_autoSyncTransforms(System.Boolean value)
+		static private void set_autoSyncTransforms(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.autoSyncTransforms = value;
 		}
 
-		static private System.Boolean get_reuseCollisionCallbacks()
+		static private System.Boolean get_reuseCollisionCallbacks(Type type, string name)
 		{
 			return UnityEngine.Physics.reuseCollisionCallbacks;
 		}
 
-		static private void set_reuseCollisionCallbacks(System.Boolean value)
+		static private void set_reuseCollisionCallbacks(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.reuseCollisionCallbacks = value;
 		}
 
-		static private System.Single get_interCollisionDistance()
+		static private System.Single get_interCollisionDistance(Type type, string name)
 		{
 			return UnityEngine.Physics.interCollisionDistance;
 		}
 
-		static private void set_interCollisionDistance(System.Single value)
+		static private void set_interCollisionDistance(Type type, string name, System.Single value)
 		{
 			UnityEngine.Physics.interCollisionDistance = value;
 		}
 
-		static private System.Single get_interCollisionStiffness()
+		static private System.Single get_interCollisionStiffness(Type type, string name)
 		{
 			return UnityEngine.Physics.interCollisionStiffness;
 		}
 
-		static private void set_interCollisionStiffness(System.Single value)
+		static private void set_interCollisionStiffness(Type type, string name, System.Single value)
 		{
 			UnityEngine.Physics.interCollisionStiffness = value;
 		}
 
-		static private System.Boolean get_interCollisionSettingsToggle()
+		static private System.Boolean get_interCollisionSettingsToggle(Type type, string name)
 		{
 			return UnityEngine.Physics.interCollisionSettingsToggle;
 		}
 
-		static private void set_interCollisionSettingsToggle(System.Boolean value)
+		static private void set_interCollisionSettingsToggle(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Physics.interCollisionSettingsToggle = value;
 		}

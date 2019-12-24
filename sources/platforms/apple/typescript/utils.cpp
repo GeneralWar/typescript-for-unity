@@ -62,6 +62,19 @@ JSValueRef GetParentValue(Base* base)
     return nullptr;
 }
 
+JSObjectRef ValueToObject(JSContextRef context, JSValueRef value)
+{
+    JSValueRef exception = nullptr;
+    JSObjectRef object = JSValueToObject(context, value, &exception);
+    if (exception)
+    {
+        std::string message = JSValue_To_String(context, exception);
+        LogError("[Error] Failed to convert JSValue to JSObject. %s", message.c_str());
+        return nullptr;
+    }
+    return object;
+}
+
 std::string JSValue_To_String(JSContextRef context, JSValueRef value)
 {
     if (!value || !IsValueValid(context, value)) return "";
@@ -145,13 +158,7 @@ char* ReturnStringToCSharp(JSContextRef context, JSValueRef content)
 
 void SetValueProperty(JSContextRef context, JSValueRef target, const char* name, JSValueRef property)
 {
-    JSValueRef exception = 0;
-    JSObjectRef object = JSValueToObject(context, target, &exception);
-    if (exception)
-    {
-        LogError(JSValue_To_String(context, exception).c_str());
-        return;
-    }
+    JSObjectRef object = ValueToObject(context, target);
     SetObjectProperty(context, object, name, property);
 }
 
@@ -227,12 +234,12 @@ void SetObjectPropertyWithBoolean(JSContextRef context, JSObjectRef target, cons
 
 JSValueRef GetValueProperty(JSContextRef context, JSValueRef target, const char* name)
 {
-    return GetObjectProperty(context, JSValueToObject(context, target, 0), name);
+    return GetObjectProperty(context, ValueToObject(context, target), name);
 }
 
 JSValueRef GetValueProperty(JSContextRef context, JSValueRef target, const int& index)
 {
-    return GetObjectProperty(context, JSValueToObject(context, target, 0), index);
+    return GetObjectProperty(context, ValueToObject(context, target), index);
 }
 
 JSValueRef GetObjectProperty(JSContextRef context, JSObjectRef target, const char* name)
@@ -254,7 +261,7 @@ JSValueRef GetObjectProperty(JSContextRef context, JSObjectRef target, const int
 
 std::string GetValuePropertyWithString(JSContextRef context, JSValueRef target, const char* name)
 {
-    return GetObjectPropertyWithString(context, JSValueToObject(context, target, 0), name);
+    return GetObjectPropertyWithString(context, ValueToObject(context, target), name);
 }
 
 std::string GetObjectPropertyWithString(JSContextRef context, JSObjectRef target, const char* name)
@@ -275,7 +282,7 @@ bool IsObjectValid(JSContextRef context, JSValueRef handle)
 
 std::string GetCustomType(JSContextRef context, JSValueRef object)
 {
-    return GetCustomType(context, JSValueToObject(context, object, nullptr));
+    return GetCustomType(context, ValueToObject(context, object));
 }
 
 std::string GetCustomType(JSContextRef context, JSObjectRef object)
@@ -315,7 +322,7 @@ int GetValueType(JSContextRef context, JSValueRef value)
             {
                 return TYPE_ARRAY;
             }
-            JSObjectRef object = JSValueToObject(context, value, 0);
+            JSObjectRef object = ValueToObject(context, value);
             if (JSObjectIsFunction(context, object))
             {
                 return JSObjectIsConstructor(context, object) ? TYPE_CONSTRUCTOR : TYPE_FUNCTION;
@@ -328,20 +335,14 @@ int GetValueType(JSContextRef context, JSValueRef value)
 int ArrayGetLength(JSContextRef context, JSValueRef value)
 {
     if (!JSValueIsArray(context, value)) return -1;
-    JSObjectRef object = JSValueToObject(context, value, 0);
+    JSObjectRef object = ValueToObject(context, value);
     JSValueRef length = GetObjectProperty(context, object, "length");
     return (int)JSValueToNumber(context, length, 0);
 }
 
 JSValueRef BindProperty(JSContextRef context, JSValueRef instance, const char* name, JSObjectCallAsFunctionCallback getter, JSObjectCallAsFunctionCallback setter, void* data)
 {
-    JSValueRef exception = 0;
-    JSObjectRef object =JSValueToObject(context, instance, &exception);
-    if (exception)
-    {
-        LogError(JSValue_To_String(context, exception).c_str());
-        return nullptr;
-    }
+    JSObjectRef object = ValueToObject(context, instance);
     return BindProperty(context, object, name, getter, setter, data);
 }
 

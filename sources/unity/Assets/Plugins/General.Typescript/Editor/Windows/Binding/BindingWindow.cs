@@ -127,12 +127,33 @@ namespace General.Typescript
 
 		private void generateBindings()
 		{
+			if (Directory.Exists(BinderGenerator.BINDER_OUTPUT_PATH))
+			{
+				Directory.Delete(BinderGenerator.BINDER_OUTPUT_PATH, true);
+			}
+
 			List<Type> types = new List<Type>();
 			foreach (BindingAssembly assembly in mAssemblies.Values)
 			{
 				types.AddRange(assembly.bindedTypes.ConvertAll<Type>(n => assembly.Assembly.GetType(n)));
 			}
 			BinderGenerator.GenerateBinders(types);
+			Configuration configuration = Utility.GetConfiguration();
+			if (null != configuration)
+			{
+				foreach (string filename in configuration.extraBindingConfigs)
+				{
+					BindingRecordConfig config = JsonUtility.FromJson<BindingRecordConfig>(File.ReadAllText(filename));
+					foreach (BindingRecordConfigAssembly record in config.assemblies)
+					{
+						Assembly assembly = Assembly.Load(record.name);
+						foreach (string typename in record.types)
+						{
+							types.Add(assembly.GetType(typename));
+						}
+					}
+				}
+			}
 			BinderGenerator.GenerateSnippets(types);
 		}
 

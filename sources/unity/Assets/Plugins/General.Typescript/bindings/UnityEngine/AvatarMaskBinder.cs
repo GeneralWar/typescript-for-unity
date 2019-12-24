@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(UnityEngine.AvatarMask);
 		}
 
-		static private void AddTransformPath(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private void AddTransformPath(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -61,7 +62,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean GetHumanoidBodyPartActive(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private System.Boolean GetHumanoidBodyPartActive(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarMaskBodyPart>())
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetTransformActive(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private System.Boolean GetTransformActive(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.String GetTransformPath(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private System.String GetTransformPath(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void RemoveTransformPath(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private void RemoveTransformPath(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetHumanoidBodyPartActive(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private void SetHumanoidBodyPartActive(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarMaskBodyPart, System.Boolean>())
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTransformActive(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private void SetTransformActive(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Boolean>())
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTransformPath(UnityEngine.AvatarMask instance, Parameters parameters)
+		static private void SetTransformPath(UnityEngine.AvatarMask instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.String>())
 			{
@@ -220,12 +221,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_transformCount(UnityEngine.AvatarMask instance)
+		static private System.Int32 get_transformCount(UnityEngine.AvatarMask instance, string name)
 		{
 			return instance.transformCount;
 		}
 
-		static private void set_transformCount(UnityEngine.AvatarMask instance, System.Int32 value)
+		static private void set_transformCount(UnityEngine.AvatarMask instance, string name, System.Int32 value)
 		{
 			instance.transformCount = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -48,7 +49,7 @@ namespace General.Typescript
 			return default(UnityEngine.MaterialPropertyBlock);
 		}
 
-		static private void Clear(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void Clear(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -62,7 +63,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.MaterialPropertyBlock.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CopyProbeOcclusionArrayFrom(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void CopyProbeOcclusionArrayFrom(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4[]>())
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CopySHCoefficientArraysFrom(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void CopySHCoefficientArraysFrom(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.SphericalHarmonicsL2[]>())
 			{
@@ -116,7 +117,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Color GetColor(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Color GetColor(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private System.Single GetFloat(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private System.Single GetFloat(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single[] GetFloatArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private System.Single[] GetFloatArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -194,7 +195,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetInt(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private System.Int32 GetInt(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -220,7 +221,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Matrix4x4 GetMatrix(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetMatrix(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -246,7 +247,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4[] GetMatrixArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Matrix4x4[] GetMatrixArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -272,7 +273,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Texture GetTexture(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Texture GetTexture(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -298,7 +299,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector4 GetVector(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Vector4 GetVector(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -324,7 +325,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4[] GetVectorArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private UnityEngine.Vector4[] GetVectorArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -350,7 +351,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetBuffer(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetBuffer(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.ComputeBuffer>())
 			{
@@ -377,7 +378,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetColor(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetColor(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Color>())
 			{
@@ -404,7 +405,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloat(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetFloat(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -431,7 +432,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloatArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetFloatArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single[]>())
 			{
@@ -458,7 +459,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInt(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetInt(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -485,7 +486,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrix(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetMatrix(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4>())
 			{
@@ -512,7 +513,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetMatrixArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetMatrixArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Matrix4x4[]>())
 			{
@@ -539,7 +540,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTexture(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetTexture(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Texture>())
 			{
@@ -566,7 +567,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVector(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetVector(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4>())
 			{
@@ -593,7 +594,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetVectorArray(UnityEngine.MaterialPropertyBlock instance, Parameters parameters)
+		static private void SetVectorArray(UnityEngine.MaterialPropertyBlock instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, UnityEngine.Vector4[]>())
 			{
@@ -620,7 +621,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_isEmpty(UnityEngine.MaterialPropertyBlock instance)
+		static private System.Boolean get_isEmpty(UnityEngine.MaterialPropertyBlock instance, string name)
 		{
 			return instance.isEmpty;
 		}

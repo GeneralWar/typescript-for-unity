@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,12 +13,12 @@ namespace General.Typescript
 			self.BindInstanceProperty("weight", get_weight, null);
 		}
 
-		static private UnityEngine.AnimationClip get_clip(UnityEngine.AnimatorClipInfo instance)
+		static private UnityEngine.AnimationClip get_clip(UnityEngine.AnimatorClipInfo instance, string name)
 		{
 			return instance.clip;
 		}
 
-		static private System.Single get_weight(UnityEngine.AnimatorClipInfo instance)
+		static private System.Single get_weight(UnityEngine.AnimatorClipInfo instance, string name)
 		{
 			return instance.weight;
 		}

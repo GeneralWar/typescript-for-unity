@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,17 +28,17 @@ namespace General.Typescript
 			return default(UnityEngine.Behaviour);
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.Behaviour instance)
+		static private System.Boolean get_enabled(UnityEngine.Behaviour instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.Behaviour instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.Behaviour instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}
 
-		static private System.Boolean get_isActiveAndEnabled(UnityEngine.Behaviour instance)
+		static private System.Boolean get_isActiveAndEnabled(UnityEngine.Behaviour instance, string name)
 		{
 			return instance.isActiveAndEnabled;
 		}

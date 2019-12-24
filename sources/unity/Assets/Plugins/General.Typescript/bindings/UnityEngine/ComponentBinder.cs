@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(UnityEngine.Component);
 		}
 
-		static private void BroadcastMessage(UnityEngine.Component instance, Parameters parameters)
+		static private void BroadcastMessage(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean CompareTag(UnityEngine.Component instance, Parameters parameters)
+		static private System.Boolean CompareTag(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Object GetComponent(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponent(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -123,7 +124,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetComponentInChildren(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponentInChildren(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -149,7 +150,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetComponentInParent(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponentInParent(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -171,7 +172,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetComponents(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponents(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -193,7 +194,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetComponentsInChildren(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponentsInChildren(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -219,7 +220,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetComponentsInParent(UnityEngine.Component instance, Parameters parameters)
+		static private System.Object GetComponentsInParent(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -245,7 +246,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SendMessage(UnityEngine.Component instance, Parameters parameters)
+		static private void SendMessage(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -282,7 +283,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SendMessageUpwards(UnityEngine.Component instance, Parameters parameters)
+		static private void SendMessageUpwards(UnityEngine.Component instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -319,22 +320,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Transform get_transform(UnityEngine.Component instance)
+		static private UnityEngine.Transform get_transform(UnityEngine.Component instance, string name)
 		{
 			return instance.transform;
 		}
 
-		static private UnityEngine.GameObject get_gameObject(UnityEngine.Component instance)
+		static private UnityEngine.GameObject get_gameObject(UnityEngine.Component instance, string name)
 		{
 			return instance.gameObject;
 		}
 
-		static private System.String get_tag(UnityEngine.Component instance)
+		static private System.String get_tag(UnityEngine.Component instance, string name)
 		{
 			return instance.tag;
 		}
 
-		static private void set_tag(UnityEngine.Component instance, System.String value)
+		static private void set_tag(UnityEngine.Component instance, string name, System.String value)
 		{
 			instance.tag = value;
 		}

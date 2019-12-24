@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,7 +57,7 @@ namespace General.Typescript
 			return default(System.Guid);
 		}
 
-		static private System.Guid NewGuid(Parameters parameters)
+		static private System.Guid NewGuid(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -71,7 +72,7 @@ namespace General.Typescript
 			return default(System.Guid);
 		}
 
-		static private System.Guid Parse(Parameters parameters)
+		static private System.Guid Parse(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -93,7 +94,7 @@ namespace General.Typescript
 			return default(System.Guid);
 		}
 
-		static private System.Guid ParseExact(Parameters parameters)
+		static private System.Guid ParseExact(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.String>())
 			{
@@ -115,7 +116,7 @@ namespace General.Typescript
 			return default(System.Guid);
 		}
 
-		static private System.Int32 CompareTo(System.Guid instance, Parameters parameters)
+		static private System.Int32 CompareTo(System.Guid instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -141,7 +142,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean Equals(System.Guid instance, Parameters parameters)
+		static private System.Boolean Equals(System.Guid instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -167,7 +168,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(System.Guid instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Guid instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -182,7 +183,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Byte[] ToByteArray(System.Guid instance, Parameters parameters)
+		static private System.Byte[] ToByteArray(System.Guid instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -197,7 +198,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToString(System.Guid instance, Parameters parameters)
+		static private System.String ToString(System.Guid instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

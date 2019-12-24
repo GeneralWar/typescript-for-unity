@@ -11,6 +11,7 @@
 #include "../../ocUtils.h"
 #include "../object/object.ios.h"
 #include "header.h"
+#include "../environment.ios.h"
 
 extern JSValueRef onStaticPropertyGetterCall (JSContextRef context, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception);
 extern JSValueRef onStaticPropertySetterCall (JSContextRef context, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception);
@@ -21,7 +22,8 @@ void TypescriptStaticProperty::Bind()
     JSValueRef parent = GetParentValue(this);
 //    DefineProperty(context, parent, (void*)this, mName.c_str(), mHasGetter ? onStaticPropertyGetterCall : nullptr, mHasSetter ? onStaticPropertySetterCall : nullptr);    
 
-    mReference = BindProperty(context, parent, mName.c_str(), mHasGetter ? onStaticPropertyGetterCall : nullptr, mHasSetter ? onStaticPropertySetterCall : nullptr, this);
+    JSValueRef property = BindProperty(context, parent, mName.c_str(), mHasGetter ? onStaticPropertyGetterCall : nullptr, mHasSetter ? onStaticPropertySetterCall : nullptr, this);
+    mReference = ValueToObject(context, property);
 //    JSValueRef descriptor = CreateObject(context);
 //    if (mHasGetter)
 //    {
@@ -56,9 +58,15 @@ void TypescriptStaticProperty::Bind()
 
 void TypescriptStaticProperty::Bind(Base *parent)
 {
+    // static binding
     if (mReference)
     {
         this->BindToParent(parent);
+    }
+    // dynamic binding
+    else if (mEnvironment->IsRunning())
+    {
+        this->Bind();
     }
 }
 

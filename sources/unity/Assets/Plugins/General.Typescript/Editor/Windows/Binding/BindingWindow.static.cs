@@ -16,7 +16,7 @@ namespace General.Typescript
 			}
 			else
 			{
-				sInstance.Focus();
+				sInstance.initialize();
 				sInstance.Repaint();
 			}
 		}

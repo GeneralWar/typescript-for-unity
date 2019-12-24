@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,72 +48,72 @@ namespace General.Typescript
 			return default(UnityEngine.Keyframe);
 		}
 
-		static private System.Single get_time(UnityEngine.Keyframe instance)
+		static private System.Single get_time(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.time;
 		}
 
-		static private void set_time(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_time(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.time = value;
 		}
 
-		static private System.Single get_value(UnityEngine.Keyframe instance)
+		static private System.Single get_value(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.value;
 		}
 
-		static private void set_value(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_value(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.value = value;
 		}
 
-		static private System.Single get_inTangent(UnityEngine.Keyframe instance)
+		static private System.Single get_inTangent(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.inTangent;
 		}
 
-		static private void set_inTangent(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_inTangent(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.inTangent = value;
 		}
 
-		static private System.Single get_outTangent(UnityEngine.Keyframe instance)
+		static private System.Single get_outTangent(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.outTangent;
 		}
 
-		static private void set_outTangent(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_outTangent(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.outTangent = value;
 		}
 
-		static private System.Single get_inWeight(UnityEngine.Keyframe instance)
+		static private System.Single get_inWeight(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.inWeight;
 		}
 
-		static private void set_inWeight(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_inWeight(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.inWeight = value;
 		}
 
-		static private System.Single get_outWeight(UnityEngine.Keyframe instance)
+		static private System.Single get_outWeight(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.outWeight;
 		}
 
-		static private void set_outWeight(UnityEngine.Keyframe instance, System.Single value)
+		static private void set_outWeight(UnityEngine.Keyframe instance, string name, System.Single value)
 		{
 			instance.outWeight = value;
 		}
 
-		static private UnityEngine.WeightedMode get_weightedMode(UnityEngine.Keyframe instance)
+		static private UnityEngine.WeightedMode get_weightedMode(UnityEngine.Keyframe instance, string name)
 		{
 			return instance.weightedMode;
 		}
 
-		static private void set_weightedMode(UnityEngine.Keyframe instance, UnityEngine.WeightedMode value)
+		static private void set_weightedMode(UnityEngine.Keyframe instance, string name, UnityEngine.WeightedMode value)
 		{
 			instance.weightedMode = value;
 		}

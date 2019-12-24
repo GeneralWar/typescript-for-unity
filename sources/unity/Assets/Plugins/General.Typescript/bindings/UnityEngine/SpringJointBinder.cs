@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -30,52 +31,52 @@ namespace General.Typescript
 			return default(UnityEngine.SpringJoint);
 		}
 
-		static private System.Single get_spring(UnityEngine.SpringJoint instance)
+		static private System.Single get_spring(UnityEngine.SpringJoint instance, string name)
 		{
 			return instance.spring;
 		}
 
-		static private void set_spring(UnityEngine.SpringJoint instance, System.Single value)
+		static private void set_spring(UnityEngine.SpringJoint instance, string name, System.Single value)
 		{
 			instance.spring = value;
 		}
 
-		static private System.Single get_damper(UnityEngine.SpringJoint instance)
+		static private System.Single get_damper(UnityEngine.SpringJoint instance, string name)
 		{
 			return instance.damper;
 		}
 
-		static private void set_damper(UnityEngine.SpringJoint instance, System.Single value)
+		static private void set_damper(UnityEngine.SpringJoint instance, string name, System.Single value)
 		{
 			instance.damper = value;
 		}
 
-		static private System.Single get_minDistance(UnityEngine.SpringJoint instance)
+		static private System.Single get_minDistance(UnityEngine.SpringJoint instance, string name)
 		{
 			return instance.minDistance;
 		}
 
-		static private void set_minDistance(UnityEngine.SpringJoint instance, System.Single value)
+		static private void set_minDistance(UnityEngine.SpringJoint instance, string name, System.Single value)
 		{
 			instance.minDistance = value;
 		}
 
-		static private System.Single get_maxDistance(UnityEngine.SpringJoint instance)
+		static private System.Single get_maxDistance(UnityEngine.SpringJoint instance, string name)
 		{
 			return instance.maxDistance;
 		}
 
-		static private void set_maxDistance(UnityEngine.SpringJoint instance, System.Single value)
+		static private void set_maxDistance(UnityEngine.SpringJoint instance, string name, System.Single value)
 		{
 			instance.maxDistance = value;
 		}
 
-		static private System.Single get_tolerance(UnityEngine.SpringJoint instance)
+		static private System.Single get_tolerance(UnityEngine.SpringJoint instance, string name)
 		{
 			return instance.tolerance;
 		}
 
-		static private void set_tolerance(UnityEngine.SpringJoint instance, System.Single value)
+		static private void set_tolerance(UnityEngine.SpringJoint instance, string name, System.Single value)
 		{
 			instance.tolerance = value;
 		}

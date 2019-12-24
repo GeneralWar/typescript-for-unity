@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private System.Single Distance(Parameters parameters)
+		static private System.Single Distance(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single Dot(Parameters parameters)
+		static private System.Single Dot(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector4 Lerp(Parameters parameters)
+		static private UnityEngine.Vector4 Lerp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4, System.Single>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 LerpUnclamped(Parameters parameters)
+		static private UnityEngine.Vector4 LerpUnclamped(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4, System.Single>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private System.Single Magnitude(Parameters parameters)
+		static private System.Single Magnitude(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4>())
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector4 Max(Parameters parameters)
+		static private UnityEngine.Vector4 Max(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 Min(Parameters parameters)
+		static private UnityEngine.Vector4 Min(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -220,7 +221,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 MoveTowards(Parameters parameters)
+		static private UnityEngine.Vector4 MoveTowards(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4, System.Single>())
 			{
@@ -242,7 +243,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 Normalize(Parameters parameters)
+		static private UnityEngine.Vector4 Normalize(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4>())
 			{
@@ -264,7 +265,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 Project(Parameters parameters)
+		static private UnityEngine.Vector4 Project(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -286,7 +287,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector4 Scale(Parameters parameters)
+		static private UnityEngine.Vector4 Scale(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4, UnityEngine.Vector4>())
 			{
@@ -308,7 +309,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private System.Single SqrMagnitude(Parameters parameters)
+		static private System.Single SqrMagnitude(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4>())
 			{
@@ -330,7 +331,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Vector4 instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -356,7 +357,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Vector4 instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -371,7 +372,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Normalize(UnityEngine.Vector4 instance, Parameters parameters)
+		static private void Normalize(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -385,7 +386,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Vector4.Normalize has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Scale(UnityEngine.Vector4 instance, Parameters parameters)
+		static private void Scale(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector4>())
 			{
@@ -407,7 +408,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Set(UnityEngine.Vector4 instance, Parameters parameters)
+		static private void Set(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -429,7 +430,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single SqrMagnitude(UnityEngine.Vector4 instance, Parameters parameters)
+		static private System.Single SqrMagnitude(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -444,7 +445,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.String ToString(UnityEngine.Vector4 instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Vector4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -463,37 +464,37 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector4 get_zero()
+		static private UnityEngine.Vector4 get_zero(Type type, string name)
 		{
 			return UnityEngine.Vector4.zero;
 		}
 
-		static private UnityEngine.Vector4 get_one()
+		static private UnityEngine.Vector4 get_one(Type type, string name)
 		{
 			return UnityEngine.Vector4.one;
 		}
 
-		static private UnityEngine.Vector4 get_positiveInfinity()
+		static private UnityEngine.Vector4 get_positiveInfinity(Type type, string name)
 		{
 			return UnityEngine.Vector4.positiveInfinity;
 		}
 
-		static private UnityEngine.Vector4 get_negativeInfinity()
+		static private UnityEngine.Vector4 get_negativeInfinity(Type type, string name)
 		{
 			return UnityEngine.Vector4.negativeInfinity;
 		}
 
-		static private UnityEngine.Vector4 get_normalized(UnityEngine.Vector4 instance)
+		static private UnityEngine.Vector4 get_normalized(UnityEngine.Vector4 instance, string name)
 		{
 			return instance.normalized;
 		}
 
-		static private System.Single get_magnitude(UnityEngine.Vector4 instance)
+		static private System.Single get_magnitude(UnityEngine.Vector4 instance, string name)
 		{
 			return instance.magnitude;
 		}
 
-		static private System.Single get_sqrMagnitude(UnityEngine.Vector4 instance)
+		static private System.Single get_sqrMagnitude(UnityEngine.Vector4 instance, string name)
 		{
 			return instance.sqrMagnitude;
 		}

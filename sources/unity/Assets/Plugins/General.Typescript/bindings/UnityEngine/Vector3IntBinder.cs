@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,7 +57,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private UnityEngine.Vector3Int CeilToInt(Parameters parameters)
+		static private UnityEngine.Vector3Int CeilToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -78,7 +79,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private System.Single Distance(Parameters parameters)
+		static private System.Single Distance(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -100,7 +101,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3Int FloorToInt(Parameters parameters)
+		static private UnityEngine.Vector3Int FloorToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -122,7 +123,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private UnityEngine.Vector3Int Max(Parameters parameters)
+		static private UnityEngine.Vector3Int Max(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -144,7 +145,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private UnityEngine.Vector3Int Min(Parameters parameters)
+		static private UnityEngine.Vector3Int Min(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -166,7 +167,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private UnityEngine.Vector3Int RoundToInt(Parameters parameters)
+		static private UnityEngine.Vector3Int RoundToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -188,7 +189,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private UnityEngine.Vector3Int Scale(Parameters parameters)
+		static private UnityEngine.Vector3Int Scale(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -210,7 +211,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3Int);
 		}
 
-		static private void Clamp(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private void Clamp(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -232,7 +233,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Equals(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -258,7 +259,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -273,7 +274,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Scale(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private void Scale(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int>())
 			{
@@ -295,7 +296,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Set(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private void Set(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32>())
 			{
@@ -317,7 +318,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Vector3Int instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Vector3Int instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -336,72 +337,72 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector3Int get_zero()
+		static private UnityEngine.Vector3Int get_zero(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.zero;
 		}
 
-		static private UnityEngine.Vector3Int get_one()
+		static private UnityEngine.Vector3Int get_one(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.one;
 		}
 
-		static private UnityEngine.Vector3Int get_up()
+		static private UnityEngine.Vector3Int get_up(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.up;
 		}
 
-		static private UnityEngine.Vector3Int get_down()
+		static private UnityEngine.Vector3Int get_down(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.down;
 		}
 
-		static private UnityEngine.Vector3Int get_left()
+		static private UnityEngine.Vector3Int get_left(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.left;
 		}
 
-		static private UnityEngine.Vector3Int get_right()
+		static private UnityEngine.Vector3Int get_right(Type type, string name)
 		{
 			return UnityEngine.Vector3Int.right;
 		}
 
-		static private System.Int32 get_x(UnityEngine.Vector3Int instance)
+		static private System.Int32 get_x(UnityEngine.Vector3Int instance, string name)
 		{
 			return instance.x;
 		}
 
-		static private void set_x(UnityEngine.Vector3Int instance, System.Int32 value)
+		static private void set_x(UnityEngine.Vector3Int instance, string name, System.Int32 value)
 		{
 			instance.x = value;
 		}
 
-		static private System.Int32 get_y(UnityEngine.Vector3Int instance)
+		static private System.Int32 get_y(UnityEngine.Vector3Int instance, string name)
 		{
 			return instance.y;
 		}
 
-		static private void set_y(UnityEngine.Vector3Int instance, System.Int32 value)
+		static private void set_y(UnityEngine.Vector3Int instance, string name, System.Int32 value)
 		{
 			instance.y = value;
 		}
 
-		static private System.Int32 get_z(UnityEngine.Vector3Int instance)
+		static private System.Int32 get_z(UnityEngine.Vector3Int instance, string name)
 		{
 			return instance.z;
 		}
 
-		static private void set_z(UnityEngine.Vector3Int instance, System.Int32 value)
+		static private void set_z(UnityEngine.Vector3Int instance, string name, System.Int32 value)
 		{
 			instance.z = value;
 		}
 
-		static private System.Single get_magnitude(UnityEngine.Vector3Int instance)
+		static private System.Single get_magnitude(UnityEngine.Vector3Int instance, string name)
 		{
 			return instance.magnitude;
 		}
 
-		static private System.Int32 get_sqrMagnitude(UnityEngine.Vector3Int instance)
+		static private System.Int32 get_sqrMagnitude(UnityEngine.Vector3Int instance, string name)
 		{
 			return instance.sqrMagnitude;
 		}

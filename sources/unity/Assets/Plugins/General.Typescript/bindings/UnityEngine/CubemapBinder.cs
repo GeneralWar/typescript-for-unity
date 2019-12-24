@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(UnityEngine.Cubemap);
 		}
 
-		static private UnityEngine.Cubemap CreateExternalTexture(Parameters parameters)
+		static private UnityEngine.Cubemap CreateExternalTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.TextureFormat, System.Boolean, System.IntPtr>())
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Apply(UnityEngine.Cubemap instance, Parameters parameters)
+		static private void Apply(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Cubemap.Apply has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Color GetPixel(UnityEngine.Cubemap instance, Parameters parameters)
+		static private UnityEngine.Color GetPixel(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CubemapFace, System.Int32, System.Int32>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color[] GetPixels(UnityEngine.Cubemap instance, Parameters parameters)
+		static private UnityEngine.Color[] GetPixels(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CubemapFace>())
 			{
@@ -140,7 +141,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetPixel(UnityEngine.Cubemap instance, Parameters parameters)
+		static private void SetPixel(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CubemapFace, System.Int32, System.Int32, UnityEngine.Color>())
 			{
@@ -162,7 +163,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPixels(UnityEngine.Cubemap instance, Parameters parameters)
+		static private void SetPixels(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color[], UnityEngine.CubemapFace>())
 			{
@@ -189,7 +190,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SmoothEdges(UnityEngine.Cubemap instance, Parameters parameters)
+		static private void SmoothEdges(UnityEngine.Cubemap instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -208,17 +209,17 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Cubemap.SmoothEdges has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 get_mipmapCount(UnityEngine.Cubemap instance)
+		static private System.Int32 get_mipmapCount(UnityEngine.Cubemap instance, string name)
 		{
 			return instance.mipmapCount;
 		}
 
-		static private UnityEngine.TextureFormat get_format(UnityEngine.Cubemap instance)
+		static private UnityEngine.TextureFormat get_format(UnityEngine.Cubemap instance, string name)
 		{
 			return instance.format;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.Cubemap instance)
+		static private System.Boolean get_isReadable(UnityEngine.Cubemap instance, string name)
 		{
 			return instance.isReadable;
 		}

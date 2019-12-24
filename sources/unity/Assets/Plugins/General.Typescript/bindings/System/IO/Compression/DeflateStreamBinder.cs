@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -57,7 +58,7 @@ namespace General.Typescript
 			return default(System.IO.Compression.DeflateStream);
 		}
 
-		static private System.Int32 EndRead(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private System.Int32 EndRead(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -79,7 +80,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void EndWrite(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private void EndWrite(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -101,7 +102,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Flush(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private void Flush(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -115,7 +116,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.Compression.DeflateStream.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 Read(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -137,7 +138,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int64 Seek(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private System.Int64 Seek(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64, System.IO.SeekOrigin>())
 			{
@@ -159,7 +160,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private void SetLength(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private void SetLength(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -181,7 +182,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Write(System.IO.Compression.DeflateStream instance, Parameters parameters)
+		static private void Write(System.IO.Compression.DeflateStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -203,37 +204,37 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.Compression.DeflateStream instance)
+		static private System.IO.Stream get_BaseStream(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.BaseStream;
 		}
 
-		static private System.Boolean get_CanRead(System.IO.Compression.DeflateStream instance)
+		static private System.Boolean get_CanRead(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.CanRead;
 		}
 
-		static private System.Boolean get_CanSeek(System.IO.Compression.DeflateStream instance)
+		static private System.Boolean get_CanSeek(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.CanSeek;
 		}
 
-		static private System.Boolean get_CanWrite(System.IO.Compression.DeflateStream instance)
+		static private System.Boolean get_CanWrite(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.CanWrite;
 		}
 
-		static private System.Int64 get_Length(System.IO.Compression.DeflateStream instance)
+		static private System.Int64 get_Length(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.Length;
 		}
 
-		static private System.Int64 get_Position(System.IO.Compression.DeflateStream instance)
+		static private System.Int64 get_Position(System.IO.Compression.DeflateStream instance, string name)
 		{
 			return instance.Position;
 		}
 
-		static private void set_Position(System.IO.Compression.DeflateStream instance, System.Int64 value)
+		static private void set_Position(System.IO.Compression.DeflateStream instance, string name, System.Int64 value)
 		{
 			instance.Position = value;
 		}

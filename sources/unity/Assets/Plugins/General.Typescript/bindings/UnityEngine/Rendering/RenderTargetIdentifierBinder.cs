@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -67,7 +68,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.RenderTargetIdentifier);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Rendering.RenderTargetIdentifier instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Rendering.RenderTargetIdentifier instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.RenderTargetIdentifier>())
 			{
@@ -93,7 +94,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Rendering.RenderTargetIdentifier instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Rendering.RenderTargetIdentifier instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -108,7 +109,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ToString(UnityEngine.Rendering.RenderTargetIdentifier instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Rendering.RenderTargetIdentifier instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

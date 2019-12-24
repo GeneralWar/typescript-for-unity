@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -13,7 +14,7 @@ namespace General.Typescript
 			self.BindStaticProperty("instance", get_instance, null);
 		}
 
-		static private void RegisterGraphicForCanvas(Parameters parameters)
+		static private void RegisterGraphicForCanvas(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Canvas, UnityEngine.UI.Graphic>())
 			{
@@ -35,7 +36,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UnregisterGraphicForCanvas(Parameters parameters)
+		static private void UnregisterGraphicForCanvas(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Canvas, UnityEngine.UI.Graphic>())
 			{
@@ -57,7 +58,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.UI.GraphicRegistry get_instance()
+		static private UnityEngine.UI.GraphicRegistry get_instance(Type type, string name)
 		{
 			return UnityEngine.UI.GraphicRegistry.instance;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,17 +28,17 @@ namespace General.Typescript
 			return default(UnityEngine.MeshRenderer);
 		}
 
-		static private UnityEngine.Mesh get_additionalVertexStreams(UnityEngine.MeshRenderer instance)
+		static private UnityEngine.Mesh get_additionalVertexStreams(UnityEngine.MeshRenderer instance, string name)
 		{
 			return instance.additionalVertexStreams;
 		}
 
-		static private void set_additionalVertexStreams(UnityEngine.MeshRenderer instance, UnityEngine.Mesh value)
+		static private void set_additionalVertexStreams(UnityEngine.MeshRenderer instance, string name, UnityEngine.Mesh value)
 		{
 			instance.additionalVertexStreams = value;
 		}
 
-		static private System.Int32 get_subMeshStartIndex(UnityEngine.MeshRenderer instance)
+		static private System.Int32 get_subMeshStartIndex(UnityEngine.MeshRenderer instance, string name)
 		{
 			return instance.subMeshStartIndex;
 		}

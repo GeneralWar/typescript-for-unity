@@ -107,14 +107,15 @@ namespace General.Typescript
 				};
 #endif
 
-				if (sInstance?.initialize() ?? false)
+				if (!sInstance.initialize())
 				{
-					General_Typescript_BindLogCallback(Log, LogWarning, LogError);
-					General_Typescript_Bind(sInstance.Context);
-					Debug.LogFormat("Initialize typescript takes {0}.", DateTime.Now - startTime);
-					return true;
+					return false;
 				}
-				return false;
+				General_Typescript_BindLogCallback(Log, LogWarning, LogError);
+				General_Typescript_Bind(sInstance.Context);
+				Debug.LogFormat("Initialize typescript takes {0}.", DateTime.Now - startTime);
+
+				BinderUtility.Register();
 			}
 			return true;
 		}
@@ -142,7 +143,7 @@ namespace General.Typescript
 
 		static public string ExecuteScript(string filename)
 		{
-			string content = Files.ReadStringFromFile(filename);
+			string content = FileUtility.ReadStringFromFile(filename);
 			if (string.IsNullOrEmpty(content))
 			{
 				Debug.LogErrorFormat("Cannot find {0}, or it is empty!", filename);
@@ -170,14 +171,14 @@ namespace General.Typescript
 		static public Namespace DeclareNamespace(string name)
 		{
 			checkInstance();
-			return new Namespace(sInstance.Context, General_Typescript_DeclareNamespace(sInstance.Context, name));
+			return new Namespace(sInstance.Context, General_Typescript_DeclareNamespace(sInstance.Context, name), name, null);
 		}
 
 		static public Class<T> DeclareClass<T>(string name)
 		{
 			checkInstance();
 			Type baseType = typeof(T).BaseType;
-			return new Class<T>(sInstance.Context, Entry.General_Typescript_DeclareClass(sInstance.Context, name, null == baseType ? "" : baseType.FullName));
+			return Class.Create<T>(sInstance.Context, Entry.General_Typescript_DeclareClass(sInstance.Context, name, null == baseType ? "" : baseType.FullName), null);
 		}
 
 		static public Class<T> DeclareClass<T>()
@@ -192,18 +193,18 @@ namespace General.Typescript
 			return instance;
 		}
 
-		static public Function BindStaticFunction(string name, Action<General.Typescript.Parameters> function)
+		static public Function BindStaticFunction(string name, Action<Type, string, General.Typescript.Parameters> function)
 		{
 			checkInstance();
 			IntPtr handle = Entry.General_Typescript_BindStaticFunction(sInstance.Context, name);
-			return new StaticFunction(sInstance.Context, handle, name, function);
+			return new StaticFunction(sInstance.Context, handle, name, null, function);
 		}
 
-		static public Function BindStaticFunction<TValue>(string name, Func<General.Typescript.Parameters, TValue> function)
+		static public Function BindStaticFunction<TValue>(string name, Func<Type, string, General.Typescript.Parameters, TValue> function)
 		{
 			checkInstance();
 			IntPtr handle = Entry.General_Typescript_BindStaticFunction(sInstance.Context, name);
-			return new StaticFunction<TValue>(sInstance.Context, handle, name, function);
+			return new StaticFunction<TValue>(sInstance.Context, handle, name, null, function);
 		}
 
 		static internal int ReturnResultToJavascript(object instance)
@@ -273,41 +274,41 @@ namespace General.Typescript
 		static internal JSValueType GetType(IntPtr handle)
 		{
 			return null == sInstance ? JSValueType.Unknown : sInstance.getType(handle);
-        }
+		}
 
-        static internal Type GetObjectType(IntPtr handle)
-        {
-            checkInstance();
-            UnityEngine.Debug.LogError("No implemention!");
-            //#if UNITY_STANDALONE_WIN
-            //          string name = Marshal.PtrToStringAnsi(Entry.General_Typescript_GetObjectType(sInstance.Context, handle));
-            //#else
-            //            string name = Entry.General_Typescript_GetObjectType(sInstance.Context, handle);
-            //#endif
-            //          if (Type_Type == name)
-            //          {
-            //              return typeof(Type);
-            //          }
-            //          if (CustomType.IsCustomType(name))
-            //          {
-            //              return new CustomType(name);
-            //          }
-            //          return Class.FindType(name);
-            return null;
-        }
+		static internal Type GetObjectType(IntPtr handle)
+		{
+			checkInstance();
+			UnityEngine.Debug.LogError("No implemention!");
+			//#if UNITY_STANDALONE_WIN
+			//          string name = Marshal.PtrToStringAnsi(Entry.General_Typescript_GetObjectType(sInstance.Context, handle));
+			//#else
+			//            string name = Entry.General_Typescript_GetObjectType(sInstance.Context, handle);
+			//#endif
+			//          if (Type_Type == name)
+			//          {
+			//              return typeof(Type);
+			//          }
+			//          if (CustomType.IsCustomType(name))
+			//          {
+			//              return new CustomType(name);
+			//          }
+			//          return Class.FindType(name);
+			return null;
+		}
 
-        static public void AppendCustomSuperClass(Type type)
-        {
-            AppendCustomSuperClass(type.FullName);
-        }
+		static public void AppendCustomSuperClass(Type type)
+		{
+			AppendCustomSuperClass(type.FullName);
+		}
 
-        static public void AppendCustomSuperClass(string fullname)
-        {
-            checkInstance();
-            Entry.General_Typescript_AppendCustomSuperClassName(fullname);
-        }
+		static public void AppendCustomSuperClass(string fullname)
+		{
+			checkInstance();
+			Entry.General_Typescript_AppendCustomSuperClassName(fullname);
+		}
 
-        static public void ReleaseHandle(IntPtr handle)
+		static public void ReleaseHandle(IntPtr handle)
 		{
 			if (!sInstance) return;
 			Entry.General_Typescript_ReleaseHandle(sInstance.Context, handle);

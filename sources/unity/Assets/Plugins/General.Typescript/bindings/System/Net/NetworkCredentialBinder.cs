@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(System.Net.NetworkCredential);
 		}
 
-		static private System.Net.NetworkCredential GetCredential(System.Net.NetworkCredential instance, Parameters parameters)
+		static private System.Net.NetworkCredential GetCredential(System.Net.NetworkCredential instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Uri, System.String>())
 			{
@@ -72,42 +73,42 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_UserName(System.Net.NetworkCredential instance)
+		static private System.String get_UserName(System.Net.NetworkCredential instance, string name)
 		{
 			return instance.UserName;
 		}
 
-		static private void set_UserName(System.Net.NetworkCredential instance, System.String value)
+		static private void set_UserName(System.Net.NetworkCredential instance, string name, System.String value)
 		{
 			instance.UserName = value;
 		}
 
-		static private System.String get_Password(System.Net.NetworkCredential instance)
+		static private System.String get_Password(System.Net.NetworkCredential instance, string name)
 		{
 			return instance.Password;
 		}
 
-		static private void set_Password(System.Net.NetworkCredential instance, System.String value)
+		static private void set_Password(System.Net.NetworkCredential instance, string name, System.String value)
 		{
 			instance.Password = value;
 		}
 
-		static private System.Security.SecureString get_SecurePassword(System.Net.NetworkCredential instance)
+		static private System.Security.SecureString get_SecurePassword(System.Net.NetworkCredential instance, string name)
 		{
 			return instance.SecurePassword;
 		}
 
-		static private void set_SecurePassword(System.Net.NetworkCredential instance, System.Security.SecureString value)
+		static private void set_SecurePassword(System.Net.NetworkCredential instance, string name, System.Security.SecureString value)
 		{
 			instance.SecurePassword = value;
 		}
 
-		static private System.String get_Domain(System.Net.NetworkCredential instance)
+		static private System.String get_Domain(System.Net.NetworkCredential instance, string name)
 		{
 			return instance.Domain;
 		}
 
-		static private void set_Domain(System.Net.NetworkCredential instance, System.String value)
+		static private void set_Domain(System.Net.NetworkCredential instance, string name, System.String value)
 		{
 			instance.Domain = value;
 		}

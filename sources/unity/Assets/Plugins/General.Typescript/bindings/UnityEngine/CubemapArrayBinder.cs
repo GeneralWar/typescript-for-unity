@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -48,7 +49,7 @@ namespace General.Typescript
 			return default(UnityEngine.CubemapArray);
 		}
 
-		static private void Apply(UnityEngine.CubemapArray instance, Parameters parameters)
+		static private void Apply(UnityEngine.CubemapArray instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -72,7 +73,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CubemapArray.Apply has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Color[] GetPixels(UnityEngine.CubemapArray instance, Parameters parameters)
+		static private UnityEngine.Color[] GetPixels(UnityEngine.CubemapArray instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CubemapFace, System.Int32>())
 			{
@@ -98,7 +99,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Color32[] GetPixels32(UnityEngine.CubemapArray instance, Parameters parameters)
+		static private UnityEngine.Color32[] GetPixels32(UnityEngine.CubemapArray instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CubemapFace, System.Int32>())
 			{
@@ -124,7 +125,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetPixels(UnityEngine.CubemapArray instance, Parameters parameters)
+		static private void SetPixels(UnityEngine.CubemapArray instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color[], UnityEngine.CubemapFace, System.Int32>())
 			{
@@ -151,7 +152,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPixels32(UnityEngine.CubemapArray instance, Parameters parameters)
+		static private void SetPixels32(UnityEngine.CubemapArray instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color32[], UnityEngine.CubemapFace, System.Int32>())
 			{
@@ -178,17 +179,17 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_cubemapCount(UnityEngine.CubemapArray instance)
+		static private System.Int32 get_cubemapCount(UnityEngine.CubemapArray instance, string name)
 		{
 			return instance.cubemapCount;
 		}
 
-		static private UnityEngine.TextureFormat get_format(UnityEngine.CubemapArray instance)
+		static private UnityEngine.TextureFormat get_format(UnityEngine.CubemapArray instance, string name)
 		{
 			return instance.format;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.CubemapArray instance)
+		static private System.Boolean get_isReadable(UnityEngine.CubemapArray instance, string name)
 		{
 			return instance.isReadable;
 		}

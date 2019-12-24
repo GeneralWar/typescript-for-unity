@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindStaticProperty("lastReport", get_lastReport, null);
 		}
 
-		static private void RemoveAll(Parameters parameters)
+		static private void RemoveAll(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -28,7 +29,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CrashReport.RemoveAll has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Remove(UnityEngine.CrashReport instance, Parameters parameters)
+		static private void Remove(UnityEngine.CrashReport instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -42,12 +43,12 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CrashReport.Remove has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.CrashReport[] get_reports()
+		static private UnityEngine.CrashReport[] get_reports(Type type, string name)
 		{
 			return UnityEngine.CrashReport.reports;
 		}
 
-		static private UnityEngine.CrashReport get_lastReport()
+		static private UnityEngine.CrashReport get_lastReport(Type type, string name)
 		{
 			return UnityEngine.CrashReport.lastReport;
 		}

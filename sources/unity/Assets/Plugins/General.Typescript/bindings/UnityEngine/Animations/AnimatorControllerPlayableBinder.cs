@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			self.BindStaticProperty("Null", get_Null, null);
 		}
 
-		static private UnityEngine.Animations.AnimatorControllerPlayable Create(Parameters parameters)
+		static private UnityEngine.Animations.AnimatorControllerPlayable Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableGraph, UnityEngine.RuntimeAnimatorController>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.AnimatorControllerPlayable);
 		}
 
-		static private void CrossFade(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void CrossFade(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -113,7 +114,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CrossFadeInFixedTime(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void CrossFadeInFixedTime(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -160,7 +161,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Equals(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.AnimatorControllerPlayable>())
 			{
@@ -182,7 +183,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AnimatorTransitionInfo GetAnimatorTransitionInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorTransitionInfo GetAnimatorTransitionInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -204,7 +205,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorTransitionInfo);
 		}
 
-		static private System.Boolean GetBool(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Boolean GetBool(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -230,7 +231,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AnimatorClipInfo[] GetCurrentAnimatorClipInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorClipInfo[] GetCurrentAnimatorClipInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -252,7 +253,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetCurrentAnimatorClipInfoCount(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetCurrentAnimatorClipInfoCount(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -274,7 +275,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.AnimatorStateInfo GetCurrentAnimatorStateInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorStateInfo GetCurrentAnimatorStateInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -296,7 +297,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorStateInfo);
 		}
 
-		static private System.Single GetFloat(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Single GetFloat(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -322,7 +323,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -337,7 +338,7 @@ namespace General.Typescript
 			return default(UnityEngine.Playables.PlayableHandle);
 		}
 
-		static private System.Int32 GetInteger(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetInteger(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -363,7 +364,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetLayerCount(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetLayerCount(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -378,7 +379,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetLayerIndex(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetLayerIndex(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -400,7 +401,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String GetLayerName(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.String GetLayerName(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -422,7 +423,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single GetLayerWeight(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Single GetLayerWeight(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -444,7 +445,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.AnimatorClipInfo[] GetNextAnimatorClipInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorClipInfo[] GetNextAnimatorClipInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -466,7 +467,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetNextAnimatorClipInfoCount(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetNextAnimatorClipInfoCount(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -488,7 +489,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.AnimatorStateInfo GetNextAnimatorStateInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorStateInfo GetNextAnimatorStateInfo(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -510,7 +511,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorStateInfo);
 		}
 
-		static private UnityEngine.AnimatorControllerParameter GetParameter(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private UnityEngine.AnimatorControllerParameter GetParameter(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -532,7 +533,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetParameterCount(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Int32 GetParameterCount(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -547,7 +548,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean HasState(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Boolean HasState(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -569,7 +570,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsInTransition(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Boolean IsInTransition(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -591,7 +592,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsParameterControlledByCurve(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private System.Boolean IsParameterControlledByCurve(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -617,7 +618,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Play(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void Play(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -664,7 +665,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void PlayInFixedTime(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void PlayInFixedTime(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -711,7 +712,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ResetTrigger(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void ResetTrigger(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -738,7 +739,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBool(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetBool(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Boolean>())
 			{
@@ -765,7 +766,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloat(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetFloat(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -792,7 +793,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetHandle(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetHandle(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableHandle>())
 			{
@@ -814,7 +815,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInteger(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetInteger(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -841,7 +842,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLayerWeight(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetLayerWeight(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single>())
 			{
@@ -863,7 +864,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTrigger(UnityEngine.Animations.AnimatorControllerPlayable instance, Parameters parameters)
+		static private void SetTrigger(UnityEngine.Animations.AnimatorControllerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -890,7 +891,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Animations.AnimatorControllerPlayable get_Null()
+		static private UnityEngine.Animations.AnimatorControllerPlayable get_Null(Type type, string name)
 		{
 			return UnityEngine.Animations.AnimatorControllerPlayable.Null;
 		}

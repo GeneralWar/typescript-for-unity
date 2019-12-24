@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -124,7 +125,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animator);
 		}
 
-		static private System.Int32 StringToHash(Parameters parameters)
+		static private System.Int32 StringToHash(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void ApplyBuiltinRootMotion(UnityEngine.Animator instance, Parameters parameters)
+		static private void ApplyBuiltinRootMotion(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -160,7 +161,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.ApplyBuiltinRootMotion has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CrossFade(UnityEngine.Animator instance, Parameters parameters)
+		static private void CrossFade(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -217,7 +218,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void CrossFadeInFixedTime(UnityEngine.Animator instance, Parameters parameters)
+		static private void CrossFadeInFixedTime(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -274,7 +275,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.AnimatorTransitionInfo GetAnimatorTransitionInfo(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorTransitionInfo GetAnimatorTransitionInfo(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -296,7 +297,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorTransitionInfo);
 		}
 
-		static private System.Object GetBehaviours(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Object GetBehaviours(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -318,7 +319,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Transform GetBoneTransform(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.Transform GetBoneTransform(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.HumanBodyBones>())
 			{
@@ -340,7 +341,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean GetBool(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Boolean GetBool(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -366,7 +367,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AnimatorClipInfo[] GetCurrentAnimatorClipInfo(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorClipInfo[] GetCurrentAnimatorClipInfo(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -388,7 +389,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetCurrentAnimatorClipInfoCount(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Int32 GetCurrentAnimatorClipInfoCount(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -410,7 +411,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.AnimatorStateInfo GetCurrentAnimatorStateInfo(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorStateInfo GetCurrentAnimatorStateInfo(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -432,7 +433,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorStateInfo);
 		}
 
-		static private System.Single GetFloat(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Single GetFloat(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -458,7 +459,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 GetIKHintPosition(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetIKHintPosition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKHint>())
 			{
@@ -480,7 +481,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single GetIKHintPositionWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Single GetIKHintPositionWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKHint>())
 			{
@@ -502,7 +503,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector3 GetIKPosition(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetIKPosition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal>())
 			{
@@ -524,7 +525,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Single GetIKPositionWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Single GetIKPositionWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal>())
 			{
@@ -546,7 +547,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Quaternion GetIKRotation(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.Quaternion GetIKRotation(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal>())
 			{
@@ -568,7 +569,7 @@ namespace General.Typescript
 			return default(UnityEngine.Quaternion);
 		}
 
-		static private System.Single GetIKRotationWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Single GetIKRotationWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal>())
 			{
@@ -590,7 +591,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 GetInteger(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Int32 GetInteger(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -616,7 +617,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 GetLayerIndex(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Int32 GetLayerIndex(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -638,7 +639,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String GetLayerName(UnityEngine.Animator instance, Parameters parameters)
+		static private System.String GetLayerName(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -660,7 +661,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single GetLayerWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Single GetLayerWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -682,7 +683,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.AnimatorClipInfo[] GetNextAnimatorClipInfo(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorClipInfo[] GetNextAnimatorClipInfo(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -704,7 +705,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetNextAnimatorClipInfoCount(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Int32 GetNextAnimatorClipInfoCount(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -726,7 +727,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.AnimatorStateInfo GetNextAnimatorStateInfo(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorStateInfo GetNextAnimatorStateInfo(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -748,7 +749,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorStateInfo);
 		}
 
-		static private UnityEngine.AnimatorControllerParameter GetParameter(UnityEngine.Animator instance, Parameters parameters)
+		static private UnityEngine.AnimatorControllerParameter GetParameter(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -770,7 +771,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean HasState(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Boolean HasState(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -792,7 +793,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void InterruptMatchTarget(UnityEngine.Animator instance, Parameters parameters)
+		static private void InterruptMatchTarget(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -811,7 +812,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.InterruptMatchTarget has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean IsInTransition(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Boolean IsInTransition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -833,7 +834,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsParameterControlledByCurve(UnityEngine.Animator instance, Parameters parameters)
+		static private System.Boolean IsParameterControlledByCurve(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -859,7 +860,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void MatchTarget(UnityEngine.Animator instance, Parameters parameters)
+		static private void MatchTarget(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.AvatarTarget, UnityEngine.MatchTargetWeightMask, System.Single>())
 			{
@@ -886,7 +887,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Play(UnityEngine.Animator instance, Parameters parameters)
+		static private void Play(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -933,7 +934,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void PlayInFixedTime(UnityEngine.Animator instance, Parameters parameters)
+		static private void PlayInFixedTime(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -980,7 +981,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rebind(UnityEngine.Animator instance, Parameters parameters)
+		static private void Rebind(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -994,7 +995,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.Rebind has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetTrigger(UnityEngine.Animator instance, Parameters parameters)
+		static private void ResetTrigger(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -1021,7 +1022,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBoneLocalRotation(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetBoneLocalRotation(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.HumanBodyBones, UnityEngine.Quaternion>())
 			{
@@ -1043,7 +1044,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetBool(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetBool(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Boolean>())
 			{
@@ -1070,7 +1071,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetFloat(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetFloat(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -1107,7 +1108,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKHintPosition(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKHintPosition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKHint, UnityEngine.Vector3>())
 			{
@@ -1129,7 +1130,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKHintPositionWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKHintPositionWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKHint, System.Single>())
 			{
@@ -1151,7 +1152,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKPosition(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKPosition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal, UnityEngine.Vector3>())
 			{
@@ -1173,7 +1174,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKPositionWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKPositionWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal, System.Single>())
 			{
@@ -1195,7 +1196,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKRotation(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKRotation(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal, UnityEngine.Quaternion>())
 			{
@@ -1217,7 +1218,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetIKRotationWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetIKRotationWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarIKGoal, System.Single>())
 			{
@@ -1239,7 +1240,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInteger(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetInteger(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -1266,7 +1267,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLayerWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetLayerWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single>())
 			{
@@ -1288,7 +1289,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLookAtPosition(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetLookAtPosition(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -1310,7 +1311,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLookAtWeight(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetLookAtWeight(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -1352,7 +1353,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTarget(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetTarget(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.AvatarTarget, System.Single>())
 			{
@@ -1374,7 +1375,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTrigger(UnityEngine.Animator instance, Parameters parameters)
+		static private void SetTrigger(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -1401,7 +1402,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void StartPlayback(UnityEngine.Animator instance, Parameters parameters)
+		static private void StartPlayback(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -1415,7 +1416,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.StartPlayback has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void StartRecording(UnityEngine.Animator instance, Parameters parameters)
+		static private void StartRecording(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -1437,7 +1438,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void StopPlayback(UnityEngine.Animator instance, Parameters parameters)
+		static private void StopPlayback(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -1451,7 +1452,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.StopPlayback has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void StopRecording(UnityEngine.Animator instance, Parameters parameters)
+		static private void StopRecording(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -1465,7 +1466,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.StopRecording has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Update(UnityEngine.Animator instance, Parameters parameters)
+		static private void Update(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -1487,7 +1488,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void WriteDefaultValues(UnityEngine.Animator instance, Parameters parameters)
+		static private void WriteDefaultValues(UnityEngine.Animator instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -1501,312 +1502,312 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Animator.WriteDefaultValues has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_isOptimizable(UnityEngine.Animator instance)
+		static private System.Boolean get_isOptimizable(UnityEngine.Animator instance, string name)
 		{
 			return instance.isOptimizable;
 		}
 
-		static private UnityEngine.Vector3 get_pivotPosition(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_pivotPosition(UnityEngine.Animator instance, string name)
 		{
 			return instance.pivotPosition;
 		}
 
-		static private System.Boolean get_isMatchingTarget(UnityEngine.Animator instance)
+		static private System.Boolean get_isMatchingTarget(UnityEngine.Animator instance, string name)
 		{
 			return instance.isMatchingTarget;
 		}
 
-		static private System.Single get_speed(UnityEngine.Animator instance)
+		static private System.Single get_speed(UnityEngine.Animator instance, string name)
 		{
 			return instance.speed;
 		}
 
-		static private void set_speed(UnityEngine.Animator instance, System.Single value)
+		static private void set_speed(UnityEngine.Animator instance, string name, System.Single value)
 		{
 			instance.speed = value;
 		}
 
-		static private UnityEngine.Vector3 get_targetPosition(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_targetPosition(UnityEngine.Animator instance, string name)
 		{
 			return instance.targetPosition;
 		}
 
-		static private UnityEngine.Quaternion get_targetRotation(UnityEngine.Animator instance)
+		static private UnityEngine.Quaternion get_targetRotation(UnityEngine.Animator instance, string name)
 		{
 			return instance.targetRotation;
 		}
 
-		static private UnityEngine.AnimatorCullingMode get_cullingMode(UnityEngine.Animator instance)
+		static private UnityEngine.AnimatorCullingMode get_cullingMode(UnityEngine.Animator instance, string name)
 		{
 			return instance.cullingMode;
 		}
 
-		static private void set_cullingMode(UnityEngine.Animator instance, UnityEngine.AnimatorCullingMode value)
+		static private void set_cullingMode(UnityEngine.Animator instance, string name, UnityEngine.AnimatorCullingMode value)
 		{
 			instance.cullingMode = value;
 		}
 
-		static private System.Single get_playbackTime(UnityEngine.Animator instance)
+		static private System.Single get_playbackTime(UnityEngine.Animator instance, string name)
 		{
 			return instance.playbackTime;
 		}
 
-		static private void set_playbackTime(UnityEngine.Animator instance, System.Single value)
+		static private void set_playbackTime(UnityEngine.Animator instance, string name, System.Single value)
 		{
 			instance.playbackTime = value;
 		}
 
-		static private System.Single get_recorderStartTime(UnityEngine.Animator instance)
+		static private System.Single get_recorderStartTime(UnityEngine.Animator instance, string name)
 		{
 			return instance.recorderStartTime;
 		}
 
-		static private void set_recorderStartTime(UnityEngine.Animator instance, System.Single value)
+		static private void set_recorderStartTime(UnityEngine.Animator instance, string name, System.Single value)
 		{
 			instance.recorderStartTime = value;
 		}
 
-		static private System.Single get_pivotWeight(UnityEngine.Animator instance)
+		static private System.Single get_pivotWeight(UnityEngine.Animator instance, string name)
 		{
 			return instance.pivotWeight;
 		}
 
-		static private System.Single get_recorderStopTime(UnityEngine.Animator instance)
+		static private System.Single get_recorderStopTime(UnityEngine.Animator instance, string name)
 		{
 			return instance.recorderStopTime;
 		}
 
-		static private void set_recorderStopTime(UnityEngine.Animator instance, System.Single value)
+		static private void set_recorderStopTime(UnityEngine.Animator instance, string name, System.Single value)
 		{
 			instance.recorderStopTime = value;
 		}
 
-		static private UnityEngine.RuntimeAnimatorController get_runtimeAnimatorController(UnityEngine.Animator instance)
+		static private UnityEngine.RuntimeAnimatorController get_runtimeAnimatorController(UnityEngine.Animator instance, string name)
 		{
 			return instance.runtimeAnimatorController;
 		}
 
-		static private void set_runtimeAnimatorController(UnityEngine.Animator instance, UnityEngine.RuntimeAnimatorController value)
+		static private void set_runtimeAnimatorController(UnityEngine.Animator instance, string name, UnityEngine.RuntimeAnimatorController value)
 		{
 			instance.runtimeAnimatorController = value;
 		}
 
-		static private System.Boolean get_hasBoundPlayables(UnityEngine.Animator instance)
+		static private System.Boolean get_hasBoundPlayables(UnityEngine.Animator instance, string name)
 		{
 			return instance.hasBoundPlayables;
 		}
 
-		static private UnityEngine.Avatar get_avatar(UnityEngine.Animator instance)
+		static private UnityEngine.Avatar get_avatar(UnityEngine.Animator instance, string name)
 		{
 			return instance.avatar;
 		}
 
-		static private void set_avatar(UnityEngine.Animator instance, UnityEngine.Avatar value)
+		static private void set_avatar(UnityEngine.Animator instance, string name, UnityEngine.Avatar value)
 		{
 			instance.avatar = value;
 		}
 
-		static private UnityEngine.Playables.PlayableGraph get_playableGraph(UnityEngine.Animator instance)
+		static private UnityEngine.Playables.PlayableGraph get_playableGraph(UnityEngine.Animator instance, string name)
 		{
 			return instance.playableGraph;
 		}
 
-		static private System.Boolean get_layersAffectMassCenter(UnityEngine.Animator instance)
+		static private System.Boolean get_layersAffectMassCenter(UnityEngine.Animator instance, string name)
 		{
 			return instance.layersAffectMassCenter;
 		}
 
-		static private void set_layersAffectMassCenter(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_layersAffectMassCenter(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.layersAffectMassCenter = value;
 		}
 
-		static private System.Single get_leftFeetBottomHeight(UnityEngine.Animator instance)
+		static private System.Single get_leftFeetBottomHeight(UnityEngine.Animator instance, string name)
 		{
 			return instance.leftFeetBottomHeight;
 		}
 
-		static private System.Single get_rightFeetBottomHeight(UnityEngine.Animator instance)
+		static private System.Single get_rightFeetBottomHeight(UnityEngine.Animator instance, string name)
 		{
 			return instance.rightFeetBottomHeight;
 		}
 
-		static private System.Boolean get_logWarnings(UnityEngine.Animator instance)
+		static private System.Boolean get_logWarnings(UnityEngine.Animator instance, string name)
 		{
 			return instance.logWarnings;
 		}
 
-		static private void set_logWarnings(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_logWarnings(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.logWarnings = value;
 		}
 
-		static private UnityEngine.AnimatorRecorderMode get_recorderMode(UnityEngine.Animator instance)
+		static private UnityEngine.AnimatorRecorderMode get_recorderMode(UnityEngine.Animator instance, string name)
 		{
 			return instance.recorderMode;
 		}
 
-		static private System.Boolean get_fireEvents(UnityEngine.Animator instance)
+		static private System.Boolean get_fireEvents(UnityEngine.Animator instance, string name)
 		{
 			return instance.fireEvents;
 		}
 
-		static private void set_fireEvents(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_fireEvents(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.fireEvents = value;
 		}
 
-		static private System.Single get_feetPivotActive(UnityEngine.Animator instance)
+		static private System.Single get_feetPivotActive(UnityEngine.Animator instance, string name)
 		{
 			return instance.feetPivotActive;
 		}
 
-		static private void set_feetPivotActive(UnityEngine.Animator instance, System.Single value)
+		static private void set_feetPivotActive(UnityEngine.Animator instance, string name, System.Single value)
 		{
 			instance.feetPivotActive = value;
 		}
 
-		static private UnityEngine.AnimatorControllerParameter[] get_parameters(UnityEngine.Animator instance)
+		static private UnityEngine.AnimatorControllerParameter[] get_parameters(UnityEngine.Animator instance, string name)
 		{
 			return instance.parameters;
 		}
 
-		static private System.Boolean get_isHuman(UnityEngine.Animator instance)
+		static private System.Boolean get_isHuman(UnityEngine.Animator instance, string name)
 		{
 			return instance.isHuman;
 		}
 
-		static private System.Boolean get_hasRootMotion(UnityEngine.Animator instance)
+		static private System.Boolean get_hasRootMotion(UnityEngine.Animator instance, string name)
 		{
 			return instance.hasRootMotion;
 		}
 
-		static private System.Single get_humanScale(UnityEngine.Animator instance)
+		static private System.Single get_humanScale(UnityEngine.Animator instance, string name)
 		{
 			return instance.humanScale;
 		}
 
-		static private System.Boolean get_isInitialized(UnityEngine.Animator instance)
+		static private System.Boolean get_isInitialized(UnityEngine.Animator instance, string name)
 		{
 			return instance.isInitialized;
 		}
 
-		static private UnityEngine.Vector3 get_deltaPosition(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_deltaPosition(UnityEngine.Animator instance, string name)
 		{
 			return instance.deltaPosition;
 		}
 
-		static private UnityEngine.Quaternion get_deltaRotation(UnityEngine.Animator instance)
+		static private UnityEngine.Quaternion get_deltaRotation(UnityEngine.Animator instance, string name)
 		{
 			return instance.deltaRotation;
 		}
 
-		static private UnityEngine.Vector3 get_velocity(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_velocity(UnityEngine.Animator instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private UnityEngine.Vector3 get_angularVelocity(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_angularVelocity(UnityEngine.Animator instance, string name)
 		{
 			return instance.angularVelocity;
 		}
 
-		static private System.Int32 get_parameterCount(UnityEngine.Animator instance)
+		static private System.Int32 get_parameterCount(UnityEngine.Animator instance, string name)
 		{
 			return instance.parameterCount;
 		}
 
-		static private UnityEngine.Vector3 get_rootPosition(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_rootPosition(UnityEngine.Animator instance, string name)
 		{
 			return instance.rootPosition;
 		}
 
-		static private void set_rootPosition(UnityEngine.Animator instance, UnityEngine.Vector3 value)
+		static private void set_rootPosition(UnityEngine.Animator instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.rootPosition = value;
 		}
 
-		static private System.Boolean get_applyRootMotion(UnityEngine.Animator instance)
+		static private System.Boolean get_applyRootMotion(UnityEngine.Animator instance, string name)
 		{
 			return instance.applyRootMotion;
 		}
 
-		static private void set_applyRootMotion(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_applyRootMotion(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.applyRootMotion = value;
 		}
 
-		static private UnityEngine.AnimatorUpdateMode get_updateMode(UnityEngine.Animator instance)
+		static private UnityEngine.AnimatorUpdateMode get_updateMode(UnityEngine.Animator instance, string name)
 		{
 			return instance.updateMode;
 		}
 
-		static private void set_updateMode(UnityEngine.Animator instance, UnityEngine.AnimatorUpdateMode value)
+		static private void set_updateMode(UnityEngine.Animator instance, string name, UnityEngine.AnimatorUpdateMode value)
 		{
 			instance.updateMode = value;
 		}
 
-		static private System.Boolean get_hasTransformHierarchy(UnityEngine.Animator instance)
+		static private System.Boolean get_hasTransformHierarchy(UnityEngine.Animator instance, string name)
 		{
 			return instance.hasTransformHierarchy;
 		}
 
-		static private System.Single get_gravityWeight(UnityEngine.Animator instance)
+		static private System.Single get_gravityWeight(UnityEngine.Animator instance, string name)
 		{
 			return instance.gravityWeight;
 		}
 
-		static private UnityEngine.Vector3 get_bodyPosition(UnityEngine.Animator instance)
+		static private UnityEngine.Vector3 get_bodyPosition(UnityEngine.Animator instance, string name)
 		{
 			return instance.bodyPosition;
 		}
 
-		static private void set_bodyPosition(UnityEngine.Animator instance, UnityEngine.Vector3 value)
+		static private void set_bodyPosition(UnityEngine.Animator instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.bodyPosition = value;
 		}
 
-		static private UnityEngine.Quaternion get_bodyRotation(UnityEngine.Animator instance)
+		static private UnityEngine.Quaternion get_bodyRotation(UnityEngine.Animator instance, string name)
 		{
 			return instance.bodyRotation;
 		}
 
-		static private void set_bodyRotation(UnityEngine.Animator instance, UnityEngine.Quaternion value)
+		static private void set_bodyRotation(UnityEngine.Animator instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.bodyRotation = value;
 		}
 
-		static private System.Boolean get_stabilizeFeet(UnityEngine.Animator instance)
+		static private System.Boolean get_stabilizeFeet(UnityEngine.Animator instance, string name)
 		{
 			return instance.stabilizeFeet;
 		}
 
-		static private void set_stabilizeFeet(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_stabilizeFeet(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.stabilizeFeet = value;
 		}
 
-		static private System.Int32 get_layerCount(UnityEngine.Animator instance)
+		static private System.Int32 get_layerCount(UnityEngine.Animator instance, string name)
 		{
 			return instance.layerCount;
 		}
 
-		static private UnityEngine.Quaternion get_rootRotation(UnityEngine.Animator instance)
+		static private UnityEngine.Quaternion get_rootRotation(UnityEngine.Animator instance, string name)
 		{
 			return instance.rootRotation;
 		}
 
-		static private void set_rootRotation(UnityEngine.Animator instance, UnityEngine.Quaternion value)
+		static private void set_rootRotation(UnityEngine.Animator instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.rootRotation = value;
 		}
 
-		static private System.Boolean get_keepAnimatorControllerStateOnDisable(UnityEngine.Animator instance)
+		static private System.Boolean get_keepAnimatorControllerStateOnDisable(UnityEngine.Animator instance, string name)
 		{
 			return instance.keepAnimatorControllerStateOnDisable;
 		}
 
-		static private void set_keepAnimatorControllerStateOnDisable(UnityEngine.Animator instance, System.Boolean value)
+		static private void set_keepAnimatorControllerStateOnDisable(UnityEngine.Animator instance, string name, System.Boolean value)
 		{
 			instance.keepAnimatorControllerStateOnDisable = value;
 		}

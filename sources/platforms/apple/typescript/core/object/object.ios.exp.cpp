@@ -22,7 +22,7 @@ static JSValueRef call_function(JSContextRef context, void* handle, const char* 
     
     JSValueRef property = GetValueProperty(context, value, name);
     JSValueRef exception = nullptr;
-    JSObjectRef instance = JSValueToObject(context, property, &exception);
+    JSObjectRef instance = ValueToObject(context, property);
     if (exception)
     {
         LogError(JSValue_To_String(context, exception));
@@ -40,7 +40,7 @@ static JSValueRef call_function(JSContextRef context, void* handle, const char* 
                 parameters.push_back(Argument::Deserialize(context, start));
             }
         }
-        JSValueRef result = JSObjectCallAsFunction(context, instance, JSValueToObject(context, value, nullptr), (int)parameters.size(), parameters.data(), &exception);
+        JSValueRef result = JSObjectCallAsFunction(context, instance, ValueToObject(context, value), (int)parameters.size(), parameters.data(), &exception);
         if (exception)
         {
             LogError(JSValue_To_String(context, exception));
@@ -68,7 +68,7 @@ bool General_Typescript_Object_HasFunction(void* environment, void* handle, cons
     if (!IsValueValid(context, instance)) return false;
     JSValueRef property = GetValueProperty(context, instance, name);
     if(!IsValueValid(context, property)) return false;
-    return JSObjectIsFunction(context, JSValueToObject(context, property, nullptr));
+    return JSObjectIsFunction(context, ValueToObject(context, property));
 }
 
 int General_Typescript_Object_CallFunction(void* environment, void* handle, const char* name, unsigned char* arguments)

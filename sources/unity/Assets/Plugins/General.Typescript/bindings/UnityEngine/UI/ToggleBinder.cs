@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -18,7 +19,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("isOn", get_isOn, set_isOn);
 		}
 
-		static private void GraphicUpdateComplete(UnityEngine.UI.Toggle instance, Parameters parameters)
+		static private void GraphicUpdateComplete(UnityEngine.UI.Toggle instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -32,7 +33,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Toggle.GraphicUpdateComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LayoutComplete(UnityEngine.UI.Toggle instance, Parameters parameters)
+		static private void LayoutComplete(UnityEngine.UI.Toggle instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -46,7 +47,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Toggle.LayoutComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void OnPointerClick(UnityEngine.UI.Toggle instance, Parameters parameters)
+		static private void OnPointerClick(UnityEngine.UI.Toggle instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSubmit(UnityEngine.UI.Toggle instance, Parameters parameters)
+		static private void OnSubmit(UnityEngine.UI.Toggle instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{
@@ -90,7 +91,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rebuild(UnityEngine.UI.Toggle instance, Parameters parameters)
+		static private void Rebuild(UnityEngine.UI.Toggle instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.CanvasUpdate>())
 			{
@@ -112,22 +113,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.UI.ToggleGroup get_group(UnityEngine.UI.Toggle instance)
+		static private UnityEngine.UI.ToggleGroup get_group(UnityEngine.UI.Toggle instance, string name)
 		{
 			return instance.group;
 		}
 
-		static private void set_group(UnityEngine.UI.Toggle instance, UnityEngine.UI.ToggleGroup value)
+		static private void set_group(UnityEngine.UI.Toggle instance, string name, UnityEngine.UI.ToggleGroup value)
 		{
 			instance.group = value;
 		}
 
-		static private System.Boolean get_isOn(UnityEngine.UI.Toggle instance)
+		static private System.Boolean get_isOn(UnityEngine.UI.Toggle instance, string name)
 		{
 			return instance.isOn;
 		}
 
-		static private void set_isOn(UnityEngine.UI.Toggle instance, System.Boolean value)
+		static private void set_isOn(UnityEngine.UI.Toggle instance, string name, System.Boolean value)
 		{
 			instance.isOn = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.UnityEventQueueSystem);
 		}
 
-		static private System.String GenerateEventIdForPayload(Parameters parameters)
+		static private System.String GenerateEventIdForPayload(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IntPtr GetGlobalEventQueue(Parameters parameters)
+		static private System.IntPtr GetGlobalEventQueue(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -18,7 +19,7 @@ namespace General.Typescript
 			self.BindStaticFunction("WorldToScreenPoint", WorldToScreenPoint);
 		}
 
-		static private UnityEngine.Bounds CalculateRelativeRectTransformBounds(Parameters parameters)
+		static private UnityEngine.Bounds CalculateRelativeRectTransformBounds(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(UnityEngine.Bounds);
 		}
 
-		static private void FlipLayoutAxes(Parameters parameters)
+		static private void FlipLayoutAxes(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform, System.Boolean, System.Boolean>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void FlipLayoutOnAxis(Parameters parameters)
+		static private void FlipLayoutOnAxis(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform, System.Int32, System.Boolean, System.Boolean>())
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector2 PixelAdjustPoint(Parameters parameters)
+		static private UnityEngine.Vector2 PixelAdjustPoint(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2, UnityEngine.Transform, UnityEngine.Canvas>())
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private UnityEngine.Rect PixelAdjustRect(Parameters parameters)
+		static private UnityEngine.Rect PixelAdjustRect(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform, UnityEngine.Canvas>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private System.Boolean RectangleContainsScreenPoint(Parameters parameters)
+		static private System.Boolean RectangleContainsScreenPoint(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform, UnityEngine.Vector2>())
 			{
@@ -158,7 +159,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Ray ScreenPointToRay(Parameters parameters)
+		static private UnityEngine.Ray ScreenPointToRay(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera, UnityEngine.Vector2>())
 			{
@@ -180,7 +181,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ray);
 		}
 
-		static private UnityEngine.Vector2 WorldToScreenPoint(Parameters parameters)
+		static private UnityEngine.Vector2 WorldToScreenPoint(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera, UnityEngine.Vector3>())
 			{

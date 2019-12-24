@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rigidbody);
 		}
 
-		static private void AddExplosionForce(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddExplosionForce(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, UnityEngine.Vector3, System.Single>())
 			{
@@ -98,7 +99,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddForce(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddForce(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -135,7 +136,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddForceAtPosition(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddForceAtPosition(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -162,7 +163,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddRelativeForce(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddRelativeForce(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -199,7 +200,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddRelativeTorque(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddRelativeTorque(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -236,7 +237,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddTorque(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void AddTorque(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -273,7 +274,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3 ClosestPointOnBounds(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPointOnBounds(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -295,7 +296,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 GetPointVelocity(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetPointVelocity(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -317,7 +318,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 GetRelativePointVelocity(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetRelativePointVelocity(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -339,7 +340,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Boolean IsSleeping(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private System.Boolean IsSleeping(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -354,7 +355,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void MovePosition(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void MovePosition(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -376,7 +377,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MoveRotation(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void MoveRotation(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion>())
 			{
@@ -398,7 +399,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ResetCenterOfMass(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void ResetCenterOfMass(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -412,7 +413,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rigidbody.ResetCenterOfMass has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResetInertiaTensor(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void ResetInertiaTensor(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -426,7 +427,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rigidbody.ResetInertiaTensor has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetDensity(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void SetDensity(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -448,7 +449,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Sleep(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void Sleep(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -462,7 +463,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rigidbody.Sleep has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.RaycastHit[] SweepTestAll(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private UnityEngine.RaycastHit[] SweepTestAll(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -492,7 +493,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void WakeUp(UnityEngine.Rigidbody instance, Parameters parameters)
+		static private void WakeUp(UnityEngine.Rigidbody instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -506,227 +507,227 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rigidbody.WakeUp has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Vector3 get_velocity(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_velocity(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private void set_velocity(UnityEngine.Rigidbody instance, UnityEngine.Vector3 value)
+		static private void set_velocity(UnityEngine.Rigidbody instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.velocity = value;
 		}
 
-		static private System.Single get_sleepThreshold(UnityEngine.Rigidbody instance)
+		static private System.Single get_sleepThreshold(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.sleepThreshold;
 		}
 
-		static private void set_sleepThreshold(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_sleepThreshold(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.sleepThreshold = value;
 		}
 
-		static private System.Int32 get_solverIterations(UnityEngine.Rigidbody instance)
+		static private System.Int32 get_solverIterations(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.solverIterations;
 		}
 
-		static private void set_solverIterations(UnityEngine.Rigidbody instance, System.Int32 value)
+		static private void set_solverIterations(UnityEngine.Rigidbody instance, string name, System.Int32 value)
 		{
 			instance.solverIterations = value;
 		}
 
-		static private UnityEngine.RigidbodyInterpolation get_interpolation(UnityEngine.Rigidbody instance)
+		static private UnityEngine.RigidbodyInterpolation get_interpolation(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.interpolation;
 		}
 
-		static private void set_interpolation(UnityEngine.Rigidbody instance, UnityEngine.RigidbodyInterpolation value)
+		static private void set_interpolation(UnityEngine.Rigidbody instance, string name, UnityEngine.RigidbodyInterpolation value)
 		{
 			instance.interpolation = value;
 		}
 
-		static private UnityEngine.Quaternion get_rotation(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Quaternion get_rotation(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.rotation;
 		}
 
-		static private void set_rotation(UnityEngine.Rigidbody instance, UnityEngine.Quaternion value)
+		static private void set_rotation(UnityEngine.Rigidbody instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.rotation = value;
 		}
 
-		static private UnityEngine.Vector3 get_position(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_position(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.position;
 		}
 
-		static private void set_position(UnityEngine.Rigidbody instance, UnityEngine.Vector3 value)
+		static private void set_position(UnityEngine.Rigidbody instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.position = value;
 		}
 
-		static private System.Boolean get_detectCollisions(UnityEngine.Rigidbody instance)
+		static private System.Boolean get_detectCollisions(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.detectCollisions;
 		}
 
-		static private void set_detectCollisions(UnityEngine.Rigidbody instance, System.Boolean value)
+		static private void set_detectCollisions(UnityEngine.Rigidbody instance, string name, System.Boolean value)
 		{
 			instance.detectCollisions = value;
 		}
 
-		static private UnityEngine.Vector3 get_inertiaTensor(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_inertiaTensor(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.inertiaTensor;
 		}
 
-		static private void set_inertiaTensor(UnityEngine.Rigidbody instance, UnityEngine.Vector3 value)
+		static private void set_inertiaTensor(UnityEngine.Rigidbody instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.inertiaTensor = value;
 		}
 
-		static private UnityEngine.Quaternion get_inertiaTensorRotation(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Quaternion get_inertiaTensorRotation(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.inertiaTensorRotation;
 		}
 
-		static private void set_inertiaTensorRotation(UnityEngine.Rigidbody instance, UnityEngine.Quaternion value)
+		static private void set_inertiaTensorRotation(UnityEngine.Rigidbody instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.inertiaTensorRotation = value;
 		}
 
-		static private UnityEngine.Vector3 get_worldCenterOfMass(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_worldCenterOfMass(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.worldCenterOfMass;
 		}
 
-		static private System.Single get_maxAngularVelocity(UnityEngine.Rigidbody instance)
+		static private System.Single get_maxAngularVelocity(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.maxAngularVelocity;
 		}
 
-		static private void set_maxAngularVelocity(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_maxAngularVelocity(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.maxAngularVelocity = value;
 		}
 
-		static private UnityEngine.Vector3 get_centerOfMass(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_centerOfMass(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.centerOfMass;
 		}
 
-		static private void set_centerOfMass(UnityEngine.Rigidbody instance, UnityEngine.Vector3 value)
+		static private void set_centerOfMass(UnityEngine.Rigidbody instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.centerOfMass = value;
 		}
 
-		static private UnityEngine.RigidbodyConstraints get_constraints(UnityEngine.Rigidbody instance)
+		static private UnityEngine.RigidbodyConstraints get_constraints(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.constraints;
 		}
 
-		static private void set_constraints(UnityEngine.Rigidbody instance, UnityEngine.RigidbodyConstraints value)
+		static private void set_constraints(UnityEngine.Rigidbody instance, string name, UnityEngine.RigidbodyConstraints value)
 		{
 			instance.constraints = value;
 		}
 
-		static private System.Boolean get_freezeRotation(UnityEngine.Rigidbody instance)
+		static private System.Boolean get_freezeRotation(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.freezeRotation;
 		}
 
-		static private void set_freezeRotation(UnityEngine.Rigidbody instance, System.Boolean value)
+		static private void set_freezeRotation(UnityEngine.Rigidbody instance, string name, System.Boolean value)
 		{
 			instance.freezeRotation = value;
 		}
 
-		static private System.Boolean get_isKinematic(UnityEngine.Rigidbody instance)
+		static private System.Boolean get_isKinematic(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.isKinematic;
 		}
 
-		static private void set_isKinematic(UnityEngine.Rigidbody instance, System.Boolean value)
+		static private void set_isKinematic(UnityEngine.Rigidbody instance, string name, System.Boolean value)
 		{
 			instance.isKinematic = value;
 		}
 
-		static private System.Single get_maxDepenetrationVelocity(UnityEngine.Rigidbody instance)
+		static private System.Single get_maxDepenetrationVelocity(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.maxDepenetrationVelocity;
 		}
 
-		static private void set_maxDepenetrationVelocity(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_maxDepenetrationVelocity(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.maxDepenetrationVelocity = value;
 		}
 
-		static private System.Boolean get_useGravity(UnityEngine.Rigidbody instance)
+		static private System.Boolean get_useGravity(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.useGravity;
 		}
 
-		static private void set_useGravity(UnityEngine.Rigidbody instance, System.Boolean value)
+		static private void set_useGravity(UnityEngine.Rigidbody instance, string name, System.Boolean value)
 		{
 			instance.useGravity = value;
 		}
 
-		static private System.Single get_mass(UnityEngine.Rigidbody instance)
+		static private System.Single get_mass(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.mass;
 		}
 
-		static private void set_mass(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_mass(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.mass = value;
 		}
 
-		static private System.Single get_angularDrag(UnityEngine.Rigidbody instance)
+		static private System.Single get_angularDrag(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.angularDrag;
 		}
 
-		static private void set_angularDrag(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_angularDrag(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.angularDrag = value;
 		}
 
-		static private System.Single get_drag(UnityEngine.Rigidbody instance)
+		static private System.Single get_drag(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.drag;
 		}
 
-		static private void set_drag(UnityEngine.Rigidbody instance, System.Single value)
+		static private void set_drag(UnityEngine.Rigidbody instance, string name, System.Single value)
 		{
 			instance.drag = value;
 		}
 
-		static private UnityEngine.Vector3 get_angularVelocity(UnityEngine.Rigidbody instance)
+		static private UnityEngine.Vector3 get_angularVelocity(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.angularVelocity;
 		}
 
-		static private void set_angularVelocity(UnityEngine.Rigidbody instance, UnityEngine.Vector3 value)
+		static private void set_angularVelocity(UnityEngine.Rigidbody instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.angularVelocity = value;
 		}
 
-		static private UnityEngine.CollisionDetectionMode get_collisionDetectionMode(UnityEngine.Rigidbody instance)
+		static private UnityEngine.CollisionDetectionMode get_collisionDetectionMode(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.collisionDetectionMode;
 		}
 
-		static private void set_collisionDetectionMode(UnityEngine.Rigidbody instance, UnityEngine.CollisionDetectionMode value)
+		static private void set_collisionDetectionMode(UnityEngine.Rigidbody instance, string name, UnityEngine.CollisionDetectionMode value)
 		{
 			instance.collisionDetectionMode = value;
 		}
 
-		static private System.Int32 get_solverVelocityIterations(UnityEngine.Rigidbody instance)
+		static private System.Int32 get_solverVelocityIterations(UnityEngine.Rigidbody instance, string name)
 		{
 			return instance.solverVelocityIterations;
 		}
 
-		static private void set_solverVelocityIterations(UnityEngine.Rigidbody instance, System.Int32 value)
+		static private void set_solverVelocityIterations(UnityEngine.Rigidbody instance, string name, System.Int32 value)
 		{
 			instance.solverVelocityIterations = value;
 		}

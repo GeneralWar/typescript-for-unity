@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,7 +29,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.SplashScreen);
 		}
 
-		static private void Begin(Parameters parameters)
+		static private void Begin(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -42,7 +43,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.SplashScreen.Begin has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Draw(Parameters parameters)
+		static private void Draw(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -56,7 +57,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Rendering.SplashScreen.Draw has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_isFinished()
+		static private System.Boolean get_isFinished(Type type, string name)
 		{
 			return UnityEngine.Rendering.SplashScreen.isFinished;
 		}

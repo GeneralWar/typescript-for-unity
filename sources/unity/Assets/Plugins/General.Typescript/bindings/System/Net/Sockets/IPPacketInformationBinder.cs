@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("Interface", get_Interface, null);
 		}
 
-		static private System.Boolean Equals(System.Net.Sockets.IPPacketInformation instance, Parameters parameters)
+		static private System.Boolean Equals(System.Net.Sockets.IPPacketInformation instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(System.Net.Sockets.IPPacketInformation instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Net.Sockets.IPPacketInformation instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -51,12 +52,12 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Net.IPAddress get_Address(System.Net.Sockets.IPPacketInformation instance)
+		static private System.Net.IPAddress get_Address(System.Net.Sockets.IPPacketInformation instance, string name)
 		{
 			return instance.Address;
 		}
 
-		static private System.Int32 get_Interface(System.Net.Sockets.IPPacketInformation instance)
+		static private System.Int32 get_Interface(System.Net.Sockets.IPPacketInformation instance, string name)
 		{
 			return instance.Interface;
 		}

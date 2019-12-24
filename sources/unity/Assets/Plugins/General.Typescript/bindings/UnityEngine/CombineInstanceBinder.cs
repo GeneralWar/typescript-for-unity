@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,52 +16,52 @@ namespace General.Typescript
 			self.BindInstanceProperty("realtimeLightmapScaleOffset", get_realtimeLightmapScaleOffset, set_realtimeLightmapScaleOffset);
 		}
 
-		static private UnityEngine.Mesh get_mesh(UnityEngine.CombineInstance instance)
+		static private UnityEngine.Mesh get_mesh(UnityEngine.CombineInstance instance, string name)
 		{
 			return instance.mesh;
 		}
 
-		static private void set_mesh(UnityEngine.CombineInstance instance, UnityEngine.Mesh value)
+		static private void set_mesh(UnityEngine.CombineInstance instance, string name, UnityEngine.Mesh value)
 		{
 			instance.mesh = value;
 		}
 
-		static private System.Int32 get_subMeshIndex(UnityEngine.CombineInstance instance)
+		static private System.Int32 get_subMeshIndex(UnityEngine.CombineInstance instance, string name)
 		{
 			return instance.subMeshIndex;
 		}
 
-		static private void set_subMeshIndex(UnityEngine.CombineInstance instance, System.Int32 value)
+		static private void set_subMeshIndex(UnityEngine.CombineInstance instance, string name, System.Int32 value)
 		{
 			instance.subMeshIndex = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_transform(UnityEngine.CombineInstance instance)
+		static private UnityEngine.Matrix4x4 get_transform(UnityEngine.CombineInstance instance, string name)
 		{
 			return instance.transform;
 		}
 
-		static private void set_transform(UnityEngine.CombineInstance instance, UnityEngine.Matrix4x4 value)
+		static private void set_transform(UnityEngine.CombineInstance instance, string name, UnityEngine.Matrix4x4 value)
 		{
 			instance.transform = value;
 		}
 
-		static private UnityEngine.Vector4 get_lightmapScaleOffset(UnityEngine.CombineInstance instance)
+		static private UnityEngine.Vector4 get_lightmapScaleOffset(UnityEngine.CombineInstance instance, string name)
 		{
 			return instance.lightmapScaleOffset;
 		}
 
-		static private void set_lightmapScaleOffset(UnityEngine.CombineInstance instance, UnityEngine.Vector4 value)
+		static private void set_lightmapScaleOffset(UnityEngine.CombineInstance instance, string name, UnityEngine.Vector4 value)
 		{
 			instance.lightmapScaleOffset = value;
 		}
 
-		static private UnityEngine.Vector4 get_realtimeLightmapScaleOffset(UnityEngine.CombineInstance instance)
+		static private UnityEngine.Vector4 get_realtimeLightmapScaleOffset(UnityEngine.CombineInstance instance, string name)
 		{
 			return instance.realtimeLightmapScaleOffset;
 		}
 
-		static private void set_realtimeLightmapScaleOffset(UnityEngine.CombineInstance instance, UnityEngine.Vector4 value)
+		static private void set_realtimeLightmapScaleOffset(UnityEngine.CombineInstance instance, string name, UnityEngine.Vector4 value)
 		{
 			instance.realtimeLightmapScaleOffset = value;
 		}

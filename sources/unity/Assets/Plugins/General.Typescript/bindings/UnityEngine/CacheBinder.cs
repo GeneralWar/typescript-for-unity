@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -22,7 +23,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("expirationDelay", get_expirationDelay, set_expirationDelay);
 		}
 
-		static private System.Boolean ClearCache(UnityEngine.Cache instance, Parameters parameters)
+		static private System.Boolean ClearCache(UnityEngine.Cache instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Cache instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Cache instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -67,7 +68,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Cache instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Cache instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -82,57 +83,57 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean get_valid(UnityEngine.Cache instance)
+		static private System.Boolean get_valid(UnityEngine.Cache instance, string name)
 		{
 			return instance.valid;
 		}
 
-		static private System.Boolean get_ready(UnityEngine.Cache instance)
+		static private System.Boolean get_ready(UnityEngine.Cache instance, string name)
 		{
 			return instance.ready;
 		}
 
-		static private System.Boolean get_readOnly(UnityEngine.Cache instance)
+		static private System.Boolean get_readOnly(UnityEngine.Cache instance, string name)
 		{
 			return instance.readOnly;
 		}
 
-		static private System.String get_path(UnityEngine.Cache instance)
+		static private System.String get_path(UnityEngine.Cache instance, string name)
 		{
 			return instance.path;
 		}
 
-		static private System.Int32 get_index(UnityEngine.Cache instance)
+		static private System.Int32 get_index(UnityEngine.Cache instance, string name)
 		{
 			return instance.index;
 		}
 
-		static private System.Int64 get_spaceFree(UnityEngine.Cache instance)
+		static private System.Int64 get_spaceFree(UnityEngine.Cache instance, string name)
 		{
 			return instance.spaceFree;
 		}
 
-		static private System.Int64 get_maximumAvailableStorageSpace(UnityEngine.Cache instance)
+		static private System.Int64 get_maximumAvailableStorageSpace(UnityEngine.Cache instance, string name)
 		{
 			return instance.maximumAvailableStorageSpace;
 		}
 
-		static private void set_maximumAvailableStorageSpace(UnityEngine.Cache instance, System.Int64 value)
+		static private void set_maximumAvailableStorageSpace(UnityEngine.Cache instance, string name, System.Int64 value)
 		{
 			instance.maximumAvailableStorageSpace = value;
 		}
 
-		static private System.Int64 get_spaceOccupied(UnityEngine.Cache instance)
+		static private System.Int64 get_spaceOccupied(UnityEngine.Cache instance, string name)
 		{
 			return instance.spaceOccupied;
 		}
 
-		static private System.Int32 get_expirationDelay(UnityEngine.Cache instance)
+		static private System.Int32 get_expirationDelay(UnityEngine.Cache instance, string name)
 		{
 			return instance.expirationDelay;
 		}
 
-		static private void set_expirationDelay(UnityEngine.Cache instance, System.Int32 value)
+		static private void set_expirationDelay(UnityEngine.Cache instance, string name, System.Int32 value)
 		{
 			instance.expirationDelay = value;
 		}

@@ -1,4 +1,5 @@
 #if !UNITY_STANDALONE
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -49,7 +50,7 @@ namespace General.Typescript
 			return default(UnityEngine.TouchScreenKeyboard);
 		}
 
-		static private UnityEngine.TouchScreenKeyboard Open(Parameters parameters)
+		static private UnityEngine.TouchScreenKeyboard Open(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -99,92 +100,92 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean get_isSupported()
+		static private System.Boolean get_isSupported(Type type, string name)
 		{
 			return UnityEngine.TouchScreenKeyboard.isSupported;
 		}
 
-		static private System.Boolean get_hideInput()
+		static private System.Boolean get_hideInput(Type type, string name)
 		{
 			return UnityEngine.TouchScreenKeyboard.hideInput;
 		}
 
-		static private void set_hideInput(System.Boolean value)
+		static private void set_hideInput(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.TouchScreenKeyboard.hideInput = value;
 		}
 
-		static private UnityEngine.Rect get_area()
+		static private UnityEngine.Rect get_area(Type type, string name)
 		{
 			return UnityEngine.TouchScreenKeyboard.area;
 		}
 
-		static private System.Boolean get_visible()
+		static private System.Boolean get_visible(Type type, string name)
 		{
 			return UnityEngine.TouchScreenKeyboard.visible;
 		}
 
-		static private System.String get_text(UnityEngine.TouchScreenKeyboard instance)
+		static private System.String get_text(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.text;
 		}
 
-		static private void set_text(UnityEngine.TouchScreenKeyboard instance, System.String value)
+		static private void set_text(UnityEngine.TouchScreenKeyboard instance, string name, System.String value)
 		{
 			instance.text = value;
 		}
 
-		static private System.Boolean get_active(UnityEngine.TouchScreenKeyboard instance)
+		static private System.Boolean get_active(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.active;
 		}
 
-		static private void set_active(UnityEngine.TouchScreenKeyboard instance, System.Boolean value)
+		static private void set_active(UnityEngine.TouchScreenKeyboard instance, string name, System.Boolean value)
 		{
 			instance.active = value;
 		}
 
-		static private System.Int32 get_characterLimit(UnityEngine.TouchScreenKeyboard instance)
+		static private System.Int32 get_characterLimit(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.characterLimit;
 		}
 
-		static private void set_characterLimit(UnityEngine.TouchScreenKeyboard instance, System.Int32 value)
+		static private void set_characterLimit(UnityEngine.TouchScreenKeyboard instance, string name, System.Int32 value)
 		{
 			instance.characterLimit = value;
 		}
 
-		static private System.Boolean get_canGetSelection(UnityEngine.TouchScreenKeyboard instance)
+		static private System.Boolean get_canGetSelection(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.canGetSelection;
 		}
 
-		static private System.Boolean get_canSetSelection(UnityEngine.TouchScreenKeyboard instance)
+		static private System.Boolean get_canSetSelection(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.canSetSelection;
 		}
 
-		static private UnityEngine.RangeInt get_selection(UnityEngine.TouchScreenKeyboard instance)
+		static private UnityEngine.RangeInt get_selection(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.selection;
 		}
 
-		static private void set_selection(UnityEngine.TouchScreenKeyboard instance, UnityEngine.RangeInt value)
+		static private void set_selection(UnityEngine.TouchScreenKeyboard instance, string name, UnityEngine.RangeInt value)
 		{
 			instance.selection = value;
 		}
 
-		static private UnityEngine.TouchScreenKeyboardType get_type(UnityEngine.TouchScreenKeyboard instance)
+		static private UnityEngine.TouchScreenKeyboardType get_type(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.type;
 		}
 
-		static private System.Int32 get_targetDisplay(UnityEngine.TouchScreenKeyboard instance)
+		static private System.Int32 get_targetDisplay(UnityEngine.TouchScreenKeyboard instance, string name)
 		{
 			return instance.targetDisplay;
 		}
 
-		static private void set_targetDisplay(UnityEngine.TouchScreenKeyboard instance, System.Int32 value)
+		static private void set_targetDisplay(UnityEngine.TouchScreenKeyboard instance, string name, System.Int32 value)
 		{
 			instance.targetDisplay = value;
 		}

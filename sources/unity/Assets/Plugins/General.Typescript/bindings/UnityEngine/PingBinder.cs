@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ping);
 		}
 
-		static private void DestroyPing(UnityEngine.Ping instance, Parameters parameters)
+		static private void DestroyPing(UnityEngine.Ping instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -50,17 +51,17 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Ping.DestroyPing has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_isDone(UnityEngine.Ping instance)
+		static private System.Boolean get_isDone(UnityEngine.Ping instance, string name)
 		{
 			return instance.isDone;
 		}
 
-		static private System.Int32 get_time(UnityEngine.Ping instance)
+		static private System.Int32 get_time(UnityEngine.Ping instance, string name)
 		{
 			return instance.time;
 		}
 
-		static private System.String get_ip(UnityEngine.Ping instance)
+		static private System.String get_ip(UnityEngine.Ping instance, string name)
 		{
 			return instance.ip;
 		}

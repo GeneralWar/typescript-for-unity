@@ -19,6 +19,8 @@ JSContextRef GetContext(void* environment);
 JSValueRef GetValue(Base* base);
 JSValueRef GetParentValue(Base* base);
 
+JSObjectRef ValueToObject(JSContextRef context, JSValueRef value);
+
 std::string JSValue_To_String(JSContextRef context, JSValueRef value);
 
 std::string JSString_To_String(JSStringRef value);

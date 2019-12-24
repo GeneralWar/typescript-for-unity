@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.GUIElement);
 		}
 
-		static private UnityEngine.Rect GetScreenRect(UnityEngine.GUIElement instance, Parameters parameters)
+		static private UnityEngine.Rect GetScreenRect(UnityEngine.GUIElement instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private System.Boolean HitTest(UnityEngine.GUIElement instance, Parameters parameters)
+		static private System.Boolean HitTest(UnityEngine.GUIElement instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{

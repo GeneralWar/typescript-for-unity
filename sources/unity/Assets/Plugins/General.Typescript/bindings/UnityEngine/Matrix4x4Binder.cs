@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private System.Single Determinant(Parameters parameters)
+		static private System.Single Determinant(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Matrix4x4 Frustum(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Frustum(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.FrustumPlanes>())
 			{
@@ -113,7 +114,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Inverse(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Inverse(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -135,7 +136,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 LookAt(Parameters parameters)
+		static private UnityEngine.Matrix4x4 LookAt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -157,7 +158,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Ortho(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Ortho(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -179,7 +180,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Perspective(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Perspective(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single, System.Single>())
 			{
@@ -201,7 +202,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Rotate(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Rotate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Quaternion>())
 			{
@@ -223,7 +224,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Scale(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Scale(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -245,7 +246,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Translate(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Translate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -267,7 +268,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 Transpose(Parameters parameters)
+		static private UnityEngine.Matrix4x4 Transpose(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -289,7 +290,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private UnityEngine.Matrix4x4 TRS(Parameters parameters)
+		static private UnityEngine.Matrix4x4 TRS(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Vector3>())
 			{
@@ -311,7 +312,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -337,7 +338,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Vector4 GetColumn(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Vector4 GetColumn(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -359,7 +360,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -374,7 +375,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Vector4 GetRow(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Vector4 GetRow(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -396,7 +397,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector4);
 		}
 
-		static private UnityEngine.Vector3 MultiplyPoint(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Vector3 MultiplyPoint(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -418,7 +419,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 MultiplyPoint3x4(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Vector3 MultiplyPoint3x4(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -440,7 +441,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 MultiplyVector(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Vector3 MultiplyVector(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -462,7 +463,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void SetColumn(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private void SetColumn(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4>())
 			{
@@ -484,7 +485,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRow(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private void SetRow(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector4>())
 			{
@@ -506,7 +507,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTRS(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private void SetTRS(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Quaternion, UnityEngine.Vector3>())
 			{
@@ -528,7 +529,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -547,7 +548,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Plane TransformPlane(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private UnityEngine.Plane TransformPlane(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Plane>())
 			{
@@ -569,7 +570,7 @@ namespace General.Typescript
 			return default(UnityEngine.Plane);
 		}
 
-		static private System.Boolean ValidTRS(UnityEngine.Matrix4x4 instance, Parameters parameters)
+		static private System.Boolean ValidTRS(UnityEngine.Matrix4x4 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -584,47 +585,47 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Matrix4x4 get_zero()
+		static private UnityEngine.Matrix4x4 get_zero(Type type, string name)
 		{
 			return UnityEngine.Matrix4x4.zero;
 		}
 
-		static private UnityEngine.Matrix4x4 get_identity()
+		static private UnityEngine.Matrix4x4 get_identity(Type type, string name)
 		{
 			return UnityEngine.Matrix4x4.identity;
 		}
 
-		static private UnityEngine.Quaternion get_rotation(UnityEngine.Matrix4x4 instance)
+		static private UnityEngine.Quaternion get_rotation(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.rotation;
 		}
 
-		static private UnityEngine.Vector3 get_lossyScale(UnityEngine.Matrix4x4 instance)
+		static private UnityEngine.Vector3 get_lossyScale(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.lossyScale;
 		}
 
-		static private System.Boolean get_isIdentity(UnityEngine.Matrix4x4 instance)
+		static private System.Boolean get_isIdentity(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.isIdentity;
 		}
 
-		static private System.Single get_determinant(UnityEngine.Matrix4x4 instance)
+		static private System.Single get_determinant(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.determinant;
 		}
 
-		static private UnityEngine.FrustumPlanes get_decomposeProjection(UnityEngine.Matrix4x4 instance)
+		static private UnityEngine.FrustumPlanes get_decomposeProjection(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.decomposeProjection;
 		}
 
-		static private UnityEngine.Matrix4x4 get_inverse(UnityEngine.Matrix4x4 instance)
+		static private UnityEngine.Matrix4x4 get_inverse(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.inverse;
 		}
 
-		static private UnityEngine.Matrix4x4 get_transpose(UnityEngine.Matrix4x4 instance)
+		static private UnityEngine.Matrix4x4 get_transpose(UnityEngine.Matrix4x4 instance, string name)
 		{
 			return instance.transpose;
 		}

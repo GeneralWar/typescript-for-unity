@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,42 +30,42 @@ namespace General.Typescript
 			return default(UnityEngine.UI.AnimationTriggers);
 		}
 
-		static private System.String get_normalTrigger(UnityEngine.UI.AnimationTriggers instance)
+		static private System.String get_normalTrigger(UnityEngine.UI.AnimationTriggers instance, string name)
 		{
 			return instance.normalTrigger;
 		}
 
-		static private void set_normalTrigger(UnityEngine.UI.AnimationTriggers instance, System.String value)
+		static private void set_normalTrigger(UnityEngine.UI.AnimationTriggers instance, string name, System.String value)
 		{
 			instance.normalTrigger = value;
 		}
 
-		static private System.String get_highlightedTrigger(UnityEngine.UI.AnimationTriggers instance)
+		static private System.String get_highlightedTrigger(UnityEngine.UI.AnimationTriggers instance, string name)
 		{
 			return instance.highlightedTrigger;
 		}
 
-		static private void set_highlightedTrigger(UnityEngine.UI.AnimationTriggers instance, System.String value)
+		static private void set_highlightedTrigger(UnityEngine.UI.AnimationTriggers instance, string name, System.String value)
 		{
 			instance.highlightedTrigger = value;
 		}
 
-		static private System.String get_pressedTrigger(UnityEngine.UI.AnimationTriggers instance)
+		static private System.String get_pressedTrigger(UnityEngine.UI.AnimationTriggers instance, string name)
 		{
 			return instance.pressedTrigger;
 		}
 
-		static private void set_pressedTrigger(UnityEngine.UI.AnimationTriggers instance, System.String value)
+		static private void set_pressedTrigger(UnityEngine.UI.AnimationTriggers instance, string name, System.String value)
 		{
 			instance.pressedTrigger = value;
 		}
 
-		static private System.String get_disabledTrigger(UnityEngine.UI.AnimationTriggers instance)
+		static private System.String get_disabledTrigger(UnityEngine.UI.AnimationTriggers instance, string name)
 		{
 			return instance.disabledTrigger;
 		}
 
-		static private void set_disabledTrigger(UnityEngine.UI.AnimationTriggers instance, System.String value)
+		static private void set_disabledTrigger(UnityEngine.UI.AnimationTriggers instance, string name, System.String value)
 		{
 			instance.disabledTrigger = value;
 		}

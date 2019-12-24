@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private UnityEngine.Vector2Int CeilToInt(Parameters parameters)
+		static private UnityEngine.Vector2Int CeilToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2>())
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private System.Single Distance(Parameters parameters)
+		static private System.Single Distance(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -99,7 +100,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private UnityEngine.Vector2Int FloorToInt(Parameters parameters)
+		static private UnityEngine.Vector2Int FloorToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2>())
 			{
@@ -121,7 +122,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private UnityEngine.Vector2Int Max(Parameters parameters)
+		static private UnityEngine.Vector2Int Max(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -143,7 +144,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private UnityEngine.Vector2Int Min(Parameters parameters)
+		static private UnityEngine.Vector2Int Min(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -165,7 +166,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private UnityEngine.Vector2Int RoundToInt(Parameters parameters)
+		static private UnityEngine.Vector2Int RoundToInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2>())
 			{
@@ -187,7 +188,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private UnityEngine.Vector2Int Scale(Parameters parameters)
+		static private UnityEngine.Vector2Int Scale(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -209,7 +210,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2Int);
 		}
 
-		static private void Clamp(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private void Clamp(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int, UnityEngine.Vector2Int>())
 			{
@@ -231,7 +232,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Equals(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -257,7 +258,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -272,7 +273,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void Scale(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private void Scale(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2Int>())
 			{
@@ -294,7 +295,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Set(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private void Set(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -316,7 +317,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.Vector2Int instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Vector2Int instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -331,62 +332,62 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector2Int get_zero()
+		static private UnityEngine.Vector2Int get_zero(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.zero;
 		}
 
-		static private UnityEngine.Vector2Int get_one()
+		static private UnityEngine.Vector2Int get_one(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.one;
 		}
 
-		static private UnityEngine.Vector2Int get_up()
+		static private UnityEngine.Vector2Int get_up(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.up;
 		}
 
-		static private UnityEngine.Vector2Int get_down()
+		static private UnityEngine.Vector2Int get_down(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.down;
 		}
 
-		static private UnityEngine.Vector2Int get_left()
+		static private UnityEngine.Vector2Int get_left(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.left;
 		}
 
-		static private UnityEngine.Vector2Int get_right()
+		static private UnityEngine.Vector2Int get_right(Type type, string name)
 		{
 			return UnityEngine.Vector2Int.right;
 		}
 
-		static private System.Int32 get_x(UnityEngine.Vector2Int instance)
+		static private System.Int32 get_x(UnityEngine.Vector2Int instance, string name)
 		{
 			return instance.x;
 		}
 
-		static private void set_x(UnityEngine.Vector2Int instance, System.Int32 value)
+		static private void set_x(UnityEngine.Vector2Int instance, string name, System.Int32 value)
 		{
 			instance.x = value;
 		}
 
-		static private System.Int32 get_y(UnityEngine.Vector2Int instance)
+		static private System.Int32 get_y(UnityEngine.Vector2Int instance, string name)
 		{
 			return instance.y;
 		}
 
-		static private void set_y(UnityEngine.Vector2Int instance, System.Int32 value)
+		static private void set_y(UnityEngine.Vector2Int instance, string name, System.Int32 value)
 		{
 			instance.y = value;
 		}
 
-		static private System.Single get_magnitude(UnityEngine.Vector2Int instance)
+		static private System.Single get_magnitude(UnityEngine.Vector2Int instance, string name)
 		{
 			return instance.magnitude;
 		}
 
-		static private System.Int32 get_sqrMagnitude(UnityEngine.Vector2Int instance)
+		static private System.Int32 get_sqrMagnitude(UnityEngine.Vector2Int instance, string name)
 		{
 			return instance.sqrMagnitude;
 		}

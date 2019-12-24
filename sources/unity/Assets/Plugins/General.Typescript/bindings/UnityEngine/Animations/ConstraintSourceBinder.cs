@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,22 +13,22 @@ namespace General.Typescript
 			self.BindInstanceProperty("weight", get_weight, set_weight);
 		}
 
-		static private UnityEngine.Transform get_sourceTransform(UnityEngine.Animations.ConstraintSource instance)
+		static private UnityEngine.Transform get_sourceTransform(UnityEngine.Animations.ConstraintSource instance, string name)
 		{
 			return instance.sourceTransform;
 		}
 
-		static private void set_sourceTransform(UnityEngine.Animations.ConstraintSource instance, UnityEngine.Transform value)
+		static private void set_sourceTransform(UnityEngine.Animations.ConstraintSource instance, string name, UnityEngine.Transform value)
 		{
 			instance.sourceTransform = value;
 		}
 
-		static private System.Single get_weight(UnityEngine.Animations.ConstraintSource instance)
+		static private System.Single get_weight(UnityEngine.Animations.ConstraintSource instance, string name)
 		{
 			return instance.weight;
 		}
 
-		static private void set_weight(UnityEngine.Animations.ConstraintSource instance, System.Single value)
+		static private void set_weight(UnityEngine.Animations.ConstraintSource instance, string name, System.Single value)
 		{
 			instance.weight = value;
 		}

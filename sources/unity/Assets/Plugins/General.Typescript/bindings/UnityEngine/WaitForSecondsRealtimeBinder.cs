@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,17 +35,17 @@ namespace General.Typescript
 			return default(UnityEngine.WaitForSecondsRealtime);
 		}
 
-		static private System.Single get_waitTime(UnityEngine.WaitForSecondsRealtime instance)
+		static private System.Single get_waitTime(UnityEngine.WaitForSecondsRealtime instance, string name)
 		{
 			return instance.waitTime;
 		}
 
-		static private void set_waitTime(UnityEngine.WaitForSecondsRealtime instance, System.Single value)
+		static private void set_waitTime(UnityEngine.WaitForSecondsRealtime instance, string name, System.Single value)
 		{
 			instance.waitTime = value;
 		}
 
-		static private System.Boolean get_keepWaiting(UnityEngine.WaitForSecondsRealtime instance)
+		static private System.Boolean get_keepWaiting(UnityEngine.WaitForSecondsRealtime instance, string name)
 		{
 			return instance.keepWaiting;
 		}

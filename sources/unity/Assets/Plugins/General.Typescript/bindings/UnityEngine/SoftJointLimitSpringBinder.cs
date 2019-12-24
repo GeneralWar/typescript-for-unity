@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,22 +13,22 @@ namespace General.Typescript
 			self.BindInstanceProperty("damper", get_damper, set_damper);
 		}
 
-		static private System.Single get_spring(UnityEngine.SoftJointLimitSpring instance)
+		static private System.Single get_spring(UnityEngine.SoftJointLimitSpring instance, string name)
 		{
 			return instance.spring;
 		}
 
-		static private void set_spring(UnityEngine.SoftJointLimitSpring instance, System.Single value)
+		static private void set_spring(UnityEngine.SoftJointLimitSpring instance, string name, System.Single value)
 		{
 			instance.spring = value;
 		}
 
-		static private System.Single get_damper(UnityEngine.SoftJointLimitSpring instance)
+		static private System.Single get_damper(UnityEngine.SoftJointLimitSpring instance, string name)
 		{
 			return instance.damper;
 		}
 
-		static private void set_damper(UnityEngine.SoftJointLimitSpring instance, System.Single value)
+		static private void set_damper(UnityEngine.SoftJointLimitSpring instance, string name, System.Single value)
 		{
 			instance.damper = value;
 		}

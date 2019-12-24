@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("disabledSprite", get_disabledSprite, set_disabledSprite);
 		}
 
-		static private System.Boolean Equals(UnityEngine.UI.SpriteState instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.UI.SpriteState instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.SpriteState>())
 			{
@@ -36,32 +37,32 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Sprite get_highlightedSprite(UnityEngine.UI.SpriteState instance)
+		static private UnityEngine.Sprite get_highlightedSprite(UnityEngine.UI.SpriteState instance, string name)
 		{
 			return instance.highlightedSprite;
 		}
 
-		static private void set_highlightedSprite(UnityEngine.UI.SpriteState instance, UnityEngine.Sprite value)
+		static private void set_highlightedSprite(UnityEngine.UI.SpriteState instance, string name, UnityEngine.Sprite value)
 		{
 			instance.highlightedSprite = value;
 		}
 
-		static private UnityEngine.Sprite get_pressedSprite(UnityEngine.UI.SpriteState instance)
+		static private UnityEngine.Sprite get_pressedSprite(UnityEngine.UI.SpriteState instance, string name)
 		{
 			return instance.pressedSprite;
 		}
 
-		static private void set_pressedSprite(UnityEngine.UI.SpriteState instance, UnityEngine.Sprite value)
+		static private void set_pressedSprite(UnityEngine.UI.SpriteState instance, string name, UnityEngine.Sprite value)
 		{
 			instance.pressedSprite = value;
 		}
 
-		static private UnityEngine.Sprite get_disabledSprite(UnityEngine.UI.SpriteState instance)
+		static private UnityEngine.Sprite get_disabledSprite(UnityEngine.UI.SpriteState instance, string name)
 		{
 			return instance.disabledSprite;
 		}
 
-		static private void set_disabledSprite(UnityEngine.UI.SpriteState instance, UnityEngine.Sprite value)
+		static private void set_disabledSprite(UnityEngine.UI.SpriteState instance, string name, UnityEngine.Sprite value)
 		{
 			instance.disabledSprite = value;
 		}

@@ -5,8 +5,10 @@ namespace General.Typescript
 {
     public abstract class Property : Base
     {
-        internal Property(IntPtr context, string name) : base(context, name) { }
-        internal Property(IntPtr context, IntPtr handle, string name) : base(context, handle, name) { }
+		internal Type DeclaredType { get { return (mParent as Class)?.Type ?? null; } }
+
+        internal Property(IntPtr context, string name, Base parent) : base(context, name, parent) { }
+        internal Property(IntPtr context, IntPtr handle, string name, Base parent) : base(context, handle, name, parent) { }
     }
 
     public delegate int StaticPropertyGetter(IntPtr handler);
@@ -14,7 +16,7 @@ namespace General.Typescript
 
     public abstract class StaticProperty : Property
     {
-        internal StaticProperty(IntPtr context, IntPtr handle, string name) : base(context, handle, name) { }
+        internal StaticProperty(IntPtr context, IntPtr handle, string name, Base parent) : base(context, handle, name, parent) { }
 
         internal int GetValue()
         {
@@ -34,10 +36,10 @@ namespace General.Typescript
 
     public class StaticProperty<TValue> : StaticProperty
     {
-        protected Func<TValue> mGetter = null;
-        protected Action<TValue> mSetter = null;
+        protected Func<Type, string, TValue> mGetter = null;
+        protected Action<Type, string, TValue> mSetter = null;
 
-        internal StaticProperty(IntPtr context, IntPtr handle, string name, Func<TValue> getter, Action<TValue> setter) : base(context, handle, name)
+        internal StaticProperty(IntPtr context, IntPtr handle, string name, Base parent, Func<Type, string, TValue> getter, Action<Type, string, TValue> setter) : base(context, handle, name, parent)
         {
             mGetter = getter;
             mSetter = setter;
@@ -50,7 +52,7 @@ namespace General.Typescript
                 UnityEngine.Debug.LogWarningFormat("There is no getter for property {0}", this.Name);
                 return Entry.ReturnResultToJavascript(default(TValue));
             }
-            return Entry.ReturnResultToJavascript(mGetter.Invoke());
+            return Entry.ReturnResultToJavascript(mGetter.Invoke(this.DeclaredType, mName));
         }
 
         protected override void setValue(Parameter value)
@@ -60,7 +62,7 @@ namespace General.Typescript
                 UnityEngine.Debug.LogWarningFormat("There is no setter for property {0}", this.Name);
                 return;
             }
-            mSetter?.Invoke(value.ToObject<TValue>());
+            mSetter?.Invoke(this.DeclaredType, mName, value.ToObject<TValue>());
         }
 
         internal override void Bind(IntPtr instance)
@@ -74,7 +76,7 @@ namespace General.Typescript
 		private bool mHasGetter = false;
 		private bool mHasSetter = false;
 
-        internal InstanceProperty(IntPtr context, string name, bool hasGetter, bool hasSetter) : base(context, name)
+        internal InstanceProperty(IntPtr context, string name, Base parent, bool hasGetter, bool hasSetter) : base(context, name, parent)
 		{
 			mHasGetter = hasGetter;
 			mHasSetter = hasSetter;
@@ -109,10 +111,10 @@ namespace General.Typescript
 
 	public class InstanceProperty<TOwner, TValue> : InstanceProperty
 	{
-		protected Func<TOwner, TValue> mGetter = null;
-        protected Action<TOwner, TValue> mSetter = null;
+		protected Func<TOwner, string, TValue> mGetter = null;
+        protected Action<TOwner, string, TValue> mSetter = null;
 
-		internal InstanceProperty(IntPtr context, string name, Func<TOwner, TValue> getter, Action<TOwner, TValue> setter) : base(context, name, null != getter, null != setter)
+		internal InstanceProperty(IntPtr context, string name, Base parent, Func<TOwner, string, TValue> getter, Action<TOwner, string, TValue> setter) : base(context, name, parent, null != getter, null != setter)
 		{
 			mGetter = getter;
 			mSetter = setter;
@@ -125,7 +127,7 @@ namespace General.Typescript
                 UnityEngine.Debug.LogWarningFormat("There is no getter for property {0}.{1}", typeof(TOwner), this.Name);
                 return Entry.ReturnResultToJavascript(default(TValue));
             }
-            return Entry.ReturnResultToJavascript(mGetter.Invoke((TOwner)target));
+            return Entry.ReturnResultToJavascript(mGetter.Invoke((TOwner)target, mName));
         }
 
         protected override void setValue(object target, Parameter value)
@@ -135,7 +137,7 @@ namespace General.Typescript
                 UnityEngine.Debug.LogWarningFormat("There is no setter for property {0}.{1}", typeof(TOwner), this.Name);
                 return;
             }
-            mSetter?.Invoke((TOwner)target, value.ToObject<TValue>());
+            mSetter?.Invoke((TOwner)target, mName, value.ToObject<TValue>());
         }
 	}
 }

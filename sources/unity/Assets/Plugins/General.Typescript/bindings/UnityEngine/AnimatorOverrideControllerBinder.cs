@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -31,17 +32,17 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorOverrideController);
 		}
 
-		static private UnityEngine.RuntimeAnimatorController get_runtimeAnimatorController(UnityEngine.AnimatorOverrideController instance)
+		static private UnityEngine.RuntimeAnimatorController get_runtimeAnimatorController(UnityEngine.AnimatorOverrideController instance, string name)
 		{
 			return instance.runtimeAnimatorController;
 		}
 
-		static private void set_runtimeAnimatorController(UnityEngine.AnimatorOverrideController instance, UnityEngine.RuntimeAnimatorController value)
+		static private void set_runtimeAnimatorController(UnityEngine.AnimatorOverrideController instance, string name, UnityEngine.RuntimeAnimatorController value)
 		{
 			instance.runtimeAnimatorController = value;
 		}
 
-		static private System.Int32 get_overridesCount(UnityEngine.AnimatorOverrideController instance)
+		static private System.Int32 get_overridesCount(UnityEngine.AnimatorOverrideController instance, string name)
 		{
 			return instance.overridesCount;
 		}

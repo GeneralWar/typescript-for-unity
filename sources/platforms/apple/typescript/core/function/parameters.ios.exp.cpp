@@ -40,7 +40,7 @@ char* General_Typescript_Parameter_GetTypeName(void* environment, void* pointer,
         std::string type = JSValue_To_String(context, isType);
         if (Environment::IsCustomSuperClassName(type))
         {
-            return ReturnStringToCSharp(GetCustomType(context, JSValueToObject(context, value, nullptr)));
+            return ReturnStringToCSharp(GetCustomType(context, ValueToObject(context, value)));
         }
         return ReturnStringToCSharp(type.c_str());
     }

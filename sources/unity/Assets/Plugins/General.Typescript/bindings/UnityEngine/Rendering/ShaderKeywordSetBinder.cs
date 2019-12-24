@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("IsEnabled", IsEnabled);
 		}
 
-		static private void Disable(UnityEngine.Rendering.ShaderKeywordSet instance, Parameters parameters)
+		static private void Disable(UnityEngine.Rendering.ShaderKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.ShaderKeyword>())
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Enable(UnityEngine.Rendering.ShaderKeywordSet instance, Parameters parameters)
+		static private void Enable(UnityEngine.Rendering.ShaderKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.ShaderKeyword>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.ShaderKeyword[] GetShaderKeywords(UnityEngine.Rendering.ShaderKeywordSet instance, Parameters parameters)
+		static private UnityEngine.Rendering.ShaderKeyword[] GetShaderKeywords(UnityEngine.Rendering.ShaderKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsEnabled(UnityEngine.Rendering.ShaderKeywordSet instance, Parameters parameters)
+		static private System.Boolean IsEnabled(UnityEngine.Rendering.ShaderKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.ShaderKeyword>())
 			{

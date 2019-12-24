@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,12 +13,12 @@ namespace General.Typescript
 			self.BindInstanceProperty("isHuman", get_isHuman, null);
 		}
 
-		static private System.Boolean get_isValid(UnityEngine.Avatar instance)
+		static private System.Boolean get_isValid(UnityEngine.Avatar instance, string name)
 		{
 			return instance.isValid;
 		}
 
-		static private System.Boolean get_isHuman(UnityEngine.Avatar instance)
+		static private System.Boolean get_isHuman(UnityEngine.Avatar instance, string name)
 		{
 			return instance.isHuman;
 		}

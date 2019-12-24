@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,7 +38,7 @@ namespace General.Typescript
 			return default(UnityEngine.HumanTrait);
 		}
 
-		static private System.Int32 BoneFromMuscle(Parameters parameters)
+		static private System.Int32 BoneFromMuscle(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -59,7 +60,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Single GetBoneDefaultHierarchyMass(Parameters parameters)
+		static private System.Single GetBoneDefaultHierarchyMass(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -81,7 +82,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single GetMuscleDefaultMax(Parameters parameters)
+		static private System.Single GetMuscleDefaultMax(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -103,7 +104,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single GetMuscleDefaultMin(Parameters parameters)
+		static private System.Single GetMuscleDefaultMin(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -125,7 +126,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 GetParentBone(Parameters parameters)
+		static private System.Int32 GetParentBone(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -147,7 +148,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 MuscleFromBone(Parameters parameters)
+		static private System.Int32 MuscleFromBone(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean RequiredBone(Parameters parameters)
+		static private System.Boolean RequiredBone(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -191,27 +192,27 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 get_MuscleCount()
+		static private System.Int32 get_MuscleCount(Type type, string name)
 		{
 			return UnityEngine.HumanTrait.MuscleCount;
 		}
 
-		static private System.String[] get_MuscleName()
+		static private System.String[] get_MuscleName(Type type, string name)
 		{
 			return UnityEngine.HumanTrait.MuscleName;
 		}
 
-		static private System.Int32 get_BoneCount()
+		static private System.Int32 get_BoneCount(Type type, string name)
 		{
 			return UnityEngine.HumanTrait.BoneCount;
 		}
 
-		static private System.String[] get_BoneName()
+		static private System.String[] get_BoneName(Type type, string name)
 		{
 			return UnityEngine.HumanTrait.BoneName;
 		}
 
-		static private System.Int32 get_RequiredBoneCount()
+		static private System.Int32 get_RequiredBoneCount(Type type, string name)
 		{
 			return UnityEngine.HumanTrait.RequiredBoneCount;
 		}

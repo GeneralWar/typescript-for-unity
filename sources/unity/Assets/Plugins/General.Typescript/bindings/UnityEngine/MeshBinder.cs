@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -73,7 +74,7 @@ namespace General.Typescript
 			return default(UnityEngine.Mesh);
 		}
 
-		static private void AddBlendShapeFrame(UnityEngine.Mesh instance, Parameters parameters)
+		static private void AddBlendShapeFrame(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single, UnityEngine.Vector3[], UnityEngine.Vector3[], UnityEngine.Vector3[]>())
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.Mesh instance, Parameters parameters)
+		static private void Clear(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ClearBlendShapes(UnityEngine.Mesh instance, Parameters parameters)
+		static private void ClearBlendShapes(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.ClearBlendShapes has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CombineMeshes(UnityEngine.Mesh instance, Parameters parameters)
+		static private void CombineMeshes(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CombineInstance[]>())
 			{
@@ -165,7 +166,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.UInt32 GetBaseVertex(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.UInt32 GetBaseVertex(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -187,7 +188,7 @@ namespace General.Typescript
 			return default(System.UInt32);
 		}
 
-		static private System.Int32 GetBlendShapeFrameCount(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Int32 GetBlendShapeFrameCount(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -209,7 +210,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void GetBlendShapeFrameVertices(UnityEngine.Mesh instance, Parameters parameters)
+		static private void GetBlendShapeFrameVertices(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.Vector3[], UnityEngine.Vector3[], UnityEngine.Vector3[]>())
 			{
@@ -231,7 +232,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single GetBlendShapeFrameWeight(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Single GetBlendShapeFrameWeight(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -253,7 +254,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 GetBlendShapeIndex(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Int32 GetBlendShapeIndex(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -275,7 +276,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String GetBlendShapeName(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.String GetBlendShapeName(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -297,7 +298,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.UInt32 GetIndexCount(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.UInt32 GetIndexCount(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -319,7 +320,7 @@ namespace General.Typescript
 			return default(System.UInt32);
 		}
 
-		static private System.UInt32 GetIndexStart(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.UInt32 GetIndexStart(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -341,7 +342,7 @@ namespace General.Typescript
 			return default(System.UInt32);
 		}
 
-		static private System.Int32[] GetIndices(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Int32[] GetIndices(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -367,7 +368,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IntPtr GetNativeIndexBufferPtr(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.IntPtr GetNativeIndexBufferPtr(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -382,7 +383,7 @@ namespace General.Typescript
 			return default(System.IntPtr);
 		}
 
-		static private System.IntPtr GetNativeVertexBufferPtr(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.IntPtr GetNativeVertexBufferPtr(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -404,7 +405,7 @@ namespace General.Typescript
 			return default(System.IntPtr);
 		}
 
-		static private UnityEngine.MeshTopology GetTopology(UnityEngine.Mesh instance, Parameters parameters)
+		static private UnityEngine.MeshTopology GetTopology(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -426,7 +427,7 @@ namespace General.Typescript
 			return default(UnityEngine.MeshTopology);
 		}
 
-		static private System.Int32[] GetTriangles(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Int32[] GetTriangles(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -452,7 +453,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Single GetUVDistributionMetric(UnityEngine.Mesh instance, Parameters parameters)
+		static private System.Single GetUVDistributionMetric(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -474,7 +475,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private void MarkDynamic(UnityEngine.Mesh instance, Parameters parameters)
+		static private void MarkDynamic(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -488,7 +489,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.MarkDynamic has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RecalculateBounds(UnityEngine.Mesh instance, Parameters parameters)
+		static private void RecalculateBounds(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -502,7 +503,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.RecalculateBounds has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RecalculateNormals(UnityEngine.Mesh instance, Parameters parameters)
+		static private void RecalculateNormals(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -516,7 +517,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.RecalculateNormals has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RecalculateTangents(UnityEngine.Mesh instance, Parameters parameters)
+		static private void RecalculateTangents(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -530,7 +531,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Mesh.RecalculateTangents has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetIndices(UnityEngine.Mesh instance, Parameters parameters)
+		static private void SetIndices(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32[], UnityEngine.MeshTopology, System.Int32>())
 			{
@@ -562,7 +563,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTriangles(UnityEngine.Mesh instance, Parameters parameters)
+		static private void SetTriangles(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32[], System.Int32>())
 			{
@@ -594,7 +595,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UploadMeshData(UnityEngine.Mesh instance, Parameters parameters)
+		static private void UploadMeshData(UnityEngine.Mesh instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -616,212 +617,212 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.IndexFormat get_indexFormat(UnityEngine.Mesh instance)
+		static private UnityEngine.Rendering.IndexFormat get_indexFormat(UnityEngine.Mesh instance, string name)
 		{
 			return instance.indexFormat;
 		}
 
-		static private void set_indexFormat(UnityEngine.Mesh instance, UnityEngine.Rendering.IndexFormat value)
+		static private void set_indexFormat(UnityEngine.Mesh instance, string name, UnityEngine.Rendering.IndexFormat value)
 		{
 			instance.indexFormat = value;
 		}
 
-		static private UnityEngine.Color[] get_colors(UnityEngine.Mesh instance)
+		static private UnityEngine.Color[] get_colors(UnityEngine.Mesh instance, string name)
 		{
 			return instance.colors;
 		}
 
-		static private void set_colors(UnityEngine.Mesh instance, UnityEngine.Color[] value)
+		static private void set_colors(UnityEngine.Mesh instance, string name, UnityEngine.Color[] value)
 		{
 			instance.colors = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv8(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv8(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv8;
 		}
 
-		static private void set_uv8(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv8(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv8 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv7(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv7(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv7;
 		}
 
-		static private void set_uv7(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv7(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv7 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv6(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv6(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv6;
 		}
 
-		static private void set_uv6(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv6(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv6 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv5(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv5(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv5;
 		}
 
-		static private void set_uv5(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv5(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv5 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv4(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv4(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv4;
 		}
 
-		static private void set_uv4(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv4(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv4 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv3(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv3(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv3;
 		}
 
-		static private void set_uv3(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv3(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv3 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv2(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv2(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv2;
 		}
 
-		static private void set_uv2(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv2(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv2 = value;
 		}
 
-		static private UnityEngine.Vector2[] get_uv(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector2[] get_uv(UnityEngine.Mesh instance, string name)
 		{
 			return instance.uv;
 		}
 
-		static private void set_uv(UnityEngine.Mesh instance, UnityEngine.Vector2[] value)
+		static private void set_uv(UnityEngine.Mesh instance, string name, UnityEngine.Vector2[] value)
 		{
 			instance.uv = value;
 		}
 
-		static private UnityEngine.Color32[] get_colors32(UnityEngine.Mesh instance)
+		static private UnityEngine.Color32[] get_colors32(UnityEngine.Mesh instance, string name)
 		{
 			return instance.colors32;
 		}
 
-		static private void set_colors32(UnityEngine.Mesh instance, UnityEngine.Color32[] value)
+		static private void set_colors32(UnityEngine.Mesh instance, string name, UnityEngine.Color32[] value)
 		{
 			instance.colors32 = value;
 		}
 
-		static private UnityEngine.Vector4[] get_tangents(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector4[] get_tangents(UnityEngine.Mesh instance, string name)
 		{
 			return instance.tangents;
 		}
 
-		static private void set_tangents(UnityEngine.Mesh instance, UnityEngine.Vector4[] value)
+		static private void set_tangents(UnityEngine.Mesh instance, string name, UnityEngine.Vector4[] value)
 		{
 			instance.tangents = value;
 		}
 
-		static private UnityEngine.Vector3[] get_vertices(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector3[] get_vertices(UnityEngine.Mesh instance, string name)
 		{
 			return instance.vertices;
 		}
 
-		static private void set_vertices(UnityEngine.Mesh instance, UnityEngine.Vector3[] value)
+		static private void set_vertices(UnityEngine.Mesh instance, string name, UnityEngine.Vector3[] value)
 		{
 			instance.vertices = value;
 		}
 
-		static private UnityEngine.Bounds get_bounds(UnityEngine.Mesh instance)
+		static private UnityEngine.Bounds get_bounds(UnityEngine.Mesh instance, string name)
 		{
 			return instance.bounds;
 		}
 
-		static private void set_bounds(UnityEngine.Mesh instance, UnityEngine.Bounds value)
+		static private void set_bounds(UnityEngine.Mesh instance, string name, UnityEngine.Bounds value)
 		{
 			instance.bounds = value;
 		}
 
-		static private System.Int32 get_subMeshCount(UnityEngine.Mesh instance)
+		static private System.Int32 get_subMeshCount(UnityEngine.Mesh instance, string name)
 		{
 			return instance.subMeshCount;
 		}
 
-		static private void set_subMeshCount(UnityEngine.Mesh instance, System.Int32 value)
+		static private void set_subMeshCount(UnityEngine.Mesh instance, string name, System.Int32 value)
 		{
 			instance.subMeshCount = value;
 		}
 
-		static private System.Int32 get_vertexCount(UnityEngine.Mesh instance)
+		static private System.Int32 get_vertexCount(UnityEngine.Mesh instance, string name)
 		{
 			return instance.vertexCount;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.Mesh instance)
+		static private System.Boolean get_isReadable(UnityEngine.Mesh instance, string name)
 		{
 			return instance.isReadable;
 		}
 
-		static private UnityEngine.Matrix4x4[] get_bindposes(UnityEngine.Mesh instance)
+		static private UnityEngine.Matrix4x4[] get_bindposes(UnityEngine.Mesh instance, string name)
 		{
 			return instance.bindposes;
 		}
 
-		static private void set_bindposes(UnityEngine.Mesh instance, UnityEngine.Matrix4x4[] value)
+		static private void set_bindposes(UnityEngine.Mesh instance, string name, UnityEngine.Matrix4x4[] value)
 		{
 			instance.bindposes = value;
 		}
 
-		static private UnityEngine.BoneWeight[] get_boneWeights(UnityEngine.Mesh instance)
+		static private UnityEngine.BoneWeight[] get_boneWeights(UnityEngine.Mesh instance, string name)
 		{
 			return instance.boneWeights;
 		}
 
-		static private void set_boneWeights(UnityEngine.Mesh instance, UnityEngine.BoneWeight[] value)
+		static private void set_boneWeights(UnityEngine.Mesh instance, string name, UnityEngine.BoneWeight[] value)
 		{
 			instance.boneWeights = value;
 		}
 
-		static private System.Int32 get_blendShapeCount(UnityEngine.Mesh instance)
+		static private System.Int32 get_blendShapeCount(UnityEngine.Mesh instance, string name)
 		{
 			return instance.blendShapeCount;
 		}
 
-		static private System.Int32 get_vertexBufferCount(UnityEngine.Mesh instance)
+		static private System.Int32 get_vertexBufferCount(UnityEngine.Mesh instance, string name)
 		{
 			return instance.vertexBufferCount;
 		}
 
-		static private UnityEngine.Vector3[] get_normals(UnityEngine.Mesh instance)
+		static private UnityEngine.Vector3[] get_normals(UnityEngine.Mesh instance, string name)
 		{
 			return instance.normals;
 		}
 
-		static private void set_normals(UnityEngine.Mesh instance, UnityEngine.Vector3[] value)
+		static private void set_normals(UnityEngine.Mesh instance, string name, UnityEngine.Vector3[] value)
 		{
 			instance.normals = value;
 		}
 
-		static private System.Int32[] get_triangles(UnityEngine.Mesh instance)
+		static private System.Int32[] get_triangles(UnityEngine.Mesh instance, string name)
 		{
 			return instance.triangles;
 		}
 
-		static private void set_triangles(UnityEngine.Mesh instance, System.Int32[] value)
+		static private void set_triangles(UnityEngine.Mesh instance, string name, System.Int32[] value)
 		{
 			instance.triangles = value;
 		}

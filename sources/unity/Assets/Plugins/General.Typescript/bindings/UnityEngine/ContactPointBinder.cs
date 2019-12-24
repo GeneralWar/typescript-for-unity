@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,27 +16,27 @@ namespace General.Typescript
 			self.BindInstanceProperty("separation", get_separation, null);
 		}
 
-		static private UnityEngine.Vector3 get_point(UnityEngine.ContactPoint instance)
+		static private UnityEngine.Vector3 get_point(UnityEngine.ContactPoint instance, string name)
 		{
 			return instance.point;
 		}
 
-		static private UnityEngine.Vector3 get_normal(UnityEngine.ContactPoint instance)
+		static private UnityEngine.Vector3 get_normal(UnityEngine.ContactPoint instance, string name)
 		{
 			return instance.normal;
 		}
 
-		static private UnityEngine.Collider get_thisCollider(UnityEngine.ContactPoint instance)
+		static private UnityEngine.Collider get_thisCollider(UnityEngine.ContactPoint instance, string name)
 		{
 			return instance.thisCollider;
 		}
 
-		static private UnityEngine.Collider get_otherCollider(UnityEngine.ContactPoint instance)
+		static private UnityEngine.Collider get_otherCollider(UnityEngine.ContactPoint instance, string name)
 		{
 			return instance.otherCollider;
 		}
 
-		static private System.Single get_separation(UnityEngine.ContactPoint instance)
+		static private System.Single get_separation(UnityEngine.ContactPoint instance, string name)
 		{
 			return instance.separation;
 		}

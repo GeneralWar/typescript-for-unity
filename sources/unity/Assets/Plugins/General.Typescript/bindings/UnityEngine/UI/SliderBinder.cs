@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -30,7 +31,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("normalizedValue", get_normalizedValue, set_normalizedValue);
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnDown(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -45,7 +46,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnLeft(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnRight(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private UnityEngine.UI.Selectable FindSelectableOnUp(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -90,7 +91,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void GraphicUpdateComplete(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void GraphicUpdateComplete(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -104,7 +105,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Slider.GraphicUpdateComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LayoutComplete(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void LayoutComplete(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -118,7 +119,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.Slider.LayoutComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void OnDrag(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void OnDrag(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -140,7 +141,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnInitializePotentialDrag(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void OnInitializePotentialDrag(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -162,7 +163,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnMove(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void OnMove(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.AxisEventData>())
 			{
@@ -184,7 +185,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnPointerDown(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void OnPointerDown(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -206,7 +207,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rebuild(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void Rebuild(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.CanvasUpdate>())
 			{
@@ -228,7 +229,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetDirection(UnityEngine.UI.Slider instance, Parameters parameters)
+		static private void SetDirection(UnityEngine.UI.Slider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Slider.Direction, System.Boolean>())
 			{
@@ -250,72 +251,72 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.RectTransform get_fillRect(UnityEngine.UI.Slider instance)
+		static private UnityEngine.RectTransform get_fillRect(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.fillRect;
 		}
 
-		static private void set_fillRect(UnityEngine.UI.Slider instance, UnityEngine.RectTransform value)
+		static private void set_fillRect(UnityEngine.UI.Slider instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.fillRect = value;
 		}
 
-		static private UnityEngine.RectTransform get_handleRect(UnityEngine.UI.Slider instance)
+		static private UnityEngine.RectTransform get_handleRect(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.handleRect;
 		}
 
-		static private void set_handleRect(UnityEngine.UI.Slider instance, UnityEngine.RectTransform value)
+		static private void set_handleRect(UnityEngine.UI.Slider instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.handleRect = value;
 		}
 
-		static private System.Single get_minValue(UnityEngine.UI.Slider instance)
+		static private System.Single get_minValue(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.minValue;
 		}
 
-		static private void set_minValue(UnityEngine.UI.Slider instance, System.Single value)
+		static private void set_minValue(UnityEngine.UI.Slider instance, string name, System.Single value)
 		{
 			instance.minValue = value;
 		}
 
-		static private System.Single get_maxValue(UnityEngine.UI.Slider instance)
+		static private System.Single get_maxValue(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.maxValue;
 		}
 
-		static private void set_maxValue(UnityEngine.UI.Slider instance, System.Single value)
+		static private void set_maxValue(UnityEngine.UI.Slider instance, string name, System.Single value)
 		{
 			instance.maxValue = value;
 		}
 
-		static private System.Boolean get_wholeNumbers(UnityEngine.UI.Slider instance)
+		static private System.Boolean get_wholeNumbers(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.wholeNumbers;
 		}
 
-		static private void set_wholeNumbers(UnityEngine.UI.Slider instance, System.Boolean value)
+		static private void set_wholeNumbers(UnityEngine.UI.Slider instance, string name, System.Boolean value)
 		{
 			instance.wholeNumbers = value;
 		}
 
-		static private System.Single get_value(UnityEngine.UI.Slider instance)
+		static private System.Single get_value(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.value;
 		}
 
-		static private void set_value(UnityEngine.UI.Slider instance, System.Single value)
+		static private void set_value(UnityEngine.UI.Slider instance, string name, System.Single value)
 		{
 			instance.value = value;
 		}
 
-		static private System.Single get_normalizedValue(UnityEngine.UI.Slider instance)
+		static private System.Single get_normalizedValue(UnityEngine.UI.Slider instance, string name)
 		{
 			return instance.normalizedValue;
 		}
 
-		static private void set_normalizedValue(UnityEngine.UI.Slider instance, System.Single value)
+		static private void set_normalizedValue(UnityEngine.UI.Slider instance, string name, System.Single value)
 		{
 			instance.normalizedValue = value;
 		}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace General.Typescript
@@ -19,6 +20,22 @@ namespace General.Typescript
 			{
 				mParameters[i] = new Parameter(Handle, i);
 			}
+		}
+
+		public bool CheckTypes(ParameterInfo[] parameters)
+		{
+			if (parameters.Length != this.Count)
+			{
+				return false;
+			}
+			for (int i = 0; i < this.Count; ++i)
+			{
+				if (!mParameters[i].IsType(parameters[i].ParameterType))
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 
 		public bool CheckTypes<T0>()
@@ -97,6 +114,25 @@ namespace General.Typescript
 				 && mParameters[9].IsType<T10>() && mParameters[9].IsType<T11>() && mParameters[9].IsType<T12>();
 		}
 
+		public string[] GetParameterTypes()
+		{
+			return Array.ConvertAll(mParameters, p => p.GetParameterType());
+		}
+
+		public object[] ToParameters(ParameterInfo[] parameters)
+		{
+			object[] results = new object[Math.Max(parameters.Length, mParameters.Length)];
+			for (int i = 0; i < results.Length; ++i)
+			{
+				if (i >= parameters.Length || i >= mParameters.Length)
+				{
+					break;
+				}
+				results[i] = mParameters[i].ToObject(parameters[i].ParameterType);
+			}
+			return results;
+		}
+
 		public Parameter this[int index] { get { return index < Count ? mParameters[index] : default(Parameter); } }
 	}
 
@@ -113,7 +149,11 @@ namespace General.Typescript
 
 		public bool IsType<T>()
 		{
-			Type type = typeof(T);
+			return this.IsType(typeof(T));
+		}
+
+		public bool IsType(Type type)
+		{
 			string name = type.FullName;
 
 			JSValueType jsType = Entry.Parameters.GetJsType(this.Handle, this.Index);
@@ -151,78 +191,87 @@ namespace General.Typescript
 		public T ToObject<T>()
 		{
 			Type type = typeof(T);
-			string name = type.FullName;
+			object target = this.ToObject(type);
+			return null == target ? default(T) : (T)target;
+		}
 
+		public object ToObject(Type type)
+		{
+			if (typeof(Parameter) == type)
+			{
+				return this;
+			}
+			string name = type.FullName;
 			if (typeof(string) == type)
 			{
-				return (T)(object)this.ToString();
+				return this.ToString();
 			}
 			if (type.IsValueType && type.IsPrimitive)
 			{
 				if (typeof(bool) == type)
 				{
-					return (T)(object)this.ToBoolean();
+					return this.ToBoolean();
 				}
 				if (typeof(sbyte) == type)
 				{
-					return (T)(object)this.ToSByte();
+					return this.ToSByte();
 				}
 				if (typeof(byte) == type)
 				{
-					return (T)(object)this.ToByte();
+					return this.ToByte();
 				}
 				if (typeof(short) == type)
 				{
-					return (T)(object)this.ToInt16();
+					return this.ToInt16();
 				}
 				if (typeof(ushort) == type)
 				{
-					return (T)(object)this.ToUInt16();
+					return this.ToUInt16();
 				}
 				if (typeof(int) == type)
 				{
-					return (T)(object)this.ToInt32();
+					return this.ToInt32();
 				}
 				if (typeof(uint) == type)
 				{
-					return (T)(object)this.ToUInt32();
+					return this.ToUInt32();
 				}
 				if (typeof(long) == type)
 				{
-					return (T)(object)this.ToInt64();
+					return this.ToInt64();
 				}
 				if (typeof(ulong) == type)
 				{
-					return (T)(object)this.ToUInt64();
+					return this.ToUInt64();
 				}
 				if (typeof(float) == type)
 				{
-					return (T)(object)this.ToSingle();
+					return this.ToSingle();
 				}
 				if (typeof(double) == type)
 				{
-					return (T)(object)this.ToDouble();
+					return this.ToDouble();
 				}
 			}
 			if (type.IsEnum)
 			{
-				return (T)Enum.ToObject(type, this.ToInt64());
+				return Enum.ToObject(type, this.ToInt64());
 			}
 			if (typeof(Type) == type)
 			{
-				return (T)(object)Entry.Parameters.GetType(this.Handle, this.Index);
+				return Entry.Parameters.GetType(this.Handle, this.Index);
 			}
 			if (type.IsValueType)
 			{
 				IntPtr field = Entry.Parameters.GetField(this.Handle, this.Index);
-				return IntPtr.Zero == field ? default(T) : (T)Marshal.PtrToStructure(field, type);
+				return IntPtr.Zero == field ? null : Marshal.PtrToStructure(field, type);
 			}
 			if (type.IsArray)
 			{
-				return (T)(object)this.ToArray(type);
+				return this.ToArray(type);
 			}
 			IntPtr handle = Entry.Parameters.GetHandle(this.Handle, this.Index);
-			return IntPtr.Zero == handle ? default(T) : (T)GCHandle.FromIntPtr(handle).Target;
+			return IntPtr.Zero == handle ? null : GCHandle.FromIntPtr(handle).Target;
 		}
 
 		public string GetParameterType()

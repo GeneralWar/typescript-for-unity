@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -61,7 +62,7 @@ namespace General.Typescript
 			return default(System.IO.BinaryReader);
 		}
 
-		static private void Close(System.IO.BinaryReader instance, Parameters parameters)
+		static private void Close(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.BinaryReader.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Dispose(System.IO.BinaryReader instance, Parameters parameters)
+		static private void Dispose(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.BinaryReader.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 PeekChar(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Int32 PeekChar(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -104,7 +105,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 Read(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -127,7 +128,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean ReadBoolean(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Boolean ReadBoolean(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Byte ReadByte(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Byte ReadByte(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -157,7 +158,7 @@ namespace General.Typescript
 			return default(System.Byte);
 		}
 
-		static private System.Byte[] ReadBytes(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Byte[] ReadBytes(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -179,7 +180,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Char ReadChar(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Char ReadChar(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -194,7 +195,7 @@ namespace General.Typescript
 			return default(System.Char);
 		}
 
-		static private System.Char[] ReadChars(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Char[] ReadChars(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -216,7 +217,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Decimal ReadDecimal(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Decimal ReadDecimal(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -231,7 +232,7 @@ namespace General.Typescript
 			return default(System.Decimal);
 		}
 
-		static private System.Double ReadDouble(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Double ReadDouble(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -246,7 +247,7 @@ namespace General.Typescript
 			return default(System.Double);
 		}
 
-		static private System.Int16 ReadInt16(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Int16 ReadInt16(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -261,7 +262,7 @@ namespace General.Typescript
 			return default(System.Int16);
 		}
 
-		static private System.Int32 ReadInt32(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Int32 ReadInt32(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -276,7 +277,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int64 ReadInt64(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Int64 ReadInt64(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -291,7 +292,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private System.SByte ReadSByte(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.SByte ReadSByte(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -306,7 +307,7 @@ namespace General.Typescript
 			return default(System.SByte);
 		}
 
-		static private System.Single ReadSingle(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.Single ReadSingle(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -321,7 +322,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.String ReadString(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.String ReadString(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -336,7 +337,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.UInt16 ReadUInt16(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.UInt16 ReadUInt16(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -351,7 +352,7 @@ namespace General.Typescript
 			return default(System.UInt16);
 		}
 
-		static private System.UInt32 ReadUInt32(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.UInt32 ReadUInt32(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -366,7 +367,7 @@ namespace General.Typescript
 			return default(System.UInt32);
 		}
 
-		static private System.UInt64 ReadUInt64(System.IO.BinaryReader instance, Parameters parameters)
+		static private System.UInt64 ReadUInt64(System.IO.BinaryReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -381,7 +382,7 @@ namespace General.Typescript
 			return default(System.UInt64);
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.BinaryReader instance)
+		static private System.IO.Stream get_BaseStream(System.IO.BinaryReader instance, string name)
 		{
 			return instance.BaseStream;
 		}

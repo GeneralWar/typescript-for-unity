@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.RangeInt);
 		}
 
-		static private System.Int32 get_end(UnityEngine.RangeInt instance)
+		static private System.Int32 get_end(UnityEngine.RangeInt instance, string name)
 		{
 			return instance.end;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,22 +35,22 @@ namespace General.Typescript
 			return default(UnityEngine.CachedAssetBundle);
 		}
 
-		static private System.String get_name(UnityEngine.CachedAssetBundle instance)
+		static private System.String get_name(UnityEngine.CachedAssetBundle instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private void set_name(UnityEngine.CachedAssetBundle instance, System.String value)
+		static private void set_name(UnityEngine.CachedAssetBundle instance, string name, System.String value)
 		{
 			instance.name = value;
 		}
 
-		static private UnityEngine.Hash128 get_hash(UnityEngine.CachedAssetBundle instance)
+		static private UnityEngine.Hash128 get_hash(UnityEngine.CachedAssetBundle instance, string name)
 		{
 			return instance.hash;
 		}
 
-		static private void set_hash(UnityEngine.CachedAssetBundle instance, UnityEngine.Hash128 value)
+		static private void set_hash(UnityEngine.CachedAssetBundle instance, string name, UnityEngine.Hash128 value)
 		{
 			instance.hash = value;
 		}

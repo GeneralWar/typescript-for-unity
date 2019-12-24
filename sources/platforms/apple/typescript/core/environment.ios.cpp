@@ -49,8 +49,14 @@ void EnvironmentIOS::Bind()
     TypescriptClass::Derive();
     
     CreateGlobalObject(mContext, "exports");
-    object_initialize(mContext);
+    object_initialize(mContext);    
+    
+    this->ExecuteString("console.log = General_Console.log;");
+    this->ExecuteString("console.warn = General_Console.warn;");
+    this->ExecuteString("console.error = General_Console.error;");
+    
     //    constructor_initialize(context);
+    mIsRunning = true;
 }
 
 std::string EnvironmentIOS::ExecuteString(const char *sourceContent)

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -40,7 +41,7 @@ namespace General.Typescript
 			return default(UnityEngine.Screen);
 		}
 
-		static private void SetResolution(Parameters parameters)
+		static private void SetResolution(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.FullScreenMode>())
 			{
@@ -77,112 +78,112 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_width()
+		static private System.Int32 get_width(Type type, string name)
 		{
 			return UnityEngine.Screen.width;
 		}
 
-		static private System.Int32 get_height()
+		static private System.Int32 get_height(Type type, string name)
 		{
 			return UnityEngine.Screen.height;
 		}
 
-		static private System.Single get_dpi()
+		static private System.Single get_dpi(Type type, string name)
 		{
 			return UnityEngine.Screen.dpi;
 		}
 
-		static private UnityEngine.ScreenOrientation get_orientation()
+		static private UnityEngine.ScreenOrientation get_orientation(Type type, string name)
 		{
 			return UnityEngine.Screen.orientation;
 		}
 
-		static private void set_orientation(UnityEngine.ScreenOrientation value)
+		static private void set_orientation(Type type, string name, UnityEngine.ScreenOrientation value)
 		{
 			UnityEngine.Screen.orientation = value;
 		}
 
-		static private System.Int32 get_sleepTimeout()
+		static private System.Int32 get_sleepTimeout(Type type, string name)
 		{
 			return UnityEngine.Screen.sleepTimeout;
 		}
 
-		static private void set_sleepTimeout(System.Int32 value)
+		static private void set_sleepTimeout(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.Screen.sleepTimeout = value;
 		}
 
-		static private System.Boolean get_autorotateToPortrait()
+		static private System.Boolean get_autorotateToPortrait(Type type, string name)
 		{
 			return UnityEngine.Screen.autorotateToPortrait;
 		}
 
-		static private void set_autorotateToPortrait(System.Boolean value)
+		static private void set_autorotateToPortrait(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Screen.autorotateToPortrait = value;
 		}
 
-		static private System.Boolean get_autorotateToPortraitUpsideDown()
+		static private System.Boolean get_autorotateToPortraitUpsideDown(Type type, string name)
 		{
 			return UnityEngine.Screen.autorotateToPortraitUpsideDown;
 		}
 
-		static private void set_autorotateToPortraitUpsideDown(System.Boolean value)
+		static private void set_autorotateToPortraitUpsideDown(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Screen.autorotateToPortraitUpsideDown = value;
 		}
 
-		static private System.Boolean get_autorotateToLandscapeLeft()
+		static private System.Boolean get_autorotateToLandscapeLeft(Type type, string name)
 		{
 			return UnityEngine.Screen.autorotateToLandscapeLeft;
 		}
 
-		static private void set_autorotateToLandscapeLeft(System.Boolean value)
+		static private void set_autorotateToLandscapeLeft(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Screen.autorotateToLandscapeLeft = value;
 		}
 
-		static private System.Boolean get_autorotateToLandscapeRight()
+		static private System.Boolean get_autorotateToLandscapeRight(Type type, string name)
 		{
 			return UnityEngine.Screen.autorotateToLandscapeRight;
 		}
 
-		static private void set_autorotateToLandscapeRight(System.Boolean value)
+		static private void set_autorotateToLandscapeRight(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Screen.autorotateToLandscapeRight = value;
 		}
 
-		static private UnityEngine.Resolution get_currentResolution()
+		static private UnityEngine.Resolution get_currentResolution(Type type, string name)
 		{
 			return UnityEngine.Screen.currentResolution;
 		}
 
-		static private System.Boolean get_fullScreen()
+		static private System.Boolean get_fullScreen(Type type, string name)
 		{
 			return UnityEngine.Screen.fullScreen;
 		}
 
-		static private void set_fullScreen(System.Boolean value)
+		static private void set_fullScreen(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Screen.fullScreen = value;
 		}
 
-		static private UnityEngine.FullScreenMode get_fullScreenMode()
+		static private UnityEngine.FullScreenMode get_fullScreenMode(Type type, string name)
 		{
 			return UnityEngine.Screen.fullScreenMode;
 		}
 
-		static private void set_fullScreenMode(UnityEngine.FullScreenMode value)
+		static private void set_fullScreenMode(Type type, string name, UnityEngine.FullScreenMode value)
 		{
 			UnityEngine.Screen.fullScreenMode = value;
 		}
 
-		static private UnityEngine.Rect get_safeArea()
+		static private UnityEngine.Rect get_safeArea(Type type, string name)
 		{
 			return UnityEngine.Screen.safeArea;
 		}
 
-		static private UnityEngine.Resolution[] get_resolutions()
+		static private UnityEngine.Resolution[] get_resolutions(Type type, string name)
 		{
 			return UnityEngine.Screen.resolutions;
 		}

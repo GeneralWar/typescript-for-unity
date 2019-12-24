@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,22 +13,22 @@ namespace General.Typescript
 			self.BindInstanceProperty("humanName", get_humanName, set_humanName);
 		}
 
-		static private System.String get_boneName(UnityEngine.HumanBone instance)
+		static private System.String get_boneName(UnityEngine.HumanBone instance, string name)
 		{
 			return instance.boneName;
 		}
 
-		static private void set_boneName(UnityEngine.HumanBone instance, System.String value)
+		static private void set_boneName(UnityEngine.HumanBone instance, string name, System.String value)
 		{
 			instance.boneName = value;
 		}
 
-		static private System.String get_humanName(UnityEngine.HumanBone instance)
+		static private System.String get_humanName(UnityEngine.HumanBone instance, string name)
 		{
 			return instance.humanName;
 		}
 
-		static private void set_humanName(UnityEngine.HumanBone instance, System.String value)
+		static private void set_humanName(UnityEngine.HumanBone instance, string name, System.String value)
 		{
 			instance.humanName = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -20,72 +21,72 @@ namespace General.Typescript
 			self.BindInstanceProperty("dynamicPixelsPerUnit", get_dynamicPixelsPerUnit, set_dynamicPixelsPerUnit);
 		}
 
-		static private System.Single get_referencePixelsPerUnit(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_referencePixelsPerUnit(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.referencePixelsPerUnit;
 		}
 
-		static private void set_referencePixelsPerUnit(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_referencePixelsPerUnit(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.referencePixelsPerUnit = value;
 		}
 
-		static private System.Single get_scaleFactor(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_scaleFactor(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.scaleFactor;
 		}
 
-		static private void set_scaleFactor(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_scaleFactor(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.scaleFactor = value;
 		}
 
-		static private UnityEngine.Vector2 get_referenceResolution(UnityEngine.UI.CanvasScaler instance)
+		static private UnityEngine.Vector2 get_referenceResolution(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.referenceResolution;
 		}
 
-		static private void set_referenceResolution(UnityEngine.UI.CanvasScaler instance, UnityEngine.Vector2 value)
+		static private void set_referenceResolution(UnityEngine.UI.CanvasScaler instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.referenceResolution = value;
 		}
 
-		static private System.Single get_matchWidthOrHeight(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_matchWidthOrHeight(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.matchWidthOrHeight;
 		}
 
-		static private void set_matchWidthOrHeight(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_matchWidthOrHeight(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.matchWidthOrHeight = value;
 		}
 
-		static private System.Single get_fallbackScreenDPI(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_fallbackScreenDPI(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.fallbackScreenDPI;
 		}
 
-		static private void set_fallbackScreenDPI(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_fallbackScreenDPI(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.fallbackScreenDPI = value;
 		}
 
-		static private System.Single get_defaultSpriteDPI(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_defaultSpriteDPI(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.defaultSpriteDPI;
 		}
 
-		static private void set_defaultSpriteDPI(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_defaultSpriteDPI(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.defaultSpriteDPI = value;
 		}
 
-		static private System.Single get_dynamicPixelsPerUnit(UnityEngine.UI.CanvasScaler instance)
+		static private System.Single get_dynamicPixelsPerUnit(UnityEngine.UI.CanvasScaler instance, string name)
 		{
 			return instance.dynamicPixelsPerUnit;
 		}
 
-		static private void set_dynamicPixelsPerUnit(UnityEngine.UI.CanvasScaler instance, System.Single value)
+		static private void set_dynamicPixelsPerUnit(UnityEngine.UI.CanvasScaler instance, string name, System.Single value)
 		{
 			instance.dynamicPixelsPerUnit = value;
 		}

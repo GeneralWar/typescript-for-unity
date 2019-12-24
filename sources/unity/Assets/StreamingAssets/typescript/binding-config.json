@@ -1,0 +1,23 @@
+{
+    "assemblies": [
+        {
+            "name": "System",
+            "types": [
+                "System.Net.WebClient"
+            ]
+        },
+        {
+            "name": "UnityEngine.CoreModule",
+            "types": [
+                "UnityEngine.Application",
+                "UnityEngine.GameObject"
+            ]
+        },
+        {
+            "name": "UnityEngine.UI",
+            "types": [
+                "UnityEngine.UI.Text"
+            ]
+        }
+    ]
+}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("Result", get_Result, null);
 		}
 
-		static private System.String get_Result(System.Net.UploadStringCompletedEventArgs instance)
+		static private System.String get_Result(System.Net.UploadStringCompletedEventArgs instance, string name)
 		{
 			return instance.Result;
 		}

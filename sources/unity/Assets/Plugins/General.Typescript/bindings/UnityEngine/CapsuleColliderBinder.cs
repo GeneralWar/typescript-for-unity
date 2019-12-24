@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -29,42 +30,42 @@ namespace General.Typescript
 			return default(UnityEngine.CapsuleCollider);
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.CapsuleCollider instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.CapsuleCollider instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private void set_center(UnityEngine.CapsuleCollider instance, UnityEngine.Vector3 value)
+		static private void set_center(UnityEngine.CapsuleCollider instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.center = value;
 		}
 
-		static private System.Single get_radius(UnityEngine.CapsuleCollider instance)
+		static private System.Single get_radius(UnityEngine.CapsuleCollider instance, string name)
 		{
 			return instance.radius;
 		}
 
-		static private void set_radius(UnityEngine.CapsuleCollider instance, System.Single value)
+		static private void set_radius(UnityEngine.CapsuleCollider instance, string name, System.Single value)
 		{
 			instance.radius = value;
 		}
 
-		static private System.Single get_height(UnityEngine.CapsuleCollider instance)
+		static private System.Single get_height(UnityEngine.CapsuleCollider instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.CapsuleCollider instance, System.Single value)
+		static private void set_height(UnityEngine.CapsuleCollider instance, string name, System.Single value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Int32 get_direction(UnityEngine.CapsuleCollider instance)
+		static private System.Int32 get_direction(UnityEngine.CapsuleCollider instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.CapsuleCollider instance, System.Int32 value)
+		static private void set_direction(UnityEngine.CapsuleCollider instance, string name, System.Int32 value)
 		{
 			instance.direction = value;
 		}

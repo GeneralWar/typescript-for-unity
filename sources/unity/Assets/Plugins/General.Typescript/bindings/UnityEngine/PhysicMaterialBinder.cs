@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,52 +35,52 @@ namespace General.Typescript
 			return default(UnityEngine.PhysicMaterial);
 		}
 
-		static private System.Single get_bounciness(UnityEngine.PhysicMaterial instance)
+		static private System.Single get_bounciness(UnityEngine.PhysicMaterial instance, string name)
 		{
 			return instance.bounciness;
 		}
 
-		static private void set_bounciness(UnityEngine.PhysicMaterial instance, System.Single value)
+		static private void set_bounciness(UnityEngine.PhysicMaterial instance, string name, System.Single value)
 		{
 			instance.bounciness = value;
 		}
 
-		static private System.Single get_dynamicFriction(UnityEngine.PhysicMaterial instance)
+		static private System.Single get_dynamicFriction(UnityEngine.PhysicMaterial instance, string name)
 		{
 			return instance.dynamicFriction;
 		}
 
-		static private void set_dynamicFriction(UnityEngine.PhysicMaterial instance, System.Single value)
+		static private void set_dynamicFriction(UnityEngine.PhysicMaterial instance, string name, System.Single value)
 		{
 			instance.dynamicFriction = value;
 		}
 
-		static private System.Single get_staticFriction(UnityEngine.PhysicMaterial instance)
+		static private System.Single get_staticFriction(UnityEngine.PhysicMaterial instance, string name)
 		{
 			return instance.staticFriction;
 		}
 
-		static private void set_staticFriction(UnityEngine.PhysicMaterial instance, System.Single value)
+		static private void set_staticFriction(UnityEngine.PhysicMaterial instance, string name, System.Single value)
 		{
 			instance.staticFriction = value;
 		}
 
-		static private UnityEngine.PhysicMaterialCombine get_frictionCombine(UnityEngine.PhysicMaterial instance)
+		static private UnityEngine.PhysicMaterialCombine get_frictionCombine(UnityEngine.PhysicMaterial instance, string name)
 		{
 			return instance.frictionCombine;
 		}
 
-		static private void set_frictionCombine(UnityEngine.PhysicMaterial instance, UnityEngine.PhysicMaterialCombine value)
+		static private void set_frictionCombine(UnityEngine.PhysicMaterial instance, string name, UnityEngine.PhysicMaterialCombine value)
 		{
 			instance.frictionCombine = value;
 		}
 
-		static private UnityEngine.PhysicMaterialCombine get_bounceCombine(UnityEngine.PhysicMaterial instance)
+		static private UnityEngine.PhysicMaterialCombine get_bounceCombine(UnityEngine.PhysicMaterial instance, string name)
 		{
 			return instance.bounceCombine;
 		}
 
-		static private void set_bounceCombine(UnityEngine.PhysicMaterial instance, UnityEngine.PhysicMaterialCombine value)
+		static private void set_bounceCombine(UnityEngine.PhysicMaterial instance, string name, UnityEngine.PhysicMaterialCombine value)
 		{
 			instance.bounceCombine = value;
 		}

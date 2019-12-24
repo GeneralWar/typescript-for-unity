@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,7 +38,7 @@ namespace General.Typescript
 			return default(System.IO.StringReader);
 		}
 
-		static private void Close(System.IO.StringReader instance, Parameters parameters)
+		static private void Close(System.IO.StringReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -51,7 +52,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.StringReader.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 Peek(System.IO.StringReader instance, Parameters parameters)
+		static private System.Int32 Peek(System.IO.StringReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 Read(System.IO.StringReader instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.StringReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ReadLine(System.IO.StringReader instance, Parameters parameters)
+		static private System.String ReadLine(System.IO.StringReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -100,7 +101,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ReadToEnd(System.IO.StringReader instance, Parameters parameters)
+		static private System.String ReadToEnd(System.IO.StringReader instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

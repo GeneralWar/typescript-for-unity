@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,7 +29,7 @@ namespace General.Typescript
 			return default(UnityEngine.GeometryUtility);
 		}
 
-		static private UnityEngine.Bounds CalculateBounds(Parameters parameters)
+		static private UnityEngine.Bounds CalculateBounds(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[], UnityEngine.Matrix4x4>())
 			{
@@ -50,7 +51,7 @@ namespace General.Typescript
 			return default(UnityEngine.Bounds);
 		}
 
-		static private System.Object CalculateFrustumPlanes(Parameters parameters)
+		static private System.Object CalculateFrustumPlanes(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Camera>())
 			{
@@ -86,7 +87,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean TestPlanesAABB(Parameters parameters)
+		static private System.Boolean TestPlanesAABB(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Plane[], UnityEngine.Bounds>())
 			{

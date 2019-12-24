@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,7 +48,7 @@ namespace General.Typescript
 			return default(UnityEngine.LineRenderer);
 		}
 
-		static private void BakeMesh(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private void BakeMesh(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Boolean>())
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3 GetPosition(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetPosition(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -96,7 +97,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Int32 GetPositions(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private System.Int32 GetPositions(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -118,7 +119,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetPosition(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private void SetPosition(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector3>())
 			{
@@ -140,7 +141,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPositions(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private void SetPositions(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3[]>())
 			{
@@ -162,7 +163,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Simplify(UnityEngine.LineRenderer instance, Parameters parameters)
+		static private void Simplify(UnityEngine.LineRenderer instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -184,162 +185,162 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_startWidth(UnityEngine.LineRenderer instance)
+		static private System.Single get_startWidth(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.startWidth;
 		}
 
-		static private void set_startWidth(UnityEngine.LineRenderer instance, System.Single value)
+		static private void set_startWidth(UnityEngine.LineRenderer instance, string name, System.Single value)
 		{
 			instance.startWidth = value;
 		}
 
-		static private System.Single get_endWidth(UnityEngine.LineRenderer instance)
+		static private System.Single get_endWidth(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.endWidth;
 		}
 
-		static private void set_endWidth(UnityEngine.LineRenderer instance, System.Single value)
+		static private void set_endWidth(UnityEngine.LineRenderer instance, string name, System.Single value)
 		{
 			instance.endWidth = value;
 		}
 
-		static private System.Single get_widthMultiplier(UnityEngine.LineRenderer instance)
+		static private System.Single get_widthMultiplier(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.widthMultiplier;
 		}
 
-		static private void set_widthMultiplier(UnityEngine.LineRenderer instance, System.Single value)
+		static private void set_widthMultiplier(UnityEngine.LineRenderer instance, string name, System.Single value)
 		{
 			instance.widthMultiplier = value;
 		}
 
-		static private System.Int32 get_numCornerVertices(UnityEngine.LineRenderer instance)
+		static private System.Int32 get_numCornerVertices(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.numCornerVertices;
 		}
 
-		static private void set_numCornerVertices(UnityEngine.LineRenderer instance, System.Int32 value)
+		static private void set_numCornerVertices(UnityEngine.LineRenderer instance, string name, System.Int32 value)
 		{
 			instance.numCornerVertices = value;
 		}
 
-		static private System.Int32 get_numCapVertices(UnityEngine.LineRenderer instance)
+		static private System.Int32 get_numCapVertices(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.numCapVertices;
 		}
 
-		static private void set_numCapVertices(UnityEngine.LineRenderer instance, System.Int32 value)
+		static private void set_numCapVertices(UnityEngine.LineRenderer instance, string name, System.Int32 value)
 		{
 			instance.numCapVertices = value;
 		}
 
-		static private System.Boolean get_useWorldSpace(UnityEngine.LineRenderer instance)
+		static private System.Boolean get_useWorldSpace(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.useWorldSpace;
 		}
 
-		static private void set_useWorldSpace(UnityEngine.LineRenderer instance, System.Boolean value)
+		static private void set_useWorldSpace(UnityEngine.LineRenderer instance, string name, System.Boolean value)
 		{
 			instance.useWorldSpace = value;
 		}
 
-		static private System.Boolean get_loop(UnityEngine.LineRenderer instance)
+		static private System.Boolean get_loop(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.loop;
 		}
 
-		static private void set_loop(UnityEngine.LineRenderer instance, System.Boolean value)
+		static private void set_loop(UnityEngine.LineRenderer instance, string name, System.Boolean value)
 		{
 			instance.loop = value;
 		}
 
-		static private UnityEngine.Color get_startColor(UnityEngine.LineRenderer instance)
+		static private UnityEngine.Color get_startColor(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.startColor;
 		}
 
-		static private void set_startColor(UnityEngine.LineRenderer instance, UnityEngine.Color value)
+		static private void set_startColor(UnityEngine.LineRenderer instance, string name, UnityEngine.Color value)
 		{
 			instance.startColor = value;
 		}
 
-		static private UnityEngine.Color get_endColor(UnityEngine.LineRenderer instance)
+		static private UnityEngine.Color get_endColor(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.endColor;
 		}
 
-		static private void set_endColor(UnityEngine.LineRenderer instance, UnityEngine.Color value)
+		static private void set_endColor(UnityEngine.LineRenderer instance, string name, UnityEngine.Color value)
 		{
 			instance.endColor = value;
 		}
 
-		static private System.Int32 get_positionCount(UnityEngine.LineRenderer instance)
+		static private System.Int32 get_positionCount(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.positionCount;
 		}
 
-		static private void set_positionCount(UnityEngine.LineRenderer instance, System.Int32 value)
+		static private void set_positionCount(UnityEngine.LineRenderer instance, string name, System.Int32 value)
 		{
 			instance.positionCount = value;
 		}
 
-		static private System.Single get_shadowBias(UnityEngine.LineRenderer instance)
+		static private System.Single get_shadowBias(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.shadowBias;
 		}
 
-		static private void set_shadowBias(UnityEngine.LineRenderer instance, System.Single value)
+		static private void set_shadowBias(UnityEngine.LineRenderer instance, string name, System.Single value)
 		{
 			instance.shadowBias = value;
 		}
 
-		static private System.Boolean get_generateLightingData(UnityEngine.LineRenderer instance)
+		static private System.Boolean get_generateLightingData(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.generateLightingData;
 		}
 
-		static private void set_generateLightingData(UnityEngine.LineRenderer instance, System.Boolean value)
+		static private void set_generateLightingData(UnityEngine.LineRenderer instance, string name, System.Boolean value)
 		{
 			instance.generateLightingData = value;
 		}
 
-		static private UnityEngine.LineTextureMode get_textureMode(UnityEngine.LineRenderer instance)
+		static private UnityEngine.LineTextureMode get_textureMode(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.textureMode;
 		}
 
-		static private void set_textureMode(UnityEngine.LineRenderer instance, UnityEngine.LineTextureMode value)
+		static private void set_textureMode(UnityEngine.LineRenderer instance, string name, UnityEngine.LineTextureMode value)
 		{
 			instance.textureMode = value;
 		}
 
-		static private UnityEngine.LineAlignment get_alignment(UnityEngine.LineRenderer instance)
+		static private UnityEngine.LineAlignment get_alignment(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.alignment;
 		}
 
-		static private void set_alignment(UnityEngine.LineRenderer instance, UnityEngine.LineAlignment value)
+		static private void set_alignment(UnityEngine.LineRenderer instance, string name, UnityEngine.LineAlignment value)
 		{
 			instance.alignment = value;
 		}
 
-		static private UnityEngine.AnimationCurve get_widthCurve(UnityEngine.LineRenderer instance)
+		static private UnityEngine.AnimationCurve get_widthCurve(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.widthCurve;
 		}
 
-		static private void set_widthCurve(UnityEngine.LineRenderer instance, UnityEngine.AnimationCurve value)
+		static private void set_widthCurve(UnityEngine.LineRenderer instance, string name, UnityEngine.AnimationCurve value)
 		{
 			instance.widthCurve = value;
 		}
 
-		static private UnityEngine.Gradient get_colorGradient(UnityEngine.LineRenderer instance)
+		static private UnityEngine.Gradient get_colorGradient(UnityEngine.LineRenderer instance, string name)
 		{
 			return instance.colorGradient;
 		}
 
-		static private void set_colorGradient(UnityEngine.LineRenderer instance, UnityEngine.Gradient value)
+		static private void set_colorGradient(UnityEngine.LineRenderer instance, string name, UnityEngine.Gradient value)
 		{
 			instance.colorGradient = value;
 		}

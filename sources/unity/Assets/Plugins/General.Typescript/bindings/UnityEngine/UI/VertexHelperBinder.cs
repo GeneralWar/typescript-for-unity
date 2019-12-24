@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(UnityEngine.UI.VertexHelper);
 		}
 
-		static private void AddTriangle(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void AddTriangle(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, System.Int32>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddUIVertexQuad(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void AddUIVertexQuad(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UIVertex[]>())
 			{
@@ -82,7 +83,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddVert(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void AddVert(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UIVertex>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void Clear(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.VertexHelper.Clear has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Dispose(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void Dispose(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.VertexHelper.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void FillMesh(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void FillMesh(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh>())
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetUIVertex(UnityEngine.UI.VertexHelper instance, Parameters parameters)
+		static private void SetUIVertex(UnityEngine.UI.VertexHelper instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UIVertex, System.Int32>())
 			{
@@ -186,12 +187,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_currentVertCount(UnityEngine.UI.VertexHelper instance)
+		static private System.Int32 get_currentVertCount(UnityEngine.UI.VertexHelper instance, string name)
 		{
 			return instance.currentVertCount;
 		}
 
-		static private System.Int32 get_currentIndexCount(UnityEngine.UI.VertexHelper instance)
+		static private System.Int32 get_currentIndexCount(UnityEngine.UI.VertexHelper instance, string name)
 		{
 			return instance.currentIndexCount;
 		}

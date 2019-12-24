@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,17 +35,17 @@ namespace General.Typescript
 			return default(UnityEngine.EventSystems.BaseEventData);
 		}
 
-		static private UnityEngine.EventSystems.BaseInputModule get_currentInputModule(UnityEngine.EventSystems.BaseEventData instance)
+		static private UnityEngine.EventSystems.BaseInputModule get_currentInputModule(UnityEngine.EventSystems.BaseEventData instance, string name)
 		{
 			return instance.currentInputModule;
 		}
 
-		static private UnityEngine.GameObject get_selectedObject(UnityEngine.EventSystems.BaseEventData instance)
+		static private UnityEngine.GameObject get_selectedObject(UnityEngine.EventSystems.BaseEventData instance, string name)
 		{
 			return instance.selectedObject;
 		}
 
-		static private void set_selectedObject(UnityEngine.EventSystems.BaseEventData instance, UnityEngine.GameObject value)
+		static private void set_selectedObject(UnityEngine.EventSystems.BaseEventData instance, string name, UnityEngine.GameObject value)
 		{
 			instance.selectedObject = value;
 		}

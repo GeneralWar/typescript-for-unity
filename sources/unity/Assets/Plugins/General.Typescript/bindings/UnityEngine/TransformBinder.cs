@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -50,7 +51,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("hierarchyCount", get_hierarchyCount, null);
 		}
 
-		static private void DetachChildren(UnityEngine.Transform instance, Parameters parameters)
+		static private void DetachChildren(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Transform.DetachChildren has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Transform Find(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Transform Find(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -86,7 +87,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Transform GetChild(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Transform GetChild(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -108,7 +109,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Transform instance, Parameters parameters)
+		static private System.Collections.IEnumerator GetEnumerator(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -123,7 +124,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetSiblingIndex(UnityEngine.Transform instance, Parameters parameters)
+		static private System.Int32 GetSiblingIndex(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -138,7 +139,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Vector3 InverseTransformDirection(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 InverseTransformDirection(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 InverseTransformPoint(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 InverseTransformPoint(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -190,7 +191,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 InverseTransformVector(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 InverseTransformVector(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -216,7 +217,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Boolean IsChildOf(UnityEngine.Transform instance, Parameters parameters)
+		static private System.Boolean IsChildOf(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -238,7 +239,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void LookAt(UnityEngine.Transform instance, Parameters parameters)
+		static private void LookAt(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -275,7 +276,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rotate(UnityEngine.Transform instance, Parameters parameters)
+		static private void Rotate(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -322,7 +323,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RotateAround(UnityEngine.Transform instance, Parameters parameters)
+		static private void RotateAround(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3, System.Single>())
 			{
@@ -344,7 +345,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetAsFirstSibling(UnityEngine.Transform instance, Parameters parameters)
+		static private void SetAsFirstSibling(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -358,7 +359,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Transform.SetAsFirstSibling has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetAsLastSibling(UnityEngine.Transform instance, Parameters parameters)
+		static private void SetAsLastSibling(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -372,7 +373,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Transform.SetAsLastSibling has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetParent(UnityEngine.Transform instance, Parameters parameters)
+		static private void SetParent(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -399,7 +400,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPositionAndRotation(UnityEngine.Transform instance, Parameters parameters)
+		static private void SetPositionAndRotation(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Quaternion>())
 			{
@@ -421,7 +422,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSiblingIndex(UnityEngine.Transform instance, Parameters parameters)
+		static private void SetSiblingIndex(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -443,7 +444,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3 TransformDirection(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 TransformDirection(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -469,7 +470,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 TransformPoint(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 TransformPoint(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -495,7 +496,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 TransformVector(UnityEngine.Transform instance, Parameters parameters)
+		static private UnityEngine.Vector3 TransformVector(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -521,7 +522,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void Translate(UnityEngine.Transform instance, Parameters parameters)
+		static private void Translate(UnityEngine.Transform instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -568,162 +569,162 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Vector3 get_position(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_position(UnityEngine.Transform instance, string name)
 		{
 			return instance.position;
 		}
 
-		static private void set_position(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_position(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.position = value;
 		}
 
-		static private System.Boolean get_hasChanged(UnityEngine.Transform instance)
+		static private System.Boolean get_hasChanged(UnityEngine.Transform instance, string name)
 		{
 			return instance.hasChanged;
 		}
 
-		static private void set_hasChanged(UnityEngine.Transform instance, System.Boolean value)
+		static private void set_hasChanged(UnityEngine.Transform instance, string name, System.Boolean value)
 		{
 			instance.hasChanged = value;
 		}
 
-		static private UnityEngine.Vector3 get_lossyScale(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_lossyScale(UnityEngine.Transform instance, string name)
 		{
 			return instance.lossyScale;
 		}
 
-		static private System.Int32 get_childCount(UnityEngine.Transform instance)
+		static private System.Int32 get_childCount(UnityEngine.Transform instance, string name)
 		{
 			return instance.childCount;
 		}
 
-		static private UnityEngine.Transform get_root(UnityEngine.Transform instance)
+		static private UnityEngine.Transform get_root(UnityEngine.Transform instance, string name)
 		{
 			return instance.root;
 		}
 
-		static private UnityEngine.Matrix4x4 get_localToWorldMatrix(UnityEngine.Transform instance)
+		static private UnityEngine.Matrix4x4 get_localToWorldMatrix(UnityEngine.Transform instance, string name)
 		{
 			return instance.localToWorldMatrix;
 		}
 
-		static private UnityEngine.Matrix4x4 get_worldToLocalMatrix(UnityEngine.Transform instance)
+		static private UnityEngine.Matrix4x4 get_worldToLocalMatrix(UnityEngine.Transform instance, string name)
 		{
 			return instance.worldToLocalMatrix;
 		}
 
-		static private UnityEngine.Transform get_parent(UnityEngine.Transform instance)
+		static private UnityEngine.Transform get_parent(UnityEngine.Transform instance, string name)
 		{
 			return instance.parent;
 		}
 
-		static private void set_parent(UnityEngine.Transform instance, UnityEngine.Transform value)
+		static private void set_parent(UnityEngine.Transform instance, string name, UnityEngine.Transform value)
 		{
 			instance.parent = value;
 		}
 
-		static private System.Int32 get_hierarchyCapacity(UnityEngine.Transform instance)
+		static private System.Int32 get_hierarchyCapacity(UnityEngine.Transform instance, string name)
 		{
 			return instance.hierarchyCapacity;
 		}
 
-		static private void set_hierarchyCapacity(UnityEngine.Transform instance, System.Int32 value)
+		static private void set_hierarchyCapacity(UnityEngine.Transform instance, string name, System.Int32 value)
 		{
 			instance.hierarchyCapacity = value;
 		}
 
-		static private UnityEngine.Vector3 get_localScale(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_localScale(UnityEngine.Transform instance, string name)
 		{
 			return instance.localScale;
 		}
 
-		static private void set_localScale(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_localScale(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.localScale = value;
 		}
 
-		static private UnityEngine.Quaternion get_rotation(UnityEngine.Transform instance)
+		static private UnityEngine.Quaternion get_rotation(UnityEngine.Transform instance, string name)
 		{
 			return instance.rotation;
 		}
 
-		static private void set_rotation(UnityEngine.Transform instance, UnityEngine.Quaternion value)
+		static private void set_rotation(UnityEngine.Transform instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.rotation = value;
 		}
 
-		static private UnityEngine.Vector3 get_forward(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_forward(UnityEngine.Transform instance, string name)
 		{
 			return instance.forward;
 		}
 
-		static private void set_forward(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_forward(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.forward = value;
 		}
 
-		static private UnityEngine.Vector3 get_up(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_up(UnityEngine.Transform instance, string name)
 		{
 			return instance.up;
 		}
 
-		static private void set_up(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_up(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.up = value;
 		}
 
-		static private UnityEngine.Vector3 get_right(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_right(UnityEngine.Transform instance, string name)
 		{
 			return instance.right;
 		}
 
-		static private void set_right(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_right(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.right = value;
 		}
 
-		static private UnityEngine.Vector3 get_localEulerAngles(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_localEulerAngles(UnityEngine.Transform instance, string name)
 		{
 			return instance.localEulerAngles;
 		}
 
-		static private void set_localEulerAngles(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_localEulerAngles(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.localEulerAngles = value;
 		}
 
-		static private UnityEngine.Vector3 get_eulerAngles(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_eulerAngles(UnityEngine.Transform instance, string name)
 		{
 			return instance.eulerAngles;
 		}
 
-		static private void set_eulerAngles(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_eulerAngles(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.eulerAngles = value;
 		}
 
-		static private UnityEngine.Vector3 get_localPosition(UnityEngine.Transform instance)
+		static private UnityEngine.Vector3 get_localPosition(UnityEngine.Transform instance, string name)
 		{
 			return instance.localPosition;
 		}
 
-		static private void set_localPosition(UnityEngine.Transform instance, UnityEngine.Vector3 value)
+		static private void set_localPosition(UnityEngine.Transform instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.localPosition = value;
 		}
 
-		static private UnityEngine.Quaternion get_localRotation(UnityEngine.Transform instance)
+		static private UnityEngine.Quaternion get_localRotation(UnityEngine.Transform instance, string name)
 		{
 			return instance.localRotation;
 		}
 
-		static private void set_localRotation(UnityEngine.Transform instance, UnityEngine.Quaternion value)
+		static private void set_localRotation(UnityEngine.Transform instance, string name, UnityEngine.Quaternion value)
 		{
 			instance.localRotation = value;
 		}
 
-		static private System.Int32 get_hierarchyCount(UnityEngine.Transform instance)
+		static private System.Int32 get_hierarchyCount(UnityEngine.Transform instance, string name)
 		{
 			return instance.hierarchyCount;
 		}

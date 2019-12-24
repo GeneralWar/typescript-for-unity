@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("GetNativeRenderBufferPtr", GetNativeRenderBufferPtr);
 		}
 
-		static private System.IntPtr GetNativeRenderBufferPtr(UnityEngine.RenderBuffer instance, Parameters parameters)
+		static private System.IntPtr GetNativeRenderBufferPtr(UnityEngine.RenderBuffer instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

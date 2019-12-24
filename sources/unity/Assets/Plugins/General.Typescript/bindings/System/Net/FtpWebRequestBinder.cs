@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("Timeout", get_Timeout, set_Timeout);
 		}
 
-		static private void Abort(System.Net.FtpWebRequest instance, Parameters parameters)
+		static private void Abort(System.Net.FtpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -50,7 +51,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.FtpWebRequest.Abort has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IO.Stream EndGetRequestStream(System.Net.FtpWebRequest instance, Parameters parameters)
+		static private System.IO.Stream EndGetRequestStream(System.Net.FtpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -72,7 +73,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse EndGetResponse(System.Net.FtpWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse EndGetResponse(System.Net.FtpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -94,7 +95,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.Stream GetRequestStream(System.Net.FtpWebRequest instance, Parameters parameters)
+		static private System.IO.Stream GetRequestStream(System.Net.FtpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -109,7 +110,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse GetResponse(System.Net.FtpWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse GetResponse(System.Net.FtpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -124,202 +125,202 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.Cache.RequestCachePolicy get_DefaultCachePolicy()
+		static private System.Net.Cache.RequestCachePolicy get_DefaultCachePolicy(Type type, string name)
 		{
 			return System.Net.FtpWebRequest.DefaultCachePolicy;
 		}
 
-		static private void set_DefaultCachePolicy(System.Net.Cache.RequestCachePolicy value)
+		static private void set_DefaultCachePolicy(Type type, string name, System.Net.Cache.RequestCachePolicy value)
 		{
 			System.Net.FtpWebRequest.DefaultCachePolicy = value;
 		}
 
-		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.FtpWebRequest instance)
+		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ClientCertificates;
 		}
 
-		static private void set_ClientCertificates(System.Net.FtpWebRequest instance, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
+		static private void set_ClientCertificates(System.Net.FtpWebRequest instance, string name, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
 		{
 			instance.ClientCertificates = value;
 		}
 
-		static private System.Boolean get_UseDefaultCredentials(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_UseDefaultCredentials(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.UseDefaultCredentials;
 		}
 
-		static private void set_UseDefaultCredentials(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_UseDefaultCredentials(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UseDefaultCredentials = value;
 		}
 
-		static private System.Boolean get_UsePassive(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_UsePassive(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.UsePassive;
 		}
 
-		static private void set_UsePassive(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_UsePassive(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UsePassive = value;
 		}
 
-		static private System.Net.ServicePoint get_ServicePoint(System.Net.FtpWebRequest instance)
+		static private System.Net.ServicePoint get_ServicePoint(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ServicePoint;
 		}
 
-		static private System.Uri get_RequestUri(System.Net.FtpWebRequest instance)
+		static private System.Uri get_RequestUri(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.RequestUri;
 		}
 
-		static private System.String get_RenameTo(System.Net.FtpWebRequest instance)
+		static private System.String get_RenameTo(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.RenameTo;
 		}
 
-		static private void set_RenameTo(System.Net.FtpWebRequest instance, System.String value)
+		static private void set_RenameTo(System.Net.FtpWebRequest instance, string name, System.String value)
 		{
 			instance.RenameTo = value;
 		}
 
-		static private System.Int32 get_ReadWriteTimeout(System.Net.FtpWebRequest instance)
+		static private System.Int32 get_ReadWriteTimeout(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ReadWriteTimeout;
 		}
 
-		static private void set_ReadWriteTimeout(System.Net.FtpWebRequest instance, System.Int32 value)
+		static private void set_ReadWriteTimeout(System.Net.FtpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.ReadWriteTimeout = value;
 		}
 
-		static private System.Net.IWebProxy get_Proxy(System.Net.FtpWebRequest instance)
+		static private System.Net.IWebProxy get_Proxy(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.Proxy;
 		}
 
-		static private void set_Proxy(System.Net.FtpWebRequest instance, System.Net.IWebProxy value)
+		static private void set_Proxy(System.Net.FtpWebRequest instance, string name, System.Net.IWebProxy value)
 		{
 			instance.Proxy = value;
 		}
 
-		static private System.Boolean get_PreAuthenticate(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_PreAuthenticate(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.PreAuthenticate;
 		}
 
-		static private void set_PreAuthenticate(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_PreAuthenticate(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.PreAuthenticate = value;
 		}
 
-		static private System.String get_Method(System.Net.FtpWebRequest instance)
+		static private System.String get_Method(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.Method;
 		}
 
-		static private void set_Method(System.Net.FtpWebRequest instance, System.String value)
+		static private void set_Method(System.Net.FtpWebRequest instance, string name, System.String value)
 		{
 			instance.Method = value;
 		}
 
-		static private System.Boolean get_KeepAlive(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_KeepAlive(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.KeepAlive;
 		}
 
-		static private void set_KeepAlive(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_KeepAlive(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.KeepAlive = value;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.FtpWebRequest instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private void set_Headers(System.Net.FtpWebRequest instance, System.Net.WebHeaderCollection value)
+		static private void set_Headers(System.Net.FtpWebRequest instance, string name, System.Net.WebHeaderCollection value)
 		{
 			instance.Headers = value;
 		}
 
-		static private System.Boolean get_EnableSsl(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_EnableSsl(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.EnableSsl;
 		}
 
-		static private void set_EnableSsl(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_EnableSsl(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.EnableSsl = value;
 		}
 
-		static private System.Net.ICredentials get_Credentials(System.Net.FtpWebRequest instance)
+		static private System.Net.ICredentials get_Credentials(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.Credentials;
 		}
 
-		static private void set_Credentials(System.Net.FtpWebRequest instance, System.Net.ICredentials value)
+		static private void set_Credentials(System.Net.FtpWebRequest instance, string name, System.Net.ICredentials value)
 		{
 			instance.Credentials = value;
 		}
 
-		static private System.Int64 get_ContentOffset(System.Net.FtpWebRequest instance)
+		static private System.Int64 get_ContentOffset(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ContentOffset;
 		}
 
-		static private void set_ContentOffset(System.Net.FtpWebRequest instance, System.Int64 value)
+		static private void set_ContentOffset(System.Net.FtpWebRequest instance, string name, System.Int64 value)
 		{
 			instance.ContentOffset = value;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.FtpWebRequest instance)
+		static private System.Int64 get_ContentLength(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private void set_ContentLength(System.Net.FtpWebRequest instance, System.Int64 value)
+		static private void set_ContentLength(System.Net.FtpWebRequest instance, string name, System.Int64 value)
 		{
 			instance.ContentLength = value;
 		}
 
-		static private System.String get_ContentType(System.Net.FtpWebRequest instance)
+		static private System.String get_ContentType(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ContentType;
 		}
 
-		static private void set_ContentType(System.Net.FtpWebRequest instance, System.String value)
+		static private void set_ContentType(System.Net.FtpWebRequest instance, string name, System.String value)
 		{
 			instance.ContentType = value;
 		}
 
-		static private System.String get_ConnectionGroupName(System.Net.FtpWebRequest instance)
+		static private System.String get_ConnectionGroupName(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.ConnectionGroupName;
 		}
 
-		static private void set_ConnectionGroupName(System.Net.FtpWebRequest instance, System.String value)
+		static private void set_ConnectionGroupName(System.Net.FtpWebRequest instance, string name, System.String value)
 		{
 			instance.ConnectionGroupName = value;
 		}
 
-		static private System.Boolean get_UseBinary(System.Net.FtpWebRequest instance)
+		static private System.Boolean get_UseBinary(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.UseBinary;
 		}
 
-		static private void set_UseBinary(System.Net.FtpWebRequest instance, System.Boolean value)
+		static private void set_UseBinary(System.Net.FtpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UseBinary = value;
 		}
 
-		static private System.Int32 get_Timeout(System.Net.FtpWebRequest instance)
+		static private System.Int32 get_Timeout(System.Net.FtpWebRequest instance, string name)
 		{
 			return instance.Timeout;
 		}
 
-		static private void set_Timeout(System.Net.FtpWebRequest instance, System.Int32 value)
+		static private void set_Timeout(System.Net.FtpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.Timeout = value;
 		}

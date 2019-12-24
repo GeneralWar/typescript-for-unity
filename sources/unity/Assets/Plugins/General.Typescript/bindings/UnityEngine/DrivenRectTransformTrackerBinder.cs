@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,7 +13,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("Clear", Clear);
 		}
 
-		static private void Add(UnityEngine.DrivenRectTransformTracker instance, Parameters parameters)
+		static private void Add(UnityEngine.DrivenRectTransformTracker instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object, UnityEngine.RectTransform, UnityEngine.DrivenTransformProperties>())
 			{
@@ -34,7 +35,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(UnityEngine.DrivenRectTransformTracker instance, Parameters parameters)
+		static private void Clear(UnityEngine.DrivenRectTransformTracker instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

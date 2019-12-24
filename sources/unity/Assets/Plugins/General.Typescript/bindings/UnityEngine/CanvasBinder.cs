@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,7 +48,7 @@ namespace General.Typescript
 			return default(UnityEngine.Canvas);
 		}
 
-		static private void ForceUpdateCanvases(Parameters parameters)
+		static private void ForceUpdateCanvases(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -61,7 +62,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Canvas.ForceUpdateCanvases has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Material GetDefaultCanvasMaterial(Parameters parameters)
+		static private UnityEngine.Material GetDefaultCanvasMaterial(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -76,7 +77,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Material GetETC1SupportedCanvasMaterial(Parameters parameters)
+		static private UnityEngine.Material GetETC1SupportedCanvasMaterial(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -91,167 +92,167 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.RenderMode get_renderMode(UnityEngine.Canvas instance)
+		static private UnityEngine.RenderMode get_renderMode(UnityEngine.Canvas instance, string name)
 		{
 			return instance.renderMode;
 		}
 
-		static private void set_renderMode(UnityEngine.Canvas instance, UnityEngine.RenderMode value)
+		static private void set_renderMode(UnityEngine.Canvas instance, string name, UnityEngine.RenderMode value)
 		{
 			instance.renderMode = value;
 		}
 
-		static private UnityEngine.Canvas get_rootCanvas(UnityEngine.Canvas instance)
+		static private UnityEngine.Canvas get_rootCanvas(UnityEngine.Canvas instance, string name)
 		{
 			return instance.rootCanvas;
 		}
 
-		static private System.String get_sortingLayerName(UnityEngine.Canvas instance)
+		static private System.String get_sortingLayerName(UnityEngine.Canvas instance, string name)
 		{
 			return instance.sortingLayerName;
 		}
 
-		static private void set_sortingLayerName(UnityEngine.Canvas instance, System.String value)
+		static private void set_sortingLayerName(UnityEngine.Canvas instance, string name, System.String value)
 		{
 			instance.sortingLayerName = value;
 		}
 
-		static private UnityEngine.AdditionalCanvasShaderChannels get_additionalShaderChannels(UnityEngine.Canvas instance)
+		static private UnityEngine.AdditionalCanvasShaderChannels get_additionalShaderChannels(UnityEngine.Canvas instance, string name)
 		{
 			return instance.additionalShaderChannels;
 		}
 
-		static private void set_additionalShaderChannels(UnityEngine.Canvas instance, UnityEngine.AdditionalCanvasShaderChannels value)
+		static private void set_additionalShaderChannels(UnityEngine.Canvas instance, string name, UnityEngine.AdditionalCanvasShaderChannels value)
 		{
 			instance.additionalShaderChannels = value;
 		}
 
-		static private System.Int32 get_cachedSortingLayerValue(UnityEngine.Canvas instance)
+		static private System.Int32 get_cachedSortingLayerValue(UnityEngine.Canvas instance, string name)
 		{
 			return instance.cachedSortingLayerValue;
 		}
 
-		static private System.Int32 get_sortingLayerID(UnityEngine.Canvas instance)
+		static private System.Int32 get_sortingLayerID(UnityEngine.Canvas instance, string name)
 		{
 			return instance.sortingLayerID;
 		}
 
-		static private void set_sortingLayerID(UnityEngine.Canvas instance, System.Int32 value)
+		static private void set_sortingLayerID(UnityEngine.Canvas instance, string name, System.Int32 value)
 		{
 			instance.sortingLayerID = value;
 		}
 
-		static private System.Int32 get_targetDisplay(UnityEngine.Canvas instance)
+		static private System.Int32 get_targetDisplay(UnityEngine.Canvas instance, string name)
 		{
 			return instance.targetDisplay;
 		}
 
-		static private void set_targetDisplay(UnityEngine.Canvas instance, System.Int32 value)
+		static private void set_targetDisplay(UnityEngine.Canvas instance, string name, System.Int32 value)
 		{
 			instance.targetDisplay = value;
 		}
 
-		static private System.Int32 get_sortingOrder(UnityEngine.Canvas instance)
+		static private System.Int32 get_sortingOrder(UnityEngine.Canvas instance, string name)
 		{
 			return instance.sortingOrder;
 		}
 
-		static private void set_sortingOrder(UnityEngine.Canvas instance, System.Int32 value)
+		static private void set_sortingOrder(UnityEngine.Canvas instance, string name, System.Int32 value)
 		{
 			instance.sortingOrder = value;
 		}
 
-		static private UnityEngine.Camera get_worldCamera(UnityEngine.Canvas instance)
+		static private UnityEngine.Camera get_worldCamera(UnityEngine.Canvas instance, string name)
 		{
 			return instance.worldCamera;
 		}
 
-		static private void set_worldCamera(UnityEngine.Canvas instance, UnityEngine.Camera value)
+		static private void set_worldCamera(UnityEngine.Canvas instance, string name, UnityEngine.Camera value)
 		{
 			instance.worldCamera = value;
 		}
 
-		static private System.Boolean get_overrideSorting(UnityEngine.Canvas instance)
+		static private System.Boolean get_overrideSorting(UnityEngine.Canvas instance, string name)
 		{
 			return instance.overrideSorting;
 		}
 
-		static private void set_overrideSorting(UnityEngine.Canvas instance, System.Boolean value)
+		static private void set_overrideSorting(UnityEngine.Canvas instance, string name, System.Boolean value)
 		{
 			instance.overrideSorting = value;
 		}
 
-		static private System.Single get_planeDistance(UnityEngine.Canvas instance)
+		static private System.Single get_planeDistance(UnityEngine.Canvas instance, string name)
 		{
 			return instance.planeDistance;
 		}
 
-		static private void set_planeDistance(UnityEngine.Canvas instance, System.Single value)
+		static private void set_planeDistance(UnityEngine.Canvas instance, string name, System.Single value)
 		{
 			instance.planeDistance = value;
 		}
 
-		static private System.Boolean get_pixelPerfect(UnityEngine.Canvas instance)
+		static private System.Boolean get_pixelPerfect(UnityEngine.Canvas instance, string name)
 		{
 			return instance.pixelPerfect;
 		}
 
-		static private void set_pixelPerfect(UnityEngine.Canvas instance, System.Boolean value)
+		static private void set_pixelPerfect(UnityEngine.Canvas instance, string name, System.Boolean value)
 		{
 			instance.pixelPerfect = value;
 		}
 
-		static private System.Boolean get_overridePixelPerfect(UnityEngine.Canvas instance)
+		static private System.Boolean get_overridePixelPerfect(UnityEngine.Canvas instance, string name)
 		{
 			return instance.overridePixelPerfect;
 		}
 
-		static private void set_overridePixelPerfect(UnityEngine.Canvas instance, System.Boolean value)
+		static private void set_overridePixelPerfect(UnityEngine.Canvas instance, string name, System.Boolean value)
 		{
 			instance.overridePixelPerfect = value;
 		}
 
-		static private System.Single get_referencePixelsPerUnit(UnityEngine.Canvas instance)
+		static private System.Single get_referencePixelsPerUnit(UnityEngine.Canvas instance, string name)
 		{
 			return instance.referencePixelsPerUnit;
 		}
 
-		static private void set_referencePixelsPerUnit(UnityEngine.Canvas instance, System.Single value)
+		static private void set_referencePixelsPerUnit(UnityEngine.Canvas instance, string name, System.Single value)
 		{
 			instance.referencePixelsPerUnit = value;
 		}
 
-		static private System.Single get_scaleFactor(UnityEngine.Canvas instance)
+		static private System.Single get_scaleFactor(UnityEngine.Canvas instance, string name)
 		{
 			return instance.scaleFactor;
 		}
 
-		static private void set_scaleFactor(UnityEngine.Canvas instance, System.Single value)
+		static private void set_scaleFactor(UnityEngine.Canvas instance, string name, System.Single value)
 		{
 			instance.scaleFactor = value;
 		}
 
-		static private UnityEngine.Rect get_pixelRect(UnityEngine.Canvas instance)
+		static private UnityEngine.Rect get_pixelRect(UnityEngine.Canvas instance, string name)
 		{
 			return instance.pixelRect;
 		}
 
-		static private System.Boolean get_isRootCanvas(UnityEngine.Canvas instance)
+		static private System.Boolean get_isRootCanvas(UnityEngine.Canvas instance, string name)
 		{
 			return instance.isRootCanvas;
 		}
 
-		static private System.Int32 get_renderOrder(UnityEngine.Canvas instance)
+		static private System.Int32 get_renderOrder(UnityEngine.Canvas instance, string name)
 		{
 			return instance.renderOrder;
 		}
 
-		static private System.Single get_normalizedSortingGridSize(UnityEngine.Canvas instance)
+		static private System.Single get_normalizedSortingGridSize(UnityEngine.Canvas instance, string name)
 		{
 			return instance.normalizedSortingGridSize;
 		}
 
-		static private void set_normalizedSortingGridSize(UnityEngine.Canvas instance, System.Single value)
+		static private void set_normalizedSortingGridSize(UnityEngine.Canvas instance, string name, System.Single value)
 		{
 			instance.normalizedSortingGridSize = value;
 		}

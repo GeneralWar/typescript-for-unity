@@ -29,3 +29,66 @@ root
 │ ├── compile // 编译用工具目录 compile tools
 │ ├── utils
 ```
+
+## 使用说明 Instructions
+
+### 使用Javascript运行时 JavaScript Runtime
+
+1. 通过菜单栏General->Typescript->Initialize创建本地配置*config.asset*。  
+   Use menu item General->Typescript->Intialize to create local configurations *config.asset*.
+
+2. ```
+    General.Typescript.Entry.Initialize();
+    General.Typescript.Entry.Execute("console.log(\"Hello world!\");", "");
+   ```
+
+### 使用动态绑定 Dynamic Binding
+
+动态绑定仅用于Windows/Mac/Android平台，iOS平台无法使用，因为iOS平台禁止使用反射机制。  
+目前只支持动态绑定类，暂时不支持枚举。  
+动态绑定只是需要扩展绑定的`临时方案`，因为反射机制的`运行效率较低`，不建议长期使用。  
+Dynamic binding only can use on Windows/Mac/Android, iOS is not supported, as reflection is forbidden on iOS.  
+It only support to bind class now, not enum.  
+Dynamic binding is a `temporary solution` for binding extension, it is not recommended to use it for a long term because `reflection is slow`.  
+
+1. 首先，在任何可以访问的位置（最好是相对路径）创建一个配置文件*binding-config.json*。  
+   First, creat *binding-config.json* at any writable path (relative prefers) as the config file.  
+   例如：
+   ```
+   {
+        "assemblies": [
+            {
+                "name": "System",
+                "types": [
+                    "System.Net.WebClient"
+                ]
+            },
+            {
+                "name": "UnityEngine.CoreModule",
+                "types": [
+                    "UnityEngine.Application",
+                    "UnityEngine.GameObject"
+                ]
+            },
+            {
+                "name": "UnityEngine.UI",
+                "types": [
+                    "UnityEngine.UI.Text"
+                ]
+            }
+        ]
+    }
+   ```
+
+2. 在*config.asset*中设置*ExtraBindingConfigs*数组，以便通过绑定窗口生成创建智能提示文件*d.ts*。  
+   Config array *ExtraBindingConfigs* in *config.asset*, then BindingWindow will be able to generate snippets *d.ts* for extra bindings.
+
+3. 通过以下代码，可以动态绑定类型。  
+   Bind types dynamically.
+   ```
+    if (General.Typescript.Entry.Initialize())
+    {
+        General.Typescript.FileUtility.AddSearchPath(*a search path*);
+        General.Typescript.BinderUtility.BindFromJson(*binding config's relative path from any search path*);
+    }
+   ```

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -49,7 +50,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("layoutPriority", get_layoutPriority, null);
 		}
 
-		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void CalculateLayoutInputHorizontal(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -63,7 +64,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.CalculateLayoutInputHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void CalculateLayoutInputVertical(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void CalculateLayoutInputVertical(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.CalculateLayoutInputVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void GraphicUpdateComplete(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void GraphicUpdateComplete(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -91,7 +92,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.GraphicUpdateComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean IsActive(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private System.Boolean IsActive(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -106,7 +107,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void LayoutComplete(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void LayoutComplete(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.LayoutComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void OnBeginDrag(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void OnBeginDrag(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnDrag(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void OnDrag(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnEndDrag(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void OnEndDrag(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -186,7 +187,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnInitializePotentialDrag(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void OnInitializePotentialDrag(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -208,7 +209,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnScroll(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void OnScroll(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -230,7 +231,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Rebuild(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void Rebuild(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.CanvasUpdate>())
 			{
@@ -252,7 +253,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLayoutHorizontal(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void SetLayoutHorizontal(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -266,7 +267,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.SetLayoutHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutVertical(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void SetLayoutVertical(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -280,7 +281,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.SetLayoutVertical has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void StopMovement(UnityEngine.UI.ScrollRect instance, Parameters parameters)
+		static private void StopMovement(UnityEngine.UI.ScrollRect instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -294,197 +295,197 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ScrollRect.StopMovement has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.RectTransform get_content(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.RectTransform get_content(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.content;
 		}
 
-		static private void set_content(UnityEngine.UI.ScrollRect instance, UnityEngine.RectTransform value)
+		static private void set_content(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.content = value;
 		}
 
-		static private System.Single get_preferredHeight(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_preferredHeight(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.preferredHeight;
 		}
 
-		static private System.Single get_minHeight(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_minHeight(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.minHeight;
 		}
 
-		static private System.Single get_flexibleWidth(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_flexibleWidth(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.flexibleWidth;
 		}
 
-		static private System.Single get_preferredWidth(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_preferredWidth(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.preferredWidth;
 		}
 
-		static private System.Single get_minWidth(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_minWidth(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.minWidth;
 		}
 
-		static private System.Single get_verticalNormalizedPosition(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_verticalNormalizedPosition(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.verticalNormalizedPosition;
 		}
 
-		static private void set_verticalNormalizedPosition(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_verticalNormalizedPosition(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.verticalNormalizedPosition = value;
 		}
 
-		static private System.Single get_horizontalNormalizedPosition(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_horizontalNormalizedPosition(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.horizontalNormalizedPosition;
 		}
 
-		static private void set_horizontalNormalizedPosition(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_horizontalNormalizedPosition(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.horizontalNormalizedPosition = value;
 		}
 
-		static private UnityEngine.Vector2 get_normalizedPosition(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.Vector2 get_normalizedPosition(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.normalizedPosition;
 		}
 
-		static private void set_normalizedPosition(UnityEngine.UI.ScrollRect instance, UnityEngine.Vector2 value)
+		static private void set_normalizedPosition(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.normalizedPosition = value;
 		}
 
-		static private UnityEngine.Vector2 get_velocity(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.Vector2 get_velocity(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private void set_velocity(UnityEngine.UI.ScrollRect instance, UnityEngine.Vector2 value)
+		static private void set_velocity(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.velocity = value;
 		}
 
-		static private System.Single get_flexibleHeight(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_flexibleHeight(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.flexibleHeight;
 		}
 
-		static private System.Single get_verticalScrollbarSpacing(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_verticalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.verticalScrollbarSpacing;
 		}
 
-		static private void set_verticalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_verticalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.verticalScrollbarSpacing = value;
 		}
 
-		static private UnityEngine.UI.Scrollbar get_verticalScrollbar(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.UI.Scrollbar get_verticalScrollbar(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.verticalScrollbar;
 		}
 
-		static private void set_verticalScrollbar(UnityEngine.UI.ScrollRect instance, UnityEngine.UI.Scrollbar value)
+		static private void set_verticalScrollbar(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.UI.Scrollbar value)
 		{
 			instance.verticalScrollbar = value;
 		}
 
-		static private UnityEngine.UI.Scrollbar get_horizontalScrollbar(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.UI.Scrollbar get_horizontalScrollbar(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.horizontalScrollbar;
 		}
 
-		static private void set_horizontalScrollbar(UnityEngine.UI.ScrollRect instance, UnityEngine.UI.Scrollbar value)
+		static private void set_horizontalScrollbar(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.UI.Scrollbar value)
 		{
 			instance.horizontalScrollbar = value;
 		}
 
-		static private UnityEngine.RectTransform get_viewport(UnityEngine.UI.ScrollRect instance)
+		static private UnityEngine.RectTransform get_viewport(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.viewport;
 		}
 
-		static private void set_viewport(UnityEngine.UI.ScrollRect instance, UnityEngine.RectTransform value)
+		static private void set_viewport(UnityEngine.UI.ScrollRect instance, string name, UnityEngine.RectTransform value)
 		{
 			instance.viewport = value;
 		}
 
-		static private System.Single get_scrollSensitivity(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_scrollSensitivity(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.scrollSensitivity;
 		}
 
-		static private void set_scrollSensitivity(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_scrollSensitivity(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.scrollSensitivity = value;
 		}
 
-		static private System.Single get_decelerationRate(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_decelerationRate(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.decelerationRate;
 		}
 
-		static private void set_decelerationRate(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_decelerationRate(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.decelerationRate = value;
 		}
 
-		static private System.Boolean get_inertia(UnityEngine.UI.ScrollRect instance)
+		static private System.Boolean get_inertia(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.inertia;
 		}
 
-		static private void set_inertia(UnityEngine.UI.ScrollRect instance, System.Boolean value)
+		static private void set_inertia(UnityEngine.UI.ScrollRect instance, string name, System.Boolean value)
 		{
 			instance.inertia = value;
 		}
 
-		static private System.Single get_elasticity(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_elasticity(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.elasticity;
 		}
 
-		static private void set_elasticity(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_elasticity(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.elasticity = value;
 		}
 
-		static private System.Boolean get_vertical(UnityEngine.UI.ScrollRect instance)
+		static private System.Boolean get_vertical(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.vertical;
 		}
 
-		static private void set_vertical(UnityEngine.UI.ScrollRect instance, System.Boolean value)
+		static private void set_vertical(UnityEngine.UI.ScrollRect instance, string name, System.Boolean value)
 		{
 			instance.vertical = value;
 		}
 
-		static private System.Boolean get_horizontal(UnityEngine.UI.ScrollRect instance)
+		static private System.Boolean get_horizontal(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.horizontal;
 		}
 
-		static private void set_horizontal(UnityEngine.UI.ScrollRect instance, System.Boolean value)
+		static private void set_horizontal(UnityEngine.UI.ScrollRect instance, string name, System.Boolean value)
 		{
 			instance.horizontal = value;
 		}
 
-		static private System.Single get_horizontalScrollbarSpacing(UnityEngine.UI.ScrollRect instance)
+		static private System.Single get_horizontalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.horizontalScrollbarSpacing;
 		}
 
-		static private void set_horizontalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, System.Single value)
+		static private void set_horizontalScrollbarSpacing(UnityEngine.UI.ScrollRect instance, string name, System.Single value)
 		{
 			instance.horizontalScrollbarSpacing = value;
 		}
 
-		static private System.Int32 get_layoutPriority(UnityEngine.UI.ScrollRect instance)
+		static private System.Int32 get_layoutPriority(UnityEngine.UI.ScrollRect instance, string name)
 		{
 			return instance.layoutPriority;
 		}

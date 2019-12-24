@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,72 +34,72 @@ namespace General.Typescript
 			return default(UnityEngine.HingeJoint);
 		}
 
-		static private UnityEngine.JointMotor get_motor(UnityEngine.HingeJoint instance)
+		static private UnityEngine.JointMotor get_motor(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.motor;
 		}
 
-		static private void set_motor(UnityEngine.HingeJoint instance, UnityEngine.JointMotor value)
+		static private void set_motor(UnityEngine.HingeJoint instance, string name, UnityEngine.JointMotor value)
 		{
 			instance.motor = value;
 		}
 
-		static private UnityEngine.JointLimits get_limits(UnityEngine.HingeJoint instance)
+		static private UnityEngine.JointLimits get_limits(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.limits;
 		}
 
-		static private void set_limits(UnityEngine.HingeJoint instance, UnityEngine.JointLimits value)
+		static private void set_limits(UnityEngine.HingeJoint instance, string name, UnityEngine.JointLimits value)
 		{
 			instance.limits = value;
 		}
 
-		static private UnityEngine.JointSpring get_spring(UnityEngine.HingeJoint instance)
+		static private UnityEngine.JointSpring get_spring(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.spring;
 		}
 
-		static private void set_spring(UnityEngine.HingeJoint instance, UnityEngine.JointSpring value)
+		static private void set_spring(UnityEngine.HingeJoint instance, string name, UnityEngine.JointSpring value)
 		{
 			instance.spring = value;
 		}
 
-		static private System.Boolean get_useMotor(UnityEngine.HingeJoint instance)
+		static private System.Boolean get_useMotor(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.useMotor;
 		}
 
-		static private void set_useMotor(UnityEngine.HingeJoint instance, System.Boolean value)
+		static private void set_useMotor(UnityEngine.HingeJoint instance, string name, System.Boolean value)
 		{
 			instance.useMotor = value;
 		}
 
-		static private System.Boolean get_useLimits(UnityEngine.HingeJoint instance)
+		static private System.Boolean get_useLimits(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.useLimits;
 		}
 
-		static private void set_useLimits(UnityEngine.HingeJoint instance, System.Boolean value)
+		static private void set_useLimits(UnityEngine.HingeJoint instance, string name, System.Boolean value)
 		{
 			instance.useLimits = value;
 		}
 
-		static private System.Boolean get_useSpring(UnityEngine.HingeJoint instance)
+		static private System.Boolean get_useSpring(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.useSpring;
 		}
 
-		static private void set_useSpring(UnityEngine.HingeJoint instance, System.Boolean value)
+		static private void set_useSpring(UnityEngine.HingeJoint instance, string name, System.Boolean value)
 		{
 			instance.useSpring = value;
 		}
 
-		static private System.Single get_velocity(UnityEngine.HingeJoint instance)
+		static private System.Single get_velocity(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.velocity;
 		}
 
-		static private System.Single get_angle(UnityEngine.HingeJoint instance)
+		static private System.Single get_angle(UnityEngine.HingeJoint instance, string name)
 		{
 			return instance.angle;
 		}

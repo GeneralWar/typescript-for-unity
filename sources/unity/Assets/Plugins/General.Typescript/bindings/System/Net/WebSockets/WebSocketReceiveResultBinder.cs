@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,22 +37,22 @@ namespace General.Typescript
 			return default(System.Net.WebSockets.WebSocketReceiveResult);
 		}
 
-		static private System.Int32 get_Count(System.Net.WebSockets.WebSocketReceiveResult instance)
+		static private System.Int32 get_Count(System.Net.WebSockets.WebSocketReceiveResult instance, string name)
 		{
 			return instance.Count;
 		}
 
-		static private System.Boolean get_EndOfMessage(System.Net.WebSockets.WebSocketReceiveResult instance)
+		static private System.Boolean get_EndOfMessage(System.Net.WebSockets.WebSocketReceiveResult instance, string name)
 		{
 			return instance.EndOfMessage;
 		}
 
-		static private System.Net.WebSockets.WebSocketMessageType get_MessageType(System.Net.WebSockets.WebSocketReceiveResult instance)
+		static private System.Net.WebSockets.WebSocketMessageType get_MessageType(System.Net.WebSockets.WebSocketReceiveResult instance, string name)
 		{
 			return instance.MessageType;
 		}
 
-		static private System.String get_CloseStatusDescription(System.Net.WebSockets.WebSocketReceiveResult instance)
+		static private System.String get_CloseStatusDescription(System.Net.WebSockets.WebSocketReceiveResult instance, string name)
 		{
 			return instance.CloseStatusDescription;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,7 +17,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("allowSwitchOff", get_allowSwitchOff, set_allowSwitchOff);
 		}
 
-		static private System.Boolean AnyTogglesOn(UnityEngine.UI.ToggleGroup instance, Parameters parameters)
+		static private System.Boolean AnyTogglesOn(UnityEngine.UI.ToggleGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -31,7 +32,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void NotifyToggleOn(UnityEngine.UI.ToggleGroup instance, Parameters parameters)
+		static private void NotifyToggleOn(UnityEngine.UI.ToggleGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Toggle>())
 			{
@@ -53,7 +54,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RegisterToggle(UnityEngine.UI.ToggleGroup instance, Parameters parameters)
+		static private void RegisterToggle(UnityEngine.UI.ToggleGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Toggle>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetAllTogglesOff(UnityEngine.UI.ToggleGroup instance, Parameters parameters)
+		static private void SetAllTogglesOff(UnityEngine.UI.ToggleGroup instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ToggleGroup.SetAllTogglesOff has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void UnregisterToggle(UnityEngine.UI.ToggleGroup instance, Parameters parameters)
+		static private void UnregisterToggle(UnityEngine.UI.ToggleGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.Toggle>())
 			{
@@ -111,12 +112,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_allowSwitchOff(UnityEngine.UI.ToggleGroup instance)
+		static private System.Boolean get_allowSwitchOff(UnityEngine.UI.ToggleGroup instance, string name)
 		{
 			return instance.allowSwitchOff;
 		}
 
-		static private void set_allowSwitchOff(UnityEngine.UI.ToggleGroup instance, System.Boolean value)
+		static private void set_allowSwitchOff(UnityEngine.UI.ToggleGroup instance, string name, System.Boolean value)
 		{
 			instance.allowSwitchOff = value;
 		}

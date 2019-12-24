@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -20,7 +21,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("loop", get_loop, null);
 		}
 
-		static private System.Boolean IsName(UnityEngine.AnimatorStateInfo instance, Parameters parameters)
+		static private System.Boolean IsName(UnityEngine.AnimatorStateInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -42,7 +43,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsTag(UnityEngine.AnimatorStateInfo instance, Parameters parameters)
+		static private System.Boolean IsTag(UnityEngine.AnimatorStateInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -64,42 +65,42 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 get_fullPathHash(UnityEngine.AnimatorStateInfo instance)
+		static private System.Int32 get_fullPathHash(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.fullPathHash;
 		}
 
-		static private System.Int32 get_shortNameHash(UnityEngine.AnimatorStateInfo instance)
+		static private System.Int32 get_shortNameHash(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.shortNameHash;
 		}
 
-		static private System.Single get_normalizedTime(UnityEngine.AnimatorStateInfo instance)
+		static private System.Single get_normalizedTime(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.normalizedTime;
 		}
 
-		static private System.Single get_length(UnityEngine.AnimatorStateInfo instance)
+		static private System.Single get_length(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.length;
 		}
 
-		static private System.Single get_speed(UnityEngine.AnimatorStateInfo instance)
+		static private System.Single get_speed(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.speed;
 		}
 
-		static private System.Single get_speedMultiplier(UnityEngine.AnimatorStateInfo instance)
+		static private System.Single get_speedMultiplier(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.speedMultiplier;
 		}
 
-		static private System.Int32 get_tagHash(UnityEngine.AnimatorStateInfo instance)
+		static private System.Int32 get_tagHash(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.tagHash;
 		}
 
-		static private System.Boolean get_loop(UnityEngine.AnimatorStateInfo instance)
+		static private System.Boolean get_loop(UnityEngine.AnimatorStateInfo instance, string name)
 		{
 			return instance.loop;
 		}

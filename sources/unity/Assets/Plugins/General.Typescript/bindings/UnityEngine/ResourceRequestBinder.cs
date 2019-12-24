@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,7 +27,7 @@ namespace General.Typescript
 			return default(UnityEngine.ResourceRequest);
 		}
 
-		static private UnityEngine.Object get_asset(UnityEngine.ResourceRequest instance)
+		static private UnityEngine.Object get_asset(UnityEngine.ResourceRequest instance, string name)
 		{
 			return instance.asset;
 		}

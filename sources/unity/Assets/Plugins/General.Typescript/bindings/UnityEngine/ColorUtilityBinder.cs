@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.ColorUtility);
 		}
 
-		static private System.String ToHtmlStringRGB(Parameters parameters)
+		static private System.String ToHtmlStringRGB(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToHtmlStringRGBA(Parameters parameters)
+		static private System.String ToHtmlStringRGBA(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color>())
 			{

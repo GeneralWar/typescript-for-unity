@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,7 +27,7 @@ namespace General.Typescript
 			return default(UnityEngine.StaticBatchingUtility);
 		}
 
-		static private void Combine(Parameters parameters)
+		static private void Combine(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject>())
 			{

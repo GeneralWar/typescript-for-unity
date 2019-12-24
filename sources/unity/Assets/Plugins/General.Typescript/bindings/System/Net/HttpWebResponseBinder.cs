@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,7 +29,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("SupportsHeaders", get_SupportsHeaders, null);
 		}
 
-		static private void Close(System.Net.HttpWebResponse instance, Parameters parameters)
+		static private void Close(System.Net.HttpWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -42,7 +43,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.HttpWebResponse.Close has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.String GetResponseHeader(System.Net.HttpWebResponse instance, Parameters parameters)
+		static private System.String GetResponseHeader(System.Net.HttpWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -64,7 +65,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.Stream GetResponseStream(System.Net.HttpWebResponse instance, Parameters parameters)
+		static private System.IO.Stream GetResponseStream(System.Net.HttpWebResponse instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -79,82 +80,82 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_CharacterSet(System.Net.HttpWebResponse instance)
+		static private System.String get_CharacterSet(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.CharacterSet;
 		}
 
-		static private System.String get_ContentEncoding(System.Net.HttpWebResponse instance)
+		static private System.String get_ContentEncoding(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.ContentEncoding;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.HttpWebResponse instance)
+		static private System.Int64 get_ContentLength(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private System.String get_ContentType(System.Net.HttpWebResponse instance)
+		static private System.String get_ContentType(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.ContentType;
 		}
 
-		static private System.Net.CookieCollection get_Cookies(System.Net.HttpWebResponse instance)
+		static private System.Net.CookieCollection get_Cookies(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.Cookies;
 		}
 
-		static private void set_Cookies(System.Net.HttpWebResponse instance, System.Net.CookieCollection value)
+		static private void set_Cookies(System.Net.HttpWebResponse instance, string name, System.Net.CookieCollection value)
 		{
 			instance.Cookies = value;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.HttpWebResponse instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private System.Boolean get_IsMutuallyAuthenticated(System.Net.HttpWebResponse instance)
+		static private System.Boolean get_IsMutuallyAuthenticated(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.IsMutuallyAuthenticated;
 		}
 
-		static private System.DateTime get_LastModified(System.Net.HttpWebResponse instance)
+		static private System.DateTime get_LastModified(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.LastModified;
 		}
 
-		static private System.String get_Method(System.Net.HttpWebResponse instance)
+		static private System.String get_Method(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.Method;
 		}
 
-		static private System.Version get_ProtocolVersion(System.Net.HttpWebResponse instance)
+		static private System.Version get_ProtocolVersion(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.ProtocolVersion;
 		}
 
-		static private System.Uri get_ResponseUri(System.Net.HttpWebResponse instance)
+		static private System.Uri get_ResponseUri(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.ResponseUri;
 		}
 
-		static private System.String get_Server(System.Net.HttpWebResponse instance)
+		static private System.String get_Server(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.Server;
 		}
 
-		static private System.Net.HttpStatusCode get_StatusCode(System.Net.HttpWebResponse instance)
+		static private System.Net.HttpStatusCode get_StatusCode(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.StatusCode;
 		}
 
-		static private System.String get_StatusDescription(System.Net.HttpWebResponse instance)
+		static private System.String get_StatusDescription(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.StatusDescription;
 		}
 
-		static private System.Boolean get_SupportsHeaders(System.Net.HttpWebResponse instance)
+		static private System.Boolean get_SupportsHeaders(System.Net.HttpWebResponse instance, string name)
 		{
 			return instance.SupportsHeaders;
 		}

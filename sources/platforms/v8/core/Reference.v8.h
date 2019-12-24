@@ -5,9 +5,11 @@
 class ReferenceWindows : public Reference
 {
 private:
-	Local<Template> mReference;
+	Local<Template> mTemplate;
+	//Persistent<Object> mPersistent;
 public:
-	ReferenceWindows(Local<Template> reference) : mReference(reference) { }
+	ReferenceWindows(Local<Template> reference) : mTemplate(reference) { }
 
-	Local<Template> GetReference() { return mReference; }
+	Local<Template> GetTemplate() { return mTemplate; }
+	//Local<Object> GetPersistent();
 };

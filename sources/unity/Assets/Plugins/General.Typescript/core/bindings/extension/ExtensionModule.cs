@@ -14,7 +14,7 @@ namespace General.Typescript
 		{
 			if (!sInitialized)
 			{
-				Files.Initialize();
+				FileUtility.Initialize();
 				sInitialized = true;
 			}
 		}

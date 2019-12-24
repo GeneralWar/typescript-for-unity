@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -20,7 +21,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("boneIndex3", get_boneIndex3, set_boneIndex3);
 		}
 
-		static private System.Boolean Equals(UnityEngine.BoneWeight instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.BoneWeight instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -46,7 +47,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.BoneWeight instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.BoneWeight instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -61,82 +62,82 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Single get_weight0(UnityEngine.BoneWeight instance)
+		static private System.Single get_weight0(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.weight0;
 		}
 
-		static private void set_weight0(UnityEngine.BoneWeight instance, System.Single value)
+		static private void set_weight0(UnityEngine.BoneWeight instance, string name, System.Single value)
 		{
 			instance.weight0 = value;
 		}
 
-		static private System.Single get_weight1(UnityEngine.BoneWeight instance)
+		static private System.Single get_weight1(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.weight1;
 		}
 
-		static private void set_weight1(UnityEngine.BoneWeight instance, System.Single value)
+		static private void set_weight1(UnityEngine.BoneWeight instance, string name, System.Single value)
 		{
 			instance.weight1 = value;
 		}
 
-		static private System.Single get_weight2(UnityEngine.BoneWeight instance)
+		static private System.Single get_weight2(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.weight2;
 		}
 
-		static private void set_weight2(UnityEngine.BoneWeight instance, System.Single value)
+		static private void set_weight2(UnityEngine.BoneWeight instance, string name, System.Single value)
 		{
 			instance.weight2 = value;
 		}
 
-		static private System.Single get_weight3(UnityEngine.BoneWeight instance)
+		static private System.Single get_weight3(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.weight3;
 		}
 
-		static private void set_weight3(UnityEngine.BoneWeight instance, System.Single value)
+		static private void set_weight3(UnityEngine.BoneWeight instance, string name, System.Single value)
 		{
 			instance.weight3 = value;
 		}
 
-		static private System.Int32 get_boneIndex0(UnityEngine.BoneWeight instance)
+		static private System.Int32 get_boneIndex0(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.boneIndex0;
 		}
 
-		static private void set_boneIndex0(UnityEngine.BoneWeight instance, System.Int32 value)
+		static private void set_boneIndex0(UnityEngine.BoneWeight instance, string name, System.Int32 value)
 		{
 			instance.boneIndex0 = value;
 		}
 
-		static private System.Int32 get_boneIndex1(UnityEngine.BoneWeight instance)
+		static private System.Int32 get_boneIndex1(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.boneIndex1;
 		}
 
-		static private void set_boneIndex1(UnityEngine.BoneWeight instance, System.Int32 value)
+		static private void set_boneIndex1(UnityEngine.BoneWeight instance, string name, System.Int32 value)
 		{
 			instance.boneIndex1 = value;
 		}
 
-		static private System.Int32 get_boneIndex2(UnityEngine.BoneWeight instance)
+		static private System.Int32 get_boneIndex2(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.boneIndex2;
 		}
 
-		static private void set_boneIndex2(UnityEngine.BoneWeight instance, System.Int32 value)
+		static private void set_boneIndex2(UnityEngine.BoneWeight instance, string name, System.Int32 value)
 		{
 			instance.boneIndex2 = value;
 		}
 
-		static private System.Int32 get_boneIndex3(UnityEngine.BoneWeight instance)
+		static private System.Int32 get_boneIndex3(UnityEngine.BoneWeight instance, string name)
 		{
 			return instance.boneIndex3;
 		}
 
-		static private void set_boneIndex3(UnityEngine.BoneWeight instance, System.Int32 value)
+		static private void set_boneIndex3(UnityEngine.BoneWeight instance, string name, System.Int32 value)
 		{
 			instance.boneIndex3 = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -31,7 +32,7 @@ namespace General.Typescript
 			return default(UnityEngine.UI.MaskUtilities);
 		}
 
-		static private UnityEngine.Transform FindRootSortOverrideCanvas(Parameters parameters)
+		static private UnityEngine.Transform FindRootSortOverrideCanvas(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -53,7 +54,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.UI.RectMask2D GetRectMaskForClippable(Parameters parameters)
+		static private UnityEngine.UI.RectMask2D GetRectMaskForClippable(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.IClippable>())
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 GetStencilDepth(Parameters parameters)
+		static private System.Int32 GetStencilDepth(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform, UnityEngine.Transform>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean IsDescendantOrSelf(Parameters parameters)
+		static private System.Boolean IsDescendantOrSelf(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform, UnityEngine.Transform>())
 			{
@@ -119,7 +120,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Notify2DMaskStateChanged(Parameters parameters)
+		static private void Notify2DMaskStateChanged(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Component>())
 			{
@@ -141,7 +142,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void NotifyStencilStateChanged(Parameters parameters)
+		static private void NotifyStencilStateChanged(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Component>())
 			{

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(System.Net.IPEndPoint);
 		}
 
-		static private System.Net.EndPoint Create(System.Net.IPEndPoint instance, Parameters parameters)
+		static private System.Net.EndPoint Create(System.Net.IPEndPoint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.SocketAddress>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean Equals(System.Net.IPEndPoint instance, Parameters parameters)
+		static private System.Boolean Equals(System.Net.IPEndPoint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(System.Net.IPEndPoint instance, Parameters parameters)
+		static private System.Int32 GetHashCode(System.Net.IPEndPoint instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -103,7 +104,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Net.SocketAddress Serialize(System.Net.IPEndPoint instance, Parameters parameters)
+		static private System.Net.SocketAddress Serialize(System.Net.IPEndPoint instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -118,7 +119,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String ToString(System.Net.IPEndPoint instance, Parameters parameters)
+		static private System.String ToString(System.Net.IPEndPoint instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -133,27 +134,27 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.IPEndPoint instance)
+		static private System.Net.Sockets.AddressFamily get_AddressFamily(System.Net.IPEndPoint instance, string name)
 		{
 			return instance.AddressFamily;
 		}
 
-		static private System.Net.IPAddress get_Address(System.Net.IPEndPoint instance)
+		static private System.Net.IPAddress get_Address(System.Net.IPEndPoint instance, string name)
 		{
 			return instance.Address;
 		}
 
-		static private void set_Address(System.Net.IPEndPoint instance, System.Net.IPAddress value)
+		static private void set_Address(System.Net.IPEndPoint instance, string name, System.Net.IPAddress value)
 		{
 			instance.Address = value;
 		}
 
-		static private System.Int32 get_Port(System.Net.IPEndPoint instance)
+		static private System.Int32 get_Port(System.Net.IPEndPoint instance, string name)
 		{
 			return instance.Port;
 		}
 
-		static private void set_Port(System.Net.IPEndPoint instance, System.Int32 value)
+		static private void set_Port(System.Net.IPEndPoint instance, string name, System.Int32 value)
 		{
 			instance.Port = value;
 		}

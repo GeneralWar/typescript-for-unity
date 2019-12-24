@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -26,12 +27,12 @@ namespace General.Typescript
 			return default(UnityEngine.Skybox);
 		}
 
-		static private UnityEngine.Material get_material(UnityEngine.Skybox instance)
+		static private UnityEngine.Material get_material(UnityEngine.Skybox instance, string name)
 		{
 			return instance.material;
 		}
 
-		static private void set_material(UnityEngine.Skybox instance, UnityEngine.Material value)
+		static private void set_material(UnityEngine.Skybox instance, string name, UnityEngine.Material value)
 		{
 			instance.material = value;
 		}

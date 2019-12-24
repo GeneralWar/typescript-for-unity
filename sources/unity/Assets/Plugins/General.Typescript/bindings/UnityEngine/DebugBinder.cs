@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return default(UnityEngine.Debug);
 		}
 
-		static private void Assert(Parameters parameters)
+		static private void Assert(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -91,7 +92,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AssertFormat(Parameters parameters)
+		static private void AssertFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean, System.String, System.Object[]>())
 			{
@@ -118,7 +119,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Break(Parameters parameters)
+		static private void Break(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Debug.Break has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ClearDeveloperConsole(Parameters parameters)
+		static private void ClearDeveloperConsole(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Debug.ClearDeveloperConsole has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DebugBreak(Parameters parameters)
+		static private void DebugBreak(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -160,7 +161,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Debug.DebugBreak has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DrawLine(Parameters parameters)
+		static private void DrawLine(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -197,7 +198,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawRay(Parameters parameters)
+		static private void DrawRay(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3, UnityEngine.Vector3>())
 			{
@@ -234,7 +235,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Log(Parameters parameters)
+		static private void Log(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -261,7 +262,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogAssertion(Parameters parameters)
+		static private void LogAssertion(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -288,7 +289,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogAssertionFormat(Parameters parameters)
+		static private void LogAssertionFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object[]>())
 			{
@@ -315,7 +316,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogError(Parameters parameters)
+		static private void LogError(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -342,7 +343,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogErrorFormat(Parameters parameters)
+		static private void LogErrorFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object[]>())
 			{
@@ -369,7 +370,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogException(Parameters parameters)
+		static private void LogException(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Exception>())
 			{
@@ -396,7 +397,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogFormat(Parameters parameters)
+		static private void LogFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object[]>())
 			{
@@ -423,7 +424,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogWarning(Parameters parameters)
+		static private void LogWarning(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -450,7 +451,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LogWarningFormat(Parameters parameters)
+		static private void LogWarningFormat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Object[]>())
 			{
@@ -477,22 +478,22 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.ILogger get_unityLogger()
+		static private UnityEngine.ILogger get_unityLogger(Type type, string name)
 		{
 			return UnityEngine.Debug.unityLogger;
 		}
 
-		static private System.Boolean get_developerConsoleVisible()
+		static private System.Boolean get_developerConsoleVisible(Type type, string name)
 		{
 			return UnityEngine.Debug.developerConsoleVisible;
 		}
 
-		static private void set_developerConsoleVisible(System.Boolean value)
+		static private void set_developerConsoleVisible(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Debug.developerConsoleVisible = value;
 		}
 
-		static private System.Boolean get_isDebugBuild()
+		static private System.Boolean get_isDebugBuild(Type type, string name)
 		{
 			return UnityEngine.Debug.isDebugBuild;
 		}

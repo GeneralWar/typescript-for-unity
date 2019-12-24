@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -21,77 +22,77 @@ namespace General.Typescript
 			self.BindInstanceProperty("lightmapCoord", get_lightmapCoord, null);
 		}
 
-		static private UnityEngine.Collider get_collider(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Collider get_collider(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.collider;
 		}
 
-		static private UnityEngine.Vector3 get_point(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector3 get_point(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.point;
 		}
 
-		static private void set_point(UnityEngine.RaycastHit instance, UnityEngine.Vector3 value)
+		static private void set_point(UnityEngine.RaycastHit instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.point = value;
 		}
 
-		static private UnityEngine.Vector3 get_normal(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector3 get_normal(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.normal;
 		}
 
-		static private void set_normal(UnityEngine.RaycastHit instance, UnityEngine.Vector3 value)
+		static private void set_normal(UnityEngine.RaycastHit instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.normal = value;
 		}
 
-		static private UnityEngine.Vector3 get_barycentricCoordinate(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector3 get_barycentricCoordinate(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.barycentricCoordinate;
 		}
 
-		static private void set_barycentricCoordinate(UnityEngine.RaycastHit instance, UnityEngine.Vector3 value)
+		static private void set_barycentricCoordinate(UnityEngine.RaycastHit instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.barycentricCoordinate = value;
 		}
 
-		static private System.Single get_distance(UnityEngine.RaycastHit instance)
+		static private System.Single get_distance(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.distance;
 		}
 
-		static private void set_distance(UnityEngine.RaycastHit instance, System.Single value)
+		static private void set_distance(UnityEngine.RaycastHit instance, string name, System.Single value)
 		{
 			instance.distance = value;
 		}
 
-		static private System.Int32 get_triangleIndex(UnityEngine.RaycastHit instance)
+		static private System.Int32 get_triangleIndex(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.triangleIndex;
 		}
 
-		static private UnityEngine.Vector2 get_textureCoord(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector2 get_textureCoord(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.textureCoord;
 		}
 
-		static private UnityEngine.Vector2 get_textureCoord2(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector2 get_textureCoord2(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.textureCoord2;
 		}
 
-		static private UnityEngine.Transform get_transform(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Transform get_transform(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.transform;
 		}
 
-		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Rigidbody get_rigidbody(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.rigidbody;
 		}
 
-		static private UnityEngine.Vector2 get_lightmapCoord(UnityEngine.RaycastHit instance)
+		static private UnityEngine.Vector2 get_lightmapCoord(UnityEngine.RaycastHit instance, string name)
 		{
 			return instance.lightmapCoord;
 		}

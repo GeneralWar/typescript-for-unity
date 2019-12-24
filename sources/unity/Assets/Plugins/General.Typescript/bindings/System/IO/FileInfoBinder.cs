@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -54,7 +55,7 @@ namespace General.Typescript
 			return default(System.IO.FileInfo);
 		}
 
-		static private System.IO.StreamWriter AppendText(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.StreamWriter AppendText(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -69,7 +70,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileInfo CopyTo(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileInfo CopyTo(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -95,7 +96,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileStream Create(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileStream Create(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.StreamWriter CreateText(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.StreamWriter CreateText(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -125,7 +126,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Decrypt(System.IO.FileInfo instance, Parameters parameters)
+		static private void Decrypt(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.FileInfo.Decrypt has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Delete(System.IO.FileInfo instance, Parameters parameters)
+		static private void Delete(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -153,7 +154,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.FileInfo.Delete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Encrypt(System.IO.FileInfo instance, Parameters parameters)
+		static private void Encrypt(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -167,7 +168,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.FileInfo.Encrypt has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Security.AccessControl.FileSecurity GetAccessControl(System.IO.FileInfo instance, Parameters parameters)
+		static private System.Security.AccessControl.FileSecurity GetAccessControl(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -186,7 +187,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void MoveTo(System.IO.FileInfo instance, Parameters parameters)
+		static private void MoveTo(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -208,7 +209,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.IO.FileStream Open(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileStream Open(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IO.FileMode>())
 			{
@@ -238,7 +239,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileStream OpenRead(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileStream OpenRead(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -253,7 +254,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.StreamReader OpenText(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.StreamReader OpenText(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -268,7 +269,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileStream OpenWrite(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileStream OpenWrite(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -283,7 +284,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.FileInfo Replace(System.IO.FileInfo instance, Parameters parameters)
+		static private System.IO.FileInfo Replace(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.String>())
 			{
@@ -309,7 +310,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetAccessControl(System.IO.FileInfo instance, Parameters parameters)
+		static private void SetAccessControl(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.AccessControl.FileSecurity>())
 			{
@@ -331,7 +332,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(System.IO.FileInfo instance, Parameters parameters)
+		static private System.String ToString(System.IO.FileInfo instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -346,37 +347,37 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_Name(System.IO.FileInfo instance)
+		static private System.String get_Name(System.IO.FileInfo instance, string name)
 		{
 			return instance.Name;
 		}
 
-		static private System.Int64 get_Length(System.IO.FileInfo instance)
+		static private System.Int64 get_Length(System.IO.FileInfo instance, string name)
 		{
 			return instance.Length;
 		}
 
-		static private System.String get_DirectoryName(System.IO.FileInfo instance)
+		static private System.String get_DirectoryName(System.IO.FileInfo instance, string name)
 		{
 			return instance.DirectoryName;
 		}
 
-		static private System.IO.DirectoryInfo get_Directory(System.IO.FileInfo instance)
+		static private System.IO.DirectoryInfo get_Directory(System.IO.FileInfo instance, string name)
 		{
 			return instance.Directory;
 		}
 
-		static private System.Boolean get_IsReadOnly(System.IO.FileInfo instance)
+		static private System.Boolean get_IsReadOnly(System.IO.FileInfo instance, string name)
 		{
 			return instance.IsReadOnly;
 		}
 
-		static private void set_IsReadOnly(System.IO.FileInfo instance, System.Boolean value)
+		static private void set_IsReadOnly(System.IO.FileInfo instance, string name, System.Boolean value)
 		{
 			instance.IsReadOnly = value;
 		}
 
-		static private System.Boolean get_Exists(System.IO.FileInfo instance)
+		static private System.Boolean get_Exists(System.IO.FileInfo instance, string name)
 		{
 			return instance.Exists;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -23,7 +24,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("sourceCount", get_sourceCount, null);
 		}
 
-		static private System.Int32 AddSource(UnityEngine.Animations.LookAtConstraint instance, Parameters parameters)
+		static private System.Int32 AddSource(UnityEngine.Animations.LookAtConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.ConstraintSource>())
 			{
@@ -45,7 +46,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.LookAtConstraint instance, Parameters parameters)
+		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.LookAtConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -67,7 +68,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.ConstraintSource);
 		}
 
-		static private void RemoveSource(UnityEngine.Animations.LookAtConstraint instance, Parameters parameters)
+		static private void RemoveSource(UnityEngine.Animations.LookAtConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSource(UnityEngine.Animations.LookAtConstraint instance, Parameters parameters)
+		static private void SetSource(UnityEngine.Animations.LookAtConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Animations.ConstraintSource>())
 			{
@@ -111,87 +112,87 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_weight(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Single get_weight(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.weight;
 		}
 
-		static private void set_weight(UnityEngine.Animations.LookAtConstraint instance, System.Single value)
+		static private void set_weight(UnityEngine.Animations.LookAtConstraint instance, string name, System.Single value)
 		{
 			instance.weight = value;
 		}
 
-		static private System.Single get_roll(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Single get_roll(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.roll;
 		}
 
-		static private void set_roll(UnityEngine.Animations.LookAtConstraint instance, System.Single value)
+		static private void set_roll(UnityEngine.Animations.LookAtConstraint instance, string name, System.Single value)
 		{
 			instance.roll = value;
 		}
 
-		static private System.Boolean get_constraintActive(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Boolean get_constraintActive(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.constraintActive;
 		}
 
-		static private void set_constraintActive(UnityEngine.Animations.LookAtConstraint instance, System.Boolean value)
+		static private void set_constraintActive(UnityEngine.Animations.LookAtConstraint instance, string name, System.Boolean value)
 		{
 			instance.constraintActive = value;
 		}
 
-		static private System.Boolean get_locked(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Boolean get_locked(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.locked;
 		}
 
-		static private void set_locked(UnityEngine.Animations.LookAtConstraint instance, System.Boolean value)
+		static private void set_locked(UnityEngine.Animations.LookAtConstraint instance, string name, System.Boolean value)
 		{
 			instance.locked = value;
 		}
 
-		static private UnityEngine.Vector3 get_rotationAtRest(UnityEngine.Animations.LookAtConstraint instance)
+		static private UnityEngine.Vector3 get_rotationAtRest(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.rotationAtRest;
 		}
 
-		static private void set_rotationAtRest(UnityEngine.Animations.LookAtConstraint instance, UnityEngine.Vector3 value)
+		static private void set_rotationAtRest(UnityEngine.Animations.LookAtConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.rotationAtRest = value;
 		}
 
-		static private UnityEngine.Vector3 get_rotationOffset(UnityEngine.Animations.LookAtConstraint instance)
+		static private UnityEngine.Vector3 get_rotationOffset(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.rotationOffset;
 		}
 
-		static private void set_rotationOffset(UnityEngine.Animations.LookAtConstraint instance, UnityEngine.Vector3 value)
+		static private void set_rotationOffset(UnityEngine.Animations.LookAtConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.rotationOffset = value;
 		}
 
-		static private UnityEngine.Transform get_worldUpObject(UnityEngine.Animations.LookAtConstraint instance)
+		static private UnityEngine.Transform get_worldUpObject(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.worldUpObject;
 		}
 
-		static private void set_worldUpObject(UnityEngine.Animations.LookAtConstraint instance, UnityEngine.Transform value)
+		static private void set_worldUpObject(UnityEngine.Animations.LookAtConstraint instance, string name, UnityEngine.Transform value)
 		{
 			instance.worldUpObject = value;
 		}
 
-		static private System.Boolean get_useUpObject(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Boolean get_useUpObject(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.useUpObject;
 		}
 
-		static private void set_useUpObject(UnityEngine.Animations.LookAtConstraint instance, System.Boolean value)
+		static private void set_useUpObject(UnityEngine.Animations.LookAtConstraint instance, string name, System.Boolean value)
 		{
 			instance.useUpObject = value;
 		}
 
-		static private System.Int32 get_sourceCount(UnityEngine.Animations.LookAtConstraint instance)
+		static private System.Int32 get_sourceCount(UnityEngine.Animations.LookAtConstraint instance, string name)
 		{
 			return instance.sourceCount;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -27,7 +28,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimatorUtility);
 		}
 
-		static private void DeoptimizeTransformHierarchy(Parameters parameters)
+		static private void DeoptimizeTransformHierarchy(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject>())
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OptimizeTransformHierarchy(Parameters parameters)
+		static private void OptimizeTransformHierarchy(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject, System.String[]>())
 			{

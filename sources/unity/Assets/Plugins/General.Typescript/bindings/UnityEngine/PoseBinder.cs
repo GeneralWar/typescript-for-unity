@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -40,7 +41,7 @@ namespace General.Typescript
 			return default(UnityEngine.Pose);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Pose instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Pose instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Pose instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Pose instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -81,7 +82,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Pose GetTransformedBy(UnityEngine.Pose instance, Parameters parameters)
+		static private UnityEngine.Pose GetTransformedBy(UnityEngine.Pose instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Pose>())
 			{
@@ -107,7 +108,7 @@ namespace General.Typescript
 			return default(UnityEngine.Pose);
 		}
 
-		static private System.String ToString(UnityEngine.Pose instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Pose instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -126,22 +127,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Pose get_identity()
+		static private UnityEngine.Pose get_identity(Type type, string name)
 		{
 			return UnityEngine.Pose.identity;
 		}
 
-		static private UnityEngine.Vector3 get_forward(UnityEngine.Pose instance)
+		static private UnityEngine.Vector3 get_forward(UnityEngine.Pose instance, string name)
 		{
 			return instance.forward;
 		}
 
-		static private UnityEngine.Vector3 get_right(UnityEngine.Pose instance)
+		static private UnityEngine.Vector3 get_right(UnityEngine.Pose instance, string name)
 		{
 			return instance.right;
 		}
 
-		static private UnityEngine.Vector3 get_up(UnityEngine.Pose instance)
+		static private UnityEngine.Vector3 get_up(UnityEngine.Pose instance, string name)
 		{
 			return instance.up;
 		}

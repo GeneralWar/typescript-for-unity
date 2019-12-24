@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,52 +16,52 @@ namespace General.Typescript
 			self.BindInstanceProperty("stiffness", get_stiffness, set_stiffness);
 		}
 
-		static private System.Single get_extremumSlip(UnityEngine.WheelFrictionCurve instance)
+		static private System.Single get_extremumSlip(UnityEngine.WheelFrictionCurve instance, string name)
 		{
 			return instance.extremumSlip;
 		}
 
-		static private void set_extremumSlip(UnityEngine.WheelFrictionCurve instance, System.Single value)
+		static private void set_extremumSlip(UnityEngine.WheelFrictionCurve instance, string name, System.Single value)
 		{
 			instance.extremumSlip = value;
 		}
 
-		static private System.Single get_extremumValue(UnityEngine.WheelFrictionCurve instance)
+		static private System.Single get_extremumValue(UnityEngine.WheelFrictionCurve instance, string name)
 		{
 			return instance.extremumValue;
 		}
 
-		static private void set_extremumValue(UnityEngine.WheelFrictionCurve instance, System.Single value)
+		static private void set_extremumValue(UnityEngine.WheelFrictionCurve instance, string name, System.Single value)
 		{
 			instance.extremumValue = value;
 		}
 
-		static private System.Single get_asymptoteSlip(UnityEngine.WheelFrictionCurve instance)
+		static private System.Single get_asymptoteSlip(UnityEngine.WheelFrictionCurve instance, string name)
 		{
 			return instance.asymptoteSlip;
 		}
 
-		static private void set_asymptoteSlip(UnityEngine.WheelFrictionCurve instance, System.Single value)
+		static private void set_asymptoteSlip(UnityEngine.WheelFrictionCurve instance, string name, System.Single value)
 		{
 			instance.asymptoteSlip = value;
 		}
 
-		static private System.Single get_asymptoteValue(UnityEngine.WheelFrictionCurve instance)
+		static private System.Single get_asymptoteValue(UnityEngine.WheelFrictionCurve instance, string name)
 		{
 			return instance.asymptoteValue;
 		}
 
-		static private void set_asymptoteValue(UnityEngine.WheelFrictionCurve instance, System.Single value)
+		static private void set_asymptoteValue(UnityEngine.WheelFrictionCurve instance, string name, System.Single value)
 		{
 			instance.asymptoteValue = value;
 		}
 
-		static private System.Single get_stiffness(UnityEngine.WheelFrictionCurve instance)
+		static private System.Single get_stiffness(UnityEngine.WheelFrictionCurve instance, string name)
 		{
 			return instance.stiffness;
 		}
 
-		static private void set_stiffness(UnityEngine.WheelFrictionCurve instance, System.Single value)
+		static private void set_stiffness(UnityEngine.WheelFrictionCurve instance, string name, System.Single value)
 		{
 			instance.stiffness = value;
 		}

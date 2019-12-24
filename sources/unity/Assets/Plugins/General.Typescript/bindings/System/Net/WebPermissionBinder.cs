@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,7 +48,7 @@ namespace General.Typescript
 			return default(System.Net.WebPermission);
 		}
 
-		static private void AddPermission(System.Net.WebPermission instance, Parameters parameters)
+		static private void AddPermission(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.NetworkAccess, System.String>())
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Security.IPermission Copy(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Security.IPermission Copy(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void FromXml(System.Net.WebPermission instance, Parameters parameters)
+		static private void FromXml(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.SecurityElement>())
 			{
@@ -111,7 +112,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Security.IPermission Intersect(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Security.IPermission Intersect(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.IPermission>())
 			{
@@ -133,7 +134,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsSubsetOf(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Boolean IsSubsetOf(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.IPermission>())
 			{
@@ -155,7 +156,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsUnrestricted(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Boolean IsUnrestricted(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -170,7 +171,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Security.SecurityElement ToXml(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Security.SecurityElement ToXml(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -185,7 +186,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Security.IPermission Union(System.Net.WebPermission instance, Parameters parameters)
+		static private System.Security.IPermission Union(System.Net.WebPermission instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Security.IPermission>())
 			{
@@ -207,12 +208,12 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Collections.IEnumerator get_ConnectList(System.Net.WebPermission instance)
+		static private System.Collections.IEnumerator get_ConnectList(System.Net.WebPermission instance, string name)
 		{
 			return instance.ConnectList;
 		}
 
-		static private System.Collections.IEnumerator get_AcceptList(System.Net.WebPermission instance)
+		static private System.Collections.IEnumerator get_AcceptList(System.Net.WebPermission instance, string name)
 		{
 			return instance.AcceptList;
 		}

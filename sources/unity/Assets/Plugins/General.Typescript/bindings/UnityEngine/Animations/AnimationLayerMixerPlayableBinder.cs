@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,7 +18,7 @@ namespace General.Typescript
 			self.BindStaticProperty("Null", get_Null, null);
 		}
 
-		static private UnityEngine.Animations.AnimationLayerMixerPlayable Create(Parameters parameters)
+		static private UnityEngine.Animations.AnimationLayerMixerPlayable Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableGraph, System.Int32>())
 			{
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.AnimationLayerMixerPlayable);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Animations.AnimationLayerMixerPlayable instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Animations.AnimationLayerMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.AnimationLayerMixerPlayable>())
 			{
@@ -61,7 +62,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationLayerMixerPlayable instance, Parameters parameters)
+		static private UnityEngine.Playables.PlayableHandle GetHandle(UnityEngine.Animations.AnimationLayerMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -76,7 +77,7 @@ namespace General.Typescript
 			return default(UnityEngine.Playables.PlayableHandle);
 		}
 
-		static private System.Boolean IsLayerAdditive(UnityEngine.Animations.AnimationLayerMixerPlayable instance, Parameters parameters)
+		static private System.Boolean IsLayerAdditive(UnityEngine.Animations.AnimationLayerMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt32>())
 			{
@@ -98,7 +99,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetLayerAdditive(UnityEngine.Animations.AnimationLayerMixerPlayable instance, Parameters parameters)
+		static private void SetLayerAdditive(UnityEngine.Animations.AnimationLayerMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt32, System.Boolean>())
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetLayerMaskFromAvatarMask(UnityEngine.Animations.AnimationLayerMixerPlayable instance, Parameters parameters)
+		static private void SetLayerMaskFromAvatarMask(UnityEngine.Animations.AnimationLayerMixerPlayable instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.UInt32, UnityEngine.AvatarMask>())
 			{
@@ -142,7 +143,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Animations.AnimationLayerMixerPlayable get_Null()
+		static private UnityEngine.Animations.AnimationLayerMixerPlayable get_Null(Type type, string name)
 		{
 			return UnityEngine.Animations.AnimationLayerMixerPlayable.Null;
 		}

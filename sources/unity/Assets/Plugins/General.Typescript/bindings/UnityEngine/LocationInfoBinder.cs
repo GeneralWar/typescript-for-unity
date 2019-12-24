@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,32 +17,32 @@ namespace General.Typescript
 			self.BindInstanceProperty("timestamp", get_timestamp, null);
 		}
 
-		static private System.Single get_latitude(UnityEngine.LocationInfo instance)
+		static private System.Single get_latitude(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.latitude;
 		}
 
-		static private System.Single get_longitude(UnityEngine.LocationInfo instance)
+		static private System.Single get_longitude(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.longitude;
 		}
 
-		static private System.Single get_altitude(UnityEngine.LocationInfo instance)
+		static private System.Single get_altitude(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.altitude;
 		}
 
-		static private System.Single get_horizontalAccuracy(UnityEngine.LocationInfo instance)
+		static private System.Single get_horizontalAccuracy(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.horizontalAccuracy;
 		}
 
-		static private System.Single get_verticalAccuracy(UnityEngine.LocationInfo instance)
+		static private System.Single get_verticalAccuracy(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.verticalAccuracy;
 		}
 
-		static private System.Double get_timestamp(UnityEngine.LocationInfo instance)
+		static private System.Double get_timestamp(UnityEngine.LocationInfo instance, string name)
 		{
 			return instance.timestamp;
 		}

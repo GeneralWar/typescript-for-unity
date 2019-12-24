@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,32 +29,32 @@ namespace General.Typescript
 			return default(System.Net.IPHostEntry);
 		}
 
-		static private System.String get_HostName(System.Net.IPHostEntry instance)
+		static private System.String get_HostName(System.Net.IPHostEntry instance, string name)
 		{
 			return instance.HostName;
 		}
 
-		static private void set_HostName(System.Net.IPHostEntry instance, System.String value)
+		static private void set_HostName(System.Net.IPHostEntry instance, string name, System.String value)
 		{
 			instance.HostName = value;
 		}
 
-		static private System.String[] get_Aliases(System.Net.IPHostEntry instance)
+		static private System.String[] get_Aliases(System.Net.IPHostEntry instance, string name)
 		{
 			return instance.Aliases;
 		}
 
-		static private void set_Aliases(System.Net.IPHostEntry instance, System.String[] value)
+		static private void set_Aliases(System.Net.IPHostEntry instance, string name, System.String[] value)
 		{
 			instance.Aliases = value;
 		}
 
-		static private System.Net.IPAddress[] get_AddressList(System.Net.IPHostEntry instance)
+		static private System.Net.IPAddress[] get_AddressList(System.Net.IPHostEntry instance, string name)
 		{
 			return instance.AddressList;
 		}
 
-		static private void set_AddressList(System.Net.IPHostEntry instance, System.Net.IPAddress[] value)
+		static private void set_AddressList(System.Net.IPHostEntry instance, string name, System.Net.IPAddress[] value)
 		{
 			instance.AddressList = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -62,7 +63,7 @@ namespace General.Typescript
 			return default(System.IO.Compression.GZipStream);
 		}
 
-		static private void CopyTo(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private void CopyTo(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IO.Stream, System.Int32>())
 			{
@@ -84,7 +85,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Threading.Tasks.Task CopyToAsync(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task CopyToAsync(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IO.Stream, System.Int32, System.Threading.CancellationToken>())
 			{
@@ -106,7 +107,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 EndRead(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Int32 EndRead(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void EndWrite(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private void EndWrite(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -150,7 +151,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Flush(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private void Flush(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -164,7 +165,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.IO.Compression.GZipStream.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task FlushAsync(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task FlushAsync(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Threading.CancellationToken>())
 			{
@@ -186,7 +187,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 Read(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Int32 Read(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -208,7 +209,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 ReadByte(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Int32 ReadByte(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -223,7 +224,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int64 Seek(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Int64 Seek(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64, System.IO.SeekOrigin>())
 			{
@@ -245,7 +246,7 @@ namespace General.Typescript
 			return default(System.Int64);
 		}
 
-		static private void SetLength(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private void SetLength(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int64>())
 			{
@@ -267,7 +268,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Write(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private void Write(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32>())
 			{
@@ -289,7 +290,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Threading.Tasks.Task WriteAsync(System.IO.Compression.GZipStream instance, Parameters parameters)
+		static private System.Threading.Tasks.Task WriteAsync(System.IO.Compression.GZipStream instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[], System.Int32, System.Int32, System.Threading.CancellationToken>())
 			{
@@ -311,37 +312,37 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean get_CanRead(System.IO.Compression.GZipStream instance)
+		static private System.Boolean get_CanRead(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.CanRead;
 		}
 
-		static private System.Boolean get_CanWrite(System.IO.Compression.GZipStream instance)
+		static private System.Boolean get_CanWrite(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.CanWrite;
 		}
 
-		static private System.Boolean get_CanSeek(System.IO.Compression.GZipStream instance)
+		static private System.Boolean get_CanSeek(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.CanSeek;
 		}
 
-		static private System.Int64 get_Length(System.IO.Compression.GZipStream instance)
+		static private System.Int64 get_Length(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.Length;
 		}
 
-		static private System.Int64 get_Position(System.IO.Compression.GZipStream instance)
+		static private System.Int64 get_Position(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.Position;
 		}
 
-		static private void set_Position(System.IO.Compression.GZipStream instance, System.Int64 value)
+		static private void set_Position(System.IO.Compression.GZipStream instance, string name, System.Int64 value)
 		{
 			instance.Position = value;
 		}
 
-		static private System.IO.Stream get_BaseStream(System.IO.Compression.GZipStream instance)
+		static private System.IO.Stream get_BaseStream(System.IO.Compression.GZipStream instance, string name)
 		{
 			return instance.BaseStream;
 		}

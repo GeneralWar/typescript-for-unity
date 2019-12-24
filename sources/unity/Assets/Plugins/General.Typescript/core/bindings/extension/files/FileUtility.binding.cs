@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace General.Typescript
 {
-	static public partial class Files
+	static public partial class FileUtility
 	{
 		[DllImport(Entry.LIBRARY_NAME)]
 		static private extern void General_Typescript_Extension_BindReadStringFromFileCallback(OnReadStringFromFile callback);

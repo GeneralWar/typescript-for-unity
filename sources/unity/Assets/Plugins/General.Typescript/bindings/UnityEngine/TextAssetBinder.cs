@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -32,7 +33,7 @@ namespace General.Typescript
 			return default(UnityEngine.TextAsset);
 		}
 
-		static private System.String ToString(UnityEngine.TextAsset instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.TextAsset instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -47,12 +48,12 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.String get_text(UnityEngine.TextAsset instance)
+		static private System.String get_text(UnityEngine.TextAsset instance, string name)
 		{
 			return instance.text;
 		}
 
-		static private System.Byte[] get_bytes(UnityEngine.TextAsset instance)
+		static private System.Byte[] get_bytes(UnityEngine.TextAsset instance, string name)
 		{
 			return instance.bytes;
 		}

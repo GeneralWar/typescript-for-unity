@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,7 +34,7 @@ namespace General.Typescript
 			return default(UnityEngine.DynamicGI);
 		}
 
-		static private void SetEmissive(Parameters parameters)
+		static private void SetEmissive(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Renderer, UnityEngine.Color>())
 			{
@@ -55,7 +56,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetEnvironmentData(Parameters parameters)
+		static private void SetEnvironmentData(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single[]>())
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UpdateEnvironment(Parameters parameters)
+		static private void UpdateEnvironment(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -91,47 +92,47 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.DynamicGI.UpdateEnvironment has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Single get_indirectScale()
+		static private System.Single get_indirectScale(Type type, string name)
 		{
 			return UnityEngine.DynamicGI.indirectScale;
 		}
 
-		static private void set_indirectScale(System.Single value)
+		static private void set_indirectScale(Type type, string name, System.Single value)
 		{
 			UnityEngine.DynamicGI.indirectScale = value;
 		}
 
-		static private System.Single get_updateThreshold()
+		static private System.Single get_updateThreshold(Type type, string name)
 		{
 			return UnityEngine.DynamicGI.updateThreshold;
 		}
 
-		static private void set_updateThreshold(System.Single value)
+		static private void set_updateThreshold(Type type, string name, System.Single value)
 		{
 			UnityEngine.DynamicGI.updateThreshold = value;
 		}
 
-		static private System.Int32 get_materialUpdateTimeSlice()
+		static private System.Int32 get_materialUpdateTimeSlice(Type type, string name)
 		{
 			return UnityEngine.DynamicGI.materialUpdateTimeSlice;
 		}
 
-		static private void set_materialUpdateTimeSlice(System.Int32 value)
+		static private void set_materialUpdateTimeSlice(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.DynamicGI.materialUpdateTimeSlice = value;
 		}
 
-		static private System.Boolean get_synchronousMode()
+		static private System.Boolean get_synchronousMode(Type type, string name)
 		{
 			return UnityEngine.DynamicGI.synchronousMode;
 		}
 
-		static private void set_synchronousMode(System.Boolean value)
+		static private void set_synchronousMode(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.DynamicGI.synchronousMode = value;
 		}
 
-		static private System.Boolean get_isConverged()
+		static private System.Boolean get_isConverged(Type type, string name)
 		{
 			return UnityEngine.DynamicGI.isConverged;
 		}

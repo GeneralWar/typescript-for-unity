@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,27 +16,27 @@ namespace General.Typescript
 			self.BindInstanceProperty("eventCamera", get_eventCamera, null);
 		}
 
-		static private System.Int32 get_sortOrderPriority(UnityEngine.UI.GraphicRaycaster instance)
+		static private System.Int32 get_sortOrderPriority(UnityEngine.UI.GraphicRaycaster instance, string name)
 		{
 			return instance.sortOrderPriority;
 		}
 
-		static private System.Int32 get_renderOrderPriority(UnityEngine.UI.GraphicRaycaster instance)
+		static private System.Int32 get_renderOrderPriority(UnityEngine.UI.GraphicRaycaster instance, string name)
 		{
 			return instance.renderOrderPriority;
 		}
 
-		static private System.Boolean get_ignoreReversedGraphics(UnityEngine.UI.GraphicRaycaster instance)
+		static private System.Boolean get_ignoreReversedGraphics(UnityEngine.UI.GraphicRaycaster instance, string name)
 		{
 			return instance.ignoreReversedGraphics;
 		}
 
-		static private void set_ignoreReversedGraphics(UnityEngine.UI.GraphicRaycaster instance, System.Boolean value)
+		static private void set_ignoreReversedGraphics(UnityEngine.UI.GraphicRaycaster instance, string name, System.Boolean value)
 		{
 			instance.ignoreReversedGraphics = value;
 		}
 
-		static private UnityEngine.Camera get_eventCamera(UnityEngine.UI.GraphicRaycaster instance)
+		static private UnityEngine.Camera get_eventCamera(UnityEngine.UI.GraphicRaycaster instance, string name)
 		{
 			return instance.eventCamera;
 		}

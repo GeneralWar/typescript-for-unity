@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -61,7 +62,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("ServerCertificateValidationCallback", get_ServerCertificateValidationCallback, set_ServerCertificateValidationCallback);
 		}
 
-		static private void Abort(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private void Abort(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -75,7 +76,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.HttpWebRequest.Abort has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void AddRange(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private void AddRange(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.IO.Stream EndGetRequestStream(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private System.IO.Stream EndGetRequestStream(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse EndGetResponse(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse EndGetResponse(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IAsyncResult>())
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.IO.Stream GetRequestStream(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private System.IO.Stream GetRequestStream(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -191,7 +192,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.WebResponse GetResponse(System.Net.HttpWebRequest instance, Parameters parameters)
+		static private System.Net.WebResponse GetResponse(System.Net.HttpWebRequest instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -206,427 +207,427 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Net.Cache.RequestCachePolicy get_DefaultCachePolicy()
+		static private System.Net.Cache.RequestCachePolicy get_DefaultCachePolicy(Type type, string name)
 		{
 			return System.Net.HttpWebRequest.DefaultCachePolicy;
 		}
 
-		static private void set_DefaultCachePolicy(System.Net.Cache.RequestCachePolicy value)
+		static private void set_DefaultCachePolicy(Type type, string name, System.Net.Cache.RequestCachePolicy value)
 		{
 			System.Net.HttpWebRequest.DefaultCachePolicy = value;
 		}
 
-		static private System.Int32 get_DefaultMaximumErrorResponseLength()
+		static private System.Int32 get_DefaultMaximumErrorResponseLength(Type type, string name)
 		{
 			return System.Net.HttpWebRequest.DefaultMaximumErrorResponseLength;
 		}
 
-		static private void set_DefaultMaximumErrorResponseLength(System.Int32 value)
+		static private void set_DefaultMaximumErrorResponseLength(Type type, string name, System.Int32 value)
 		{
 			System.Net.HttpWebRequest.DefaultMaximumErrorResponseLength = value;
 		}
 
-		static private System.Int32 get_DefaultMaximumResponseHeadersLength()
+		static private System.Int32 get_DefaultMaximumResponseHeadersLength(Type type, string name)
 		{
 			return System.Net.HttpWebRequest.DefaultMaximumResponseHeadersLength;
 		}
 
-		static private void set_DefaultMaximumResponseHeadersLength(System.Int32 value)
+		static private void set_DefaultMaximumResponseHeadersLength(Type type, string name, System.Int32 value)
 		{
 			System.Net.HttpWebRequest.DefaultMaximumResponseHeadersLength = value;
 		}
 
-		static private System.String get_Accept(System.Net.HttpWebRequest instance)
+		static private System.String get_Accept(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Accept;
 		}
 
-		static private void set_Accept(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Accept(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Accept = value;
 		}
 
-		static private System.Int32 get_ReadWriteTimeout(System.Net.HttpWebRequest instance)
+		static private System.Int32 get_ReadWriteTimeout(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ReadWriteTimeout;
 		}
 
-		static private void set_ReadWriteTimeout(System.Net.HttpWebRequest instance, System.Int32 value)
+		static private void set_ReadWriteTimeout(System.Net.HttpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.ReadWriteTimeout = value;
 		}
 
-		static private System.Int32 get_ContinueTimeout(System.Net.HttpWebRequest instance)
+		static private System.Int32 get_ContinueTimeout(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ContinueTimeout;
 		}
 
-		static private void set_ContinueTimeout(System.Net.HttpWebRequest instance, System.Int32 value)
+		static private void set_ContinueTimeout(System.Net.HttpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.ContinueTimeout = value;
 		}
 
-		static private System.String get_MediaType(System.Net.HttpWebRequest instance)
+		static private System.String get_MediaType(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.MediaType;
 		}
 
-		static private void set_MediaType(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_MediaType(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.MediaType = value;
 		}
 
-		static private System.String get_Method(System.Net.HttpWebRequest instance)
+		static private System.String get_Method(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Method;
 		}
 
-		static private void set_Method(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Method(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Method = value;
 		}
 
-		static private System.Boolean get_Pipelined(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_Pipelined(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Pipelined;
 		}
 
-		static private void set_Pipelined(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_Pipelined(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.Pipelined = value;
 		}
 
-		static private System.Boolean get_PreAuthenticate(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_PreAuthenticate(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.PreAuthenticate;
 		}
 
-		static private void set_PreAuthenticate(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_PreAuthenticate(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.PreAuthenticate = value;
 		}
 
-		static private System.Version get_ProtocolVersion(System.Net.HttpWebRequest instance)
+		static private System.Version get_ProtocolVersion(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ProtocolVersion;
 		}
 
-		static private void set_ProtocolVersion(System.Net.HttpWebRequest instance, System.Version value)
+		static private void set_ProtocolVersion(System.Net.HttpWebRequest instance, string name, System.Version value)
 		{
 			instance.ProtocolVersion = value;
 		}
 
-		static private System.Net.IWebProxy get_Proxy(System.Net.HttpWebRequest instance)
+		static private System.Net.IWebProxy get_Proxy(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Proxy;
 		}
 
-		static private void set_Proxy(System.Net.HttpWebRequest instance, System.Net.IWebProxy value)
+		static private void set_Proxy(System.Net.HttpWebRequest instance, string name, System.Net.IWebProxy value)
 		{
 			instance.Proxy = value;
 		}
 
-		static private System.String get_Referer(System.Net.HttpWebRequest instance)
+		static private System.String get_Referer(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Referer;
 		}
 
-		static private void set_Referer(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Referer(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Referer = value;
 		}
 
-		static private System.Uri get_RequestUri(System.Net.HttpWebRequest instance)
+		static private System.Uri get_RequestUri(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.RequestUri;
 		}
 
-		static private System.Boolean get_SendChunked(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_SendChunked(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.SendChunked;
 		}
 
-		static private void set_SendChunked(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_SendChunked(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.SendChunked = value;
 		}
 
-		static private System.Net.ServicePoint get_ServicePoint(System.Net.HttpWebRequest instance)
+		static private System.Net.ServicePoint get_ServicePoint(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ServicePoint;
 		}
 
-		static private System.Boolean get_SupportsCookieContainer(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_SupportsCookieContainer(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.SupportsCookieContainer;
 		}
 
-		static private System.Int32 get_Timeout(System.Net.HttpWebRequest instance)
+		static private System.Int32 get_Timeout(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Timeout;
 		}
 
-		static private void set_Timeout(System.Net.HttpWebRequest instance, System.Int32 value)
+		static private void set_Timeout(System.Net.HttpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.Timeout = value;
 		}
 
-		static private System.String get_TransferEncoding(System.Net.HttpWebRequest instance)
+		static private System.String get_TransferEncoding(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.TransferEncoding;
 		}
 
-		static private void set_TransferEncoding(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_TransferEncoding(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.TransferEncoding = value;
 		}
 
-		static private System.Boolean get_UseDefaultCredentials(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_UseDefaultCredentials(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.UseDefaultCredentials;
 		}
 
-		static private void set_UseDefaultCredentials(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_UseDefaultCredentials(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UseDefaultCredentials = value;
 		}
 
-		static private System.String get_UserAgent(System.Net.HttpWebRequest instance)
+		static private System.String get_UserAgent(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.UserAgent;
 		}
 
-		static private void set_UserAgent(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_UserAgent(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.UserAgent = value;
 		}
 
-		static private System.Int32 get_MaximumResponseHeadersLength(System.Net.HttpWebRequest instance)
+		static private System.Int32 get_MaximumResponseHeadersLength(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.MaximumResponseHeadersLength;
 		}
 
-		static private void set_MaximumResponseHeadersLength(System.Net.HttpWebRequest instance, System.Int32 value)
+		static private void set_MaximumResponseHeadersLength(System.Net.HttpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.MaximumResponseHeadersLength = value;
 		}
 
-		static private System.Int32 get_MaximumAutomaticRedirections(System.Net.HttpWebRequest instance)
+		static private System.Int32 get_MaximumAutomaticRedirections(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.MaximumAutomaticRedirections;
 		}
 
-		static private void set_MaximumAutomaticRedirections(System.Net.HttpWebRequest instance, System.Int32 value)
+		static private void set_MaximumAutomaticRedirections(System.Net.HttpWebRequest instance, string name, System.Int32 value)
 		{
 			instance.MaximumAutomaticRedirections = value;
 		}
 
-		static private System.Boolean get_KeepAlive(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_KeepAlive(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.KeepAlive;
 		}
 
-		static private void set_KeepAlive(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_KeepAlive(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.KeepAlive = value;
 		}
 
-		static private System.DateTime get_IfModifiedSince(System.Net.HttpWebRequest instance)
+		static private System.DateTime get_IfModifiedSince(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.IfModifiedSince;
 		}
 
-		static private void set_IfModifiedSince(System.Net.HttpWebRequest instance, System.DateTime value)
+		static private void set_IfModifiedSince(System.Net.HttpWebRequest instance, string name, System.DateTime value)
 		{
 			instance.IfModifiedSince = value;
 		}
 
-		static private System.Uri get_Address(System.Net.HttpWebRequest instance)
+		static private System.Uri get_Address(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Address;
 		}
 
-		static private System.Boolean get_AllowAutoRedirect(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_AllowAutoRedirect(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.AllowAutoRedirect;
 		}
 
-		static private void set_AllowAutoRedirect(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_AllowAutoRedirect(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.AllowAutoRedirect = value;
 		}
 
-		static private System.Boolean get_AllowWriteStreamBuffering(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_AllowWriteStreamBuffering(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.AllowWriteStreamBuffering;
 		}
 
-		static private void set_AllowWriteStreamBuffering(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_AllowWriteStreamBuffering(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.AllowWriteStreamBuffering = value;
 		}
 
-		static private System.Boolean get_AllowReadStreamBuffering(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_AllowReadStreamBuffering(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.AllowReadStreamBuffering;
 		}
 
-		static private void set_AllowReadStreamBuffering(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_AllowReadStreamBuffering(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.AllowReadStreamBuffering = value;
 		}
 
-		static private System.Net.DecompressionMethods get_AutomaticDecompression(System.Net.HttpWebRequest instance)
+		static private System.Net.DecompressionMethods get_AutomaticDecompression(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.AutomaticDecompression;
 		}
 
-		static private void set_AutomaticDecompression(System.Net.HttpWebRequest instance, System.Net.DecompressionMethods value)
+		static private void set_AutomaticDecompression(System.Net.HttpWebRequest instance, string name, System.Net.DecompressionMethods value)
 		{
 			instance.AutomaticDecompression = value;
 		}
 
-		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.HttpWebRequest instance)
+		static private System.Security.Cryptography.X509Certificates.X509CertificateCollection get_ClientCertificates(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ClientCertificates;
 		}
 
-		static private void set_ClientCertificates(System.Net.HttpWebRequest instance, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
+		static private void set_ClientCertificates(System.Net.HttpWebRequest instance, string name, System.Security.Cryptography.X509Certificates.X509CertificateCollection value)
 		{
 			instance.ClientCertificates = value;
 		}
 
-		static private System.String get_Connection(System.Net.HttpWebRequest instance)
+		static private System.String get_Connection(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Connection;
 		}
 
-		static private void set_Connection(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Connection(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Connection = value;
 		}
 
-		static private System.String get_ConnectionGroupName(System.Net.HttpWebRequest instance)
+		static private System.String get_ConnectionGroupName(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ConnectionGroupName;
 		}
 
-		static private void set_ConnectionGroupName(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_ConnectionGroupName(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.ConnectionGroupName = value;
 		}
 
-		static private System.Boolean get_UnsafeAuthenticatedConnectionSharing(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_UnsafeAuthenticatedConnectionSharing(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.UnsafeAuthenticatedConnectionSharing;
 		}
 
-		static private void set_UnsafeAuthenticatedConnectionSharing(System.Net.HttpWebRequest instance, System.Boolean value)
+		static private void set_UnsafeAuthenticatedConnectionSharing(System.Net.HttpWebRequest instance, string name, System.Boolean value)
 		{
 			instance.UnsafeAuthenticatedConnectionSharing = value;
 		}
 
-		static private System.Int64 get_ContentLength(System.Net.HttpWebRequest instance)
+		static private System.Int64 get_ContentLength(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ContentLength;
 		}
 
-		static private void set_ContentLength(System.Net.HttpWebRequest instance, System.Int64 value)
+		static private void set_ContentLength(System.Net.HttpWebRequest instance, string name, System.Int64 value)
 		{
 			instance.ContentLength = value;
 		}
 
-		static private System.Net.HttpContinueDelegate get_ContinueDelegate(System.Net.HttpWebRequest instance)
+		static private System.Net.HttpContinueDelegate get_ContinueDelegate(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ContinueDelegate;
 		}
 
-		static private void set_ContinueDelegate(System.Net.HttpWebRequest instance, System.Net.HttpContinueDelegate value)
+		static private void set_ContinueDelegate(System.Net.HttpWebRequest instance, string name, System.Net.HttpContinueDelegate value)
 		{
 			instance.ContinueDelegate = value;
 		}
 
-		static private System.Net.CookieContainer get_CookieContainer(System.Net.HttpWebRequest instance)
+		static private System.Net.CookieContainer get_CookieContainer(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.CookieContainer;
 		}
 
-		static private void set_CookieContainer(System.Net.HttpWebRequest instance, System.Net.CookieContainer value)
+		static private void set_CookieContainer(System.Net.HttpWebRequest instance, string name, System.Net.CookieContainer value)
 		{
 			instance.CookieContainer = value;
 		}
 
-		static private System.Net.ICredentials get_Credentials(System.Net.HttpWebRequest instance)
+		static private System.Net.ICredentials get_Credentials(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Credentials;
 		}
 
-		static private void set_Credentials(System.Net.HttpWebRequest instance, System.Net.ICredentials value)
+		static private void set_Credentials(System.Net.HttpWebRequest instance, string name, System.Net.ICredentials value)
 		{
 			instance.Credentials = value;
 		}
 
-		static private System.DateTime get_Date(System.Net.HttpWebRequest instance)
+		static private System.DateTime get_Date(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Date;
 		}
 
-		static private void set_Date(System.Net.HttpWebRequest instance, System.DateTime value)
+		static private void set_Date(System.Net.HttpWebRequest instance, string name, System.DateTime value)
 		{
 			instance.Date = value;
 		}
 
-		static private System.String get_Expect(System.Net.HttpWebRequest instance)
+		static private System.String get_Expect(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Expect;
 		}
 
-		static private void set_Expect(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Expect(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Expect = value;
 		}
 
-		static private System.Boolean get_HaveResponse(System.Net.HttpWebRequest instance)
+		static private System.Boolean get_HaveResponse(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.HaveResponse;
 		}
 
-		static private System.Net.WebHeaderCollection get_Headers(System.Net.HttpWebRequest instance)
+		static private System.Net.WebHeaderCollection get_Headers(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private void set_Headers(System.Net.HttpWebRequest instance, System.Net.WebHeaderCollection value)
+		static private void set_Headers(System.Net.HttpWebRequest instance, string name, System.Net.WebHeaderCollection value)
 		{
 			instance.Headers = value;
 		}
 
-		static private System.String get_Host(System.Net.HttpWebRequest instance)
+		static private System.String get_Host(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.Host;
 		}
 
-		static private void set_Host(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_Host(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.Host = value;
 		}
 
-		static private System.String get_ContentType(System.Net.HttpWebRequest instance)
+		static private System.String get_ContentType(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ContentType;
 		}
 
-		static private void set_ContentType(System.Net.HttpWebRequest instance, System.String value)
+		static private void set_ContentType(System.Net.HttpWebRequest instance, string name, System.String value)
 		{
 			instance.ContentType = value;
 		}
 
-		static private System.Net.Security.RemoteCertificateValidationCallback get_ServerCertificateValidationCallback(System.Net.HttpWebRequest instance)
+		static private System.Net.Security.RemoteCertificateValidationCallback get_ServerCertificateValidationCallback(System.Net.HttpWebRequest instance, string name)
 		{
 			return instance.ServerCertificateValidationCallback;
 		}
 
-		static private void set_ServerCertificateValidationCallback(System.Net.HttpWebRequest instance, System.Net.Security.RemoteCertificateValidationCallback value)
+		static private void set_ServerCertificateValidationCallback(System.Net.HttpWebRequest instance, string name, System.Net.Security.RemoteCertificateValidationCallback value)
 		{
 			instance.ServerCertificateValidationCallback = value;
 		}

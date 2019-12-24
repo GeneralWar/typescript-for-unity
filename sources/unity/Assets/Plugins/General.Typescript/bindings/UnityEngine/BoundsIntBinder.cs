@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,7 +57,7 @@ namespace General.Typescript
 			return default(UnityEngine.BoundsInt);
 		}
 
-		static private void ClampToBounds(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private void ClampToBounds(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.BoundsInt>())
 			{
@@ -78,7 +79,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Contains(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private System.Boolean Contains(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int>())
 			{
@@ -100,7 +101,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean Equals(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -126,7 +127,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -141,7 +142,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void SetMinMax(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private void SetMinMax(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3Int, UnityEngine.Vector3Int>())
 			{
@@ -163,7 +164,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.BoundsInt instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.BoundsInt instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -178,137 +179,137 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_x(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_x(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.x;
 		}
 
-		static private void set_x(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_x(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.x = value;
 		}
 
-		static private System.Int32 get_y(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_y(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.y;
 		}
 
-		static private void set_y(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_y(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.y = value;
 		}
 
-		static private System.Int32 get_z(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_z(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.z;
 		}
 
-		static private void set_z(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_z(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.z = value;
 		}
 
-		static private UnityEngine.Vector3 get_center(UnityEngine.BoundsInt instance)
+		static private UnityEngine.Vector3 get_center(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.center;
 		}
 
-		static private UnityEngine.Vector3Int get_min(UnityEngine.BoundsInt instance)
+		static private UnityEngine.Vector3Int get_min(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.min;
 		}
 
-		static private void set_min(UnityEngine.BoundsInt instance, UnityEngine.Vector3Int value)
+		static private void set_min(UnityEngine.BoundsInt instance, string name, UnityEngine.Vector3Int value)
 		{
 			instance.min = value;
 		}
 
-		static private UnityEngine.Vector3Int get_max(UnityEngine.BoundsInt instance)
+		static private UnityEngine.Vector3Int get_max(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.max;
 		}
 
-		static private void set_max(UnityEngine.BoundsInt instance, UnityEngine.Vector3Int value)
+		static private void set_max(UnityEngine.BoundsInt instance, string name, UnityEngine.Vector3Int value)
 		{
 			instance.max = value;
 		}
 
-		static private System.Int32 get_xMin(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_xMin(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.xMin;
 		}
 
-		static private void set_xMin(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_xMin(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.xMin = value;
 		}
 
-		static private System.Int32 get_yMin(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_yMin(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.yMin;
 		}
 
-		static private void set_yMin(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_yMin(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.yMin = value;
 		}
 
-		static private System.Int32 get_zMin(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_zMin(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.zMin;
 		}
 
-		static private void set_zMin(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_zMin(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.zMin = value;
 		}
 
-		static private System.Int32 get_xMax(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_xMax(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.xMax;
 		}
 
-		static private void set_xMax(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_xMax(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.xMax = value;
 		}
 
-		static private System.Int32 get_yMax(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_yMax(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.yMax;
 		}
 
-		static private void set_yMax(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_yMax(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.yMax = value;
 		}
 
-		static private System.Int32 get_zMax(UnityEngine.BoundsInt instance)
+		static private System.Int32 get_zMax(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.zMax;
 		}
 
-		static private void set_zMax(UnityEngine.BoundsInt instance, System.Int32 value)
+		static private void set_zMax(UnityEngine.BoundsInt instance, string name, System.Int32 value)
 		{
 			instance.zMax = value;
 		}
 
-		static private UnityEngine.Vector3Int get_position(UnityEngine.BoundsInt instance)
+		static private UnityEngine.Vector3Int get_position(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.position;
 		}
 
-		static private void set_position(UnityEngine.BoundsInt instance, UnityEngine.Vector3Int value)
+		static private void set_position(UnityEngine.BoundsInt instance, string name, UnityEngine.Vector3Int value)
 		{
 			instance.position = value;
 		}
 
-		static private UnityEngine.Vector3Int get_size(UnityEngine.BoundsInt instance)
+		static private UnityEngine.Vector3Int get_size(UnityEngine.BoundsInt instance, string name)
 		{
 			return instance.size;
 		}
 
-		static private void set_size(UnityEngine.BoundsInt instance, UnityEngine.Vector3Int value)
+		static private void set_size(UnityEngine.BoundsInt instance, string name, UnityEngine.Vector3Int value)
 		{
 			instance.size = value;
 		}

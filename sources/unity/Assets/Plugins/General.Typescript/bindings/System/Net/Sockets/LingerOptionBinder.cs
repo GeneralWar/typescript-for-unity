@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,22 +35,22 @@ namespace General.Typescript
 			return default(System.Net.Sockets.LingerOption);
 		}
 
-		static private System.Boolean get_Enabled(System.Net.Sockets.LingerOption instance)
+		static private System.Boolean get_Enabled(System.Net.Sockets.LingerOption instance, string name)
 		{
 			return instance.Enabled;
 		}
 
-		static private void set_Enabled(System.Net.Sockets.LingerOption instance, System.Boolean value)
+		static private void set_Enabled(System.Net.Sockets.LingerOption instance, string name, System.Boolean value)
 		{
 			instance.Enabled = value;
 		}
 
-		static private System.Int32 get_LingerTime(System.Net.Sockets.LingerOption instance)
+		static private System.Int32 get_LingerTime(System.Net.Sockets.LingerOption instance, string name)
 		{
 			return instance.LingerTime;
 		}
 
-		static private void set_LingerTime(System.Net.Sockets.LingerOption instance, System.Int32 value)
+		static private void set_LingerTime(System.Net.Sockets.LingerOption instance, string name, System.Int32 value)
 		{
 			instance.LingerTime = value;
 		}

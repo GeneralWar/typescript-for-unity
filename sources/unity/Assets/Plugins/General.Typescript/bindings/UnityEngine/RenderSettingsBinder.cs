@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,242 +35,242 @@ namespace General.Typescript
 			self.BindStaticProperty("flareFadeSpeed", get_flareFadeSpeed, set_flareFadeSpeed);
 		}
 
-		static private System.Boolean get_fog()
+		static private System.Boolean get_fog(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fog;
 		}
 
-		static private void set_fog(System.Boolean value)
+		static private void set_fog(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.RenderSettings.fog = value;
 		}
 
-		static private System.Single get_haloStrength()
+		static private System.Single get_haloStrength(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.haloStrength;
 		}
 
-		static private void set_haloStrength(System.Single value)
+		static private void set_haloStrength(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.haloStrength = value;
 		}
 
-		static private System.Int32 get_defaultReflectionResolution()
+		static private System.Int32 get_defaultReflectionResolution(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.defaultReflectionResolution;
 		}
 
-		static private void set_defaultReflectionResolution(System.Int32 value)
+		static private void set_defaultReflectionResolution(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.RenderSettings.defaultReflectionResolution = value;
 		}
 
-		static private UnityEngine.Rendering.DefaultReflectionMode get_defaultReflectionMode()
+		static private UnityEngine.Rendering.DefaultReflectionMode get_defaultReflectionMode(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.defaultReflectionMode;
 		}
 
-		static private void set_defaultReflectionMode(UnityEngine.Rendering.DefaultReflectionMode value)
+		static private void set_defaultReflectionMode(Type type, string name, UnityEngine.Rendering.DefaultReflectionMode value)
 		{
 			UnityEngine.RenderSettings.defaultReflectionMode = value;
 		}
 
-		static private System.Int32 get_reflectionBounces()
+		static private System.Int32 get_reflectionBounces(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.reflectionBounces;
 		}
 
-		static private void set_reflectionBounces(System.Int32 value)
+		static private void set_reflectionBounces(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.RenderSettings.reflectionBounces = value;
 		}
 
-		static private System.Single get_reflectionIntensity()
+		static private System.Single get_reflectionIntensity(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.reflectionIntensity;
 		}
 
-		static private void set_reflectionIntensity(System.Single value)
+		static private void set_reflectionIntensity(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.reflectionIntensity = value;
 		}
 
-		static private UnityEngine.Cubemap get_customReflection()
+		static private UnityEngine.Cubemap get_customReflection(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.customReflection;
 		}
 
-		static private void set_customReflection(UnityEngine.Cubemap value)
+		static private void set_customReflection(Type type, string name, UnityEngine.Cubemap value)
 		{
 			UnityEngine.RenderSettings.customReflection = value;
 		}
 
-		static private UnityEngine.Rendering.SphericalHarmonicsL2 get_ambientProbe()
+		static private UnityEngine.Rendering.SphericalHarmonicsL2 get_ambientProbe(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientProbe;
 		}
 
-		static private void set_ambientProbe(UnityEngine.Rendering.SphericalHarmonicsL2 value)
+		static private void set_ambientProbe(Type type, string name, UnityEngine.Rendering.SphericalHarmonicsL2 value)
 		{
 			UnityEngine.RenderSettings.ambientProbe = value;
 		}
 
-		static private UnityEngine.Light get_sun()
+		static private UnityEngine.Light get_sun(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.sun;
 		}
 
-		static private void set_sun(UnityEngine.Light value)
+		static private void set_sun(Type type, string name, UnityEngine.Light value)
 		{
 			UnityEngine.RenderSettings.sun = value;
 		}
 
-		static private UnityEngine.Material get_skybox()
+		static private UnityEngine.Material get_skybox(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.skybox;
 		}
 
-		static private void set_skybox(UnityEngine.Material value)
+		static private void set_skybox(Type type, string name, UnityEngine.Material value)
 		{
 			UnityEngine.RenderSettings.skybox = value;
 		}
 
-		static private UnityEngine.Color get_subtractiveShadowColor()
+		static private UnityEngine.Color get_subtractiveShadowColor(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.subtractiveShadowColor;
 		}
 
-		static private void set_subtractiveShadowColor(UnityEngine.Color value)
+		static private void set_subtractiveShadowColor(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.subtractiveShadowColor = value;
 		}
 
-		static private UnityEngine.Color get_ambientLight()
+		static private UnityEngine.Color get_ambientLight(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientLight;
 		}
 
-		static private void set_ambientLight(UnityEngine.Color value)
+		static private void set_ambientLight(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.ambientLight = value;
 		}
 
-		static private System.Single get_ambientIntensity()
+		static private System.Single get_ambientIntensity(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientIntensity;
 		}
 
-		static private void set_ambientIntensity(System.Single value)
+		static private void set_ambientIntensity(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.ambientIntensity = value;
 		}
 
-		static private UnityEngine.Color get_ambientGroundColor()
+		static private UnityEngine.Color get_ambientGroundColor(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientGroundColor;
 		}
 
-		static private void set_ambientGroundColor(UnityEngine.Color value)
+		static private void set_ambientGroundColor(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.ambientGroundColor = value;
 		}
 
-		static private UnityEngine.Color get_ambientEquatorColor()
+		static private UnityEngine.Color get_ambientEquatorColor(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientEquatorColor;
 		}
 
-		static private void set_ambientEquatorColor(UnityEngine.Color value)
+		static private void set_ambientEquatorColor(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.ambientEquatorColor = value;
 		}
 
-		static private UnityEngine.Color get_ambientSkyColor()
+		static private UnityEngine.Color get_ambientSkyColor(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientSkyColor;
 		}
 
-		static private void set_ambientSkyColor(UnityEngine.Color value)
+		static private void set_ambientSkyColor(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.ambientSkyColor = value;
 		}
 
-		static private UnityEngine.Rendering.AmbientMode get_ambientMode()
+		static private UnityEngine.Rendering.AmbientMode get_ambientMode(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.ambientMode;
 		}
 
-		static private void set_ambientMode(UnityEngine.Rendering.AmbientMode value)
+		static private void set_ambientMode(Type type, string name, UnityEngine.Rendering.AmbientMode value)
 		{
 			UnityEngine.RenderSettings.ambientMode = value;
 		}
 
-		static private System.Single get_fogDensity()
+		static private System.Single get_fogDensity(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fogDensity;
 		}
 
-		static private void set_fogDensity(System.Single value)
+		static private void set_fogDensity(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.fogDensity = value;
 		}
 
-		static private UnityEngine.Color get_fogColor()
+		static private UnityEngine.Color get_fogColor(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fogColor;
 		}
 
-		static private void set_fogColor(UnityEngine.Color value)
+		static private void set_fogColor(Type type, string name, UnityEngine.Color value)
 		{
 			UnityEngine.RenderSettings.fogColor = value;
 		}
 
-		static private UnityEngine.FogMode get_fogMode()
+		static private UnityEngine.FogMode get_fogMode(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fogMode;
 		}
 
-		static private void set_fogMode(UnityEngine.FogMode value)
+		static private void set_fogMode(Type type, string name, UnityEngine.FogMode value)
 		{
 			UnityEngine.RenderSettings.fogMode = value;
 		}
 
-		static private System.Single get_fogEndDistance()
+		static private System.Single get_fogEndDistance(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fogEndDistance;
 		}
 
-		static private void set_fogEndDistance(System.Single value)
+		static private void set_fogEndDistance(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.fogEndDistance = value;
 		}
 
-		static private System.Single get_fogStartDistance()
+		static private System.Single get_fogStartDistance(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.fogStartDistance;
 		}
 
-		static private void set_fogStartDistance(System.Single value)
+		static private void set_fogStartDistance(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.fogStartDistance = value;
 		}
 
-		static private System.Single get_flareStrength()
+		static private System.Single get_flareStrength(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.flareStrength;
 		}
 
-		static private void set_flareStrength(System.Single value)
+		static private void set_flareStrength(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.flareStrength = value;
 		}
 
-		static private System.Single get_flareFadeSpeed()
+		static private System.Single get_flareFadeSpeed(Type type, string name)
 		{
 			return UnityEngine.RenderSettings.flareFadeSpeed;
 		}
 
-		static private void set_flareFadeSpeed(System.Single value)
+		static private void set_flareFadeSpeed(Type type, string name, System.Single value)
 		{
 			UnityEngine.RenderSettings.flareFadeSpeed = value;
 		}

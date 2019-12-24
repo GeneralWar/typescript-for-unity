@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -15,7 +16,7 @@ namespace General.Typescript
 			self.BindStaticProperty("Null", get_Null, null);
 		}
 
-		static private UnityEngine.Animations.AnimationPlayableOutput Create(Parameters parameters)
+		static private UnityEngine.Animations.AnimationPlayableOutput Create(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Playables.PlayableGraph, System.String, UnityEngine.Animator>())
 			{
@@ -37,7 +38,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.AnimationPlayableOutput);
 		}
 
-		static private UnityEngine.Playables.PlayableOutputHandle GetHandle(UnityEngine.Animations.AnimationPlayableOutput instance, Parameters parameters)
+		static private UnityEngine.Playables.PlayableOutputHandle GetHandle(UnityEngine.Animations.AnimationPlayableOutput instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -52,7 +53,7 @@ namespace General.Typescript
 			return default(UnityEngine.Playables.PlayableOutputHandle);
 		}
 
-		static private UnityEngine.Animator GetTarget(UnityEngine.Animations.AnimationPlayableOutput instance, Parameters parameters)
+		static private UnityEngine.Animator GetTarget(UnityEngine.Animations.AnimationPlayableOutput instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -67,7 +68,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void SetTarget(UnityEngine.Animations.AnimationPlayableOutput instance, Parameters parameters)
+		static private void SetTarget(UnityEngine.Animations.AnimationPlayableOutput instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animator>())
 			{
@@ -89,7 +90,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Animations.AnimationPlayableOutput get_Null()
+		static private UnityEngine.Animations.AnimationPlayableOutput get_Null(Type type, string name)
 		{
 			return UnityEngine.Animations.AnimationPlayableOutput.Null;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,7 +36,7 @@ namespace General.Typescript
 			return default(UnityEngine.PlayerPrefs);
 		}
 
-		static private void DeleteAll(Parameters parameters)
+		static private void DeleteAll(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -49,7 +50,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.PlayerPrefs.DeleteAll has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void DeleteKey(Parameters parameters)
+		static private void DeleteKey(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -71,7 +72,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single GetFloat(Parameters parameters)
+		static private System.Single GetFloat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -97,7 +98,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Int32 GetInt(Parameters parameters)
+		static private System.Int32 GetInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -123,7 +124,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String GetString(Parameters parameters)
+		static private System.String GetString(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -149,7 +150,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean HasKey(Parameters parameters)
+		static private System.Boolean HasKey(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -171,7 +172,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void Save(Parameters parameters)
+		static private void Save(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -185,7 +186,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.PlayerPrefs.Save has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetFloat(Parameters parameters)
+		static private void SetFloat(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Single>())
 			{
@@ -207,7 +208,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetInt(Parameters parameters)
+		static private void SetInt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.Int32>())
 			{
@@ -229,7 +230,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetString(Parameters parameters)
+		static private void SetString(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String, System.String>())
 			{

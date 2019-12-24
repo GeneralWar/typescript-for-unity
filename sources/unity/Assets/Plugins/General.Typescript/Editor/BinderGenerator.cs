@@ -92,81 +92,81 @@ namespace General.Typescript
 				AssetDatabase.CreateAsset(configuration, Utility.CONFIGURATION_PATH);
 			}
 
-			if (Utility.ASSETS_DIRECTORIES.Any(d => !Utility.DirectoryContainsFiles(d)))
-			{
-				foreach (string directory in Utility.ASSETS_DIRECTORIES)
-				{
-					try
-					{
-						Utility.DeleteDirectory(directory, true);
-					}
-					catch (Exception e)
-					{
-						Debug.LogException(e);
-						Debug.LogError("Cannot remove directory to decompress assets for General.Typescript, please restart Unity and try again!");
-						return;
-					}
-				}
+			//if (Utility.ASSETS_DIRECTORIES.Any(d => !Utility.DirectoryContainsFiles(d)))
+			//{
+			//	foreach (string directory in Utility.ASSETS_DIRECTORIES)
+			//	{
+			//		try
+			//		{
+			//			Utility.DeleteDirectory(directory, true);
+			//		}
+			//		catch (Exception e)
+			//		{
+			//			Debug.LogException(e);
+			//			Debug.LogError("Cannot remove directory to decompress assets for General.Typescript, please restart Unity and try again!");
+			//			return;
+			//		}
+			//	}
 
-				WebResponse response = null;
-				long timestamp = DateTime.Now.Ticks;
-				HttpWebRequest request = WebRequest.CreateHttp(string.Format("http://typescript.soulfire.store/assets.gzp?timestamp={0}", timestamp));
-				try
-				{
-					response = request.GetResponse();
-				}
-				catch (Exception)
-				{
-					request = WebRequest.CreateHttp(string.Format("https://typescript-1256214505.cos.ap-shanghai.myqcloud.com/assets.gzp?timestamp={0}", timestamp));
-					try
-					{
-						response = request.GetResponse();
-					}
-					catch (Exception e)
-					{
-						Debug.LogException(e);
-					}
-				}
-				if (null == response)
-				{
-					Debug.LogError("Cannot download asset for General.Typescript, please concat author to resolve!");
-					return;
-				}
-				else
-				{
-					using (MemoryStream memory = new MemoryStream())
-					{
-						using (Stream responseStream = response.GetResponseStream())
-						{
+			//	WebResponse response = null;
+			//	long timestamp = DateTime.Now.Ticks;
+			//	HttpWebRequest request = WebRequest.CreateHttp(string.Format("http://typescript.soulfire.store/assets.gzp?timestamp={0}", timestamp));
+			//	try
+			//	{
+			//		response = request.GetResponse();
+			//	}
+			//	catch (Exception)
+			//	{
+			//		request = WebRequest.CreateHttp(string.Format("https://typescript-1256214505.cos.ap-shanghai.myqcloud.com/assets.gzp?timestamp={0}", timestamp));
+			//		try
+			//		{
+			//			response = request.GetResponse();
+			//		}
+			//		catch (Exception e)
+			//		{
+			//			Debug.LogException(e);
+			//		}
+			//	}
+			//	if (null == response)
+			//	{
+			//		Debug.LogError("Cannot download asset for General.Typescript, please concat author to resolve!");
+			//		return;
+			//	}
+			//	else
+			//	{
+			//		using (MemoryStream memory = new MemoryStream())
+			//		{
+			//			using (Stream responseStream = response.GetResponseStream())
+			//			{
 
-							using (GZipStream stream = new GZipStream(responseStream, CompressionMode.Decompress, false))
-							{
-								stream.CopyTo(memory);
-								stream.Close();
-							}
-							response.Close();
-						}
+			//				using (GZipStream stream = new GZipStream(responseStream, CompressionMode.Decompress, false))
+			//				{
+			//					stream.CopyTo(memory);
+			//					stream.Close();
+			//				}
+			//				response.Close();
+			//			}
 
-						memory.Position = 0;
-						using (BinaryReader reader = new BinaryReader(memory))
-						{
-							while (memory.Position < memory.Length)
-							{
-								ushort nameLength = reader.ReadUInt16();
-								string filename = Encoding.UTF8.GetString(reader.ReadBytes(nameLength));
-								Utility.CreateDirectory(Path.GetDirectoryName(filename));
-								int bufferLength = reader.ReadInt32();
-								using (FileStream file = File.OpenWrite(filename))
-								{
-									file.Write(reader.ReadBytes(bufferLength), 0, bufferLength);
-									file.Close();
-								}
-							}
-						}
-						memory.Close();
-					}
-				}
-			}
+			//			memory.Position = 0;
+			//			using (BinaryReader reader = new BinaryReader(memory))
+			//			{
+			//				while (memory.Position < memory.Length)
+			//				{
+			//					ushort nameLength = reader.ReadUInt16();
+			//					string filename = Encoding.UTF8.GetString(reader.ReadBytes(nameLength));
+			//					Utility.CreateDirectory(Path.GetDirectoryName(filename));
+			//					int bufferLength = reader.ReadInt32();
+			//					using (FileStream file = File.OpenWrite(filename))
+			//					{
+			//						file.Write(reader.ReadBytes(bufferLength), 0, bufferLength);
+			//						file.Close();
+			//					}
+			//				}
+			//			}
+			//			memory.Close();
+			//		}
+			//	}
+			//}
 			AssetDatabase.Refresh();
 			Debug.Log("Initialize General.Typescript successfully!");
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -38,7 +39,7 @@ namespace General.Typescript
 			return default(UnityEngine.RectOffset);
 		}
 
-		static private UnityEngine.Rect Add(UnityEngine.RectOffset instance, Parameters parameters)
+		static private UnityEngine.Rect Add(UnityEngine.RectOffset instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private UnityEngine.Rect Remove(UnityEngine.RectOffset instance, Parameters parameters)
+		static private UnityEngine.Rect Remove(UnityEngine.RectOffset instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -82,7 +83,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rect);
 		}
 
-		static private System.String ToString(UnityEngine.RectOffset instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.RectOffset instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -97,52 +98,52 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_left(UnityEngine.RectOffset instance)
+		static private System.Int32 get_left(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.left;
 		}
 
-		static private void set_left(UnityEngine.RectOffset instance, System.Int32 value)
+		static private void set_left(UnityEngine.RectOffset instance, string name, System.Int32 value)
 		{
 			instance.left = value;
 		}
 
-		static private System.Int32 get_right(UnityEngine.RectOffset instance)
+		static private System.Int32 get_right(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.right;
 		}
 
-		static private void set_right(UnityEngine.RectOffset instance, System.Int32 value)
+		static private void set_right(UnityEngine.RectOffset instance, string name, System.Int32 value)
 		{
 			instance.right = value;
 		}
 
-		static private System.Int32 get_top(UnityEngine.RectOffset instance)
+		static private System.Int32 get_top(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.top;
 		}
 
-		static private void set_top(UnityEngine.RectOffset instance, System.Int32 value)
+		static private void set_top(UnityEngine.RectOffset instance, string name, System.Int32 value)
 		{
 			instance.top = value;
 		}
 
-		static private System.Int32 get_bottom(UnityEngine.RectOffset instance)
+		static private System.Int32 get_bottom(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.bottom;
 		}
 
-		static private void set_bottom(UnityEngine.RectOffset instance, System.Int32 value)
+		static private void set_bottom(UnityEngine.RectOffset instance, string name, System.Int32 value)
 		{
 			instance.bottom = value;
 		}
 
-		static private System.Int32 get_horizontal(UnityEngine.RectOffset instance)
+		static private System.Int32 get_horizontal(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.horizontal;
 		}
 
-		static private System.Int32 get_vertical(UnityEngine.RectOffset instance)
+		static private System.Int32 get_vertical(UnityEngine.RectOffset instance, string name)
 		{
 			return instance.vertical;
 		}

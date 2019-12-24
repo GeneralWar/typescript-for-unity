@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -32,7 +33,7 @@ namespace General.Typescript
 			return default(UnityEngine.Resources);
 		}
 
-		static private System.Object FindObjectsOfTypeAll(Parameters parameters)
+		static private System.Object FindObjectsOfTypeAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type>())
 			{
@@ -54,7 +55,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object GetBuiltinResource(Parameters parameters)
+		static private System.Object GetBuiltinResource(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Type, System.String>())
 			{
@@ -76,7 +77,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object Load(Parameters parameters)
+		static private System.Object Load(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -102,7 +103,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Object LoadAll(Parameters parameters)
+		static private System.Object LoadAll(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -128,7 +129,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.ResourceRequest LoadAsync(Parameters parameters)
+		static private UnityEngine.ResourceRequest LoadAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void UnloadAsset(Parameters parameters)
+		static private void UnloadAsset(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Object>())
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.AsyncOperation UnloadUnusedAssets(Parameters parameters)
+		static private UnityEngine.AsyncOperation UnloadUnusedAssets(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

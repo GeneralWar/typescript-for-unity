@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.AnimationState);
 		}
 
-		static private void AddMixingTransform(UnityEngine.AnimationState instance, Parameters parameters)
+		static private void AddMixingTransform(UnityEngine.AnimationState instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RemoveMixingTransform(UnityEngine.AnimationState instance, Parameters parameters)
+		static private void RemoveMixingTransform(UnityEngine.AnimationState instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Transform>())
 			{
@@ -88,112 +89,112 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.AnimationState instance)
+		static private System.Boolean get_enabled(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.AnimationState instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.AnimationState instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}
 
-		static private System.Single get_weight(UnityEngine.AnimationState instance)
+		static private System.Single get_weight(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.weight;
 		}
 
-		static private void set_weight(UnityEngine.AnimationState instance, System.Single value)
+		static private void set_weight(UnityEngine.AnimationState instance, string name, System.Single value)
 		{
 			instance.weight = value;
 		}
 
-		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.AnimationState instance)
+		static private UnityEngine.WrapMode get_wrapMode(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.wrapMode;
 		}
 
-		static private void set_wrapMode(UnityEngine.AnimationState instance, UnityEngine.WrapMode value)
+		static private void set_wrapMode(UnityEngine.AnimationState instance, string name, UnityEngine.WrapMode value)
 		{
 			instance.wrapMode = value;
 		}
 
-		static private System.Single get_time(UnityEngine.AnimationState instance)
+		static private System.Single get_time(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.time;
 		}
 
-		static private void set_time(UnityEngine.AnimationState instance, System.Single value)
+		static private void set_time(UnityEngine.AnimationState instance, string name, System.Single value)
 		{
 			instance.time = value;
 		}
 
-		static private System.Single get_normalizedTime(UnityEngine.AnimationState instance)
+		static private System.Single get_normalizedTime(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.normalizedTime;
 		}
 
-		static private void set_normalizedTime(UnityEngine.AnimationState instance, System.Single value)
+		static private void set_normalizedTime(UnityEngine.AnimationState instance, string name, System.Single value)
 		{
 			instance.normalizedTime = value;
 		}
 
-		static private System.Single get_speed(UnityEngine.AnimationState instance)
+		static private System.Single get_speed(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.speed;
 		}
 
-		static private void set_speed(UnityEngine.AnimationState instance, System.Single value)
+		static private void set_speed(UnityEngine.AnimationState instance, string name, System.Single value)
 		{
 			instance.speed = value;
 		}
 
-		static private System.Single get_normalizedSpeed(UnityEngine.AnimationState instance)
+		static private System.Single get_normalizedSpeed(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.normalizedSpeed;
 		}
 
-		static private void set_normalizedSpeed(UnityEngine.AnimationState instance, System.Single value)
+		static private void set_normalizedSpeed(UnityEngine.AnimationState instance, string name, System.Single value)
 		{
 			instance.normalizedSpeed = value;
 		}
 
-		static private System.Single get_length(UnityEngine.AnimationState instance)
+		static private System.Single get_length(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.length;
 		}
 
-		static private System.Int32 get_layer(UnityEngine.AnimationState instance)
+		static private System.Int32 get_layer(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.layer;
 		}
 
-		static private void set_layer(UnityEngine.AnimationState instance, System.Int32 value)
+		static private void set_layer(UnityEngine.AnimationState instance, string name, System.Int32 value)
 		{
 			instance.layer = value;
 		}
 
-		static private UnityEngine.AnimationClip get_clip(UnityEngine.AnimationState instance)
+		static private UnityEngine.AnimationClip get_clip(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.clip;
 		}
 
-		static private System.String get_name(UnityEngine.AnimationState instance)
+		static private System.String get_name(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.name;
 		}
 
-		static private void set_name(UnityEngine.AnimationState instance, System.String value)
+		static private void set_name(UnityEngine.AnimationState instance, string name, System.String value)
 		{
 			instance.name = value;
 		}
 
-		static private UnityEngine.AnimationBlendMode get_blendMode(UnityEngine.AnimationState instance)
+		static private UnityEngine.AnimationBlendMode get_blendMode(UnityEngine.AnimationState instance, string name)
 		{
 			return instance.blendMode;
 		}
 
-		static private void set_blendMode(UnityEngine.AnimationState instance, UnityEngine.AnimationBlendMode value)
+		static private void set_blendMode(UnityEngine.AnimationState instance, string name, UnityEngine.AnimationBlendMode value)
 		{
 			instance.blendMode = value;
 		}

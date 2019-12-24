@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(UnityEngine.Ray2D);
 		}
 
-		static private UnityEngine.Vector2 GetPoint(UnityEngine.Ray2D instance, Parameters parameters)
+		static private UnityEngine.Vector2 GetPoint(UnityEngine.Ray2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector2);
 		}
 
-		static private System.String ToString(UnityEngine.Ray2D instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Ray2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -77,22 +78,22 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Vector2 get_origin(UnityEngine.Ray2D instance)
+		static private UnityEngine.Vector2 get_origin(UnityEngine.Ray2D instance, string name)
 		{
 			return instance.origin;
 		}
 
-		static private void set_origin(UnityEngine.Ray2D instance, UnityEngine.Vector2 value)
+		static private void set_origin(UnityEngine.Ray2D instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.origin = value;
 		}
 
-		static private UnityEngine.Vector2 get_direction(UnityEngine.Ray2D instance)
+		static private UnityEngine.Vector2 get_direction(UnityEngine.Ray2D instance, string name)
 		{
 			return instance.direction;
 		}
 
-		static private void set_direction(UnityEngine.Ray2D instance, UnityEngine.Vector2 value)
+		static private void set_direction(UnityEngine.Ray2D instance, string name, UnityEngine.Vector2 value)
 		{
 			instance.direction = value;
 		}

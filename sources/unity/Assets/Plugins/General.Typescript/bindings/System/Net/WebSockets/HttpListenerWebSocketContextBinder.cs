@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -21,57 +22,57 @@ namespace General.Typescript
 			self.BindInstanceProperty("WebSocket", get_WebSocket, null);
 		}
 
-		static private System.Uri get_RequestUri(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Uri get_RequestUri(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.RequestUri;
 		}
 
-		static private System.Collections.Specialized.NameValueCollection get_Headers(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Collections.Specialized.NameValueCollection get_Headers(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.Headers;
 		}
 
-		static private System.String get_Origin(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.String get_Origin(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.Origin;
 		}
 
-		static private System.String get_SecWebSocketVersion(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.String get_SecWebSocketVersion(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.SecWebSocketVersion;
 		}
 
-		static private System.String get_SecWebSocketKey(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.String get_SecWebSocketKey(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.SecWebSocketKey;
 		}
 
-		static private System.Net.CookieCollection get_CookieCollection(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Net.CookieCollection get_CookieCollection(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.CookieCollection;
 		}
 
-		static private System.Security.Principal.IPrincipal get_User(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Security.Principal.IPrincipal get_User(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.User;
 		}
 
-		static private System.Boolean get_IsAuthenticated(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Boolean get_IsAuthenticated(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.IsAuthenticated;
 		}
 
-		static private System.Boolean get_IsLocal(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Boolean get_IsLocal(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.IsLocal;
 		}
 
-		static private System.Boolean get_IsSecureConnection(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Boolean get_IsSecureConnection(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.IsSecureConnection;
 		}
 
-		static private System.Net.WebSockets.WebSocket get_WebSocket(System.Net.WebSockets.HttpListenerWebSocketContext instance)
+		static private System.Net.WebSockets.WebSocket get_WebSocket(System.Net.WebSockets.HttpListenerWebSocketContext instance, string name)
 		{
 			return instance.WebSocket;
 		}

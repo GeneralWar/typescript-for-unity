@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,7 +36,7 @@ namespace General.Typescript
 			return default(UnityEngine.UI.LayoutRebuilder);
 		}
 
-		static private void ForceRebuildLayoutImmediate(Parameters parameters)
+		static private void ForceRebuildLayoutImmediate(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform>())
 			{
@@ -57,7 +58,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MarkLayoutForRebuild(Parameters parameters)
+		static private void MarkLayoutForRebuild(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RectTransform>())
 			{
@@ -79,7 +80,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Equals(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -101,7 +102,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -116,7 +117,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void GraphicUpdateComplete(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private void GraphicUpdateComplete(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -130,7 +131,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.LayoutRebuilder.GraphicUpdateComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean IsDestroyed(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private System.Boolean IsDestroyed(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -145,7 +146,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void LayoutComplete(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private void LayoutComplete(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -159,7 +160,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.LayoutRebuilder.LayoutComplete has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Rebuild(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private void Rebuild(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.CanvasUpdate>())
 			{
@@ -181,7 +182,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.UI.LayoutRebuilder instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.UI.LayoutRebuilder instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -196,7 +197,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Transform get_transform(UnityEngine.UI.LayoutRebuilder instance)
+		static private UnityEngine.Transform get_transform(UnityEngine.UI.LayoutRebuilder instance, string name)
 		{
 			return instance.transform;
 		}

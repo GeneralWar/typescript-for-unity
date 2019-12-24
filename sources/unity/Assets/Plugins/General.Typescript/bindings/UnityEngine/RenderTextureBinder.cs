@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -85,7 +86,7 @@ namespace General.Typescript
 			return default(UnityEngine.RenderTexture);
 		}
 
-		static private UnityEngine.RenderTexture GetTemporary(Parameters parameters)
+		static private UnityEngine.RenderTexture GetTemporary(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTextureDescriptor>())
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void ReleaseTemporary(Parameters parameters)
+		static private void ReleaseTemporary(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTexture>())
 			{
@@ -161,7 +162,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean SupportsStencil(Parameters parameters)
+		static private System.Boolean SupportsStencil(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTexture>())
 			{
@@ -183,7 +184,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void ConvertToEquirect(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void ConvertToEquirect(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTexture, UnityEngine.Camera.MonoOrStereoscopicEye>())
 			{
@@ -205,7 +206,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Create(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private System.Boolean Create(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -220,7 +221,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void DiscardContents(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void DiscardContents(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -239,7 +240,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RenderTexture.DiscardContents has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void GenerateMips(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void GenerateMips(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -253,7 +254,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RenderTexture.GenerateMips has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.IntPtr GetNativeDepthBufferPtr(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private System.IntPtr GetNativeDepthBufferPtr(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -268,7 +269,7 @@ namespace General.Typescript
 			return default(System.IntPtr);
 		}
 
-		static private System.Boolean IsCreated(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private System.Boolean IsCreated(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -283,7 +284,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void MarkRestoreExpected(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void MarkRestoreExpected(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -297,7 +298,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RenderTexture.MarkRestoreExpected has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Release(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void Release(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -311,7 +312,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RenderTexture.Release has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ResolveAntiAliasedSurface(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void ResolveAntiAliasedSurface(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -330,7 +331,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.RenderTexture.ResolveAntiAliasedSurface has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetGlobalShaderProperty(UnityEngine.RenderTexture instance, Parameters parameters)
+		static private void SetGlobalShaderProperty(UnityEngine.RenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -352,187 +353,187 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.RenderTexture get_active()
+		static private UnityEngine.RenderTexture get_active(Type type, string name)
 		{
 			return UnityEngine.RenderTexture.active;
 		}
 
-		static private void set_active(UnityEngine.RenderTexture value)
+		static private void set_active(Type type, string name, UnityEngine.RenderTexture value)
 		{
 			UnityEngine.RenderTexture.active = value;
 		}
 
-		static private System.Int32 get_width(UnityEngine.RenderTexture instance)
+		static private System.Int32 get_width(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.width;
 		}
 
-		static private void set_width(UnityEngine.RenderTexture instance, System.Int32 value)
+		static private void set_width(UnityEngine.RenderTexture instance, string name, System.Int32 value)
 		{
 			instance.width = value;
 		}
 
-		static private UnityEngine.RenderBuffer get_depthBuffer(UnityEngine.RenderTexture instance)
+		static private UnityEngine.RenderBuffer get_depthBuffer(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.depthBuffer;
 		}
 
-		static private UnityEngine.RenderBuffer get_colorBuffer(UnityEngine.RenderTexture instance)
+		static private UnityEngine.RenderBuffer get_colorBuffer(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.colorBuffer;
 		}
 
-		static private System.Boolean get_isPowerOfTwo(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_isPowerOfTwo(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.isPowerOfTwo;
 		}
 
-		static private void set_isPowerOfTwo(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_isPowerOfTwo(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.isPowerOfTwo = value;
 		}
 
-		static private System.Boolean get_useDynamicScale(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_useDynamicScale(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.useDynamicScale;
 		}
 
-		static private void set_useDynamicScale(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_useDynamicScale(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.useDynamicScale = value;
 		}
 
-		static private System.Boolean get_enableRandomWrite(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_enableRandomWrite(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.enableRandomWrite;
 		}
 
-		static private void set_enableRandomWrite(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_enableRandomWrite(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.enableRandomWrite = value;
 		}
 
-		static private System.Boolean get_bindTextureMS(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_bindTextureMS(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.bindTextureMS;
 		}
 
-		static private void set_bindTextureMS(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_bindTextureMS(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.bindTextureMS = value;
 		}
 
-		static private System.Int32 get_antiAliasing(UnityEngine.RenderTexture instance)
+		static private System.Int32 get_antiAliasing(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.antiAliasing;
 		}
 
-		static private void set_antiAliasing(UnityEngine.RenderTexture instance, System.Int32 value)
+		static private void set_antiAliasing(UnityEngine.RenderTexture instance, string name, System.Int32 value)
 		{
 			instance.antiAliasing = value;
 		}
 
-		static private System.Int32 get_depth(UnityEngine.RenderTexture instance)
+		static private System.Int32 get_depth(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.depth;
 		}
 
-		static private void set_depth(UnityEngine.RenderTexture instance, System.Int32 value)
+		static private void set_depth(UnityEngine.RenderTexture instance, string name, System.Int32 value)
 		{
 			instance.depth = value;
 		}
 
-		static private System.Int32 get_volumeDepth(UnityEngine.RenderTexture instance)
+		static private System.Int32 get_volumeDepth(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.volumeDepth;
 		}
 
-		static private void set_volumeDepth(UnityEngine.RenderTexture instance, System.Int32 value)
+		static private void set_volumeDepth(UnityEngine.RenderTexture instance, string name, System.Int32 value)
 		{
 			instance.volumeDepth = value;
 		}
 
-		static private UnityEngine.RenderTextureMemoryless get_memorylessMode(UnityEngine.RenderTexture instance)
+		static private UnityEngine.RenderTextureMemoryless get_memorylessMode(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.memorylessMode;
 		}
 
-		static private void set_memorylessMode(UnityEngine.RenderTexture instance, UnityEngine.RenderTextureMemoryless value)
+		static private void set_memorylessMode(UnityEngine.RenderTexture instance, string name, UnityEngine.RenderTextureMemoryless value)
 		{
 			instance.memorylessMode = value;
 		}
 
-		static private UnityEngine.VRTextureUsage get_vrUsage(UnityEngine.RenderTexture instance)
+		static private UnityEngine.VRTextureUsage get_vrUsage(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.vrUsage;
 		}
 
-		static private void set_vrUsage(UnityEngine.RenderTexture instance, UnityEngine.VRTextureUsage value)
+		static private void set_vrUsage(UnityEngine.RenderTexture instance, string name, UnityEngine.VRTextureUsage value)
 		{
 			instance.vrUsage = value;
 		}
 
-		static private UnityEngine.RenderTextureFormat get_format(UnityEngine.RenderTexture instance)
+		static private UnityEngine.RenderTextureFormat get_format(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.format;
 		}
 
-		static private void set_format(UnityEngine.RenderTexture instance, UnityEngine.RenderTextureFormat value)
+		static private void set_format(UnityEngine.RenderTexture instance, string name, UnityEngine.RenderTextureFormat value)
 		{
 			instance.format = value;
 		}
 
-		static private System.Boolean get_sRGB(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_sRGB(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.sRGB;
 		}
 
-		static private System.Boolean get_useMipMap(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_useMipMap(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.useMipMap;
 		}
 
-		static private void set_useMipMap(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_useMipMap(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.useMipMap = value;
 		}
 
-		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.RenderTexture instance)
+		static private UnityEngine.Rendering.TextureDimension get_dimension(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.dimension;
 		}
 
-		static private void set_dimension(UnityEngine.RenderTexture instance, UnityEngine.Rendering.TextureDimension value)
+		static private void set_dimension(UnityEngine.RenderTexture instance, string name, UnityEngine.Rendering.TextureDimension value)
 		{
 			instance.dimension = value;
 		}
 
-		static private System.Int32 get_height(UnityEngine.RenderTexture instance)
+		static private System.Int32 get_height(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.height;
 		}
 
-		static private void set_height(UnityEngine.RenderTexture instance, System.Int32 value)
+		static private void set_height(UnityEngine.RenderTexture instance, string name, System.Int32 value)
 		{
 			instance.height = value;
 		}
 
-		static private System.Boolean get_autoGenerateMips(UnityEngine.RenderTexture instance)
+		static private System.Boolean get_autoGenerateMips(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.autoGenerateMips;
 		}
 
-		static private void set_autoGenerateMips(UnityEngine.RenderTexture instance, System.Boolean value)
+		static private void set_autoGenerateMips(UnityEngine.RenderTexture instance, string name, System.Boolean value)
 		{
 			instance.autoGenerateMips = value;
 		}
 
-		static private UnityEngine.RenderTextureDescriptor get_descriptor(UnityEngine.RenderTexture instance)
+		static private UnityEngine.RenderTextureDescriptor get_descriptor(UnityEngine.RenderTexture instance, string name)
 		{
 			return instance.descriptor;
 		}
 
-		static private void set_descriptor(UnityEngine.RenderTexture instance, UnityEngine.RenderTextureDescriptor value)
+		static private void set_descriptor(UnityEngine.RenderTexture instance, string name, UnityEngine.RenderTextureDescriptor value)
 		{
 			instance.descriptor = value;
 		}

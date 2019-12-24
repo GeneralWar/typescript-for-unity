@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -16,7 +17,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("rectTransform", get_rectTransform, null);
 		}
 
-		static private void AddClippable(UnityEngine.UI.RectMask2D instance, Parameters parameters)
+		static private void AddClippable(UnityEngine.UI.RectMask2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.IClippable>())
 			{
@@ -38,7 +39,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean IsRaycastLocationValid(UnityEngine.UI.RectMask2D instance, Parameters parameters)
+		static private System.Boolean IsRaycastLocationValid(UnityEngine.UI.RectMask2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2, UnityEngine.Camera>())
 			{
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void PerformClipping(UnityEngine.UI.RectMask2D instance, Parameters parameters)
+		static private void PerformClipping(UnityEngine.UI.RectMask2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.RectMask2D.PerformClipping has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RemoveClippable(UnityEngine.UI.RectMask2D instance, Parameters parameters)
+		static private void RemoveClippable(UnityEngine.UI.RectMask2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.IClippable>())
 			{
@@ -96,12 +97,12 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rect get_canvasRect(UnityEngine.UI.RectMask2D instance)
+		static private UnityEngine.Rect get_canvasRect(UnityEngine.UI.RectMask2D instance, string name)
 		{
 			return instance.canvasRect;
 		}
 
-		static private UnityEngine.RectTransform get_rectTransform(UnityEngine.UI.RectMask2D instance)
+		static private UnityEngine.RectTransform get_rectTransform(UnityEngine.UI.RectMask2D instance, string name)
 		{
 			return instance.rectTransform;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -30,7 +31,7 @@ namespace General.Typescript
 			return default(UnityEngine.CanvasGroup);
 		}
 
-		static private System.Boolean IsRaycastLocationValid(UnityEngine.CanvasGroup instance, Parameters parameters)
+		static private System.Boolean IsRaycastLocationValid(UnityEngine.CanvasGroup instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector2, UnityEngine.Camera>())
 			{
@@ -52,42 +53,42 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Single get_alpha(UnityEngine.CanvasGroup instance)
+		static private System.Single get_alpha(UnityEngine.CanvasGroup instance, string name)
 		{
 			return instance.alpha;
 		}
 
-		static private void set_alpha(UnityEngine.CanvasGroup instance, System.Single value)
+		static private void set_alpha(UnityEngine.CanvasGroup instance, string name, System.Single value)
 		{
 			instance.alpha = value;
 		}
 
-		static private System.Boolean get_interactable(UnityEngine.CanvasGroup instance)
+		static private System.Boolean get_interactable(UnityEngine.CanvasGroup instance, string name)
 		{
 			return instance.interactable;
 		}
 
-		static private void set_interactable(UnityEngine.CanvasGroup instance, System.Boolean value)
+		static private void set_interactable(UnityEngine.CanvasGroup instance, string name, System.Boolean value)
 		{
 			instance.interactable = value;
 		}
 
-		static private System.Boolean get_blocksRaycasts(UnityEngine.CanvasGroup instance)
+		static private System.Boolean get_blocksRaycasts(UnityEngine.CanvasGroup instance, string name)
 		{
 			return instance.blocksRaycasts;
 		}
 
-		static private void set_blocksRaycasts(UnityEngine.CanvasGroup instance, System.Boolean value)
+		static private void set_blocksRaycasts(UnityEngine.CanvasGroup instance, string name, System.Boolean value)
 		{
 			instance.blocksRaycasts = value;
 		}
 
-		static private System.Boolean get_ignoreParentGroups(UnityEngine.CanvasGroup instance)
+		static private System.Boolean get_ignoreParentGroups(UnityEngine.CanvasGroup instance, string name)
 		{
 			return instance.ignoreParentGroups;
 		}
 
-		static private void set_ignoreParentGroups(UnityEngine.CanvasGroup instance, System.Boolean value)
+		static private void set_ignoreParentGroups(UnityEngine.CanvasGroup instance, string name, System.Boolean value)
 		{
 			instance.ignoreParentGroups = value;
 		}

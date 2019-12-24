@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -13,7 +14,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("IsEnabled", IsEnabled);
 		}
 
-		static private void Disable(UnityEngine.Rendering.PlatformKeywordSet instance, Parameters parameters)
+		static private void Disable(UnityEngine.Rendering.PlatformKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderDefine>())
 			{
@@ -35,7 +36,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Enable(UnityEngine.Rendering.PlatformKeywordSet instance, Parameters parameters)
+		static private void Enable(UnityEngine.Rendering.PlatformKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderDefine>())
 			{
@@ -57,7 +58,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean IsEnabled(UnityEngine.Rendering.PlatformKeywordSet instance, Parameters parameters)
+		static private System.Boolean IsEnabled(UnityEngine.Rendering.PlatformKeywordSet instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderDefine>())
 			{

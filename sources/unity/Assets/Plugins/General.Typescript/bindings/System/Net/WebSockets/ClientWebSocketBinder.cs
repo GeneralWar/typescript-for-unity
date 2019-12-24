@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(System.Net.WebSockets.ClientWebSocket);
 		}
 
-		static private void Abort(System.Net.WebSockets.ClientWebSocket instance, Parameters parameters)
+		static private void Abort(System.Net.WebSockets.ClientWebSocket instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -48,7 +49,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.WebSockets.ClientWebSocket.Abort has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Threading.Tasks.Task CloseAsync(System.Net.WebSockets.ClientWebSocket instance, Parameters parameters)
+		static private System.Threading.Tasks.Task CloseAsync(System.Net.WebSockets.ClientWebSocket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.WebSockets.WebSocketCloseStatus, System.String, System.Threading.CancellationToken>())
 			{
@@ -70,7 +71,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Threading.Tasks.Task CloseOutputAsync(System.Net.WebSockets.ClientWebSocket instance, Parameters parameters)
+		static private System.Threading.Tasks.Task CloseOutputAsync(System.Net.WebSockets.ClientWebSocket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Net.WebSockets.WebSocketCloseStatus, System.String, System.Threading.CancellationToken>())
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Threading.Tasks.Task ConnectAsync(System.Net.WebSockets.ClientWebSocket instance, Parameters parameters)
+		static private System.Threading.Tasks.Task ConnectAsync(System.Net.WebSockets.ClientWebSocket instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Uri, System.Threading.CancellationToken>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Dispose(System.Net.WebSockets.ClientWebSocket instance, Parameters parameters)
+		static private void Dispose(System.Net.WebSockets.ClientWebSocket instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -128,22 +129,22 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("System.Net.WebSockets.ClientWebSocket.Dispose has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Net.WebSockets.ClientWebSocketOptions get_Options(System.Net.WebSockets.ClientWebSocket instance)
+		static private System.Net.WebSockets.ClientWebSocketOptions get_Options(System.Net.WebSockets.ClientWebSocket instance, string name)
 		{
 			return instance.Options;
 		}
 
-		static private System.String get_CloseStatusDescription(System.Net.WebSockets.ClientWebSocket instance)
+		static private System.String get_CloseStatusDescription(System.Net.WebSockets.ClientWebSocket instance, string name)
 		{
 			return instance.CloseStatusDescription;
 		}
 
-		static private System.String get_SubProtocol(System.Net.WebSockets.ClientWebSocket instance)
+		static private System.String get_SubProtocol(System.Net.WebSockets.ClientWebSocket instance, string name)
 		{
 			return instance.SubProtocol;
 		}
 
-		static private System.Net.WebSockets.WebSocketState get_State(System.Net.WebSockets.ClientWebSocket instance)
+		static private System.Net.WebSockets.WebSocketState get_State(System.Net.WebSockets.ClientWebSocket instance, string name)
 		{
 			return instance.State;
 		}

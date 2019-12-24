@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -74,7 +75,7 @@ namespace General.Typescript
 			return default(UnityEngine.Texture2D);
 		}
 
-		static private UnityEngine.Texture2D CreateExternalTexture(Parameters parameters)
+		static private UnityEngine.Texture2D CreateExternalTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.TextureFormat, System.Boolean, System.Boolean, System.IntPtr>())
 			{
@@ -96,7 +97,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void Apply(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void Apply(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -120,7 +121,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Texture2D.Apply has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void ClearRequestedMipmapLevel(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void ClearRequestedMipmapLevel(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -134,7 +135,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Texture2D.ClearRequestedMipmapLevel has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Compress(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void Compress(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean>())
 			{
@@ -156,7 +157,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Color GetPixel(UnityEngine.Texture2D instance, Parameters parameters)
+		static private UnityEngine.Color GetPixel(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -178,7 +179,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color GetPixelBilinear(UnityEngine.Texture2D instance, Parameters parameters)
+		static private UnityEngine.Color GetPixelBilinear(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -200,7 +201,7 @@ namespace General.Typescript
 			return default(UnityEngine.Color);
 		}
 
-		static private UnityEngine.Color[] GetPixels(UnityEngine.Texture2D instance, Parameters parameters)
+		static private UnityEngine.Color[] GetPixels(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -227,7 +228,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Color32[] GetPixels32(UnityEngine.Texture2D instance, Parameters parameters)
+		static private UnityEngine.Color32[] GetPixels32(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -246,7 +247,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Byte[] GetRawTextureData(UnityEngine.Texture2D instance, Parameters parameters)
+		static private System.Byte[] GetRawTextureData(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -261,7 +262,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean IsRequestedMipmapLevelLoaded(UnityEngine.Texture2D instance, Parameters parameters)
+		static private System.Boolean IsRequestedMipmapLevelLoaded(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -276,7 +277,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void LoadRawTextureData(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void LoadRawTextureData(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Byte[]>())
 			{
@@ -303,7 +304,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rect[] PackTextures(UnityEngine.Texture2D instance, Parameters parameters)
+		static private UnityEngine.Rect[] PackTextures(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture2D[], System.Int32>())
 			{
@@ -333,7 +334,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void ReadPixels(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void ReadPixels(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, System.Int32, System.Int32>())
 			{
@@ -360,7 +361,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean Resize(UnityEngine.Texture2D instance, Parameters parameters)
+		static private System.Boolean Resize(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32>())
 			{
@@ -386,7 +387,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetPixel(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void SetPixel(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Int32, UnityEngine.Color>())
 			{
@@ -408,7 +409,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPixels(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void SetPixels(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color[]>())
 			{
@@ -445,7 +446,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetPixels32(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void SetPixels32(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color32[]>())
 			{
@@ -482,7 +483,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void UpdateExternalTexture(UnityEngine.Texture2D instance, Parameters parameters)
+		static private void UpdateExternalTexture(UnityEngine.Texture2D instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr>())
 			{
@@ -504,62 +505,62 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Texture2D get_whiteTexture()
+		static private UnityEngine.Texture2D get_whiteTexture(Type type, string name)
 		{
 			return UnityEngine.Texture2D.whiteTexture;
 		}
 
-		static private UnityEngine.Texture2D get_blackTexture()
+		static private UnityEngine.Texture2D get_blackTexture(Type type, string name)
 		{
 			return UnityEngine.Texture2D.blackTexture;
 		}
 
-		static private System.Int32 get_mipmapCount(UnityEngine.Texture2D instance)
+		static private System.Int32 get_mipmapCount(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.mipmapCount;
 		}
 
-		static private UnityEngine.TextureFormat get_format(UnityEngine.Texture2D instance)
+		static private UnityEngine.TextureFormat get_format(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.format;
 		}
 
-		static private System.Boolean get_isReadable(UnityEngine.Texture2D instance)
+		static private System.Boolean get_isReadable(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.isReadable;
 		}
 
-		static private System.Boolean get_streamingMipmaps(UnityEngine.Texture2D instance)
+		static private System.Boolean get_streamingMipmaps(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.streamingMipmaps;
 		}
 
-		static private System.Int32 get_streamingMipmapsPriority(UnityEngine.Texture2D instance)
+		static private System.Int32 get_streamingMipmapsPriority(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.streamingMipmapsPriority;
 		}
 
-		static private System.Int32 get_requestedMipmapLevel(UnityEngine.Texture2D instance)
+		static private System.Int32 get_requestedMipmapLevel(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.requestedMipmapLevel;
 		}
 
-		static private void set_requestedMipmapLevel(UnityEngine.Texture2D instance, System.Int32 value)
+		static private void set_requestedMipmapLevel(UnityEngine.Texture2D instance, string name, System.Int32 value)
 		{
 			instance.requestedMipmapLevel = value;
 		}
 
-		static private System.Int32 get_desiredMipmapLevel(UnityEngine.Texture2D instance)
+		static private System.Int32 get_desiredMipmapLevel(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.desiredMipmapLevel;
 		}
 
-		static private System.Int32 get_loadingMipmapLevel(UnityEngine.Texture2D instance)
+		static private System.Int32 get_loadingMipmapLevel(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.loadingMipmapLevel;
 		}
 
-		static private System.Int32 get_loadedMipmapLevel(UnityEngine.Texture2D instance)
+		static private System.Int32 get_loadedMipmapLevel(UnityEngine.Texture2D instance, string name)
 		{
 			return instance.loadedMipmapLevel;
 		}

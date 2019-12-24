@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -56,7 +57,7 @@ namespace General.Typescript
 			return default(UnityEngine.Light);
 		}
 
-		static private UnityEngine.Light[] GetLights(Parameters parameters)
+		static private UnityEngine.Light[] GetLights(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.LightType, System.Int32>())
 			{
@@ -78,7 +79,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void AddCommandBuffer(UnityEngine.Light instance, Parameters parameters)
+		static private void AddCommandBuffer(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.LightEvent, UnityEngine.Rendering.CommandBuffer>())
 			{
@@ -105,7 +106,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void AddCommandBufferAsync(UnityEngine.Light instance, Parameters parameters)
+		static private void AddCommandBufferAsync(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.LightEvent, UnityEngine.Rendering.CommandBuffer, UnityEngine.Rendering.ComputeQueueType>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.CommandBuffer[] GetCommandBuffers(UnityEngine.Light instance, Parameters parameters)
+		static private UnityEngine.Rendering.CommandBuffer[] GetCommandBuffers(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.LightEvent>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void RemoveAllCommandBuffers(UnityEngine.Light instance, Parameters parameters)
+		static private void RemoveAllCommandBuffers(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Light.RemoveAllCommandBuffers has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RemoveCommandBuffer(UnityEngine.Light instance, Parameters parameters)
+		static private void RemoveCommandBuffer(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.LightEvent, UnityEngine.Rendering.CommandBuffer>())
 			{
@@ -190,7 +191,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void RemoveCommandBuffers(UnityEngine.Light instance, Parameters parameters)
+		static private void RemoveCommandBuffers(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.LightEvent>())
 			{
@@ -212,7 +213,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Reset(UnityEngine.Light instance, Parameters parameters)
+		static private void Reset(UnityEngine.Light instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -226,227 +227,227 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Light.Reset has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.LightType get_type(UnityEngine.Light instance)
+		static private UnityEngine.LightType get_type(UnityEngine.Light instance, string name)
 		{
 			return instance.type;
 		}
 
-		static private void set_type(UnityEngine.Light instance, UnityEngine.LightType value)
+		static private void set_type(UnityEngine.Light instance, string name, UnityEngine.LightType value)
 		{
 			instance.type = value;
 		}
 
-		static private UnityEngine.Texture get_cookie(UnityEngine.Light instance)
+		static private UnityEngine.Texture get_cookie(UnityEngine.Light instance, string name)
 		{
 			return instance.cookie;
 		}
 
-		static private void set_cookie(UnityEngine.Light instance, UnityEngine.Texture value)
+		static private void set_cookie(UnityEngine.Light instance, string name, UnityEngine.Texture value)
 		{
 			instance.cookie = value;
 		}
 
-		static private System.Single get_cookieSize(UnityEngine.Light instance)
+		static private System.Single get_cookieSize(UnityEngine.Light instance, string name)
 		{
 			return instance.cookieSize;
 		}
 
-		static private void set_cookieSize(UnityEngine.Light instance, System.Single value)
+		static private void set_cookieSize(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.cookieSize = value;
 		}
 
-		static private System.Single[] get_layerShadowCullDistances(UnityEngine.Light instance)
+		static private System.Single[] get_layerShadowCullDistances(UnityEngine.Light instance, string name)
 		{
 			return instance.layerShadowCullDistances;
 		}
 
-		static private void set_layerShadowCullDistances(UnityEngine.Light instance, System.Single[] value)
+		static private void set_layerShadowCullDistances(UnityEngine.Light instance, string name, System.Single[] value)
 		{
 			instance.layerShadowCullDistances = value;
 		}
 
-		static private UnityEngine.Rendering.LightShadowResolution get_shadowResolution(UnityEngine.Light instance)
+		static private UnityEngine.Rendering.LightShadowResolution get_shadowResolution(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowResolution;
 		}
 
-		static private void set_shadowResolution(UnityEngine.Light instance, UnityEngine.Rendering.LightShadowResolution value)
+		static private void set_shadowResolution(UnityEngine.Light instance, string name, UnityEngine.Rendering.LightShadowResolution value)
 		{
 			instance.shadowResolution = value;
 		}
 
-		static private System.Single get_shadowStrength(UnityEngine.Light instance)
+		static private System.Single get_shadowStrength(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowStrength;
 		}
 
-		static private void set_shadowStrength(UnityEngine.Light instance, System.Single value)
+		static private void set_shadowStrength(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.shadowStrength = value;
 		}
 
-		static private UnityEngine.LightShadows get_shadows(UnityEngine.Light instance)
+		static private UnityEngine.LightShadows get_shadows(UnityEngine.Light instance, string name)
 		{
 			return instance.shadows;
 		}
 
-		static private void set_shadows(UnityEngine.Light instance, UnityEngine.LightShadows value)
+		static private void set_shadows(UnityEngine.Light instance, string name, UnityEngine.LightShadows value)
 		{
 			instance.shadows = value;
 		}
 
-		static private UnityEngine.LightShadowCasterMode get_lightShadowCasterMode(UnityEngine.Light instance)
+		static private UnityEngine.LightShadowCasterMode get_lightShadowCasterMode(UnityEngine.Light instance, string name)
 		{
 			return instance.lightShadowCasterMode;
 		}
 
-		static private void set_lightShadowCasterMode(UnityEngine.Light instance, UnityEngine.LightShadowCasterMode value)
+		static private void set_lightShadowCasterMode(UnityEngine.Light instance, string name, UnityEngine.LightShadowCasterMode value)
 		{
 			instance.lightShadowCasterMode = value;
 		}
 
-		static private System.Int32 get_cullingMask(UnityEngine.Light instance)
+		static private System.Int32 get_cullingMask(UnityEngine.Light instance, string name)
 		{
 			return instance.cullingMask;
 		}
 
-		static private void set_cullingMask(UnityEngine.Light instance, System.Int32 value)
+		static private void set_cullingMask(UnityEngine.Light instance, string name, System.Int32 value)
 		{
 			instance.cullingMask = value;
 		}
 
-		static private UnityEngine.LightBakingOutput get_bakingOutput(UnityEngine.Light instance)
+		static private UnityEngine.LightBakingOutput get_bakingOutput(UnityEngine.Light instance, string name)
 		{
 			return instance.bakingOutput;
 		}
 
-		static private void set_bakingOutput(UnityEngine.Light instance, UnityEngine.LightBakingOutput value)
+		static private void set_bakingOutput(UnityEngine.Light instance, string name, UnityEngine.LightBakingOutput value)
 		{
 			instance.bakingOutput = value;
 		}
 
-		static private UnityEngine.LightRenderMode get_renderMode(UnityEngine.Light instance)
+		static private UnityEngine.LightRenderMode get_renderMode(UnityEngine.Light instance, string name)
 		{
 			return instance.renderMode;
 		}
 
-		static private void set_renderMode(UnityEngine.Light instance, UnityEngine.LightRenderMode value)
+		static private void set_renderMode(UnityEngine.Light instance, string name, UnityEngine.LightRenderMode value)
 		{
 			instance.renderMode = value;
 		}
 
-		static private UnityEngine.Flare get_flare(UnityEngine.Light instance)
+		static private UnityEngine.Flare get_flare(UnityEngine.Light instance, string name)
 		{
 			return instance.flare;
 		}
 
-		static private void set_flare(UnityEngine.Light instance, UnityEngine.Flare value)
+		static private void set_flare(UnityEngine.Light instance, string name, UnityEngine.Flare value)
 		{
 			instance.flare = value;
 		}
 
-		static private System.Single get_shadowNearPlane(UnityEngine.Light instance)
+		static private System.Single get_shadowNearPlane(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowNearPlane;
 		}
 
-		static private void set_shadowNearPlane(UnityEngine.Light instance, System.Single value)
+		static private void set_shadowNearPlane(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.shadowNearPlane = value;
 		}
 
-		static private System.Single get_shadowNormalBias(UnityEngine.Light instance)
+		static private System.Single get_shadowNormalBias(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowNormalBias;
 		}
 
-		static private void set_shadowNormalBias(UnityEngine.Light instance, System.Single value)
+		static private void set_shadowNormalBias(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.shadowNormalBias = value;
 		}
 
-		static private System.Single get_shadowBias(UnityEngine.Light instance)
+		static private System.Single get_shadowBias(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowBias;
 		}
 
-		static private void set_shadowBias(UnityEngine.Light instance, System.Single value)
+		static private void set_shadowBias(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.shadowBias = value;
 		}
 
-		static private System.Int32 get_shadowCustomResolution(UnityEngine.Light instance)
+		static private System.Int32 get_shadowCustomResolution(UnityEngine.Light instance, string name)
 		{
 			return instance.shadowCustomResolution;
 		}
 
-		static private void set_shadowCustomResolution(UnityEngine.Light instance, System.Int32 value)
+		static private void set_shadowCustomResolution(UnityEngine.Light instance, string name, System.Int32 value)
 		{
 			instance.shadowCustomResolution = value;
 		}
 
-		static private System.Single get_bounceIntensity(UnityEngine.Light instance)
+		static private System.Single get_bounceIntensity(UnityEngine.Light instance, string name)
 		{
 			return instance.bounceIntensity;
 		}
 
-		static private void set_bounceIntensity(UnityEngine.Light instance, System.Single value)
+		static private void set_bounceIntensity(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.bounceIntensity = value;
 		}
 
-		static private System.Single get_intensity(UnityEngine.Light instance)
+		static private System.Single get_intensity(UnityEngine.Light instance, string name)
 		{
 			return instance.intensity;
 		}
 
-		static private void set_intensity(UnityEngine.Light instance, System.Single value)
+		static private void set_intensity(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.intensity = value;
 		}
 
-		static private System.Single get_colorTemperature(UnityEngine.Light instance)
+		static private System.Single get_colorTemperature(UnityEngine.Light instance, string name)
 		{
 			return instance.colorTemperature;
 		}
 
-		static private void set_colorTemperature(UnityEngine.Light instance, System.Single value)
+		static private void set_colorTemperature(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.colorTemperature = value;
 		}
 
-		static private UnityEngine.Color get_color(UnityEngine.Light instance)
+		static private UnityEngine.Color get_color(UnityEngine.Light instance, string name)
 		{
 			return instance.color;
 		}
 
-		static private void set_color(UnityEngine.Light instance, UnityEngine.Color value)
+		static private void set_color(UnityEngine.Light instance, string name, UnityEngine.Color value)
 		{
 			instance.color = value;
 		}
 
-		static private System.Single get_spotAngle(UnityEngine.Light instance)
+		static private System.Single get_spotAngle(UnityEngine.Light instance, string name)
 		{
 			return instance.spotAngle;
 		}
 
-		static private void set_spotAngle(UnityEngine.Light instance, System.Single value)
+		static private void set_spotAngle(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.spotAngle = value;
 		}
 
-		static private System.Single get_range(UnityEngine.Light instance)
+		static private System.Single get_range(UnityEngine.Light instance, string name)
 		{
 			return instance.range;
 		}
 
-		static private void set_range(UnityEngine.Light instance, System.Single value)
+		static private void set_range(UnityEngine.Light instance, string name, System.Single value)
 		{
 			instance.range = value;
 		}
 
-		static private System.Int32 get_commandBufferCount(UnityEngine.Light instance)
+		static private System.Int32 get_commandBufferCount(UnityEngine.Light instance, string name)
 		{
 			return instance.commandBufferCount;
 		}

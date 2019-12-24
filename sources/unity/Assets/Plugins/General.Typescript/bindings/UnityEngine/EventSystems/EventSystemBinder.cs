@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -22,7 +23,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("alreadySelecting", get_alreadySelecting, null);
 		}
 
-		static private System.Boolean IsPointerOverGameObject(UnityEngine.EventSystems.EventSystem instance, Parameters parameters)
+		static private System.Boolean IsPointerOverGameObject(UnityEngine.EventSystems.EventSystem instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, Parameters parameters)
+		static private void SetSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject>())
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.String ToString(UnityEngine.EventSystems.EventSystem instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.EventSystems.EventSystem instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void UpdateModules(UnityEngine.EventSystems.EventSystem instance, Parameters parameters)
+		static private void UpdateModules(UnityEngine.EventSystems.EventSystem instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -97,62 +98,62 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.EventSystems.EventSystem.UpdateModules has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.EventSystems.EventSystem get_current()
+		static private UnityEngine.EventSystems.EventSystem get_current(Type type, string name)
 		{
 			return UnityEngine.EventSystems.EventSystem.current;
 		}
 
-		static private void set_current(UnityEngine.EventSystems.EventSystem value)
+		static private void set_current(Type type, string name, UnityEngine.EventSystems.EventSystem value)
 		{
 			UnityEngine.EventSystems.EventSystem.current = value;
 		}
 
-		static private System.Boolean get_sendNavigationEvents(UnityEngine.EventSystems.EventSystem instance)
+		static private System.Boolean get_sendNavigationEvents(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.sendNavigationEvents;
 		}
 
-		static private void set_sendNavigationEvents(UnityEngine.EventSystems.EventSystem instance, System.Boolean value)
+		static private void set_sendNavigationEvents(UnityEngine.EventSystems.EventSystem instance, string name, System.Boolean value)
 		{
 			instance.sendNavigationEvents = value;
 		}
 
-		static private System.Int32 get_pixelDragThreshold(UnityEngine.EventSystems.EventSystem instance)
+		static private System.Int32 get_pixelDragThreshold(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.pixelDragThreshold;
 		}
 
-		static private void set_pixelDragThreshold(UnityEngine.EventSystems.EventSystem instance, System.Int32 value)
+		static private void set_pixelDragThreshold(UnityEngine.EventSystems.EventSystem instance, string name, System.Int32 value)
 		{
 			instance.pixelDragThreshold = value;
 		}
 
-		static private UnityEngine.EventSystems.BaseInputModule get_currentInputModule(UnityEngine.EventSystems.EventSystem instance)
+		static private UnityEngine.EventSystems.BaseInputModule get_currentInputModule(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.currentInputModule;
 		}
 
-		static private UnityEngine.GameObject get_firstSelectedGameObject(UnityEngine.EventSystems.EventSystem instance)
+		static private UnityEngine.GameObject get_firstSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.firstSelectedGameObject;
 		}
 
-		static private void set_firstSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, UnityEngine.GameObject value)
+		static private void set_firstSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, string name, UnityEngine.GameObject value)
 		{
 			instance.firstSelectedGameObject = value;
 		}
 
-		static private UnityEngine.GameObject get_currentSelectedGameObject(UnityEngine.EventSystems.EventSystem instance)
+		static private UnityEngine.GameObject get_currentSelectedGameObject(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.currentSelectedGameObject;
 		}
 
-		static private System.Boolean get_isFocused(UnityEngine.EventSystems.EventSystem instance)
+		static private System.Boolean get_isFocused(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.isFocused;
 		}
 
-		static private System.Boolean get_alreadySelecting(UnityEngine.EventSystems.EventSystem instance)
+		static private System.Boolean get_alreadySelecting(UnityEngine.EventSystems.EventSystem instance, string name)
 		{
 			return instance.alreadySelecting;
 		}

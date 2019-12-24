@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,32 +29,32 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.SortingGroup);
 		}
 
-		static private System.String get_sortingLayerName(UnityEngine.Rendering.SortingGroup instance)
+		static private System.String get_sortingLayerName(UnityEngine.Rendering.SortingGroup instance, string name)
 		{
 			return instance.sortingLayerName;
 		}
 
-		static private void set_sortingLayerName(UnityEngine.Rendering.SortingGroup instance, System.String value)
+		static private void set_sortingLayerName(UnityEngine.Rendering.SortingGroup instance, string name, System.String value)
 		{
 			instance.sortingLayerName = value;
 		}
 
-		static private System.Int32 get_sortingLayerID(UnityEngine.Rendering.SortingGroup instance)
+		static private System.Int32 get_sortingLayerID(UnityEngine.Rendering.SortingGroup instance, string name)
 		{
 			return instance.sortingLayerID;
 		}
 
-		static private void set_sortingLayerID(UnityEngine.Rendering.SortingGroup instance, System.Int32 value)
+		static private void set_sortingLayerID(UnityEngine.Rendering.SortingGroup instance, string name, System.Int32 value)
 		{
 			instance.sortingLayerID = value;
 		}
 
-		static private System.Int32 get_sortingOrder(UnityEngine.Rendering.SortingGroup instance)
+		static private System.Int32 get_sortingOrder(UnityEngine.Rendering.SortingGroup instance, string name)
 		{
 			return instance.sortingOrder;
 		}
 
-		static private void set_sortingOrder(UnityEngine.Rendering.SortingGroup instance, System.Int32 value)
+		static private void set_sortingOrder(UnityEngine.Rendering.SortingGroup instance, string name, System.Int32 value)
 		{
 			instance.sortingOrder = value;
 		}

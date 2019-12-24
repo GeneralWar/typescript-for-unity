@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,7 +13,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("GetHashCode", GetHashCode);
 		}
 
-		static private System.Boolean Equals(UnityEngine.TrackedReference instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.TrackedReference instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.TrackedReference instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.TrackedReference instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

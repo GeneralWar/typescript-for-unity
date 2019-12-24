@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -43,7 +44,7 @@ namespace General.Typescript
 			return default(UnityEngine.Hash128);
 		}
 
-		static private UnityEngine.Hash128 Compute(Parameters parameters)
+		static private UnityEngine.Hash128 Compute(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.Hash128);
 		}
 
-		static private UnityEngine.Hash128 Parse(Parameters parameters)
+		static private UnityEngine.Hash128 Parse(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			return default(UnityEngine.Hash128);
 		}
 
-		static private System.Int32 CompareTo(UnityEngine.Hash128 instance, Parameters parameters)
+		static private System.Int32 CompareTo(UnityEngine.Hash128 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Hash128>())
 			{
@@ -113,7 +114,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Boolean Equals(UnityEngine.Hash128 instance, Parameters parameters)
+		static private System.Boolean Equals(UnityEngine.Hash128 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Object>())
 			{
@@ -139,7 +140,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 GetHashCode(UnityEngine.Hash128 instance, Parameters parameters)
+		static private System.Int32 GetHashCode(UnityEngine.Hash128 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String ToString(UnityEngine.Hash128 instance, Parameters parameters)
+		static private System.String ToString(UnityEngine.Hash128 instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -169,7 +170,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean get_isValid(UnityEngine.Hash128 instance)
+		static private System.Boolean get_isValid(UnityEngine.Hash128 instance, string name)
 		{
 			return instance.isValid;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -14,7 +15,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("value", get_value, set_value);
 		}
 
-		static private System.Int32 GetMask(Parameters parameters)
+		static private System.Int32 GetMask(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String[]>())
 			{
@@ -36,7 +37,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.String LayerToName(Parameters parameters)
+		static private System.String LayerToName(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -58,7 +59,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 NameToLayer(Parameters parameters)
+		static private System.Int32 NameToLayer(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -80,12 +81,12 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private System.Int32 get_value(UnityEngine.LayerMask instance)
+		static private System.Int32 get_value(UnityEngine.LayerMask instance, string name)
 		{
 			return instance.value;
 		}
 
-		static private void set_value(UnityEngine.LayerMask instance, System.Int32 value)
+		static private void set_value(UnityEngine.LayerMask instance, string name, System.Int32 value)
 		{
 			instance.value = value;
 		}

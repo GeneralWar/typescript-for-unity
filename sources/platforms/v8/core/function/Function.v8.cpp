@@ -18,13 +18,23 @@ void TypescriptStaticFunction::Bind()
 
 void TypescriptStaticFunction::Bind(Base* parent)
 {
+	EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(mEnvironment);
+	Isolate* isolate = runtime->GetIsolate();
+	// static binding
 	if (mReference)
 	{
 		delete mReference;
-		EnvironmentV8* runtime = reinterpret_cast<EnvironmentV8*>(mEnvironment);
-		Isolate* isolate = runtime->GetIsolate();
 		Local<FunctionTemplate> functionTemplate = FunctionTemplate::New(isolate, mCallback, BigInt::NewFromUnsigned(isolate, (unsigned long long)this));
 		mReference = new ReferenceWindows(functionTemplate);
+		this->BindToParent(parent);
+	}
+	// dynamic binding
+	else if (runtime->IsRunning())
+	{
+		HandleScope handleScope(isolate);
+		Local<Context> context = isolate->GetCurrentContext();
+		MaybeLocal<Function> maybeFunction = Function::New(context, mCallback, BigInt::NewFromUnsigned(isolate, (unsigned long long)this));
+		mJsObject.Reset(isolate, maybeFunction.ToLocalChecked());
 		this->BindToParent(parent);
 	}
 }

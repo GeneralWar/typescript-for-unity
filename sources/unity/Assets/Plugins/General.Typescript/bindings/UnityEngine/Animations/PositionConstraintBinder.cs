@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -21,7 +22,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("sourceCount", get_sourceCount, null);
 		}
 
-		static private System.Int32 AddSource(UnityEngine.Animations.PositionConstraint instance, Parameters parameters)
+		static private System.Int32 AddSource(UnityEngine.Animations.PositionConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.ConstraintSource>())
 			{
@@ -43,7 +44,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.PositionConstraint instance, Parameters parameters)
+		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.PositionConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.ConstraintSource);
 		}
 
-		static private void RemoveSource(UnityEngine.Animations.PositionConstraint instance, Parameters parameters)
+		static private void RemoveSource(UnityEngine.Animations.PositionConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -87,7 +88,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSource(UnityEngine.Animations.PositionConstraint instance, Parameters parameters)
+		static private void SetSource(UnityEngine.Animations.PositionConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Animations.ConstraintSource>())
 			{
@@ -109,67 +110,67 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_weight(UnityEngine.Animations.PositionConstraint instance)
+		static private System.Single get_weight(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.weight;
 		}
 
-		static private void set_weight(UnityEngine.Animations.PositionConstraint instance, System.Single value)
+		static private void set_weight(UnityEngine.Animations.PositionConstraint instance, string name, System.Single value)
 		{
 			instance.weight = value;
 		}
 
-		static private UnityEngine.Vector3 get_translationAtRest(UnityEngine.Animations.PositionConstraint instance)
+		static private UnityEngine.Vector3 get_translationAtRest(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.translationAtRest;
 		}
 
-		static private void set_translationAtRest(UnityEngine.Animations.PositionConstraint instance, UnityEngine.Vector3 value)
+		static private void set_translationAtRest(UnityEngine.Animations.PositionConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.translationAtRest = value;
 		}
 
-		static private UnityEngine.Vector3 get_translationOffset(UnityEngine.Animations.PositionConstraint instance)
+		static private UnityEngine.Vector3 get_translationOffset(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.translationOffset;
 		}
 
-		static private void set_translationOffset(UnityEngine.Animations.PositionConstraint instance, UnityEngine.Vector3 value)
+		static private void set_translationOffset(UnityEngine.Animations.PositionConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.translationOffset = value;
 		}
 
-		static private UnityEngine.Animations.Axis get_translationAxis(UnityEngine.Animations.PositionConstraint instance)
+		static private UnityEngine.Animations.Axis get_translationAxis(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.translationAxis;
 		}
 
-		static private void set_translationAxis(UnityEngine.Animations.PositionConstraint instance, UnityEngine.Animations.Axis value)
+		static private void set_translationAxis(UnityEngine.Animations.PositionConstraint instance, string name, UnityEngine.Animations.Axis value)
 		{
 			instance.translationAxis = value;
 		}
 
-		static private System.Boolean get_constraintActive(UnityEngine.Animations.PositionConstraint instance)
+		static private System.Boolean get_constraintActive(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.constraintActive;
 		}
 
-		static private void set_constraintActive(UnityEngine.Animations.PositionConstraint instance, System.Boolean value)
+		static private void set_constraintActive(UnityEngine.Animations.PositionConstraint instance, string name, System.Boolean value)
 		{
 			instance.constraintActive = value;
 		}
 
-		static private System.Boolean get_locked(UnityEngine.Animations.PositionConstraint instance)
+		static private System.Boolean get_locked(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.locked;
 		}
 
-		static private void set_locked(UnityEngine.Animations.PositionConstraint instance, System.Boolean value)
+		static private void set_locked(UnityEngine.Animations.PositionConstraint instance, string name, System.Boolean value)
 		{
 			instance.locked = value;
 		}
 
-		static private System.Int32 get_sourceCount(UnityEngine.Animations.PositionConstraint instance)
+		static private System.Int32 get_sourceCount(UnityEngine.Animations.PositionConstraint instance, string name)
 		{
 			return instance.sourceCount;
 		}

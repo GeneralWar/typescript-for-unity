@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -35,102 +36,102 @@ namespace General.Typescript
 			return default(UnityEngine.CharacterJoint);
 		}
 
-		static private UnityEngine.Vector3 get_swingAxis(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.Vector3 get_swingAxis(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.swingAxis;
 		}
 
-		static private void set_swingAxis(UnityEngine.CharacterJoint instance, UnityEngine.Vector3 value)
+		static private void set_swingAxis(UnityEngine.CharacterJoint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.swingAxis = value;
 		}
 
-		static private UnityEngine.SoftJointLimitSpring get_twistLimitSpring(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimitSpring get_twistLimitSpring(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.twistLimitSpring;
 		}
 
-		static private void set_twistLimitSpring(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimitSpring value)
+		static private void set_twistLimitSpring(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimitSpring value)
 		{
 			instance.twistLimitSpring = value;
 		}
 
-		static private UnityEngine.SoftJointLimitSpring get_swingLimitSpring(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimitSpring get_swingLimitSpring(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.swingLimitSpring;
 		}
 
-		static private void set_swingLimitSpring(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimitSpring value)
+		static private void set_swingLimitSpring(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimitSpring value)
 		{
 			instance.swingLimitSpring = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_lowTwistLimit(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimit get_lowTwistLimit(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.lowTwistLimit;
 		}
 
-		static private void set_lowTwistLimit(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_lowTwistLimit(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.lowTwistLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_highTwistLimit(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimit get_highTwistLimit(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.highTwistLimit;
 		}
 
-		static private void set_highTwistLimit(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_highTwistLimit(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.highTwistLimit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_swing1Limit(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimit get_swing1Limit(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.swing1Limit;
 		}
 
-		static private void set_swing1Limit(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_swing1Limit(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.swing1Limit = value;
 		}
 
-		static private UnityEngine.SoftJointLimit get_swing2Limit(UnityEngine.CharacterJoint instance)
+		static private UnityEngine.SoftJointLimit get_swing2Limit(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.swing2Limit;
 		}
 
-		static private void set_swing2Limit(UnityEngine.CharacterJoint instance, UnityEngine.SoftJointLimit value)
+		static private void set_swing2Limit(UnityEngine.CharacterJoint instance, string name, UnityEngine.SoftJointLimit value)
 		{
 			instance.swing2Limit = value;
 		}
 
-		static private System.Boolean get_enableProjection(UnityEngine.CharacterJoint instance)
+		static private System.Boolean get_enableProjection(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.enableProjection;
 		}
 
-		static private void set_enableProjection(UnityEngine.CharacterJoint instance, System.Boolean value)
+		static private void set_enableProjection(UnityEngine.CharacterJoint instance, string name, System.Boolean value)
 		{
 			instance.enableProjection = value;
 		}
 
-		static private System.Single get_projectionDistance(UnityEngine.CharacterJoint instance)
+		static private System.Single get_projectionDistance(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.projectionDistance;
 		}
 
-		static private void set_projectionDistance(UnityEngine.CharacterJoint instance, System.Single value)
+		static private void set_projectionDistance(UnityEngine.CharacterJoint instance, string name, System.Single value)
 		{
 			instance.projectionDistance = value;
 		}
 
-		static private System.Single get_projectionAngle(UnityEngine.CharacterJoint instance)
+		static private System.Single get_projectionAngle(UnityEngine.CharacterJoint instance, string name)
 		{
 			return instance.projectionAngle;
 		}
 
-		static private void set_projectionAngle(UnityEngine.CharacterJoint instance, System.Single value)
+		static private void set_projectionAngle(UnityEngine.CharacterJoint instance, string name, System.Single value)
 		{
 			instance.projectionAngle = value;
 		}

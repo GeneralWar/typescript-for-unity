@@ -4,7 +4,7 @@ namespace General.Typescript
 {
     public class Enum<T> : Base
     {
-        internal Enum(IntPtr context, IntPtr handle) : base(context, handle)
+        internal Enum(IntPtr context, IntPtr handle, string name, Base parent) : base(context, handle, name, parent)
         {
 
         }

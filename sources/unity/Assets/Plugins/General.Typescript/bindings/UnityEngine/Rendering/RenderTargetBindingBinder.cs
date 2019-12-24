@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -46,62 +47,62 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.RenderTargetBinding);
 		}
 
-		static private UnityEngine.Rendering.RenderTargetIdentifier[] get_colorRenderTargets(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderTargetIdentifier[] get_colorRenderTargets(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.colorRenderTargets;
 		}
 
-		static private void set_colorRenderTargets(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderTargetIdentifier[] value)
+		static private void set_colorRenderTargets(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderTargetIdentifier[] value)
 		{
 			instance.colorRenderTargets = value;
 		}
 
-		static private UnityEngine.Rendering.RenderTargetIdentifier get_depthRenderTarget(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderTargetIdentifier get_depthRenderTarget(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.depthRenderTarget;
 		}
 
-		static private void set_depthRenderTarget(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderTargetIdentifier value)
+		static private void set_depthRenderTarget(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderTargetIdentifier value)
 		{
 			instance.depthRenderTarget = value;
 		}
 
-		static private UnityEngine.Rendering.RenderBufferLoadAction[] get_colorLoadActions(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderBufferLoadAction[] get_colorLoadActions(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.colorLoadActions;
 		}
 
-		static private void set_colorLoadActions(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderBufferLoadAction[] value)
+		static private void set_colorLoadActions(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderBufferLoadAction[] value)
 		{
 			instance.colorLoadActions = value;
 		}
 
-		static private UnityEngine.Rendering.RenderBufferStoreAction[] get_colorStoreActions(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderBufferStoreAction[] get_colorStoreActions(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.colorStoreActions;
 		}
 
-		static private void set_colorStoreActions(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderBufferStoreAction[] value)
+		static private void set_colorStoreActions(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderBufferStoreAction[] value)
 		{
 			instance.colorStoreActions = value;
 		}
 
-		static private UnityEngine.Rendering.RenderBufferLoadAction get_depthLoadAction(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderBufferLoadAction get_depthLoadAction(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.depthLoadAction;
 		}
 
-		static private void set_depthLoadAction(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderBufferLoadAction value)
+		static private void set_depthLoadAction(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderBufferLoadAction value)
 		{
 			instance.depthLoadAction = value;
 		}
 
-		static private UnityEngine.Rendering.RenderBufferStoreAction get_depthStoreAction(UnityEngine.Rendering.RenderTargetBinding instance)
+		static private UnityEngine.Rendering.RenderBufferStoreAction get_depthStoreAction(UnityEngine.Rendering.RenderTargetBinding instance, string name)
 		{
 			return instance.depthStoreAction;
 		}
 
-		static private void set_depthStoreAction(UnityEngine.Rendering.RenderTargetBinding instance, UnityEngine.Rendering.RenderBufferStoreAction value)
+		static private void set_depthStoreAction(UnityEngine.Rendering.RenderTargetBinding instance, string name, UnityEngine.Rendering.RenderBufferStoreAction value)
 		{
 			instance.depthStoreAction = value;
 		}

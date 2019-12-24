@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -47,7 +48,7 @@ namespace General.Typescript
 			return default(UnityEngine.Graphics);
 		}
 
-		static private void Blit(Parameters parameters)
+		static private void Blit(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.RenderTexture>())
 			{
@@ -94,7 +95,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void BlitMultiTap(Parameters parameters)
+		static private void BlitMultiTap(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.RenderTexture, UnityEngine.Material, UnityEngine.Vector2[]>())
 			{
@@ -116,7 +117,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ClearRandomWriteTargets(Parameters parameters)
+		static private void ClearRandomWriteTargets(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -130,7 +131,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Graphics.ClearRandomWriteTargets has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean ConvertTexture(Parameters parameters)
+		static private System.Boolean ConvertTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.Texture>())
 			{
@@ -156,7 +157,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void CopyTexture(Parameters parameters)
+		static private void CopyTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Texture, UnityEngine.Texture>())
 			{
@@ -193,7 +194,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.Rendering.GPUFence CreateGPUFence(Parameters parameters)
+		static private UnityEngine.Rendering.GPUFence CreateGPUFence(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -212,7 +213,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.GPUFence);
 		}
 
-		static private void DrawMesh(Parameters parameters)
+		static private void DrawMesh(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, UnityEngine.Matrix4x4, UnityEngine.Material, System.Int32>())
 			{
@@ -349,7 +350,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMeshInstanced(Parameters parameters)
+		static private void DrawMeshInstanced(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Int32, UnityEngine.Material, UnityEngine.Matrix4x4[]>())
 			{
@@ -411,7 +412,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMeshInstancedIndirect(Parameters parameters)
+		static private void DrawMeshInstancedIndirect(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, System.Int32, UnityEngine.Material, UnityEngine.Bounds, UnityEngine.ComputeBuffer>())
 			{
@@ -473,7 +474,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawMeshNow(Parameters parameters)
+		static private void DrawMeshNow(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Mesh, UnityEngine.Matrix4x4>())
 			{
@@ -510,7 +511,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawProcedural(Parameters parameters)
+		static private void DrawProcedural(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.MeshTopology, System.Int32>())
 			{
@@ -537,7 +538,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawProceduralIndirect(Parameters parameters)
+		static private void DrawProceduralIndirect(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.MeshTopology, UnityEngine.ComputeBuffer>())
 			{
@@ -564,7 +565,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void DrawTexture(Parameters parameters)
+		static private void DrawTexture(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect, UnityEngine.Texture>())
 			{
@@ -641,7 +642,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ExecuteCommandBuffer(Parameters parameters)
+		static private void ExecuteCommandBuffer(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CommandBuffer>())
 			{
@@ -663,7 +664,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ExecuteCommandBufferAsync(Parameters parameters)
+		static private void ExecuteCommandBufferAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.CommandBuffer, UnityEngine.Rendering.ComputeQueueType>())
 			{
@@ -685,7 +686,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRandomWriteTarget(Parameters parameters)
+		static private void SetRandomWriteTarget(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.RenderTexture>())
 			{
@@ -717,7 +718,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRenderTarget(Parameters parameters)
+		static private void SetRenderTarget(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.RenderTargetSetup>())
 			{
@@ -784,7 +785,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void WaitOnGPUFence(Parameters parameters)
+		static private void WaitOnGPUFence(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.GPUFence>())
 			{
@@ -811,27 +812,27 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.ColorGamut get_activeColorGamut()
+		static private UnityEngine.ColorGamut get_activeColorGamut(Type type, string name)
 		{
 			return UnityEngine.Graphics.activeColorGamut;
 		}
 
-		static private UnityEngine.Rendering.GraphicsTier get_activeTier()
+		static private UnityEngine.Rendering.GraphicsTier get_activeTier(Type type, string name)
 		{
 			return UnityEngine.Graphics.activeTier;
 		}
 
-		static private void set_activeTier(UnityEngine.Rendering.GraphicsTier value)
+		static private void set_activeTier(Type type, string name, UnityEngine.Rendering.GraphicsTier value)
 		{
 			UnityEngine.Graphics.activeTier = value;
 		}
 
-		static private UnityEngine.RenderBuffer get_activeColorBuffer()
+		static private UnityEngine.RenderBuffer get_activeColorBuffer(Type type, string name)
 		{
 			return UnityEngine.Graphics.activeColorBuffer;
 		}
 
-		static private UnityEngine.RenderBuffer get_activeDepthBuffer()
+		static private UnityEngine.RenderBuffer get_activeDepthBuffer(Type type, string name)
 		{
 			return UnityEngine.Graphics.activeDepthBuffer;
 		}

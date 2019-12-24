@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -33,12 +34,12 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.CreateSceneParameters);
 		}
 
-		static private UnityEngine.SceneManagement.LocalPhysicsMode get_localPhysicsMode(UnityEngine.SceneManagement.CreateSceneParameters instance)
+		static private UnityEngine.SceneManagement.LocalPhysicsMode get_localPhysicsMode(UnityEngine.SceneManagement.CreateSceneParameters instance, string name)
 		{
 			return instance.localPhysicsMode;
 		}
 
-		static private void set_localPhysicsMode(UnityEngine.SceneManagement.CreateSceneParameters instance, UnityEngine.SceneManagement.LocalPhysicsMode value)
+		static private void set_localPhysicsMode(UnityEngine.SceneManagement.CreateSceneParameters instance, string name, UnityEngine.SceneManagement.LocalPhysicsMode value)
 		{
 			instance.localPhysicsMode = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -55,7 +56,7 @@ namespace General.Typescript
 			return default(UnityEngine.GL);
 		}
 
-		static private void Begin(Parameters parameters)
+		static private void Begin(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -77,7 +78,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Clear(Parameters parameters)
+		static private void Clear(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean, System.Boolean, UnityEngine.Color>())
 			{
@@ -104,7 +105,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void ClearWithSkybox(Parameters parameters)
+		static private void ClearWithSkybox(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Boolean, UnityEngine.Camera>())
 			{
@@ -126,7 +127,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Color(Parameters parameters)
+		static private void Color(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Color>())
 			{
@@ -148,7 +149,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void End(Parameters parameters)
+		static private void End(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -162,7 +163,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.End has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Flush(Parameters parameters)
+		static private void Flush(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.Flush has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Matrix4x4 GetGPUProjectionMatrix(Parameters parameters)
+		static private UnityEngine.Matrix4x4 GetGPUProjectionMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4, System.Boolean>())
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			return default(UnityEngine.Matrix4x4);
 		}
 
-		static private void InvalidateState(Parameters parameters)
+		static private void InvalidateState(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -212,7 +213,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.InvalidateState has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void IssuePluginEvent(Parameters parameters)
+		static private void IssuePluginEvent(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.IntPtr, System.Int32>())
 			{
@@ -234,7 +235,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void LoadIdentity(Parameters parameters)
+		static private void LoadIdentity(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -248,7 +249,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.LoadIdentity has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LoadOrtho(Parameters parameters)
+		static private void LoadOrtho(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -262,7 +263,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.LoadOrtho has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LoadPixelMatrix(Parameters parameters)
+		static private void LoadPixelMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -281,7 +282,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.LoadPixelMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void LoadProjectionMatrix(Parameters parameters)
+		static private void LoadProjectionMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -303,7 +304,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MultiTexCoord(Parameters parameters)
+		static private void MultiTexCoord(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector3>())
 			{
@@ -325,7 +326,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MultiTexCoord2(Parameters parameters)
+		static private void MultiTexCoord2(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single, System.Single>())
 			{
@@ -347,7 +348,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MultiTexCoord3(Parameters parameters)
+		static private void MultiTexCoord3(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, System.Single, System.Single, System.Single>())
 			{
@@ -369,7 +370,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MultMatrix(Parameters parameters)
+		static private void MultMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Matrix4x4>())
 			{
@@ -391,7 +392,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void PopMatrix(Parameters parameters)
+		static private void PopMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -405,7 +406,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.PopMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void PushMatrix(Parameters parameters)
+		static private void PushMatrix(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -419,7 +420,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.PushMatrix has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void RenderTargetBarrier(Parameters parameters)
+		static private void RenderTargetBarrier(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -433,7 +434,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.GL.RenderTargetBarrier has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void TexCoord(Parameters parameters)
+		static private void TexCoord(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -455,7 +456,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void TexCoord2(Parameters parameters)
+		static private void TexCoord2(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single>())
 			{
@@ -477,7 +478,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void TexCoord3(Parameters parameters)
+		static private void TexCoord3(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -499,7 +500,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Vertex(Parameters parameters)
+		static private void Vertex(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -521,7 +522,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Vertex3(Parameters parameters)
+		static private void Vertex3(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Single, System.Single, System.Single>())
 			{
@@ -543,7 +544,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Viewport(Parameters parameters)
+		static private void Viewport(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rect>())
 			{
@@ -565,42 +566,42 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean get_wireframe()
+		static private System.Boolean get_wireframe(Type type, string name)
 		{
 			return UnityEngine.GL.wireframe;
 		}
 
-		static private void set_wireframe(System.Boolean value)
+		static private void set_wireframe(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.GL.wireframe = value;
 		}
 
-		static private System.Boolean get_sRGBWrite()
+		static private System.Boolean get_sRGBWrite(Type type, string name)
 		{
 			return UnityEngine.GL.sRGBWrite;
 		}
 
-		static private void set_sRGBWrite(System.Boolean value)
+		static private void set_sRGBWrite(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.GL.sRGBWrite = value;
 		}
 
-		static private System.Boolean get_invertCulling()
+		static private System.Boolean get_invertCulling(Type type, string name)
 		{
 			return UnityEngine.GL.invertCulling;
 		}
 
-		static private void set_invertCulling(System.Boolean value)
+		static private void set_invertCulling(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.GL.invertCulling = value;
 		}
 
-		static private UnityEngine.Matrix4x4 get_modelview()
+		static private UnityEngine.Matrix4x4 get_modelview(Type type, string name)
 		{
 			return UnityEngine.GL.modelview;
 		}
 
-		static private void set_modelview(UnityEngine.Matrix4x4 value)
+		static private void set_modelview(Type type, string name, UnityEngine.Matrix4x4 value)
 		{
 			UnityEngine.GL.modelview = value;
 		}

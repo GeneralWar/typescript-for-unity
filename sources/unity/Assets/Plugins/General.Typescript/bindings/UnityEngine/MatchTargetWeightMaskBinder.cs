@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,22 +35,22 @@ namespace General.Typescript
 			return default(UnityEngine.MatchTargetWeightMask);
 		}
 
-		static private UnityEngine.Vector3 get_positionXYZWeight(UnityEngine.MatchTargetWeightMask instance)
+		static private UnityEngine.Vector3 get_positionXYZWeight(UnityEngine.MatchTargetWeightMask instance, string name)
 		{
 			return instance.positionXYZWeight;
 		}
 
-		static private void set_positionXYZWeight(UnityEngine.MatchTargetWeightMask instance, UnityEngine.Vector3 value)
+		static private void set_positionXYZWeight(UnityEngine.MatchTargetWeightMask instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.positionXYZWeight = value;
 		}
 
-		static private System.Single get_rotationWeight(UnityEngine.MatchTargetWeightMask instance)
+		static private System.Single get_rotationWeight(UnityEngine.MatchTargetWeightMask instance, string name)
 		{
 			return instance.rotationWeight;
 		}
 
-		static private void set_rotationWeight(UnityEngine.MatchTargetWeightMask instance, System.Single value)
+		static private void set_rotationWeight(UnityEngine.MatchTargetWeightMask instance, string name, System.Single value)
 		{
 			instance.rotationWeight = value;
 		}

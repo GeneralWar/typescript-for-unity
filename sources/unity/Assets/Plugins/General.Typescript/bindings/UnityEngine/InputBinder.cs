@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(UnityEngine.Input);
 		}
 
-		static private UnityEngine.AccelerationEvent GetAccelerationEvent(Parameters parameters)
+		static private UnityEngine.AccelerationEvent GetAccelerationEvent(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			return default(UnityEngine.AccelerationEvent);
 		}
 
-		static private System.Single GetAxis(Parameters parameters)
+		static private System.Single GetAxis(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Single GetAxisRaw(Parameters parameters)
+		static private System.Single GetAxisRaw(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -132,7 +133,7 @@ namespace General.Typescript
 			return default(System.Single);
 		}
 
-		static private System.Boolean GetButton(Parameters parameters)
+		static private System.Boolean GetButton(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -154,7 +155,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetButtonDown(Parameters parameters)
+		static private System.Boolean GetButtonDown(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -176,7 +177,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetButtonUp(Parameters parameters)
+		static private System.Boolean GetButtonUp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -198,7 +199,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.String[] GetJoystickNames(Parameters parameters)
+		static private System.String[] GetJoystickNames(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -213,7 +214,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Boolean GetKey(Parameters parameters)
+		static private System.Boolean GetKey(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.KeyCode>())
 			{
@@ -239,7 +240,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetKeyDown(Parameters parameters)
+		static private System.Boolean GetKeyDown(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.KeyCode>())
 			{
@@ -265,7 +266,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetKeyUp(Parameters parameters)
+		static private System.Boolean GetKeyUp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.KeyCode>())
 			{
@@ -291,7 +292,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButton(Parameters parameters)
+		static private System.Boolean GetMouseButton(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -313,7 +314,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButtonDown(Parameters parameters)
+		static private System.Boolean GetMouseButtonDown(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -335,7 +336,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean GetMouseButtonUp(Parameters parameters)
+		static private System.Boolean GetMouseButtonUp(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -357,7 +358,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.Touch GetTouch(Parameters parameters)
+		static private UnityEngine.Touch GetTouch(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -379,7 +380,7 @@ namespace General.Typescript
 			return default(UnityEngine.Touch);
 		}
 
-		static private void ResetInputAxes(Parameters parameters)
+		static private void ResetInputAxes(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -393,162 +394,162 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.Input.ResetInputAxes has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Boolean get_simulateMouseWithTouches()
+		static private System.Boolean get_simulateMouseWithTouches(Type type, string name)
 		{
 			return UnityEngine.Input.simulateMouseWithTouches;
 		}
 
-		static private void set_simulateMouseWithTouches(System.Boolean value)
+		static private void set_simulateMouseWithTouches(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Input.simulateMouseWithTouches = value;
 		}
 
-		static private UnityEngine.Gyroscope get_gyro()
+		static private UnityEngine.Gyroscope get_gyro(Type type, string name)
 		{
 			return UnityEngine.Input.gyro;
 		}
 
-		static private UnityEngine.Compass get_compass()
+		static private UnityEngine.Compass get_compass(Type type, string name)
 		{
 			return UnityEngine.Input.compass;
 		}
 
-		static private UnityEngine.LocationService get_location()
+		static private UnityEngine.LocationService get_location(Type type, string name)
 		{
 			return UnityEngine.Input.location;
 		}
 
-		static private System.Boolean get_backButtonLeavesApp()
+		static private System.Boolean get_backButtonLeavesApp(Type type, string name)
 		{
 			return UnityEngine.Input.backButtonLeavesApp;
 		}
 
-		static private void set_backButtonLeavesApp(System.Boolean value)
+		static private void set_backButtonLeavesApp(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Input.backButtonLeavesApp = value;
 		}
 
-		static private System.Int32 get_accelerationEventCount()
+		static private System.Int32 get_accelerationEventCount(Type type, string name)
 		{
 			return UnityEngine.Input.accelerationEventCount;
 		}
 
-		static private System.Boolean get_compensateSensors()
+		static private System.Boolean get_compensateSensors(Type type, string name)
 		{
 			return UnityEngine.Input.compensateSensors;
 		}
 
-		static private void set_compensateSensors(System.Boolean value)
+		static private void set_compensateSensors(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Input.compensateSensors = value;
 		}
 
-		static private UnityEngine.Vector3 get_acceleration()
+		static private UnityEngine.Vector3 get_acceleration(Type type, string name)
 		{
 			return UnityEngine.Input.acceleration;
 		}
 
-		static private UnityEngine.DeviceOrientation get_deviceOrientation()
+		static private UnityEngine.DeviceOrientation get_deviceOrientation(Type type, string name)
 		{
 			return UnityEngine.Input.deviceOrientation;
 		}
 
-		static private System.Boolean get_multiTouchEnabled()
+		static private System.Boolean get_multiTouchEnabled(Type type, string name)
 		{
 			return UnityEngine.Input.multiTouchEnabled;
 		}
 
-		static private void set_multiTouchEnabled(System.Boolean value)
+		static private void set_multiTouchEnabled(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Input.multiTouchEnabled = value;
 		}
 
-		static private System.Boolean get_touchSupported()
+		static private System.Boolean get_touchSupported(Type type, string name)
 		{
 			return UnityEngine.Input.touchSupported;
 		}
 
-		static private System.Boolean get_stylusTouchSupported()
+		static private System.Boolean get_stylusTouchSupported(Type type, string name)
 		{
 			return UnityEngine.Input.stylusTouchSupported;
 		}
 
-		static private System.Boolean get_touchPressureSupported()
+		static private System.Boolean get_touchPressureSupported(Type type, string name)
 		{
 			return UnityEngine.Input.touchPressureSupported;
 		}
 
-		static private System.Int32 get_touchCount()
+		static private System.Int32 get_touchCount(Type type, string name)
 		{
 			return UnityEngine.Input.touchCount;
 		}
 
-		static private System.Boolean get_mousePresent()
+		static private System.Boolean get_mousePresent(Type type, string name)
 		{
 			return UnityEngine.Input.mousePresent;
 		}
 
-		static private UnityEngine.Vector2 get_compositionCursorPos()
+		static private UnityEngine.Vector2 get_compositionCursorPos(Type type, string name)
 		{
 			return UnityEngine.Input.compositionCursorPos;
 		}
 
-		static private void set_compositionCursorPos(UnityEngine.Vector2 value)
+		static private void set_compositionCursorPos(Type type, string name, UnityEngine.Vector2 value)
 		{
 			UnityEngine.Input.compositionCursorPos = value;
 		}
 
-		static private System.Boolean get_imeIsSelected()
+		static private System.Boolean get_imeIsSelected(Type type, string name)
 		{
 			return UnityEngine.Input.imeIsSelected;
 		}
 
-		static private System.String get_compositionString()
+		static private System.String get_compositionString(Type type, string name)
 		{
 			return UnityEngine.Input.compositionString;
 		}
 
-		static private UnityEngine.IMECompositionMode get_imeCompositionMode()
+		static private UnityEngine.IMECompositionMode get_imeCompositionMode(Type type, string name)
 		{
 			return UnityEngine.Input.imeCompositionMode;
 		}
 
-		static private void set_imeCompositionMode(UnityEngine.IMECompositionMode value)
+		static private void set_imeCompositionMode(Type type, string name, UnityEngine.IMECompositionMode value)
 		{
 			UnityEngine.Input.imeCompositionMode = value;
 		}
 
-		static private UnityEngine.Vector2 get_mouseScrollDelta()
+		static private UnityEngine.Vector2 get_mouseScrollDelta(Type type, string name)
 		{
 			return UnityEngine.Input.mouseScrollDelta;
 		}
 
-		static private UnityEngine.Vector3 get_mousePosition()
+		static private UnityEngine.Vector3 get_mousePosition(Type type, string name)
 		{
 			return UnityEngine.Input.mousePosition;
 		}
 
-		static private System.String get_inputString()
+		static private System.String get_inputString(Type type, string name)
 		{
 			return UnityEngine.Input.inputString;
 		}
 
-		static private System.Boolean get_anyKeyDown()
+		static private System.Boolean get_anyKeyDown(Type type, string name)
 		{
 			return UnityEngine.Input.anyKeyDown;
 		}
 
-		static private System.Boolean get_anyKey()
+		static private System.Boolean get_anyKey(Type type, string name)
 		{
 			return UnityEngine.Input.anyKey;
 		}
 
-		static private UnityEngine.Touch[] get_touches()
+		static private UnityEngine.Touch[] get_touches(Type type, string name)
 		{
 			return UnityEngine.Input.touches;
 		}
 
-		static private UnityEngine.AccelerationEvent[] get_accelerationEvents()
+		static private UnityEngine.AccelerationEvent[] get_accelerationEvents(Type type, string name)
 		{
 			return UnityEngine.Input.accelerationEvents;
 		}

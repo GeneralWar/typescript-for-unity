@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -22,7 +23,7 @@ namespace General.Typescript
 			self.BindStaticProperty("renderPipelineAsset", get_renderPipelineAsset, set_renderPipelineAsset);
 		}
 
-		static private UnityEngine.Shader GetCustomShader(Parameters parameters)
+		static private UnityEngine.Shader GetCustomShader(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderType>())
 			{
@@ -44,7 +45,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.Rendering.BuiltinShaderMode GetShaderMode(Parameters parameters)
+		static private UnityEngine.Rendering.BuiltinShaderMode GetShaderMode(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderType>())
 			{
@@ -66,7 +67,7 @@ namespace General.Typescript
 			return default(UnityEngine.Rendering.BuiltinShaderMode);
 		}
 
-		static private System.Boolean HasShaderDefine(Parameters parameters)
+		static private System.Boolean HasShaderDefine(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderDefine>())
 			{
@@ -92,7 +93,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private void SetCustomShader(Parameters parameters)
+		static private void SetCustomShader(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderType, UnityEngine.Shader>())
 			{
@@ -114,7 +115,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetShaderMode(Parameters parameters)
+		static private void SetShaderMode(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Rendering.BuiltinShaderType, UnityEngine.Rendering.BuiltinShaderMode>())
 			{
@@ -136,72 +137,72 @@ namespace General.Typescript
 			}
 		}
 
-		static private UnityEngine.TransparencySortMode get_transparencySortMode()
+		static private UnityEngine.TransparencySortMode get_transparencySortMode(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.transparencySortMode;
 		}
 
-		static private void set_transparencySortMode(UnityEngine.TransparencySortMode value)
+		static private void set_transparencySortMode(Type type, string name, UnityEngine.TransparencySortMode value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.transparencySortMode = value;
 		}
 
-		static private UnityEngine.Vector3 get_transparencySortAxis()
+		static private UnityEngine.Vector3 get_transparencySortAxis(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.transparencySortAxis;
 		}
 
-		static private void set_transparencySortAxis(UnityEngine.Vector3 value)
+		static private void set_transparencySortAxis(Type type, string name, UnityEngine.Vector3 value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.transparencySortAxis = value;
 		}
 
-		static private System.Boolean get_lightsUseLinearIntensity()
+		static private System.Boolean get_lightsUseLinearIntensity(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.lightsUseLinearIntensity;
 		}
 
-		static private void set_lightsUseLinearIntensity(System.Boolean value)
+		static private void set_lightsUseLinearIntensity(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.lightsUseLinearIntensity = value;
 		}
 
-		static private System.Boolean get_lightsUseColorTemperature()
+		static private System.Boolean get_lightsUseColorTemperature(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.lightsUseColorTemperature;
 		}
 
-		static private void set_lightsUseColorTemperature(System.Boolean value)
+		static private void set_lightsUseColorTemperature(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.lightsUseColorTemperature = value;
 		}
 
-		static private System.Boolean get_useScriptableRenderPipelineBatching()
+		static private System.Boolean get_useScriptableRenderPipelineBatching(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.useScriptableRenderPipelineBatching;
 		}
 
-		static private void set_useScriptableRenderPipelineBatching(System.Boolean value)
+		static private void set_useScriptableRenderPipelineBatching(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.useScriptableRenderPipelineBatching = value;
 		}
 
-		static private System.Boolean get_logWhenShaderIsCompiled()
+		static private System.Boolean get_logWhenShaderIsCompiled(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.logWhenShaderIsCompiled;
 		}
 
-		static private void set_logWhenShaderIsCompiled(System.Boolean value)
+		static private void set_logWhenShaderIsCompiled(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.logWhenShaderIsCompiled = value;
 		}
 
-		static private UnityEngine.Experimental.Rendering.RenderPipelineAsset get_renderPipelineAsset()
+		static private UnityEngine.Experimental.Rendering.RenderPipelineAsset get_renderPipelineAsset(Type type, string name)
 		{
 			return UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset;
 		}
 
-		static private void set_renderPipelineAsset(UnityEngine.Experimental.Rendering.RenderPipelineAsset value)
+		static private void set_renderPipelineAsset(Type type, string name, UnityEngine.Experimental.Rendering.RenderPipelineAsset value)
 		{
 			UnityEngine.Rendering.GraphicsSettings.renderPipelineAsset = value;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -12,7 +13,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("OnSubmit", OnSubmit);
 		}
 
-		static private void OnPointerClick(UnityEngine.UI.Button instance, Parameters parameters)
+		static private void OnPointerClick(UnityEngine.UI.Button instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.PointerEventData>())
 			{
@@ -34,7 +35,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void OnSubmit(UnityEngine.UI.Button instance, Parameters parameters)
+		static private void OnSubmit(UnityEngine.UI.Button instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.EventSystems.BaseEventData>())
 			{

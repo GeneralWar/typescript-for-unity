@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -13,7 +14,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("SetLayoutVertical", SetLayoutVertical);
 		}
 
-		static private void SetLayoutHorizontal(UnityEngine.UI.ContentSizeFitter instance, Parameters parameters)
+		static private void SetLayoutHorizontal(UnityEngine.UI.ContentSizeFitter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -27,7 +28,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.UI.ContentSizeFitter.SetLayoutHorizontal has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetLayoutVertical(UnityEngine.UI.ContentSizeFitter instance, Parameters parameters)
+		static private void SetLayoutVertical(UnityEngine.UI.ContentSizeFitter instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{

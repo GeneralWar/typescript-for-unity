@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -43,32 +44,32 @@ namespace General.Typescript
 			return default(System.Net.Sockets.MulticastOption);
 		}
 
-		static private System.Net.IPAddress get_Group(System.Net.Sockets.MulticastOption instance)
+		static private System.Net.IPAddress get_Group(System.Net.Sockets.MulticastOption instance, string name)
 		{
 			return instance.Group;
 		}
 
-		static private void set_Group(System.Net.Sockets.MulticastOption instance, System.Net.IPAddress value)
+		static private void set_Group(System.Net.Sockets.MulticastOption instance, string name, System.Net.IPAddress value)
 		{
 			instance.Group = value;
 		}
 
-		static private System.Net.IPAddress get_LocalAddress(System.Net.Sockets.MulticastOption instance)
+		static private System.Net.IPAddress get_LocalAddress(System.Net.Sockets.MulticastOption instance, string name)
 		{
 			return instance.LocalAddress;
 		}
 
-		static private void set_LocalAddress(System.Net.Sockets.MulticastOption instance, System.Net.IPAddress value)
+		static private void set_LocalAddress(System.Net.Sockets.MulticastOption instance, string name, System.Net.IPAddress value)
 		{
 			instance.LocalAddress = value;
 		}
 
-		static private System.Int32 get_InterfaceIndex(System.Net.Sockets.MulticastOption instance)
+		static private System.Int32 get_InterfaceIndex(System.Net.Sockets.MulticastOption instance, string name)
 		{
 			return instance.InterfaceIndex;
 		}
 
-		static private void set_InterfaceIndex(System.Net.Sockets.MulticastOption instance, System.Int32 value)
+		static private void set_InterfaceIndex(System.Net.Sockets.MulticastOption instance, string name, System.Int32 value)
 		{
 			instance.InterfaceIndex = value;
 		}

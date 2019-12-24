@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -11,7 +12,7 @@ namespace General.Typescript
 			self.BindInstanceFunction("ModifyMesh", ModifyMesh);
 		}
 
-		static private void ModifyMesh(UnityEngine.UI.PositionAsUV1 instance, Parameters parameters)
+		static private void ModifyMesh(UnityEngine.UI.PositionAsUV1 instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.UI.VertexHelper>())
 			{

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -19,7 +20,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("anyState", get_anyState, null);
 		}
 
-		static private System.Boolean IsName(UnityEngine.AnimatorTransitionInfo instance, Parameters parameters)
+		static private System.Boolean IsName(UnityEngine.AnimatorTransitionInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -41,7 +42,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Boolean IsUserName(UnityEngine.AnimatorTransitionInfo instance, Parameters parameters)
+		static private System.Boolean IsUserName(UnityEngine.AnimatorTransitionInfo instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -63,37 +64,37 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private System.Int32 get_fullPathHash(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Int32 get_fullPathHash(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.fullPathHash;
 		}
 
-		static private System.Int32 get_nameHash(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Int32 get_nameHash(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.nameHash;
 		}
 
-		static private System.Int32 get_userNameHash(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Int32 get_userNameHash(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.userNameHash;
 		}
 
-		static private UnityEngine.DurationUnit get_durationUnit(UnityEngine.AnimatorTransitionInfo instance)
+		static private UnityEngine.DurationUnit get_durationUnit(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.durationUnit;
 		}
 
-		static private System.Single get_duration(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Single get_duration(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.duration;
 		}
 
-		static private System.Single get_normalizedTime(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Single get_normalizedTime(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.normalizedTime;
 		}
 
-		static private System.Boolean get_anyState(UnityEngine.AnimatorTransitionInfo instance)
+		static private System.Boolean get_anyState(UnityEngine.AnimatorTransitionInfo instance, string name)
 		{
 			return instance.anyState;
 		}

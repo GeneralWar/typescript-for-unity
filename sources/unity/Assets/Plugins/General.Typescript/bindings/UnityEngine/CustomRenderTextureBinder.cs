@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -60,7 +61,7 @@ namespace General.Typescript
 			return default(UnityEngine.CustomRenderTexture);
 		}
 
-		static private void ClearUpdateZones(UnityEngine.CustomRenderTexture instance, Parameters parameters)
+		static private void ClearUpdateZones(UnityEngine.CustomRenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -74,7 +75,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CustomRenderTexture.ClearUpdateZones has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void Initialize(UnityEngine.CustomRenderTexture instance, Parameters parameters)
+		static private void Initialize(UnityEngine.CustomRenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -88,7 +89,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CustomRenderTexture.Initialize has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetUpdateZones(UnityEngine.CustomRenderTexture instance, Parameters parameters)
+		static private void SetUpdateZones(UnityEngine.CustomRenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.CustomRenderTextureUpdateZone[]>())
 			{
@@ -110,7 +111,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void Update(UnityEngine.CustomRenderTexture instance, Parameters parameters)
+		static private void Update(UnityEngine.CustomRenderTexture instance, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -129,122 +130,122 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.CustomRenderTexture.Update has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private UnityEngine.Material get_material(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.Material get_material(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.material;
 		}
 
-		static private void set_material(UnityEngine.CustomRenderTexture instance, UnityEngine.Material value)
+		static private void set_material(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.Material value)
 		{
 			instance.material = value;
 		}
 
-		static private UnityEngine.Material get_initializationMaterial(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.Material get_initializationMaterial(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.initializationMaterial;
 		}
 
-		static private void set_initializationMaterial(UnityEngine.CustomRenderTexture instance, UnityEngine.Material value)
+		static private void set_initializationMaterial(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.Material value)
 		{
 			instance.initializationMaterial = value;
 		}
 
-		static private UnityEngine.Texture get_initializationTexture(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.Texture get_initializationTexture(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.initializationTexture;
 		}
 
-		static private void set_initializationTexture(UnityEngine.CustomRenderTexture instance, UnityEngine.Texture value)
+		static private void set_initializationTexture(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.Texture value)
 		{
 			instance.initializationTexture = value;
 		}
 
-		static private UnityEngine.CustomRenderTextureInitializationSource get_initializationSource(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.CustomRenderTextureInitializationSource get_initializationSource(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.initializationSource;
 		}
 
-		static private void set_initializationSource(UnityEngine.CustomRenderTexture instance, UnityEngine.CustomRenderTextureInitializationSource value)
+		static private void set_initializationSource(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.CustomRenderTextureInitializationSource value)
 		{
 			instance.initializationSource = value;
 		}
 
-		static private UnityEngine.Color get_initializationColor(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.Color get_initializationColor(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.initializationColor;
 		}
 
-		static private void set_initializationColor(UnityEngine.CustomRenderTexture instance, UnityEngine.Color value)
+		static private void set_initializationColor(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.Color value)
 		{
 			instance.initializationColor = value;
 		}
 
-		static private UnityEngine.CustomRenderTextureUpdateMode get_updateMode(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.CustomRenderTextureUpdateMode get_updateMode(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.updateMode;
 		}
 
-		static private void set_updateMode(UnityEngine.CustomRenderTexture instance, UnityEngine.CustomRenderTextureUpdateMode value)
+		static private void set_updateMode(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.CustomRenderTextureUpdateMode value)
 		{
 			instance.updateMode = value;
 		}
 
-		static private UnityEngine.CustomRenderTextureUpdateMode get_initializationMode(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.CustomRenderTextureUpdateMode get_initializationMode(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.initializationMode;
 		}
 
-		static private void set_initializationMode(UnityEngine.CustomRenderTexture instance, UnityEngine.CustomRenderTextureUpdateMode value)
+		static private void set_initializationMode(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.CustomRenderTextureUpdateMode value)
 		{
 			instance.initializationMode = value;
 		}
 
-		static private UnityEngine.CustomRenderTextureUpdateZoneSpace get_updateZoneSpace(UnityEngine.CustomRenderTexture instance)
+		static private UnityEngine.CustomRenderTextureUpdateZoneSpace get_updateZoneSpace(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.updateZoneSpace;
 		}
 
-		static private void set_updateZoneSpace(UnityEngine.CustomRenderTexture instance, UnityEngine.CustomRenderTextureUpdateZoneSpace value)
+		static private void set_updateZoneSpace(UnityEngine.CustomRenderTexture instance, string name, UnityEngine.CustomRenderTextureUpdateZoneSpace value)
 		{
 			instance.updateZoneSpace = value;
 		}
 
-		static private System.Int32 get_shaderPass(UnityEngine.CustomRenderTexture instance)
+		static private System.Int32 get_shaderPass(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.shaderPass;
 		}
 
-		static private void set_shaderPass(UnityEngine.CustomRenderTexture instance, System.Int32 value)
+		static private void set_shaderPass(UnityEngine.CustomRenderTexture instance, string name, System.Int32 value)
 		{
 			instance.shaderPass = value;
 		}
 
-		static private System.UInt32 get_cubemapFaceMask(UnityEngine.CustomRenderTexture instance)
+		static private System.UInt32 get_cubemapFaceMask(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.cubemapFaceMask;
 		}
 
-		static private void set_cubemapFaceMask(UnityEngine.CustomRenderTexture instance, System.UInt32 value)
+		static private void set_cubemapFaceMask(UnityEngine.CustomRenderTexture instance, string name, System.UInt32 value)
 		{
 			instance.cubemapFaceMask = value;
 		}
 
-		static private System.Boolean get_doubleBuffered(UnityEngine.CustomRenderTexture instance)
+		static private System.Boolean get_doubleBuffered(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.doubleBuffered;
 		}
 
-		static private void set_doubleBuffered(UnityEngine.CustomRenderTexture instance, System.Boolean value)
+		static private void set_doubleBuffered(UnityEngine.CustomRenderTexture instance, string name, System.Boolean value)
 		{
 			instance.doubleBuffered = value;
 		}
 
-		static private System.Boolean get_wrapUpdateZones(UnityEngine.CustomRenderTexture instance)
+		static private System.Boolean get_wrapUpdateZones(UnityEngine.CustomRenderTexture instance, string name)
 		{
 			return instance.wrapUpdateZones;
 		}
 
-		static private void set_wrapUpdateZones(UnityEngine.CustomRenderTexture instance, System.Boolean value)
+		static private void set_wrapUpdateZones(UnityEngine.CustomRenderTexture instance, string name, System.Boolean value)
 		{
 			instance.wrapUpdateZones = value;
 		}

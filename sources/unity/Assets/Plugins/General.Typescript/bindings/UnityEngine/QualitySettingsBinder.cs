@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -49,7 +50,7 @@ namespace General.Typescript
 			self.BindStaticProperty("activeColorSpace", get_activeColorSpace, null);
 		}
 
-		static private void DecreaseLevel(Parameters parameters)
+		static private void DecreaseLevel(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -68,7 +69,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.QualitySettings.DecreaseLevel has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private System.Int32 GetQualityLevel(Parameters parameters)
+		static private System.Int32 GetQualityLevel(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -83,7 +84,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private void IncreaseLevel(Parameters parameters)
+		static private void IncreaseLevel(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -102,7 +103,7 @@ namespace General.Typescript
 			UnityEngine.Debug.LogErrorFormat("UnityEngine.QualitySettings.IncreaseLevel has no implemention with arguments ({0})!", string.Join(", ", types));
 		}
 
-		static private void SetQualityLevel(Parameters parameters)
+		static private void SetQualityLevel(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -129,337 +130,337 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Int32 get_pixelLightCount()
+		static private System.Int32 get_pixelLightCount(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.pixelLightCount;
 		}
 
-		static private void set_pixelLightCount(System.Int32 value)
+		static private void set_pixelLightCount(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.pixelLightCount = value;
 		}
 
-		static private System.Int32 get_asyncUploadTimeSlice()
+		static private System.Int32 get_asyncUploadTimeSlice(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.asyncUploadTimeSlice;
 		}
 
-		static private void set_asyncUploadTimeSlice(System.Int32 value)
+		static private void set_asyncUploadTimeSlice(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.asyncUploadTimeSlice = value;
 		}
 
-		static private System.Int32 get_asyncUploadBufferSize()
+		static private System.Int32 get_asyncUploadBufferSize(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.asyncUploadBufferSize;
 		}
 
-		static private void set_asyncUploadBufferSize(System.Int32 value)
+		static private void set_asyncUploadBufferSize(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.asyncUploadBufferSize = value;
 		}
 
-		static private System.Boolean get_asyncUploadPersistentBuffer()
+		static private System.Boolean get_asyncUploadPersistentBuffer(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.asyncUploadPersistentBuffer;
 		}
 
-		static private void set_asyncUploadPersistentBuffer(System.Boolean value)
+		static private void set_asyncUploadPersistentBuffer(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.asyncUploadPersistentBuffer = value;
 		}
 
-		static private System.Boolean get_realtimeReflectionProbes()
+		static private System.Boolean get_realtimeReflectionProbes(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.realtimeReflectionProbes;
 		}
 
-		static private void set_realtimeReflectionProbes(System.Boolean value)
+		static private void set_realtimeReflectionProbes(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.realtimeReflectionProbes = value;
 		}
 
-		static private System.Boolean get_billboardsFaceCameraPosition()
+		static private System.Boolean get_billboardsFaceCameraPosition(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.billboardsFaceCameraPosition;
 		}
 
-		static private void set_billboardsFaceCameraPosition(System.Boolean value)
+		static private void set_billboardsFaceCameraPosition(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.billboardsFaceCameraPosition = value;
 		}
 
-		static private System.Single get_resolutionScalingFixedDPIFactor()
+		static private System.Single get_resolutionScalingFixedDPIFactor(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.resolutionScalingFixedDPIFactor;
 		}
 
-		static private void set_resolutionScalingFixedDPIFactor(System.Single value)
+		static private void set_resolutionScalingFixedDPIFactor(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.resolutionScalingFixedDPIFactor = value;
 		}
 
-		static private System.Int32 get_antiAliasing()
+		static private System.Int32 get_antiAliasing(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.antiAliasing;
 		}
 
-		static private void set_antiAliasing(System.Int32 value)
+		static private void set_antiAliasing(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.antiAliasing = value;
 		}
 
-		static private UnityEngine.BlendWeights get_blendWeights()
+		static private UnityEngine.BlendWeights get_blendWeights(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.blendWeights;
 		}
 
-		static private void set_blendWeights(UnityEngine.BlendWeights value)
+		static private void set_blendWeights(Type type, string name, UnityEngine.BlendWeights value)
 		{
 			UnityEngine.QualitySettings.blendWeights = value;
 		}
 
-		static private System.Single get_streamingMipmapsMemoryBudget()
+		static private System.Single get_streamingMipmapsMemoryBudget(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.streamingMipmapsMemoryBudget;
 		}
 
-		static private void set_streamingMipmapsMemoryBudget(System.Single value)
+		static private void set_streamingMipmapsMemoryBudget(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.streamingMipmapsMemoryBudget = value;
 		}
 
-		static private System.Int32 get_streamingMipmapsMaxLevelReduction()
+		static private System.Int32 get_streamingMipmapsMaxLevelReduction(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.streamingMipmapsMaxLevelReduction;
 		}
 
-		static private void set_streamingMipmapsMaxLevelReduction(System.Int32 value)
+		static private void set_streamingMipmapsMaxLevelReduction(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.streamingMipmapsMaxLevelReduction = value;
 		}
 
-		static private System.Boolean get_streamingMipmapsAddAllCameras()
+		static private System.Boolean get_streamingMipmapsAddAllCameras(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.streamingMipmapsAddAllCameras;
 		}
 
-		static private void set_streamingMipmapsAddAllCameras(System.Boolean value)
+		static private void set_streamingMipmapsAddAllCameras(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.streamingMipmapsAddAllCameras = value;
 		}
 
-		static private System.Int32 get_streamingMipmapsMaxFileIORequests()
+		static private System.Int32 get_streamingMipmapsMaxFileIORequests(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.streamingMipmapsMaxFileIORequests;
 		}
 
-		static private void set_streamingMipmapsMaxFileIORequests(System.Int32 value)
+		static private void set_streamingMipmapsMaxFileIORequests(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.streamingMipmapsMaxFileIORequests = value;
 		}
 
-		static private System.Int32 get_maxQueuedFrames()
+		static private System.Int32 get_maxQueuedFrames(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.maxQueuedFrames;
 		}
 
-		static private void set_maxQueuedFrames(System.Int32 value)
+		static private void set_maxQueuedFrames(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.maxQueuedFrames = value;
 		}
 
-		static private System.String[] get_names()
+		static private System.String[] get_names(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.names;
 		}
 
-		static private System.Boolean get_streamingMipmapsActive()
+		static private System.Boolean get_streamingMipmapsActive(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.streamingMipmapsActive;
 		}
 
-		static private void set_streamingMipmapsActive(System.Boolean value)
+		static private void set_streamingMipmapsActive(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.streamingMipmapsActive = value;
 		}
 
-		static private UnityEngine.ColorSpace get_desiredColorSpace()
+		static private UnityEngine.ColorSpace get_desiredColorSpace(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.desiredColorSpace;
 		}
 
-		static private System.Int32 get_vSyncCount()
+		static private System.Int32 get_vSyncCount(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.vSyncCount;
 		}
 
-		static private void set_vSyncCount(System.Int32 value)
+		static private void set_vSyncCount(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.vSyncCount = value;
 		}
 
-		static private System.Boolean get_softParticles()
+		static private System.Boolean get_softParticles(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.softParticles;
 		}
 
-		static private void set_softParticles(System.Boolean value)
+		static private void set_softParticles(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.softParticles = value;
 		}
 
-		static private UnityEngine.ShadowQuality get_shadows()
+		static private UnityEngine.ShadowQuality get_shadows(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadows;
 		}
 
-		static private void set_shadows(UnityEngine.ShadowQuality value)
+		static private void set_shadows(Type type, string name, UnityEngine.ShadowQuality value)
 		{
 			UnityEngine.QualitySettings.shadows = value;
 		}
 
-		static private UnityEngine.ShadowProjection get_shadowProjection()
+		static private UnityEngine.ShadowProjection get_shadowProjection(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowProjection;
 		}
 
-		static private void set_shadowProjection(UnityEngine.ShadowProjection value)
+		static private void set_shadowProjection(Type type, string name, UnityEngine.ShadowProjection value)
 		{
 			UnityEngine.QualitySettings.shadowProjection = value;
 		}
 
-		static private System.Int32 get_shadowCascades()
+		static private System.Int32 get_shadowCascades(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowCascades;
 		}
 
-		static private void set_shadowCascades(System.Int32 value)
+		static private void set_shadowCascades(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.shadowCascades = value;
 		}
 
-		static private System.Single get_shadowDistance()
+		static private System.Single get_shadowDistance(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowDistance;
 		}
 
-		static private void set_shadowDistance(System.Single value)
+		static private void set_shadowDistance(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.shadowDistance = value;
 		}
 
-		static private UnityEngine.ShadowResolution get_shadowResolution()
+		static private UnityEngine.ShadowResolution get_shadowResolution(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowResolution;
 		}
 
-		static private void set_shadowResolution(UnityEngine.ShadowResolution value)
+		static private void set_shadowResolution(Type type, string name, UnityEngine.ShadowResolution value)
 		{
 			UnityEngine.QualitySettings.shadowResolution = value;
 		}
 
-		static private UnityEngine.ShadowmaskMode get_shadowmaskMode()
+		static private UnityEngine.ShadowmaskMode get_shadowmaskMode(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowmaskMode;
 		}
 
-		static private void set_shadowmaskMode(UnityEngine.ShadowmaskMode value)
+		static private void set_shadowmaskMode(Type type, string name, UnityEngine.ShadowmaskMode value)
 		{
 			UnityEngine.QualitySettings.shadowmaskMode = value;
 		}
 
-		static private System.Boolean get_softVegetation()
+		static private System.Boolean get_softVegetation(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.softVegetation;
 		}
 
-		static private void set_softVegetation(System.Boolean value)
+		static private void set_softVegetation(Type type, string name, System.Boolean value)
 		{
 			UnityEngine.QualitySettings.softVegetation = value;
 		}
 
-		static private System.Single get_shadowNearPlaneOffset()
+		static private System.Single get_shadowNearPlaneOffset(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowNearPlaneOffset;
 		}
 
-		static private void set_shadowNearPlaneOffset(System.Single value)
+		static private void set_shadowNearPlaneOffset(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.shadowNearPlaneOffset = value;
 		}
 
-		static private UnityEngine.Vector3 get_shadowCascade4Split()
+		static private UnityEngine.Vector3 get_shadowCascade4Split(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowCascade4Split;
 		}
 
-		static private void set_shadowCascade4Split(UnityEngine.Vector3 value)
+		static private void set_shadowCascade4Split(Type type, string name, UnityEngine.Vector3 value)
 		{
 			UnityEngine.QualitySettings.shadowCascade4Split = value;
 		}
 
-		static private System.Single get_lodBias()
+		static private System.Single get_lodBias(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.lodBias;
 		}
 
-		static private void set_lodBias(System.Single value)
+		static private void set_lodBias(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.lodBias = value;
 		}
 
-		static private UnityEngine.AnisotropicFiltering get_anisotropicFiltering()
+		static private UnityEngine.AnisotropicFiltering get_anisotropicFiltering(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.anisotropicFiltering;
 		}
 
-		static private void set_anisotropicFiltering(UnityEngine.AnisotropicFiltering value)
+		static private void set_anisotropicFiltering(Type type, string name, UnityEngine.AnisotropicFiltering value)
 		{
 			UnityEngine.QualitySettings.anisotropicFiltering = value;
 		}
 
-		static private System.Int32 get_masterTextureLimit()
+		static private System.Int32 get_masterTextureLimit(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.masterTextureLimit;
 		}
 
-		static private void set_masterTextureLimit(System.Int32 value)
+		static private void set_masterTextureLimit(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.masterTextureLimit = value;
 		}
 
-		static private System.Int32 get_maximumLODLevel()
+		static private System.Int32 get_maximumLODLevel(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.maximumLODLevel;
 		}
 
-		static private void set_maximumLODLevel(System.Int32 value)
+		static private void set_maximumLODLevel(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.maximumLODLevel = value;
 		}
 
-		static private System.Int32 get_particleRaycastBudget()
+		static private System.Int32 get_particleRaycastBudget(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.particleRaycastBudget;
 		}
 
-		static private void set_particleRaycastBudget(System.Int32 value)
+		static private void set_particleRaycastBudget(Type type, string name, System.Int32 value)
 		{
 			UnityEngine.QualitySettings.particleRaycastBudget = value;
 		}
 
-		static private System.Single get_shadowCascade2Split()
+		static private System.Single get_shadowCascade2Split(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.shadowCascade2Split;
 		}
 
-		static private void set_shadowCascade2Split(System.Single value)
+		static private void set_shadowCascade2Split(Type type, string name, System.Single value)
 		{
 			UnityEngine.QualitySettings.shadowCascade2Split = value;
 		}
 
-		static private UnityEngine.ColorSpace get_activeColorSpace()
+		static private UnityEngine.ColorSpace get_activeColorSpace(Type type, string name)
 		{
 			return UnityEngine.QualitySettings.activeColorSpace;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -34,7 +35,7 @@ namespace General.Typescript
 			return default(UnityEngine.Collider);
 		}
 
-		static private UnityEngine.Vector3 ClosestPoint(UnityEngine.Collider instance, Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPoint(UnityEngine.Collider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -56,7 +57,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Vector3 ClosestPointOnBounds(UnityEngine.Collider instance, Parameters parameters)
+		static private UnityEngine.Vector3 ClosestPointOnBounds(UnityEngine.Collider instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Vector3>())
 			{
@@ -78,62 +79,62 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private System.Boolean get_enabled(UnityEngine.Collider instance)
+		static private System.Boolean get_enabled(UnityEngine.Collider instance, string name)
 		{
 			return instance.enabled;
 		}
 
-		static private void set_enabled(UnityEngine.Collider instance, System.Boolean value)
+		static private void set_enabled(UnityEngine.Collider instance, string name, System.Boolean value)
 		{
 			instance.enabled = value;
 		}
 
-		static private UnityEngine.Rigidbody get_attachedRigidbody(UnityEngine.Collider instance)
+		static private UnityEngine.Rigidbody get_attachedRigidbody(UnityEngine.Collider instance, string name)
 		{
 			return instance.attachedRigidbody;
 		}
 
-		static private System.Boolean get_isTrigger(UnityEngine.Collider instance)
+		static private System.Boolean get_isTrigger(UnityEngine.Collider instance, string name)
 		{
 			return instance.isTrigger;
 		}
 
-		static private void set_isTrigger(UnityEngine.Collider instance, System.Boolean value)
+		static private void set_isTrigger(UnityEngine.Collider instance, string name, System.Boolean value)
 		{
 			instance.isTrigger = value;
 		}
 
-		static private System.Single get_contactOffset(UnityEngine.Collider instance)
+		static private System.Single get_contactOffset(UnityEngine.Collider instance, string name)
 		{
 			return instance.contactOffset;
 		}
 
-		static private void set_contactOffset(UnityEngine.Collider instance, System.Single value)
+		static private void set_contactOffset(UnityEngine.Collider instance, string name, System.Single value)
 		{
 			instance.contactOffset = value;
 		}
 
-		static private UnityEngine.Bounds get_bounds(UnityEngine.Collider instance)
+		static private UnityEngine.Bounds get_bounds(UnityEngine.Collider instance, string name)
 		{
 			return instance.bounds;
 		}
 
-		static private UnityEngine.PhysicMaterial get_sharedMaterial(UnityEngine.Collider instance)
+		static private UnityEngine.PhysicMaterial get_sharedMaterial(UnityEngine.Collider instance, string name)
 		{
 			return instance.sharedMaterial;
 		}
 
-		static private void set_sharedMaterial(UnityEngine.Collider instance, UnityEngine.PhysicMaterial value)
+		static private void set_sharedMaterial(UnityEngine.Collider instance, string name, UnityEngine.PhysicMaterial value)
 		{
 			instance.sharedMaterial = value;
 		}
 
-		static private UnityEngine.PhysicMaterial get_material(UnityEngine.Collider instance)
+		static private UnityEngine.PhysicMaterial get_material(UnityEngine.Collider instance, string name)
 		{
 			return instance.material;
 		}
 
-		static private void set_material(UnityEngine.Collider instance, UnityEngine.PhysicMaterial value)
+		static private void set_material(UnityEngine.Collider instance, string name, UnityEngine.PhysicMaterial value)
 		{
 			instance.material = value;
 		}

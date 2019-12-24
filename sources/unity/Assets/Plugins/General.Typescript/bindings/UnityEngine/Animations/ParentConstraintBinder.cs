@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -28,7 +29,7 @@ namespace General.Typescript
 			self.BindInstanceProperty("rotationAxis", get_rotationAxis, set_rotationAxis);
 		}
 
-		static private System.Int32 AddSource(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private System.Int32 AddSource(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.Animations.ConstraintSource>())
 			{
@@ -50,7 +51,7 @@ namespace General.Typescript
 			return default(System.Int32);
 		}
 
-		static private UnityEngine.Vector3 GetRotationOffset(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetRotationOffset(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -72,7 +73,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private UnityEngine.Animations.ConstraintSource GetSource(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -94,7 +95,7 @@ namespace General.Typescript
 			return default(UnityEngine.Animations.ConstraintSource);
 		}
 
-		static private UnityEngine.Vector3 GetTranslationOffset(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private UnityEngine.Vector3 GetTranslationOffset(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -116,7 +117,7 @@ namespace General.Typescript
 			return default(UnityEngine.Vector3);
 		}
 
-		static private void RemoveSource(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private void RemoveSource(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -138,7 +139,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetRotationOffset(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private void SetRotationOffset(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector3>())
 			{
@@ -160,7 +161,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetSource(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private void SetSource(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Animations.ConstraintSource>())
 			{
@@ -182,7 +183,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void SetTranslationOffset(UnityEngine.Animations.ParentConstraint instance, Parameters parameters)
+		static private void SetTranslationOffset(UnityEngine.Animations.ParentConstraint instance, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32, UnityEngine.Vector3>())
 			{
@@ -204,97 +205,97 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Single get_weight(UnityEngine.Animations.ParentConstraint instance)
+		static private System.Single get_weight(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.weight;
 		}
 
-		static private void set_weight(UnityEngine.Animations.ParentConstraint instance, System.Single value)
+		static private void set_weight(UnityEngine.Animations.ParentConstraint instance, string name, System.Single value)
 		{
 			instance.weight = value;
 		}
 
-		static private System.Boolean get_constraintActive(UnityEngine.Animations.ParentConstraint instance)
+		static private System.Boolean get_constraintActive(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.constraintActive;
 		}
 
-		static private void set_constraintActive(UnityEngine.Animations.ParentConstraint instance, System.Boolean value)
+		static private void set_constraintActive(UnityEngine.Animations.ParentConstraint instance, string name, System.Boolean value)
 		{
 			instance.constraintActive = value;
 		}
 
-		static private System.Boolean get_locked(UnityEngine.Animations.ParentConstraint instance)
+		static private System.Boolean get_locked(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.locked;
 		}
 
-		static private void set_locked(UnityEngine.Animations.ParentConstraint instance, System.Boolean value)
+		static private void set_locked(UnityEngine.Animations.ParentConstraint instance, string name, System.Boolean value)
 		{
 			instance.locked = value;
 		}
 
-		static private System.Int32 get_sourceCount(UnityEngine.Animations.ParentConstraint instance)
+		static private System.Int32 get_sourceCount(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.sourceCount;
 		}
 
-		static private UnityEngine.Vector3 get_translationAtRest(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Vector3 get_translationAtRest(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.translationAtRest;
 		}
 
-		static private void set_translationAtRest(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Vector3 value)
+		static private void set_translationAtRest(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.translationAtRest = value;
 		}
 
-		static private UnityEngine.Vector3 get_rotationAtRest(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Vector3 get_rotationAtRest(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.rotationAtRest;
 		}
 
-		static private void set_rotationAtRest(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Vector3 value)
+		static private void set_rotationAtRest(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Vector3 value)
 		{
 			instance.rotationAtRest = value;
 		}
 
-		static private UnityEngine.Vector3[] get_translationOffsets(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Vector3[] get_translationOffsets(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.translationOffsets;
 		}
 
-		static private void set_translationOffsets(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Vector3[] value)
+		static private void set_translationOffsets(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Vector3[] value)
 		{
 			instance.translationOffsets = value;
 		}
 
-		static private UnityEngine.Vector3[] get_rotationOffsets(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Vector3[] get_rotationOffsets(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.rotationOffsets;
 		}
 
-		static private void set_rotationOffsets(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Vector3[] value)
+		static private void set_rotationOffsets(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Vector3[] value)
 		{
 			instance.rotationOffsets = value;
 		}
 
-		static private UnityEngine.Animations.Axis get_translationAxis(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Animations.Axis get_translationAxis(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.translationAxis;
 		}
 
-		static private void set_translationAxis(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Animations.Axis value)
+		static private void set_translationAxis(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Animations.Axis value)
 		{
 			instance.translationAxis = value;
 		}
 
-		static private UnityEngine.Animations.Axis get_rotationAxis(UnityEngine.Animations.ParentConstraint instance)
+		static private UnityEngine.Animations.Axis get_rotationAxis(UnityEngine.Animations.ParentConstraint instance, string name)
 		{
 			return instance.rotationAxis;
 		}
 
-		static private void set_rotationAxis(UnityEngine.Animations.ParentConstraint instance, UnityEngine.Animations.Axis value)
+		static private void set_rotationAxis(UnityEngine.Animations.ParentConstraint instance, string name, UnityEngine.Animations.Axis value)
 		{
 			instance.rotationAxis = value;
 		}

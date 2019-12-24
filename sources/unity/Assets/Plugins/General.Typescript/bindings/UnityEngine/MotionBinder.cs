@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -17,37 +18,37 @@ namespace General.Typescript
 			self.BindInstanceProperty("isHumanMotion", get_isHumanMotion, null);
 		}
 
-		static private System.Single get_averageDuration(UnityEngine.Motion instance)
+		static private System.Single get_averageDuration(UnityEngine.Motion instance, string name)
 		{
 			return instance.averageDuration;
 		}
 
-		static private System.Single get_averageAngularSpeed(UnityEngine.Motion instance)
+		static private System.Single get_averageAngularSpeed(UnityEngine.Motion instance, string name)
 		{
 			return instance.averageAngularSpeed;
 		}
 
-		static private UnityEngine.Vector3 get_averageSpeed(UnityEngine.Motion instance)
+		static private UnityEngine.Vector3 get_averageSpeed(UnityEngine.Motion instance, string name)
 		{
 			return instance.averageSpeed;
 		}
 
-		static private System.Single get_apparentSpeed(UnityEngine.Motion instance)
+		static private System.Single get_apparentSpeed(UnityEngine.Motion instance, string name)
 		{
 			return instance.apparentSpeed;
 		}
 
-		static private System.Boolean get_isLooping(UnityEngine.Motion instance)
+		static private System.Boolean get_isLooping(UnityEngine.Motion instance, string name)
 		{
 			return instance.isLooping;
 		}
 
-		static private System.Boolean get_legacy(UnityEngine.Motion instance)
+		static private System.Boolean get_legacy(UnityEngine.Motion instance, string name)
 		{
 			return instance.legacy;
 		}
 
-		static private System.Boolean get_isHumanMotion(UnityEngine.Motion instance)
+		static private System.Boolean get_isHumanMotion(UnityEngine.Motion instance, string name)
 		{
 			return instance.isHumanMotion;
 		}

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -37,97 +38,97 @@ namespace General.Typescript
 			return default(UnityEngine.AnimationEvent);
 		}
 
-		static private System.String get_stringParameter(UnityEngine.AnimationEvent instance)
+		static private System.String get_stringParameter(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.stringParameter;
 		}
 
-		static private void set_stringParameter(UnityEngine.AnimationEvent instance, System.String value)
+		static private void set_stringParameter(UnityEngine.AnimationEvent instance, string name, System.String value)
 		{
 			instance.stringParameter = value;
 		}
 
-		static private System.Single get_floatParameter(UnityEngine.AnimationEvent instance)
+		static private System.Single get_floatParameter(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.floatParameter;
 		}
 
-		static private void set_floatParameter(UnityEngine.AnimationEvent instance, System.Single value)
+		static private void set_floatParameter(UnityEngine.AnimationEvent instance, string name, System.Single value)
 		{
 			instance.floatParameter = value;
 		}
 
-		static private System.Int32 get_intParameter(UnityEngine.AnimationEvent instance)
+		static private System.Int32 get_intParameter(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.intParameter;
 		}
 
-		static private void set_intParameter(UnityEngine.AnimationEvent instance, System.Int32 value)
+		static private void set_intParameter(UnityEngine.AnimationEvent instance, string name, System.Int32 value)
 		{
 			instance.intParameter = value;
 		}
 
-		static private UnityEngine.Object get_objectReferenceParameter(UnityEngine.AnimationEvent instance)
+		static private UnityEngine.Object get_objectReferenceParameter(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.objectReferenceParameter;
 		}
 
-		static private void set_objectReferenceParameter(UnityEngine.AnimationEvent instance, UnityEngine.Object value)
+		static private void set_objectReferenceParameter(UnityEngine.AnimationEvent instance, string name, UnityEngine.Object value)
 		{
 			instance.objectReferenceParameter = value;
 		}
 
-		static private System.String get_functionName(UnityEngine.AnimationEvent instance)
+		static private System.String get_functionName(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.functionName;
 		}
 
-		static private void set_functionName(UnityEngine.AnimationEvent instance, System.String value)
+		static private void set_functionName(UnityEngine.AnimationEvent instance, string name, System.String value)
 		{
 			instance.functionName = value;
 		}
 
-		static private System.Single get_time(UnityEngine.AnimationEvent instance)
+		static private System.Single get_time(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.time;
 		}
 
-		static private void set_time(UnityEngine.AnimationEvent instance, System.Single value)
+		static private void set_time(UnityEngine.AnimationEvent instance, string name, System.Single value)
 		{
 			instance.time = value;
 		}
 
-		static private UnityEngine.SendMessageOptions get_messageOptions(UnityEngine.AnimationEvent instance)
+		static private UnityEngine.SendMessageOptions get_messageOptions(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.messageOptions;
 		}
 
-		static private void set_messageOptions(UnityEngine.AnimationEvent instance, UnityEngine.SendMessageOptions value)
+		static private void set_messageOptions(UnityEngine.AnimationEvent instance, string name, UnityEngine.SendMessageOptions value)
 		{
 			instance.messageOptions = value;
 		}
 
-		static private System.Boolean get_isFiredByLegacy(UnityEngine.AnimationEvent instance)
+		static private System.Boolean get_isFiredByLegacy(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.isFiredByLegacy;
 		}
 
-		static private System.Boolean get_isFiredByAnimator(UnityEngine.AnimationEvent instance)
+		static private System.Boolean get_isFiredByAnimator(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.isFiredByAnimator;
 		}
 
-		static private UnityEngine.AnimationState get_animationState(UnityEngine.AnimationEvent instance)
+		static private UnityEngine.AnimationState get_animationState(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.animationState;
 		}
 
-		static private UnityEngine.AnimatorStateInfo get_animatorStateInfo(UnityEngine.AnimationEvent instance)
+		static private UnityEngine.AnimatorStateInfo get_animatorStateInfo(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.animatorStateInfo;
 		}
 
-		static private UnityEngine.AnimatorClipInfo get_animatorClipInfo(UnityEngine.AnimationEvent instance)
+		static private UnityEngine.AnimatorClipInfo get_animatorClipInfo(UnityEngine.AnimationEvent instance, string name)
 		{
 			return instance.animatorClipInfo;
 		}

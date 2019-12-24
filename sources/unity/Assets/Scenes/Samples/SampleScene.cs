@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.IO;
-using System.Net;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -12,6 +10,17 @@ public class SampleScene : MonoBehaviour
 	private string mScriptName = string.Empty;
 	[SerializeField]
 	private Button mStartButton = null;
+
+	void Awake()
+	{
+		if (General.Typescript.Entry.Initialize())
+		{
+			General.Typescript.Entry.AppendCustomSuperClass(typeof(General.Behaviour));
+			General.Typescript.FileUtility.AddSearchPath(Path.Combine(Application.streamingAssetsPath, "Scripts"));
+			General.Typescript.FileUtility.AddSearchPath(Application.streamingAssetsPath);
+			General.Typescript.BinderUtility.BindFromJson("typescript/binding-config.json");
+		}
+	}
 
 	void Start()
 	{
@@ -25,12 +34,7 @@ public class SampleScene : MonoBehaviour
 
 	private void onStartClick()
 	{
-		if (General.Typescript.Entry.Initialize())
-		{
-            General.Typescript.Entry.AppendCustomSuperClass(typeof(General.Behaviour));
-			General.Typescript.Files.AddSearchPath(Path.Combine(Application.streamingAssetsPath, "Scripts"));
-			this.StartCoroutine(this.loadScript(mScriptName));
-		}
+		this.StartCoroutine(this.loadScript(mScriptName));
 	}
 
 	private IEnumerator test()
@@ -40,7 +44,7 @@ public class SampleScene : MonoBehaviour
 		{
 			if (General.Typescript.Entry.Initialize())
 			{
-				General.Typescript.Files.AddSearchPath(Path.Combine(Application.streamingAssetsPath, "Scripts"));
+				General.Typescript.FileUtility.AddSearchPath(Path.Combine(Application.streamingAssetsPath, "Scripts"));
 				this.StartCoroutine(this.loadScript("main"));
 			}
 			yield return new WaitForSeconds(3);

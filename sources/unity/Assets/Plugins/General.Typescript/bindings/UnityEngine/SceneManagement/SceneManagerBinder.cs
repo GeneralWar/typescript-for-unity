@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace General.Typescript
@@ -39,7 +40,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.SceneManager);
 		}
 
-		static private UnityEngine.SceneManagement.Scene CreateScene(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene CreateScene(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -65,7 +66,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private UnityEngine.SceneManagement.Scene GetActiveScene(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene GetActiveScene(Type type, string methodName, Parameters parameters)
 		{
 			if (0 == parameters.Count)
 			{
@@ -80,7 +81,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private UnityEngine.SceneManagement.Scene GetSceneAt(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene GetSceneAt(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -102,7 +103,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private UnityEngine.SceneManagement.Scene GetSceneByBuildIndex(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene GetSceneByBuildIndex(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -124,7 +125,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private UnityEngine.SceneManagement.Scene GetSceneByName(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene GetSceneByName(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -146,7 +147,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private UnityEngine.SceneManagement.Scene GetSceneByPath(Parameters parameters)
+		static private UnityEngine.SceneManagement.Scene GetSceneByPath(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -168,7 +169,7 @@ namespace General.Typescript
 			return default(UnityEngine.SceneManagement.Scene);
 		}
 
-		static private System.Object LoadScene(Parameters parameters)
+		static private System.Object LoadScene(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.String>())
 			{
@@ -214,7 +215,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private UnityEngine.AsyncOperation LoadSceneAsync(Parameters parameters)
+		static private UnityEngine.AsyncOperation LoadSceneAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -256,7 +257,7 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private void MergeScenes(Parameters parameters)
+		static private void MergeScenes(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.SceneManagement.Scene, UnityEngine.SceneManagement.Scene>())
 			{
@@ -278,7 +279,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private void MoveGameObjectToScene(Parameters parameters)
+		static private void MoveGameObjectToScene(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.GameObject, UnityEngine.SceneManagement.Scene>())
 			{
@@ -300,7 +301,7 @@ namespace General.Typescript
 			}
 		}
 
-		static private System.Boolean SetActiveScene(Parameters parameters)
+		static private System.Boolean SetActiveScene(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<UnityEngine.SceneManagement.Scene>())
 			{
@@ -322,7 +323,7 @@ namespace General.Typescript
 			return default(System.Boolean);
 		}
 
-		static private UnityEngine.AsyncOperation UnloadSceneAsync(Parameters parameters)
+		static private UnityEngine.AsyncOperation UnloadSceneAsync(Type type, string methodName, Parameters parameters)
 		{
 			if (parameters.CheckTypes<System.Int32>())
 			{
@@ -364,12 +365,12 @@ namespace General.Typescript
 			return null;
 		}
 
-		static private System.Int32 get_sceneCount()
+		static private System.Int32 get_sceneCount(Type type, string name)
 		{
 			return UnityEngine.SceneManagement.SceneManager.sceneCount;
 		}
 
-		static private System.Int32 get_sceneCountInBuildSettings()
+		static private System.Int32 get_sceneCountInBuildSettings(Type type, string name)
 		{
 			return UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
 		}
