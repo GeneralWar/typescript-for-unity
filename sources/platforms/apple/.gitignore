@@ -5,3 +5,7 @@
 /typescript-mac.xcodeproj/*
 !/typescript-mac.xcodeproj/project.pbxproj
 /typescript-mac.xcodeproj/project.xcworkspace
+
+/Build
+/DerivedData
+/Index
