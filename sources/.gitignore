@@ -1,1 +1,4 @@
 /Plugin
+
+!platforms/
+platforms/v8(bind with template)/
