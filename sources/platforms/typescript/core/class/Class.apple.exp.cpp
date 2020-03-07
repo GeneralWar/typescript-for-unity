@@ -9,7 +9,7 @@
 #include "defines.h"
 #include "core/class/Class.h"
 #include "extra/log/Log.h"
-#include "../../utils.apple.h"
+#include "Utils.apple.h"
 #include "core/object/Object.h"
 #include "core/function/Function.h"
 #include "core/property/Property.h"

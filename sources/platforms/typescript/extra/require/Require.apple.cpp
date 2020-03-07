@@ -5,8 +5,8 @@
 //  Created by 朱嘉灵 on 2018/12/20.
 //  Copyright © 2018 朱嘉灵. All rights reserved.
 //
-#include "extra/require/require.h"
-#include "../../utils.apple.h"
+#include "extra/require/Require.h"
+#include "Utils.apple.h"
 #include "extension/files/FileUtility.h"
 #include "extra/log/Log.h"
 #include "core/class/Class.h"

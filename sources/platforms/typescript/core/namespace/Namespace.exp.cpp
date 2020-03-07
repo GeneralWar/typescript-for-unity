@@ -1,5 +1,5 @@
 #include "Namespace.h"
-#include "../class/Class.h"
+#include "core/class/Class.h"
 #include "core/namespace/Namespace.exp.h"
 
 void* General_Typescript_Namespace_DeclareNamespace(void* handle, const char* name)

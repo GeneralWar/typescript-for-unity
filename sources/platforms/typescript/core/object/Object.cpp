@@ -1,6 +1,6 @@
 #include "Object.h"
-#include "../Base.h"
-#include "../../types/NumberData.h"
+#include "core/Base.h"
+#include "types/NumberData.h"
 
 /*static*/ JsObject* JsObject::Create(JS_CONTEXT_TYPE context, Base* target, const JS_OBJECT_TYPE object, const size_t& size)
 {

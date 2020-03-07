@@ -10,9 +10,9 @@
 #include "Environment.h"
 #include "object/Object.h"
 #include "class/Class.h"
-#include "../utils.h"
-#include "extra/require/require.h"
-#include "extra/console/console.h"
+#include "Utils.h"
+#include "extra/require/Require.h"
+#include "extra/console/Console.h"
 
 void* General_Typescript_Initialize()
 {

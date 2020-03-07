@@ -1,9 +1,9 @@
 #include "Object.exp.h"
 #include "Object.h"
-#include "../../utils.h"
-#include "../Environment.h"
-#include "../JSTypes.h"
-#include "../class/Class.h"
+#include "Utils.h"
+#include "core/Environment.h"
+#include "core/JSTypes.h"
+#include "core/class/Class.h"
 
 #undef GetObject
 

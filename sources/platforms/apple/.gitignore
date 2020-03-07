@@ -5,3 +5,6 @@
 /typescript-mac.xcodeproj/*
 /typescript-mac.xcodeproj/project.xcworkspace
 !/typescript-mac.xcodeproj/project.pbxproj
+
+/Build/
+/Index/

@@ -2,7 +2,7 @@
 #include "core/class/Class.h"
 #include "core/function/Function.h"
 #include "core/namespace/Namespace.h"
-#include "../utils.h"
+#include "Utils.h"
 #include "core/object/Object.h"
 
 Environment* Environment::sInstance = nullptr;

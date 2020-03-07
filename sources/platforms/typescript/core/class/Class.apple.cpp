@@ -8,8 +8,8 @@
 
 #include "core/class/Class.h"
 #include "core/object/Object.h"
-#include "utils.h"
-#include "../../utils.apple.h"
+#include "Utils.h"
+#include "Utils.apple.h"
 #include "core/function/Function.h"
 #include "core/property/Property.h"
 #include "core/Environment.h"

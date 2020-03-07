@@ -1,6 +1,6 @@
 #include "Base.h"
-#include "../defines.h"
-#include "../utils.h"
+#include "defines.h"
+#include "Utils.h"
 #include "Environment.h"
 #include "object/Object.h"
 #include "class/Class.h"

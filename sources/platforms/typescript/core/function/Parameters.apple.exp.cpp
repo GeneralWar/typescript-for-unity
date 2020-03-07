@@ -12,7 +12,7 @@
 #include "core/function/Parameters.h"
 #include "core/function/Parameters.exp.h"
 #include "core/Environment.h"
-#include "../../utils.apple.h"
+#include "Utils.apple.h"
 #include "core/object/Object.h"
 #include "utils.h"
 

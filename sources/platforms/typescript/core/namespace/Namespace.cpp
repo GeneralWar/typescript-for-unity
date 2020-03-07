@@ -1,7 +1,7 @@
 #include "Namespace.h"
-#include "../../extra/log/Log.h"
-#include "../class/Class.h"
-#include "../enum/Enum.h"
+#include "extra/log/Log.h"
+#include "core/class/Class.h"
+#include "core/enum/Enum.h"
 
 ASSIGN_BASE_CHILD_TYPE(TypescriptNamespace, BaseChildTypes::BaseChildType_Namespace);
 

@@ -1,5 +1,5 @@
 #include <memory>
-#include "console.h"
+#include "Console.h"
 #include "core/class/Class.h"
 #include "core/Environment.h"
 

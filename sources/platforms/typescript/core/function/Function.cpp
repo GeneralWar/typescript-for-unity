@@ -1,8 +1,8 @@
 #include "Function.h"
 #include "delegates.h"
 #include "core/function/Parameters.h"
-#include "../object/Object.h"
-#include "../class/Class.h"
+#include "core/object/Object.h"
+#include "core/class/Class.h"
 
 #ifdef __APPLE__
 extern JSValueRef onStaticFunctionCall (JSContextRef context, JSObjectRef function, JSObjectRef thisObject, size_t argumentCount, const JSValueRef arguments[], JSValueRef* exception);

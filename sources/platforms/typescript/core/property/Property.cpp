@@ -1,6 +1,6 @@
 #include "Property.h"
-#include "../../defines.h"
-#include "../object/Object.h"
+#include "defines.h"
+#include "core/object/Object.h"
 
 ASSIGN_BASE_CHILD_TYPE(TypescriptProperty, BaseChildTypes::BaseChildType_Property);
 ASSIGN_BASE_CHILD_TYPE(TypescriptStaticProperty, BaseChildTypes::BaseChildType_StaticProperty);
