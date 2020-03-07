@@ -18,10 +18,10 @@ namespace General.Typescript
             byte[] snapshotData = File.ReadAllBytes(Path.Combine(directory, "snapshot_blob.bin"));
             //General_Typescript_SetNativeDataBlob(GCHandle.Alloc(nativeData, GCHandleType.Pinned).AddrOfPinnedObject(), nativeData.Length);
             //General_Typescript_SetSnapshotDataBlob(GCHandle.Alloc(snapshotData, GCHandleType.Pinned).AddrOfPinnedObject(), snapshotData.Length);
-            mContext = General_Typescript_Initialize();
+            mContext = Entry.InitializeContext();
             if (IntPtr.Zero == mContext)
             {
-                Debug.LogError("Initialize typescript failed!");
+                Entry.LogError("Initialize typescript failed!");
                 return false;
             }
             return true;

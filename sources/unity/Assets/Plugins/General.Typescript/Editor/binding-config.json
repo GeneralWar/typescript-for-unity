@@ -1,6 +1,12 @@
 {
     "assemblies": [
         {
+            "name": "Assembly-CSharp",
+            "types": [
+                "General.Behaviour"
+            ]
+        },
+        {
             "name": "mscorlib",
             "types": [
                 "System.Guid",
@@ -320,6 +326,8 @@
                 "UnityEngine.Events.PersistentCall",
                 "UnityEngine.Events.PersistentCallGroup",
                 "UnityEngine.Events.PersistentListenerMode",
+                "UnityEngine.Events.UnityAction",
+                "UnityEngine.Events.UnityEvent",
                 "UnityEngine.Events.UnityEventBase",
                 "UnityEngine.Events.UnityEventCallState",
                 "UnityEngine.ExcludeFromObjectFactoryAttribute",
@@ -788,7 +796,6 @@
                 "UnityEngine.UI.BaseMeshEffect",
                 "UnityEngine.UI.BaseVertexEffect",
                 "UnityEngine.UI.Button",
-                "UnityEngine.UI.Button+<OnFinishSubmit>c__Iterator0",
                 "UnityEngine.UI.Button+ButtonClickedEvent",
                 "UnityEngine.UI.CanvasScaler",
                 "UnityEngine.UI.CanvasScaler+ScaleMode",

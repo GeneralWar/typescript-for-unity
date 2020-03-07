@@ -6,7 +6,7 @@ using UnityEngine;
 namespace General.Typescript
 {
 #if UNITY_STANDALONE_WIN || UNITY_ANDROID
-    public class WindowsEntry : Entry
+    public class V8Entry : Entry
 	{
         override public bool initialize()
         {
@@ -14,17 +14,15 @@ namespace General.Typescript
 #if !UNITY_ANDROID || UNITY_EDITOR
             byte[] nativeData = File.ReadAllBytes(Path.Combine(directory, "natives_blob.bin"));
 			byte[] snapshotData = File.ReadAllBytes(Path.Combine(directory, "snapshot_blob.bin"));
-			General_Typescript_SetNativeDataBlob(GCHandle.Alloc(nativeData, GCHandleType.Pinned).AddrOfPinnedObject(), nativeData.Length);
-			General_Typescript_SetSnapshotDataBlob(GCHandle.Alloc(snapshotData, GCHandleType.Pinned).AddrOfPinnedObject(), snapshotData.Length);
+			Entry.SetNativeDataBlob(nativeData);
+			Entry.SetSnapshotDataBlob(snapshotData);
 #endif
-            mContext = General_Typescript_Initialize();
+            mContext = Entry.InitializeContext();
 			if (IntPtr.Zero == mContext)
 			{
-				Debug.LogError("Initialize typescript failed!");
+				Entry.LogError("Initialize typescript failed!");
 				return false;
 			}
-
-			Entry.Bind();
 			return true;
 		}
 

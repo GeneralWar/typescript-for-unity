@@ -21,31 +21,31 @@ namespace General.Typescript
 			}
 		}
 
-		static private Dictionary<MethodInfo, string> sReplacedMethods = new Dictionary<MethodInfo, string>();
+		//static private Dictionary<MethodInfo, string> sReplacedMethods = new Dictionary<MethodInfo, string>();
 		static private List<MethodInfo> sIgnoredMethods = new List<MethodInfo>();
 
 		static private List<IgnoredProperty> sIgnoredProperties = new List<IgnoredProperty>();
 
 		static TypeClassBinder()
 		{
-			Type type = typeof(UnityEngine.GameObject);
-			MethodInfo origin = type.GetMethod("AddComponent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "AddCustomComponent");
-			origin = type.GetMethod("GetComponent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponent");
-			origin = type.GetMethod("GetComponentInChildren", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponentInChildren");
-			origin = type.GetMethod("GetComponentInParent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponentInParent");
-			origin = type.GetMethod("GetComponents", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponents");
-			origin = type.GetMethod("GetComponentsInChildren", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponentsInChildren");
-			origin = type.GetMethod("GetComponentsInParent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
-			sReplacedMethods.Add(origin, "GetCustomComponentsInParent");
+			//Type type = typeof(UnityEngine.GameObject);
+			//MethodInfo origin = type.GetMethod("AddComponent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "AddCustomComponent");
+			//origin = type.GetMethod("GetComponent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponent");
+			//origin = type.GetMethod("GetComponentInChildren", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponentInChildren");
+			//origin = type.GetMethod("GetComponentInParent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponentInParent");
+			//origin = type.GetMethod("GetComponents", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponents");
+			//origin = type.GetMethod("GetComponentsInChildren", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponentsInChildren");
+			//origin = type.GetMethod("GetComponentsInParent", BindingFlags.Instance | BindingFlags.Public, null, new Type[] { typeof(Type) }, null);
+			//sReplacedMethods.Add(origin, "GetCustomComponentsInParent");
 
-			type = typeof(UnityEngine.Light);
-			origin = type.GetMethod("SetLightDirty", BindingFlags.Instance | BindingFlags.Public);
+			Type type = typeof(UnityEngine.Light);
+			MethodInfo origin = type.GetMethod("SetLightDirty", BindingFlags.Instance | BindingFlags.Public);
 			sIgnoredMethods.Add(origin);
 			type = typeof(UnityEngine.UI.Text);
 			origin = type.GetMethod("OnRebuildRequested", BindingFlags.Instance | BindingFlags.Public);
@@ -73,6 +73,20 @@ namespace General.Typescript
 			}
 			int index = sIgnoredProperties.FindIndex(i => i.info == info);
 			return -1 == index ? false : sIgnoredProperties[index].setter;
+		}
+
+		static private bool IsSetterIgnored(MemberInfo info)
+		{
+			if (info is PropertyInfo)
+			{
+				return IsSetterIgnored(info as PropertyInfo);
+			}
+			if (info is FieldInfo)
+			{
+				FieldInfo field = info as FieldInfo;
+				return FieldAttributes.InitOnly == (field.Attributes & FieldAttributes.InitOnly);
+			}
+			return true;
 		}
 
 		static private Type checkReturnType(List<MethodInfo> methods)

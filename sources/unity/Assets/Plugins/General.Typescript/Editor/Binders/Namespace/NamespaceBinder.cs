@@ -57,7 +57,7 @@ namespace General.Typescript
 			}
 		}
 
-		protected override byte[] generateBinder()
+		protected override byte[] generateBinder(List<Type> delegates)
         {
 			if (0 == mChildren.Count)
 			{
@@ -70,7 +70,7 @@ namespace General.Typescript
 
 			foreach (NamespaceBinder binder in mSpaces.Values)
 			{
-				if (binder.GenerateBinder())
+				if (binder.GenerateBinder(delegates, true))
 				{
 					normalBinders.Add(binder.BinderName);
 				}
@@ -78,7 +78,7 @@ namespace General.Typescript
 
             foreach (ClassBinder binder in mClasses.Values)
             {
-				if (binder.GenerateBinder())
+				if (binder.GenerateBinder(delegates, true))
 				{
 					List<string> list = null;
 					if (!binders.TryGetValue(binder.Condition, out list))
@@ -110,14 +110,14 @@ namespace General.Typescript
         {
             foreach (NamespaceBinder binder in mSpaces.Values)
             {
-                if (binder.GenerateSnippets())
+                if (binder.GenerateSnippets(true))
                 {
 
                 }
             }
             foreach (ClassBinder binder in mClasses.Values)
             {
-                if (binder.GenerateSnippets())
+                if (binder.GenerateSnippets(true))
                 {
 
                 }

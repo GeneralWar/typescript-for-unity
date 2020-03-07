@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2f5b88a97234c5e93db4d973a3fe31, type: 3}
   m_Name: configs
   m_EditorClassIdentifier: 
+  bindersOutputPath: ./Assets/Scripts/General.Typescript/bindings/
+  snippetsOutputPath: ../../project/library/
   sourcePath: ../../project/
   compiledPath: ../../project/build
   extraBindingConfigs:

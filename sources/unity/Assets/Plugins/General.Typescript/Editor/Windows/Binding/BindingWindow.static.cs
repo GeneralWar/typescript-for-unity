@@ -10,15 +10,13 @@ namespace General.Typescript
 		[MenuItem("General/Typescript/Binding Window")]
 		static private void OpenWindow()
 		{
-			if (null == sInstance)
+			if (null != sInstance)
 			{
-				sInstance = EditorWindow.GetWindow<BindingWindow>("绑定窗口 Binding Window", typeof(EditorWindow).Assembly.GetType("UnityEditor.InspectorWindow"));
+				EditorWindow.DestroyImmediate(sInstance);
+				//sInstance.Close();
+				sInstance = null;
 			}
-			else
-			{
-				sInstance.initialize();
-				sInstance.Repaint();
-			}
+			sInstance = EditorWindow.GetWindow<BindingWindow>("绑定窗口 Binding Window", typeof(EditorWindow).Assembly.GetType("UnityEditor.InspectorWindow"));
 		}
 
 		private const string CONFIG_PATH = "./Assets/Plugins/General.Typescript/Editor/binding-config.json";

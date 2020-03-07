@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace General.Typescript
 {
@@ -15,7 +16,7 @@ namespace General.Typescript
 		internal ClassBinder(Type type, BinderBase parent) : base(type.Name, parent, type.Name + "Binder", type.FullName.Replace(".", "").Replace("+", ""))
 		{
 			mType = type;
-			if (mType.IsSubType())
+			if (mType.IsNested)
 			{
 				mFullname = mType.FullName.Replace('+', '.');
 			}
@@ -76,16 +77,11 @@ namespace General.Typescript
 
 		static internal ClassBinder Create(Type type, BinderBase parent)
 		{
-			if (IsSupportedType(type))
+			if (Utils.IsSupported(type))
 			{
 				return type.IsEnum ? EnumClassBinder.Create(type, parent) as ClassBinder : TypeClassBinder.Create(type, parent) as ClassBinder;
 			}
 			return null;
-		}
-
-		static internal bool IsSupportedType(Type type)
-		{
-			return (type.IsPublic || (type.IsNestedPublic && type.ReflectedType.IsPublic)) && type.IsStillInUse() && !type.IsGenericType && !type.IsObsolete() && (!type.IsNested || !type.ReflectedType.IsObsolete()) && !type.Name.Contains("PlayerConnection");
 		}
 	}
 }

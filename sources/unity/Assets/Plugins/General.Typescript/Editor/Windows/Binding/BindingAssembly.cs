@@ -56,7 +56,7 @@ namespace General.Typescript
 			}
 			foreach (Type type in mAssembly.GetTypes())
 			{
-				if (type.IsPublic && ClassBinder.IsSupportedType(type))
+				if (type.IsPublic && Utils.IsSupported(type))
 				{
 					this.addType(type);
 				}
