@@ -22,7 +22,7 @@
     <ProjectGuid>{E1F7CBDC-2EEF-44DA-BE44-6FE53637148A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>typescript</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -76,7 +76,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../include/v8;../common;$(IncludePath)</IncludePath>
+    <IncludePath>../include/v8;../typescript;$(IncludePath)</IncludePath>
     <LibraryPath>./libs/x64.debug;$(LibraryPath)</LibraryPath>
     <OutDir>$(ProjectDir)\Output\$(Platform)\Debug\</OutDir>
     <IntDir>$(ProjectDir)\temp\$(Platform)\$(Configuration)\</IntDir>
@@ -119,6 +119,7 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;TYPESCRIPT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <UndefinePreprocessorDefinitions>GetObject</UndefinePreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -174,83 +175,70 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\common\core\Base.cpp" />
-    <ClCompile Include="..\common\core\class\Class.cpp" />
-    <ClCompile Include="..\common\core\class\Class.exp.cpp" />
-    <ClCompile Include="..\common\core\Convertion.exp.h" />
-    <ClCompile Include="..\common\core\enum\Enum.cpp" />
-    <ClCompile Include="..\common\core\enum\Enum.exp.cpp" />
-    <ClCompile Include="..\common\core\Environment.cpp" />
-    <ClCompile Include="..\common\core\function\Function.cpp" />
-    <ClCompile Include="..\common\core\namespace\Namespace.cpp" />
-    <ClCompile Include="..\common\core\namespace\Namespace.exp.cpp" />
-    <ClCompile Include="..\common\core\Object.exp.cpp" />
-    <ClCompile Include="..\common\core\property\Property.cpp" />
-    <ClCompile Include="..\common\core\Reference.cpp" />
-    <ClCompile Include="..\common\core\Typescript.exp.cpp" />
-    <ClCompile Include="..\common\Export.cpp" />
-    <ClCompile Include="..\common\extension\files\FileUtility.cpp" />
-    <ClCompile Include="..\common\extension\files\FileUtility.exp.cpp" />
-    <ClCompile Include="..\common\extra\console\Console.cpp" />
-    <ClCompile Include="..\common\extra\log\Log.cpp" />
-    <ClCompile Include="..\common\extra\require\Require.cpp" />
-    <ClCompile Include="..\v8\core\Base.v8.cpp" />
-    <ClCompile Include="..\v8\core\class\Class.v8.cpp" />
-    <ClCompile Include="..\v8\core\class\Class.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\enum\Enum.v8.cpp" />
-    <ClCompile Include="..\v8\core\Environment.v8.cpp" />
-    <ClCompile Include="..\v8\core\function\Argument.v8.cpp" />
-    <ClCompile Include="..\v8\core\function\Caller.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\function\Constructor.v8.cpp" />
-    <ClCompile Include="..\v8\core\function\Function.v8.cpp" />
-    <ClCompile Include="..\v8\core\function\Parameters.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\function\Parameters.v8.cpp" />
-    <ClCompile Include="..\v8\core\function\Result.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\function\Return.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\Object.v8.cpp" />
-    <ClCompile Include="..\v8\core\Object.v8.exp.cpp" />
-    <ClCompile Include="..\v8\core\property\Property.v8.cpp" />
-    <ClCompile Include="..\v8\core\Reference.v8.cpp" />
-    <ClCompile Include="..\v8\extra\console\Console.v8.cpp" />
-    <ClCompile Include="..\v8\extra\require\Require.v8.cpp" />
-    <ClCompile Include="..\v8\main.cpp" />
-    <ClCompile Include="..\v8\utils.cpp" />
+    <ClCompile Include="..\typescript\core\Base.cpp" />
+    <ClCompile Include="..\typescript\core\class\Class.cpp" />
+    <ClCompile Include="..\typescript\core\class\Class.exp.cpp" />
+    <ClCompile Include="..\typescript\core\Convertion.exp.h" />
+    <ClCompile Include="..\typescript\core\enum\Enum.cpp" />
+    <ClCompile Include="..\typescript\core\enum\Enum.exp.cpp" />
+    <ClCompile Include="..\typescript\core\Environment.cpp" />
+    <ClCompile Include="..\typescript\core\function\Function.cpp" />
+    <ClCompile Include="..\typescript\core\namespace\Namespace.cpp" />
+    <ClCompile Include="..\typescript\core\namespace\Namespace.exp.cpp" />
+    <ClCompile Include="..\typescript\core\object\Object.cpp" />
+    <ClCompile Include="..\typescript\core\object\Object.exp.cpp" />
+    <ClCompile Include="..\typescript\core\property\Property.cpp" />
+    <ClCompile Include="..\typescript\core\Typescript.exp.cpp" />
+    <ClCompile Include="..\typescript\Exports.cpp" />
+    <ClCompile Include="..\typescript\extension\files\FileUtility.cpp" />
+    <ClCompile Include="..\typescript\extension\files\FileUtility.exp.cpp" />
+    <ClCompile Include="..\typescript\extra\console\Console.cpp" />
+    <ClCompile Include="..\typescript\extra\log\Log.cpp" />
+    <ClCompile Include="..\typescript\extra\require\Require.cpp" />
+    <ClCompile Include="..\typescript\Utils.cpp" />
+    <ClCompile Include="..\typescript\core\class\Class.v8.cpp" />
+    <ClCompile Include="..\typescript\core\class\Class.v8.exp.cpp" />
+    <ClCompile Include="..\typescript\core\Environment.v8.cpp" />
+    <ClCompile Include="..\typescript\core\function\Argument.v8.cpp" />
+    <ClCompile Include="..\typescript\core\function\Parameters.v8.exp.cpp" />
+    <ClCompile Include="..\typescript\core\function\Parameters.v8.cpp" />
+    <ClCompile Include="..\typescript\core\object\Object.v8.cpp" />
+    <ClCompile Include="..\typescript\extra\console\Console.v8.cpp" />
+    <ClCompile Include="..\typescript\extra\require\Require.v8.cpp" />
+    <ClCompile Include="..\typescript\core\Typescript.v8.exp.cpp" />
+    <ClCompile Include="..\typescript\Utils.v8.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\common\core\Base.h" />
-    <ClInclude Include="..\common\core\class\Class.exp.h" />
-    <ClInclude Include="..\common\core\class\Class.h" />
-    <ClInclude Include="..\common\core\enum\Enum.exp.h" />
-    <ClInclude Include="..\common\core\enum\Enum.h" />
-    <ClInclude Include="..\common\core\Environment.h" />
-    <ClInclude Include="..\common\core\function\Argument.h" />
-    <ClInclude Include="..\common\core\function\Caller.exp.h" />
-    <ClInclude Include="..\common\core\function\Constructor.h" />
-    <ClInclude Include="..\common\core\function\Function.h" />
-    <ClInclude Include="..\common\core\function\Parameters.exp.h" />
-    <ClInclude Include="..\common\core\function\Parameters.h" />
-    <ClInclude Include="..\common\core\function\Result.exp.h" />
-    <ClInclude Include="..\common\core\function\Return.exp.h" />
-    <ClInclude Include="..\common\core\JSTypes.h" />
-    <ClInclude Include="..\common\core\namespace\Namespace.exp.h" />
-    <ClInclude Include="..\common\core\namespace\Namespace.h" />
-    <ClInclude Include="..\common\core\Object.exp.h" />
-    <ClInclude Include="..\common\core\property\Property.h" />
-    <ClInclude Include="..\common\core\Reference.h" />
-    <ClInclude Include="..\common\core\Typescript.exp.h" />
-    <ClInclude Include="..\common\defines.h" />
-    <ClInclude Include="..\common\delegates.h" />
-    <ClInclude Include="..\common\extension\files\FileUtility.exp.h" />
-    <ClInclude Include="..\common\extension\files\FileUtility.h" />
-    <ClInclude Include="..\common\extra\console\Console.h" />
-    <ClInclude Include="..\common\extra\log\Log.exp.h" />
-    <ClInclude Include="..\common\extra\log\Log.h" />
-    <ClInclude Include="..\common\extra\require\Require.h" />
-    <ClInclude Include="..\v8\core\Environment.v8.h" />
-    <ClInclude Include="..\v8\core\Object.v8.h" />
-    <ClInclude Include="..\v8\core\Reference.v8.h" />
-    <ClInclude Include="..\v8\header.h" />
-    <ClInclude Include="..\v8\utils.h" />
+    <ClInclude Include="..\typescript\core\Base.h" />
+    <ClInclude Include="..\typescript\core\class\Class.exp.h" />
+    <ClInclude Include="..\typescript\core\class\Class.h" />
+    <ClInclude Include="..\typescript\core\enum\Enum.exp.h" />
+    <ClInclude Include="..\typescript\core\enum\Enum.h" />
+    <ClInclude Include="..\typescript\core\Environment.h" />
+    <ClInclude Include="..\typescript\core\function\Argument.h" />
+    <ClInclude Include="..\typescript\core\function\Function.h" />
+    <ClInclude Include="..\typescript\core\function\Parameters.exp.h" />
+    <ClInclude Include="..\typescript\core\function\Parameters.h" />
+    <ClInclude Include="..\typescript\core\JSTypes.h" />
+    <ClInclude Include="..\typescript\core\namespace\Namespace.exp.h" />
+    <ClInclude Include="..\typescript\core\namespace\Namespace.h" />
+    <ClInclude Include="..\typescript\core\object\Object.exp.h" />
+    <ClInclude Include="..\typescript\core\object\Object.h" />
+    <ClInclude Include="..\typescript\core\property\Property.h" />
+    <ClInclude Include="..\typescript\core\Typescript.exp.h" />
+    <ClInclude Include="..\typescript\defines.h" />
+    <ClInclude Include="..\typescript\delegates.h" />
+    <ClInclude Include="..\typescript\extension\files\FileUtility.exp.h" />
+    <ClInclude Include="..\typescript\extension\files\FileUtility.h" />
+    <ClInclude Include="..\typescript\extra\console\Console.h" />
+    <ClInclude Include="..\typescript\extra\log\Log.exp.h" />
+    <ClInclude Include="..\typescript\extra\log\Log.h" />
+    <ClInclude Include="..\typescript\extra\require\Require.h" />
+    <ClInclude Include="..\typescript\types\Exception.h" />
+    <ClInclude Include="..\typescript\types\NumberData.h" />
+    <ClInclude Include="..\typescript\types\StructureData.h" />
+    <ClInclude Include="..\typescript\Utils.h" />
+    <ClInclude Include="..\typescript\header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

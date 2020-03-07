@@ -19,7 +19,7 @@ allprojects {
             dirs 'libs'
         }
     }
-    buildDir = "F:/temp/typescript-for-unity/"
+//    buildDir = "F:/temp/typescript-for-unity/"
 }
 
 apply plugin: 'com.android.application'

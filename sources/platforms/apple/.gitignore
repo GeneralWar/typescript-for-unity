@@ -1,11 +1,7 @@
 /typescript-ios.xcodeproj/*
+/typescript-ios.xcodeproj/project.xcworkspace
 !/typescript-ios.xcodeproj/project.pbxproj
-/typescript-ios.xcodeproj/project.xcworkspace/*
 
 /typescript-mac.xcodeproj/*
-!/typescript-mac.xcodeproj/project.pbxproj
 /typescript-mac.xcodeproj/project.xcworkspace
-
-/Build
-/DerivedData
-/Index
+!/typescript-mac.xcodeproj/project.pbxproj
