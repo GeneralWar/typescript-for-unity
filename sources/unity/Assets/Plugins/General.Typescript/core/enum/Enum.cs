@@ -1,17 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace General.Typescript
 {
-    public class Enum<T> : Base
+    public class Enum<T> : TypeInstance
     {
-        internal Enum(IntPtr context, IntPtr handle, string name, Base parent) : base(context, handle, name, parent)
-        {
+        private Dictionary<string, long> mValues = new Dictionary<string, long>();
 
-        }
+        internal Enum(IntPtr context, IntPtr handle, Base parent) : base(context, handle, typeof(T), parent) { }
 
         public void SetValue(string name, long value)
         {
-            Entry.General_Typescript_Enum_SetValue(mHandle, name, value);
+            Entry.Enum.SetValue(mHandle, name, value);
+        }
+
+        protected override void bind(string parentType)
+        {
+            Entry.Enum.Register(this);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -13,7 +14,7 @@ namespace General.Typescript
 
 		}
 
-		protected override byte[] generateBinder()
+		protected override byte[] generateBinder(List<Type> delegates)
 		{
 			using (MemoryStream stream = new MemoryStream())
 			{
@@ -58,8 +59,7 @@ namespace General.Typescript
 		{
 			return mType.IsEnum ? Array.FindAll(mType.GetEnumNames(), name =>
 			{
-				FieldInfo info = mType.GetField(name);
-				return !info.IsObsolete() && !info.Name.Contains("Crunched");
+				return Utils.IsSupported(mType.GetField(name));
 			}) : new string[0];
 		}
 

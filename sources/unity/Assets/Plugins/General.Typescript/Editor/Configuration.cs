@@ -5,6 +5,12 @@ namespace General.Typescript
 {
     public class Configuration : ScriptableObject
 	{
+		[Tooltip("Where the binder files store.")]
+		public string bindersOutputPath = "./Assets/Scripts/General.Typescript/bindings/";
+
+		[Tooltip("Where the snippet files store.")]
+		public string snippetsOutputPath = "../project/library/";
+
 		[Tooltip("Where the source project store.")]
 		public string sourcePath = "../project/";
 

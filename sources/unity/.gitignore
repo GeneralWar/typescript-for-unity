@@ -24,3 +24,7 @@ unity.Plugins.csproj
 unity.sln
 Unity.TextMeshPro.csproj
 Unity.TextMeshPro.Editor.csproj
+
+!Assets/
+Assets/Scripts/General.Typescript/
+Assets/Scripts/General.Typescript.meta

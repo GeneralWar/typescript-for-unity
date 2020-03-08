@@ -1,0 +1,825 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E26A873721F1B99E00523CCE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26A873521F1B96600523CCE /* JavaScriptCore.framework */; };
+		E2E3CBCB2413A43400A21BCE /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB6F2413A43300A21BCE /* Utils.cpp */; };
+		E2E3CBCD2413A43400A21BCE /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB762413A43300A21BCE /* Environment.cpp */; };
+		E2E3CBCE2413A43400A21BCE /* Typescript.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB772413A43300A21BCE /* Typescript.exp.cpp */; };
+		E2E3CBCF2413A43400A21BCE /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB7B2413A43300A21BCE /* Property.cpp */; };
+		E2E3CBD12413A43400A21BCE /* Enum.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB802413A43300A21BCE /* Enum.exp.cpp */; };
+		E2E3CBD22413A43400A21BCE /* Enum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB822413A43300A21BCE /* Enum.cpp */; };
+		E2E3CBD32413A43400A21BCE /* Environment.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB832413A43300A21BCE /* Environment.apple.cpp */; };
+		E2E3CBD42413A43400A21BCE /* Namespace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB862413A43300A21BCE /* Namespace.cpp */; };
+		E2E3CBD52413A43400A21BCE /* Namespace.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB872413A43300A21BCE /* Namespace.exp.cpp */; };
+		E2E3CBD62413A43400A21BCE /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB892413A43300A21BCE /* Base.cpp */; };
+		E2E3CBD82413A43400A21BCE /* Parameters.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB8E2413A43300A21BCE /* Parameters.apple.exp.cpp */; };
+		E2E3CBD92413A43400A21BCE /* Parameters.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB8F2413A43300A21BCE /* Parameters.apple.cpp */; };
+		E2E3CBDA2413A43400A21BCE /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB902413A43300A21BCE /* Function.cpp */; };
+		E2E3CBDC2413A43400A21BCE /* Argument.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB932413A43300A21BCE /* Argument.apple.cpp */; };
+		E2E3CBDE2413A43400A21BCE /* Object.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB982413A43300A21BCE /* Object.exp.cpp */; };
+		E2E3CBDF2413A43400A21BCE /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB992413A43300A21BCE /* Object.cpp */; };
+		E2E3CBE22413A43400A21BCE /* Object.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB9D2413A43300A21BCE /* Object.apple.cpp */; };
+		E2E3CBE42413A43400A21BCE /* Class.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA22413A43300A21BCE /* Class.apple.cpp */; };
+		E2E3CBE62413A43400A21BCE /* Class.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA42413A43300A21BCE /* Class.apple.exp.cpp */; };
+		E2E3CBE82413A43400A21BCE /* Class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA72413A43300A21BCE /* Class.cpp */; };
+		E2E3CBE92413A43400A21BCE /* Class.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA92413A43300A21BCE /* Class.exp.cpp */; };
+		E2E3CBEA2413A43400A21BCE /* Typescript.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBAC2413A43300A21BCE /* Typescript.apple.exp.cpp */; };
+		E2E3CBEC2413A43400A21BCE /* FileUtility.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB12413A43300A21BCE /* FileUtility.exp.cpp */; };
+		E2E3CBED2413A43400A21BCE /* FileUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB42413A43300A21BCE /* FileUtility.cpp */; };
+		E2E3CBEE2413A43400A21BCE /* Utils.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB62413A43400A21BCE /* Utils.apple.cpp */; };
+		E2E3CBF12413A43400A21BCE /* Require.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBBF2413A43400A21BCE /* Require.apple.cpp */; };
+		E2E3CBF22413A43400A21BCE /* Require.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC02413A43400A21BCE /* Require.cpp */; };
+		E2E3CBF32413A43400A21BCE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC22413A43400A21BCE /* Log.cpp */; };
+		E2E3CBF52413A43400A21BCE /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC82413A43400A21BCE /* Console.cpp */; };
+		E2E3CBF62413A43400A21BCE /* Console.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC92413A43400A21BCE /* Console.apple.cpp */; };
+		E2E3CBF72413A43400A21BCE /* Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBCA2413A43400A21BCE /* Exports.cpp */; };
+		E2E3CC112413D33500A21BCE /* Object.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB9D2413A43300A21BCE /* Object.apple.cpp */; };
+		E2E3CC122413D33500A21BCE /* Class.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA92413A43300A21BCE /* Class.exp.cpp */; };
+		E2E3CC132413D33500A21BCE /* FileUtility.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB12413A43300A21BCE /* FileUtility.exp.cpp */; };
+		E2E3CC142413D33500A21BCE /* Base.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB892413A43300A21BCE /* Base.cpp */; };
+		E2E3CC152413D33500A21BCE /* Property.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB7B2413A43300A21BCE /* Property.cpp */; };
+		E2E3CC162413D33500A21BCE /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC82413A43400A21BCE /* Console.cpp */; };
+		E2E3CC172413D33500A21BCE /* Argument.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB932413A43300A21BCE /* Argument.apple.cpp */; };
+		E2E3CC182413D33500A21BCE /* Namespace.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB872413A43300A21BCE /* Namespace.exp.cpp */; };
+		E2E3CC192413D33500A21BCE /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB902413A43300A21BCE /* Function.cpp */; };
+		E2E3CC1A2413D33500A21BCE /* Environment.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB832413A43300A21BCE /* Environment.apple.cpp */; };
+		E2E3CC1B2413D33500A21BCE /* Console.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC92413A43400A21BCE /* Console.apple.cpp */; };
+		E2E3CC1C2413D33500A21BCE /* Log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC22413A43400A21BCE /* Log.cpp */; };
+		E2E3CC1D2413D33500A21BCE /* Class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA72413A43300A21BCE /* Class.cpp */; };
+		E2E3CC1E2413D33500A21BCE /* Require.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBC02413A43400A21BCE /* Require.cpp */; };
+		E2E3CC1F2413D33500A21BCE /* Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBCA2413A43400A21BCE /* Exports.cpp */; };
+		E2E3CC202413D33500A21BCE /* Parameters.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB8F2413A43300A21BCE /* Parameters.apple.cpp */; };
+		E2E3CC212413D33500A21BCE /* Namespace.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB862413A43300A21BCE /* Namespace.cpp */; };
+		E2E3CC222413D33500A21BCE /* Require.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBBF2413A43400A21BCE /* Require.apple.cpp */; };
+		E2E3CC232413D33500A21BCE /* Object.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB982413A43300A21BCE /* Object.exp.cpp */; };
+		E2E3CC242413D33500A21BCE /* Parameters.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB8E2413A43300A21BCE /* Parameters.apple.exp.cpp */; };
+		E2E3CC252413D33500A21BCE /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB992413A43300A21BCE /* Object.cpp */; };
+		E2E3CC262413D33500A21BCE /* FileUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB42413A43300A21BCE /* FileUtility.cpp */; };
+		E2E3CC272413D33500A21BCE /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB762413A43300A21BCE /* Environment.cpp */; };
+		E2E3CC282413D33500A21BCE /* Class.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA22413A43300A21BCE /* Class.apple.cpp */; };
+		E2E3CC292413D33500A21BCE /* Enum.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB802413A43300A21BCE /* Enum.exp.cpp */; };
+		E2E3CC2A2413D33500A21BCE /* Typescript.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB772413A43300A21BCE /* Typescript.exp.cpp */; };
+		E2E3CC2B2413D33500A21BCE /* Typescript.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBAC2413A43300A21BCE /* Typescript.apple.exp.cpp */; };
+		E2E3CC2C2413D33500A21BCE /* Class.apple.exp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBA42413A43300A21BCE /* Class.apple.exp.cpp */; };
+		E2E3CC2D2413D33500A21BCE /* Utils.apple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CBB62413A43400A21BCE /* Utils.apple.cpp */; };
+		E2E3CC2E2413D33500A21BCE /* Enum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB822413A43300A21BCE /* Enum.cpp */; };
+		E2E3CC2F2413D33500A21BCE /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2E3CB6F2413A43300A21BCE /* Utils.cpp */; };
+		E2E3CC312413D34500A21BCE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E3CC302413D34500A21BCE /* JavaScriptCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E2E3CC062413D1FB00A21BCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E26A861521F1B7BF00523CCE /* typescript.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = typescript.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26A86A821F1B92300523CCE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E26A873521F1B96600523CCE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		E2E3CB6E2413A43300A21BCE /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E2E3CB6F2413A43300A21BCE /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		E2E3CB712413A43300A21BCE /* NumberData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberData.h; sourceTree = "<group>"; };
+		E2E3CB722413A43300A21BCE /* StructureData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructureData.h; sourceTree = "<group>"; };
+		E2E3CB732413A43300A21BCE /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		E2E3CB762413A43300A21BCE /* Environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.cpp; sourceTree = "<group>"; };
+		E2E3CB772413A43300A21BCE /* Typescript.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Typescript.exp.cpp; sourceTree = "<group>"; };
+		E2E3CB782413A43300A21BCE /* JSTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTypes.h; sourceTree = "<group>"; };
+		E2E3CB792413A43300A21BCE /* Convertion.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Convertion.exp.h; sourceTree = "<group>"; };
+		E2E3CB7B2413A43300A21BCE /* Property.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Property.cpp; sourceTree = "<group>"; };
+		E2E3CB7D2413A43300A21BCE /* Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
+		E2E3CB7F2413A43300A21BCE /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		E2E3CB802413A43300A21BCE /* Enum.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enum.exp.cpp; sourceTree = "<group>"; };
+		E2E3CB812413A43300A21BCE /* Enum.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.exp.h; sourceTree = "<group>"; };
+		E2E3CB822413A43300A21BCE /* Enum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enum.cpp; sourceTree = "<group>"; };
+		E2E3CB832413A43300A21BCE /* Environment.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.apple.cpp; sourceTree = "<group>"; };
+		E2E3CB852413A43300A21BCE /* Namespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Namespace.h; sourceTree = "<group>"; };
+		E2E3CB862413A43300A21BCE /* Namespace.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Namespace.cpp; sourceTree = "<group>"; };
+		E2E3CB872413A43300A21BCE /* Namespace.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Namespace.exp.cpp; sourceTree = "<group>"; };
+		E2E3CB882413A43300A21BCE /* Namespace.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Namespace.exp.h; sourceTree = "<group>"; };
+		E2E3CB892413A43300A21BCE /* Base.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Base.cpp; sourceTree = "<group>"; };
+		E2E3CB8C2413A43300A21BCE /* Argument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Argument.h; sourceTree = "<group>"; };
+		E2E3CB8D2413A43300A21BCE /* Parameters.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.exp.h; sourceTree = "<group>"; };
+		E2E3CB8E2413A43300A21BCE /* Parameters.apple.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parameters.apple.exp.cpp; sourceTree = "<group>"; };
+		E2E3CB8F2413A43300A21BCE /* Parameters.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Parameters.apple.cpp; sourceTree = "<group>"; };
+		E2E3CB902413A43300A21BCE /* Function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Function.cpp; sourceTree = "<group>"; };
+		E2E3CB912413A43300A21BCE /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		E2E3CB932413A43300A21BCE /* Argument.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Argument.apple.cpp; sourceTree = "<group>"; };
+		E2E3CB952413A43300A21BCE /* Function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Function.h; sourceTree = "<group>"; };
+		E2E3CB962413A43300A21BCE /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		E2E3CB982413A43300A21BCE /* Object.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.exp.cpp; sourceTree = "<group>"; };
+		E2E3CB992413A43300A21BCE /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		E2E3CB9D2413A43300A21BCE /* Object.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.apple.cpp; sourceTree = "<group>"; };
+		E2E3CB9E2413A43300A21BCE /* Object.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.exp.h; sourceTree = "<group>"; };
+		E2E3CB9F2413A43300A21BCE /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		E2E3CBA22413A43300A21BCE /* Class.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.apple.cpp; sourceTree = "<group>"; };
+		E2E3CBA42413A43300A21BCE /* Class.apple.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.apple.exp.cpp; sourceTree = "<group>"; };
+		E2E3CBA62413A43300A21BCE /* Class.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class.h; sourceTree = "<group>"; };
+		E2E3CBA72413A43300A21BCE /* Class.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.cpp; sourceTree = "<group>"; };
+		E2E3CBA82413A43300A21BCE /* Class.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Class.exp.h; sourceTree = "<group>"; };
+		E2E3CBA92413A43300A21BCE /* Class.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Class.exp.cpp; sourceTree = "<group>"; };
+		E2E3CBAB2413A43300A21BCE /* Typescript.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Typescript.exp.h; sourceTree = "<group>"; };
+		E2E3CBAC2413A43300A21BCE /* Typescript.apple.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Typescript.apple.exp.cpp; sourceTree = "<group>"; };
+		E2E3CBAE2413A43300A21BCE /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		E2E3CBB12413A43300A21BCE /* FileUtility.exp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtility.exp.cpp; sourceTree = "<group>"; };
+		E2E3CBB22413A43300A21BCE /* FileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtility.h; sourceTree = "<group>"; };
+		E2E3CBB32413A43300A21BCE /* FileUtility.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileUtility.exp.h; sourceTree = "<group>"; };
+		E2E3CBB42413A43300A21BCE /* FileUtility.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtility.cpp; sourceTree = "<group>"; };
+		E2E3CBB52413A43300A21BCE /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
+		E2E3CBB62413A43400A21BCE /* Utils.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.apple.cpp; sourceTree = "<group>"; };
+		E2E3CBB72413A43400A21BCE /* delegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegates.h; sourceTree = "<group>"; };
+		E2E3CBB82413A43400A21BCE /* Utils.apple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.apple.h; sourceTree = "<group>"; };
+		E2E3CBB92413A43400A21BCE /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		E2E3CBBD2413A43400A21BCE /* Require.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Require.h; sourceTree = "<group>"; };
+		E2E3CBBF2413A43400A21BCE /* Require.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Require.apple.cpp; sourceTree = "<group>"; };
+		E2E3CBC02413A43400A21BCE /* Require.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Require.cpp; sourceTree = "<group>"; };
+		E2E3CBC22413A43400A21BCE /* Log.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = Log.cpp; sourceTree = "<group>"; };
+		E2E3CBC32413A43400A21BCE /* Log.exp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.exp.h; sourceTree = "<group>"; };
+		E2E3CBC42413A43400A21BCE /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		E2E3CBC62413A43400A21BCE /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		E2E3CBC82413A43400A21BCE /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
+		E2E3CBC92413A43400A21BCE /* Console.apple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.apple.cpp; sourceTree = "<group>"; };
+		E2E3CBCA2413A43400A21BCE /* Exports.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exports.cpp; sourceTree = "<group>"; };
+		E2E3CC082413D1FB00A21BCE /* libtypescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libtypescript.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E3CC302413D34500A21BCE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E26A861221F1B7BF00523CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E26A873721F1B99E00523CCE /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E3CC052413D1FB00A21BCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E3CC312413D34500A21BCE /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E26A860C21F1B7BF00523CCE = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB6D2413A43300A21BCE /* typescript */,
+				E26A86A821F1B92300523CCE /* Info.plist */,
+				E26A861621F1B7BF00523CCE /* Products */,
+				E26A873421F1B96600523CCE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E26A861621F1B7BF00523CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E26A861521F1B7BF00523CCE /* typescript.bundle */,
+				E2E3CC082413D1FB00A21BCE /* libtypescript.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E26A873421F1B96600523CCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CC302413D34500A21BCE /* JavaScriptCore.framework */,
+				E26A873521F1B96600523CCE /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2E3CB6D2413A43300A21BCE /* typescript */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB742413A43300A21BCE /* core */,
+				E2E3CBAF2413A43300A21BCE /* extension */,
+				E2E3CBBB2413A43400A21BCE /* extra */,
+				E2E3CB702413A43300A21BCE /* types */,
+				E2E3CB6E2413A43300A21BCE /* Utils.h */,
+				E2E3CB6F2413A43300A21BCE /* Utils.cpp */,
+				E2E3CBB82413A43400A21BCE /* Utils.apple.h */,
+				E2E3CBB62413A43400A21BCE /* Utils.apple.cpp */,
+				E2E3CBB52413A43300A21BCE /* header.h */,
+				E2E3CBB72413A43400A21BCE /* delegates.h */,
+				E2E3CBB92413A43400A21BCE /* defines.h */,
+				E2E3CBCA2413A43400A21BCE /* Exports.cpp */,
+			);
+			name = typescript;
+			path = ../typescript;
+			sourceTree = "<group>";
+		};
+		E2E3CB702413A43300A21BCE /* types */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB712413A43300A21BCE /* NumberData.h */,
+				E2E3CB722413A43300A21BCE /* StructureData.h */,
+				E2E3CB732413A43300A21BCE /* Exception.h */,
+			);
+			path = types;
+			sourceTree = "<group>";
+		};
+		E2E3CB742413A43300A21BCE /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBA12413A43300A21BCE /* class */,
+				E2E3CB7E2413A43300A21BCE /* enum */,
+				E2E3CB8A2413A43300A21BCE /* function */,
+				E2E3CB842413A43300A21BCE /* namespace */,
+				E2E3CB972413A43300A21BCE /* object */,
+				E2E3CB7A2413A43300A21BCE /* property */,
+				E2E3CBAE2413A43300A21BCE /* Base.h */,
+				E2E3CB892413A43300A21BCE /* Base.cpp */,
+				E2E3CB792413A43300A21BCE /* Convertion.exp.h */,
+				E2E3CB962413A43300A21BCE /* Environment.h */,
+				E2E3CB762413A43300A21BCE /* Environment.cpp */,
+				E2E3CB832413A43300A21BCE /* Environment.apple.cpp */,
+				E2E3CB782413A43300A21BCE /* JSTypes.h */,
+				E2E3CBAB2413A43300A21BCE /* Typescript.exp.h */,
+				E2E3CB772413A43300A21BCE /* Typescript.exp.cpp */,
+				E2E3CBAC2413A43300A21BCE /* Typescript.apple.exp.cpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		E2E3CB7A2413A43300A21BCE /* property */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB7D2413A43300A21BCE /* Property.h */,
+				E2E3CB7B2413A43300A21BCE /* Property.cpp */,
+			);
+			path = property;
+			sourceTree = "<group>";
+		};
+		E2E3CB7E2413A43300A21BCE /* enum */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB7F2413A43300A21BCE /* Enum.h */,
+				E2E3CB802413A43300A21BCE /* Enum.exp.cpp */,
+				E2E3CB812413A43300A21BCE /* Enum.exp.h */,
+				E2E3CB822413A43300A21BCE /* Enum.cpp */,
+			);
+			path = enum;
+			sourceTree = "<group>";
+		};
+		E2E3CB842413A43300A21BCE /* namespace */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB852413A43300A21BCE /* Namespace.h */,
+				E2E3CB862413A43300A21BCE /* Namespace.cpp */,
+				E2E3CB872413A43300A21BCE /* Namespace.exp.cpp */,
+				E2E3CB882413A43300A21BCE /* Namespace.exp.h */,
+			);
+			path = namespace;
+			sourceTree = "<group>";
+		};
+		E2E3CB8A2413A43300A21BCE /* function */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB8E2413A43300A21BCE /* Parameters.apple.exp.cpp */,
+				E2E3CB8C2413A43300A21BCE /* Argument.h */,
+				E2E3CB8D2413A43300A21BCE /* Parameters.exp.h */,
+				E2E3CB8F2413A43300A21BCE /* Parameters.apple.cpp */,
+				E2E3CB902413A43300A21BCE /* Function.cpp */,
+				E2E3CB912413A43300A21BCE /* Parameters.h */,
+				E2E3CB932413A43300A21BCE /* Argument.apple.cpp */,
+				E2E3CB952413A43300A21BCE /* Function.h */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
+		E2E3CB972413A43300A21BCE /* object */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CB982413A43300A21BCE /* Object.exp.cpp */,
+				E2E3CB992413A43300A21BCE /* Object.cpp */,
+				E2E3CB9D2413A43300A21BCE /* Object.apple.cpp */,
+				E2E3CB9E2413A43300A21BCE /* Object.exp.h */,
+				E2E3CB9F2413A43300A21BCE /* Object.h */,
+			);
+			path = object;
+			sourceTree = "<group>";
+		};
+		E2E3CBA12413A43300A21BCE /* class */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBA62413A43300A21BCE /* Class.h */,
+				E2E3CBA72413A43300A21BCE /* Class.cpp */,
+				E2E3CBA22413A43300A21BCE /* Class.apple.cpp */,
+				E2E3CBA82413A43300A21BCE /* Class.exp.h */,
+				E2E3CBA92413A43300A21BCE /* Class.exp.cpp */,
+				E2E3CBA42413A43300A21BCE /* Class.apple.exp.cpp */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		E2E3CBAF2413A43300A21BCE /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBB02413A43300A21BCE /* files */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		E2E3CBB02413A43300A21BCE /* files */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBB12413A43300A21BCE /* FileUtility.exp.cpp */,
+				E2E3CBB22413A43300A21BCE /* FileUtility.h */,
+				E2E3CBB32413A43300A21BCE /* FileUtility.exp.h */,
+				E2E3CBB42413A43300A21BCE /* FileUtility.cpp */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
+		E2E3CBBB2413A43400A21BCE /* extra */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBBC2413A43400A21BCE /* require */,
+				E2E3CBC12413A43400A21BCE /* log */,
+				E2E3CBC52413A43400A21BCE /* console */,
+			);
+			path = extra;
+			sourceTree = "<group>";
+		};
+		E2E3CBBC2413A43400A21BCE /* require */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBBD2413A43400A21BCE /* Require.h */,
+				E2E3CBC02413A43400A21BCE /* Require.cpp */,
+				E2E3CBBF2413A43400A21BCE /* Require.apple.cpp */,
+			);
+			path = require;
+			sourceTree = "<group>";
+		};
+		E2E3CBC12413A43400A21BCE /* log */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBC22413A43400A21BCE /* Log.cpp */,
+				E2E3CBC32413A43400A21BCE /* Log.exp.h */,
+				E2E3CBC42413A43400A21BCE /* Log.h */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
+		E2E3CBC52413A43400A21BCE /* console */ = {
+			isa = PBXGroup;
+			children = (
+				E2E3CBC62413A43400A21BCE /* Console.h */,
+				E2E3CBC82413A43400A21BCE /* Console.cpp */,
+				E2E3CBC92413A43400A21BCE /* Console.apple.cpp */,
+			);
+			path = console;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E26A861421F1B7BF00523CCE /* typescript-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E26A861B21F1B7BF00523CCE /* Build configuration list for PBXNativeTarget "typescript-mac" */;
+			buildPhases = (
+				E26A861121F1B7BF00523CCE /* Sources */,
+				E26A861221F1B7BF00523CCE /* Frameworks */,
+				E26A861321F1B7BF00523CCE /* Resources */,
+				E28EA03523C46DE600BF455B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "typescript-mac";
+			productName = "typescript-mac";
+			productReference = E26A861521F1B7BF00523CCE /* typescript.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		E2E3CC072413D1FB00A21BCE /* typescript-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E3CC102413D1FB00A21BCE /* Build configuration list for PBXNativeTarget "typescript-ios" */;
+			buildPhases = (
+				E2E3CC042413D1FB00A21BCE /* Sources */,
+				E2E3CC052413D1FB00A21BCE /* Frameworks */,
+				E2E3CC062413D1FB00A21BCE /* CopyFiles */,
+				E2E3CC322413D77C00A21BCE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "typescript-ios";
+			productName = typescript;
+			productReference = E2E3CC082413D1FB00A21BCE /* libtypescript.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E26A860D21F1B7BF00523CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "朱嘉灵";
+				TargetAttributes = {
+					E26A861421F1B7BF00523CCE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					E2E3CC072413D1FB00A21BCE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = E26A861021F1B7BF00523CCE /* Build configuration list for PBXProject "typescript" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E26A860C21F1B7BF00523CCE;
+			productRefGroup = E26A861621F1B7BF00523CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E26A861421F1B7BF00523CCE /* typescript-mac */,
+				E2E3CC072413D1FB00A21BCE /* typescript-ios */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E26A861321F1B7BF00523CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E28EA03523C46DE600BF455B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#rm -rf \"../../unity/Output/Mac.app/Contents/Plugins/typescript.bundle\"\ncp -R \"${BUILD_DIR}/mac/typescript.bundle\" \"../../unity/Output/Mac.app/Contents/Plugins/\"\ncp -R \"${BUILD_DIR}/mac/typescript.bundle\" \"../../unity/Assets/Plugins/General.Typescript/libs/mac/\"\n";
+		};
+		E2E3CC322413D77C00A21BCE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp -R \"${BUILD_DIR}/ios/libtypescript.a\" \"../../unity/Assets/Plugins/General.Typescript/libs/ios/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E26A861121F1B7BF00523CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E3CBE22413A43400A21BCE /* Object.apple.cpp in Sources */,
+				E2E3CBE92413A43400A21BCE /* Class.exp.cpp in Sources */,
+				E2E3CBEC2413A43400A21BCE /* FileUtility.exp.cpp in Sources */,
+				E2E3CBD62413A43400A21BCE /* Base.cpp in Sources */,
+				E2E3CBCF2413A43400A21BCE /* Property.cpp in Sources */,
+				E2E3CBF52413A43400A21BCE /* Console.cpp in Sources */,
+				E2E3CBDC2413A43400A21BCE /* Argument.apple.cpp in Sources */,
+				E2E3CBD52413A43400A21BCE /* Namespace.exp.cpp in Sources */,
+				E2E3CBDA2413A43400A21BCE /* Function.cpp in Sources */,
+				E2E3CBD32413A43400A21BCE /* Environment.apple.cpp in Sources */,
+				E2E3CBF62413A43400A21BCE /* Console.apple.cpp in Sources */,
+				E2E3CBF32413A43400A21BCE /* Log.cpp in Sources */,
+				E2E3CBE82413A43400A21BCE /* Class.cpp in Sources */,
+				E2E3CBF22413A43400A21BCE /* Require.cpp in Sources */,
+				E2E3CBF72413A43400A21BCE /* Exports.cpp in Sources */,
+				E2E3CBD92413A43400A21BCE /* Parameters.apple.cpp in Sources */,
+				E2E3CBD42413A43400A21BCE /* Namespace.cpp in Sources */,
+				E2E3CBF12413A43400A21BCE /* Require.apple.cpp in Sources */,
+				E2E3CBDE2413A43400A21BCE /* Object.exp.cpp in Sources */,
+				E2E3CBD82413A43400A21BCE /* Parameters.apple.exp.cpp in Sources */,
+				E2E3CBDF2413A43400A21BCE /* Object.cpp in Sources */,
+				E2E3CBED2413A43400A21BCE /* FileUtility.cpp in Sources */,
+				E2E3CBCD2413A43400A21BCE /* Environment.cpp in Sources */,
+				E2E3CBE42413A43400A21BCE /* Class.apple.cpp in Sources */,
+				E2E3CBD12413A43400A21BCE /* Enum.exp.cpp in Sources */,
+				E2E3CBCE2413A43400A21BCE /* Typescript.exp.cpp in Sources */,
+				E2E3CBEA2413A43400A21BCE /* Typescript.apple.exp.cpp in Sources */,
+				E2E3CBE62413A43400A21BCE /* Class.apple.exp.cpp in Sources */,
+				E2E3CBEE2413A43400A21BCE /* Utils.apple.cpp in Sources */,
+				E2E3CBD22413A43400A21BCE /* Enum.cpp in Sources */,
+				E2E3CBCB2413A43400A21BCE /* Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2E3CC042413D1FB00A21BCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E3CC112413D33500A21BCE /* Object.apple.cpp in Sources */,
+				E2E3CC122413D33500A21BCE /* Class.exp.cpp in Sources */,
+				E2E3CC132413D33500A21BCE /* FileUtility.exp.cpp in Sources */,
+				E2E3CC142413D33500A21BCE /* Base.cpp in Sources */,
+				E2E3CC152413D33500A21BCE /* Property.cpp in Sources */,
+				E2E3CC162413D33500A21BCE /* Console.cpp in Sources */,
+				E2E3CC172413D33500A21BCE /* Argument.apple.cpp in Sources */,
+				E2E3CC182413D33500A21BCE /* Namespace.exp.cpp in Sources */,
+				E2E3CC192413D33500A21BCE /* Function.cpp in Sources */,
+				E2E3CC1A2413D33500A21BCE /* Environment.apple.cpp in Sources */,
+				E2E3CC1B2413D33500A21BCE /* Console.apple.cpp in Sources */,
+				E2E3CC1C2413D33500A21BCE /* Log.cpp in Sources */,
+				E2E3CC1D2413D33500A21BCE /* Class.cpp in Sources */,
+				E2E3CC1E2413D33500A21BCE /* Require.cpp in Sources */,
+				E2E3CC1F2413D33500A21BCE /* Exports.cpp in Sources */,
+				E2E3CC202413D33500A21BCE /* Parameters.apple.cpp in Sources */,
+				E2E3CC212413D33500A21BCE /* Namespace.cpp in Sources */,
+				E2E3CC222413D33500A21BCE /* Require.apple.cpp in Sources */,
+				E2E3CC232413D33500A21BCE /* Object.exp.cpp in Sources */,
+				E2E3CC242413D33500A21BCE /* Parameters.apple.exp.cpp in Sources */,
+				E2E3CC252413D33500A21BCE /* Object.cpp in Sources */,
+				E2E3CC262413D33500A21BCE /* FileUtility.cpp in Sources */,
+				E2E3CC272413D33500A21BCE /* Environment.cpp in Sources */,
+				E2E3CC282413D33500A21BCE /* Class.apple.cpp in Sources */,
+				E2E3CC292413D33500A21BCE /* Enum.exp.cpp in Sources */,
+				E2E3CC2A2413D33500A21BCE /* Typescript.exp.cpp in Sources */,
+				E2E3CC2B2413D33500A21BCE /* Typescript.apple.exp.cpp in Sources */,
+				E2E3CC2C2413D33500A21BCE /* Class.apple.exp.cpp in Sources */,
+				E2E3CC2D2413D33500A21BCE /* Utils.apple.cpp in Sources */,
+				E2E3CC2E2413D33500A21BCE /* Enum.cpp in Sources */,
+				E2E3CC2F2413D33500A21BCE /* Utils.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E26A861921F1B7BF00523CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E26A861A21F1B7BF00523CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E26A861C21F1B7BF00523CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/mac";
+				DEVELOPMENT_TEAM = 7HFEUDN3PR;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soulfire.typescript-mac";
+				PRODUCT_NAME = typescript;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../typescript/;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		E26A861D21F1B7BF00523CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/mac";
+				DEVELOPMENT_TEAM = 7HFEUDN3PR;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.soulfire.typescript-mac";
+				PRODUCT_NAME = typescript;
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = ../typescript/;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E2E3CC0E2413D1FB00A21BCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/ios";
+				DEVELOPMENT_TEAM = 7HFEUDN3PR;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = typescript;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../typescript/;
+			};
+			name = Debug;
+		};
+		E2E3CC0F2413D1FB00A21BCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					arm64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/ios";
+				DEVELOPMENT_TEAM = 7HFEUDN3PR;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = typescript;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SYMROOT = build;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = ../typescript/;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E26A861021F1B7BF00523CCE /* Build configuration list for PBXProject "typescript" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26A861921F1B7BF00523CCE /* Debug */,
+				E26A861A21F1B7BF00523CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E26A861B21F1B7BF00523CCE /* Build configuration list for PBXNativeTarget "typescript-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E26A861C21F1B7BF00523CCE /* Debug */,
+				E26A861D21F1B7BF00523CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E3CC102413D1FB00A21BCE /* Build configuration list for PBXNativeTarget "typescript-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2E3CC0E2413D1FB00A21BCE /* Debug */,
+				E2E3CC0F2413D1FB00A21BCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E26A860D21F1B7BF00523CCE /* Project object */;
+}

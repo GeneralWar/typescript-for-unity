@@ -3,21 +3,18 @@ using UnityEngine;
 
 namespace General.Typescript
 {
-	public class IOSEntry : Entry
+    public class AppleEntry : Entry
     {
         override public bool initialize()
         {
-            mContext = General_Typescript_Initialize();
+            mContext = Entry.InitializeContext();
             if (IntPtr.Zero == mContext)
             {
-                Debug.LogError("Initialize typescript failed!");
+                Entry.LogError("Initialize typescript failed!");
                 return false;
             }
-
-			Entry.Bind();
-
             return true;
-		}
+        }
 
         //public override IntPtr toJSObject<T>(T value)
         //{
@@ -42,8 +39,8 @@ namespace General.Typescript
         //            TypescriptClass c = Class.FindClass(name);
         //            if (null == c)
         //            {
-        //                Debug.Log(name);
-        //                Debug.LogWarning(string.Format("Type {0} has not been registered into General.Typescript!", name));
+        //                Entry.Log(name);
+        //                Entry.LogWarning(string.Format("Type {0} has not been registered into General.Typescript!", name));
         //                return IntPtr.Zero;
         //            }
         //            return c.CreateInstance(value);
@@ -51,5 +48,5 @@ namespace General.Typescript
         //    }
         //    //return IntPtr.Zero;
         //}
-	}
+    }
 }

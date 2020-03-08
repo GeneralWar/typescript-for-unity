@@ -77,7 +77,7 @@
 
 //        private void saveConfiguration()
 //        {
-//            Debug.Log("Try to save typescript configureation.");
+//            Entry.Log("Try to save typescript configureation.");
 //            Configuration configuration = AssetDatabase.LoadAssetAtPath<Configuration>(Utility.CONFIGURATION_PATH);
 //            if (null == configuration)
 //            {

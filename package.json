@@ -19,7 +19,7 @@
 			"sources/unity/Assets/StreamingAssets/Scripts/",
 			"sources/unity/Output/iOS/Data/Raw/Scripts/",
 			"sources/unity/Output/Windows/TypescriptForUnity_Data/StreamingAssets/Scripts/",
-			"sources/unity/Output/Mac.app/Contents/Resources/Data/StreamingAssets/Scripts"
+			"sources/unity/Output/Mac.app/Contents/Resources/Data/StreamingAssets/Scripts/"
 		]
 	}
 }

@@ -8,6 +8,12 @@ namespace General.Typescript
 		static protected Dictionary<IntPtr, Base> sHandledInstance = new Dictionary<IntPtr, Base>();
 		static protected Dictionary<string, Base> sNamedInstance = new Dictionary<string, Base>();
 
+		static public void Clear()
+		{
+			sHandledInstance.Clear();
+			sNamedInstance.Clear();
+		}
+
 		static internal Base FindInstance(IntPtr handle)
 		{
 			Base result = null;

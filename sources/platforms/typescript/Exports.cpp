@@ -1,0 +1,8 @@
+#include "core/Typescript.exp.h"
+#include "core/object/Object.exp.h"
+#include "core/Convertion.exp.h"
+#include "core/enum/Enum.exp.h"
+#include "core/class/Class.exp.h"
+#include "core/namespace/Namespace.exp.h"
+#include "core/function/Parameters.exp.h"
+#include "extra/log/Log.exp.h"

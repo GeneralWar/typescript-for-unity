@@ -10,18 +10,26 @@ namespace General.Typescript
 {
     internal abstract partial class BinderBase
     {
-        static private string sBinderOutputPath = Utility.CheckPath(Path.Combine(Environment.CurrentDirectory, "Assets/Plugins/General.Typescript/bindings/"));
+        static private string sBinderOutputPath = Utility.CheckPath(Path.Combine(Environment.CurrentDirectory, "Assets/Scripts/General.Typescript/bindings/"));
 
-        static internal void SetBinderOutputPath(string output)
+        static internal void SetBinderOutputPath(string path)
         {
-            sBinderOutputPath = Utility.CheckPath(Path.IsPathRooted(output) ? output : Path.Combine(Environment.CurrentDirectory, output));
+			if (string.IsNullOrWhiteSpace(path))
+			{
+				return;
+			}
+            sBinderOutputPath = Utility.CheckPath(Path.IsPathRooted(path) ? path : Path.Combine(Environment.CurrentDirectory, path));
         }
 
         static private string sLibraryOutputPath = Utility.CheckPath(Path.Combine(Environment.CurrentDirectory, "../../project/library/"));
 
-        static internal void SetLibraryOutputPath(string output)
-        {
-            sLibraryOutputPath = Utility.CheckPath(Path.IsPathRooted(output) ? output : Path.Combine(Environment.CurrentDirectory, output));
+        static internal void SetLibraryOutputPath(string path)
+		{
+			if (string.IsNullOrWhiteSpace(path))
+			{
+				return;
+			}
+			sLibraryOutputPath = Utility.CheckPath(Path.IsPathRooted(path) ? path : Path.Combine(Environment.CurrentDirectory, path));
         }
     }
 }

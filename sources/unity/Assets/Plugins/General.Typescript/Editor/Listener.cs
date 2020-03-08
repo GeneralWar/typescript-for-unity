@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading;
 using UnityEditor;
 using UnityEngine;
@@ -26,7 +30,7 @@ namespace General.Typescript
         //static private void loadConfiguration()
         //{
         //    sConfiguration = AssetDatabase.LoadAssetAtPath<Configuration>(Utility.CONFIGURATION_PATH);
-        //    Debug.LogFormat("General.Typescript, source directory : {0}, compiled directory : {1}", sConfiguration.sourcePath, sConfiguration.compiledPath);
+        //    Entry.Log("General.Typescript, source directory : {0}, compiled directory : {1}", sConfiguration.sourcePath, sConfiguration.compiledPath);
         //    if (null == sConfiguration)
         //    {
         //        ConfigurationWindow.Show();
@@ -35,24 +39,39 @@ namespace General.Typescript
 
         static private Configuration loadConfiguration()
         {
-			Configuration configuration = Utility.GetConfiguration();
+            Configuration configuration = Utility.GetConfiguration();
             if (null == configuration)
             {
                 //loadConfiguration();
-                Debug.LogError("There is no configs.asset for General.Typescript, please configure it under 'Assets/Plugins/General.Typescript' first after menu 'General/Typescript/Initialize' clicked!");
+                Entry.LogError("There is no configs.asset for General.Typescript, please configure it under 'Assets/Plugins/General.Typescript' first after menu 'General/Typescript/Initialize' clicked!");
             }
-			return configuration;
-		}
+            return configuration;
+        }
 
         [MenuItem("Assets/CompileTypescript")]
         [MenuItem("General/Typescript/Compile")]
         static public void Compile()
         {
-			Configuration configuration = loadConfiguration();
-			if (null != configuration)
-			{
-				Utility.Compile(configuration.sourcePath, configuration.compiledPath);
-			}
+            Configuration configuration = loadConfiguration();
+            if (null != configuration)
+            {
+                Utility.Compile(configuration.sourcePath, configuration.compiledPath);
+            }
+        }
+
+        [MenuItem("General/Typescript/Test")]
+        static public void Test()
+        {
+            Entry.Log(typeof(bool).IsPrimitive);
+            Entry.Log(typeof(byte).IsPrimitive);
+
+            //Type type = typeof(System.Net.Sockets.SocketAsyncEventArgs);
+            //PropertyInfo info = type.GetProperty("SocketClientAccessPolicyProtocol", BindingFlags.Public | BindingFlags.Instance);
+            //Entry.Log(type);
+            //Entry.Log(Utils.IsSupported(info));
+
+            //TypeClassBinder binder = new TypeClassBinder(typeof(UnityEngine.GameObject), null);
+            //binder.GenerateSnippets(false);
         }
     }
 }
