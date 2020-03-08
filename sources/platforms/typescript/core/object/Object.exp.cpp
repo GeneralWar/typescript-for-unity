@@ -334,10 +334,10 @@ bool General_Typescript_Object_HasProperty(void* environment, JsObject* instance
 bool General_Typescript_Object_HasFunction(void* environment, JsObject* instance, const char* name)
 {
 	Environment* runtime = reinterpret_cast<Environment*>(environment);
-	if (!runtime) return nullptr;
+	if (!runtime) return false;
 #if USE_ENGINE_V8
 	Isolate* isolate = runtime->GetIsolate();
-	if (!isolate) return nullptr;
+	if (!isolate) return false;
 	HandleScope handleScope(isolate);
 #endif
 	return instance ? instance->Has(SAFE_STRING(name)) : false;

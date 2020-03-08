@@ -2,7 +2,7 @@
 #include "Enum.exp.h"
 #include "extra/log/Log.h"
 #if USE_ENGINE_V8
-#include "utils.h"
+#include "Utils.h"
 #endif
 
 void General_Typescript_Enum_SetValue(void* handle, const char* name, long int value)
