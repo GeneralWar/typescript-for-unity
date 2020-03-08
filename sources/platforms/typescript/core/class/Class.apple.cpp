@@ -6,10 +6,10 @@
 //  Copyright © 2020 朱嘉灵. All rights reserved.
 //
 
-#include "core/class/Class.h"
-#include "core/object/Object.h"
 #include "Utils.h"
 #include "Utils.apple.h"
+#include "core/class/Class.h"
+#include "core/object/Object.h"
 #include "core/function/Function.h"
 #include "core/property/Property.h"
 #include "core/Environment.h"
@@ -126,20 +126,22 @@ void TypescriptClass::Register(const std::string& parentType)
     {
         definition.parentClass = mBaseClass->mJsClass;
     }
+    JSStaticFunction* functionPointer = nullptr;
     size_t instanceFunctionCount = mInstanceFunctions.size() + 1;
     if (instanceFunctionCount > 1)
     {
-        std::vector<JSStaticFunction> instanceFunctions(instanceFunctionCount);
-        JSStaticFunction* functionPointer = instanceFunctions.data();
-        memset(functionPointer, 0, sizeof(JSStaticFunction) * instanceFunctionCount);
+        size_t byteCount = sizeof(JSStaticFunction) * instanceFunctionCount;
+        functionPointer = (JSStaticFunction*)malloc(byteCount);
+        memset(functionPointer, 0, byteCount);
+        JSStaticFunction* p = functionPointer;
         for (std::map<std::string, TypescriptFunction*>::iterator iterator = mInstanceFunctions.begin(); mInstanceFunctions.end() != iterator; ++iterator)
         {
-            functionPointer->name = iterator->first.data();
-            functionPointer->callAsFunction = onStaticFunctionCall;
-            functionPointer->attributes = kJSPropertyAttributeNone;
-            ++functionPointer;
+            p->name = iterator->first.data();
+            p->callAsFunction = onStaticFunctionCall;
+            p->attributes = kJSPropertyAttributeNone;
+            ++p;
         }
-        definition.staticFunctions = instanceFunctions.data();
+        definition.staticFunctions = functionPointer;
     }
     //    std::vector<JSStaticValue> staticProperties(mStaticProperties.size());
     //    for (auto pair : mStaticProperties)
@@ -149,6 +151,10 @@ void TypescriptClass::Register(const std::string& parentType)
     //    definition.staticValues = staticProperties.data();
     
     mJsClass = JSClassCreate(&definition);
+    if (functionPointer)
+    {
+        free(functionPointer);
+    }
     
     mJsObject = JsObject::Create(INTERNAL_JS_CONTEXT_NAME, this, (JS_CONSTRUCTOR_CALLBACK_TYPE)onConstructorCall, this);
     mJsObject->Set(NAME, mName);

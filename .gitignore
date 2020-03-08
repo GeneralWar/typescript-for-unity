@@ -7,4 +7,5 @@ remote-v8-config
 test
 
 !/project/*
-/project/compiled
+/project/compiled/
+/project/library/

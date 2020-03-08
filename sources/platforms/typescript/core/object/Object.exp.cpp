@@ -289,10 +289,10 @@ void* General_Typescript_Object_CreateInstanceHandle(void* environment, const ch
 	return create_with_handle_size(environment, GetSafeType(type));
 }
 
-void* General_Typescript_Object_CreateWithField(void* environment, const char* type, size_t size)
+void* General_Typescript_Object_CreateWithField(void* environment, const char* type, int size)
 {
     DEBUG_LOG("Try to create field : %s, size : %d\n", type, size);
-	return create_with_handle_size(environment, GetSafeType(type), size);
+	return create_with_handle_size(environment, GetSafeType(type), (size_t)size);
 }
 
 void* General_Typescript_Object_CreateArrayWithLength(void* environment, int length)

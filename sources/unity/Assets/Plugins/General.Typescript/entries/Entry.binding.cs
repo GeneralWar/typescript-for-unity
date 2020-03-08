@@ -7,10 +7,8 @@ namespace General.Typescript
 {
     public abstract partial class Entry
     {
-#if UNITY_IPHONE && !UNITY_EDITOR //|| UNITY_EDITOR_OSX
+#if UNITY_IPHONE && !UNITY_EDITOR
         public const string LIBRARY_NAME = "__Internal";
-//#elif UNITY_ANDROID 
-//		public const string LIBRARY_NAME = "native-lib";
 #else
         public const string LIBRARY_NAME = "typescript";
 #endif

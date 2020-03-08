@@ -1,10 +1,7 @@
-/typescript-ios.xcodeproj/*
-/typescript-ios.xcodeproj/project.xcworkspace
-!/typescript-ios.xcodeproj/project.pbxproj
-
-/typescript-mac.xcodeproj/*
-/typescript-mac.xcodeproj/project.xcworkspace
-!/typescript-mac.xcodeproj/project.pbxproj
+/typescript.xcodeproj/*
+/typescript.xcodeproj/project.xcworkspace
+!/typescript.xcodeproj/project.pbxproj
 
 /Build/
 /Index/
+/bin/

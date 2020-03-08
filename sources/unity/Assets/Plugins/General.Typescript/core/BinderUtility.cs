@@ -39,9 +39,6 @@ namespace General.Typescript
 
         static public void BindFromJson(string filename)
         {
-#if UNITY_IOS
-            Entry.LogError("Dynamic binding is not supported on iOS, since reflection is forbidden!");
-#else
             string jsonContent = FileUtility.ReadStringFromFile(filename);
             if (string.IsNullOrEmpty(jsonContent))
             {
@@ -50,32 +47,38 @@ namespace General.Typescript
             }
 
             BindingRecordConfig config = JsonUtility.FromJson<BindingRecordConfig>(jsonContent);
-            foreach (BindingRecordConfigAssembly record in config.assemblies)
+            if (config.assemblies?.Count > 0)
             {
-#if !UNITY_IOS
-                Assembly assembly = Assembly.Load(record.name);
-                if (null == assembly)
-                {
-                    Entry.LogError("Try to bind dynamically but load assembly [{0}] failed!", record.name);
-                    continue;
-                }
-#endif
-                foreach (string typename in record.types)
-                {
 #if UNITY_IOS
-					Type type = sTypeTable?.GetType(typename);
+                Entry.LogError("Dynamic binding is not supported on iOS, since reflection is forbidden!");
 #else
-                    Type type = assembly.GetType(typename);
-#endif
-                    if (null == type)
+                foreach (BindingRecordConfigAssembly record in config.assemblies)
+                {
+#if !UNITY_IOS
+                    Assembly assembly = Assembly.Load(record.name);
+                    if (null == assembly)
                     {
-                        Entry.LogError("Try to bind dynamically but load type [{0}] failed!", typename);
+                        Entry.LogError("Try to bind dynamically but load assembly [{0}] failed!", record.name);
                         continue;
                     }
-                    Bind(type);
-                }
-            }
 #endif
+                    foreach (string typename in record.types)
+                    {
+#if UNITY_IOS
+                        Type type = sTypeTable?.GetType(typename);
+#else
+                        Type type = assembly.GetType(typename);
+#endif
+                        if (null == type)
+                        {
+                            Entry.LogError("Try to bind dynamically but load type [{0}] failed!", typename);
+                            continue;
+                        }
+                        Bind(type);
+                    }
+                }
+#endif
+            }
         }
 
         static public void Bind<T>()

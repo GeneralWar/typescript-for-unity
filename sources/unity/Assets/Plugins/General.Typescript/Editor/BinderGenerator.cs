@@ -225,7 +225,7 @@ namespace General.Typescript
             List<Type> delegates = new List<Type>();
             generateBinders(bindedTypes, delegates);
             generateDelegatesBinder(delegates);
-            generateTypeTable(allTypes);
+            generateTypeTable(Utils.FilterTypeTable(allTypes));
         }
 
         static private List<Type> filterDelegates(List<Type> delegates)
